@@ -31,6 +31,12 @@ $bwhite: #FFF;
             &:first-child {
                 margin-right: 15px;
             }
+	    &:hover {
+		background-color: #9D9FF9;
+		border-bottom-width: 6px;
+		position: relative;
+		top: 4px;
+	    }
             background-color: $blight;
             color: $bwhite;
             width: 230px;
