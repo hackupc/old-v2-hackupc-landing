@@ -54,7 +54,6 @@ $bwhite: #FFF;
 }
 
 @media(max-width: 600px) {
-
     .head-logo img {
         width: 85%;
     }
@@ -64,7 +63,8 @@ $bwhite: #FFF;
         margin-right: 0!important;
     }
 }
-.top-description p, .bottom-description p{
+
+.top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
     color: $blight;
     width: 60%;
@@ -76,6 +76,11 @@ $bwhite: #FFF;
 
 .top-description p {
     margin-top: 10vh;
+}
+
+.coming-soon p {
+    color: $bgray;
+    font-size: 2.2em;
 }
 
 .faq-title {

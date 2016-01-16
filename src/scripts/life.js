@@ -10,7 +10,6 @@ function resizeCanvas() {
     area = canvas.width*canvas.height;
     len = parseInt(Math.sqrt(area/8000)+0.5);
     if(len < 6) len = 6;
-    console.log(len);
 
     start(len);
 }
