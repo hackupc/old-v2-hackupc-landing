@@ -1,0 +1,170 @@
+@import "bootstrap";
+
+@font-face {
+    font-family: minecraftia;
+    src: url(../fonts/minecraftia.ttf);
+}
+
+* {
+    font-family: minecraftia;
+}
+
+$blight: #2A31EE;
+$bdark: #0F29CF;
+$blink: #75ACDB;
+$bgray: #666;
+$bwhite: #FFF;
+
+.head-logo img {
+    @include center-block();
+    width: 55%;
+    margin-top: 20vh;
+}
+
+.top-buttons, .bottom-buttons {
+    >div {
+        text-align: center;
+    }
+    .button-container {
+        display: inline-block;
+        button {
+            &:first-child {
+                margin-right: 15px;
+            }
+            background-color: $blight;
+            color: $bwhite;
+            width: 230px;
+            padding: 20px 0px;
+            font-weight: 500;
+            font-size: 1.6em;
+            border: none;
+            border-bottom: 10px solid $bdark;
+        }
+    }
+}
+
+.top-buttons .button-container {
+    margin-top: 7vh;
+}
+
+@media(max-width: 600px) {
+
+    .head-logo img {
+        width: 85%;
+    }
+    .button-container button {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+.top-description p, .bottom-description p{
+    @include center-block();
+    color: $blight;
+    width: 60%;
+    max-width: 900px;
+    font-size: 1.6em;
+    line-height: 1.9em;
+    text-align: center;
+}
+
+.top-description p {
+    margin-top: 10vh;
+}
+
+.faq-title {
+    color: $blight;
+    margin-top: 10vh;
+    font-size: 4.5em;
+    margin-bottom: 10vh;
+}
+
+.faq-questions {
+    &:not(:first-of-type) {
+        margin-top: 10vh;
+    }
+    .title {
+        font-size: 2em;
+        color: $blight;
+        margin-bottom: 30px;
+    }
+    .answer {
+        font-size: 1.5em;
+        color: $bgray;
+    }
+    .question {
+        margin-bottom: 5vh;
+    }
+    a {
+        color: $blink;
+        text-decoration: none;
+    }
+}
+
+.sponsors-title {
+    color: $blight;
+    margin-top: 10vh;
+    font-size: 4.5em;
+    margin-bottom: 10vh;
+}
+
+.sponsor-images {
+    text-align: center;
+    img {
+        &.mr {
+            margin-right: 20px;
+        }
+        &.ml {
+            margin-left: 20px;
+        }
+        &.tera {
+            width: 60%
+        }
+        &.giga {
+            width: 20%
+        }
+        &.mega {
+            width: 15%;
+        }
+        &.mili {
+            width: 20%;
+        }
+    }
+    .separator {
+        height: 5vh;
+    }
+}
+
+.partners-title {
+    color: $blight;
+    margin-top: 10vh;
+    font-size: 4.5em;
+    margin-bottom: 10vh;
+}
+
+.partners {
+    text-align: center;
+    .partner {
+        width: 15%;
+        margin: 0px 20px;
+    }
+    margin-bottom: 10vh;
+}
+
+.bottom-buttons {
+    margin-top: 5vh;
+}
+
+.bottom-description {
+    margin-top: 7vh;
+}
+
+.bottom-links {
+    @include center-block();
+    text-align: center;
+    margin-top: 4vh;
+    a {
+        color: $blight;
+        text-decoration: none;
+        padding: 0.4em;
+    }
+}

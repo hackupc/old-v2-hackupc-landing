@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hack UPC</title>
+  <meta name="description" content="The UPC student hackathon">
+  <meta name="author" content="Hackers@UPC">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/ui-bootstrap.min.js"></script>
+</head>
+
+<body ng-app="hackupc" ng-controller='MainCtrl as mainCtrl'>
+    <canvas id="lolcanvas" width="150" height="150" style="position:absolute;z-index:-100;top:0;left:0;width:100%;height:100%"></canvas>
+  <script src="assets/js/ui-bootstrap-tpls.min.js"></script>
+  <a id="mlh-trust-badge" style="position:fixed;top:0;right:100px;max-width:100px;width:10%;min-width: 60px;display:block;z-index:10000" href="https://mlh.io/seasons/s2016-eu/events?utm_source=s2016eu&utm_medium=TrustBadge&utm_campaign=s2016eu" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/s2016.png" alt="MLH Official - Spring 2016" style="width:100%;" ></a>
+  <div class="container">
+      <div class="row head-logo">
+          <div class="col-md-12">
+              <img src="assets/img/hackupc-logo@2x.png">
+          </div>
+      </div>
+      <div class="row top-buttons">
+          <div class="col-md-12">
+              <div class="button-container">
+                  <button>Apply</button>
+                  <button>Sponsor</button>
+              </div>
+          </div>
+      </div>
+      <div class="row top-description">
+          <div class="col-md-12">
+              <p>Short description. This should be like this sort of short. Not really much more than three sentences.</p>
+          </div>
+      </div>
+      <h1 class="faq-title">FAQ</h1>
+      <div class="row faq-questions">
+          <div class="col-md-4">
+              <div class="question">
+                  <div class="title">What is a hackathon?</div>
+                  <div class="answer">Hackathons are where thoughts become things, collaborating, coding and creating literally anything. Attendees work in teams of up to four people to create a hack, web, app, hardware or anything. </div>
+              </div>
+              <div class="question">
+                  <div class="title">When is Hack UPC?
+                  </div>
+                  <div class="answer">Hack UPC will start the night of Friday February 19st and continue until the morning of the 21st.</div>
+              </div>
+              <div class="question">
+                  <div class="title">What if I have another question?</div>
+                  <div class="answer">Tweet us at <a href="http://twitter.com/hackupc">@hackupc</a> or drop us a line at <a href="mailto:contact@hackupc.com">contact@hackupc.com</a></div>
+              </div>
+              <div class="question">
+                  <div class="title">Do you have a code of conduct?</div>
+                  <div class="answer"><a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Yes</a> tl;dr: Be excellent to each other.</div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="question">
+                  <div class="title">What if I don't have a team?</div>
+                  <div class="answer">No need to worry! Part of the fun of a hackathon is meeting new people. We will have time at the beginning of the event for everyone to meet and form teams.</div>
+              </div>
+              <div class="question">
+                  <div class="title">What can I build?</div>
+                  <div class="answer">Web, mobile, hardware, anything is on the table. Projects will be judged based on creativity, technical difficulty, polish, and usefulness by a panel of industry judges and UPC faculty.</div>
+              </div>
+              <div class="question">
+                  <div class="title">Where is it being held?</div>
+                  <div class="answer">Hack UPC will take place in UPC's North Campus FIB buldings (<a href="https://goo.gl/maps/4AHDqtWTZeu">A6 and A5</a>) in sunny Barcelona, Spain.</div>
+              </div>
+              <div class="question">
+                  <div class="title">Who can attend?</div>
+                  <div class="answer">Students from universities and high schools from all around the world.</div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="question">
+                  <div class="title">How much does it cost?</div>
+                  <div class="answer">Hack UPC is free for all accepted hackers. We provide you WiFi, meals, swag, and workspace. We also have a limited number of travel scholarships - up to 50€ if you're traveling from outside of Barcelona</div>
+              </div>
+              <div class="question">
+                  <div class="title">What should I bring?</div>
+                  <div class="answer">All attendees must bring a valid ID for admission. Other common checklist items include: laptops, sleeping bags, chargers and toiletries. If you want to shower, bring a towel! </div>
+              </div>
+              <div class="question">
+                  <div class="title">How big can teams be?</div>
+                  <div class="answer">Teams of up to four are welcome. You can also hack solo if you want!</div>
+              </div>
+          </div>
+      </div>
+      <h1 class="sponsors-title">Sponsors</h1>
+      <div class="row sponsor-images">
+          <div class="col-md-12">
+              <img class="tera" src="assets/img/SKYSCANNER.png">
+              <div class="separator"></div>
+              <img class="giga mr" src="assets/img/EVERIS.jpg">
+              <img class="giga ml" src="assets/img/NETCENTRIC.svg">
+              <div class="separator"></div>
+              <img class="mega" src="assets/img/ACCENTURE.png">
+              <div class="separator"></div>
+              <img class="mili mr" src="assets/img/SOCIALPOINT.png">
+              <img class="mili mr ml" src="assets/img/VERSE.svg">
+              <img class="mili ml" src="assets/img/WOLFRAMALPHA.png">
+          </div>
+      </div>
+      <h1 class="partners-title">Partners</h1>
+      <div class="row partners">
+          <div class="col-md-12">
+              <img class="partner" src="assets/img/UPC.png">
+              <img class="partner" src="assets/img/CFIS.png">
+              <img class="partner" src="assets/img/MLH.png">
+          </div>
+      </div>
+      <iframe class="center-block" width="100%" height="600px" src="https://www.youtube.com/embed/uAl3swU2wf4" frameborder="0" allowfullscreen></iframe>
+      <div class="row bottom-description">
+          <div class="col-md-12">
+              <p>Placeholder - come to our hackathon!</p>
+          </div>
+      </div>
+      <div class="row bottom-buttons">
+          <div class="col-md-12">
+              <div class="button-container">
+                  <button>Apply</button>
+                  <button>Sponsor</button>
+              </div>
+          </div>
+      </div>
+      <div class="row bottom-links">
+          <div class="col-md-12">
+              <a class="fa fa-3x fa-envelope" href="mailto:info@hackersatupc.org"></a>
+              <a class="fa fa-3x fa-twitter" href="https://twitter.com/hackupc"></a>
+              <a class="fa fa-3x fa-facebook-official" href="https://facebook.com/hackupc"></a>
+              <a class="fa fa-3x fa-github" href="https://github.com/hackupc"></a>
+          </div>
+      </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
