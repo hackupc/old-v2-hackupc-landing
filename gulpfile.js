@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     del = require('del'),
@@ -21,7 +20,6 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/assets/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('scripts', function() {
@@ -32,7 +30,6 @@ gulp.task('scripts', function() {
     rename({suffix: '.min'}),
     uglify(),
     gulp.dest('dist/assets/js'),
-    notify({ message: 'Scripts task complete' })
   ]);
   combined.on('error', console.error.bind(console));
   return combined;
@@ -41,21 +38,18 @@ gulp.task('scripts', function() {
 gulp.task('fonts', function() {
   return gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/assets/fonts'))
-    .pipe(notify({ message: 'Fonts task complete' }));
 });
 
 gulp.task('dependencies', function() {
   return gulp.src(['bower_components/**/*.min.js', '!bower_components/**/src/**/*.min.js'])
     .pipe(flatten({ includeParents: 0}))
     .pipe(gulp.dest('dist/assets/js'))
-    .pipe(notify({ message: 'Dependencies task complete' }));
 });
 
 gulp.task('images', function() {
   return gulp.src('src/images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/assets/img'))
-    .pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('clean', function(cb) {
