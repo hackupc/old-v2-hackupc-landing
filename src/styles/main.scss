@@ -53,17 +53,6 @@ $bwhite: #FFF;
     margin-top: 7vh;
 }
 
-@media(max-width: 600px) {
-    .head-logo img {
-        width: 85%;
-    }
-    .button-container button {
-        display: block;
-        margin-bottom: 10px;
-        margin-right: 0!important;
-    }
-}
-
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
     color: $blight;
@@ -151,6 +140,20 @@ $bwhite: #FFF;
     margin-top: 10vh;
     font-size: 4.5em;
     margin-bottom: 10vh;
+}
+
+@media(max-width: 600px) {
+    .head-logo img {
+        width: 85%;
+    }
+    .button-container button {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0!important;
+    }
+    .sponsors-title, .partners-title {
+        font-size: 4em;
+    }
 }
 
 .partners {
