@@ -56,9 +56,7 @@ $bwhite: #FFF;
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
     color: $blight;
-    width: 60%;
-    max-width: 900px;
-    font-size: 1.6em;
+    font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
 }
