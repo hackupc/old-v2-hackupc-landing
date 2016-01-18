@@ -39,10 +39,10 @@ $bwhite: #FFF;
 	    }
             background-color: $blight;
             color: $bwhite;
-            width: 230px;
-            padding: 20px 0px;
+            width: 160px;
+            padding: 20px 0px 5px;
             font-weight: 500;
-            font-size: 1.6em;
+            font-size: 1.4em;
             border: none;
             border-bottom: 10px solid $bdark;
         }
@@ -50,15 +50,13 @@ $bwhite: #FFF;
 }
 
 .top-buttons .button-container {
-    margin-top: 7vh;
+    margin-top: 8vh;
 }
 
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
     color: $blight;
-    width: 60%;
-    max-width: 900px;
-    font-size: 1.6em;
+    font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
 }
@@ -72,11 +70,11 @@ $bwhite: #FFF;
     font-size: 2.2em;
 }
 
-.faq-title {
+h1 {
     color: $blight;
     margin-top: 10vh;
-    font-size: 4.5em;
-    margin-bottom: 10vh;
+    font-size: 3.5em;
+    margin-bottom: 5vh;
 }
 
 .faq-questions {
@@ -84,12 +82,13 @@ $bwhite: #FFF;
         margin-top: 10vh;
     }
     .title {
-        font-size: 2em;
+        font-size: 1.6em;
         color: $blight;
         margin-bottom: 30px;
     }
     .answer {
-        font-size: 1.5em;
+        font-size: 1.15em;
+        line-height: 2em;
         color: $bgray;
     }
     .question {
@@ -99,13 +98,6 @@ $bwhite: #FFF;
         color: $blink;
         text-decoration: none;
     }
-}
-
-.sponsors-title {
-    color: $blight;
-    margin-top: 10vh;
-    font-size: 4.5em;
-    margin-bottom: 10vh;
 }
 
 .sponsor-images {
@@ -135,13 +127,6 @@ $bwhite: #FFF;
     }
 }
 
-.partners-title {
-    color: $blight;
-    margin-top: 10vh;
-    font-size: 4.5em;
-    margin-bottom: 10vh;
-}
-
 @media(max-width: 600px) {
     .head-logo img {
         width: 85%;
@@ -150,9 +135,6 @@ $bwhite: #FFF;
         display: block;
         margin-bottom: 10px;
         margin-right: 0!important;
-    }
-    .sponsors-title, .partners-title {
-        font-size: 4em;
     }
 }
 
@@ -165,8 +147,14 @@ $bwhite: #FFF;
     margin-bottom: 10vh;
 }
 
+#promo-video {
+    max-width: 700px;
+    width: 100%;
+    height: 400px;
+}
+
 .bottom-buttons {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 .bottom-description {
@@ -176,7 +164,8 @@ $bwhite: #FFF;
 .bottom-links {
     @include center-block();
     text-align: center;
-    margin-top: 4vh;
+    margin-top: 25vh;
+    padding-bottom: 10vh;
     a {
         color: $blight;
         text-decoration: none;
