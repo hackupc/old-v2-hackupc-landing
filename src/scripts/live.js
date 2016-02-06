@@ -42,8 +42,6 @@ $(document).ready(function() {
           if (sundayEvents.length > 0) {
             showEvents(template, place, {day: "Sunday", events: sundayEvents});
           }
-          
-          $("#list-applications tbody").html(template(json));
       }
     });
   };
