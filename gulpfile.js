@@ -25,7 +25,6 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   var combined = combiner.obj([
     gulp.src('src/scripts/**/*.js'),
-    concat('main.js'),
     gulp.dest('dist/assets/js'),
     rename({suffix: '.min'}),
     uglify(),
@@ -52,11 +51,21 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/assets/img'))
 });
 
+gulp.task('templates', function() {
+  return gulp.src('src/templates/**/*')
+    .pipe(gulp.dest('dist/assets/templates'))
+})
+
+gulp.task('data', function() {
+  return gulp.src('src/data/**/*')
+    .pipe(gulp.dest('dist/assets/data'))
+})
+
 gulp.task('clean', function(cb) {
     del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
 });
 
-gulp.task('default', ['dependencies', 'styles', 'scripts', 'images', 'fonts'], function() {
+gulp.task('default', ['dependencies', 'styles', 'scripts', 'images', 'fonts', 'templates', 'data'], function() {
 });
 
 gulp.task('watch', function() {
@@ -68,6 +77,10 @@ gulp.task('watch', function() {
   gulp.watch('src/fonts/**/*', ['fonts']);
   // Watch image files
   gulp.watch('src/images/**/*', ['images']);
+  // Watch data files
+  gulp.watch('src/data/**/*', ['data']);
+  // Watch template files
+  gulp.watch('src/templates/**/*', ['templates']);
   // Watch dependencies
   gulp.watch('bower_components/**/*.min.js', ['dependencies']);
 });
