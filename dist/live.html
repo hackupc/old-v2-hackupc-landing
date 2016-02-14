@@ -7,34 +7,116 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>HackUPC Live</title>
 
-    <!-- Bootstrap and moar -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+      @font-face {
+          font-family: 'AndaleMono';
+          src: url('/assets/fonts/AndaleMono.ttf');
+      }
+
+      body, h1, h2, p, strong, small {
+        font-family: 'AndaleMono';
+        color: #2731F7;
+      }
+
+      html, body {
+        margin: 0;
+      }
+
+      body {
+        padding-top: 83px;
+        padding-bottom: 60px;
+      }
+
+      h1, h2, p {
+        padding-left: 93px;
+      }
+
+      h1 {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        white-space: nowrap
+      }
+
+      span {
+        font-size: inherit;
+        line-height: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+      }
+
+      span.location-emoji {
+          margin-left: -2px;
+          margin-right: -5px;
+      }
+
+      p.highlight {
+        background: #2731F7;
+        color: white;
+        padding-top: 6px;
+        padding-bottom: 2px;
+        /* to compensate for the padding */
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+
+      p.done, p.done span {
+        opacity: 0.5;
+        line-height: 8px;
+      }
+
+      #title-date { font-size: 20px }
+
+      #timeline { padding-right: 300px }
+
+      #twitter-container {
+        position: fixed;
+        top: 0px;
+        right: -1px;
+        width: 300px;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #twitter-container { display: none }
+
+        body {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        h1, h2, p { padding-left: 10px }
+
+        p, p.done {
+          white-space: normal;
+          line-height: 16px;
+          font-size: 16px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <h1>Live</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <a class="twitter-timeline"  href="https://twitter.com/search?q=%23hackupc%20OR%20%40hackupc" data-widget-id="695754112978309120">Tweets about #hackupc OR @hackupc</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12" id="timetable"></div>
-      </div>
+    <h1>HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span></h1>
+    <div id="timetable"></div>
 
+    <div id="twitter-container">
+      <a class="twitter-timeline" height="100%" href="https://twitter.com/search?q=%23hackupc%20OR%20%40hackupc" data-widget-id="695754112978309120">Tweets about #hackupc OR @hackupc</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
-    
-    <!-- Templates -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/live.js"></script>
   </body>
 </html>

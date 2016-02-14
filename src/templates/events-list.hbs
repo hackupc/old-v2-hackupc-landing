@@ -1,12 +1,12 @@
-<h2>{{day}}</h2>
+<h2>## {{day}}</h2>
 {{#each events}}
-  <div class="row">
-    <div class="col-md-4">
-      <p><small>{{beginTime}} - {{endTime}}</small></p>
-    </div>
-    <div class="col-md-8">
-      <p>{{{title}}}</p>
-      <p><small>{{{place}}}</small></p>
-    </div>
-  </div>
+<p class="
+{{#if highlight}}highlight {{/if}}
+{{#if done}}done{{/if}}
+">
+  - [{{#if done}}x{{else}} {{/if}}]
+  {{beginTime}} - {{endTime}} {{{title}}}
+  {{#if place}}(<span class="location-emoji">📍</span>{{place}}){{/if}}
+</p>
 {{/each}}
+<br>
