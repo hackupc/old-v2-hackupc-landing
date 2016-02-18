@@ -18,8 +18,12 @@ function pendingEvent (ev) {
 }
 
 function eventComparator (ev1, ev2) {
-  if (ev1.done != ev2.done) return Number(ev2.done) - Number(ev1.done)
-  return ev1.begin - ev2.begin
+  return (
+    (Number(ev2.done) - Number(ev1.done)) ||
+    (ev1.begin - ev2.begin) ||
+    (ev1.end - ev2.end) ||
+    (ev2.title < ev1.title ? 1 : -1)
+  )
 }
 
 function renderTimetable () {
