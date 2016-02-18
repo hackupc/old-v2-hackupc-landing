@@ -54,11 +54,19 @@ function updateTitleDate () {
   titleDate.textContent = date.join(' ')
 }
 
+function parseDateStr (dateStr) {
+  var d = dateStr.split(/[^\d]/).map(Number)
+  // month is '0-indexed'
+  d[1] -= 1
+  // because managing to do .apply on a constructor is way uglier and more code
+  return new Date(d[0], d[1], d[2], d[3], d[4], d[5])
+}
+
 function parseEventData (evData) {
   events = evData.events
   events.forEach(function (ev) {
-    ev.begin = new Date(ev.begin)
-    ev.end = new Date(ev.end)
+    ev.begin = parseDateStr(ev.begin)
+    ev.end = parseDateStr(ev.end)
     ev.beginTime = ev.begin.toTimeString().substr(0, 5)
     ev.endTime = ev.end.toTimeString().substr(0, 5)
     ev.day = ev.begin.getDate()
