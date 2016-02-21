@@ -90,7 +90,7 @@ function ajaxFailed (xhr, status, errorThrown) {
 }
 
 $.ajax({
-  url: '/assets/data/events.json?v3',
+  url: '/assets/data/events.json?v4',
   type: 'GET',
   dataType : 'json',
   success: parseEventData,
