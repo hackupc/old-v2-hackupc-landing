@@ -9,11 +9,11 @@
     font-family: minecraftia;
 }
 
-$blight: #2A31EE;
-$bdark: #0F29CF;
-$blink: #75ACDB;
+$blight: #EBA517;
+$bdark: #CE481C;
+$blink: #CE481C;
 $bgray: #666;
-$bwhite: #FFF;
+$bwhite: #FFF6CD;
 
 .head-logo img {
     @include center-block();
@@ -32,7 +32,7 @@ $bwhite: #FFF;
                 margin-right: 15px;
             }
 	    &:hover {
-		background-color: #9D9FF9;
+		background-color: $blink;
 		border-bottom-width: 6px;
 		position: relative;
 		top: 4px;
