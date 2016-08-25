@@ -9,17 +9,15 @@
     font-family: minecraftia;
 }
 
-.answer {
+.answer, .answer > a {
     font-family: 'Droid Sans', sans-serif;
-    a {
-        font-family: 'Droid Sans', sans-serif;
-    }
+    font-weight: bold;
 }
 
 $blight: #EBA517;
 $bdark: #CE481C;
 $blink: #CE481C;
-$bgray: #666;
+$bgray: #444;
 $bwhite: #FFF6CD;
 
 .head-logo img {
