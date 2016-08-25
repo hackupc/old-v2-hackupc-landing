@@ -9,11 +9,6 @@
     font-family: minecraftia;
 }
 
-.answer, .answer > a {
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: bold;
-}
-
 $blight: #EBA517;
 $bdark: #CE481C;
 $blink: #CE481C;
@@ -97,6 +92,8 @@ h1 {
         font-size: 1.15em;
         line-height: 2em;
         color: $bgray;
+        font-family: 'Droid Sans', sans-serif;
+        font-weight: bold;
     }
     .question {
         margin-bottom: 5vh;
@@ -104,6 +101,8 @@ h1 {
     a {
         color: $blink;
         text-decoration: none;
+        font-family: 'Droid Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -168,7 +167,7 @@ h1 {
     margin-top: 7vh;
 }
 
-.bottom-links {
+.bottom-links, .spring-site {
     @include center-block();
     text-align: center;
     margin-top: 25vh;
