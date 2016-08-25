@@ -1,15 +1,16 @@
 
-//Leaves Script. 
+//Leaves Script. by @casassg
 // Made from http://thecodeplayer.com/walkthrough/html5-canvas-snow-effect
 // Using some inspiration from @dasilva Game of Life Script
 
 //canvas init
 var canvas = document.getElementById("lolcanvas");
 var ctx = canvas.getContext("2d");
-var imageSrc ='assets/img/UPC.png';
+var imageSrcBase ='assets/img/leaf';
 var started = false;
 var mp = 25; //max particles
-var maxSize = 80;
+var maxSize = 60;
+var minSize = 20;
 var particles = [];
 window.addEventListener('resize', resizeCanvas, false);
 var W = window.innerWidth;
@@ -34,7 +35,7 @@ function start() {
         particles.push({
             x: Math.random()*canvas.width, //x-coordinate
             y: Math.random()*canvas.height, //y-coordinate
-            r: Math.random()*maxSize+1, //radius
+            r: minSize + Math.random()*maxSize+1, //radius
             d: Math.random()*mp //density
         })
     }
@@ -55,7 +56,7 @@ function draw()
         var p = particles[i];
         ctx.moveTo(p.x, p.y);
         var img = new Image();
-        img.src = imageSrc;
+        img.src = imageSrcBase + Math.round(p.r*10) % 4 + '.png';
         ctx.drawImage(img, p.x, p.y, p.r,p.r);
     }
     ctx.fill();
