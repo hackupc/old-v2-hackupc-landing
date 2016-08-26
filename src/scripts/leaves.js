@@ -8,7 +8,7 @@ var canvas = document.getElementById("lolcanvas");
 var ctx = canvas.getContext("2d");
 var imageSrcBase ='assets/img/leaf';
 var started = false;
-var mp = 25; //max particles
+var mp = 40; //max particles
 var maxSize = 60;
 var minSize = 20;
 var particles = [];
@@ -83,7 +83,7 @@ function update()
         
         //Sending flakes back from the top when it exits
         //Lets make it a bit more organic and let flakes enter from the left and right also.
-        if(p.x > W+5 || p.x < -5 || p.y > H)
+        if(p.x > W+maxSize*2 || p.x < -5 || p.y > H-maxSize*2)
         {
             if(i%3 > 0) //66.67% of the flakes
             {

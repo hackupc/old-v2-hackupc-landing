@@ -57,7 +57,8 @@ $bwhite: #FFF6CD;
 
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
-    color: $blight;
+    color: $bdark;
+    font-weight: bold;
     font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
