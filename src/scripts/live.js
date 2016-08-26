@@ -49,7 +49,7 @@ function renderTimetable () {
 }
 
 function updateTitleDate () {
-  var date = (new Date ()).toString().split(' ')
+  var date = (new Date()).toString().split(' ')
   date.splice(-2)
   titleDate.textContent = date.join(' ')
 }
@@ -72,13 +72,13 @@ function parseEventData (evData) {
     ev.day = ev.begin.getDate()
   })
 
-  fridayEvents = events.filter(function (ev){
+  fridayEvents = events.filter(function (ev) {
     return ev.day == 19
   })
-  saturdayEvents = events.filter(function (ev){
+  saturdayEvents = events.filter(function (ev) {
     return ev.day == 20
   })
-  sundayEvents = events.filter(function (ev){
+  sundayEvents = events.filter(function (ev) {
     return ev.day == 21
   })
 }
@@ -92,7 +92,7 @@ function ajaxFailed (xhr, status, errorThrown) {
 $.ajax({
   url: '/assets/data/events.json?v4',
   type: 'GET',
-  dataType : 'json',
+  dataType: 'json',
   success: parseEventData,
   error: ajaxFailed
 })

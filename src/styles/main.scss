@@ -5,15 +5,19 @@
     src: url(../fonts/minecraftia.ttf);
 }
 
-* {
-    font-family: minecraftia;
-}
+$blight: #EBA517;
+$blightt: #ffab00;
+$bdark: #CE481C;
+$blink: #CE481C;
+$bgray: #444;
+$bwhite: #FFF6CD;
 
-$blight: #2A31EE;
-$bdark: #0F29CF;
-$blink: #75ACDB;
-$bgray: #666;
-$bwhite: #FFF;
+body {
+  background: #fdf3e1;
+  color: #949393;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: bold;
+}
 
 .head-logo img {
     @include center-block();
@@ -21,6 +25,9 @@ $bwhite: #FFF;
     margin-top: 20vh;
 }
 
+.top-buttons, .top-description {
+  font-family: minecraftia;
+}
 .top-buttons, .bottom-buttons {
     >div {
         text-align: center;
@@ -32,7 +39,7 @@ $bwhite: #FFF;
                 margin-right: 15px;
             }
 	    &:hover {
-		background-color: #9D9FF9;
+		background-color: $blink;
 		border-bottom-width: 6px;
 		position: relative;
 		top: 4px;
@@ -57,7 +64,7 @@ $bwhite: #FFF;
 
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
-    color: $blight;
+    color: $bdark;
     font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
@@ -73,7 +80,7 @@ $bwhite: #FFF;
 }
 
 h1 {
-    color: $blight;
+    color: $blightt;
     margin-top: 10vh;
     font-size: 3.5em;
     margin-bottom: 5vh;
@@ -85,13 +92,12 @@ h1 {
     }
     .title {
         font-size: 1.6em;
-        color: $blight;
-        margin-bottom: 30px;
+        color: $blightt;
     }
     .answer {
-        font-size: 1.15em;
+        font-size: 1.4em;
         line-height: 2em;
-        color: $bgray;
+        font-weight: normal;
     }
     .question {
         margin-bottom: 5vh;
@@ -163,7 +169,7 @@ h1 {
     margin-top: 7vh;
 }
 
-.bottom-links {
+.bottom-links, .spring-site {
     @include center-block();
     text-align: center;
     margin-top: 25vh;
@@ -173,4 +179,11 @@ h1 {
         text-decoration: none;
         padding: 0.4em;
     }
+}
+
+// Bigger margin around columns so that in mobile
+// text is not glued to screen border
+.col-md-4 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
