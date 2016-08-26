@@ -107,3 +107,9 @@ function update()
 resizeCanvas()
 start()
 mainLoop()
+
+window.onscroll = function (e) {
+  const factor = Math.max(Math.min(document.body.scrollTop / 500, 1), 0)
+  console.log(factor)
+  lolcanvas.style.opacity = 0.1 + 0.9 * (1 - factor)
+}
