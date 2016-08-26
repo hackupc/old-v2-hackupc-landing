@@ -5,10 +5,6 @@
     src: url(../fonts/minecraftia.ttf);
 }
 
-* {
-    font-family: minecraftia;
-}
-
 $blight: #EBA517;
 $bdark: #CE481C;
 $blink: #CE481C;
@@ -18,6 +14,8 @@ $bwhite: #FFF6CD;
 body {
   background: #fdf3e1;
   color: #d6bca0;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: bold;
 }
 
 .head-logo img {
@@ -26,6 +24,9 @@ body {
     margin-top: 20vh;
 }
 
+.top-buttons, .top-description {
+  font-family: minecraftia;
+}
 .top-buttons, .bottom-buttons {
     >div {
         text-align: center;
@@ -63,7 +64,6 @@ body {
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
     color: $bdark;
-    font-weight: bold;
     font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
@@ -95,10 +95,8 @@ h1 {
         margin-bottom: 10px;
     }
     .answer {
-        font-size: 1.15em;
+        font-size: 1.4em;
         line-height: 2em;
-        font-family: minecraftia;
-        font-weight: bold;
     }
     .question {
         margin-bottom: 5vh;
@@ -106,8 +104,6 @@ h1 {
     a {
         color: $blink;
         text-decoration: none;
-        font-family: minecraftia;
-        font-weight: bold;
     }
 }
 
