@@ -117,6 +117,7 @@ h1 {
         &.ml {
             margin-left: 20px;
         }
+
         &.tera {
             width: 60%
         }
@@ -131,6 +132,11 @@ h1 {
         }
         &.mili {
             width: 15%;
+        }
+        &.portrait {
+            padding-right: 5%;
+            padding-left: 5%;
+
         }
     }
     .separator {
