@@ -94,6 +94,6 @@ start()
 mainLoop()
 
 window.onscroll = function (e) {
-  var factor = Math.max(Math.min(indow.pageYOffset / 500, 1), 0)
+  var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0)
   canvas.style.opacity = 0.1 + 0.8 * (1 - factor)
 }
