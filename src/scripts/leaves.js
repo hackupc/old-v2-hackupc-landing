@@ -31,7 +31,15 @@ function start () {
   }
 }
 
+var images = Array(4)
+for(var i = 0; i < 4; i++) {
+    var img = new Image()
+    img.src = imageSrcBase + i + '.png'
+    images[i] = img
+}
 // snowflake particles
+
+var lastTime = new Date().getTime()
 
 function mainLoop () {
   requestAnimationFrame(mainLoop)
@@ -46,9 +54,7 @@ function draw () {
   for (var i = 0; i < mp; i++) {
     var p = particles[i]
     if (p == null) continue
-    var img = new Image()
-    img.src = imageSrcBase + Math.round(p.r * 10) % 4 + '.png'
-    ctx.drawImage(img, p.x, p.y, p.r, p.r)
+    ctx.drawImage(images[Math.round(p.r * 10) % 4], p.x, p.y, p.r, p.r)
   }
 }
 
@@ -56,10 +62,14 @@ function draw () {
 // angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
 var angle = 0
 function update () {
-  angle += 0.01
+  var newTime = new Date().getTime()
+  var dt = (newTime - lastTime) * 0.001
+  lastTime = newTime
+
+  angle += 0.6*dt
   var W = canvas.width
   var H = canvas.height
-  var sinInc = Math.sin(angle) * 2
+  var sinInc = Math.sin(angle) * 120 * dt
 
   for (var i = 0; i < mp; i++) {
     var p = particles[i]
@@ -67,7 +77,7 @@ function update () {
     // We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
     // Every particle has its own density which can be used to make the downward movement different for each flake
     // Lets make it more random by adding in the radius
-    p.y += Math.cos(angle + p.d) + 1 + p.r / 25
+    p.y += (Math.cos(angle + p.d) + 1 + p.r / 25) * 60 * dt
     p.x += sinInc
 
     // Sending flakes back from the top when it exits
