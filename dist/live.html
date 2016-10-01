@@ -5,107 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/live.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>HackUPC Live</title>
-
-    <style>
-      @font-face {
-          font-family: 'AndaleMono';
-          src: url('/assets/fonts/AndaleMono.ttf');
-      }
-
-      body, h1, h2, p, strong, small {
-        font-family: 'AndaleMono';
-        color: #CE481C;
-      }
-
-      html, body {
-        margin: 0;
-      }
-
-      body {
-        padding-top: 83px;
-        padding-bottom: 60px;
-      }
-
-      h1, h2, p {
-        padding-left: 93px;
-      }
-
-      h1 {
-        margin-top: 0px;
-        margin-bottom: 50px;
-        font-size: 40px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 20px;
-        margin-top: 18px;
-        margin-bottom: 18px;
-        white-space: nowrap
-      }
-
-      span {
-        font-size: inherit;
-        line-height: inherit;
-        margin-top: inherit;
-        margin-bottom: inherit;
-      }
-
-      span.location-emoji {
-          margin-left: -2px;
-          margin-right: -5px;
-      }
-
-      p.highlight {
-        background: #CE481C;
-        color: white;
-        padding-top: 6px;
-        padding-bottom: 2px;
-        /* to compensate for the padding */
-        margin-top: 12px;
-        margin-bottom: 16px;
-      }
-
-      p.done, p.done span {
-        opacity: 0.5;
-        line-height: 8px;
-      }
-
-      #title-date { font-size: 20px }
-
-      #timeline { padding-right: 300px }
-
-      #twitter-container {
-        position: fixed;
-        top: 0px;
-        right: -1px;
-        width: 300px;
-        height: 100%;
-        border-left: 1px solid rgba(15, 70, 100, .12);
-      }
-
-      @media screen and (max-width: 1000px) {
-        #twitter-container { display: none }
-
-        body {
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-
-        h1, h2, p { padding-left: 10px }
-
-        p, p.done {
-          white-space: normal;
-          line-height: 16px;
-          font-size: 16px;
-        }
-      }
-    </style>
   </head>
   <body>
     <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span></h1>
@@ -118,6 +21,8 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
     <script src="assets/js/live.js"></script>
+    <script src="assets/js/leaves.webgl.js"></script>
   </body>
 </html>
