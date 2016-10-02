@@ -5,6 +5,11 @@ var leaves;
 var testing = true;
 var first = true;
 
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
+}
 
 var app = new Vue({
   el: '#app',
@@ -15,8 +20,7 @@ var app = new Vue({
     eventsNotify: true,
     bieneNotify: false,
     timeline: null,
-    animation: true,
-    dateFormat: "%H:%M:%S"
+    animation: true
   },
   methods: {
     options: function() {
@@ -149,6 +153,11 @@ var app = new Vue({
       return this.timeline.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -2;
       });
+    }
+  },
+  filters: {
+    hackupcdate: function (date) {
+      return date.getHours() + ":" + date.getMinutes().pad(2) + ":" + date.getSeconds().pad(2);
     }
   }
 });
