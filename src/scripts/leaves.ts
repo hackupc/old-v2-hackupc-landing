@@ -11,11 +11,13 @@ class Leaves {
   maxSize = 60;
   minSize = 20;
   angle = 0;
+  paused = false;
 
   constructor(public constantOpacity: boolean) {
     this.loadLeaves();
     this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
 
+    this.constOpacity = constantOpacity;
     if(constantOpacity) {
       this.renderer.view.style.opacity = 0.1;  
     } else {
@@ -24,15 +26,34 @@ class Leaves {
     
     this.renderer.autoResize = true;
 
-    this.resizeCanvas();
-    window.addEventListener('resize', () => this.resizeCanvas(), false)
-
     this.stage = new PIXI.Container();
     document.body.insertBefore(this.renderer.view, document.body.childNodes[0]);
+
+    this.resizeCanvas();
+    window.addEventListener('resize', () => this.resizeCanvas(), false)
   }
 
   start() {
     requestAnimationFrame((ts) => this.mainLoop(ts));
+  }
+
+  restart() {
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
+    if(this.constOpacity) {
+      this.renderer.view.style.opacity = 0.1;  
+    } else {
+      window.onscroll = (e) => this.onScrollChangeOpacity(e);
+    }
+
+    document.body.insertBefore(this.renderer.view, document.body.childNodes[0]);
+    this.resizeCanvas();
+
+    this.paused = false;
+  }
+
+  stop() {
+    this.renderer.destroy(true);
+    this.paused = true;
   }
 
   private drawLeaves() {
@@ -86,8 +107,10 @@ class Leaves {
     var dt: number = (timestamp - this.startTime)/700;
     this.startTime = timestamp;
 
-    this.drawLeaves();
-    this.update(dt);
+    if(this.paused == false) {
+      this.drawLeaves();
+      this.update(dt);
+    }
   }
 
   private loadLeaves() {
@@ -120,6 +143,3 @@ class Leaves {
     this.renderer.resize(window.innerWidth, window.innerHeight);
   }
 }
-
-var leaves = new Leaves(false);
-leaves.start();

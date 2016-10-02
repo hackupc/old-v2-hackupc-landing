@@ -30,12 +30,11 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('src/scripts/*.ts')
+  gulp.src('src/scripts/leaves.ts')
     .pipe(ts({
         out: 'leaves.webgl.js'
     }))
-    .pipe(gulp.dest('dist/assets/js'));
-
+    .pipe(gulp.dest('src/scripts'));
 
   var combined = combiner.obj([
     gulp.src('src/scripts/**/*.js'),
