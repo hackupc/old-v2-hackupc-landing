@@ -65,11 +65,6 @@ p.highlight {
   margin-bottom: 16px;
 }
 
-p.done, p.done span {
-  opacity: 0.5;
-  line-height: 8px;
-}
-
 #title-date { font-size: 20px }
 
 #timeline { padding-right: 300px }
@@ -152,4 +147,37 @@ p.done, p.done span {
       margin-left: 25%;
       width: 50%;
     }
+}
+
+#timetable {
+  width: 800px;
+  margin-left: 100px;
+
+  span.where {
+    font-size: 14px;
+  }
+
+  .highlighted {
+    h3 {
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+
+  .highlighted:first-child {
+    margin-top: 50px;
+  }
+
+  .highlighted:last-child {
+    margin-bottom: 50px;
+  }
+
+  div.done {
+    opacity: 0.5;
+    line-height: 8px;
+  }
+
+  p {
+    padding-left: 0px;
+  }
 }
