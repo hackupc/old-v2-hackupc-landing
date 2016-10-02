@@ -1,158 +1,169 @@
 {
   "events": [
     {
-      "title": "Sponsor Registration",
-      "place": "A6",
-      "begin": "2016-02-19 17:00:00",
-      "end":   "2016-02-19 20:00:00"
-    },
-    {
       "title": "Hacker Registration",
-      "place": "A6",
-      "begin": "2016-02-19 18:00:00",
-      "end":   "2016-02-19 20:00:00"
-    },
-    {
-      "title": "Dinner",
-      "place": "A6 E01",
-      "begin": "2016-02-19 19:30:00",
-      "end":   "2016-02-19 21:00:00"
+      "place": "A5-A6 S1",
+      "begin": "2016-10-07 15:00:00",
+      "end":   "2016-10-07 18:30:00",
+      "type": "essential"
     },
     {
       "title": "Opening Talk",
-      "place": "Esports UPC (gym)",
-      "begin": "2016-02-19 21:30:00",
-      "end":   "2016-02-19 22:30:00"
+      "place": "Vertex",
+      "begin": "2016-10-07 19:00:00",
+      "end":   "2016-10-07 21:00:00",
+      "type": "essential"
+    },
+    {
+      "title": "Hack Start",
+      "place": "A5-A6 01-02",
+      "begin": "2016-10-07 21:00:00",
+      "end":   "",
+      "type": "essential"
+    },
+    {
+      "title": "Dinner",
+      "place": "TODO",
+      "begin": "2016-10-07 21:00:00",
+      "end":   "2016-10-07 22:00:00",
+      "type": "food"
     },
     {
       "title": "Team Building",
-      "place": "",
-      "begin": "2016-02-19 23:00:00",
-      "end":   "2016-02-19 23:30:00"
+      "place": "A6E02",
+      "begin": "2016-10-07 22:00:00",
+      "end":   "2016-10-07 23:00:00",
+      "type": "events"
     },
     {
-      "title": "Hacking Starts!",
-      "place": "",
-      "begin": "2016-02-20 00:00:00",
-      "end":   "2016-02-20 00:00:00"
+      "title": "Intro Talks",
+      "place": "A5001-A5002",
+      "begin": "2016-10-07 22:00:00",
+      "end":   "2016-10-08 01:00:00",
+      "type": "talks"
     },
     {
       "title": "Midnight Snacks",
-      "place": "A5 & A6",
-      "begin": "2016-02-20 01:00:00",
-      "end":   "2016-02-20 01:30:00"
-    },
-    {
-      "title": "Intro to Android",
-      "place": "A6 001",
-      "begin": "2016-02-20 00:00:00",
-      "end":   "2016-02-20 01:30:00"
-    },
-    {
-      "title": "Intro to Webdev",
-      "place": "A6 002",
-      "begin": "2016-02-20 00:00:00",
-      "end":   "2016-02-20 01:30:00"
-    },
-    {
-      "title": "Intro to APIs",
-      "place": "A5 001",
-      "begin": "2016-02-20 00:00:00",
-      "end":   "2016-02-20 01:30:00"
+      "place": "TODO",
+      "begin": "2016-10-08 12:00:00",
+      "end":   "",
+      "type": "food"
     },
     {
       "title": "Breakfast",
-      "place": "A6 E01",
-      "begin": "2016-02-20 09:00:00",
-      "end":   "2016-02-20 11:00:00"
+      "place": "A6 001",
+      "begin": "2016-10-08 08:00:00",
+      "end":   "2016-10-08 09:00:00",
+      "type": "food"
     },
     {
       "title": "Showers",
-      "place": "Esports UPC",
-      "begin": "2016-02-20 09:30:00",
-      "end":   "2016-02-20 11:30:00"
+      "place": "Pavelló",
+      "begin": "2016-10-08 09:00:00",
+      "end":   "2016-10-08 11:00:00",
+      "type": "essential"
     },
     {
-      "title": "Building stuff with Bitcoin",
-      "place": "A6 001",
-      "begin": "2016-02-20 10:00:00",
-      "end":   "2016-02-20 10:30:00"
-    },
-    {
-      "title": "Accenture Tech Talk: Connect. Compute. Communicate IoT",
-      "place": "A6 001",
-      "begin": "2016-02-20 11:00:00",
-      "end":   "2016-02-20 11:30:00"
-    },
-    {
-      "title": "Everis Tech Talk: Aprovisionamiento ágil de servicios con Ansible y Docker [Spanish]",
-      "place": "A6 001",
-      "begin": "2016-02-20 12:00:00",
-      "end":   "2016-02-20 12:30:00"
-    },
-    {
-      "title": "Skyscanner Tech Talk",
-      "place": "A6 001",
-      "begin": "2016-02-20 13:00:00",
-      "end":   "2016-02-20 13:30:00"
+      "title": "Tech talks",
+      "place": "A5001-A5002",
+      "begin": "2016-10-08 09:00:00",
+      "end":   "2016-10-08 11:00:00",
+      "type": "talks"
     },
     {
       "title": "Lunch",
-      "place": "A6 E01",
-      "begin": "2016-02-20 14:00:00",
-      "end":   "2016-02-20 15:00:00"
+      "place": "TODO",
+      "begin": "2016-10-08 15:00:00",
+      "end":   "2016-10-08 15:00:00",
+      "type": "food"
     },
     {
-      "title": "Pizza Dinner",
-      "place": "A6 E01",
-      "begin": "2016-02-20 20:00:00",
-      "end":   "2016-02-20 21:00:00"
+      "title": "Tech talks",
+      "place": "A5001-A5002",
+      "begin": "2016-10-08 15:00:00",
+      "end":   "2016-10-08 17:00:00",
+      "type": "talks"
     },
     {
-      "title": "Midnight Snacks",
-      "place": "A5 & A6",
-      "begin": "2016-02-21 00:00:00",
-      "end":   "2016-02-21 00:30:00"
+      "title": "Dinner",
+      "place": "TODO",
+      "begin": "2016-10-08 20:00:00",
+      "end":   "2016-10-08 21:00:00",
+      "type": "food"
     },
     {
-      "title": "Midnight Games!",
-      "place": "",
-      "begin": "2016-02-21 00:00:00",
-      "end":   "2016-02-21 06:00:00"
+      "title": "Chill Games",
+      "place": "TODO",
+      "begin": "2016-10-08 22:00:00",
+      "end":   "2016-10-09 00:00:00",
+      "type": "events"
+    },
+    {
+      "title": "Midnight Snack",
+      "place": "TODO",
+      "begin": "2016-10-09 00:00:00",
+      "end":   "",
+      "type": "food"
+    },
+    {
+      "title": "Midnight games!",
+      "place": "A5101",
+      "begin": "2016-10-09 00:30:00",
+      "end":   "2016-10-09 03:00:00",
+      "type": "events"
     },
     {
       "title": "Breakfast",
-      "place": "A6 E01",
-      "begin": "2016-02-21 09:00:00",
-      "end":   "2016-02-21 11:00:00"
-    },
-    {
-      "title": "Showers",
-      "place": "Esports UPC",
-      "begin": "2016-02-21 09:00:00",
-      "end":   "2016-02-21 11:30:00"
+      "place": "TODO",
+      "begin": "2016-10-09 08:00:00",
+      "end":   "2016-10-09 09:00:00",
+      "type": "food"
     },
     {
       "title": "Hack Submissions",
-      "place": "",
-      "begin": "2016-02-21 11:30:00",
-      "end":   "2016-02-21 12:00:00"
+      "place": "Devpost",
+      "begin": "2016-10-09 08:00:00",
+      "end":   "2016-10-09 09:30:00",
+      "type": "essential"
     },
     {
-      "title": "Hacking Ends!",
-      "place": "",
-      "begin": "2016-02-21 12:00:00",
-      "end":   "2016-02-21 12:00:00"
+      "title": "Hack Ends",
+      "place": "-",
+      "begin": "2016-10-09 09:00:00",
+      "end":   "",
+      "type": "essential"
+    },
+    {
+      "title": "Showers",
+      "place": "Pavelló",
+      "begin": "2016-10-09 09:00:00",
+      "end":   "2016-10-09 11:00:00",
+      "type": "essential"
     },
     {
       "title": "Hack Demos",
-      "place": "A5 & A6",
-      "begin": "2016-02-21 12:30:00",
-      "end":   "2016-02-21 14:00:00"
+      "place": "TODO",
+      "begin": "2016-10-09 10:30:00",
+      "end":   "2016-10-09 12:30:00",
+      "type": "essential"
     },
     {
       "title": "Lunch",
-      "place": "A6 E01",
+      "place": "TODO",
+      "begin": "2016-10-09 12:30:00",
+      "end":   "2016-10-09 13:30:00",
+      "type": "food"
+    },
+    {
+      "title": "Winner & Closing ceremony",
+      "place": "Vertex",
+      "begin": "2016-10-09 14:00:00",
+      "end":   "2016-10-09 16:00:00",
+      "type": "essential"
+    }
+  ]
+}
+A6 E01",
       "begin": "2016-02-21 14:00:00",
       "end":   "2016-02-21 15:00:00"
     },

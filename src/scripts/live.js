@@ -44,7 +44,7 @@ var app = new Vue({
           first = false;
           for(var i = 0; i < events.length; i++) {
             events[i].begin = new Date(Date.now() + i*30000);
-            events[i].end = new Date(Date.now() + i*60000);
+            events[i].end = new Date(Date.now() + (i+1)*30000);
           }
         } else if(!testing) {
           for(var i = 0; i < events.length; i++) {
@@ -105,7 +105,7 @@ var app = new Vue({
 
         notifiable = false;
         if((type === "food" && this.foodNotify)
-          || (type === "event" && this.eventsNotify) 
+          || (type === "events" && this.eventsNotify) 
           || (type === "talks" && this.talksNotify)
           || (type === "essential")) {
           notifiable = true;
