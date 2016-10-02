@@ -1,6 +1,11 @@
 var leaves;
+
+// Testing flag, for mocking the dates of the events
+// without having to change the dates in the events.json
 var testing = true;
-var first = true;
+if(testing) {
+  var first = true;
+}
 
 var app = new Vue({
   el: '#app',
@@ -25,6 +30,8 @@ var app = new Vue({
         if(response.body.events != timeline) {
           events = response.body.events;
 
+          // For testing we use the current time and create
+          // events in the near future
           if(testing && first) {
             first = false;
             for(var i = 0; i < events.length; i++) {
@@ -104,6 +111,13 @@ var app = new Vue({
 app.updateTimetable();
 app.startAnimation();
 
-window.setInterval(function(){
-  app.updateTimetable();
-}, 5000);
+
+if(testing){
+   window.setInterval(function(){
+      app.updateTimetable();
+    }, 1000);
+} else {
+  window.setInterval(function(){
+    app.updateTimetable();
+  }, 5000);
+}
