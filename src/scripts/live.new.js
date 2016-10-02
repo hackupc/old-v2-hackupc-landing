@@ -119,5 +119,5 @@ if(testing){
 } else {
   window.setInterval(function(){
     app.updateTimetable();
-  }, 5000);
+  }, 15000);
 }
