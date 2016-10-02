@@ -23,7 +23,7 @@ var app = new Vue({
       this.showoptions = this.showoptions ? false : true;
     },
     updateTimetable: function () {
-    this.$http.get('/assets/data/events.json')
+    this.$http.get('/assets/data/events.json?nocache=' + Math.floor(Math.random()*100))
       .then(function(response) {
         timeline = this.$get('timeline')
         events = response.body.events;
