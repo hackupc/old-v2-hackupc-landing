@@ -1,133 +1,123 @@
-var events
-var fridayEvents
-var saturdayEvents
-var sundayEvents
+var leaves;
 
-var template
-var lastHalf
-var titleDate = document.getElementById('title-date')
-var timetable = document.getElementById('timetable')
-
-function showEvents (template, target, data) {
-  var html = template(data)
-  target.innerHTML += html
+// Testing flag, for mocking the dates of the events
+// without having to change the dates in the events.json
+var testing = true;
+if(testing) {
+  var first = true;
 }
 
-function pendingEvent (ev) {
-  return !ev.done
-}
-
-function eventComparator (ev1, ev2) {
-  return (
-    (Number(ev2.done) - Number(ev1.done)) ||
-    (ev1.begin - ev2.begin) ||
-    (ev1.end - ev2.end) ||
-    (ev2.title < ev1.title ? 1 : -1)
-  )
-}
-
-function renderTimetable () {
-  var now = Date.now()
-  events.forEach(function (ev) {
-    ev.highlight = ev.begin <= now && now <= ev.end
-    ev.done = ev.end < now
-  })
-  fridayEvents.sort(eventComparator)
-  saturdayEvents.sort(eventComparator)
-  sundayEvents.sort(eventComparator)
-
-  timetable.innerHTML = ''
-  if (fridayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Friday', events: fridayEvents})
-  }
-  if (saturdayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Saturday', events: saturdayEvents})
-  }
-  if (sundayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Sunday', events: sundayEvents})
-  }
-}
-
-function hackUPCNotification(title, place) {
-  var options = {
-      body: place != '' && place != undefined ? 'Will take place in ' + place : '',
-      icon: 'https://hackupc.com/favicon.ico'
-  }
-  var n = new Notification(title, options);
-}
-
-function updateTitleDate () {
-  var date = (new Date()).toString().split(' ')
-  date.splice(-2)
-  titleDate.textContent = date.join(' ')
-}
-
-function parseDateStr (dateStr) {
-  var d = dateStr.split(/[^\d]/).map(Number)
-  // month is '0-indexed'
-  d[1] -= 1
-  // because managing to do .apply on a constructor is way uglier and more code
-  return new Date(d[0], d[1], d[2], d[3], d[4], d[5])
-}
-
-function parseEventData (evData) {
-  events = evData.events
-  events.forEach(function (ev) {
-    ev.begin = parseDateStr(ev.begin)
-    ev.end = parseDateStr(ev.end)
-    ev.beginTime = ev.begin.toTimeString().substr(0, 5)
-    ev.endTime = ev.end.toTimeString().substr(0, 5)
-    ev.day = ev.begin.getDate()
-  })
-
-  fridayEvents = events.filter(function (ev) {
-    return ev.day == 19
-  })
-  saturdayEvents = events.filter(function (ev) {
-    return ev.day == 20
-  })
-  sundayEvents = events.filter(function (ev) {
-    return ev.day == 21
-  })
-}
-
-function ajaxFailed (xhr, status, errorThrown) {
-  console.log('Error: ' + errorThrown)
-  console.log('Status: ' + status)
-  console.dir(xhr)
-}
-
-$.ajax({
-  url: '/assets/data/events.json?v4',
-  type: 'GET',
-  dataType: 'json',
-  success: parseEventData,
-  error: ajaxFailed
-})
-
-$.ajax({
-  url: '/assets/templates/events-list.hbs',
-  type: 'GET',
-  success: function (rawTemplate) {
-    template = Handlebars.compile(rawTemplate)
+var app = new Vue({
+  el: '#app',
+  data: {
+    showoptions: false,
+    foodNotify: true,
+    talksNotify: true,
+    eventsNotify: true,
+    bieneNotify: false,
+    timeline: null,
+    animation: true,
+    dateFormat: "%H:%M:%S"
   },
-  error: ajaxFailed
-})
+  methods: {
+    options: function() {
+      this.showoptions = this.showoptions ? false : true;
+    },
+    updateTimetable: function () {
+    this.$http.get('/assets/data/events.json')
+      .then(function(response) {
+        timeline = this.$get('timeline')
+        if(response.body.events != timeline) {
+          events = response.body.events;
 
-var MIN = 60 * 1000
-function timer () {
-  updateTitleDate()
-  var currentHalf = Math.floor(Date.now() / (30 * MIN))
-  if (lastHalf != currentHalf && events && template) {
-    renderTimetable()
-    lastHalf = currentHalf
-  }
-}
-timer()
-setInterval(timer, 1000)
+          // For testing we use the current time and create
+          // events in the near future
+          if(testing && first) {
+            first = false;
+            for(var i = 0; i < events.length; i++) {
+              events[i].begin = new Date(Date.now() + i*30000);
+              events[i].end = new Date(Date.now() + i*60000);
+            }
+          } else if(!testing) {
+            for(var i = 0; i < events.length; i++) {
+              events[i].begin = new Date(events[i].begin);
+              events[i].end = new Date(events[i].end);
+            }
+          } else {
+            for(var i = 0; i < events.length; i++) {
+              events[i].begin = timeline[i].begin;
+              events[i].end = timeline[i].end;
+            }
+          }
 
-Notification.requestPermission(function (permission) {
-  if (permission === "granted") {
-    hackUPCNotification("Desktop notifications enabled!")
+          this.$set('timeline', events);
+        }
+      }, function(response) {
+        console.log("Sth wrong");
+      });
+    },
+    // Toggles animation between stopped and started state
+    toggleAnimation: function (data) {
+      console.log("toggle");
+      if(data == false) {
+        leaves.stop();
+      } else {
+        leaves.restart();
+      }
+    },
+    // Starts background animation
+    startAnimation: function () {
+      leaves = new Leaves(true);
+      leaves.start();
+    },
+    // Returns false if not in range and percentage of completion if true
+    whereAreWe: function (start, end) {
+      d = new Date(Date.now());
+      
+      if(start <= d && d <= end) { // Inside the range
+        return (d - start)/(end - start);
+      } else if(d < start) {
+        return -2; // Before the range
+      } else if(d > end) {
+        return -1; // After the range
+      }
+    }
+  },
+  watch: {
+    animation: function (data) {
+      this.toggleAnimation(data);
+    }
+  },
+  computed: {
+    completedEvents: function() {
+      return this.timeline.filter(function(data) {
+        return app.whereAreWe(data.begin, data.end) === -1;
+      }).slice(-5);
+    },
+    currentEvents: function() {
+      return this.timeline.filter(function(data) {
+        percentage = app.whereAreWe(data.begin, data.end);
+        return percentage > 0;
+      });
+    },
+    futureEvents: function() {
+      return this.timeline.filter(function(data) {
+        return app.whereAreWe(data.begin, data.end) === -2;
+      });
+    }
   }
 });
+
+app.updateTimetable();
+app.startAnimation();
+
+
+if(testing){
+   window.setInterval(function(){
+      app.updateTimetable();
+    }, 1000);
+} else {
+  window.setInterval(function(){
+    app.updateTimetable();
+  }, 15000);
+}
