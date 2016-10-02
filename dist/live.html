@@ -5,24 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/live.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>HackUPC Live</title>
   </head>
   <body>
-    <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span></h1>
-    <div id="timetable"></div>
+    <div></div>
+    <div id="app">
+        <div class="navbar col-sm-12" id="livenav">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav col-md-12">
+                        <li class="active col-sm-2 col-sm-offset-1"><a href="#">Welcome</a></li>
+                        <li class="active col-sm-2"><a href="#">Maps</a></li>
+                        <li class="active col-sm-2"><a href="#">LIVE</a></li>
+                        <li class="active col-sm-2"><a href="#">The Game</a></li>
+                        <li class="active col-sm-2"><a href="#">MLH Hardware Lab</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <div id="twitter-container">
-        <a class="twitter-timeline" height="100%" href="https://twitter.com/search?q=%28hackupc%20OR%20from%3Ahackupc%29%20AND%20-filter%3Aretweets" data-widget-id="700696875549102080" data-link-color="#CE481C">Tweets about (hackupc OR from:hackupc) AND -filter:retweets</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
+
+        <div id="timetable">
+            <p class="event done" v-for="event in timeline">
+                {{event.begin}} - {{event.end}} {{event.title}}
+                (📍 {{event.place}})
+            </p>
+        </div>
+
+        <div v-if="showoptions" id="options">
+            <div class="options-content">
+                <h2>Live Options</h2>
+                <div id="notif-options">
+                    <h4>Notifications</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" v-model="foodNotify"> Food
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" v-model="talksNotify"> Talks
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" v-model="eventsNotify"> Events
+                        </label>
+                    </div>
+                    <div class="checkbox" style="display: none;">
+                        <label>
+                            <input type="checkbox" v-model="bieneNotify"> Biene
+                        </label>
+                    </div>
+                    <h4>Performance</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" v-model="animation"> Background animation
+                        </label>
+                    </div>
+                </div>
+                <button v-on:click="options" class="btn btn-default">Close</button>
+            </div>
+        </div>
+
+        <div id="twitter-container">
+            <a class="twitter-timeline" height="100%" href="https://twitter.com/search?q=%28hackupc%20OR%20from%3Ahackupc%29%20AND%20-filter%3Aretweets" data-widget-id="700696875549102080" data-link-color="#CE481C">Tweets about (hackupc OR from:hackupc) AND -filter:retweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
-    <script src="assets/js/live.js"></script>
-    <script src="assets/js/leaves.webgl.js"></script>
+    <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <script src="/assets/js/leaves.webgl.js"></script>
+    <script src="/assets/js/live.new.min.js"></script>
   </body>
 </html>

@@ -48,6 +48,14 @@ function renderTimetable () {
   }
 }
 
+function hackUPCNotification(title, place) {
+  var options = {
+      body: place != '' && place != undefined ? 'Will take place in ' + place : '',
+      icon: 'https://hackupc.com/favicon.ico'
+  }
+  var n = new Notification(title, options);
+}
+
 function updateTitleDate () {
   var date = (new Date()).toString().split(' ')
   date.splice(-2)
@@ -117,3 +125,9 @@ function timer () {
 }
 timer()
 setInterval(timer, 1000)
+
+Notification.requestPermission(function (permission) {
+  if (permission === "granted") {
+    hackUPCNotification("Desktop notifications enabled!")
+  }
+});
