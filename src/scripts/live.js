@@ -3,9 +3,8 @@ var leaves;
 // Testing flag, for mocking the dates of the events
 // without having to change the dates in the events.json
 var testing = true;
-if(testing) {
-  var first = true;
-}
+var first = true;
+
 
 var app = new Vue({
   el: '#app',
@@ -27,31 +26,46 @@ var app = new Vue({
     this.$http.get('/assets/data/events.json')
       .then(function(response) {
         timeline = this.$get('timeline')
-        if(response.body.events != timeline) {
-          events = response.body.events;
+        events = response.body.events;
 
-          // For testing we use the current time and create
-          // events in the near future
-          if(testing && first) {
-            first = false;
-            for(var i = 0; i < events.length; i++) {
-              events[i].begin = new Date(Date.now() + i*30000);
-              events[i].end = new Date(Date.now() + i*60000);
-            }
-          } else if(!testing) {
-            for(var i = 0; i < events.length; i++) {
-              events[i].begin = new Date(events[i].begin);
-              events[i].end = new Date(events[i].end);
-            }
-          } else {
-            for(var i = 0; i < events.length; i++) {
-              events[i].begin = timeline[i].begin;
-              events[i].end = timeline[i].end;
-            }
+        if(first) {
+          for(var i = 0; i < events.length; i++) {
+            events[i].notifySent = false;
           }
-
-          this.$set('timeline', events);
+        } else {
+          for(var i = 0; i < events.length; i++) {
+            events[i].notifySent = timeline[i].notifySent;
+          }
         }
+
+        // For testing we use the current time and create
+        // events in the near future
+        if(testing && first) {
+          first = false;
+          for(var i = 0; i < events.length; i++) {
+            events[i].begin = new Date(Date.now() + i*30000);
+            events[i].end = new Date(Date.now() + i*60000);
+          }
+        } else if(!testing) {
+          for(var i = 0; i < events.length; i++) {
+            events[i].begin = new Date(events[i].begin);
+            events[i].end = new Date(events[i].end);
+          }
+        } else { // for testing, we keep the old times
+          for(var i = 0; i < events.length; i++) {
+            events[i].begin = timeline[i].begin;
+            events[i].end = timeline[i].end;
+          }
+        }
+
+        for(var i = 0; i < events.length; i++) {
+          if(app.whereAreWe(events[i].begin, events[i].end) > 0 && !events[i].notifySent){
+            events[i].notifySent = true;
+            app.notify(events[i].title, events[i].place, events[i].type);
+          }
+        }
+
+        this.$set('timeline', events);
       }, function(response) {
         console.log("Sth wrong");
       });
@@ -81,6 +95,31 @@ var app = new Vue({
       } else if(d > end) {
         return -1; // After the range
       }
+    },
+    notify: function (title, place, type) {
+      permission = Notification.permission;
+      if(permission !== "denied") {
+        if(permission === "default") {
+          Notification.requestPermission();
+        }
+
+        notifiable = false;
+        if((type === "food" && this.foodNotify)
+          || (type === "event" && this.eventsNotify) 
+          || (type === "talks" && this.talksNotify)
+          || (type === "essential")) {
+          notifiable = true;
+        }
+
+        if (permission === "granted" && notifiable) {
+          var options = {
+            body: place != null ? 'happening right now at ' + place : '',
+            icon: '/favicon.ico',
+          }
+
+          new Notification(title, options);
+        }
+      }
     }
   },
   watch: {
@@ -97,7 +136,13 @@ var app = new Vue({
     currentEvents: function() {
       return this.timeline.filter(function(data) {
         percentage = app.whereAreWe(data.begin, data.end);
-        return percentage > 0;
+        if(percentage > 0) {
+          if(!data.notifySent) {
+            app.notify(data.title, data.place, "essential");
+            data.notifySent = true;
+          }
+          return true;
+        }
       });
     },
     futureEvents: function() {
@@ -110,7 +155,7 @@ var app = new Vue({
 
 app.updateTimetable();
 app.startAnimation();
-
+app.notify("Welcome to HackUPC Live", null, "essential");
 
 if(testing){
    window.setInterval(function(){
