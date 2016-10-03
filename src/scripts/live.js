@@ -3,7 +3,6 @@ var leaves;
 // Testing flag, for mocking the dates of the events
 // without having to change the dates in the events.json
 var testing = true;
-var first = true;
 
 Number.prototype.pad = function(size) {
   var s = String(this);
@@ -19,61 +18,118 @@ var app = new Vue({
     talksNotify: true,
     eventsNotify: true,
     bieneNotify: false,
-    timeline: null,
+    events: [],
     animation: true
+  },
+  ready: function() {
+    this.updateEvents();
+    this.startAnimation();
+    this.notify("Welcome to HackUPC Live", null, "essential");
+
+    if(testing){
+       window.setInterval(function(){
+          app.updateEvents();
+        }, 1000);
+    } else {
+      window.setInterval(function(){
+        app.updateEvents();
+      }, 15000);
+    }
   },
   methods: {
     options: function() {
       this.showoptions = this.showoptions ? false : true;
     },
-    updateTimetable: function () {
-    this.$http.get('/assets/data/events.json?nocache=' + Math.floor(Math.random()*100))
+
+    // fn newEvent()
+    // creates a new event in the event
+    // array, with notify status and 
+    // the text dates converted to Date 
+    // objects
+    newEvent: function(event) {
+      event.notifySent = false;
+      event.begin = new Date(event.begin);
+      event.end = new Date(event.end);
+      event.progress = app.whereAreWe(event.begin, event.end);
+      app.events.push(event);
+    },
+
+    // fn updateEvent()
+    // updates an existing event with new
+    // info
+    updateEvent: function(event) {
+        index = app.oldIndexById(event.id);
+
+        event.notifySent = this.events[index].notifySent;
+        event.begin = new Date(event.begin);
+        event.end = new Date(event.end);
+        event.progress = app.whereAreWe(event.begin, event.end);
+
+        this.events.$set(index, event);
+    },
+
+    // fn oldIndexById()
+    // find event in old event list by ID,
+    // if event is found the index is returned
+    // if it is not found -1 is returned
+    oldIndexById: function(id) {
+      old_events = this.$get('events')
+
+      if(old_events != null) {
+        for(var i = 0; i < old_events.length; i++) {
+          if(old_events[i].id == id) {
+            return i;
+          }
+        }
+      }
+
+      return -1;
+    },
+
+    // fn updateTimetable()
+    // updates the event array with the current json
+    // manages all updates to the events
+    updateEvents: function () {
+    this.$http.get('/assets/data/events.json?nocache=' + Math.floor(Math.random()*100000))
       .then(function(response) {
-        timeline = this.$get('timeline')
-        events = response.body.events;
+        old_events = this.$get('events');
+        new_events = response.body.events;
 
-        if(first) {
-          for(var i = 0; i < events.length; i++) {
-            events[i].notifySent = false;
-          }
-        } else {
-          for(var i = 0; i < events.length; i++) {
-            events[i].notifySent = timeline[i].notifySent;
+        for(var i = 0; i < new_events.length; i++) {
+          new_event = new_events[i];
+
+          old_index = app.oldIndexById(new_event.id);
+
+          if(old_index >= 0) { // Event exists in old event list
+            old_event = old_events[old_index];
+
+            if(old_event.hash != new_event.hash) { // content has changed
+              app.updateEvent(new_event);
+
+              // after the change the event is in the future
+              if(app.whereAreWe(new_event.begin, new_event.end) != -2) {
+                old_events[old_index].notifySent = false;
+              }
+            } else { // content hasn't changed, notify if it's time and user hasn't
+                     // been notified yet
+              if(app.whereAreWe(old_event.begin, old_event.end) > 0) {
+                app.updateEvent(new_event);
+
+                if(!old_event.notifySent) {
+                  app.notify(old_event.title, old_event.place, old_event.type);
+                  this.events[old_index].notifySent = true;
+                }
+              }
+            }
+          } else if(old_index == -1) { // Event doesn't exist
+            app.newEvent(new_event);
           }
         }
-
-        // For testing we use the current time and create
-        // events in the near future
-        if(testing && first) {
-          first = false;
-          for(var i = 0; i < events.length; i++) {
-            events[i].begin = new Date(Date.now() + i*30000);
-            events[i].end = new Date(Date.now() + (i+1)*30000);
-          }
-        } else if(!testing) {
-          for(var i = 0; i < events.length; i++) {
-            events[i].begin = new Date(events[i].begin);
-            events[i].end = new Date(events[i].end);
-          }
-        } else { // for testing, we keep the old times
-          for(var i = 0; i < events.length; i++) {
-            events[i].begin = timeline[i].begin;
-            events[i].end = timeline[i].end;
-          }
-        }
-
-        for(var i = 0; i < events.length; i++) {
-          if(app.whereAreWe(events[i].begin, events[i].end) > 0 && !events[i].notifySent){
-            events[i].notifySent = true;
-            app.notify(events[i].title, events[i].place, events[i].type);
-          }
-        }
-
-        this.$set('timeline', events);
       }, function(response) {
         console.log("Sth wrong");
       });
     },
+
     // Toggles animation between stopped and started state
     toggleAnimation: function (data) {
       console.log("toggle");
@@ -83,11 +139,13 @@ var app = new Vue({
         leaves.restart();
       }
     },
+
     // Starts background animation
     startAnimation: function () {
       leaves = new Leaves(true);
       leaves.start();
     },
+
     // Returns false if not in range and percentage of completion if true
     whereAreWe: function (start, end) {
       d = new Date(Date.now());
@@ -100,6 +158,9 @@ var app = new Vue({
         return -1; // After the range
       }
     },
+
+    // Notify the user of the events according
+    // to his preferences
     notify: function (title, place, type) {
       permission = Notification.permission;
       if(permission !== "denied") {
@@ -133,24 +194,17 @@ var app = new Vue({
   },
   computed: {
     completedEvents: function() {
-      return this.timeline.filter(function(data) {
+      return this.events.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -1;
       }).slice(-2);
     },
     currentEvents: function() {
-      return this.timeline.filter(function(data) {
-        percentage = app.whereAreWe(data.begin, data.end);
-        if(percentage > 0) {
-          if(!data.notifySent) {
-            app.notify(data.title, data.place, "essential");
-            data.notifySent = true;
-          }
-          return true;
-        }
+      return this.events.filter(function(data) {
+        return app.whereAreWe(data.begin, data.end) > 0;
       });
     },
     futureEvents: function() {
-      return this.timeline.filter(function(data) {
+      return this.events.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -2;
       });
     }
@@ -161,17 +215,3 @@ var app = new Vue({
     }
   }
 });
-
-app.updateTimetable();
-app.startAnimation();
-app.notify("Welcome to HackUPC Live", null, "essential");
-
-if(testing){
-   window.setInterval(function(){
-      app.updateTimetable();
-    }, 1000);
-} else {
-  window.setInterval(function(){
-    app.updateTimetable();
-  }, 15000);
-}
