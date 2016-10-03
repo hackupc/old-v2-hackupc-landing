@@ -124,7 +124,8 @@ class Leaves {
 
   private createLeaves() {
     for(var i = 0; i < this.maximumLeaves; i++) {
-      var leafIdx = Math.round(Math.random()) % 4;
+      var leafIdx = Math.round(Math.random()*50) % 4;
+      console.log(leafIdx);
       var posX = Math.random() * this.renderer.view.width;
       var posY = Math.random() * this.renderer.view.height;
       var radius = this.minSize + Math.random() * this.maxSize + 1;
