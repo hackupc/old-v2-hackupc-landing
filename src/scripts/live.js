@@ -135,7 +135,7 @@ var app = new Vue({
     completedEvents: function() {
       return this.timeline.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -1;
-      }).slice(-5);
+      }).slice(-2);
     },
     currentEvents: function() {
       return this.timeline.filter(function(data) {
