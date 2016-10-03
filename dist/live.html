@@ -29,7 +29,7 @@
         <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
 
         <div id="timetable">
-            <div class="event done" v-for="event in completedEvents">
+            <div class="event done" v-for="event in completedEvents" track-by="hash">
                 <span style="opacity: {{0.3 + $index * 0.2}};">
                     <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
                     {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
@@ -37,19 +37,19 @@
             </div>
 
             <div class="current">
-                <div class="event highlighted" v-for="event in currentEvents">
+                <div class="event highlighted" v-for="event in currentEvents" track-by="hash">
                     <span>
                         <strong><h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3></strong>
                         {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
                     </span>
                     <div class="progress" id="progress-{{$index}}">
-                      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:{{whereAreWe(event.begin, event.end)*100}}%">
+                      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" v-bind:style="{ width: event.progress*100 + '%' }">
                       </div>
                     </div>
                 </div>
             </div>
 
-            <div class="event" v-for="event in futureEvents">
+            <div class="event" v-for="event in futureEvents" track-by="hash">
                 <span>
                     <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
                     {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
@@ -103,6 +103,6 @@
     <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
     <script src="/assets/js/leaves.webgl.min.js"></script>
-    <script src="/assets/js/live.min.js"></script>
+    <script src="/assets/js/live.js"></script>
   </body>
 </html>
