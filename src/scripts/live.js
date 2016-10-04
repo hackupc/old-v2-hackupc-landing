@@ -19,6 +19,7 @@ var app = new Vue({
     eventsNotify: true,
     bieneNotify: false,
     events: [],
+    activeIds: [],
     animation: true
   },
   ready: function() {
@@ -58,7 +59,7 @@ var app = new Vue({
     // updates an existing event with new
     // info
     updateEvent: function(event) {
-        index = app.oldIndexById(event.id);
+        index = app.oldIndexById(event._id);
 
         event.notifySent = this.events[index].notifySent;
         event.begin = new Date(event.begin);
@@ -77,13 +78,34 @@ var app = new Vue({
 
       if(old_events != null) {
         for(var i = 0; i < old_events.length; i++) {
-          if(old_events[i].id == id) {
+          if(old_events[i]._id == id) {
             return i;
           }
         }
       }
 
       return -1;
+    },
+
+    // fn deleteIndex()
+    // deletes an event at index idx
+    deleteIndex: function(idx) {
+      this.events.splice(idx, 1);
+    },
+
+    // fn deleteDanglingEvents()
+    // deletes all events that don't exist anymore
+    // and those with an invalid id
+    deleteDanglingEvents: function() {
+      for (var i = this.events.length - 1; i >= 0; i--) {
+        if(this.events[i]._id == "") {
+          app.deleteIndex(i);
+        }
+
+        if(this.activeIds.indexOf(this.events[i]._id) == -1) {
+          app.deleteIndex(i);
+        }
+      }
     },
 
     // fn updateTimetable()
@@ -95,15 +117,18 @@ var app = new Vue({
         old_events = this.$get('events');
         new_events = response.body.events;
 
+        this.activeIds = [];
+
         for(var i = 0; i < new_events.length; i++) {
           new_event = new_events[i];
 
-          old_index = app.oldIndexById(new_event.id);
+          old_index = app.oldIndexById(new_event._id);
+          this.activeIds.push(new_event._id);
 
           if(old_index >= 0) { // Event exists in old event list
             old_event = old_events[old_index];
 
-            if(old_event.hash != new_event.hash) { // content has changed
+            if(old_event._signature != new_event._signature) { // content has changed
               app.updateEvent(new_event);
 
               // after the change the event is in the future
@@ -125,6 +150,8 @@ var app = new Vue({
             app.newEvent(new_event);
           }
         }
+
+        app.deleteDanglingEvents();
       }, function(response) {
         console.log("Sth wrong");
       });

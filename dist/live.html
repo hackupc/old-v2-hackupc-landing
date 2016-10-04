@@ -29,7 +29,7 @@
         <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
 
         <div id="timetable">
-            <div class="event done" v-for="event in completedEvents" track-by="hash">
+            <div class="event done" v-for="event in completedEvents" track-by="_signature">
                 <span style="opacity: {{0.3 + $index * 0.2}};">
                     <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
                     {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
@@ -37,7 +37,7 @@
             </div>
 
             <div class="current">
-                <div class="event highlighted" v-for="event in currentEvents" track-by="hash">
+                <div class="event highlighted" v-for="event in currentEvents" track-by="_signature">
                     <span>
                         <strong><h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3></strong>
                         {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="event" v-for="event in futureEvents" track-by="hash">
+            <div class="event" v-for="event in futureEvents" track-by="_signature">
                 <span>
                     <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
                     {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
