@@ -223,7 +223,7 @@ var app = new Vue({
     completedEvents: function() {
       return this.events.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -1;
-      }).slice(-2);
+      }).slice(-3);
     },
     currentEvents: function() {
       return this.events.filter(function(data) {
