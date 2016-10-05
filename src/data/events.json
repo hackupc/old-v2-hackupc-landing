@@ -1,6 +1,8 @@
 {
   "events": [
     {
+      "_id": "",
+      "_signature": "",
       "title": "Hacker Registration",
       "place": "A5-A6 S1",
       "begin": "2016-10-07 15:00:00",
@@ -8,6 +10,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Opening Talk",
       "place": "Vertex",
       "begin": "2016-10-07 19:00:00",
@@ -15,6 +19,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Hack Start",
       "place": "A5-A6 01-02",
       "begin": "2016-10-07 21:00:00",
@@ -22,6 +28,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Dinner",
       "place": "TODO",
       "begin": "2016-10-07 21:00:00",
@@ -29,6 +37,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Team Building",
       "place": "A6E02",
       "begin": "2016-10-07 22:00:00",
@@ -36,6 +46,8 @@
       "type": "events"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Intro Talks",
       "place": "A5001-A5002",
       "begin": "2016-10-07 22:00:00",
@@ -43,6 +55,8 @@
       "type": "talks"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Midnight Snacks",
       "place": "TODO",
       "begin": "2016-10-08 12:00:00",
@@ -50,6 +64,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Breakfast",
       "place": "A6 001",
       "begin": "2016-10-08 08:00:00",
@@ -57,6 +73,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Showers",
       "place": "Pavelló",
       "begin": "2016-10-08 09:00:00",
@@ -64,6 +82,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Tech talks",
       "place": "A5001-A5002",
       "begin": "2016-10-08 09:00:00",
@@ -71,6 +91,8 @@
       "type": "talks"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Lunch",
       "place": "TODO",
       "begin": "2016-10-08 15:00:00",
@@ -78,6 +100,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Tech talks",
       "place": "A5001-A5002",
       "begin": "2016-10-08 15:00:00",
@@ -85,6 +109,8 @@
       "type": "talks"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Dinner",
       "place": "TODO",
       "begin": "2016-10-08 20:00:00",
@@ -92,6 +118,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Chill Games",
       "place": "TODO",
       "begin": "2016-10-08 22:00:00",
@@ -99,6 +127,8 @@
       "type": "events"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Midnight Snack",
       "place": "TODO",
       "begin": "2016-10-09 00:00:00",
@@ -106,6 +136,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Midnight games!",
       "place": "A5101",
       "begin": "2016-10-09 00:30:00",
@@ -113,6 +145,8 @@
       "type": "events"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Breakfast",
       "place": "TODO",
       "begin": "2016-10-09 08:00:00",
@@ -120,6 +154,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Hack Submissions",
       "place": "Devpost",
       "begin": "2016-10-09 08:00:00",
@@ -127,6 +163,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Hack Ends",
       "place": "-",
       "begin": "2016-10-09 09:00:00",
@@ -134,6 +172,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Showers",
       "place": "Pavelló",
       "begin": "2016-10-09 09:00:00",
@@ -141,6 +181,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Hack Demos",
       "place": "TODO",
       "begin": "2016-10-09 10:30:00",
@@ -148,6 +190,8 @@
       "type": "essential"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Lunch",
       "place": "TODO",
       "begin": "2016-10-09 12:30:00",
@@ -155,6 +199,8 @@
       "type": "food"
     },
     {
+      "_id": "",
+      "_signature": "",
       "title": "Winner & Closing ceremony",
       "place": "Vertex",
       "begin": "2016-10-09 14:00:00",
