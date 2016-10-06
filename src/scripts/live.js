@@ -21,14 +21,11 @@ var app = new Vue({
     events: [],
     activeIds: [],
     animation: true,
-    reload: false,
-    newNotification: true
+    reload: false
   },
   ready: function() {
     this.updateEvents();
     this.startAnimation();
-    this.newNotification = this.isNewNotificationSupported();
-
     this.notify("Welcome to HackUPC Live", null, "essential");
 
     if(testing){
@@ -167,62 +164,33 @@ var app = new Vue({
       }
     },
 
-    isNewNotificationSupported: function () {
-      if (!window.Notification || !Notification.requestPermission)
-        return false;
-      if (Notification.permission == 'granted')
-        return true;
-      try {
-        new Notification('');
-      } catch (e) {
-        if (e.name == 'TypeError')
-          return false;
-      }
-      return true;
-    },
-
     // Notify the user of the events according
     // to his preferences
     notify: function (title, place, type) {
-      if(this.newNotification) {
-        if(typeof Notification === 'function') {
-          permission = Notification.permission;
-          if(permission !== "denied") {
-            if(permission === "default") {
-              Notification.requestPermission();
+      if(typeof Notification === 'function') {
+        permission = Notification.permission;
+        if(permission !== "denied") {
+          if(permission === "default") {
+            Notification.requestPermission();
+          }
+
+          notifiable = false;
+          if((type === "food" && this.foodNotify)
+            || (type === "events" && this.eventsNotify) 
+            || (type === "talks" && this.talksNotify)
+            || (type === "essential")) {
+            notifiable = true;
+          }
+
+          if (permission === "granted" && notifiable) {
+            var options = {
+              body: place != null ? 'happening right now at ' + place : '',
+              icon: '/favicon.ico',
             }
 
-            notifiable = false;
-            if((type === "food" && this.foodNotify)
-              || (type === "events" && this.eventsNotify) 
-              || (type === "talks" && this.talksNotify)
-              || (type === "essential")) {
-              notifiable = true;
-            }
-
-            if (permission === "granted" && notifiable) {
-              var options = {
-                body: place != null ? 'happening right now at ' + place : '',
-                icon: '/favicon.ico',
-              }
-
-              new Notification(title, options);
-            }
+            new Notification(title, options);
           }
         }
-      } else {
-        Notification.requestPermission(function(result) {
-          if (result === 'granted') {
-            navigator.serviceWorker.ready.then(function(registration) {
-              registration.showNotification('Vibration Sample', {
-                body: 'Buzz! Buzz!',
-                icon: '../images/touch/chrome-touch-icon-192x192.png',
-                vibrate: [200, 100, 200, 100, 200, 100, 200],
-                tag: 'vibration-sample'
-              });
-            });
-          }
-        });
       }
     }
   },
