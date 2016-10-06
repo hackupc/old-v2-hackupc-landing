@@ -167,7 +167,8 @@ var app = new Vue({
     // Notify the user of the events according
     // to his preferences
     notify: function (title, place, type) {
-      if(typeof Notification === 'function') {
+      if(typeof Notification === 'function' &&
+        !navigator.userAgent.match(/IEMobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Mobile Safari|Opera Mini|\bCrMo\/|Opera Mobi/i) {
         permission = Notification.permission;
         if(permission !== "denied") {
           if(permission === "default") {
