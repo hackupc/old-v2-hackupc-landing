@@ -49,11 +49,31 @@ var app = new Vue({
     // the text dates converted to Date 
     // objects
     newEvent: function(event) {
-      event.notifySent = false;
+      index = app.oldIndexById(event._id);
+
+      if(index == -1) {
+        event.notifySent = false;
+      } else {
+        event.notifySent = this.events[index].notifySent;
+      }
+
       event.begin = new Date(event.begin);
-      event.end = new Date(event.end);
+
+      if(event.end === "") {
+        event.end = new Date(event.begin.getTime() + 10*60000);
+        event.showProgress = false;
+      } else {
+        event.end = new Date(event.end);
+        event.showProgress = true;
+      }
+      
       event.progress = app.whereAreWe(event.begin, event.end);
-      event.current = false;
+
+      if(!event.notifySent && event.progress > 0) {
+         app.notify(event.title, event.place, event.type);
+         event.notifySent = true;
+      }
+
       return event;
     },
 
@@ -66,7 +86,6 @@ var app = new Vue({
         event.begin = new Date(event.begin);
         event.end = new Date(event.end);
         newProgress = app.whereAreWe(event.begin, event.end);
-        if(newProgress != event.progress)
 
         this.events.$set(index, event);
     },
@@ -145,27 +164,29 @@ var app = new Vue({
     // Notify the user of the events according
     // to his preferences
     notify: function (title, place, type) {
-      permission = Notification.permission;
-      if(permission !== "denied") {
-        if(permission === "default") {
-          Notification.requestPermission();
-        }
-
-        notifiable = false;
-        if((type === "food" && this.foodNotify)
-          || (type === "events" && this.eventsNotify) 
-          || (type === "talks" && this.talksNotify)
-          || (type === "essential")) {
-          notifiable = true;
-        }
-
-        if (permission === "granted" && notifiable) {
-          var options = {
-            body: place != null ? 'happening right now at ' + place : '',
-            icon: '/favicon.ico',
+      if(typeof Notification === 'function') {
+        permission = Notification.permission;
+        if(permission !== "denied") {
+          if(permission === "default") {
+            Notification.requestPermission();
           }
 
-          new Notification(title, options);
+          notifiable = false;
+          if((type === "food" && this.foodNotify)
+            || (type === "events" && this.eventsNotify) 
+            || (type === "talks" && this.talksNotify)
+            || (type === "essential")) {
+            notifiable = true;
+          }
+
+          if (permission === "granted" && notifiable) {
+            var options = {
+              body: place != null ? 'happening right now at ' + place : '',
+              icon: '/favicon.ico',
+            }
+
+            new Notification(title, options);
+          }
         }
       }
     }
