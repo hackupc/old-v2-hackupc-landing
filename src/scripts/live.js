@@ -103,7 +103,9 @@ var app = new Vue({
         }
 
         new_events.sort(function(a,b){
-          return a.begin - b.begin;
+          return (a.begin - b.begin) ||
+                 (a.end - b.end) ||
+                 (b.title < a.title ? 1 : -1);
         });
 
         this.$set('events', new_events);
