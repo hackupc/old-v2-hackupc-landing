@@ -102,6 +102,10 @@ var app = new Vue({
           new_events[i] = app.newEvent(new_events[i]); 
         }
 
+        new_events.sort(function(a,b){
+          return a.begin - b.begin;
+        });
+
         this.$set('events', new_events);
       }, function(response) {
         console.log("Sth wrong");
