@@ -133,9 +133,12 @@ var app = new Vue({
       });
     },
 
+    biene: function () {
+      alert("BIENE");
+    },
+
     // Toggles animation between stopped and started state
     toggleAnimation: function (data) {
-      console.log("toggle");
       if(data == false) {
         leaves.stop();
       } else {
@@ -203,7 +206,6 @@ var app = new Vue({
       }).slice(-3);
     },
     currentEvents: function() {
-      console.log("current");
       current = this.events.filter(function(data) {
         this.reload = false;
         return app.whereAreWe(data.begin, data.end) > 0;
