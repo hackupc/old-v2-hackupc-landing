@@ -20,7 +20,8 @@ var app = new Vue({
     bieneNotify: false,
     events: [],
     activeIds: [],
-    animation: true
+    animation: true,
+    reload: false
   },
   ready: function() {
     this.updateEvents();
@@ -52,7 +53,8 @@ var app = new Vue({
       event.begin = new Date(event.begin);
       event.end = new Date(event.end);
       event.progress = app.whereAreWe(event.begin, event.end);
-      app.events.push(event);
+      event.current = false;
+      return event;
     },
 
     // fn updateEvent()
@@ -61,10 +63,10 @@ var app = new Vue({
     updateEvent: function(event) {
         index = app.oldIndexById(event._id);
 
-        event.notifySent = this.events[index].notifySent;
         event.begin = new Date(event.begin);
         event.end = new Date(event.end);
-        event.progress = app.whereAreWe(event.begin, event.end);
+        newProgress = app.whereAreWe(event.begin, event.end);
+        if(newProgress != event.progress)
 
         this.events.$set(index, event);
     },
@@ -87,27 +89,6 @@ var app = new Vue({
       return -1;
     },
 
-    // fn deleteIndex()
-    // deletes an event at index idx
-    deleteIndex: function(idx) {
-      this.events.splice(idx, 1);
-    },
-
-    // fn deleteDanglingEvents()
-    // deletes all events that don't exist anymore
-    // and those with an invalid id
-    deleteDanglingEvents: function() {
-      for (var i = this.events.length - 1; i >= 0; i--) {
-        if(this.events[i]._id == "") {
-          app.deleteIndex(i);
-        }
-
-        if(this.activeIds.indexOf(this.events[i]._id) == -1) {
-          app.deleteIndex(i);
-        }
-      }
-    },
-
     // fn updateTimetable()
     // updates the event array with the current json
     // manages all updates to the events
@@ -117,41 +98,11 @@ var app = new Vue({
         old_events = this.$get('events');
         new_events = response.body.events;
 
-        this.activeIds = [];
-
-        for(var i = 0; i < new_events.length; i++) {
-          new_event = new_events[i];
-
-          old_index = app.oldIndexById(new_event._id);
-          this.activeIds.push(new_event._id);
-
-          if(old_index >= 0) { // Event exists in old event list
-            old_event = old_events[old_index];
-
-            if(old_event._signature != new_event._signature) { // content has changed
-              app.updateEvent(new_event);
-
-              // after the change the event is in the future
-              if(app.whereAreWe(new_event.begin, new_event.end) != -2) {
-                old_events[old_index].notifySent = false;
-              }
-            } else { // content hasn't changed, notify if it's time and user hasn't
-                     // been notified yet
-              if(app.whereAreWe(old_event.begin, old_event.end) > 0) {
-                app.updateEvent(new_event);
-
-                if(!old_event.notifySent) {
-                  app.notify(old_event.title, old_event.place, old_event.type);
-                  this.events[old_index].notifySent = true;
-                }
-              }
-            }
-          } else if(old_index == -1) { // Event doesn't exist
-            app.newEvent(new_event);
-          }
+        for (var i = 0; i < new_events.length; i++) {
+          new_events[i] = app.newEvent(new_events[i]); 
         }
 
-        app.deleteDanglingEvents();
+        this.$set('events', new_events);
       }, function(response) {
         console.log("Sth wrong");
       });
@@ -176,9 +127,8 @@ var app = new Vue({
     // Returns false if not in range and percentage of completion if true
     whereAreWe: function (start, end) {
       d = new Date(Date.now());
-      
       if(start <= d && d <= end) { // Inside the range
-        return (d - start)/(end - start);
+        return (d - start)/(end - start);;
       } else if(d < start) {
         return -2; // Before the range
       } else if(d > end) {
@@ -226,14 +176,20 @@ var app = new Vue({
       }).slice(-3);
     },
     currentEvents: function() {
-      return this.events.filter(function(data) {
+      console.log("current");
+      current = this.events.filter(function(data) {
+        this.reload = false;
         return app.whereAreWe(data.begin, data.end) > 0;
       });
+
+      return current;
     },
     futureEvents: function() {
-      return this.events.filter(function(data) {
+      future = this.events.filter(function(data) {
         return app.whereAreWe(data.begin, data.end) === -2;
       });
+
+      return future;
     }
   },
   filters: {

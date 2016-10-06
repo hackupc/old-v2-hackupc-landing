@@ -12,35 +12,50 @@
   <body>
     <div></div>
     <div id="app">
-        <div class="navbar col-sm-12" id="livenav">
+        <nav class="navbar navbar-default" id="livenav">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav col-md-12">
-                        <li class="active col-sm-2 col-sm-offset-1"><a href="#">Welcome</a></li>
-                        <li class="active col-sm-2"><a href="#">Maps</a></li>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HackUPC Live</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar" aria-expanded="false">
+                    <ul class="nav navbar-nav">
+                        <li class="col-sm-2 col-sm-offset-1"><a target="_blank" href="http://hackupc2016f.devpost.com/">Devpost</a></li>
+                        <li class="col-sm-2"><a href="#">Maps</a></li>
                         <li class="active col-sm-2"><a href="#">LIVE</a></li>
-                        <li class="active col-sm-2"><a href="#">The Game</a></li>
-                        <li class="active col-sm-2"><a href="#">MLH Hardware Lab</a></li>
+                        <li class="col-sm-2"><a href="#">The Game</a></li>
+                        <li class="col-sm-3"><a href="#">MLH Hardware Lab</a></li>
+                        <hr>
+                        <li id="options-menu"><a v-on:click="options">Live Options</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <h1># HACKUPC Live ヽ(◕‿◕)ﾉ <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
+        <h1># HACKUPC Live <span class="lenny">ヽ(◕‿◕)ﾉ</span> <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
 
         <div id="timetable">
             <div class="event done" v-for="event in completedEvents" track-by="_signature">
                 <span style="opacity: {{0.3 + $index * 0.2}};">
-                    <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
-                    {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
+                    <h3>- {{event.title}}</h3>
+                    <span class="where">(📍 {{event.place}})</span>
+                    <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
                 </span>
             </div>
 
             <div class="current">
                 <div class="event highlighted" v-for="event in currentEvents" track-by="_signature">
                     <span>
-                        <strong><h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3></strong>
-                        {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
+                        <strong>
+                            <h3>- {{event.title}} </h3>
+                            <span class="where">(📍 {{event.place}})</span>
+                        </strong>
+                        <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
                     </span>
                     <div class="progress" id="progress-{{$index}}">
                       <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" v-bind:style="{ width: event.progress*100 + '%' }">
@@ -49,10 +64,11 @@
                 </div>
             </div>
 
-            <div class="event" v-for="event in futureEvents" track-by="_signature">
+            <div class="event pending" v-for="event in futureEvents" track-by="_signature">
                 <span>
-                    <h3>{{event.title}} <span class="where">(📍 {{event.place}})</span></h3>
-                    {{event.begin | hackupcdate}} - {{event.end | hackupcdate}}
+                    <h3>- {{event.title}}</h3>
+                    <span class="where">(📍 {{event.place}})</span>
+                    <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
                 </span>
             </div>
         </div>
@@ -99,6 +115,8 @@
         </div>
     </div>
 
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
     <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
