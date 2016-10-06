@@ -57,7 +57,7 @@
                         </strong>
                         <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
                     </span>
-                    <div class="progress" id="progress-{{$index}}">
+                    <div class="progress" id="progress-{{$index}}" v-if="event.showProgress">
                       <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" v-bind:style="{ width: event.progress*100 + '%' }">
                       </div>
                     </div>

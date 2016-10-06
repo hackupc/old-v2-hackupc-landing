@@ -2,7 +2,7 @@
   "events": [
     {
       "begin": "2016/10/09 09:00:00", 
-      "end": "1900/01/01 00:00:00", 
+      "end": "", 
       "title": "Hack Ends", 
       "_signature": "3758001c2957070e6b64a38823f926848df8d70f", 
       "place": "-", 
@@ -11,7 +11,7 @@
     }, 
     {
       "begin": "2016/10/09 00:00:00", 
-      "end": "1900/01/01 00:00:00", 
+      "end": "", 
       "title": "Midnight Snack", 
       "_signature": "c76b01a18002e7512d2cc4bd39419fa9a17627bc", 
       "place": "TODO", 
@@ -74,7 +74,7 @@
     }, 
     {
       "begin": "2016/10/07 21:00:00", 
-      "end": "1900/01/01 00:00:00", 
+      "end": "", 
       "title": "Hack Start", 
       "_signature": "6584f18ee33df618bb1180b19a74266d64f24377", 
       "place": "A5-A6 01-02", 
@@ -137,7 +137,7 @@
     }, 
     {
       "begin": "2016/10/08 12:00:00", 
-      "end": "1900/01/01 00:00:00", 
+      "end": "", 
       "title": "Midnight Snacks", 
       "_signature": "eaa62387a35c614a8530509923e992c915649ecb", 
       "place": "TODO", 
