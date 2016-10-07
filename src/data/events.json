@@ -1,208 +1,262 @@
 {
   "events": [
     {
-      "begin": "2016/10/09 09:00:00", 
-      "end": "", 
-      "title": "Hack Ends", 
-      "_signature": "3758001c2957070e6b64a38823f926848df8d70f", 
-      "place": "-", 
-      "_id": "3758001c2957070e6b64a38823f926848df8d70f", 
+      "begin": "2016/10/07 15:00:00", 
+      "end": "2016/10/07 18:30:00", 
+      "title": "Hacker Registration", 
+      "_signature": "3758001c2957070e6b64gwa38823f926848df8d70f", 
+      "place": "A5-A6 S1", 
+      "_id": "3758001fc2957070e6b64a38823f926848df8d70f", 
       "type": "essential"
     }, 
     {
-      "begin": "2016/10/09 00:00:00", 
-      "end": "", 
-      "title": "Midnight Snack", 
-      "_signature": "c76b01a18002e7512d2cc4bd39419fa9a17627bc", 
-      "place": "TODO", 
-      "_id": "c76b01a18002e7512d2cc4bd39419fa9a17627bc", 
-      "type": "food"
-    }, 
-    {
-      "begin": "2016/10/08 08:00:00", 
-      "end": "2016/10/08 09:00:00", 
-      "title": "Breakfast", 
-      "_signature": "fde2062172e98b2508ce25c8f265c6d62a4b1eb3", 
-      "place": "A6 001", 
-      "_id": "fde2062172e98b2508ce25c8f265c6d62a4b1eb3", 
-      "type": "food"
-    }, 
-    {
-      "begin": "2016/10/09 08:00:00", 
-      "end": "2016/10/09 09:00:00", 
-      "title": "Breakfast", 
-      "_signature": "bc66865a330f5901b06c36d938d19afe7257cc7c", 
-      "place": "TODO", 
-      "_id": "bc66865a330f5901b06c36d938d19afe7257cc7c", 
-      "type": "food"
-    }, 
-    {
-      "begin": "2016/10/08 22:00:00", 
-      "end": "2016/10/09 00:00:00", 
-      "title": "Chill Games", 
-      "_signature": "b5c426fb6867db8f7ef16a34e888a343fa1b77eb", 
-      "place": "TODO", 
-      "_id": "b5c426fb6867db8f7ef16a34e888a343fa1b77eb", 
-      "type": "events"
-    }, 
-    {
-      "begin": "2016/10/07 21:00:00", 
-      "end": "2016/10/07 22:00:00", 
-      "title": "Dinner", 
-      "_signature": "2a35c2a744d450ef91f6efe02652755c705acce2", 
-      "place": "TODO", 
-      "_id": "2a35c2a744d450ef91f6efe02652755c705acce2", 
-      "type": "food"
-    }, 
-    {
-      "begin": "2016/10/08 20:00:00", 
-      "end": "2016/10/08 21:00:00", 
-      "title": "Dinner", 
-      "_signature": "f30e251250349e555b1edc356e0d8b42846c6428", 
-      "place": "TODO", 
-      "_id": "f30e251250349e555b1edc356e0d8b42846c6428", 
-      "type": "food"
-    }, 
-    {
-      "begin": "2016/10/09 10:30:00", 
-      "end": "2016/10/09 12:30:00", 
-      "title": "Hack Demos", 
-      "_signature": "139992372f150b62971aecf372bc5e2aee3a3d7a", 
-      "place": "TODO", 
-      "_id": "139992372f150b62971aecf372bc5e2aee3a3d7a", 
+      "begin": "2016/10/07 19:00:00", 
+      "end": "2016/10/07 21:00:00", 
+      "title": "Opening Talk", 
+      "_signature": "c76b01a18002e7512d2cnrbc4bd39419fa9a17627bc", 
+      "place": "Vertex", 
+      "_id": "c76b01a180d02e7512d2cc4bd39419fa9a17627bc", 
       "type": "essential"
     }, 
     {
       "begin": "2016/10/07 21:00:00", 
       "end": "", 
       "title": "Hack Start", 
-      "_signature": "6584f18ee33df618bb1180b19a74266d64f24377", 
-      "place": "A5-A6 01-02", 
-      "_id": "6584f18ee33df618bb1180b19a74266d64f24377", 
+      "_signature": "fde2062172e98b2508cnfgne25c8f265c6d62a4b1eb3", 
+      "place": "-", 
+      "_id": "fde2062172es98b2508ce25c8f265c6d62a4b1eb3", 
       "type": "essential"
     }, 
     {
-      "begin": "2016/10/09 08:00:00", 
-      "end": "2016/10/09 09:30:00", 
-      "title": "Hack Submissions", 
-      "_signature": "4b5fa494d6a6cb9fa4a4c2b2312da431a6c11a80", 
-      "place": "Devpost", 
-      "_id": "4b5fa494d6a6cb9fa4a4c2b2312da431a6c11a80", 
-      "type": "essential"
-    }, 
-    {
-      "begin": "2016/10/07 22:00:00", 
-      "end": "2016/10/08 01:00:00", 
-      "title": "Intro Talks", 
-      "_signature": "df0b9071d22e68bb6abf40d5e77cf368abb10e30", 
-      "place": "A5001-A5002", 
-      "_id": "df0b9071d22e68bb6abf40d5e77cf368abb10e30", 
-      "type": "talks"
-    }, 
-    {
-      "begin": "2016/10/08 15:00:00", 
-      "end": "2016/10/08 15:00:00", 
-      "title": "Lunch", 
-      "_signature": "5d8528ea8080f1111657d233857c5bf387d26ca9", 
-      "place": "TODO", 
-      "_id": "5d8528ea8080f1111657d233857c5bf387d26ca9", 
+      "begin": "2016/10/07 21:10:00", 
+      "end": "2016/10/07 22:00:00", 
+      "title": "Dinner", 
+      "_signature": "bc66865a330f5901b0dss6c36d938d19afe7257cc7c", 
+      "place": "Meal zone", 
+      "_id": "bc66865a330fa5901b06c36d938d19afe7257cc7c", 
       "type": "food"
-    }, 
-    {
-      "begin": "2016/10/09 00:30:00", 
-      "end": "2016/10/09 03:00:00", 
-      "title": "Midnight games!", 
-      "_signature": "1a7d67e7ac3c9e58e66c000f93446f6bb74f08bc", 
-      "place": "A5101", 
-      "_id": "1a7d67e7ac3c9e58e66c000f93446f6bb74f08bc", 
-      "type": "events"
-    }, 
-    {
-      "begin": "2016/10/08 09:00:00", 
-      "end": "2016/10/08 11:00:00", 
-      "title": "Showers", 
-      "_signature": "9764b28743abeaac093e03b24be82be6ad9dfb0e", 
-      "place": "Pavell\u00f3", 
-      "_id": "9764b28743abeaac093e03b24be82be6ad9dfb0e", 
-      "type": "essential"
     }, 
     {
       "begin": "2016/10/07 22:00:00", 
       "end": "2016/10/07 23:00:00", 
       "title": "Team Building", 
-      "_signature": "484c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "_signature": "b5c426fb6867db8f7efss16a34e888a343fa1b77eb", 
       "place": "A6E02", 
-      "_id": "484c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "_id": "b5c426fb6867db8f7ef16a34e888a343fa1b77eb", 
       "type": "events"
     }, 
     {
-      "begin": "2016/10/08 12:00:00", 
+      "begin": "2016/10/07 22:00:00", 
+      "end": "2016/10/07 23:00:00", 
+      "title": "Intro to Android", 
+      "_signature": "2a35c2a744d450ef91f6nyrefe02652755c705acce2", 
+      "place": "A5001", 
+      "_id": "2a35c2a744d450ef91f6efe02652755c705acce2", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/07 22:00:00", 
+      "end": "2016/10/07 23:00:00", 
+      "title": "Intro to Skyscanner API", 
+      "_signature": "f30e251250349e555b1edc356sne0d8b42846c6428", 
+      "place": "A5002", 
+      "_id": "f30e251250349e555b1edc356e0d8b42846c6428", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/07 23:00:00", 
+      "end": "2016/10/08 00:00:00", 
+      "title": "HTML5, CSS & JS 101", 
+      "_signature": "139992372f150b62971aecf37mg2bc5e2aee3a3d7a", 
+      "place": "A5001", 
+      "_id": "139992372f150b62971aecf372bc5e2aee3a3d7a", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/07 23:00:00", 
+      "end": "2016/10/08 00:00:00", 
+      "title": "Intro to APIs", 
+      "_signature": "6584f18ee33df6sn18bb1180b19a74266d64f24377", 
+      "place": "A5002", 
+      "_id": "6584f18ee33df618bb1180b19a74266d64f24377", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/08 00:00:00", 
+      "end": "2016/10/08 01:00:00", 
+      "title": "Intro to Flask", 
+      "_signature": "4b5fa494d6a6cb9fda4a4c2b2312da431a6c11a80", 
+      "place": "A5001", 
+      "_id": "4b5fa494d6a6cb9fa4a4c2b2312da431a6c11a80", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/08 00:00:00", 
+      "end": "2016/10/08 01:00:00", 
+      "title": "Intro to Git", 
+      "_signature": "df0b9071d22e68tbb6abf40d5e77cf368abb10e30", 
+      "place": "A5002", 
+      "_id": "df0b9071d22e68bb6abf40d5e77cf368abb10e30", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/08 01:00:00", 
       "end": "", 
-      "title": "Midnight Snacks", 
-      "_signature": "eaa62387a35c614a8530509923e992c915649ecb", 
-      "place": "TODO", 
+      "title": "Midnight Snack", 
+      "_signature": "5d8528ea8080f1111u657d233857c5bf387d26ca9", 
+      "place": "A6E02", 
+      "_id": "5d8528ea8080f1111657d233857c5bf387d26ca9", 
+      "type": "food"
+    }, 
+    {
+      "begin": "2016/10/08 08:00:00", 
+      "end": "2016/10/08 09:00:00", 
+      "title": "Breakfast", 
+      "_signature": "1a7d67e7ac3c9e58e66c000f93446f6bb7p4f08bc", 
+      "place": "Meal Zone", 
+      "_id": "1a7d67e7ac3c9e58e66c000f93446f6bb74f08bc", 
+      "type": "food"
+    }, 
+    {
+      "begin": "2016/10/08 09:00:00", 
+      "end": "2016/10/08 11:00:00", 
+      "title": "Showers", 
+      "_signature": "9764b28743abeaac093e03bi24be82be6ad9dfb0e", 
+      "place": "Pavell\u00f3", 
+      "_id": "9764b28743abeaac093e03b24be82be6ad9dfb0e", 
+      "type": "essential"
+    }, 
+    {
+      "begin": "2016/10/08 09:00:00", 
+      "end": "2016/10/08 12:30:00", 
+      "title": "Tech Talks", 
+      "_signature": "484c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5001-A5002", 
+      "_id": "484c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/08 13:00:00", 
+      "end": "2016/10/08 14:00:00", 
+      "title": "Lunch", 
+      "_signature": "eaa62387a35cm614a8530509923e992c915649ecb", 
+      "place": "Meal Zone", 
       "_id": "eaa62387a35c614a8530509923e992c915649ecb", 
       "type": "food"
     }, 
     {
-      "begin": "2016/10/07 15:00:00", 
-      "end": "2016/10/07 18:30:00", 
-      "title": "Hacker Registration", 
-      "_signature": "70904c8da847843edc49974dad5276f803da2d47", 
-      "place": "A5-A6 S1", 
+      "begin": "2016/10/08 15:00:00", 
+      "end": "2016/10/08 18:30:00", 
+      "title": "Bitcoin - Blockchain", 
+      "_signature": "70904c8da847843edc49974dnad5276f803da2d47", 
+      "place": "A5001", 
       "_id": "70904c8da847843edc49974dad5276f803da2d47", 
+      "type": "talks"
+    }, 
+    {
+      "begin": "2016/10/08 20:00:00", 
+      "end": "2016/10/08 21:00:00", 
+      "title": "Dinner", 
+      "_signature": "f2b60ed251525757226f335597d1a1ef7ac661c8b", 
+      "place": "Meal Zone", 
+      "_id": "f2b60ed251525757226f335597d1a1ef7c661c8b", 
+      "type": "food"
+    }, 
+    {
+      "begin": "2016/10/08 22:00:00", 
+      "end": "2016/10/08 23:00:00", 
+      "title": "SlideShare Karaoke", 
+      "_signature": "1a7fa1bb63dabb5sc07185e942cd5be38a449b593", 
+      "place": "A6001", 
+      "_id": "1a7fa1bb63dabb5c07185e942cd5be38a449b593", 
+      "type": "events"
+    }, 
+    {
+      "begin": "2016/10/08 23:00:00", 
+      "end": "2016/10/09 00:00:00", 
+      "title": "HackUiz", 
+      "_signature": "9dca79fb76406e6bb3n0a793dfd48c792cfc953dc", 
+      "place": "A6001", 
+      "_id": "9dca79fb76406e6bb30a793dfd48c792cfc953dc", 
+      "type": "events"
+    }, 
+    {
+      "begin": "2016/10/09 00:00:00", 
+      "end": "", 
+      "title": "Midnight Snack", 
+      "_signature": "a05de656797a54077a3acdd597050v1508f9f70af", 
+      "place": "A6E02", 
+      "_id": "a05de656797a54077a3acdd5970501508f9f70af", 
+      "type": "food"
+    }, 
+    {
+      "begin": "2016/10/09 00:30:00", 
+      "end": "2016/10/09 03:00:00", 
+      "title": "Midnight Games!", 
+      "_signature": "30a18d77470b4a2c83214d1538a8089aa9abd58b1", 
+      "place": "A5101", 
+      "_id": "30a18d77470b4a2c83214d15388089aa9abd58b1", 
+      "type": "events"
+    }, 
+    {
+      "begin": "2016/10/09 08:00:00", 
+      "end": "2016/10/09 09:00:00", 
+      "title": "Breakfast", 
+      "_signature": "352d8fbc807df9e1047wd37a469f72792b83e4d1f", 
+      "place": "Meal Zone", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
+      "type": "food"
+    }, 
+    {
+      "begin": "2016/10/09 08:00:00", 
+      "end": "2016/10/09 09:30:00", 
+      "title": "Hack Submissions", 
+      "_signature": "352d8fbc807df9ke1047d37a469f72792b83e4d1f", 
+      "place": "Devpost", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
+      "type": "essential"
+    }, 
+    {
+      "begin": "2016/10/09 09:00:00", 
+      "end": "", 
+      "title": "Hack Ends", 
+      "_signature": "352d8fbc80h7df9e1047d37a469f72792b83e4d1f", 
+      "place": "-", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
+      "type": "essential"
+    }, 
+    {
+      "begin": "2016/10/09 09:15:00", 
+      "end": "2016/10/09 11:00:00", 
+      "title": "Showers", 
+      "_signature": "352d8fbc807df9e104s7d37a469f72792b83e4d1f", 
+      "place": "Pavell\u00f3", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
+      "type": "essential"
+    }, 
+    {
+      "begin": "2016/10/09 10:30:00", 
+      "end": "2016/10/09 12:30:00", 
+      "title": "Hack Demos", 
+      "_signature": "352d8fbc807df9ge1047d37a469f72792b83e4d1f", 
+      "place": "A5 1st floor", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
       "type": "essential"
     }, 
     {
       "begin": "2016/10/09 12:30:00", 
       "end": "2016/10/09 13:30:00", 
       "title": "Lunch", 
-      "_signature": "f2b60ed251525757226f335597d1a1ef7c661c8b", 
-      "place": "TODO", 
-      "_id": "f2b60ed251525757226f335597d1a1ef7c661c8b", 
+      "_signature": "352d8fbc807dff9e1047d37a469f72792b83e4d1f", 
+      "place": "Meal Zone", 
+      "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
       "type": "food"
     }, 
     {
-      "begin": "2016/10/07 19:00:00", 
-      "end": "2016/10/07 21:00:00", 
-      "title": "Opening Talk", 
-      "_signature": "1a7fa1bb63dabb5c07185e942cd5be38a449b593", 
-      "place": "Vertex", 
-      "_id": "1a7fa1bb63dabb5c07185e942cd5be38a449b593", 
-      "type": "essential"
-    }, 
-    {
-      "begin": "2016/10/09 09:00:00", 
-      "end": "2016/10/09 11:00:00", 
-      "title": "Showers", 
-      "_signature": "9dca79fb76406e6bb30a793dfd48c792cfc953dc", 
-      "place": "Pavell\u00f3", 
-      "_id": "9dca79fb76406e6bb30a793dfd48c792cfc953dc", 
-      "type": "essential"
-    }, 
-    {
-      "begin": "2016/10/08 09:00:00", 
-      "end": "2016/10/08 11:00:00", 
-      "title": "Tech talks", 
-      "_signature": "a05de656797a54077a3acdd5970501508f9f70af", 
-      "place": "A5001-A5002", 
-      "_id": "a05de656797a54077a3acdd5970501508f9f70af", 
-      "type": "talks"
-    }, 
-    {
-      "begin": "2016/10/08 15:00:00", 
-      "end": "2016/10/08 17:00:00", 
-      "title": "Tech talks", 
-      "_signature": "30a18d77470b4a2c83214d15388089aa9abd58b1", 
-      "place": "A5001-A5002", 
-      "_id": "30a18d77470b4a2c83214d15388089aa9abd58b1", 
-      "type": "talks"
-    }, 
-    {
-      "begin": "2016/10/09 14:00:00", 
+      "begin": "2016/10/09 14:30:00", 
       "end": "2016/10/09 16:00:00", 
-      "title": "Winner & Closing ceremony", 
-      "_signature": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
+      "title": "Winner & Closing Ceremony", 
+      "_signature": "352d8fbc80a7df9e1047d37a469f72792b83e4d1f", 
       "place": "Vertex", 
       "_id": "352d8fbc807df9e1047d37a469f72792b83e4d1f", 
       "type": "essential"
