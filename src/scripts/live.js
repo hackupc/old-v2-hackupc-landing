@@ -2,7 +2,7 @@ var leaves;
 
 // Testing flag, for mocking the dates of the events
 // without having to change the dates in the events.json
-var testing = true;
+var testing = false;
 
 Number.prototype.pad = function(size) {
   var s = String(this);
@@ -35,7 +35,7 @@ var app = new Vue({
     } else {
       window.setInterval(function(){
         app.updateEvents();
-      }, 15000);
+      }, 30000);
     }
   },
   methods: {
