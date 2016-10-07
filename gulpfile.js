@@ -7,10 +7,23 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     flatten = require('gulp-flatten')
-    combiner = require('stream-combiner2');
+    combiner = require('stream-combiner2'),
+    ts = require('gulp-typescript');;
 
 gulp.task('styles', function() {
-  return sass('src/styles/main.scss', { style: 'expanded' })
+  sass('src/styles/main.scss', { style: 'expanded' })
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('dist/assets/css'))
+  sass('src/styles/live.scss', { style: 'expanded' })
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('dist/assets/css'))
+  sass('src/styles/static.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(rename({suffix: '.min'}))
@@ -19,6 +32,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
+  gulp.src('src/scripts/leaves.ts')
+    .pipe(ts({
+        out: 'leaves.webgl.js'
+    }))
+    .pipe(gulp.dest('src/scripts'));
+
   var combined = combiner.obj([
     gulp.src('src/scripts/**/*.js'),
     gulp.dest('dist/assets/js'),

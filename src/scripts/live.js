@@ -1,119 +1,230 @@
-var events
-var fridayEvents
-var saturdayEvents
-var sundayEvents
+var leaves;
 
-var template
-var lastHalf
-var titleDate = document.getElementById('title-date')
-var timetable = document.getElementById('timetable')
+// Testing flag, for mocking the dates of the events
+// without having to change the dates in the events.json
+var testing = false;
 
-function showEvents (template, target, data) {
-  var html = template(data)
-  target.innerHTML += html
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
 }
 
-function pendingEvent (ev) {
-  return !ev.done
-}
-
-function eventComparator (ev1, ev2) {
-  return (
-    (Number(ev2.done) - Number(ev1.done)) ||
-    (ev1.begin - ev2.begin) ||
-    (ev1.end - ev2.end) ||
-    (ev2.title < ev1.title ? 1 : -1)
-  )
-}
-
-function renderTimetable () {
-  var now = Date.now()
-  events.forEach(function (ev) {
-    ev.highlight = ev.begin <= now && now <= ev.end
-    ev.done = ev.end < now
-  })
-  fridayEvents.sort(eventComparator)
-  saturdayEvents.sort(eventComparator)
-  sundayEvents.sort(eventComparator)
-
-  timetable.innerHTML = ''
-  if (fridayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Friday', events: fridayEvents})
-  }
-  if (saturdayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Saturday', events: saturdayEvents})
-  }
-  if (sundayEvents.some(pendingEvent)) {
-    showEvents(template, timetable, {day: 'Sunday', events: sundayEvents})
-  }
-}
-
-function updateTitleDate () {
-  var date = (new Date()).toString().split(' ')
-  date.splice(-2)
-  titleDate.textContent = date.join(' ')
-}
-
-function parseDateStr (dateStr) {
-  var d = dateStr.split(/[^\d]/).map(Number)
-  // month is '0-indexed'
-  d[1] -= 1
-  // because managing to do .apply on a constructor is way uglier and more code
-  return new Date(d[0], d[1], d[2], d[3], d[4], d[5])
-}
-
-function parseEventData (evData) {
-  events = evData.events
-  events.forEach(function (ev) {
-    ev.begin = parseDateStr(ev.begin)
-    ev.end = parseDateStr(ev.end)
-    ev.beginTime = ev.begin.toTimeString().substr(0, 5)
-    ev.endTime = ev.end.toTimeString().substr(0, 5)
-    ev.day = ev.begin.getDate()
-  })
-
-  fridayEvents = events.filter(function (ev) {
-    return ev.day == 19
-  })
-  saturdayEvents = events.filter(function (ev) {
-    return ev.day == 20
-  })
-  sundayEvents = events.filter(function (ev) {
-    return ev.day == 21
-  })
-}
-
-function ajaxFailed (xhr, status, errorThrown) {
-  console.log('Error: ' + errorThrown)
-  console.log('Status: ' + status)
-  console.dir(xhr)
-}
-
-$.ajax({
-  url: '/assets/data/events.json?v4',
-  type: 'GET',
-  dataType: 'json',
-  success: parseEventData,
-  error: ajaxFailed
-})
-
-$.ajax({
-  url: '/assets/templates/events-list.hbs',
-  type: 'GET',
-  success: function (rawTemplate) {
-    template = Handlebars.compile(rawTemplate)
+var app = new Vue({
+  el: '#app',
+  data: {
+    showoptions: false,
+    foodNotify: true,
+    talksNotify: true,
+    eventsNotify: true,
+    bieneNotify: false,
+    events: [],
+    activeIds: [],
+    animation: true,
+    reload: false
   },
-  error: ajaxFailed
-})
+  ready: function() {
+    this.updateEvents();
+    this.startAnimation();
+    this.notify("Welcome to HackUPC Live", null, "essential");
 
-var MIN = 60 * 1000
-function timer () {
-  updateTitleDate()
-  var currentHalf = Math.floor(Date.now() / (30 * MIN))
-  if (lastHalf != currentHalf && events && template) {
-    renderTimetable()
-    lastHalf = currentHalf
+    if(testing){
+       window.setInterval(function(){
+          app.updateEvents();
+        }, 1000);
+    } else {
+      window.setInterval(function(){
+        app.updateEvents();
+      }, 30000);
+    }
+  },
+  methods: {
+    options: function() {
+      this.showoptions = this.showoptions ? false : true;
+    },
+
+    // fn newEvent()
+    // creates a new event in the event
+    // array, with notify status and 
+    // the text dates converted to Date 
+    // objects
+    newEvent: function(event) {
+      index = app.oldIndexById(event._id);
+
+      if(index == -1) {
+        event.notifySent = false;
+      } else {
+        event.notifySent = this.events[index].notifySent;
+      }
+
+      event.begin = new Date(event.begin);
+
+      if(event.end === "") {
+        event.end = new Date(event.begin.getTime() + 10*60000);
+        event.showProgress = false;
+      } else {
+        event.end = new Date(event.end);
+        event.showProgress = true;
+      }
+      
+      event.progress = app.whereAreWe(event.begin, event.end);
+
+      if(!event.notifySent && event.progress > 0) {
+         app.notify(event.title, event.place, event.type);
+         event.notifySent = true;
+      }
+
+      return event;
+    },
+
+    // fn updateEvent()
+    // updates an existing event with new
+    // info
+    updateEvent: function(event) {
+        index = app.oldIndexById(event._id);
+
+        event.begin = new Date(event.begin);
+        event.end = new Date(event.end);
+        newProgress = app.whereAreWe(event.begin, event.end);
+
+        this.events.$set(index, event);
+    },
+
+    // fn oldIndexById()
+    // find event in old event list by ID,
+    // if event is found the index is returned
+    // if it is not found -1 is returned
+    oldIndexById: function(id) {
+      old_events = this.$get('events')
+
+      if(old_events != null) {
+        for(var i = 0; i < old_events.length; i++) {
+          if(old_events[i]._id == id) {
+            return i;
+          }
+        }
+      }
+
+      return -1;
+    },
+
+    // fn updateTimetable()
+    // updates the event array with the current json
+    // manages all updates to the events
+    updateEvents: function () {
+    this.$http.get('/assets/data/events.json?nocache=' + Math.floor(Math.random()*100000))
+      .then(function(response) {
+        old_events = this.$get('events');
+        new_events = response.body.events;
+
+        for (var i = 0; i < new_events.length; i++) {
+          new_events[i] = app.newEvent(new_events[i]); 
+        }
+
+        new_events.sort(function(a,b){
+          return (a.begin - b.begin) ||
+                 (a.end - b.end) ||
+                 (b.title < a.title ? 1 : -1);
+        });
+
+        this.$set('events', new_events);
+      }, function(response) {
+        console.log("Sth wrong");
+      });
+    },
+
+    biene: function () {
+      alert("BIENE");
+    },
+
+    // Toggles animation between stopped and started state
+    toggleAnimation: function (data) {
+      if(data == false) {
+        leaves.stop();
+      } else {
+        leaves.restart();
+      }
+    },
+
+    // Starts background animation
+    startAnimation: function () {
+      leaves = new Leaves(true);
+      leaves.start();
+    },
+
+    // Returns false if not in range and percentage of completion if true
+    whereAreWe: function (start, end) {
+      d = new Date(Date.now());
+      if(start <= d && d <= end) { // Inside the range
+        return (d - start)/(end - start);;
+      } else if(d < start) {
+        return -2; // Before the range
+      } else if(d > end) {
+        return -1; // After the range
+      }
+    },
+
+    // Notify the user of the events according
+    // to his preferences
+    notify: function (title, place, type) {
+      if(typeof Notification === 'function' &&
+        !navigator.userAgent.match(/IEMobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Mobile Safari|Opera Mini|\bCrMo\/|Opera Mobi/i)) {
+        permission = Notification.permission;
+        if(permission !== "denied") {
+          if(permission === "default") {
+            Notification.requestPermission();
+          }
+
+          notifiable = false;
+          if((type === "food" && this.foodNotify)
+            || (type === "events" && this.eventsNotify) 
+            || (type === "talks" && this.talksNotify)
+            || (type === "essential")) {
+            notifiable = true;
+          }
+
+          if (permission === "granted" && notifiable) {
+            var options = {
+              body: place != null ? 'happening right now at ' + place : '',
+              icon: '/favicon.ico',
+            }
+
+            new Notification(title, options);
+          }
+        }
+      }
+    }
+  },
+  watch: {
+    animation: function (data) {
+      this.toggleAnimation(data);
+    }
+  },
+  computed: {
+    completedEvents: function() {
+      return this.events.filter(function(data) {
+        return app.whereAreWe(data.begin, data.end) === -1;
+      }).slice(-3);
+    },
+    currentEvents: function() {
+      current = this.events.filter(function(data) {
+        this.reload = false;
+        return app.whereAreWe(data.begin, data.end) > 0;
+      });
+
+      return current;
+    },
+    futureEvents: function() {
+      future = this.events.filter(function(data) {
+        return app.whereAreWe(data.begin, data.end) === -2;
+      });
+
+      return future;
+    }
+  },
+  filters: {
+    hackupcdate: function (date) {
+      return date.getHours() + ":" + date.getMinutes().pad(2) + ":" + date.getSeconds().pad(2);
+    }
   }
-}
-timer()
-setInterval(timer, 1000)
+});

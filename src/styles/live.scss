@@ -1,0 +1,352 @@
+@import 'main';
+
+$menuHeight: 40px;
+
+@font-face {
+    font-family: 'AndaleMono';
+    src: url('/assets/fonts/AndaleMono.ttf');
+}
+
+body, h1, h2, p, strong, small {
+  font-family: 'AndaleMono';
+  color: #CE481C;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  padding-top: 83px;
+  padding-bottom: 60px;
+}
+
+h1, h2, p {
+  padding-left: 93px;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  display: block;
+  position: relative;
+  top: 75px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  display: inline-block;
+}
+
+hr {
+  display: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  white-space: nowrap;
+}
+
+span {
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+
+span.location-emoji {
+    margin-left: -2px;
+    margin-right: -5px;
+}
+
+p.highlight {
+  background: #CE481C;
+  color: white;
+  padding-top: 6px;
+  padding-bottom: 2px;
+  /* to compensate for the padding */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+#title-date { font-size: 20px }
+
+#timeline { padding-right: 300px }
+
+#twitter-container {
+  position: fixed;
+  top: 0px;
+  right: -1px;
+  width: 300px;
+  height: 100%;
+  border-left: 1px solid rgba(15, 70, 100, .12);
+}
+
+
+#livenav {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  height: $menuHeight;
+  background-color: #CF5230;
+  width: 100%;
+  padding-right: 300px;
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-header {
+    display: none;
+  }
+
+  a {
+    color: #E3C598;;
+  }
+
+  li.active a {
+    color: white;
+    background-color: #F59A44;
+    padding-bottom: 18px;
+  }
+
+  a:hover {
+    border: -1px solid $bdark;
+  }
+
+  li {
+    padding: 0px;
+    height: $menuHeight;
+  }
+
+  #options-menu {
+    display: none;
+  }
+}
+
+#options {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    .options-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 380px; /* Could be more or less, depending on screen size */
+    }
+
+    h2 {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+      padding-left: 0px;
+    }
+
+    #notif-options {
+      margin-left: 25%;
+      width: 50%;
+    }
+}
+
+#app {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+#timetable {
+  width: 800px;
+  margin-left: 100px;
+
+  span.where {
+    font-size: 14px;
+  }
+
+  .highlighted {
+    h3 {
+      font-weight: bold;
+      font-size: 28px;
+    }
+  }
+
+  .highlighted:first-child {
+    margin-top: 50px;
+  }
+
+  .highlighted:last-child {
+    margin-bottom: 50px;
+  }
+
+  div.done {
+    opacity: 0.5;
+    line-height: 8px;
+  }
+
+  p {
+    padding-left: 30px;
+    display: block;
+    font-size: 15px;
+    margin-top: 0px;
+  }
+
+  h3 {
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #timetable {
+    width: 56%;
+    margin-left: 80px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #twitter-container { display: none }
+
+  body {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  h1, h2, p { 
+    padding-left: 10px;
+    display: none;
+  }
+
+  p, p.done {
+    white-space: normal;
+    line-height: 16px;
+    font-size: 16px;
+  }
+
+  #livenav {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .progress {
+    margin-right: 42px;
+    margin-left: 30px;
+  }
+
+  hr {
+    margin: 20px;
+    background-color: #E3C598;
+    color: #E3C598;
+    border: 0;
+    border-top: 1px solid #E3C598;
+    display: block;
+  }
+
+  .navbar-nav {
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .navbar-default {
+    .navbar-toggle .icon-bar {
+      margin-top: 0px;
+      background-color: #6E352C;
+    }
+
+    .navbar-collapse {
+      border: none;
+      box-shadow: none;
+      padding-bottom: 15px;
+    }
+  } 
+
+  .navbar-default .navbar-toggle, 
+  .navbar-default .navbar-toggle:hover, 
+  .navbar-default .navbar-toggle:focus {
+      height: 40px;
+      border: none;
+      background-color: #F59A44;
+  }
+
+  #timetable {
+    margin-left: 0px;
+    padding-left: 12px;
+    width: 100%;
+
+
+    margin-top: 30px;
+
+    span.where {
+      font-size: 14px;
+      display: block;
+      margin-left: 30px;
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+
+    .pending {
+      opacity: 0.6;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .done {
+    display: none;
+  }
+
+  #options .options-content {
+    width: 95%;
+  }
+
+  .lenny {
+    display: none;
+  }
+
+  #livenav {
+    height: 100%;
+    position: relative;
+    top: 0px;
+
+    li {
+      a {
+        color: rgb(206, 72, 28);
+        background-color: #F59A44;
+      }
+    }
+
+    li.active a {
+      padding-bottom: 10px;
+    }
+
+    a {
+      margin-top: 4px;
+      color: #E3C598;
+    }
+
+    #options-menu {
+      display: block;
+    }
+
+    .navbar-header {
+      display: block;
+    }
+  }
+}
