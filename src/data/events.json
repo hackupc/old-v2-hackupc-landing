@@ -128,13 +128,67 @@
     }, 
     {
       "begin": "2016/10/08 09:00:00", 
-      "end": "2016/10/08 12:30:00", 
-      "title": "Tech Talks", 
-      "_signature": "484c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
-      "place": "A5001-A5002", 
-      "_id": "484c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "end": "2016/10/08 09:30:00", 
+      "title": "Sentilo - the open source IoT platform not only for smart cities", 
+      "_signature": "484c77ca4a4ee1dfc2a88f3270f46867b97252c42", 
+      "place": "A5002", 
+      "_id": "484c77ca44ee1dfc2a88f3270f46867b97252c42", 
       "type": "talks"
-    }, 
+    },
+    {
+      "begin": "2016/10/08 09:30:00", 
+      "end": "2016/10/08 10:00:00", 
+      "title": "GFI", 
+      "_signature": "584c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5001", 
+      "_id": "584c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },
+    {
+      "begin": "2016/10/08 10:00:00", 
+      "end": "2016/10/08 10:30:00", 
+      "title": "HP 3D: the Multi Jet Fusion Technology", 
+      "_signature": "684c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5002", 
+      "_id": "684c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },
+    {
+      "begin": "2016/10/08 10:30:00", 
+      "end": "2016/10/08 11:00:00", 
+      "title": "Microsoft: Big Data", 
+      "_signature": "784c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5001", 
+      "_id": "784c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },
+    {
+      "begin": "2016/10/08 11:00:00", 
+      "end": "2016/10/08 11:30:00", 
+      "title": "Skyscanner: Rapid Prototyping", 
+      "_signature": "884c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5002", 
+      "_id": "884c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },
+    {
+      "begin": "2016/10/08 11:30:00", 
+      "end": "2016/10/08 12:00:00", 
+      "title": "MIP APP:Control a robot with Angular 2 + NativeScript", 
+      "_signature": "984c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5001", 
+      "_id": "984c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },
+    {
+      "begin": "2016/10/08 12:00:00", 
+      "end": "2016/10/08 12:30:00", 
+      "title": "EVERIS: IT security (pentesting)", 
+      "_signature": "384c77ca4a4ee1dfc2a88f3270f46867b97252cc0", 
+      "place": "A5002", 
+      "_id": "384c77ca44ee1dfc2a88f3270f46867b97252cc0", 
+      "type": "talks"
+    },  
     {
       "begin": "2016/10/08 13:00:00", 
       "end": "2016/10/08 14:00:00", 
@@ -143,10 +197,28 @@
       "place": "Meal Zone", 
       "_id": "eaa62387a35c614a8530509923e992c915649ecb", 
       "type": "food"
-    }, 
+    },
+    {
+      "begin": "2016/10/08 16:00:00", 
+      "end": "2016/10/08 17:00:00", 
+      "title": "Verse: Competitive programming contest", 
+      "_signature": "427fa1bb63dabb5sc07185e942cd5be38a449b593", 
+      "place": "online", 
+      "_id": "427fa1bb63dabb5c07185e942cd5be38a449b593", 
+      "type": "events"
+    },
+    {
+      "begin": "2016/10/08 17:00:00", 
+      "end": "2016/10/08 20:00:00", 
+      "title": "Smash Tournament", 
+      "_signature": "4a7fa1bb63dabb5sc07185e942cd5be38a449b593", 
+      "place": "A5101", 
+      "_id": "4a7fa1bb63dabb5c07185e942cd5be38a449b593", 
+      "type": "events"
+    },
     {
       "begin": "2016/10/08 15:00:00", 
-      "end": "2016/10/08 18:30:00", 
+      "end": "2016/10/08 15:30:00", 
       "title": "Bitcoin - Blockchain", 
       "_signature": "70904c8da847843edc49974dnad5276f803da2d47", 
       "place": "A5001", 
