@@ -244,30 +244,30 @@
       "type": "events"
     }, 
     {
-      "begin": "2016/10/08 23:00:00", 
+      "begin": "2016/10/08 23:30:00", 
       "end": "2016/10/09 00:00:00", 
       "title": "HackUiz", 
-      "_signature": "9dca79fb76406e6bb3n0a793dfd48c792cfc953dc", 
+      "_signature": "8dca79fb76406e6bb3n0a793dfd48c792cfc953dc", 
       "place": "A6001", 
-      "_id": "9dca79fb76406e6bb30a793dfd48c792cfc953dc", 
+      "_id": "8dca79fb76406e6bb30a793dfd48c792cfc953dc", 
       "type": "events"
     }, 
     {
-      "begin": "2016/10/09 00:00:00", 
-      "end": "", 
+      "begin": "2016/10/09 01:00:00", 
+      "end": "2016/10/09 03:00:00", 
       "title": "Midnight Snack", 
-      "_signature": "a05de656797a54077a3acdd597050v1508f9f70af", 
-      "place": "A6E02", 
-      "_id": "a05de656797a54077a3acdd5970501508f9f70af", 
+      "_signature": "d05de656797a54077a3acdd597050v1508f9f70af", 
+      "place": "Meal zone", 
+      "_id": "d05de656797a54077a3acdd5970501508f9f70af", 
       "type": "food"
     }, 
     {
-      "begin": "2016/10/09 00:30:00", 
+      "begin": "2016/10/09 1:30:00", 
       "end": "2016/10/09 03:00:00", 
-      "title": "Midnight Games!", 
-      "_signature": "30a18d77470b4a2c83214d1538a8089aa9abd58b1", 
+      "title": "Nerf gun battle", 
+      "_signature": "50a18d77470b4a2c83214d1538a8089aa9abd58b1", 
       "place": "A5101", 
-      "_id": "30a18d77470b4a2c83214d15388089aa9abd58b1", 
+      "_id": "50a18d77470b4a2c83214d15388089aa9abd58b1", 
       "type": "events"
     }, 
     {
