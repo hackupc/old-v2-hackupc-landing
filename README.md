@@ -1,39 +1,36 @@
-> IF YOU WANNA TEST THE NEW LIVE ENSURE `testing` VARIABLE IS SET TO  `true` .
-
-Install
--------
-
-First off, you need the `sass` ruby gem. You can install it with `sudo
-gem install sass`. Make sure to have `gulp` and `bower` installed
-globally. Then run:
-
-	npm install
-	bower install
-	gulp
+<br>
+<p align="center">
+  <img alt="HackUPC Fall 2016" src="src/images/hackupc-logo@2x.png" width="620"/>
+</p>
+<br>
 
 
-Develop
--------
+# Setup
 
-Use `gulp watch` to compile the dist directory in real time.
+We recommend having Node v6 installed on your computer.
 
-Remember to save all new dependencies with `--dev`.
+```sh
+git clone git@github.com:hackupc/hackupc.git &&
+cd hackupc &&
+npm install
+```
 
 
-Deploy
-------
+# Develop
 
-Statically serve the `dist/` directory.
+Use `npm run watch` to compile the dist directory in real time.
 
+Use `npm start` to serve `/dist` at `http://localhost:8080`.
 
 
 ## Live
 
-For testing purposes `live.js` has a `testing` variable that mocks events in the near future so that there's no need to keep changing `events.json`. It also reduces the polling rate to 1 second.
+*To be revisited*
+> For testing purposes `live.js` has a `testing` variable that mocks events in the near future so that there's no need to keep changing `events.json`. It also reduces the polling rate to 1 second.
 
-New features:
+> New features:
 
-- Desktop notifications
+> - Desktop notifications
 - Live reload
 - Options panel to filter by type of notifications
   - 4 types of notifications (provisional): essential, food, events, talks
@@ -41,3 +38,8 @@ New features:
   - food, events and talks can be filtered out depending on your preferences.
 - Options panel also includes a checkbox to switch off background animation.
 - Progress bars!
+
+
+# License
+
+MIT © Hackers@UPC
