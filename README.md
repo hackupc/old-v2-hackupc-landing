@@ -1,4 +1,6 @@
-![HackUPC Fall 2016](src/images/hackupc-logo@2x.png)
+<p align="center">
+  <img alt="HackUPC Fall 2016" src="src/images/hackupc-logo@2x.png" width="620"/>
+</p>
 
 
 # Setup
