@@ -15,7 +15,7 @@ class Leaves {
 
   constructor(public constantOpacity: boolean) {
     this.loadLeaves();
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x0000ff, antialias: false});
 
     this.constOpacity = constantOpacity;
     if(constantOpacity) {
@@ -114,22 +114,20 @@ class Leaves {
   }
 
   private loadLeaves() {
-    PIXI.loader
-      .add("leaf0", "assets/img/leaf0.png")
-      .add("leaf1", "assets/img/leaf1.png")
-      .add("leaf2", "assets/img/leaf2.png")
-      .add("leaf3", "assets/img/leaf3.png")
-      .load(() => this.createLeaves());
+    for (let i = 0; i < 13; ++i) {
+      PIXI.loader.add(`flake${i}`, `assets/img/flake${i}.png`)
+    }
+    PIXI.loader.load(() => this.createLeaves());
   }
 
   private createLeaves() {
     for(var i = 0; i < this.maximumLeaves; i++) {
-      var leafIdx = Math.round(Math.random()*50) % 4;
+      var flakeId = Math.floor(Math.random() * 13)
       var posX = Math.random() * this.renderer.view.width;
       var posY = Math.random() * this.renderer.view.height;
       var radius = this.minSize + Math.random() * this.maxSize + 1;
 
-      this.leaves[i] = new PIXI.Sprite(PIXI.loader.resources["leaf" + leafIdx].texture);
+      this.leaves[i] = new PIXI.Sprite(PIXI.loader.resources[`flake${flakeId}`].texture);
       this.leaves[i].position.set(posX, posY);
       this.leaves[i].width = radius;
       this.leaves[i].height = radius;
