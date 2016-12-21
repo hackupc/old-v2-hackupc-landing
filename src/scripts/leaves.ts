@@ -15,7 +15,7 @@ class Leaves {
 
   constructor(public constantOpacity: boolean) {
     this.loadLeaves();
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x0000ff, antialias: false});
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x94d5ff, antialias: false});
 
     this.constOpacity = constantOpacity;
     if(constantOpacity) {

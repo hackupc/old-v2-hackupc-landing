@@ -5,19 +5,31 @@
     src: url(../fonts/minecraftia.ttf);
 }
 
-$blight: #EBA517;
-$blightt: #ffab00;
-$bdark: #CE481C;
-$blink: #CE481C;
-$bgray: #444;
-$bwhite: #FFF6CD;
+$background-color: white;
+$text-color: #b1b2c1;
+$title-color: #676ff1;
+$link-color: #f93479;
+$button-text-color: white;
+$button-body-color: $title-color;
+$button-bottom-color: #5258BF;
 
 body {
-  background: #fdf3e1;
-  color: #949393;
+  background: $background-color;
+  color: $text-color;
   font-family: 'Ek Mukta', sans-serif;
   font-weight: bold;
 }
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+      color: white;
+      background-color: $link-color;
+      text-decoration: none; // something is overriting this somehow
+    }
+}
+#mlh-trust-badge:hover { background-color: transparent }
 
 canvas {
     position: fixed;
@@ -45,22 +57,22 @@ canvas {
             &:first-child {
                 margin-right: 15px;
             }
-	    &:hover {
-		background-color: $blink;
-		border-bottom-width: 6px;
-		position: relative;
-		top: 4px;
-	    }
+      	    &:hover {
+            		background-color: $button-bottom-color;
+            		border-bottom-width: 6px;
+            		position: relative;
+            		top: 4px;
+      	    }
             display: inline-block;
             text-decoration: none;
-            background-color: $blight;
-            color: $bwhite;
+            background-color: $button-body-color;
+            color: $button-text-color;
             width: 160px;
             padding: 15px 0px 10px;
             font-weight: 500;
             font-size: 1.4em;
             border: none;
-            border-bottom: 10px solid $bdark;
+            border-bottom: 10px solid $button-bottom-color;
         }
     }
 }
@@ -72,7 +84,7 @@ canvas {
 
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
-    color: $bdark;
+    color: $title-color;
     font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
@@ -82,13 +94,8 @@ canvas {
     margin-top: 10vh;
 }
 
-.coming-soon p {
-    color: $bgray;
-    font-size: 2.2em;
-}
-
 h1 {
-    color: $blightt;
+    color: $title-color;
     margin-top: 10vh;
     font-size: 3.5em;
     margin-bottom: 5vh;
@@ -100,7 +107,7 @@ h1 {
     }
     .title {
         font-size: 1.6em;
-        color: $blightt;
+        color: $title-color;
     }
     .answer {
         font-size: 1.4em;
@@ -109,10 +116,6 @@ h1 {
     }
     .question {
         margin-bottom: 5vh;
-    }
-    a {
-        color: $blink;
-        text-decoration: none;
     }
 }
 
@@ -197,8 +200,6 @@ h1 {
     margin-top: 25vh;
     padding-bottom: 10vh;
     a {
-        color: $blight;
-        text-decoration: none;
         padding: 0.4em;
     }
 }
