@@ -1,5 +1,8 @@
 /// <reference path="typings/pixi.js/pixi.js.d.ts"/>
 
+const MAX_OPACITY = .9
+const MIN_OPACITY = .03
+
 class Leaves {
   constOpacity: boolean = false;
 
@@ -15,15 +18,14 @@ class Leaves {
 
   constructor(public constantOpacity: boolean) {
     this.loadLeaves();
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x94d5ff, antialias: false});
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x676ff1, antialias: false});
 
     this.constOpacity = constantOpacity;
-    if(constantOpacity) {
-      this.renderer.view.style.opacity = 0.1;  
-    } else {
+    this.renderer.view.style.opacity = MAX_OPACITY;
+    if (!constantOpacity) {
       window.onscroll = (e) => this.onScrollChangeOpacity(e);
     }
-    
+
     this.renderer.autoResize = true;
 
     this.stage = new PIXI.Container();
@@ -62,7 +64,7 @@ class Leaves {
 
   private onScrollChangeOpacity(e) {
     var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
-    this.renderer.view.style.opacity = 0.1 + 0.8 * (1 - factor);
+    this.renderer.view.style.opacity = MIN_OPACITY + (MAX_OPACITY - MIN_OPACITY) * (1 - factor);
   }
 
   private update(dt) {

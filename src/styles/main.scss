@@ -11,6 +11,7 @@ $title-color: #676ff1;
 $link-color: #f93479;
 $button-text-color: white;
 $button-body-color: $title-color;
+$button-highlight-color: #747cf7;
 $button-bottom-color: #5258BF;
 
 body {
@@ -58,7 +59,7 @@ canvas {
                 margin-right: 15px;
             }
       	    &:hover {
-            		background-color: $button-bottom-color;
+            		background-color: $button-highlight-color;
             		border-bottom-width: 6px;
             		position: relative;
             		top: 4px;
@@ -78,7 +79,7 @@ canvas {
 }
 
 .top-buttons .button-container {
-    margin-top: 8vh;
+    margin-top: 6vh;
     height: 100px;
 }
 
@@ -89,6 +90,7 @@ canvas {
     line-height: 1.9em;
     text-align: center;
 }
+.top-description p { color: $button-text-color }
 
 .top-description p {
     margin-top: 10vh;
