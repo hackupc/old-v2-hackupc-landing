@@ -39,20 +39,6 @@ class Leaves {
     requestAnimationFrame((ts) => this.mainLoop(ts));
   }
 
-  restart() {
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
-    if(this.constOpacity) {
-      this.renderer.view.style.opacity = 0.1;  
-    } else {
-      window.onscroll = (e) => this.onScrollChangeOpacity(e);
-    }
-
-    document.body.insertBefore(this.renderer.view, document.body.childNodes[0]);
-    this.resizeCanvas();
-
-    this.paused = false;
-  }
-
   stop() {
     this.renderer.destroy(true);
     this.paused = true;
