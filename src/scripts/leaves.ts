@@ -120,6 +120,9 @@ class Leaves {
       this.leaves[i].width = radius;
       this.leaves[i].height = radius;
       this.leaves[i].weight = Math.random() * this.maximumLeaves;
+      if (Math.random() > 0.5) {
+        this.leaves[i].tint = 0x50BAD5;
+      }
 
       this.stage.addChild(this.leaves[i]);
     }
