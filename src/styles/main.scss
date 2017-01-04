@@ -7,12 +7,14 @@
 
 $background-color: white;
 $text-color: #b1b2c1;
-$title-color: #676ff1;
-$link-color: #f93479;
+$title-color: #303F9F;
+$link-color: #F44336;
+$link-color-dark: #D32F2F;
 $button-text-color: white;
-$button-body-color: $title-color;
-$button-highlight-color: #747cf7;
-$button-bottom-color: #5258BF;
+$button-body-color: #F44336;
+$button-highlight-color: #FF5252;
+$button-bottom-color: #D32F2F;
+
 
 body {
   background: $background-color;
@@ -25,9 +27,7 @@ a {
     color: $link-color;
     text-decoration: none;
     &:hover {
-      color: white;
-      background-color: $link-color;
-      text-decoration: none; // something is overriting this somehow
+      color: $link-color-dark;
     }
 }
 #mlh-trust-badge:hover { background-color: transparent }
@@ -147,7 +147,7 @@ h1 {
             width: 15%;
         }
         &.mega-portrait {
-            width: 20%;
+            width: 15%;
         }
         &.giga-portrait {
             width: 20%;

@@ -22,7 +22,7 @@ class Leaves {
     PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
     
     this.loadLeaves();
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x676ff1, antialias: false});
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x303F9F, antialias: false});
 
     this.constOpacity = constantOpacity;
     this.renderer.view.style.opacity = MAX_OPACITY;
