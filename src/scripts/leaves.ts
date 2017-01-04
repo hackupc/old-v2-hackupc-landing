@@ -11,7 +11,7 @@ class Leaves {
   leaves = [];
   stage = null;
   maximumLeaves = 40;
-  maxSize = 60;
+  maxSize = 40;
   minSize = 20;
   angle = 0;
   paused = false;
