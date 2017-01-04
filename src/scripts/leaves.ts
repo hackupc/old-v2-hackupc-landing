@@ -17,6 +17,10 @@ class Leaves {
   paused = false;
 
   constructor(public constantOpacity: boolean) {
+
+    //Nearest interpolation when scaling (for all sprites)
+    PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
+    
     this.loadLeaves();
     this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x676ff1, antialias: false});
 
