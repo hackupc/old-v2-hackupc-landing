@@ -77,7 +77,7 @@ gulp.task('data', function() {
 })
 
 gulp.task('clean', function(cb) {
-    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
+    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img', 'src/scripts/leaves.webgl.js'], cb)
 });
 
 gulp.task('default', ['dependencies', 'styles', 'scripts', 'images', 'fonts', 'templates', 'data'], function() {
@@ -88,6 +88,7 @@ gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', ['styles']);
   // Watch .js files
   gulp.watch('src/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/scripts/**/*.ts', ['scripts']);
   // Watch font files
   gulp.watch('src/fonts/**/*', ['fonts']);
   // Watch image files
