@@ -6,14 +6,15 @@
 }
 
 $background-color: white;
-$text-color: #b1b2c1;
-$title-color: #303F9F;
+$text-color: #747c92;
+$title-color: #03a9b5;
+$subtitle-color: white;
 $link-color: #F44336;
 $link-color-dark: #D32F2F;
-$button-text-color: white;
-$button-body-color: #FF5252;
-$button-highlight-color: #FF5252;
-$button-bottom-color: #F44336;
+$button-text-color: #372772;
+$button-body-color: #ede144;
+$button-highlight-color: #027077;
+$button-bottom-color: #eddf23;
 
 
 body {
@@ -90,7 +91,7 @@ canvas {
     line-height: 1.9em;
     text-align: center;
 }
-.top-description p { color: $button-text-color }
+.top-description p { color: $subtitle-color}
 
 .top-description p {
     margin-top: 10vh;
