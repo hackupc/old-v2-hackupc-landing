@@ -23,6 +23,14 @@ Use `npm run watch` to compile the dist directory in real time.
 Use `npm start` to serve `/dist` at `http://localhost:8080`.
 
 
+# Deploy
+
+- Ask ssh access to server
+- Add remote to your local git: `git remote add live ssh://deploy@hackupc.com/home/deploy/repo/w2017.git`
+- Push new changes to server (only master branch) with: `git push live master`
+
+Inspired by this [article](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps)
+
 ## Live
 
 *To be revisited*
