@@ -77,7 +77,7 @@ gulp.task('data', function() {
 })
 
 gulp.task('clean', function(cb) {
-    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img', 'src/scripts/leaves.webgl.js'], cb)
+    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img', 'src/scripts/snowflakes.webgl.js'], cb)
 });
 
 gulp.task('default', ['dependencies', 'styles', 'scripts', 'images', 'fonts', 'templates', 'data'], function() {
