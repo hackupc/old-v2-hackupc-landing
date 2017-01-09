@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     ts = require('gulp-typescript');;
 
 gulp.task('styles', function() {
-  sass('src/styles/main.scss', { style: 'expanded' })
+  sass('src/styles/main.2017w.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(rename({suffix: '.min'}))
@@ -32,9 +32,9 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('src/scripts/leaves.ts')
+  gulp.src('src/scripts/snowflakes.ts')
     .pipe(ts({
-        out: 'leaves.webgl.js'
+        out: 'snowflakes.webgl.js'
     }))
     .pipe(gulp.dest('src/scripts'));
 
@@ -77,7 +77,7 @@ gulp.task('data', function() {
 })
 
 gulp.task('clean', function(cb) {
-    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
+    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img', 'src/scripts/snowflakes.webgl.js'], cb)
 });
 
 gulp.task('default', ['dependencies', 'styles', 'scripts', 'images', 'fonts', 'templates', 'data'], function() {
@@ -88,6 +88,7 @@ gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', ['styles']);
   // Watch .js files
   gulp.watch('src/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/scripts/**/*.ts', ['scripts']);
   // Watch font files
   gulp.watch('src/fonts/**/*', ['fonts']);
   // Watch image files

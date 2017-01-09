@@ -1,5 +1,8 @@
 /// <reference path="typings/pixi.js/pixi.js.d.ts"/>
 
+const MAX_OPACITY = 1
+const MIN_OPACITY = .03
+
 class Leaves {
   constOpacity: boolean = false;
 
@@ -8,22 +11,25 @@ class Leaves {
   leaves = [];
   stage = null;
   maximumLeaves = 40;
-  maxSize = 60;
+  maxSize = 40;
   minSize = 20;
   angle = 0;
   paused = false;
 
   constructor(public constantOpacity: boolean) {
+
+    //Nearest interpolation when scaling (for all sprites)
+    PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
+
     this.loadLeaves();
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
+    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x03a9b5, antialias: false});
 
     this.constOpacity = constantOpacity;
-    if(constantOpacity) {
-      this.renderer.view.style.opacity = 0.1;  
-    } else {
+    this.renderer.view.style.opacity = MAX_OPACITY;
+    if (!constantOpacity) {
       window.onscroll = (e) => this.onScrollChangeOpacity(e);
     }
-    
+
     this.renderer.autoResize = true;
 
     this.stage = new PIXI.Container();
@@ -37,20 +43,6 @@ class Leaves {
     requestAnimationFrame((ts) => this.mainLoop(ts));
   }
 
-  restart() {
-    this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0xfdf3e1, antialias: false});
-    if(this.constOpacity) {
-      this.renderer.view.style.opacity = 0.1;  
-    } else {
-      window.onscroll = (e) => this.onScrollChangeOpacity(e);
-    }
-
-    document.body.insertBefore(this.renderer.view, document.body.childNodes[0]);
-    this.resizeCanvas();
-
-    this.paused = false;
-  }
-
   stop() {
     this.renderer.destroy(true);
     this.paused = true;
@@ -62,7 +54,7 @@ class Leaves {
 
   private onScrollChangeOpacity(e) {
     var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
-    this.renderer.view.style.opacity = 0.1 + 0.8 * (1 - factor);
+    this.renderer.view.style.opacity = MIN_OPACITY + (MAX_OPACITY - MIN_OPACITY) * (1 - factor);
   }
 
   private update(dt) {
@@ -114,22 +106,20 @@ class Leaves {
   }
 
   private loadLeaves() {
-    PIXI.loader
-      .add("leaf0", "assets/img/leaf0.png")
-      .add("leaf1", "assets/img/leaf1.png")
-      .add("leaf2", "assets/img/leaf2.png")
-      .add("leaf3", "assets/img/leaf3.png")
-      .load(() => this.createLeaves());
+    for (let i = 0; i < 13; ++i) {
+      PIXI.loader.add(`flake${i}`, `assets/img/flake${i}.png`)
+    }
+    PIXI.loader.load(() => this.createLeaves());
   }
 
   private createLeaves() {
     for(var i = 0; i < this.maximumLeaves; i++) {
-      var leafIdx = Math.round(Math.random()*50) % 4;
+      var flakeId = Math.floor(Math.random() * 13)
       var posX = Math.random() * this.renderer.view.width;
       var posY = Math.random() * this.renderer.view.height;
       var radius = this.minSize + Math.random() * this.maxSize + 1;
 
-      this.leaves[i] = new PIXI.Sprite(PIXI.loader.resources["leaf" + leafIdx].texture);
+      this.leaves[i] = new PIXI.Sprite(PIXI.loader.resources[`flake${flakeId}`].texture);
       this.leaves[i].position.set(posX, posY);
       this.leaves[i].width = radius;
       this.leaves[i].height = radius;

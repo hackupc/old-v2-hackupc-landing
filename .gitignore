@@ -4,4 +4,4 @@ node_modules
 dist/assets/
 .DS_Store
 npm-debug.log
-src/scripts/leaves.webgl.js
+src/scripts/snowflakes.webgl.js
