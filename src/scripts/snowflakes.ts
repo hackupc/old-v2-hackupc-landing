@@ -1,6 +1,6 @@
 /// <reference path="typings/pixi.js/pixi.js.d.ts"/>
 
-const MAX_OPACITY = .9
+const MAX_OPACITY = 1
 const MIN_OPACITY = .03
 
 class Leaves {
