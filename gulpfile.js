@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     ts = require('gulp-typescript');;
 
 gulp.task('styles', function() {
-  sass('src/styles/main.scss', { style: 'expanded' })
+  sass('src/styles/main.2017w.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(rename({suffix: '.min'}))
@@ -32,9 +32,9 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('src/scripts/leaves.ts')
+  gulp.src('src/scripts/snowflakes.ts')
     .pipe(ts({
-        out: 'leaves.webgl.js'
+        out: 'snowflakes.webgl.js'
     }))
     .pipe(gulp.dest('src/scripts'));
 
