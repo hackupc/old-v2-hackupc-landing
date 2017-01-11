@@ -5,16 +5,16 @@
     src: url(../fonts/minecraftia.ttf);
 }
 
+
 $background-color: white;
-$text-color: #747c92;
+$text-color: #b1b2c1;
 $title-color: #03a9b5;
-$subtitle-color: white;
 $link-color: #F44336;
-$link-color-dark: #D32F2F;
-$button-text-color: #372772;
-$button-body-color: #ede144;
-$button-highlight-color: #027077;
-$button-bottom-color: #eddf23;
+$link-color-dark: #fc6f6f;
+$button-text-color: white;
+$button-body-color: #fc6f6f;
+$button-highlight-color: #fc6f6f;
+$button-bottom-color: #FF5252;
 
 
 body {
@@ -91,7 +91,7 @@ canvas {
     line-height: 1.9em;
     text-align: center;
 }
-.top-description p { color: $subtitle-color}
+.top-description p { color: $button-text-color}
 
 .top-description p {
     margin-top: 10vh;
