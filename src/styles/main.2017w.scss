@@ -40,6 +40,10 @@ canvas {
     left: 0px;
 }
 
+.intro {
+    height: 100vh;
+}
+
 .head-logo img {
     @include center-block();
     width: 55%;
