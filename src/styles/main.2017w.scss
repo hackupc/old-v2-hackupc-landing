@@ -109,9 +109,6 @@ h1 {
 }
 
 .faq-questions {
-    &:not(:first-of-type) {
-        margin-top: 10vh;
-    }
     .title {
         font-size: 1.6em;
         color: $title-color;
