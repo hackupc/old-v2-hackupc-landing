@@ -125,6 +125,37 @@ h1 {
 
 .sponsor-images {
     text-align: center;
+
+    .tera {
+        img {
+            width: 70%
+        }
+        margin-bottom: 10vh;
+    }
+    .giga {
+        img {
+            width: 38%
+        }
+        margin-bottom: 8vh;
+    }
+    .mega {
+        img {
+            width: 25%;
+        }
+        margin-bottom: 8vh;
+    }
+    .kilo {
+        img {
+            width: 20%;
+        }
+        margin-bottom: 8vh;
+    }
+    .mili {
+        img {
+            width: 15%;
+        }
+    }
+
     img {
         &.mr {
             margin-right: 20px;
@@ -132,27 +163,11 @@ h1 {
         &.ml {
             margin-left: 20px;
         }
-
-        &.tera {
-            width: 60%
-        }
-        &.giga {
-            width: 38%
-        }
-        &.mega {
-            width: 25%;
-        }
-        &.kilo {
-            width: 20%;
-        }
-        &.mili {
-            width: 15%;
-        }
         &.mega-portrait {
             width: 15%;
         }
         &.giga-portrait {
-            width: 20%;
+            width: 18%;
         }
     }
     .separator {
