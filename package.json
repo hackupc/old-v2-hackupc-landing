@@ -4,6 +4,10 @@
   "description": "<3",
   "main": "index.js",
   "scripts": {
+    "styles": "(npm run scss:main & npm run scss:live) && postcss -u autoprefixer -r dist/css/*",
+    "scss:main": "node-sass --output-style compressed src/styles/main.2017w.scss dist/css/main.2017w.min.css",
+    "scss:live": "node-sass --output-style compressed  src/styles/app.scss dist/css/app.min.css",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "start": "http-server dist",
     "test": "standard src/scripts/*.js",
     "watch": "gulp && gulp watch"
@@ -11,6 +15,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.7.3",
+    "node-sass": "^4.5.0",
+    "postcss-cli": "^2.6.0",
     "standard": "^8.0.0",
     "typescript": "^2.0.3"
   }

@@ -57,7 +57,7 @@ a{
 	font-weight: bold !important;
 }
 
-$media (min-width:720px){
+@media (min-width:720px){
 	.under-header{
 		padding-top:150px;
 	}
@@ -67,7 +67,7 @@ $media (min-width:720px){
 	}
 }
 
-$media (max-width:720px){
+@media (max-width:720px){
 	.under-header{
 		padding-top:60px;
 	}
