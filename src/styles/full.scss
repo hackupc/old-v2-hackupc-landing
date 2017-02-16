@@ -1,0 +1,45 @@
+#fullscreen{
+	position:relative;
+	height: 100%;
+
+	& > div{
+		position:relative;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.events-fancy{
+		width:400px;
+		margin:0;
+		ul li{
+			font-size: 1.5em;
+		}
+	}
+}
+
+#countdown-full {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex:1 1 auto;
+	max-width:550px;
+	position: relative;
+	margin-left:15px;
+
+	.bg{
+		position:absolute;
+		width:100%;
+		top: -235px;
+		left:0;
+	}
+
+	.logo{
+		margin-top: -140px;
+		width: 50%;
+		flex: 1 1 0;
+		z-index:11;
+	}
+}

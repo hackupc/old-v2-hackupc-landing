@@ -1,0 +1,109 @@
+{
+	"version":7,
+	"message": "Dinner is now sooner! check it out",
+	"countdownStart":"2/12/17 13:25",
+	"days":
+	[
+		{
+			"name":"Friday",
+			"date":"2/12/17",
+			"events":
+			[
+				{
+					"title": "Registration",
+					"startHour": "04:00",
+					"endHour": "05:59",
+					"mapsLink": "/checkin",
+					"locationName": "A5S101",
+					"description": "Register to the hackathon and get your swag!"
+				},
+				{
+					"title": "Open Ceremony",
+					"startHour": "05:00",
+					"endHour": "06:30",
+					"mapsLink": "/vertex",
+					"locationName": "Vèrtex",
+					"description": "Introduction to the hackathon. Meet our sponsors and discover the prizes"
+				},
+				{
+					"title": "Dinner",
+					"startHour": "14:15",
+					"endHour": "15:00",
+					"mapsLink": "/meal",
+					"locationName": "A5-A6",
+					"description": "Not much explanation needed"
+				}
+			]
+		},
+		{
+			"name":"Saturday",
+			"date":"3/4/17",
+			"events":
+			[
+				{
+					"title": "Snacks",
+					"startHour": "00:00",
+					"endHour": "01:00",
+					"mapsLink": "/meal",
+					"locationName": "A5-A6",
+					"description": "Feeling hungry? Go get some hot waffles"
+				},
+				{
+					"title": "The game",
+					"startHour": "08:00",
+					"endHour": "11:00",
+					"mapsLink": "/checkin",
+					"locationName": "A6101",
+					"description": "You lost"
+				},
+				{
+					"title": "Registration",
+					"startHour": "09:00",
+					"endHour": "10:59",
+					"mapsLink": "/checkin",
+					"locationName": "A5S101",
+					"description": "Register to the hackathon and get your swag!"
+				},
+				{
+					"title": "Open Ceremony",
+					"startHour": "11:00",
+					"endHour": "12:00",
+					"mapsLink": "/vertex",
+					"locationName": "Vèrtex",
+					"description": "Introduction to the hackathon. Meet our sponsors and discover the prizes"
+				},
+				{
+					"title": "Dinner",
+					"startHour": "22:15",
+					"endHour": "23:00",
+					"mapsLink": "/meal",
+					"locationName": "A5-A6",
+					"description": "Not much explanation needed"
+				}
+			]
+		},
+		{
+			"name":"Sunday",
+			"date":"3/5/17",
+			"events":
+			[
+				{
+					"title": "Snacks",
+					"startHour": "00:00",
+					"endHour": "01:00",
+					"mapsLink": "/meal",
+					"locationName": "A5-A6",
+					"description": "Feeling hungry? Go get some hot waffles"
+				},
+				{
+					"title": "Dinner",
+					"startHour": "22:15",
+					"endHour": "23:00",
+					"mapsLink": "/meal",
+					"locationName": "A5-A6",
+					"description": "Not much explanation needed"
+				}
+			]
+		}
+	]
+}
