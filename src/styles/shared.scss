@@ -176,7 +176,7 @@ a{
 
 .location-icon{
 	display:block;
-	background-image: url('${imgDir}/marker.png');
+	background-image: url('#{$imgDir}/marker.png');
 	background-size: 15px 22px;
 	width: 15px; 
 	height: 22px;
