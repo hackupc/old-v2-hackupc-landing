@@ -221,7 +221,7 @@
 	* executes callback
 	*/
 	function updateSchedule(cb){
-		Util.loadFile("schedule.json", function(data){
+		Util.loadFile("assets/data/schedule.json", function(data){
 			var newSchedule = JSON.parse(data);
 
 			if(!newSchedule.version)
