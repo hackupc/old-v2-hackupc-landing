@@ -20,7 +20,7 @@ npm install
 
 Use `npm run watch` to compile the dist directory in real time.
 
-Use `npm serve` to serve `/dist` at `http://localhost:8080`.
+Use `npm run serve` to serve `/dist` at `http://localhost:8080`.
 
 
 # Deploy
@@ -39,6 +39,7 @@ Inspired by this [article](https://www.digitalocean.com/community/tutorials/how-
 - Normal tabular schedule
 - Countdown
 
+New versions of the schedule will be loaded only if 'version' is different.
 
 # License
 

@@ -2,6 +2,9 @@
     font-family: minecraftia;
     src: url('#{$fontsDir}/minecraftia.ttf');
 }
+body, html, main{
+	height:100%;
+}
 body, html{
 	padding:0;
 	margin:0;
@@ -20,6 +23,7 @@ main{
 #header-nav-bar{
 	position:fixed;
 	width:100%;
+	z-index:50;
 	ul{
 		display:flex;
 		flex-direction:row;
