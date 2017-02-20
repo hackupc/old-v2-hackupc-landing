@@ -208,3 +208,93 @@ a{
 	}
 }
 
+.container{
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	max-width:1024px;
+	margin:0 auto;
+	.panel{
+		flex:1 1 300px;
+		margin:20px;
+		background-color:$contrastColor;
+		color:$secondaryTextColor;
+		border-radius:5px;
+		overflow:hidden;
+		text-align:left;
+		position:relative;
+		padding:55px 20px;
+		&.large{
+			flex:1 1 600px;
+		}
+		a{
+			color:$bgColor;
+		}
+		h1{
+			position: absolute;
+			width: 100%;
+			margin: -55px -20px;
+			padding:8px;
+			color:white;
+			background-color: $secondaryColor;
+			text-align: center;
+		}
+		h2{
+			margin:5px 0 0;
+		}
+		.buttons{
+			display: flex;
+			border-radius: 3px;
+			margin:5px;
+			overflow:hidden;
+			a{
+				display:block;
+				flex:1 1 0;
+				color:$contrastColor;
+				text-decoration:none;
+				background-color:$secondaryColor;
+				padding: 10px;
+				text-align: center;
+				font-weight:bold;
+				&:not(:first-child){
+					border-left:thin solid white;
+				}
+				&.fb{
+					background-color:$fbColor;
+				}
+				&.yt{
+					background-color:$ytColor;
+				}
+				&.tw{
+					background-color:$twColor;
+				}
+			}
+		}
+		.label{
+			display:inline;
+		}
+		
+		.icon{
+			display:inline-block;
+			margin:0;
+			padding:1px;
+			text-align:center;
+			border-radius:5px;
+			width:30px;
+			background-color: $bgColor;
+			color:white;
+			font-weight:normal;
+		}
+
+		& > div{
+			margin:15px 0;
+		}
+
+		span{
+			display: inline-block;
+			padding: 6px;
+			border-radius: 3px;
+			background-color: $lightBgColor;
+		}
+	}
+}
