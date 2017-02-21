@@ -115,7 +115,8 @@ main{
 	.bar{
 		position:relative;
 		height:50px;
-		background-color:$bgColor;
+		background-color:$contrastColor;
+		color:$secondaryTextColor;
 		border-bottom: thin solid rgba(125, 125, 125, 0.3);
     	box-shadow: 0 0 10px 0px rgba(125, 125, 125, 0.6);
 
@@ -141,7 +142,6 @@ main{
 			text-align: center;
 			cursor:pointer;
 			span {
-				margin-top:-5px;
 				flex:1 1 0;
 			}
 		}
