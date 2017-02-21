@@ -115,7 +115,8 @@ var Util = (function(CONST){
 	* HH:MM format hour to seconds (delta)
 	*/
 	obj.hourToSeconds = function(hour){
-		return (new Date("Thu Jan 01 1970 "+hour)).getTime()/1000 + 3600;
+		var hp = hour.split(':');
+		return hp[0]*60*60+hp[1]*60;
 	};
 
 	/*
