@@ -1,126 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="stylesheet" href="assets/css/live.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <title>HackUPC Live</title>
-  </head>
-  <body>
-    <div></div>
-    <div id="app">
-        <nav class="navbar navbar-default" id="livenav">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">HackUPC Live</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar" aria-expanded="false">
-                    <ul class="nav navbar-nav">
-                        <li class="col-sm-2 col-sm-offset-1"><a target="_blank" href="http://hackupc2016f.devpost.com/">Devpost</a></li>
-                        <li class="col-sm-2"><a href="http://maps.hackupc.com">Maps</a></li>
-                        <li class="active col-sm-2"><a href="#">LIVE</a></li>
-                        <li class="col-sm-2"><a href="#" v-on:click="biene()">???</a></li>
-                        <li class="col-sm-3"><a href="https://hardware.mlh.io/">MLH Hardware Lab</a></li>
-                        <hr>
-                        <li id="options-menu"><a v-on:click="options">Live Options</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<html>
+<head>
+	<title>Live schedule</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/app.min.css">
+	<script src="assets/js/app.min.js"></script>
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!--TODO: local font-->
+	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta|Orbitron" rel="stylesheet">
 
-        <h1># HACKUPC Live <span class="lenny">ヽ(◕‿◕)ﾉ</span> <span id="title-date"></span> <span v-on:click="options" class="fa fa-cog"></span></h1>
+	<!--Countdown-->
+	<template id="countdownTimerTemplate">
+		<div>
+			<span class="big">{hours}</span><span class="little">{seconds}</span>
+		</div>
+	</template>
+	<!--Schedule row-->
+	<template id="scheduleRow">
+		<tr data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}">
+			<td>
+				<a href="{mapsLink}">{locationName}</a>
+			</td>
+			<td>
+				{startHour}
+			</td>
+			<td>
+				{endHour}
+			</td>
+			<td>
+				{title}
+			</td>
+			<td class="hide-when-small">
+				{description}
+			</td>
+		</tr>
+	</template>
+	<!--Schedule day table-->
+	<template id="scheduleDay">
+		<div class="table-container">
+			<h1>{name}</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Location</th>
+						<th>Start</th>
+						<th>End</th>
+						<th>Title</th>
+						<th class="hide-when-small">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--to be filled-->
+				</tbody>
+			</table>
+		</div>
+	</template>
+	<!--Fancy schedule item-->
+	<template id="fancyItem">
+		<li data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEmptyLi"></li>
+	</template>
+	<!--Fancy schedule title-->
+	<!--li has happened once day starts-->
+	<template id="fancyTitle">
+		<li data-end-timestamp="{startTmsp}">
+			<h1 data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}">{name}</h1>
+		</li>
+	</template>
+	<!--Fancy schedule event-->
+	<template id="fancyEvent">
+		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeParent">
+			<a href="{mapsLink}"><span class="location-icon"></span></a>
+			<div class='event-hour'>
+				<div>{startHour}</div> 
+				<div class="end-hour">{endHour}</div>
+			</div>
+			<div class="title">
+				{title}
+			</div>
+		</div>
+	</template>
+</head>
+<body>
+	<!--header for <720px-->
+	<header id="header-small" class="show-when-small">
+		<div class="bar">
+			<div id="open-aside-btn">
+				<span>&#9776;</span>
+			</div>
+			<div class="title-container">
+				<h1 id="title">Live</h1>
+			</div>
+		</div>
+	</header>
+	<!--Aside menu for small screens-->
+	<aside id="aside-small-menu" class="show-when-small closed hidden">
+		<div id="close-aside-btn">
+			<div>x</div>
+		</div>
+		<div class="logo">
+			<img src="assets/img/logo.png"/>
+		</div>
+		<nav>
+			<ul>
+				<li data-bind-view="dayof">
+					<a href="#/dayof">Day of</a>
+				</li>
+				<li data-bind-view="schedule">
+					<a href="#/schedule">Schedule</a>
+				</li>
+				<li data-bind-view="live">
+					<a href="#/live">Live</a>
+				</li>
+				<li data-bind-view="hardware">
+					<a href="#/hardware">Hardware</a>
+				</li>
+				<li data-bind-view="rules">
+					<a href="#/rules">Rules</a>
+				</li>
+				<li data-bind-view="faq">
+					<a href="#/faq">FAQ</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<!--header for >720px-->
+	<header id="header-nav-bar" class="hide-when-small">
+		<nav>
+			<ul>
+				<li data-bind-view="dayof">
+					<a href="#/dayof">Day Of</a>
+				</li>
+				<li>
+					<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>
+				</li>
+				<li data-bind-view="schedule">
+					<a href="#/schedule">Schedule</a>
+				</li>
 
-        <div id="timetable">
-            <div class="event done" v-for="event in completedEvents" track-by="_signature">
-                <span style="opacity: {{0.3 + $index * 0.2}};">
-                    <h3>- {{event.title}}</h3>
-                    <span class="where">(📍 {{event.place}})</span>
-                    <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
-                </span>
-            </div>
+				<li id="countdown-li">
+					<div>
+						<div id="countdown-time" class="countdown">
+						</div>
+						<img src="assets/img/resrborder.png"/>
+					</div>
+				</li>
 
-            <div class="current">
-                <div class="event highlighted" v-for="event in currentEvents" track-by="_signature">
-                    <span>
-                        <strong>
-                            <h3>- {{event.title}} </h3>
-                            <span class="where">(📍 {{event.place}})</span>
-                        </strong>
-                        <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
-                    </span>
-                    <div class="progress" id="progress-{{$index}}" v-if="event.showProgress">
-                      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" v-bind:style="{ width: event.progress*100 + '%' }">
-                      </div>
-                    </div>
-                </div>
-            </div>
+				<li data-bind-view="hardware">
+					<a href="#/hardware">Hardware</a>
+				</li>
+				<li data-bind-view="rules">
+					<a href="#/rules">Rules</a>
+				</li>
+				<li data-bind-view="faq">
+					<a href="#/faq">FAQ</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article id="fullscreen">
+			<div>
+				<div id="countdown-full" class="hide-when-small">
+					<img class="logo" src="assets/img/logo.png"/>
+					<div class="countdown">
+						<div>
+							<span>36:00</span>:00.00
+						</div>
+					</div>
+					<img class="bg" src="assets/img/resrborder.png"/>
+				</div>
+				<div class="events-fancy">
+					<!--To be filled by js-->
+				</div>
+			</div>
+		</article>
+		<article id="live" class="under-header">
+			<div class="countdown centered show-when-small">
+				<div>
+					<span>36:00</span>:00.00
+				</div>
+			</div>
+			<div class="events-fancy">
+				<!--To be filled by js-->
+			</div>
+		</article>
+		<article id="dayof" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel">
+					<h1>Important Info</h1>
+					<div>
+						<h2 class="label">Wifi:</h2> 
+						<span>TO BE ANNOUNCED</span>
+					</div>
+					<div>
+						<h2 class="label">Password:</h2> 
+						<span>TO BE ANNOUNCED</span>
+					</div>
+					<div>
+						<h2>Links:</h2>
+						<div class="buttons">
+							<a target="_blank" href="https://hackupc2016w.devpost.com">Submit project  (by Sunday 9:30 AM)</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Contact</h1>
+					<div>
+						<h2 class="icon">&#x260F;</h2> 
+						<span>To be determined</span>
+					</div>
+					<div>
+						<h2 class="icon">&#9993;</h2> 
+						<span><a href="mailto:contact@hackupc.com" target="_blank">contact@hackupc.com</a></span>
+					</div>
+					<div>
+						<h2 class="icon">#</h2> 
+						<span><a  target="_blank" href="https://hackupc2017w.slack.com">Slack</a></span>
+					</div>
+					<div>
+						<h2>Emergency phone</h2> 
+						<span>012</span>
+					</div>
+					<div>
+						<h2>Social media:</h2>
+						<div class="buttons">
+							<a class="fb" target="_blank" href="https://www.facebook.com/hackupc/">Facebook</a>
+							<a class="tw"  target="_blank" href="https://twitter.com/hackupc">Twitter</a>
+							<a class="yt"  target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g">Youtube</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel large">
+					<h1>How to get to HackUPC</h1>
+					<div>
+						<h2>Via plane</h2>
+						<h3>Arriving</h3>
+						<p>
+							Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitaria</b>. Go to the last station <b>Zona Universitaria</b>, there you will find our venue really close. To get to our check-in point please check-out our maps. 
+						</p>
+						<p>
+							We recommend checking out <a href="https://citymapper.com/barcelona" target="_blank">Citymapper app</a>, they usually have a really great updated information about public transportation. 
+						</p>
+						<p>
+							Don't take a T-10 if you are in the airport, you won't be able to use it from there. Use a single trip from the airport.
+						</p>
+						<h3>Leaving</h3>
+						<p> 
+							Take the metro L9 in <b>Zona Universitaria</b> towards <b>Aeroport T1</b>. Stop at either <b> Aeroport T1</b> or <b>Aeroport T2</b> depending on what's the terminal your plane is departing from.
+						</p>
+						<h2>Via train</h2>
+						<p>
+							If you arrive by train, you will probably arrive in <b>Sants Estació</b>. From there you need to take the metro L3 towards <b>Zona Universitaria</b>. Stop in <b>Palau Reial</b>, from there you should see papers signaling where is HackUPC, otherwise you can check-out our maps.
+						</p>
+					</div>
+				</div>
+			<div>
+		</article>
+		<article id="schedule" class="under-header padding-bottom">
+		</article>
+		<article id="rules" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel">
+					<h1>Hackathon Rules</h1>
+					<p>
+						These are HackUPC Fall 2016 competition rules. They are a customized version of the standard competition rules used at MLH Member Hackathons. If you have a suggestion for these rules or a question about them, please submit an issue <a href="https://github.com/hackupc/hackupc-rules/issues">here</a>.
+					</p>
+					<h2>The spirit of the competition</h2>
+					<p>
+						Remember that hackathons are like marathons. Some people go to compete but most people take part to better themselves and have fun. Whatever the reason is you're at a hackathon, make sure you're upholding the <a href="https://medium.com/@tfogo/the-spirit-of-hackathons-a0d81a65060a#.6cx5ac9t8">hacker spirit</a> by collaborating with other teams, helping beginners, and having fun.
+					</p>
+					<h2>The rules of the competition</h2>
+					<p>
+						<ol>
+							<li>
+								There is no minimum team size, however, the maximum size is 4 people. There will be 1 prize for each member of the team, independently of the team size.
+							</li>
+							<li>
+								Teams should be made up exclusively of students (or recent graduates within one year of having graduated) who are not organizers, judges, sponsors, or in any other privileged position at the event. Volunteers are allowed to participate in their free time, accepting the extra difficulty of hacking and volunteering at the same time, but their role won't give them any judging advantage in front of the rest of participants.
+							</li>
+							<li>
+								All team members should be present at the event. Leaving the venue for some time to hack elsewhere or sleep is fine.
+							</li>
+							<li>
+								Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
+							</li>
+							<li>
+								All work on a project should be done at the hackathon.
+							</li>
+							<li>
+								Teams can use an idea they had before the event.
+							</li>
+							<li>
+								Teams can work on ideas that have already been done. Hacks do not have to be “innovative”. If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
+							</li>
+							<li>
+								Teams can work on an idea that they have worked on before (as long as they do not re-use code).
+							</li>
+							<li>
+								Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
+							</li>
+							<li>
+								Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.
+							</li>
+							<li>
+								Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.
+							</li>
+							<li>
+								Projects that violate the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> are not allowed.
+							</li>
 
-            <div class="event pending" v-for="event in futureEvents" track-by="_signature">
-                <span>
-                    <h3>- {{event.title}}</h3>
-                    <span class="where">(📍 {{event.place}})</span>
-                    <p>{{event.begin | hackupcdate}} - {{event.end | hackupcdate}}</p>
-                </span>
-            </div>
-        </div>
+							<li>
+								Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>, or other unsporting behaviour.
+							</li>
 
-        <div v-if="showoptions" id="options">
-            <div class="options-content">
-                <h2>Live Options</h2>
-                <div id="notif-options">
-                    <h4>Notifications</h4>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" v-model="foodNotify"> Food
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" v-model="talksNotify"> Talks
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" v-model="eventsNotify"> Events
-                        </label>
-                    </div>
-                    <div class="checkbox" style="display: none;">
-                        <label>
-                            <input type="checkbox" v-model="bieneNotify"> Biene
-                        </label>
-                    </div>
-                    <h4>Performance</h4>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" v-model="animation"> Background animation
-                        </label>
-                    </div>
-                </div>
-                <button v-on:click="options" class="btn btn-default">Close</button>
-            </div>
-        </div>
+						</ol>
+					</p>
+					<h2>Demos</h2>
+					<p>
+						After hacking finishes, teams will show their projects each other and to the judges.
+					</p>
+					<p>
+						You are strongly encouraged to present a demo of what you have built. Pitches or presentations are discouraged. You are not judged on the quality of your pitch or the quality of your idea. As you are judged on what you built, you'll only hurt yourself by not showing a demo.
+					</p>
+					<p>
+						You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well. Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! For being courageous enough to demo, you'll receive a special MLH "I Demoed" sticker—it doesn't matter how good the demo is! In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. Hearing what other people learned is interesting and inspiring for other attendees.
+					</p>
+					<h2>Judging Criteria</h2>
+					<p>
+						Teams will be judged on these four criteria. Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project.
+					</p>
+					<p>
+					<ul>
+						<li><strong>Technology:</strong> How technically impressive was the hack? Was the technical problem the team tackled difficult? Did it use a particularly clever technique or did it use many different components? Did the technology involved make you go "Wow"?</li>
+						<li><strong>Design:</strong> Did the team put thought into the user experience? How well designed is the interface? For a website, this might be about how beautiful the CSS or graphics are. For a hardware project, it might be more about how good the human-computer interaction is (e.g. is it easy to use or does it use a cool interface?).</li>
+						<li><strong>Completion:</strong> Does the hack work? Did the team achieve everything they wanted?</li>
+						<li><strong>Learning:</strong> Did the team stretch themselves? Did they try to learn something new? What kind of projects have they worked on before? If a team which always does virtual reality projects decides to switch up and try doing a mobile app instead, that exploration should be rewarded.</li>
+					</ul>
 
-        <div id="twitter-container">
-            <a class="twitter-timeline" height="100%" href="https://twitter.com/search?q=%28hackupc%20OR%20from%3Ahackupc%29%20AND%20-filter%3Aretweets" data-widget-id="700696875549102080" data-link-color="#CE481C">Tweets about (hackupc OR from:hackupc) AND -filter:retweets</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-    </div>
+					<p>These criteria will guide judges but ultimately judges are free to make decisions based on their gut feeling of which projects are the most impressive and most deserving.</p>
 
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
-    <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
-    <script src="/assets/js/leaves.webgl.min.js"></script>
-    <script src="/assets/js/live.min.js"></script>
-  </body>
+					<p>It's important to note that these judging criteria do not include:</p>
+
+					<ul>
+					<li>How good your code is. It doesn't matter if your code is messy, or not well commented, or uses inefficient algorithms. Hacking is about playing around, making mistakes, and learning new things. If your code isn't production ready, we're not going to mark you down.</li>
+					<li>How well you pitch. Hacking is about building and learning, not about selling.</li>
+					<li>How good the idea is. Again, hackathons aren't about coming up with innovative ideas. It's about building and learning.</li>
+					<li>How well the project solves a problem. You can build something totally useless and as long as you're learning and having fun, that's a good hack! Sometimes a pointless project is one of the best hacks!</li>
+					</ul>
+
+					<p>So don't worry about coming up with the next big idea or building the next Facebook. You'll have plenty of time for that outside the hackathon. just focus on learning, having fun, and making new friends. At the end of the day the skills you learn and the friends you make might lead to the next big thing—but you don't have to do that to win a hackathon.</p>
+					<h2>Remember</h2>
+					<p>
+						The competition is just a part of the hackathon. To make the most out of the event, try something new, teach other people, and make new friends!
+					</p>
+					<p>
+						Happy Hacking from the HackUPC and MLH team!
+					</p>
+				</div>
+				</div>
+		</article>
+		<article id="hardware" class="under-header padding-bottom">
+			<div class="container">
+
+				<div class="panel">
+					<h1>Hardware List</h1>
+					<ul>
+						<li>1 Alienware Desktop Set</li>
+						<li>2 Amazon Echo</li>
+						<li>2 Arduino 101</li>
+						<li>2 Base Shield</li>
+						<li>6 Estimote Beacon</li>
+						<li>1 Amazon Fire Phone</li>
+						<li>2 Gear VR</li>
+						<li>1 Grove Kit</li>
+						<li>7 Intel Edison</li>
+						<li>1 Intel Starter Kit</li>
+						<li>5 Leap Motion</li>
+						<li>1 Muse</li>
+						<li>2 Oculus Rift</li>
+						<li>2 Pebble Time</li>
+						<li>2 Photons</li>
+					</ul>
+					<div class="buttons">
+						<a href="#" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="faq" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel">
+					<h1>When shall I arrive?</h1>
+					<p>
+						Registration will start at 3 PM on Friday. The opening ceremony is at 7 PM so make sure to arrive by then.
+					</p>
+				</div>
+				<div class="panel">
+					<h1>What if I can not make it in time?</h1>
+					<p>
+						No problem. Just come to our InfoDesk for a late check-in. If you are confused, please reach out to any volunteer (red t-shirts) or organizer (gray t-shirts).
+					</p>
+				</div>
+				<div class="panel">
+					<h1>Can I leave HackUPC?</h1>
+					<p>
+						Yes. However make sure you have your band with you, otherwise we will may not let you in when you come back.
+					</p>
+				</div>
+				<div class="panel">
+					<h1>Can I sleep now?</h1>
+					<p>
+						Yes, sure. You can find the sleeping spaces in A6 - A5. Some matresses will be provided. Unfortunately, we don't have enough for everyone!
+					</p>
+				</div>
+				<div class="panel">
+					<h1>Something isn’t working!</h1>
+					<p>
+						If something is not working, please come to our InfoDesk and meet our awesome volunteers. They'll love to help you!
+					</p>
+				</div>
+				<div class="panel">
+					<h1>Deadline for projects submissions?</h1>
+					<p>
+						The deadline for projects is Sunday 5th 9:30 AM. Submit your projects <a href="https://hackupc2016w.devpost.com">here</a>.
+					</p>
+				</div>
+				<div class="panel">
+					<h1>How does judging work?</h1>
+					<p>
+						We will have a judging expo on Sunday from 10:30am-12:30pm. Feel free to wander around and check out other projects, but make sure at least one of your team members is at your table to present to judges. The top teams will move on to an additional round of panel judging.
+					</p>
+				</div>
+				<div class="panel">
+					<h1>I have another question... Biene?</h1>
+					<p>
+						If you have any other questions and you can't find it here be sure to come visit us in our InfoDesk.
+					</p>
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
 </html>

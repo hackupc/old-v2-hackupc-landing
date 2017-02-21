@@ -1,0 +1,27 @@
+/*---COLORS---*/
+$bgColor: #03a9b5;
+$lightBgColor: #e8c4c4;
+$textColor: white;
+$secondaryTextColor: #333;
+$contrastColor:white;
+$secondaryColor: #ff5252;
+$headerSelectorColor: gray;
+$overlayColor:rgba(0,0,0,0.4);
+//Links
+$highlightColor: darken($bgColor, 25%);
+$mlhHardwareBtn: $highlightColor;
+
+$fbColor:#3B5998;
+$ytColor:#CC181E;
+$twColor:#1DA1F2;
+
+/*---PATHS---*/
+$fontsDir: "../fonts";
+$imgDir: "../img";
+
+
+/*---MISC---*/
+$fadeTime: 300ms;
+$asideOpenTime: 300ms;
+$timerAnimLength: 300ms;
+$happenedOpacity: 0.5;
