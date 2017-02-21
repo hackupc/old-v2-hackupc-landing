@@ -219,9 +219,10 @@
 	* and checks version.
 	* If version is different from local
 	* executes callback
+	* Added actual datetime to avoid browser cached copies of schedule
 	*/
 	function updateSchedule(cb){
-		Util.loadFile("assets/data/schedule.json", function(data){
+		Util.loadFile("assets/data/schedule.json?date="+new Date().getTime(), function(data){
 			var newSchedule = JSON.parse(data);
 
 			if(!newSchedule.version)
