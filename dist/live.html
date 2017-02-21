@@ -7,12 +7,12 @@
 		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<!--TODO: local font-->
-	<link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta|Orbitron" rel="stylesheet">
 
 	<!--Countdown-->
 	<template id="countdownTimerTemplate">
 		<div>
-			<span class="big">{hours}</span><span>{seconds}</span>
+			<span class="big">{hours}</span><span class="little">{seconds}</span>
 		</div>
 	</template>
 	<!--Schedule row-->
@@ -74,7 +74,7 @@
 				<div>{startHour}</div> 
 				<div class="end-hour">{endHour}</div>
 			</div>
-			<div>
+			<div class="title">
 				{title}
 			</div>
 		</div>
@@ -351,7 +351,7 @@
 		<article id="hardware" class="under-header padding-bottom">
 			<div class="container">
 
-				<div>
+				<div class="panel">
 					<h1>Hardware List</h1>
 					<ul>
 						<li>1 Alienware Desktop Set</li>
@@ -370,7 +370,9 @@
 						<li>2 Pebble Time</li>
 						<li>2 Photons</li>
 					</ul>
-					<a href="#" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
+					<div class="buttons">
+						<a href="#" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
+					</div>
 				</div>
 			</div>
 		</article>

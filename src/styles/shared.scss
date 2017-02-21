@@ -133,7 +133,7 @@ a{
 				margin-bottom:200px;
 			}
 			h1{
-				margin:5px;
+				margin:0px;
 				font-weight: normal;
 			}
 			& > div{
@@ -156,17 +156,21 @@ a{
 			}
 			.event{
 				.event-hour{
+					width:54px;
 					display:flex;
+					font-family: Orbitron;
 					flex-direction:column;
-					font-family: minecraftia;
+					text-align:right;
+					font-weight: bold;
 					font-size: 15px;
 					margin-top:3px;
 					margin-right:10px;
 					.end-hour{
 						font-size: 12px;
-						margin-top: -13px;
-						margin-left: 9px;
 					}
+				}
+				.title{
+					margin-top:-10px;
 				}
 				
 			}
@@ -196,14 +200,14 @@ a{
 	}
 
 	span{
+		font-weight:bold;
 		&.big{
 			font-size:54px;
 			display: block;
-			margin-top: -5px;
 			float: left;	
 		}
 		&.little{
-			font-size:44px;
+			font-size:28px;
 		}
 	}
 }
@@ -223,7 +227,7 @@ a{
 		overflow:hidden;
 		text-align:left;
 		position:relative;
-		padding:55px 20px;
+		padding:55px 20px 0;
 		&.large{
 			flex:1 1 600px;
 		}
@@ -234,7 +238,8 @@ a{
 			position: absolute;
 			width: 100%;
 			margin: -55px -20px;
-			padding:8px;
+			padding-top:3px;
+			font-size:30px;
 			color:white;
 			background-color: $secondaryColor;
 			text-align: center;
@@ -253,7 +258,7 @@ a{
 				color:$contrastColor;
 				text-decoration:none;
 				background-color:$secondaryColor;
-				padding: 10px;
+				padding: 8px;
 				text-align: center;
 				font-weight:bold;
 				&:not(:first-child){
@@ -273,11 +278,11 @@ a{
 		.label{
 			display:inline;
 		}
-		
+
 		.icon{
 			display:inline-block;
 			margin:0;
-			padding:1px;
+			padding:0 2px;
 			text-align:center;
 			border-radius:5px;
 			width:30px;
@@ -292,7 +297,7 @@ a{
 
 		span{
 			display: inline-block;
-			padding: 6px;
+			padding: 3px 6px;
 			border-radius: 3px;
 			background-color: $lightBgColor;
 		}
