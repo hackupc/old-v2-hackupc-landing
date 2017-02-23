@@ -16,7 +16,7 @@
 	var canNotify = false;
 
 	var itsFullscreen = false;
-
+	//To add a view, add here the id of the new article
 	var views ={
 		"fullscreen" : "fullscreen",
 		"live" : "live",

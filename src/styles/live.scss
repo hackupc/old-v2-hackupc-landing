@@ -1,13 +1,11 @@
 #live{
-	.countdown{
-		margin-top:20px;
-		width:305px;
-	}
-	.events-fancy{
-		//due to a float in countdown
-		clear:left;
-		width:410px;
-		max-height:700px;
-		margin: 0 auto;
+	.container-live{
+		display:flex;
+		top:0px;
+		bottom:0;
+		width:100%;
+		position:absolute;
+		justify-content: center;
+		overflow:auto;
 	}
 }
