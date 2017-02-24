@@ -7,9 +7,6 @@ article{
 		display:block !important;
 	}
 }
-h1, h2{
-	text-shadow:1px 1px gray;
-}
 strong{
 	color:$highlightColor;	
 }
@@ -228,15 +225,21 @@ a{
 	max-width:1024px;
 	margin:0 auto;
 	.panel{
-		flex:1 1 300px;
+		flex:1 1 350px;
 		margin:20px;
 		background-color:$contrastColor;
 		color:$secondaryTextColor;
-		border-radius:5px;
 		overflow:hidden;
 		text-align:left;
 		position:relative;
-		padding:55px 20px 0;
+		-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+		p, ul, ol {
+			margin: 5px 15px 5px 15px;
+		}
+		
 		&.large{
 			flex:1 1 600px;
 		}
@@ -244,9 +247,9 @@ a{
 			color:$bgColor;
 		}
 		h1{
-			position: absolute;
+			
 			width: 100%;
-			margin: -55px -20px;
+			margin: 0 0 0 0;
 			padding-top:3px;
 			font-size:30px;
 			color:white;
@@ -254,7 +257,7 @@ a{
 			text-align: center;
 		}
 		h2{
-			margin:5px 0 0;
+			margin:5px 15px;
 		}
 		.buttons{
 			display: flex;
@@ -301,7 +304,10 @@ a{
 		}
 
 		& > div{
-			margin:15px 0;
+			margin:15px 15px;
+			p, h1, h2, .buttons  {
+				margin:0 0;
+			}
 		}
 
 		span{
