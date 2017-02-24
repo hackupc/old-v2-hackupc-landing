@@ -122,15 +122,23 @@ var Util = (function(CONST){
 	/*
 	* Seconds passed between epoch and 'date'
 	*/
-	obj.dateToSeconds = function(date){
-		return (new Date(date)).getTime()/1000;
+	obj.dateToSeconds = function(d){
+		var dateHour = d.split(" ");
+		var hour = [0,0];
+		var date = dateHour[0].split("/") || [0,0,0];
+
+		if(dateHour.length > 1)
+			hour = dateHour[1].split(":");
+
+		return Date.UTC(date[2], date[1]-1, 
+			date[0], hour[1], hour[0])/1000;
 	};
 
-	obj.getHumanTime = function(ms){
+	obj.getHumanTime = function(s){
 		return{ 
-			seconds: parseInt((ms/1000)%60), 
-			minutes:parseInt((ms/(1000*60))%60), 
-			hours:parseInt(ms/(1000*60*60))
+			seconds: parseInt(s%60), 
+			minutes:parseInt(s/60 % 60), 
+			hours:parseInt(s/(60*60))
 		};
 	};
 

@@ -74,14 +74,18 @@
 
 		return container;
 	}
-	
+
 	/*
-	* Generates timestamps inside 'schedule'
+	* Generates timestamps (UTC) inside 'schedule'
 	*/
 	function generateTimestamps(){
 		schedule.days.forEach(function(day){
-			day.startTmsp = Util.dateToSeconds(day.date);
-			day.endTmsp = day.startTmsp + 24*60*60;
+			day.startTmsp = Util.dateToSeconds(day.date) 
+				+ parseInt(schedule.baseTimeOffset)*60;
+
+			day.endTmsp = day.startTmsp + 24*60*60 
+				+ parseInt(schedule.baseTimeOffset)*60;
+
 			day.events.forEach(function(event){
 				event.startTmsp = day.startTmsp 
 					+ Util.hourToSeconds(event.startHour);
@@ -191,8 +195,8 @@
 	}
 
 	function updateCountdown(){
-		var countdownStart = (new Date(schedule.countdownStart)).getTime();
-		var current = CONST.HACKATHON_DURATION - (Date.now() - countdownStart);
+		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
+		var current = CONST.HACKATHON_DURATION - (Date.now()/1000 - countdownStart);
 		var obj = {hours: 0, minutes: 0, seconds: 0};
 		if(current > 0 && current < CONST.HACKATHON_DURATION)
 		{
