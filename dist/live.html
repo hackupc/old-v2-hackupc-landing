@@ -19,7 +19,7 @@
 	<template id="scheduleRow">
 		<tr data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}">
 			<td>
-				<a href="{mapsLink}">{locationName}</a>
+				<a target="_blank" href="http://maps.hackupc.com/#{mapsLink}">{locationName}</a>
 			</td>
 			<td>
 				{startHour}
@@ -69,7 +69,7 @@
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
 		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeParent">
-			<a href="{mapsLink}"><span class="location-icon"></span></a>
+			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"><span class="location-icon"></span></a>
 			<div class='event-hour'>
 				<div>{startHour}</div> 
 				<div class="end-hour">{endHour}</div>
