@@ -13,8 +13,11 @@
 	.events-fancy{
 		width:400px;
 		margin:0;
-		ul li{
-			font-size: 1.5em;
+		ul{
+			max-height:380px;
+		 	li{
+				font-size: 1.5em;
+			}
 		}
 	}
 }

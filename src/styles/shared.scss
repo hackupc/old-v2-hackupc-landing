@@ -118,7 +118,7 @@ a{
 		margin: 0;
 		padding: 180px 20px 100px 15px;
 		min-height: 200px;
-		max-height: 400px;
+		max-height: 100%;
 		overflow: auto;
 		li{
 			display:flex;
@@ -132,7 +132,7 @@ a{
 			border-left: 3px solid $contrastColor;
 			align-content:center;
 			&:last-child{
-				margin-bottom:200px;
+				margin-bottom:400px;
 			}
 			h1{
 				margin:0px;
