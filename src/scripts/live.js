@@ -54,6 +54,7 @@
 	}
 
 	/*
+	* pre: requires 'schedule' with timestamaps generated
 	* Generates boring tabular schedule
 	*/
 	function generateSchedule(){
@@ -75,6 +76,27 @@
 	}
 
 	/*
+	* Generates timestamps (UTC) inside 'schedule'
+	*/
+	function generateTimestamps(){
+		schedule.days.forEach(function(day){
+			day.startTmsp = Util.dateToSeconds(day.date) 
+				+ parseInt(schedule.baseTimeOffset)*60;
+
+			day.endTmsp = day.startTmsp + 24*60*60 
+				+ parseInt(schedule.baseTimeOffset)*60;
+
+			day.events.forEach(function(event){
+				event.startTmsp = day.startTmsp 
+					+ Util.hourToSeconds(event.startHour);
+				event.endTmsp = day.startTmsp 
+					+ Util.hourToSeconds(event.endHour);
+			});
+		});
+	}
+
+	/*
+	* pre: requires 'schedule' with timestamaps generated
 	* Generates the list for 'live' and 'fullscreen'
 	*/
 	function generateFancySchedule(){
@@ -82,23 +104,19 @@
 
 		schedule.days.forEach(function(day){
 			//Adding day title element
-			day.startTmsp = Util.dateToSeconds(day.date);
-			day.endTmsp = day.startTmsp + 24*60*60;
 			list.appendChild(
 				Util.inflateWith("fancyTitle", day)
 			);
 
 			var eventIndex = 0;
-			var nextEventTmsp = Util.hourToSeconds(
-				day.events[eventIndex].startHour
-			);
+			var nextEventTmsp = day.events[eventIndex].startTmsp;
 			//Adding events for that day
-			for(var i = 0; i < 24*60*60; i += CONST.SCHEDULE_STEP){
+			for(var i = day.startTmsp; i < day.startTmsp+24*60*60; i += CONST.SCHEDULE_STEP){
 				//Add a list element for every step
 				list.appendChild(
 					Util.inflateWith("fancyItem", {
-						"startTmsp": day.startTmsp + i,
-						"endTmsp": day.startTmsp + i + CONST.SCHEDULE_STEP - 1
+						"startTmsp": i,
+						"endTmsp": i + CONST.SCHEDULE_STEP - 1
 					})
 				);
 				var liEvent = list.children[list.children.length-1];
@@ -108,21 +126,12 @@
 				//Add events that fit in this step
 				while(nextEventTmsp < i+CONST.SCHEDULE_STEP && 
 					     eventIndex < day.events.length){
-
-					day.events[eventIndex].startTmsp = day.startTmsp + nextEventTmsp;
-					day.events[eventIndex].endTmsp = day.startTmsp + Util.hourToSeconds(
-						day.events[eventIndex].endHour
-					);
-
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
 					eventIndex++;
 					if(eventIndex < day.events.length){
-						nextEventTmsp = Util.hourToSeconds(
-							day.events[eventIndex].startHour
-						);
-						
+						nextEventTmsp = day.events[eventIndex].startTmsp;
 					}
 				}
 			}
@@ -186,8 +195,8 @@
 	}
 
 	function updateCountdown(){
-		var countdownStart = (new Date(schedule.countdownStart)).getTime();
-		var current = CONST.HACKATHON_DURATION - (Date.now() - countdownStart);
+		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
+		var current = CONST.HACKATHON_DURATION - (Date.now()/1000 - countdownStart);
 		var obj = {hours: 0, minutes: 0, seconds: 0};
 		if(current > 0 && current < CONST.HACKATHON_DURATION)
 		{
@@ -231,6 +240,7 @@
 			//TODO: discuss, != or <
 			if(schedule.version != newSchedule.version) {
 				schedule = newSchedule;
+				generateTimestamps();
 				if(typeof cb == "function")
 					cb();
 				console.info("Schedule updated on (" + (new Date()) + "): \n"+schedule.message);
@@ -423,9 +433,41 @@
 		});
 	}
 
+	//Try to be useful for incompatible browsers too
+	function compatibiliyMode(){
+		updateSchedule(function(){
+			var htmlString = "<article  style='color:white' class='active' id='schedule'>";
+			schedule.days.forEach(function(day){
+				htmlString += ""
+					+ "<h1>"+day.name+"</h1>"
+					+ "<table>"
+						+ "<thead style='color:black;background-color:white'><tr>"
+							+ "<th>Location</th>"
+							+ "<th>Start</th>"
+							+ "<th>End</th>"
+							+ "<th>Title</th>"
+							+ "<th>Description</th>"
+						+ "</tr></thead>";
+				day.events.forEach(function(event){
+					htmlString += "<tr>"
+						+ "<td>"+ event.locationName+ "</td>"
+						+ "<td>"+ event.startHour+ "</td>"
+						+ "<td>"+ event.endHour+ "</td>"
+						+ "<td>"+ event.title+ "</td>"
+						+ "<td>"+ event.description+ "</td>"
+						+ "</tr>";
+				});
+				htmlString +="</table>"
+			});
+			htmlString += "</article>";
+			document.body.innerHTML = htmlString;
+		});
+	}
+
 	document.addEventListener("DOMContentLoaded", function(event){
 
 		if(!browserIsCompatible()){
+			compatibiliyMode();
 			alert("Please update your browser");
 			return;
 		}
@@ -452,7 +494,8 @@
 						updateChronologicalElements();
 						setTimeout(function(){
 							Util.fadeIn(main);
-						},CONST.FADE_TIME*1.2);
+						//we want the screen to actually disappear
+						},CONST.FADE_TIME*1.2); 
 					});
 				});
 			}, CONST.SCHEDULE_REFRESH_INTERVAL);

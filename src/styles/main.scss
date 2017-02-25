@@ -87,7 +87,9 @@ main{
 								float: left;
 							}
 							&.little{
+								margin-top:4px;
 								font-size:12px;
+								min-width:43px;
 							}
 						}
 					}

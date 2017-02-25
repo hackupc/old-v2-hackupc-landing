@@ -1,12 +1,13 @@
 {
 	"version":2,
 	"message": "Test",
-	"countdownStart":"2/18/17 00:00",
+	"baseTimeOffset":"-60",
+	"countdownStart":"24/2/2017 00:00",
 	"days":
 	[
 		{
 			"name":"Friday",
-			"date":"2/18/17",
+			"date":"24/2/2017",
 			"events":
 			[
 				{
@@ -37,7 +38,7 @@
 		},
 		{
 			"name":"Saturday",
-			"date":"3/4/17",
+			"date":"25/2/2017",
 			"events":
 			[
 				{
@@ -58,7 +59,7 @@
 				},
 				{
 					"title": "Registration",
-					"startHour": "09:00",
+					"startHour": "08:00",
 					"endHour": "10:59",
 					"mapsLink": "/checkin",
 					"locationName": "A5S101",
@@ -84,7 +85,7 @@
 		},
 		{
 			"name":"Sunday",
-			"date":"3/5/17",
+			"date":"26/2/2017",
 			"events":
 			[
 				{
