@@ -1,5 +1,5 @@
 {
-	"version":1,
+	"version":2,
 	"message": "Test",
 	"baseTimeOffset":"-60",
 	"countdownStart":"24/2/2017 00:00",
@@ -7,7 +7,7 @@
 	[
 		{
 			"name":"Friday",
-			"date":"25/2/2017",
+			"date":"24/2/2017",
 			"events":
 			[
 				{
@@ -38,7 +38,7 @@
 		},
 		{
 			"name":"Saturday",
-			"date":"26/2/2017",
+			"date":"25/2/2017",
 			"events":
 			[
 				{
@@ -85,7 +85,7 @@
 		},
 		{
 			"name":"Sunday",
-			"date":"27/2/2017",
+			"date":"26/2/2017",
 			"events":
 			[
 				{
