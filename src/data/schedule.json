@@ -2,107 +2,255 @@
 	"version":2,
 	"message": "Test",
 	"baseTimeOffset":"-60",
-	"countdownStart":"24/2/2017 00:00",
+	"countdownStart":"3/3/2017 21:00",
 	"days":
 	[
 		{
 			"name":"Friday",
-			"date":"24/2/2017",
+			"date":"3/3/2017",
 			"events":
 			[
 				{
 					"title": "Registration",
-					"startHour": "00:00",
-					"endHour": "00:59",
+					"startHour": "15:00",
+					"endHour": "18:00",
 					"mapsLink": "/checkin",
-					"locationName": "A5S101",
+					"locationName": "A5-A6",
 					"description": "Register to the hackathon and get your swag!"
 				},
 				{
-					"title": "Open Ceremony",
-					"startHour": "05:00",
-					"endHour": "06:30",
+					"title": "Bagging check",
+					"startHour": "15:00",
+					"endHour": "18:00",
+					"mapsLink": "/A6/1",
+					"locationName": "Lobby",
+					"description": "We'll take care of your baggage"
+				},
+				{
+					"title": "Opening Talk",
+					"startHour": "19:15",
+					"endHour": "21:00",
 					"mapsLink": "/vertex",
 					"locationName": "Vèrtex",
 					"description": "Introduction to the hackathon. Meet our sponsors and discover the prizes"
 				},
 				{
+					"title": "Hack Starts!",
+					"startHour": "21:00",
+					"endHour": "21:00",
+					"description": "You can start coding now"
+				},
+				{
 					"title": "Dinner",
-					"startHour": "14:15",
-					"endHour": "15:00",
+					"startHour": "21:00",
+					"endHour": "22:00",
 					"mapsLink": "/meal",
-					"locationName": "A5-A6",
-					"description": "Not much explanation needed"
+					"locationName": "Meal zone",
+					"description": "Enough talk. Let's eat"
+				},
+				{
+					"title": "Team Building",
+					"startHour": "21:00",
+					"endHour": "22:00",
+					"mapsLink": "/A5/1",
+					"locationName": "A5-E02",
+					"description": "Come here if you need a team or a hacker"
+				},
+				{
+					"title": "Talk: Between",
+					"startHour": "22:30",
+					"endHour": "23:00",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": "You should check Between's challenge. Pretty cool"
+				},
+				{
+					"title": "Talk: Go",
+					"startHour": "23:15",
+					"endHour": "00:00",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-002",
+					"description": "Dani Martín will explain to us why should we code in Go"
+				},
+				{
+					"title": "Talk: Android",
+					"startHour": "22:30",
+					"endHour": "23:00",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": "Learn some Android with Rashiq"
 				}
 			]
 		},
 		{
 			"name":"Saturday",
-			"date":"25/2/2017",
+			"date":"4/3/2017",
 			"events":
 			[
 				{
-					"title": "Snacks",
-					"startHour": "00:00",
-					"endHour": "01:00",
+					"title": "Midnight Snack",
+					"startHour": "01:00",
+					"endHour": "02:00",
 					"mapsLink": "/meal",
-					"locationName": "A5-A6",
+					"locationName": "Meal Zone",
 					"description": "Feeling hungry? Go get some hot waffles"
 				},
 				{
-					"title": "The game",
+					"title": "Breakfast",
 					"startHour": "08:00",
+					"endHour": "09:00",
+					"mapsLink": "/meal",
+					"locationName": "Meal Zone",
+					"description": "Good morning!"
+				},
+				{
+					"title": "Showers",
+					"startHour": "09:15",
 					"endHour": "11:00",
-					"mapsLink": "/checkin",
-					"locationName": "A6101",
-					"description": "You lost"
+					"mapsLink": "/showers",
+					"locationName": "Sports Center",
+					"description": "Bring your towel"
 				},
 				{
-					"title": "Registration",
-					"startHour": "08:00",
-					"endHour": "10:59",
-					"mapsLink": "/checkin",
-					"locationName": "A5S101",
-					"description": "Register to the hackathon and get your swag!"
+					"title": "Talk: AI as a Service",
+					"startHour": "10:00",
+					"endHour": "10:30",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": ""
 				},
 				{
-					"title": "Open Ceremony",
-					"startHour": "11:00",
-					"endHour": "12:00",
-					"mapsLink": "/vertex",
-					"locationName": "Vèrtex",
-					"description": "Introduction to the hackathon. Meet our sponsors and discover the prizes"
+					"title": "Talk: Intro to functional programming",
+					"startHour": "10:45",
+					"endHour": "11:15",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-002",
+					"description": ""
+				},
+				{
+					"title": "Talk: Big Data",
+					"startHour": "11:15",
+					"endHour": "11:45",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": ""
+				},
+				{
+					"title": "Talk: Blockchain",
+					"startHour": "12:00",
+					"endHour": "12:30",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": ""
+				},
+				{
+					"title": "Lunch",
+					"startHour": "13:00",
+					"endHour": "14:00",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": "Yes, you heard right. We'll cook paella"
+				},
+				{
+					"title": "Talk: Organize your hackathon",
+					"startHour": "17:00",
+					"endHour": "17:45",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": ""
 				},
 				{
 					"title": "Dinner",
-					"startHour": "22:15",
-					"endHour": "23:00",
+					"startHour": "20:00",
+					"endHour": "21:00",
 					"mapsLink": "/meal",
-					"locationName": "A5-A6",
-					"description": "Not much explanation needed"
+					"locationName": "Meal Zone",
+					"description": "Pizza time"
+				},
+				{
+					"title": "SlideShare Karaoke",
+					"startHour": "22:00",
+					"endHour": "23:00",
+					"mapsLink": "/A5/0",
+					"locationName": "A5-001",
+					"description": "A volunteer has to present a random SlideShare presentation. VERY funny"
 				}
 			]
 		},
 		{
 			"name":"Sunday",
-			"date":"26/2/2017",
+			"date":"5/3/2017",
 			"events":
 			[
 				{
-					"title": "Snacks",
+					"title": "Midnight Snack",
 					"startHour": "00:00",
 					"endHour": "01:00",
 					"mapsLink": "/meal",
-					"locationName": "A5-A6",
-					"description": "Feeling hungry? Go get some hot waffles"
+					"locationName": "Meal Zone",
+					"description": "If you didn't get a waffle last night, this is your chance"
 				},
 				{
-					"title": "Dinner",
-					"startHour": "22:15",
-					"endHour": "23:00",
+					"title": "NERF GUNS BATTLE",
+					"startHour": "00:30",
+					"endHour": "03:00",
+					"mapsLink": "/A4/3",
+					"locationName": "A4-201/2",
+					"description": ""
+				},
+				{
+					"title": "Breakfast",
+					"startHour": "08:00",
+					"endHour": "09:00",
 					"mapsLink": "/meal",
-					"locationName": "A5-A6",
-					"description": "Not much explanation needed"
+					"locationName": "Meal Zone",
+					"description": ""
+				},
+				{
+					"title": "Hack submissions",
+					"startHour": "08:00",
+					"endHour": "09:30",
+					"mapsLink": "/meal",
+					"locationName": "Meal Zone",
+					"description": ""
+				},
+				{
+					"title": "Hack ends",
+					"startHour": "09:00",
+					"endHour": "09:00",
+					"description": ""
+				},
+				{
+					"title": "Showers",
+					"startHour": "09:00",
+					"endHour": "10:30",
+					"mapsLink": "/showers",
+					"locationName": "Sports Center",
+					"description": ""
+				},
+				{
+					"title": "Demos",
+					"startHour": "10:30",
+					"endHour": "12:30",
+					"mapsLink": "/A4/2",
+					"locationName": "A4-201/2",
+					"description": ""
+				},
+				{
+					"title": "Lunch",
+					"startHour": "13:00",
+					"endHour": "14:00",
+					"mapsLink": "/meal",
+					"locationName": "Meal Zone",
+					"description": ""
+				},
+				{
+					"title": "Closing Ceremony",
+					"startHour": "14:30",
+					"endHour": "16:30",
+					"mapsLink": "/vertex",
+					"locationName": "Vèrtex",
+					"description": ""
 				}
 			]
 		}
