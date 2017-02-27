@@ -10,7 +10,7 @@
 We recommend having Node v6 installed on your computer.
 
 ```sh
-git clone git@github.com:hackupc/hackupc.git &&
+git clone git@github.com:hackupc/frontend.git &&
 cd hackupc &&
 npm install
 ```
