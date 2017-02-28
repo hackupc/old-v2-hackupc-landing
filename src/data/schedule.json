@@ -116,7 +116,7 @@
 					"startHour": "10:00",
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
+					"locationName": "A5001",
 					"description": "Come learn with an awesome group of Everis engineers"
 				},
 				{
@@ -124,7 +124,7 @@
 					"startHour": "10:45",
 					"endHour": "11:15",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-002",
+					"locationName": "A5002",
 					"description": "Enter the functional programming world with Between"
 				},
 				{
@@ -132,7 +132,7 @@
 					"startHour": "11:15",
 					"endHour": "11:45",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
+					"locationName": "A5001",
 					"description": " Come listen the great Ricardo Baeza in a talk regarding Big Data and Data Science"
 				},
 				{
@@ -140,15 +140,15 @@
 					"startHour": "12:00",
 					"endHour": "12:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
+					"locationName": "A5001",
 					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain technology"
 				},
 				{
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
-					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
+					"mapsLink": "/meal",
+					"locationName": "Meal zone",
 					"description": "Paella! Come enjoy an awesome Spanish typical paella"
 				},
 				{
@@ -156,7 +156,7 @@
 					"startHour": "17:00",
 					"endHour": "17:45",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
+					"locationName": "A5001",
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
 				{
@@ -172,8 +172,8 @@
 					"startHour": "22:00",
 					"endHour": "23:00",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
-					"description": "A hackers favourite game."
+					"locationName": "A5001",
+					"description": "A hackers favourite game. Are you ready to improvise?"
 				}
 			]
 		},
@@ -188,14 +188,14 @@
 					"endHour": "01:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": "If you didn't get a waffle last night, this is your chance"
+					"description": "It's been more than 24 hours. Get some sweet snacks to keep yourself motivated"
 				},
 				{
-					"title": " EPIC NERF GUNS BATTLE",
+					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "00:30",
 					"endHour": "03:00",
 					"mapsLink": "/A4/3",
-					"locationName": "A4-201/2",
+					"locationName": "A4201/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
@@ -241,7 +241,7 @@
 					"endHour": "14:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": "Come grab some frankfurts/bratswurts by our awesome partners Leo Boeck"
+					"description": "Come grab some frankfurts/bratswurts made by our awesome partners Leo Boeck"
 				},
 				{
 					"title": "Closing Ceremony",
