@@ -16,7 +16,7 @@
 					"endHour": "18:00",
 					"mapsLink": "/checkin",
 					"locationName": "A5-A6",
-					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready."
+					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
 				},
 				{
 					"title": "Bagging check-in",
@@ -54,7 +54,7 @@
 					"endHour": "22:00",
 					"mapsLink": "/A5/1",
 					"locationName": "A5E02",
-					"description": "Looking for a team or new team mates?"
+					"description": "Looking for a team or new teammates?"
 				},
 				{
 					"title": "[Talk] Between: Challenge",
@@ -125,7 +125,7 @@
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
-					"description": "Come learn with an awesome group of Everis engineers"
+					"description": "Come learn AI with an awesome group of Everis engineers"
 				},
 				{
 					"title": "[Talk] Between: Intro to functional programming",
