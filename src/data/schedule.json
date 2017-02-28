@@ -1,6 +1,6 @@
 {
-	"version":2,
-	"message": "Test",
+	"version":1,
+	"message": "Welcome to HackUPC",
 	"baseTimeOffset":"-60",
 	"countdownStart":"3/3/2017 21:00",
 	"days":
@@ -16,7 +16,7 @@
 					"endHour": "18:00",
 					"mapsLink": "/checkin",
 					"locationName": "A5-A6",
-					"description": "Register to the hackathon and get your swag!"
+					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready."
 				},
 				{
 					"title": "Bagging check",
@@ -24,7 +24,7 @@
 					"endHour": "18:00",
 					"mapsLink": "/A6/1",
 					"locationName": "Lobby",
-					"description": "We'll take care of your baggage"
+					"description": "Bring your baggage and we will store it for you"
 				},
 				{
 					"title": "Opening Talk",
@@ -32,13 +32,13 @@
 					"endHour": "21:00",
 					"mapsLink": "/vertex",
 					"locationName": "Vèrtex",
-					"description": "Introduction to the hackathon. Meet our sponsors and discover the prizes"
+					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
 				{
 					"title": "Hack Starts!",
 					"startHour": "21:00",
 					"endHour": "21:00",
-					"description": "You can start coding now"
+					"description": "Ready. Set. GO!"
 				},
 				{
 					"title": "Dinner",
@@ -46,39 +46,39 @@
 					"endHour": "22:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal zone",
-					"description": "Enough talk. Let's eat"
+					"description": "Enjoy our first meal"
 				},
 				{
 					"title": "Team Building",
 					"startHour": "21:00",
 					"endHour": "22:00",
 					"mapsLink": "/A5/1",
-					"locationName": "A5-E02",
-					"description": "Come here if you need a team or a hacker"
+					"locationName": "A5E02",
+					"description": "Looking for a team or new team mates?"
 				},
 				{
 					"title": "Talk: Between",
 					"startHour": "22:30",
 					"endHour": "23:00",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
-					"description": "You should check Between's challenge. Pretty cool"
+					"locationName": "A5001",
+					"description": "Come check Between's challenge introductory talk"
 				},
 				{
 					"title": "Talk: Go",
 					"startHour": "23:15",
 					"endHour": "00:00",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-002",
-					"description": "Dani Martín will explain to us why should we code in Go"
+					"locationName": "A5002",
+					"description": "Discover Go language with former HackUPC organizer Dani Martín (@mvdan)"
 				},
 				{
 					"title": "Talk: Android",
 					"startHour": "22:30",
 					"endHour": "23:00",
 					"mapsLink": "/A5/0",
-					"locationName": "A5-001",
-					"description": "Learn some Android with Rashiq"
+					"locationName": "A5001",
+					"description": "Join Rashiq for an awesome introduction to Android development"
 				}
 			]
 		},
@@ -93,7 +93,7 @@
 					"endHour": "02:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": "Feeling hungry? Go get some hot waffles"
+					"description": "Feeling hungry? Come get some sweet waffles"
 				},
 				{
 					"title": "Breakfast",
@@ -101,7 +101,7 @@
 					"endHour": "09:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": "Good morning!"
+					"description": "Come get some energizing breakfast"
 				},
 				{
 					"title": "Showers",
@@ -109,7 +109,7 @@
 					"endHour": "11:00",
 					"mapsLink": "/showers",
 					"locationName": "Sports Center",
-					"description": "Bring your towel"
+					"description": "Don't forget to bring your towel"
 				},
 				{
 					"title": "Talk: AI as a Service",
@@ -117,7 +117,7 @@
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": ""
+					"description": "Come learn with an awesome group of Everis engineers"
 				},
 				{
 					"title": "Talk: Intro to functional programming",
@@ -125,7 +125,7 @@
 					"endHour": "11:15",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-002",
-					"description": ""
+					"description": "Enter the functional programming world with Between"
 				},
 				{
 					"title": "Talk: Big Data",
@@ -133,7 +133,7 @@
 					"endHour": "11:45",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": ""
+					"description": " Come listen the great Ricardo Baeza in a talk regarding Big Data and Data Science"
 				},
 				{
 					"title": "Talk: Blockchain",
@@ -141,7 +141,7 @@
 					"endHour": "12:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": ""
+					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain technology"
 				},
 				{
 					"title": "Lunch",
@@ -149,7 +149,7 @@
 					"endHour": "14:00",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": "Yes, you heard right. We'll cook paella"
+					"description": "Paella! Come enjoy an awesome Spanish typical paella"
 				},
 				{
 					"title": "Talk: Organize your hackathon",
@@ -157,7 +157,7 @@
 					"endHour": "17:45",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": ""
+					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
 				{
 					"title": "Dinner",
@@ -165,7 +165,7 @@
 					"endHour": "21:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": "Pizza time"
+					"description": "PIZZA TIME"
 				},
 				{
 					"title": "SlideShare Karaoke",
@@ -173,7 +173,7 @@
 					"endHour": "23:00",
 					"mapsLink": "/A5/0",
 					"locationName": "A5-001",
-					"description": "A volunteer has to present a random SlideShare presentation. VERY funny"
+					"description": "A hackers favourite game."
 				}
 			]
 		},
@@ -191,12 +191,12 @@
 					"description": "If you didn't get a waffle last night, this is your chance"
 				},
 				{
-					"title": "NERF GUNS BATTLE",
+					"title": " EPIC NERF GUNS BATTLE",
 					"startHour": "00:30",
 					"endHour": "03:00",
 					"mapsLink": "/A4/3",
 					"locationName": "A4-201/2",
-					"description": ""
+					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
 					"title": "Breakfast",
@@ -204,21 +204,20 @@
 					"endHour": "09:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": ""
+					"description": "Come charge energies for the last hours of hacking"
 				},
 				{
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:30",
-					"mapsLink": "/meal",
-					"locationName": "Meal Zone",
-					"description": ""
+					"locationName": "Devpost",
+					"description": "Submit your project in our Devpost!"
 				},
 				{
 					"title": "Hack ends",
 					"startHour": "09:00",
 					"endHour": "09:00",
-					"description": ""
+					"description": "STOP HACKING! SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
 					"title": "Showers",
@@ -226,15 +225,15 @@
 					"endHour": "10:30",
 					"mapsLink": "/showers",
 					"locationName": "Sports Center",
-					"description": ""
+					"description": "Relax a bit before starting the demos"
 				},
 				{
 					"title": "Demos",
 					"startHour": "10:30",
 					"endHour": "12:30",
 					"mapsLink": "/A4/2",
-					"locationName": "A4-201/2",
-					"description": ""
+					"locationName": "A410X",
+					"description": "It's demo time! Your vote will be taken into account too!"
 				},
 				{
 					"title": "Lunch",
@@ -242,7 +241,7 @@
 					"endHour": "14:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
-					"description": ""
+					"description": "Come grab some frankfurts/bratswurts by our awesome partners Leo Boeck"
 				},
 				{
 					"title": "Closing Ceremony",
@@ -250,7 +249,7 @@
 					"endHour": "16:30",
 					"mapsLink": "/vertex",
 					"locationName": "Vèrtex",
-					"description": ""
+					"description": "And the winners are... Come watch finalists and winners!"
 				}
 			]
 		}
