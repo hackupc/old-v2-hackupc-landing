@@ -66,18 +66,18 @@
 	</template>
 	<!--Fancy schedule item-->
 	<template id="fancyItem">
-		<li data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEmptyLi"></li>
+		<li data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEmptyStep"></li>
 	</template>
 	<!--Fancy schedule title-->
-	<!--li has happened once day starts-->
+	<!--li is happening once day starts-->
 	<template id="fancyTitle">
 		<li data-end-timestamp="{startTmsp}">
-			<h1 data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeParent">{name}</h1>
+			<h1 data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent">{name}</h1>
 		</li>
 	</template>
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
-		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeParent">
+		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent">
 			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"><span class="location-icon"></span></a>
 			<div class='event-hour'>
 				<div>{startHour}</div> 

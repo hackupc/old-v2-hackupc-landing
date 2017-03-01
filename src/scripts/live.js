@@ -32,13 +32,25 @@
 	};
 
 	var actions = {
+		//Removes the parent element
 		removeParent: function(element){
 			if(element.parentElement.parentElement)
 				element.parentElement.parentElement.removeChild(element.parentElement);
 		},
-		removeEmptyLi: function(element){
+		removeEmptyStep:function(element){
 			if(element.children.length === 0)
+			{
 				element.parentElement.removeChild(element);
+			}
+		},
+		//Remove happened element and parent if empty
+		removeEndedEvent: function(element){
+			var parent = element.parentElement;
+			parent.removeChild(element);
+			if(parent.children.length === 0)
+			{
+				parent.parentElement.removeChild(parent);
+			}
 		}
 	};
 
@@ -153,7 +165,7 @@
 		for(var i = 0; i < elements.length; i++){
 			if(elements[i].dataset.endTimestamp < now){
 				elements[i].classList.add(CONST.HAPPENED_CLASS);
-				//If action callback defined
+				//If end action callback defined
 				if(elements[i].dataset.endAction &&
 					actions[elements[i].dataset.endAction])
 				{
@@ -162,6 +174,19 @@
 			}
 			else if(elements[i].dataset.startTimestamp < now){
 				elements[i].classList.add(CONST.HAPPENING_CLASS);
+				//If start action callback defined
+				if(elements[i].dataset.startAction &&
+					actions[elements[i].dataset.startAction])
+				{
+					actions[elements[i].dataset.startAction](elements[i]);
+				}
+			}
+
+			//If update action callback defined
+			if(elements[i].dataset.updateAction &&
+				actions[elements[i].dataset.updateAction])
+			{
+				actions[elements[i].dataset.updateAction](elements[i]);
 			}
 			
 		}
