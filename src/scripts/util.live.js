@@ -156,5 +156,16 @@ var Util = (function(CONST){
 		return document.importNode(clone.content, true);
 	};
 
+	obj.storageGet = function(key){
+		var storage = JSON.parse(window.localStorage["appData"] || "{}");
+		return storage[key] ? storage[key] : null;
+	}
+
+	obj.storagePut = function(key, value){
+		var storage = JSON.parse(window.localStorage["appData"] || "{}");
+		storage[key] = value;
+		window.localStorage["appData"] = JSON.stringify(storage);
+	}
+
 	return obj;
 })(CONST);
