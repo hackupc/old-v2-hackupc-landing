@@ -207,10 +207,9 @@ a{
 				&.subscribed{
 					.title:after{
 						content:"\01F6A9";
-						position: absolute;
-						right: -12px;
 						font-size: 13px;
-						top: -7px;
+						vertical-align: super;
+						line-height: 0px;
 					}
 				}
 				.title{
