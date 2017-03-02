@@ -137,7 +137,7 @@
 				//I just don't know how right now
 				//Add events that fit in this step
 				while(nextEventTmsp < i+CONST.SCHEDULE_STEP && 
-					     eventIndex < day.events.length){
+						 eventIndex < day.events.length){
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
@@ -220,18 +220,25 @@
 	}
 
 	function updateCountdown(){
-		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
-		var current = CONST.HACKATHON_DURATION - (Date.now()/1000 - countdownStart);
+		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
 		var obj = {hours: 0, minutes: 0, seconds: 0};
-		if(current > 0 && current < CONST.HACKATHON_DURATION)
+		var elapsed = Date.now()/1000 - countdownStart;
+		if(elapsed < 0)
 		{
-			obj = Util.getHumanTime(current);	
+			obj = Util.getHumanTime(-elapsed);
 		}
-		else
-		{
-			if(current > CONST.HACKATHON_DURATION)
+		else {
+			var current = CONST.HACKATHON_DURATION - elapsed;
+			if(current > 0 && current < CONST.HACKATHON_DURATION)
 			{
-				obj.hours = 36;
+				obj = Util.getHumanTime(current);
+			}
+			else
+			{
+				if(current > CONST.HACKATHON_DURATION)
+				{
+					obj.hours = 36;
+				}
 			}
 		}
 		
