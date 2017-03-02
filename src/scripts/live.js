@@ -141,6 +141,12 @@
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
+					
+					if(isEventSubscribed(day.events[eventIndex].id)){
+						var lastEvent = liEvent.children[liEvent.children.length-1];
+						lastEvent.classList.add("subscribed");
+						
+					}
 					eventIndex++;
 					if(eventIndex < day.events.length){
 						nextEventTmsp = day.events[eventIndex].startTmsp;
