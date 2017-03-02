@@ -547,11 +547,11 @@
 			if(typeof cb == "function")
 					cb();
 
-			notification.close.bind(notification);
+			notification.close();
 		};
 
 		setTimeout(function(){
-			notification.close.bind(notification);
+			notification.close();
 		}, CONST.NOTIFICATION_TIMEOUT);
 	}
 
