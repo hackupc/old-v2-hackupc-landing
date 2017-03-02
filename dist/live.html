@@ -90,7 +90,7 @@
 	</template>
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
-		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent">
+		<div class="event" data-event-id="{id}" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent" data-update-action="updateFancyEvent">
 			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"><span class="location-icon"></span></a>
 			<div class='event-hour'>
 				<div>{startHour}</div> 

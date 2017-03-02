@@ -14,7 +14,6 @@
 	var countdown;
 	var schedule = {"version":-1};
 	var canNotify = false;
-
 	var itsFullscreen = false;
 	//To add a view, add here the id of the new article
 	var views ={
@@ -32,6 +31,22 @@
 	};
 
 	var actions = {
+		/*
+		* Updates progress bar and notifies if needed
+		* requires data-event-id to check subscriptions
+		*/
+		updateFancyEvent:function(element){
+			if(isEventSubscribed(element.dataset.eventId)){
+				var offset = element.dataset.startTimestamp - Util.getNowSeconds();
+				if(offset <= CONST.EVENT_NOTIF_OFFSET &&
+					offset >= 0)
+				{
+					var event = getEvent(element.dataset.eventId);
+					notify(event.description, "Happening soon: "+event.title);
+					unsubscribeEvent(element.dataset.eventId);
+				}
+			}
+		},
 		//Removes the parent element
 		removeParent: function(element){
 			if(element.parentElement.parentElement)
@@ -86,6 +101,7 @@
 
 		return container;
 	}
+
 
 	/*
 	* Generates timestamps (UTC) inside 'schedule'
@@ -159,6 +175,7 @@
 		return list;
 	}
 
+
 	/*
 	* Choronological elements store start(optional) 
 	* and end timestamps (in seconds)
@@ -213,6 +230,22 @@
 					fancySchedule.cloneNode(true)
 				);
 			}
+
+			var events = document.querySelectorAll(".events-fancy .event");
+			for(var i = 0; i < events.length; i++)
+			{
+				(function(element){
+					element.addEventListener("click", function(){
+						if(isEventSubscribed(element.dataset.eventId)){
+							unsubscribeEvent(element.dataset.eventId);
+						}
+						else{
+							subscribeEvent(element.dataset.eventId);
+						}
+					});
+				})(events[i]);
+			}
+
 			scheduleElement.innerHTML = "";
 			scheduleElement.appendChild(
 				(generateSchedule()).cloneNode(true)
