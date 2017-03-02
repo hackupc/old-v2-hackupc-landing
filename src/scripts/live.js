@@ -153,7 +153,7 @@
 				//I just don't know how right now
 				//Add events that fit in this step
 				while(nextEventTmsp < i+CONST.SCHEDULE_STEP && 
-					     eventIndex < day.events.length){
+						 eventIndex < day.events.length){
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
@@ -259,18 +259,27 @@
 	}
 
 	function updateCountdown(){
-		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
-		var current = CONST.HACKATHON_DURATION - (Util.getNowSeconds() - countdownStart);
+
+		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
+
 		var obj = {hours: 0, minutes: 0, seconds: 0};
-		if(current > 0 && current < CONST.HACKATHON_DURATION)
+		var elapsed = Util.getNowSeconds() - countdownStart;
+		if(elapsed < 0)
 		{
-			obj = Util.getHumanTime(current);	
+			obj = Util.getHumanTime(-elapsed);
 		}
-		else
-		{
-			if(current > CONST.HACKATHON_DURATION)
+		else {
+			var current = CONST.HACKATHON_DURATION - elapsed;
+			if(current > 0 && current < CONST.HACKATHON_DURATION)
 			{
-				obj.hours = 36;
+				obj = Util.getHumanTime(current);
+			}
+			else
+			{
+				if(current > CONST.HACKATHON_DURATION)
+				{
+					obj.hours = 36;
+				}
 			}
 		}
 		
@@ -610,7 +619,7 @@
 		window.addEventListener("hashchange", onRouteChange);
 		document.addEventListener("keypress", function(ev){
 			var key = ev.which;
-			if(String.fromCharCode(key) == 'f')
+			if(String.fromCharCode(key) == 'p')
 				toggleFullscreen();
 			
 		});
