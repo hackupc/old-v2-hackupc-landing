@@ -130,8 +130,8 @@ var Util = (function(CONST){
 		if(dateHour.length > 1)
 			hour = dateHour[1].split(":");
 
-		return Date.UTC(date[2], date[1]-1, 
-			date[0], hour[1], hour[0])/1000;
+		return Date.UTC(date[2], date[1]-1,
+			date[0], hour[0], hour[1])/1000;
 	};
 
 	obj.getHumanTime = function(s){
