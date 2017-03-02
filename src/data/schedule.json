@@ -89,8 +89,8 @@
 			[
 				{
 					"title": "[Talk] Intro to WebDev with Flask",
-					"startHour": "01:00",
-					"endHour": "02:00",
+					"startHour": "00:15",
+					"endHour": "01:00",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
 					"description": "Get started in the web development world using Flask and Python with Rashiq"
