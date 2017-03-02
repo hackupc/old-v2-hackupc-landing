@@ -67,7 +67,7 @@
 				{
 					"title": "[Talk] Why you should hack in Go",
 					"startHour": "23:15",
-					"endHour": "00:00",
+					"endHour": "23:59",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
 					"description": "Discover Go language with former HackUPC organizer Daniel Martí"
@@ -75,7 +75,7 @@
 				{
 					"title": "[Talk] Intro to Android",
 					"startHour": "23:15",
-					"endHour": "00:00",
+					"endHour": "23:59",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
 					"description": "Join Rashiq for an awesome introduction to Android development"
