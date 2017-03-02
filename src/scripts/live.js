@@ -27,7 +27,7 @@
 	};
 
 	var icons ={
-		"logo" : "assets/img/logo.png"
+		"logo" : "favicon.ico"
 	};
 
 	var actions = {
