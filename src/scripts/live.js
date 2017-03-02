@@ -220,19 +220,26 @@
 	}
 
 	function updateCountdown(){
-		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
-		var current = CONST.HACKATHON_DURATION - (Date.now()/1000 - countdownStart);
-		var obj = {hours: 0, minutes: 0, seconds: 0};
-		if(current > 0 && current < CONST.HACKATHON_DURATION)
+		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
+        var obj = {hours: 0, minutes: 0, seconds: 0};
+        var elapsed = Date.now()/1000 - countdownStart;
+        if(elapsed < 0)
 		{
-			obj = Util.getHumanTime(current);	
-		}
-		else
-		{
-			if(current > CONST.HACKATHON_DURATION)
-			{
-				obj.hours = 36;
-			}
+            obj = Util.getHumanTime(-elapsed);
+        }
+		else {
+            var current = CONST.HACKATHON_DURATION - elapsed;
+            if(current > 0 && current < CONST.HACKATHON_DURATION)
+            {
+                obj = Util.getHumanTime(current);
+            }
+            else
+            {
+                if(current > CONST.HACKATHON_DURATION)
+                {
+                    obj.hours = 36;
+                }
+            }
 		}
 		
 		var element = Util.inflateWith("countdownTimerTemplate",{
