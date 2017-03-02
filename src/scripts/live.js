@@ -184,7 +184,7 @@
 	*/
 	function updateChronologicalElements(){
 		var elements = document.querySelectorAll("[data-end-timestamp]");
-		var now = Date.now()/1000;
+		var now = Util.getNowSeconds();
 		for(var i = 0; i < elements.length; i++){
 			if(elements[i].dataset.endTimestamp < now){
 				elements[i].classList.add(CONST.HAPPENED_CLASS);
@@ -260,7 +260,7 @@
 
 	function updateCountdown(){
 		var countdownStart = Util.dateToSeconds(schedule.countdownStart);
-		var current = CONST.HACKATHON_DURATION - (Date.now()/1000 - countdownStart);
+		var current = CONST.HACKATHON_DURATION - (Util.getNowSeconds() - countdownStart);
 		var obj = {hours: 0, minutes: 0, seconds: 0};
 		if(current > 0 && current < CONST.HACKATHON_DURATION)
 		{
