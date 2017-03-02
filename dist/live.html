@@ -18,6 +18,19 @@
   	<meta name="author" content="Hackers@UPC">
 	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta|Orbitron" rel="stylesheet">
 
+	<!--Prompt-->
+	<template id="promptTemplate">
+		<div class="prompt">
+			<div class="box">
+				<h1>{title}</h1>
+				<p>{message}</p>
+				<div class="buttons">
+					<div id="promptCancel">{cancel}</div>
+					<div id="promptAccept">{accept}</div>
+				</div>
+			</div>
+		</div>
+	</template>
 	<!--Countdown-->
 	<template id="countdownTimerTemplate">
 		<div class="countdown-time">

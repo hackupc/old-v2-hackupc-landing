@@ -11,6 +11,7 @@
 			"events":
 			[
 				{
+					"id":"1",
 					"title": "Registration",
 					"startHour": "15:00",
 					"endHour": "18:00",
@@ -19,6 +20,7 @@
 					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
 				},
 				{
+					"id":"2",
 					"title": "Baggage check-in",
 					"startHour": "15:00",
 					"endHour": "18:00",
@@ -27,6 +29,7 @@
 					"description": "Bring your baggage and we will store it for you"
 				},
 				{
+					"id":"3",
 					"title": "Opening Talk",
 					"startHour": "19:15",
 					"endHour": "21:00",
@@ -35,12 +38,14 @@
 					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
 				{
+					"id":"4",
 					"title": "Hacking Starts",
 					"startHour": "21:00",
 					"endHour": "21:00",
 					"description": "Ready. Set. GO!"
 				},
 				{
+					"id":"5",
 					"title": "Dinner",
 					"startHour": "21:00",
 					"endHour": "22:00",
@@ -49,6 +54,7 @@
 					"description": "Enjoy our first meal"
 				},
 				{
+					"id":"6",
 					"title": "Team Building",
 					"startHour": "21:00",
 					"endHour": "22:00",
@@ -57,6 +63,7 @@
 					"description": "Looking for a team or new teammates?"
 				},
 				{
+					"id":"7",
 					"title": "[Talk] Between: Challenge",
 					"startHour": "22:30",
 					"endHour": "23:00",
@@ -65,6 +72,7 @@
 					"description": "Come check Between's challenge introductory talk"
 				},
 				{
+					"id":"8",
 					"title": "[Talk] Why you should hack in Go",
 					"startHour": "23:15",
 					"endHour": "00:00",
@@ -73,6 +81,7 @@
 					"description": "Discover Go language with former HackUPC organizer Daniel Martí"
 				},
 				{
+					"id":"9",
 					"title": "[Talk] Intro to Android",
 					"startHour": "23:15",
 					"endHour": "00:00",
@@ -88,6 +97,7 @@
 			"events":
 			[
 				{
+					"id":"10",
 					"title": "[Talk] Intro to WebDev with Flask",
 					"startHour": "01:00",
 					"endHour": "02:00",
@@ -96,6 +106,7 @@
 					"description": "Get started in the web development world using Flask and Python with Rashiq"
 				},
 				{
+					"id":"11",
 					"title": "Midnight Snack",
 					"startHour": "01:00",
 					"endHour": "02:00",
@@ -104,6 +115,7 @@
 					"description": "Feeling hungry? Come get some sweet waffles"
 				},
 				{
+					"id":"12",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -112,6 +124,7 @@
 					"description": "Come get some energizing breakfast"
 				},
 				{
+					"id":"13",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
@@ -120,6 +133,7 @@
 					"description": "Don't forget to bring your towel"
 				},
 				{
+					"id":"14",
 					"title": "[Talk] Everis: Artificial Intelligence as a Service",
 					"startHour": "10:00",
 					"endHour": "10:30",
@@ -128,6 +142,7 @@
 					"description": "Come learn AI with an awesome group of Everis engineers"
 				},
 				{
+					"id":"15",
 					"title": "[Talk] Between: Intro to functional programming",
 					"startHour": "10:45",
 					"endHour": "11:15",
@@ -136,6 +151,7 @@
 					"description": "Enter the functional programming world with Between"
 				},
 				{
+					"id":"16",
 					"title": "[Talk] Intro to Big Data",
 					"startHour": "11:15",
 					"endHour": "11:45",
@@ -144,6 +160,7 @@
 					"description": " Come listen to Ricardo Baeza in a talk about Big Data and Data Science"
 				},
 				{
+					"id":"17",
 					"title": "[Talk] Blockchain",
 					"startHour": "12:00",
 					"endHour": "12:30",
@@ -152,6 +169,7 @@
 					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain technology"
 				},
 				{
+					"id":"18",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -160,6 +178,7 @@
 					"description": "Come enjoy an awesome typical Spanish paella"
 				},
 				{
+					"id":"19",
 					"title": "[Talk] Organize your hackathon",
 					"startHour": "17:00",
 					"endHour": "17:45",
@@ -168,6 +187,7 @@
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
 				{
+					"id":"20",
 					"title": "Dinner",
 					"startHour": "20:00",
 					"endHour": "21:00",
@@ -176,6 +196,7 @@
 					"description": "PIZZA TIME"
 				},
 				{
+					"id":"21",
 					"title": "Slideshow Karaoke",
 					"startHour": "22:00",
 					"endHour": "23:00",
@@ -191,6 +212,7 @@
 			"events":
 			[
 				{
+					"id":"22",
 					"title": "Midnight Snack",
 					"startHour": "00:00",
 					"endHour": "01:00",
@@ -199,6 +221,7 @@
 					"description": "It's been more than 24 hours. Get some sweet snacks to keep yourself motivated"
 				},
 				{
+					"id":"23",
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "00:30",
 					"endHour": "03:00",
@@ -207,6 +230,7 @@
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
+					"id":"24",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -215,6 +239,7 @@
 					"description": "Come charge your energies for the last hours of hacking"
 				},
 				{
+					"id":"25",
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:30",
@@ -222,12 +247,14 @@
 					"description": "Submit your project in our Devpost!"
 				},
 				{
+					"id":"26",
 					"title": "Hacking ends",
 					"startHour": "09:00",
 					"endHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
+					"id":"27",
 					"title": "Showers",
 					"startHour": "09:00",
 					"endHour": "10:30",
@@ -236,6 +263,7 @@
 					"description": "Relax a bit before the demos start"
 				},
 				{
+					"id":"28",
 					"title": "Demos",
 					"startHour": "10:30",
 					"endHour": "12:30",
@@ -244,6 +272,7 @@
 					"description": "It's demo time! Your vote will be taken into account too!"
 				},
 				{
+					"id":"29",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -252,6 +281,7 @@
 					"description": "Come grab some frankfurts/bratswurts made by our awesome partners Leo Boeck"
 				},
 				{
+					"id":"30",
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",

@@ -54,6 +54,40 @@ a{
 	font-weight: bold !important;
 }
 
+.prompt{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 110;
+
+	.box{
+		color:$textColor;
+		background-color:$bgColor;
+		padding:20px;
+		margin:20px;
+		h1{
+			margin:0;
+			padding:0;
+		}
+		.buttons{
+			display:flex;
+			justify-content: flex-end;
+			flex-wrap:wrap;
+			div{
+				flex:1 1 auto;
+				padding:5px 10px;
+				margin:20px;
+				background-color:$highlightColor;
+				cursor:pointer;
+			}
+		}
+	}
+}
+
 @media (min-width:720px){
 	.under-header{
 		padding-top:150px;
@@ -155,6 +189,7 @@ a{
 			}
 			.event{
 				margin:5px 0;
+				cursor:pointer;
 				.event-hour{
 					width:54px;
 					display:flex;
@@ -169,7 +204,17 @@ a{
 						font-size: 12px;
 					}
 				}
+				&.subscribed{
+					.title:after{
+						content:"\01F6A9";
+						position: absolute;
+						right: -12px;
+						font-size: 13px;
+						top: -7px;
+					}
+				}
 				.title{
+					position:relative;
 					line-height:25px;
 				}
 				

@@ -248,6 +248,134 @@
 		}
 	}
 
+
+	function prompt(title, message, acceptMsg, acceptCb, denyMsg, denyCb){
+		var p = Util.inflateWith("promptTemplate", {
+			title:title,
+			message:message,
+			accept:acceptMsg || "Ok",
+			cancel:denyMsg || "Cancel",
+
+		});
+		body.appendChild(p);
+
+		var c = document.querySelector(".prompt");
+		document.getElementById("promptAccept").addEventListener("click",function(){
+			if(acceptCb) acceptCb();
+			Util.unveil(main);
+			Util.fadeOut(c, function(){
+				body.removeChild(c);
+			});
+		});
+		document.getElementById("promptCancel").addEventListener("click",function(){
+			if(denyCb) denyCb();
+			Util.unveil(main);
+			Util.fadeOut(c, function(){
+				body.removeChild(c);
+			});
+		});
+
+		Util.veil(main);
+		Util.show(c);
+		//Dom repaint
+		setTimeout(function(){
+			Util.fadeIn(c);
+		}, 1);
+	}
+
+	function subscribeEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		if(refs && refs[id]){
+			refs[id].subscribed = true;
+			var element = document.querySelectorAll("[data-event-id='"+id+"']");
+			if(element && element.length > 0){
+				for(var i = 0; i < element.length; i++){
+					element[i].classList.add("subscribed");
+				}
+			}
+			Util.storagePut("eventSubscriptions", refs);
+		}
+
+	}
+	function unsubscribeEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		if(refs && refs[id]){
+			refs[id].subscribed = false;
+			var element = document.querySelectorAll("[data-event-id='"+id+"']");
+			if(element && element.length > 0){
+				for(var i = 0; i < element.length; i++){
+					element[i].classList.remove("subscribed");
+				}
+			}
+		}
+
+		Util.storagePut("eventSubscriptions", refs);
+	}
+	function isEventSubscribed(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		return (refs && refs[id]) ? refs[id].subscribed : false;
+	}
+	function subscribeAllEvents(){
+		var refs = Util.storageGet("eventSubscriptions");
+		for(var key in refs){
+			if(refs.hasOwnProperty(key)){
+				if(Util.getNowSeconds() - refs[key].startTmsp < 0)
+					subscribeEvent(key);
+			}
+		}
+	}
+	function getEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		return (refs && refs[id]) ? refs[id] : null;
+	}
+
+	/*
+	* Prompts the user if they want to subscribe to all events.
+	* Result is stored in localStorage
+	*/
+	function askSubscribeAll(cb){
+		prompt("Don't miss anything!", "Do you want to subscribe to all the events?"+
+			" You will receive a notification before something happens", 
+			"Do it!", function(){
+				if(cb) cb();
+				
+			},
+			"No, thanks. I'll choose manually", function(){
+				//Do nothing
+			});
+
+		Util.storagePut("askedSubscribeAll", true);
+	}
+
+	/*
+	* Check if we asked the user
+	*/
+	function checkSubscriptionQuestion(){
+		if(!Util.storageGet("askedSubscribeAll")){
+			askSubscribeAll(function(){				
+				subscribeAllEvents();
+			});
+		}
+	}
+
+	/*
+	* Generates events table to keep track of subscriptions (notifications)
+	*/
+	function generateEventReferences(){
+		var localSubs = Util.storageGet("eventSubscriptions");
+		var eventSubscriptions = {};
+		schedule.days.forEach(function(day){
+			day.events.forEach(function(event){
+				//Init to false
+				eventSubscriptions[event.id] = event;
+				eventSubscriptions[event.id].subscribed = false;
+				if(localSubs && localSubs[event.id])
+					eventSubscriptions[event.id].subscribed = localSubs[event.id].subscribed;
+			});
+		});
+		Util.storagePut("eventSubscriptions", eventSubscriptions);
+	}
+
 	/*
 	* Loads the schedule in the global scope
 	* and checks version.
@@ -266,6 +394,7 @@
 			if(schedule.version != newSchedule.version) {
 				schedule = newSchedule;
 				generateTimestamps();
+				generateEventReferences();
 				if(typeof cb == "function")
 					cb();
 				console.info("Schedule updated on (" + (new Date()) + "): \n"+schedule.message);
@@ -507,6 +636,10 @@
 
 			initNotifications();
 
+			setTimeout(function(){
+				checkSubscriptionQuestion();
+			},1000);
+
 			//Keep polling the schedule
 			setInterval(function(){
 				updateSchedule(function(){
@@ -532,7 +665,8 @@
 			setInterval(function(){
 				updateChronologicalElements();
 			}, 60000);
-
+			//Testing
+			//}, 1000);
 		});
 
 
