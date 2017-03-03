@@ -23,7 +23,8 @@
 		"rules" : "rules",
 		"hardware" : "hardware",
 		"faq" : "faq",
-		"schedule" : "schedule"
+		"schedule" : "schedule",
+		"challenges" : "challenges"
 	};
 
 	var icons ={
