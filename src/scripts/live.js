@@ -14,7 +14,6 @@
 	var countdown;
 	var schedule = {"version":-1};
 	var canNotify = false;
-
 	var itsFullscreen = false;
 	//To add a view, add here the id of the new article
 	var views ={
@@ -28,10 +27,26 @@
 	};
 
 	var icons ={
-		"logo" : "assets/img/logo.png"
+		"logo" : "favicon.ico"
 	};
 
 	var actions = {
+		/*
+		* Updates progress bar and notifies if needed
+		* requires data-event-id to check subscriptions
+		*/
+		updateFancyEvent:function(element){
+			if(isEventSubscribed(element.dataset.eventId)){
+				var offset = element.dataset.startTimestamp - Util.getNowSeconds();
+				if(offset <= CONST.EVENT_NOTIF_OFFSET &&
+					offset >= 0)
+				{
+					var event = getEvent(element.dataset.eventId);
+					notify(event.description, "Happening soon: "+event.title);
+					unsubscribeEvent(element.dataset.eventId);
+				}
+			}
+		},
 		//Removes the parent element
 		removeParent: function(element){
 			if(element.parentElement.parentElement)
@@ -87,6 +102,7 @@
 		return container;
 	}
 
+
 	/*
 	* Generates timestamps (UTC) inside 'schedule'
 	*/
@@ -141,6 +157,12 @@
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
+					
+					if(isEventSubscribed(day.events[eventIndex].id)){
+						var lastEvent = liEvent.children[liEvent.children.length-1];
+						lastEvent.classList.add("subscribed");
+						
+					}
 					eventIndex++;
 					if(eventIndex < day.events.length){
 						nextEventTmsp = day.events[eventIndex].startTmsp;
@@ -153,6 +175,7 @@
 		return list;
 	}
 
+
 	/*
 	* Choronological elements store start(optional) 
 	* and end timestamps (in seconds)
@@ -161,7 +184,7 @@
 	*/
 	function updateChronologicalElements(){
 		var elements = document.querySelectorAll("[data-end-timestamp]");
-		var now = Date.now()/1000;
+		var now = Util.getNowSeconds();
 		for(var i = 0; i < elements.length; i++){
 			if(elements[i].dataset.endTimestamp < now){
 				elements[i].classList.add(CONST.HAPPENED_CLASS);
@@ -207,6 +230,22 @@
 					fancySchedule.cloneNode(true)
 				);
 			}
+
+			var events = document.querySelectorAll(".events-fancy .event");
+			for(var i = 0; i < events.length; i++)
+			{
+				(function(element){
+					element.addEventListener("click", function(){
+						if(isEventSubscribed(element.dataset.eventId)){
+							unsubscribeEvent(element.dataset.eventId);
+						}
+						else{
+							subscribeEvent(element.dataset.eventId);
+						}
+					});
+				})(events[i]);
+			}
+
 			scheduleElement.innerHTML = "";
 			scheduleElement.appendChild(
 				(generateSchedule()).cloneNode(true)
@@ -220,9 +259,11 @@
 	}
 
 	function updateCountdown(){
+
 		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
+
 		var obj = {hours: 0, minutes: 0, seconds: 0};
-		var elapsed = Date.now()/1000 - countdownStart;
+		var elapsed = Util.getNowSeconds() - countdownStart;
 		if(elapsed < 0)
 		{
 			obj = Util.getHumanTime(-elapsed);
@@ -255,6 +296,134 @@
 		}
 	}
 
+
+	function prompt(title, message, acceptMsg, acceptCb, denyMsg, denyCb){
+		var p = Util.inflateWith("promptTemplate", {
+			title:title,
+			message:message,
+			accept:acceptMsg || "Ok",
+			cancel:denyMsg || "Cancel",
+
+		});
+		body.appendChild(p);
+
+		var c = document.querySelector(".prompt");
+		document.getElementById("promptAccept").addEventListener("click",function(){
+			if(acceptCb) acceptCb();
+			Util.unveil(main);
+			Util.fadeOut(c, function(){
+				body.removeChild(c);
+			});
+		});
+		document.getElementById("promptCancel").addEventListener("click",function(){
+			if(denyCb) denyCb();
+			Util.unveil(main);
+			Util.fadeOut(c, function(){
+				body.removeChild(c);
+			});
+		});
+
+		Util.veil(main);
+		Util.show(c);
+		//Dom repaint
+		setTimeout(function(){
+			Util.fadeIn(c);
+		}, 1);
+	}
+
+	function subscribeEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		if(refs && refs[id]){
+			refs[id].subscribed = true;
+			var element = document.querySelectorAll("[data-event-id='"+id+"']");
+			if(element && element.length > 0){
+				for(var i = 0; i < element.length; i++){
+					element[i].classList.add("subscribed");
+				}
+			}
+			Util.storagePut("eventSubscriptions", refs);
+		}
+
+	}
+	function unsubscribeEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		if(refs && refs[id]){
+			refs[id].subscribed = false;
+			var element = document.querySelectorAll("[data-event-id='"+id+"']");
+			if(element && element.length > 0){
+				for(var i = 0; i < element.length; i++){
+					element[i].classList.remove("subscribed");
+				}
+			}
+		}
+
+		Util.storagePut("eventSubscriptions", refs);
+	}
+	function isEventSubscribed(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		return (refs && refs[id]) ? refs[id].subscribed : false;
+	}
+	function subscribeAllEvents(){
+		var refs = Util.storageGet("eventSubscriptions");
+		for(var key in refs){
+			if(refs.hasOwnProperty(key)){
+				if(Util.getNowSeconds() - refs[key].startTmsp < 0)
+					subscribeEvent(key);
+			}
+		}
+	}
+	function getEvent(id){
+		var refs = Util.storageGet("eventSubscriptions");
+		return (refs && refs[id]) ? refs[id] : null;
+	}
+
+	/*
+	* Prompts the user if they want to subscribe to all events.
+	* Result is stored in localStorage
+	*/
+	function askSubscribeAll(cb){
+		prompt("Don't miss anything!", "Do you want to subscribe to all the events?"+
+			" You will receive a notification before something happens. You can choose to subscribe/unsubscribe by clicking individually on an event.", 
+			"Do it!", function(){
+				if(cb) cb();
+				
+			},
+			"No, thanks. I'll choose manually", function(){
+				//Do nothing
+			});
+
+		Util.storagePut("askedSubscribeAll", true);
+	}
+
+	/*
+	* Check if we asked the user
+	*/
+	function checkSubscriptionQuestion(){
+		if(!Util.storageGet("askedSubscribeAll")){
+			askSubscribeAll(function(){				
+				subscribeAllEvents();
+			});
+		}
+	}
+
+	/*
+	* Generates events table to keep track of subscriptions (notifications)
+	*/
+	function generateEventReferences(){
+		var localSubs = Util.storageGet("eventSubscriptions");
+		var eventSubscriptions = {};
+		schedule.days.forEach(function(day){
+			day.events.forEach(function(event){
+				//Init to false
+				eventSubscriptions[event.id] = event;
+				eventSubscriptions[event.id].subscribed = false;
+				if(localSubs && localSubs[event.id])
+					eventSubscriptions[event.id].subscribed = localSubs[event.id].subscribed;
+			});
+		});
+		Util.storagePut("eventSubscriptions", eventSubscriptions);
+	}
+
 	/*
 	* Loads the schedule in the global scope
 	* and checks version.
@@ -273,6 +442,7 @@
 			if(schedule.version != newSchedule.version) {
 				schedule = newSchedule;
 				generateTimestamps();
+				generateEventReferences();
 				if(typeof cb == "function")
 					cb();
 				console.info("Schedule updated on (" + (new Date()) + "): \n"+schedule.message);
@@ -386,11 +556,11 @@
 			if(typeof cb == "function")
 					cb();
 
-			notification.close.bind(notification);
+			notification.close();
 		};
 
 		setTimeout(function(){
-			notification.close.bind(notification);
+			notification.close();
 		}, CONST.NOTIFICATION_TIMEOUT);
 	}
 
@@ -514,6 +684,10 @@
 
 			initNotifications();
 
+			setTimeout(function(){
+				checkSubscriptionQuestion();
+			},1000);
+
 			//Keep polling the schedule
 			setInterval(function(){
 				updateSchedule(function(){
@@ -539,7 +713,8 @@
 			setInterval(function(){
 				updateChronologicalElements();
 			}, 60000);
-
+			//Testing
+			//}, 1000);
 		});
 
 

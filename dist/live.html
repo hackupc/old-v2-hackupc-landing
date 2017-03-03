@@ -15,9 +15,23 @@
   	<meta property="og:image:secure_url" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png"/>
   	<meta property="og:url" content="https://hackupc.com/live"/>
   	<meta name="theme-color" content="#03A9B5">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   	<meta name="author" content="Hackers@UPC">
 	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta|Orbitron" rel="stylesheet">
 
+	<!--Prompt-->
+	<template id="promptTemplate">
+		<div class="prompt">
+			<div class="box">
+				<h1>{title}</h1>
+				<p>{message}</p>
+				<div class="buttons">
+					<div id="promptCancel">{cancel}</div>
+					<div id="promptAccept">{accept}</div>
+				</div>
+			</div>
+		</div>
+	</template>
 	<!--Countdown-->
 	<template id="countdownTimerTemplate">
 		<div class="countdown-time">
@@ -77,7 +91,7 @@
 	</template>
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
-		<div class="event" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent">
+		<div class="event" data-event-id="{id}" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent" data-update-action="updateFancyEvent">
 			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"><span class="location-icon"></span></a>
 			<div class='event-hour'>
 				<div>{startHour}</div> 

@@ -134,6 +134,12 @@ var Util = (function(CONST){
 			date[0], hour[0], hour[1])/1000;
 	};
 
+	obj.getNowSeconds = function(){
+		return Date.now()/1000;
+		//Testing
+		//return Date.UTC(2017,2,3,23,56)/1000;
+	};
+
 	obj.getHumanTime = function(s){
 		return{ 
 			seconds: parseInt(s%60), 
@@ -155,6 +161,17 @@ var Util = (function(CONST){
 
 		return document.importNode(clone.content, true);
 	};
+
+	obj.storageGet = function(key){
+		var storage = JSON.parse(window.localStorage["appData"] || "{}");
+		return storage[key] ? storage[key] : null;
+	}
+
+	obj.storagePut = function(key, value){
+		var storage = JSON.parse(window.localStorage["appData"] || "{}");
+		storage[key] = value;
+		window.localStorage["appData"] = JSON.stringify(storage);
+	}
 
 	return obj;
 })(CONST);
