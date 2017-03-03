@@ -428,7 +428,7 @@
 			hardList.innerHTML="";
 			hardElems.forEach(function(hardElem) {
 				hardList.appendChild(
-					itemsUtil.inflateWith("hardwareElem", hardElem)
+					Util.inflateWith("hardwareElem", hardElem)
 				);
 			})
 		})
