@@ -117,8 +117,13 @@
 			day.events.forEach(function(event){
 				event.startTmsp = day.startTmsp 
 					+ Util.hourToSeconds(event.startHour);
-				event.endTmsp = day.startTmsp 
-					+ Util.hourToSeconds(event.endHour);
+				if(!event.endHour){
+					event.endTmsp = event.startTmsp;
+				}
+				else{
+					event.endTmsp = day.startTmsp 
+						+ Util.hourToSeconds(event.endHour);
+				}
 			});
 		});
 	}
@@ -261,31 +266,28 @@
 	function updateCountdown(){
 
 		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
-
+		var running = false;
 		var obj = {hours: 0, minutes: 0, seconds: 0};
 		var elapsed = Util.getNowSeconds() - countdownStart;
-		if(elapsed < 0)
+		var current = CONST.HACKATHON_DURATION - elapsed;
+		if(current > 0 && current < CONST.HACKATHON_DURATION)
 		{
-			obj = Util.getHumanTime(-elapsed);
+			obj = Util.getHumanTime(current);
+			running = true;
 		}
-		else {
-			var current = CONST.HACKATHON_DURATION - elapsed;
-			if(current > 0 && current < CONST.HACKATHON_DURATION)
+		else
+		{
+			if(current > CONST.HACKATHON_DURATION)
 			{
-				obj = Util.getHumanTime(current);
-			}
-			else
-			{
-				if(current > CONST.HACKATHON_DURATION)
-				{
-					obj.hours = 36;
-				}
+				obj.hours = 36;
 			}
 		}
+	
 		
 		var element = Util.inflateWith("countdownTimerTemplate",{
 			hours: Util.pad(obj.hours) + ":" + Util.pad(obj.minutes),
-			seconds: Util.pad(obj.seconds) + ".00"
+			seconds: Util.pad(obj.seconds),
+			running: running ? "run" : "stop"
 		});
 		var countdownElements = document.querySelectorAll(".countdown");
 		for(var i = 0; i < countdownElements.length; i++){

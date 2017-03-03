@@ -74,10 +74,15 @@ main{
 						z-index: 2;
 						width: 100%;
 
-						div{
+						div.countdown-time{
 							padding: 10px 8px 0px;
 							color:white;
 							font-size:14px;
+						}
+						div.decimals{
+							width: 27px;
+							height: 13px;
+							margin-top: 3px;
 						}
 
 						span{
@@ -88,8 +93,8 @@ main{
 							}
 							&.little{
 								margin-top:4px;
-								font-size:12px;
-								min-width:43px;
+								font-size:13px;
+								min-width:25px;
 							}
 						}
 					}

@@ -260,7 +260,21 @@ a{
 			&.little{
 				margin-top:7px;
 				font-size:28px;
-				min-width:100px;
+				min-width:50px;
+				text-align: right;
+			}
+		}
+		div.decimals{
+			width: 50px;
+			height: 20px;
+			display: inline;
+			background-size: cover;
+			margin-top: 7px;
+			&.run{
+				background-image: url('#{$imgDir}/count_decimals_run.gif');
+			}
+			&.stop{
+				background-image: url('#{$imgDir}/count_decimals_stop.png');
 			}
 		}
 	}
