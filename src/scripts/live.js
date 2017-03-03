@@ -117,8 +117,13 @@
 			day.events.forEach(function(event){
 				event.startTmsp = day.startTmsp 
 					+ Util.hourToSeconds(event.startHour);
-				event.endTmsp = day.startTmsp 
-					+ Util.hourToSeconds(event.endHour);
+				if(!event.endHour){
+					event.endTmsp = event.startTmsp;
+				}
+				else{
+					event.endTmsp = day.startTmsp 
+						+ Util.hourToSeconds(event.endHour);
+				}
 			});
 		});
 	}

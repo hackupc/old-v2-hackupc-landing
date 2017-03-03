@@ -41,7 +41,6 @@
 					"id":"4",
 					"title": "Hacking Starts",
 					"startHour": "21:00",
-					"endHour": "21:00",
 					"description": "Ready. Set. GO!"
 				},
 				{
@@ -250,7 +249,6 @@
 					"id":"26",
 					"title": "Hacking ends",
 					"startHour": "09:00",
-					"endHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
