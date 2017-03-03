@@ -383,7 +383,7 @@
 	*/
 	function askSubscribeAll(cb){
 		prompt("Don't miss anything!", "Do you want to subscribe to all the events?"+
-			" You will receive a notification before something happens", 
+			" You will receive a notification before something happens. You can choose to subscribe/unsubscribe by clicking individually on an event.", 
 			"Do it!", function(){
 				if(cb) cb();
 				
