@@ -594,7 +594,7 @@
 	////////////////////////
 
 	function buildHardwareLab(cb) {
-		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json', function(data) {
+		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
 			hardList.innerHTML="";
