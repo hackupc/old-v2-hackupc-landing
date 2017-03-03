@@ -102,6 +102,10 @@
 			</div>
 		</div>
 	</template>
+	<!--Hardware Lab Element description-->
+	<template id="hardwareElem">
+		<li><b>{item_name}</b> ({available} / {quantity})</li>
+	</template>
 </head>
 <body>
 	<!--header for <720px-->
@@ -403,22 +407,9 @@
 
 				<div class="panel">
 					<h1>Hardware List</h1>
-					<ul>
-						<li>1 Alienware Desktop Set</li>
-						<li>2 Amazon Echo</li>
-						<li>2 Arduino 101</li>
-						<li>2 Base Shield</li>
-						<li>6 Estimote Beacon</li>
-						<li>1 Amazon Fire Phone</li>
-						<li>2 Gear VR</li>
-						<li>1 Grove Kit</li>
-						<li>7 Intel Edison</li>
-						<li>1 Intel Starter Kit</li>
-						<li>5 Leap Motion</li>
-						<li>1 Muse</li>
-						<li>2 Oculus Rift</li>
-						<li>2 Pebble Time</li>
-						<li>2 Photons</li>
+					<p style="text-align: center">Live hardware lab availability (number of items available / numbers of items at HackUPC)
+					<ul id="hardwareList">
+					<!-- To be filled by Javascript -->
 					</ul>
 					<div class="buttons">
 						<a href="https://hardware.mlh.io" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
