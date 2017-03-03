@@ -33,13 +33,18 @@ Inspired by this [article](https://www.digitalocean.com/community/tutorials/how-
 
 ## Live
 
-> - Desktop notifications
-- Live reload
+Features included
+
+- Optional subscription to events - 5 minutes before notifications
+- Schedule live reload
 - Fancy schedule with time padding
 - Normal tabular schedule
 - Countdown
+- Full-screen mode by pressing `p`
 
 New versions of the schedule will be loaded only if 'version' is different.
+
+
 
 # License
 
