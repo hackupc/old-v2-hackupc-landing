@@ -206,7 +206,8 @@ a{
 				}
 				&.subscribed{
 					.title:after{
-						content:"\01F6A9";
+						font-family: FontAwesome;
+						content:"\f024";
 						font-size: 13px;
 						vertical-align: super;
 						line-height: 0px;
