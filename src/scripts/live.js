@@ -23,7 +23,8 @@
 		"rules" : "rules",
 		"hardware" : "hardware",
 		"faq" : "faq",
-		"schedule" : "schedule"
+		"schedule" : "schedule",
+		"challenges" : "challenges"
 	};
 
 	var icons ={
@@ -297,7 +298,6 @@
 			);
 		}
 	}
-
 
 	function prompt(title, message, acceptMsg, acceptCb, denyMsg, denyCb){
 		var p = Util.inflateWith("promptTemplate", {
@@ -594,7 +594,7 @@
 	////////////////////////
 
 	function buildHardwareLab(cb) {
-		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json', function(data) {
+		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
 			hardList.innerHTML="";

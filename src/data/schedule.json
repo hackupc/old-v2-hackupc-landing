@@ -114,6 +114,13 @@
 					"description": "Feeling hungry? Come get some sweet waffles"
 				},
 				{
+					"id":"31",
+					"title": "The Game starts",
+					"startHour": "03:14",
+					"mapsLink": "",
+					"description": "You lost"
+				},
+				{
 					"id":"12",
 					"title": "Breakfast",
 					"startHour": "08:00",
@@ -227,6 +234,13 @@
 					"mapsLink": "/A4/3",
 					"locationName": "A4201/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
+				},
+				{
+					"id":"32",
+					"title": "The Game ends",
+					"startHour": "03:14",
+					"mapsLink": "",
+					"description": "You lost"
 				},
 				{
 					"id":"24",
