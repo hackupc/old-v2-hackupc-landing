@@ -1,6 +1,6 @@
 {
-	"version":1,
-	"message": "Welcome to HackUPC",
+	"version":2,
+	"message": "Blockchain talk has been updated! Classroom: A5002",
 	"baseTimeOffset":"-60",
 	"countdownStart":"3/3/2017 21:00",
 	"days":
@@ -168,10 +168,10 @@
 				{
 					"id":"17",
 					"title": "[Talk] Blockchain",
-					"startHour": "12:00",
-					"endHour": "12:30",
+					"startHour": "12:10",
+					"endHour": "12:40",
 					"mapsLink": "/A5/0",
-					"locationName": "A5001",
+					"locationName": "A5002",
 					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain technology"
 				},
 				{
