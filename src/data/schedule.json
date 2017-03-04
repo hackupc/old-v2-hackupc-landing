@@ -1,6 +1,6 @@
 {
 	"version":2,
-	"message": "Blockchain talk has been updated! Classroom: A5002",
+	"message": "",
 	"baseTimeOffset":"-60",
 	"countdownStart":"3/3/2017 21:00",
 	"days":
@@ -255,7 +255,7 @@
 					"id":"25",
 					"title": "Hack submissions",
 					"startHour": "08:00",
-					"endHour": "09:30",
+					"endHour": "09:00",
 					"locationName": "Devpost",
 					"description": "Submit your project in our Devpost!"
 				},
