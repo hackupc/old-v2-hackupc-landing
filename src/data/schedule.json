@@ -1,6 +1,6 @@
 {
-	"version":3,
-	"message": "",
+	"version":4,
+	"message": "Fixed nerf guns battle location",
 	"baseTimeOffset":"-60",
 	"countdownStart":"3/3/2017 21:00",
 	"days":
@@ -231,8 +231,8 @@
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "00:30",
 					"endHour": "03:00",
-					"mapsLink": "/A4/3",
-					"locationName": "A4201/2",
+					"mapsLink": "/A4/2",
+					"locationName": "A4101/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
