@@ -27,7 +27,7 @@ Use `npm run dist` to compile all dist directory.
 
 Use `npm run serve` to serve `/dist` at `http://localhost:8080`.
 
-Use `npm run nocache` to enable cache burst on `index.html`.
+Use `npm run nocache` to enable cache burst on `index.html` and `live.html`.
 
 
 ## HackUPC server

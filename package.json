@@ -15,7 +15,7 @@
     "dist:styles": "npm-run-all -p scss:* && postcss -u autoprefixer -r dist/assets/css/*",
     "dist:scripts": "npm-run-all -p minjs:*",
     "dist:images": "imagemin-newer src/images dist/assets/img -p",
-    "nocache": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/live.html",
+    "nocache": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/*.html",
     "scss:main": "node-sass --output-style compressed src/styles/main.2017w.scss dist/assets/css/main.2017w.min.css",
     "scss:live": "node-sass --output-style compressed  src/styles/app.scss dist/assets/css/app.min.css",
     "minjs:main": "tsc src/scripts/snowflakes.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/snowflakes.webgl.min.js ",
