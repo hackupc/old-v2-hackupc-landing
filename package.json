@@ -4,7 +4,7 @@
   "description": "HackUPC static landing and live web pages",
   "main": "dist/index.html",
   "scripts": {
-    "dist": "npm-run-all -p dist:* && npm run nocache",
+    "dist": "npm-run-all -p dist:*",
     "watch": "npm-run-all --parallel serve dist watch:*",
     "serve": "http-server dist",
     "test": "standard src/scripts/*.js",
