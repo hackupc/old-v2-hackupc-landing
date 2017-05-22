@@ -299,7 +299,6 @@
 		}
 	}
 
-
 	function prompt(title, message, acceptMsg, acceptCb, denyMsg, denyCb){
 		var p = Util.inflateWith("promptTemplate", {
 			title:title,
