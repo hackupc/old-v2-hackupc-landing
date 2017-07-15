@@ -29,6 +29,7 @@ Use `npm run serve` to serve `/dist` at `http://localhost:8080`.
 
 Use `npm run nocache` to enable cache burst on `index.html` and `live.html`.
 
+Use `npm run -s lint` to run linters manually.
 
 ## HackUPC server
 
