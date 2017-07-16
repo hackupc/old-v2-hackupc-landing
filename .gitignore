@@ -5,3 +5,4 @@ dist/assets/
 .DS_Store
 npm-debug.log
 src/scripts/snowflakes.webgl.js
+.idea/

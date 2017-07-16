@@ -1,0 +1,13 @@
+{
+    "extends": "standard",
+    "plugins": [
+        "standard",
+        "promise"
+    ],
+    "rules": {
+        "semi": ["off", "never"],
+        "indent": ["error", "tab"],
+        "no-tabs": ["off", "false"],
+        "quotes": ["off", "never"]
+    }
+}
