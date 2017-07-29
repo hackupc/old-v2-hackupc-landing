@@ -1,8 +1,8 @@
 @import "bootstrap";
 
 @font-face {
-    font-family: minecraftia;
-    src: url(../fonts/minecraftia.ttf);
+    font-family: GothamBoldRegular;
+    src: url(../fonts/GothamBoldRegular.ttf);
 }
 
 
@@ -51,7 +51,7 @@ canvas {
 }
 
 .top-buttons, .top-description {
-  font-family: minecraftia;
+  font-family: GothamBoldRegular;
 }
 .top-buttons, .bottom-buttons {
     >div {
@@ -98,18 +98,7 @@ canvas {
 .top-description p { color: $button-text-color}
 
 .top-description p {
-    margin-top: 10vh;
-}
-
-.bottom-phrases {
-  display: block;
-  margin: auto;
-  width: 15%;
-}
-
-.dream-it {
-  width: 30%;
-  padding-top: 20px;
+    margin-top: 2vh;
 }
 
 h1 {
