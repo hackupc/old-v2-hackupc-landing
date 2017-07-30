@@ -44,21 +44,21 @@ canvas {
 
 @keyframes float {
 	0% {
-		background-image: url(../img/eix1.png);
+		background-image: url(../img/e1.png);
 	}
   25% {
-    background-image: url(../img/eix2.png);
+    background-image: url(../img/e2.png);
   }
 	50% {
-		background-image: url(../img/eix3.png);
+		background-image: url(../img/e3.png);
 
 	}
   75% {
-    background-image: url(../img/eix4.png);
+    background-image: url(../img/e4.png);
 
   }
 	100% {
-		background-image: url(../img/eix1.png);
+		background-image: url(../img/e1.png);
 	}
 }
 
@@ -68,7 +68,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/eix1.png);
+  background-image: url(../img/e1.png);
   background-attachment: fixed;
   background-size: 110%;
   opacity: 0.4;
