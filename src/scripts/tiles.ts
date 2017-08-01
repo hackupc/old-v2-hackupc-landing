@@ -3,10 +3,6 @@ class Tile{
 	constructor(){
 		this.container = document.createElement("div");
 		this.container.classList.add("tile");
-		let img = document.createElement ("img");
-        img.src = "assets/img/mask.png";
-        this.container.appendChild (img);
-
 	}
 
 	paint(c: TileColors, timeout: number = 2500){
@@ -90,7 +86,7 @@ class TileGrid {
 
 	//Tiles are squares, so we only need the width
 	constructor(windowWidth: number, windowHeight: number, 
-				tileWidth: number = 100, 
+				tileWidth: number = 120, 
 				containerSelector: string = "#background")	{
 		
 		this._rows = new Array();
