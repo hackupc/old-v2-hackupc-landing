@@ -13,7 +13,7 @@
 		top:0;
 		content:" ";
 		width: 1351px;
-		height: 651px;
+		height: 2251px;
 		background-image: url("../img/street-mask.png");
  		background-size: cover;
  		background-position: 50% 46%;
@@ -42,17 +42,27 @@ h1, h2 {
 	margin-right: 32px;
 	margin-top: 55px;
 	transform: rotate(-45deg);
-	background-color: #efeae4;
+	background-color: #DBDBDB;
 	transition: background-color 2500ms;
 }
 
 .tile.yellow {
-	background-color: #f3ac73;
+	background-color: #FCCE21;
 	transition: background-color 2500ms;
 }
 
 .tile.red {
-	background-color: #e8546d;
+	background-color: #E43653;
+	transition: background-color 2500ms;
+}
+
+.tile.green {
+	background-color: #B7E24B;
+	transition: background-color 2500ms;
+}
+
+.tile.orange {
+	background-color: #ED8630;
 	transition: background-color 2500ms;
 }
 

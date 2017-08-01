@@ -8,13 +8,20 @@ class Tile{
 	paint(c: TileColors, timeout: number = 2500){
 		let cssClass: string = "";
 		
-		switch(c){
+		switch(c) {
 			case TileColors.Red:
 				cssClass = "red";
 				break;
-			case  TileColors.Yellow:
+			case TileColors.Yellow:
 				cssClass = "yellow";
 				break;
+			case TileColors.Green:
+				cssClass = "green";
+				break;
+			case TileColors.Orange:
+				cssClass = "orange";
+				break;
+
 		}
 		this.container.classList.add(cssClass);
 		setTimeout(() => {
@@ -26,6 +33,8 @@ class Tile{
 	clear(){
 		this.container.classList.remove ("red");
 		this.container.classList.remove ("yellow");
+		this.container.classList.remove ("green");
+		this.container.classList.remove ("orange");
 	}
 
 
@@ -69,7 +78,9 @@ enum TileGridState{
 
 enum TileColors{
 	Yellow,
-	Red
+	Red,
+	Green,
+	Orange
 };
 
 class TileGrid {
@@ -124,11 +135,19 @@ class TileGrid {
             let j = Math.floor (Math.random() * this._m);
 
 
-            if (Math.random() < 0.5) {
+            let randNum = Math.random();
+
+            if (randNum < 0.25) {
                 this._rows[i].getTile(j).paint(TileColors.Yellow);
             }
+            else if (randNum < 0.5) {
+							this._rows[i].getTile(j).paint(TileColors.Red);
+						}
+						else if (randNum < 0.75) {
+							this._rows[i].getTile(j).paint(TileColors.Green);
+						}
             else {
-                this._rows[i].getTile(j).paint(TileColors.Red);
+                this._rows[i].getTile(j).paint(TileColors.Orange);
             }
         }
         else if (this._currentState == TileGridState.Static) {
@@ -137,9 +156,9 @@ class TileGrid {
             for (let row in this._rows) {
             	let i = Number(row);
                 if(i < this._n * 0.25)
-					this._rows[i].paint(TileColors.Yellow);
+									this._rows[i].paint(TileColors.Yellow);
                 else if(i > this._n * 0.75)
-					this._rows[i].paint(TileColors.Red);
+									this._rows[i].paint(TileColors.Red);
                 
             }
         }
@@ -159,8 +178,8 @@ class TileGrid {
 document.addEventListener ("DOMContentLoaded", function () {
     let tg = new TileGrid(window.innerWidth, window.innerHeight);
     
-    document.body.addEventListener ("click", function () {
-        tg.changeState();
-    });
+    // document.body.addEventListener ("click", function () {
+    //     tg.changeState();
+    // });
 
 });
