@@ -1,87 +1,170 @@
-/*function clear () {
-    matrix.forEach (function (row, i) {
-        row.forEach (function (tile) {
-            tile.classList.remove ("red");
-            tile.classList.remove ("yellow");
-        });
-    });
-}*/
+class Tile{
+	container: Element;
+	constructor(){
+		this.container = document.createElement("div");
+		this.container.classList.add("tile");
+		let img = document.createElement ("img");
+        img.src = "assets/img/mask.png";
+        this.container.appendChild (img);
 
-let state: number = 1;
-let lastState: number = 0;
-let TILE_WIDTH: number = 100;
-let matrix: Array<Array<any>> = [];
+	}
 
-function clear () {
-	for (let row of matrix) {
-		for (let tile of row) {
-    tile.classList.remove ("red");
-    tile.classList.remove ("yellow");
+	paint(c: TileColors, timeout: number = 2500){
+		let cssClass: string = "";
+		
+		switch(c){
+			case TileColors.Red:
+				cssClass = "red";
+				break;
+			case  TileColors.Yellow:
+				cssClass = "yellow";
+				break;
+		}
+		this.container.classList.add(cssClass);
+		setTimeout(() => {
+
+			this.container.classList.remove(cssClass);
+		}, timeout);
+	}
+
+	clear(){
+		this.container.classList.remove ("red");
+		this.container.classList.remove ("yellow");
+	}
+
+
+}
+
+class TileRow{
+	container: Element;
+	private _tiles: Array<Tile>;
+
+	constructor(){
+		this._tiles = new Array();
+		this.container = document.createElement("div");
+		this.container.classList.add("tiles-row");
+	}
+
+	add(t: Tile){
+		this.container.appendChild(t.container);
+		this._tiles.push(t);
+	}
+
+	paint(c: TileColors, timeout: number = 2500){
+		for(let tile of this._tiles) {
+			tile.paint(c, timeout);
+		}
+	}
+
+	clear(){
+		for(let tile of this._tiles) {
+			tile.clear();
+		}
+	}
+	getTile(i: number){
+		return this._tiles[i];
+	}
+}
+
+enum TileGridState{
+	Static,
+	Random
+};
+
+enum TileColors{
+	Yellow,
+	Red
+};
+
+class TileGrid {
+	container: Element;
+	readonly tickDelay: number = 200;
+	private _rows: Array<TileRow>;
+	private _currentState: TileGridState;
+	private _lastState: TileGridState;
+
+	//Number of horizontal rows
+	private _n: number;
+	//Tiles per row
+	private _m: number;
+
+	//Tiles are squares, so we only need the width
+	constructor(windowWidth: number, windowHeight: number, 
+				tileWidth: number = 100, 
+				containerSelector: string = "#background")	{
+		
+		this._rows = new Array();
+		this._currentState = TileGridState.Random;
+		
+
+		this._n = window.innerHeight / tileWidth * 2 + 1;
+		this._m = window.innerWidth / tileWidth + 1;
+		this.container = document.querySelector(containerSelector);
+
+		for (let i = 0; i < this._n; i++) {
+			let row = new TileRow();
+			
+			for (let j = 0; j < this._m; j++) {
+				let tile = new Tile();
+				row.add(tile);
+			}
+
+			this.container.appendChild (row.container);
+			this._rows.push(row);
+		}
+		var that = this;
+		setInterval(() => this.tick(), this.tickDelay);
+	}
+
+	tick(){
+
+        if (this._lastState != this._currentState) {
+            this.clear();
+        }
+        if (this._currentState == TileGridState.Random) {
+            this._lastState = TileGridState.Random;
+            
+            let i = Math.floor (Math.random() * this._n);
+            let j = Math.floor (Math.random() * this._m);
+
+
+            if (Math.random() < 0.5) {
+                this._rows[i].getTile(j).paint(TileColors.Yellow);
+            }
+            else {
+                this._rows[i].getTile(j).paint(TileColors.Red);
+            }
+        }
+        else if (this._currentState == TileGridState.Static) {
+            this._lastState = TileGridState.Static;
+
+            for (let row in this._rows) {
+            	let i = Number(row);
+                if(i < this._n * 0.25)
+					this._rows[i].paint(TileColors.Yellow);
+                else if(i > this._n * 0.75)
+					this._rows[i].paint(TileColors.Red);
+                
+            }
+        }
+	}
+
+	changeState(){
+		this._currentState = (this._currentState + 1) % 2;
+	}
+
+	clear(){
+		for(let row of this._rows) {
+			row.clear();
 		}
 	}
 }
 
 document.addEventListener ("DOMContentLoaded", function () {
+    let tg = new TileGrid(window.innerWidth, window.innerHeight);
+    
     document.body.addEventListener ("click", function () {
-        state = (state + 1) % 2;
+        tg.changeState();
     });
 
-    let container = document.getElementById ("background");
-    let n = window.innerHeight / TILE_WIDTH * 2 + 1;
-    let m = window.innerWidth / TILE_WIDTH;
-    for (let i = 0; i < n; i++) {
-        let row = document.createElement ("div");
-        row.classList.add ("tiles-row");
-        matrix[i] = [];
-
-        for (let j = 0; j < m; j++) {
-            let tile = document.createElement ("div");
-            tile.classList.add ("tile");
-            let img = document.createElement ("img");
-            img.src = "assets/img/mask.png";
-            tile.appendChild (img);
-            row.appendChild (tile);
-            matrix[i][j] = tile;
-        }
-
-        container.appendChild (row);
-    }
-
-    setInterval (() => {
-        if (lastState != state) {
-            clear();
-        }
-
-        if (state === 0) {
-            lastState = 0;
-            let i = Math.floor (Math.random() * n);
-            let j = Math.floor (Math.random() * m);
-
-            if (Math.random() < 0.5) {
-                matrix[i][j].classList.add ("yellow");
-
-                setTimeout (() => {
-                    matrix[i][j].classList.remove ("yellow");
-                }, 2500);
-            }
-            else {
-                matrix[i][j].classList.add ("red");
-                setTimeout (() => {
-                    matrix[i][j].classList.remove ("red");
-                }, 2500);
-            }
-        }
-        else if (state === 1) {
-            lastState = 1;
-
-            for (let i in matrix) {
-                for (let tile of matrix[i]) {
-									if (Number(i) < 4)
-										tile.classList.add ("red");
-									else if (Number(i) > 17)
-										tile.classList.add ("yellow");
-                }
-            }
-        }
-    }, 200);
 });
