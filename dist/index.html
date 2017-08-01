@@ -13,13 +13,13 @@
 	<meta name="theme-color" content="#03A9B5">
 	<meta name="author" content="Hackers@UPC">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="assets/css/main.2017w.min.css" data-finger-print>
+	<link rel="stylesheet" href="assets/css/main.2017f.min.css" data-finger-print>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta" rel="stylesheet">
 </head>
 
 <body>
-		<div class="bg"></div>
+	<div id="bg"></div>
     <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2018/events?utm_source=eu-2018&utm_medium=TrustBadge&utm_campaign=eu-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
     <div class="container" style="-webkit-transform: translateZ(0);">
         <div class="intro">
@@ -31,14 +31,15 @@
             <div class="row top-buttons">
                 <div class="col-md-12">
                     <div class="button-container">
-                        <a href="#" target="_blank">Apply Now</a>
+                        <a href="https://my.hackupc.com" target="_blank">Apply now</a>
                     </div>
                 </div>
             </div>
             <div class="separator"></div>
             <div class="row top-description">
                 <div class="col-md-12">
-                    <p>Dream it. Hack it. Ship it.<br>700 hackers</p>
+                    <p>700 hackers</p>
+                    <h2>Dream it, hack it, ship it.</h2>
                 </div>
             </div>
         </div>
@@ -185,12 +186,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
-    <script src="assets/js/snowflakes.webgl.min.js" data-finger-print></script>
-    <script>
-    var leaves = new Leaves(false);
-    leaves.start();
-    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -200,6 +195,13 @@
       ga('create', 'UA-69542332-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <span style="display: none;">BIENE HACKUPC!</span>
+    <script type="text/javascript">
+        window.onscroll = function (e) {
+            var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
+            var bg = document.getElementById("bg");
+            bg.style.opacity = 0.1 + 0.8 * (1 - factor);   
+        }
+    </script>
+    <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>
 </body>
 </html>
