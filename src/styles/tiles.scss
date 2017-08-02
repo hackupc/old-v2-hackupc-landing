@@ -21,6 +21,7 @@
 	}
 }
 
+
 h1, h2 {
 	text-align: center;
 	color: #494949;
@@ -45,28 +46,16 @@ h1, h2 {
 	transform: rotate(-45deg);
 	background-color: #efeae4;
 	transition: background-color 2500ms;
-}
+	&.yellow {
+		background-color: #f3ac73;
+	}
 
-.tile.yellow {
-	background-color: #FCCE21;
-	transition: background-color 2500ms;
-}
+	&.red {
+		background-color: #e8546d;
+	}
 
-.tile.red {
-	background-color: #E43653;
-	transition: background-color 2500ms;
-}
+	&.green {
+		background-color: #B7E24B;
 
-.tile.green {
-	background-color: #B7E24B;
-	transition: background-color 2500ms;
-}
-
-.tile.orange {
-	background-color: #ED8630;
-	transition: background-color 2500ms;
-}
-
-.tile img {
-	width: 100%;
+	}
 }

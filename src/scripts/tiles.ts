@@ -18,10 +18,6 @@ class Tile{
 			case TileColors.Green:
 				cssClass = "green";
 				break;
-			case TileColors.Orange:
-				cssClass = "orange";
-				break;
-
 		}
 		this.container.classList.add(cssClass);
 		setTimeout(() => {
@@ -34,7 +30,6 @@ class Tile{
 		this.container.classList.remove ("red");
 		this.container.classList.remove ("yellow");
 		this.container.classList.remove ("green");
-		this.container.classList.remove ("orange");
 	}
 
 	remove(){
@@ -90,8 +85,7 @@ enum TileGridState{
 enum TileColors{
 	Yellow,
 	Red,
-	Green,
-	Orange
+	Green
 };
 
 class TileGrid {
@@ -206,21 +200,17 @@ class TileGrid {
             let i = Math.floor (Math.random() * this._n);
             let j = Math.floor (Math.random() * this._m);
 
-
             let randNum = Math.random();
 
             if (randNum < 0.25) {
                 this._rows[i].getTile(j).paint(TileColors.Yellow);
             }
             else if (randNum < 0.5) {
-							this._rows[i].getTile(j).paint(TileColors.Red);
-						}
-						else if (randNum < 0.75) {
-							this._rows[i].getTile(j).paint(TileColors.Green);
-						}
-            else {
-                this._rows[i].getTile(j).paint(TileColors.Orange);
-            }
+				this._rows[i].getTile(j).paint(TileColors.Red);
+			}
+			else if (randNum < 0.75) {
+				this._rows[i].getTile(j).paint(TileColors.Green);
+			}
         }
         else if (this._currentState == TileGridState.Static) {
             this._lastState = TileGridState.Static;

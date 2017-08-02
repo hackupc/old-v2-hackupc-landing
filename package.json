@@ -26,7 +26,7 @@
     "watch:fonts": "onchange \"src/fonts\" -- npm-run-all dist:fonts notify-update",
     "watch:data": "onchange \"src/data\" -- npm-run-all dist:data notify-update",
     "watch:images": "onchange \"src/images\" -- npm-run-all dist:images notify-update",
-    "clean": "rm -Rf dist/assets/js dist/assets/css && mkdirp dist/assets/js dist/assets/fonts",
+    "clean": "rm -Rf dist/assets/js dist/assets/css && mkdir -p dist/assets/js dist/assets/fonts",
     "lint": "npm-run-all --silent --parallel -c lint:*",
     "lint:html": "htmllint dist/*.html",
     "lint:sass": "sass-lint -v -q -c .sass-lint.yml 'src/styles/*.scss'",
