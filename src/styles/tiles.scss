@@ -46,18 +46,17 @@ h1, h2 {
 	transform: rotate(-45deg);
 	background-color: #efeae4;
 	transition: background-color 2500ms;
-}
 
-.tile.yellow {
-	background-color: #f3ac73;
-	transition: background-color 2500ms;
-}
+	&.yellow {
+		background-color: #f3ac73;
+	}
 
-.tile.red {
-	background-color: #e8546d;
-	transition: background-color 2500ms;
-}
+	&.red {
+		background-color: #e8546d;
+	}
 
-.tile img {
-	width: 100%;
+	&.green {
+		background-color: #B7E24B;
+
+	}
 }

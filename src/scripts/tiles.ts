@@ -15,6 +15,9 @@ class Tile{
 			case  TileColors.Yellow:
 				cssClass = "yellow";
 				break;
+			case TileColors.Green:
+				cssClass = "green";
+				break;
 		}
 		this.container.classList.add(cssClass);
 		setTimeout(() => {
@@ -26,6 +29,7 @@ class Tile{
 	clear(){
 		this.container.classList.remove ("red");
 		this.container.classList.remove ("yellow");
+		this.container.classList.remove ("green");
 	}
 
 
@@ -69,7 +73,8 @@ enum TileGridState{
 
 enum TileColors{
 	Yellow,
-	Red
+	Red,
+	Green
 };
 
 class TileGrid {
@@ -123,9 +128,12 @@ class TileGrid {
             let i = Math.floor (Math.random() * this._n);
             let j = Math.floor (Math.random() * this._m);
 
-
-            if (Math.random() < 0.5) {
+            let rand = Math.random();
+            if ( rand < 0.33) {
                 this._rows[i].getTile(j).paint(TileColors.Yellow);
+            }
+            else if (rand < 0.66) {
+                this._rows[i].getTile(j).paint(TileColors.Green);
             }
             else {
                 this._rows[i].getTile(j).paint(TileColors.Red);
