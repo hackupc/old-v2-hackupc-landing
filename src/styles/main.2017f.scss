@@ -109,7 +109,7 @@ canvas {
 
 .top-description h2 {
     @include center-block();
-    color: $title-color;
+    color:  $text-color;
     text-align: center;
 }
 
