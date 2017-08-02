@@ -10,15 +10,17 @@
 	margin-top: -100px;
 	&:after{
 		position:fixed;
+		background-attachment:fixed;
 		top:0;
 		content:" ";
-		width: 1351px;
-		height: 651px;
+		width: 100%;
+		height: 100%;
 		background-image: url("../img/street-mask.png");
- 		background-size: cover;
- 		background-position: 50% 46%;
+ 		background-size: 1347px 2251px;
+ 		background-position:0px 0px;
 	}
 }
+
 
 h1, h2 {
 	text-align: center;
