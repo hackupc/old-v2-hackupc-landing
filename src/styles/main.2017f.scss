@@ -11,10 +11,10 @@ $text-color: #494949;
 $title-color: #E91753;
 $link-color: #E91753;
 $link-color-dark: darken($link-color, 25%);
-$button-text-color: #494949;
-$button-body-color: #fff;
+$button-text-color: white;
+$button-body-color: #E91753;
 $button-highlight-color: #fff;
-$button-bottom-color: #E91753;
+$button-bottom-color: darken($button-body-color, 25%);
 
 
 body {
