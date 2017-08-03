@@ -270,9 +270,9 @@ function debounce(func, wait, immediate?) {
 document.addEventListener ("DOMContentLoaded", function () {
     let tg = new TileGrid(window.innerWidth, window.innerHeight);
     
-    document.body.addEventListener ("click", function () {
-         tg.changeState();
-    });
+    //document.body.addEventListener ("click", function () {
+      //   tg.changeState();
+    //});
 
 
     window.addEventListener('resize',
