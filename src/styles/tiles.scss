@@ -46,13 +46,16 @@ h1, h2 {
 	transform: rotate(-45deg);
 	background-color: #efeae4;
 	transition: background-color 2500ms;
-
 	&.yellow {
 		background-color: #f3ac73;
 	}
 
 	&.red {
 		background-color: #e8546d;
+	}
+
+	&.orange{
+		background-color: #FCCE21;
 	}
 
 	&.green {
