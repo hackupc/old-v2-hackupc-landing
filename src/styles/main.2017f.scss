@@ -1,20 +1,20 @@
 @import "bootstrap";
 
 @font-face {
-    font-family: minecraftia;
-    src: url(../fonts/minecraftia.ttf);
+    font-family: GothamBoldRegular;
+    src: url(../fonts/GothamBoldRegular.ttf);
 }
 
 
 $background-color: white;
-$text-color: #b1b2c1;
-$title-color: #03a9b5;
-$link-color: #F44336;
-$link-color-dark: #fc6f6f;
+$text-color: #494949;
+$title-color: #E91753;
+$link-color: #E91753;
+$link-color-dark: darken($link-color, 25%);
 $button-text-color: white;
-$button-body-color: #fc6f6f;
-$button-highlight-color: #fc6f6f;
-$button-bottom-color: #FF5252;
+$button-body-color: #E91753;
+$button-highlight-color: #fff;
+$button-bottom-color: darken($button-body-color, 25%);
 
 
 body {
@@ -40,6 +40,16 @@ canvas {
     left: 0px;
 }
 
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/reticula_bcn_web.png) fixed;
+	background-size: 110%;
+}
+
 .intro {
     height: 100vh;
 }
@@ -51,7 +61,7 @@ canvas {
 }
 
 .top-buttons, .top-description {
-  font-family: minecraftia;
+  font-family: GothamBoldRegular;
 }
 .top-buttons, .bottom-buttons {
     >div {
@@ -60,17 +70,16 @@ canvas {
     .button-container {
         display: inline-block;
         a {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             &:first-child {
                 margin-right: 15px;
             }
-      	    &:hover {
-            		background-color: $button-highlight-color;
-            		border-bottom-width: 6px;
-            		position: relative;
-            		top: 4px;
-      	    }
+            &:hover {
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+            }
             display: inline-block;
             text-decoration: none;
+            text-transform: uppercase;
             background-color: $button-body-color;
             color: $button-text-color;
             width: 160px;
@@ -79,6 +88,7 @@ canvas {
             font-size: 1.4em;
             border: none;
             border-bottom: 10px solid $button-bottom-color;
+            transition: all .2s linear;
         }
     }
 }
@@ -90,15 +100,17 @@ canvas {
 
 .top-description p, .bottom-description p, .coming-soon p {
     @include center-block();
-    color: $title-color;
+    color: $text-color;
     font-size: 1.3em;
     line-height: 1.9em;
     text-align: center;
 }
-.top-description p { color: $button-text-color}
 
-.top-description p {
-    margin-top: 10vh;
+
+.top-description h2 {
+    @include center-block();
+    color: $text-color;
+    text-align: center;
 }
 
 h1 {
