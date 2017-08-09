@@ -8,8 +8,7 @@
 [![Build Status](https://travis-ci.org/hackupc/frontend.svg?branch=master)](https://travis-ci.org/hackupc/frontend)
 [![Code Climate](https://codeclimate.com/github/hackupc/frontend/badges/gpa.svg)](https://codeclimate.com/github/hackupc/frontend)
 
-Static page for HackUPC. Includes live schedule and information important during the event.
-
+Static frontend page for HackUPC. Includes live schedule and information important during the event.
 
 # Setup
 
