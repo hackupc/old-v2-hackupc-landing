@@ -21,6 +21,12 @@ npm install
 
 Use `npm run watch` to compile and serve the dist directory in real time.
 
+
+## Add new logo images for sponsors and partners
+
+- Edit image remove background, add whitespace
+- Resize the image to `600 x 400 px`
+
 # Deploy
 
 Use `npm run dist` to compile all dist directory.
