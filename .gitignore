@@ -1,7 +1,8 @@
 .sass-cache
 bower_components
 node_modules
-dist/assets/
+dist/
+!dist/favicon.ico
 .DS_Store
 npm-debug.log
 src/scripts/snowflakes.webgl.js
