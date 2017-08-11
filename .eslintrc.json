@@ -8,6 +8,7 @@
         "semi": ["off", "never"],
         "indent": ["error", "tab"],
         "no-tabs": ["off", "false"],
-        "quotes": ["off", "never"]
+        "quotes": ["off", "never"],
+        "no-unused-vars": ["warn", { "vars": "local"}]
     }
 }
