@@ -59,6 +59,7 @@
     "postcss-cli": "^2.6.0",
     "sass-lint": "^1.10.2",
     "standard": "^8.0.0",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^2.7.5",
+    "typescript": "^2.0.3"
   }
 }
