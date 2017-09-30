@@ -124,6 +124,14 @@ h1 {
     color: $text-color;
 }
 
+.button-container {
+	padding-top: 20px;
+
+	span {
+		font-size: 1.4em;
+	}
+}
+
 .faq-questions {
     .title {
         font-size: 1.6em;
