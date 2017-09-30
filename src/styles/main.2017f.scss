@@ -121,7 +121,15 @@ h1 {
 }
 
 .button-container > h2 {
-    color: white;
+    color: $text-color;
+}
+
+.button-container {
+	padding-top: 20px;
+
+	span {
+		font-size: 1.4em;
+	}
 }
 
 .faq-questions {
