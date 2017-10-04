@@ -1,14 +1,14 @@
 /*---COLORS---*/
-$bgColor: #03a9b5;
+$bgColor: #efeae4;
 $lightBgColor: #e8c4c4;
-$textColor: white;
-$secondaryTextColor: #333;
+$textColor: #494949;
 $contrastColor:white;
-$secondaryColor: #ff5252;
+$secondaryColor: #E91753;
+$secondaryTextColor: white;
 $headerSelectorColor: gray;
 $overlayColor:rgba(0,0,0,0.4);
 //Links
-$highlightColor: darken($bgColor, 25%);
+$highlightColor: darken($secondaryColor, 25%);
 $mlhHardwareBtn: $highlightColor;
 
 $fbColor:#3B5998;

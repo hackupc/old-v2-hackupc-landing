@@ -3,7 +3,7 @@
 		display:flex;
 		flex-wrap:wrap;
 		.table-container{
-			color: white;
+			color: $secondaryColor;
 			flex: 1 1 0;
 			margin: 0 20px;
 			h1{
@@ -11,14 +11,14 @@
 			}
 			table{
 				width:100%;
-				color:$contrastColor;
-				border:thin solid $contrastColor;
+				color:$textColor;
+				border:thin solid $secondaryColor;
 				border-radius:6px;
 				border-collapse: collapse;
 				border-radius:5px;
 				thead{
-					color: black;
-					background-color: $contrastColor;
+					color: $secondaryTextColor;
+					background-color: $secondaryColor;
 				}
 
 				td,th{
@@ -26,7 +26,7 @@
 					text-aligh: left;
 				}
 				td{
-					border:thin solid fade($contrastColor,30%);
+					border:thin solid fade($secondaryColor,20%);
 					&:last-child{
 						min-width:200px;
 					}
