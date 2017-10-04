@@ -7,3 +7,4 @@ dist/
 npm-debug.log
 src/scripts/snowflakes.webgl.js
 .idea/
+package-lock.json
