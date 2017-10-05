@@ -159,9 +159,10 @@ a{
 			position:relative;
 			margin: 15px 0px 15px 0;
 			min-height: 10px;
-			padding: 0px 0px 0 20px;
+			padding: 0px 0px 0 15px;
 			font-size: 28px;
-			border-left: 3px solid $contrastColor;
+			border-left: 3px solid $secondaryTextColor;
+			color: $secondaryTextColor;
 			align-content:center;
 			&:last-child{
 				margin-bottom:400px;
@@ -175,11 +176,11 @@ a{
 			}
 			&.happened{
 				opacity:1;
-				border-left: 2px solid fade($contrastColor, 25%);
+				border-left: 2px solid fade($secondaryTextColor, 25%);
 			}
 			&.happening::before{
 				content: '>';
-				color: $contrastColor;
+				color: $secondaryTextColor;
 				position: absolute;
 				margin-top: -4px;
 				left: -15px;
@@ -187,6 +188,10 @@ a{
 			}
 			a{
 				display:block;
+				margin-right:10px;
+				&:before{
+					content: '\f041';
+				}
 			}
 			.event{
 				margin:5px 0;
@@ -222,15 +227,6 @@ a{
 			}
 		}
 	}
-}
-
-.location-icon{
-	display:block;
-	background-image: url('#{$imgDir}/marker.png');
-	background-size: 15px 22px;
-	width: 15px;
-	height: 22px;
-	margin-right: 10px;
 }
 
 .countdown{
