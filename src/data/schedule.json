@@ -1,20 +1,20 @@
 {
-	"version":4,
-	"message": "Fixed nerf guns battle location",
+	"version":1,
+	"message": "HackUPC 2017 fall",
 	"baseTimeOffset":"-60",
-	"countdownStart":"3/3/2017 21:00",
+	"countdownStart":"13/10/2017 21:00",
 	"days":
 	[
 		{
 			"name":"Friday",
-			"date":"3/3/2017",
+			"date":"13/10/2017",
 			"events":
 			[
 				{
 					"id":"1",
 					"title": "Registration",
 					"startHour": "15:00",
-					"endHour": "18:00",
+					"endHour": "18:45",
 					"mapsLink": "/checkin",
 					"locationName": "A5-A6",
 					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
@@ -23,7 +23,7 @@
 					"id":"2",
 					"title": "Baggage check-in",
 					"startHour": "15:00",
-					"endHour": "18:00",
+					"endHour": "18:45",
 					"mapsLink": "/A6/1",
 					"locationName": "Lobby",
 					"description": "Bring your baggage and we will store it for you"
@@ -33,8 +33,8 @@
 					"title": "Opening Talk",
 					"startHour": "19:15",
 					"endHour": "21:00",
-					"mapsLink": "/vertex",
-					"locationName": "Vèrtex",
+					"mapsLink": "/sports",
+					"locationName": "Sports Center",
 					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
 				{
@@ -47,7 +47,7 @@
 					"id":"5",
 					"title": "Dinner",
 					"startHour": "21:00",
-					"endHour": "22:00",
+					"endHour": "23:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal zone",
 					"description": "Enjoy our first meal"
@@ -55,60 +55,87 @@
 				{
 					"id":"6",
 					"title": "Team Building",
-					"startHour": "21:00",
-					"endHour": "22:00",
+					"startHour": "22:30",
+					"endHour": "23:30",
 					"mapsLink": "/A5/1",
 					"locationName": "A5E02",
 					"description": "Looking for a team or new teammates?"
 				},
 				{
 					"id":"7",
-					"title": "[Talk] Between: Challenge",
-					"startHour": "22:30",
-					"endHour": "23:00",
+					"title": "[Talk] Everis: Blockchain, Ethereum and Etheris",
+					"startHour": "23:00",
+					"endHour": "23:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5001",
-					"description": "Come check Between's challenge introductory talk"
+					"locationName": "A5002",
+					"description": "Learn about Etheris: A new platform for developing blockchain applications leveraging a consensus ethereum chain"
 				},
 				{
 					"id":"8",
-					"title": "[Talk] Why you should hack in Go",
-					"startHour": "23:15",
+					"title": "[Talk] Git",
+					"startHour": "23:30",
 					"endHour": "23:59",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
-					"description": "Discover Go language with former HackUPC organizer Daniel Martí"
+					"description": "Learn Git with former HackUPC organizer Dani Torramilans"
 				},
 				{
 					"id":"9",
-					"title": "[Talk] Intro to Android",
-					"startHour": "23:15",
+					"title": "[Talk] Racket",
+					"startHour": "23:30",
 					"endHour": "23:59",
 					"mapsLink": "/A5/0",
-					"locationName": "A5001",
-					"description": "Join Rashiq for an awesome introduction to Android development"
+					"locationName": "A5002",
+					"description": "Join Marce for an awesome introduction to Racket development"
 				}
 			]
 		},
 		{
 			"name":"Saturday",
-			"date":"4/3/2017",
+			"date":"14/10/2017",
 			"events":
 			[
 				{
 					"id":"10",
-					"title": "[Talk] Intro to WebDev with Flask",
+					"title": "[Talk] Go",
 					"startHour": "00:15",
-					"endHour": "01:00",
+					"endHour": "00:45",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
-					"description": "Get started in the web development world using Flask and Python with Rashiq"
+					"description": "Get started using Go with Bernat Moix"
+				},	
+				{
+					"id":"101",
+					"title": "[Talk] Ethereum",
+					"startHour": "00:15",
+					"endHour": "00:45",
+					"mapsLink": "/A5/0",
+					"locationName": "A5002",
+					"description": "Join Scott and discover what Ehereum is"
+				},
+				{
+					"id":"102",
+					"title": "[Talk] Multiplayer Game Development",
+					"startHour": "01:00",
+					"endHour": "01:30",
+					"mapsLink": "/A5/0",
+					"locationName": "A5001",
+					"description": "Enter the multiplayer game development with David Da Silva"
+				},
+				{
+					"id":"102",
+					"title": "[Talk] Blockchain",
+					"startHour": "01:00",
+					"endHour": "01:30",
+					"mapsLink": "/A5/0",
+					"locationName": "A5002",
+					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain Technology"
 				},
 				{
 					"id":"11",
-					"title": "Midnight Snack",
-					"startHour": "01:00",
-					"endHour": "02:00",
+					"title": "Midnight Snacks",
+					"startHour": "01:30",
+					"endHour": "02:30",
 					"mapsLink": "/meal",
 					"locationName": "Meal Zone",
 					"description": "Feeling hungry? Come get some sweet waffles"
@@ -140,39 +167,39 @@
 				},
 				{
 					"id":"14",
-					"title": "[Talk] Everis: Artificial Intelligence as a Service",
+					"title": "[Talk] imaginBank",
 					"startHour": "10:00",
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5001",
-					"description": "Come learn AI with an awesome group of Everis engineers"
+					"locationName": "A5002",
+					"description": ""
 				},
 				{
 					"id":"15",
-					"title": "[Talk] Between: Intro to functional programming",
-					"startHour": "10:45",
-					"endHour": "11:15",
+					"title": "[Talk] Skyscanner",
+					"startHour": "11:00",
+					"endHour": "11:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Enter the functional programming world with Between"
+					"locationName": "A5001",
+					"description": ""
 				},
 				{
 					"id":"16",
-					"title": "[Talk] Intro to Big Data",
-					"startHour": "11:15",
-					"endHour": "11:45",
+					"title": "[Talk] GFT",
+					"startHour": "11:45",
+					"endHour": "12:15",
 					"mapsLink": "/A5/0",
-					"locationName": "A5001",
-					"description": " Come listen to Ricardo Baeza in a talk about Big Data and Data Science"
+					"locationName": "A5002",
+					"description": ""
 				},
 				{
 					"id":"17",
-					"title": "[Talk] Blockchain",
-					"startHour": "12:10",
-					"endHour": "12:40",
+					"title": "[Talk] ServiZurich",
+					"startHour": "12:30",
+					"endHour": "13:30",
 					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain technology"
+					"locationName": "A5001",
+					"description": ""
 				},
 				{
 					"id":"18",
@@ -181,13 +208,13 @@
 					"endHour": "14:00",
 					"mapsLink": "/meal",
 					"locationName": "Meal zone",
-					"description": "Come enjoy an awesome typical Spanish paella"
+					"description": "Come and get some delicious food"
 				},
 				{
 					"id":"19",
 					"title": "[Talk] Organize your hackathon",
 					"startHour": "17:00",
-					"endHour": "17:45",
+					"endHour": "18:00",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
@@ -214,7 +241,7 @@
 		},
 		{
 			"name":"Sunday",
-			"date":"5/3/2017",
+			"date":"15/10/2017",
 			"events":
 			[
 				{
@@ -229,18 +256,11 @@
 				{
 					"id":"23",
 					"title": "EPIC NERF GUNS BATTLE",
-					"startHour": "00:30",
+					"startHour": "01:00",
 					"endHour": "03:00",
 					"mapsLink": "/A4/2",
 					"locationName": "A4101/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
-				},
-				{
-					"id":"32",
-					"title": "The Game ends",
-					"startHour": "03:14",
-					"mapsLink": "",
-					"description": "You lost"
 				},
 				{
 					"id":"24",
@@ -279,9 +299,9 @@
 					"title": "Demos",
 					"startHour": "10:30",
 					"endHour": "12:30",
-					"mapsLink": "/A4/2",
-					"locationName": "A410X",
-					"description": "It's demo time! Your vote will be taken into account too!"
+					"mapsLink": "/A4",
+					"locationName": "A4",
+					"description": "It's demo time!"
 				},
 				{
 					"id":"29",
@@ -297,8 +317,8 @@
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",
-					"mapsLink": "/vertex",
-					"locationName": "Vèrtex",
+					"mapsLink": "/showers",
+					"locationName": "Sports Center",
 					"description": "And the winners are... Come watch the finalists and winners!"
 				}
 			]
