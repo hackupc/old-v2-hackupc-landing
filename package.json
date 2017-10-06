@@ -32,7 +32,7 @@
     "watch:html": "onchange \"src/*.html\" -- npm-run-all --silent lint:html dist:html",
     "clean": "rm -Rf dist/assets/js dist/assets/css dist/index.html  dist/live.html && mkdirp dist/assets/js dist/assets/fonts",
     "lint": "npm-run-all --silent --parallel -c lint:*",
-    "lint:html": "htmllint dist/*.html",
+    "lint:html": "htmllint src/*.html",
     "lint:sass": "sass-lint -v -q -c .sass-lint.yml 'src/styles/*.scss'",
     "lint:js": "eslint src/scripts/*.js"
   },

@@ -5,6 +5,11 @@
 <br>
 
 
+[![Build Status](https://travis-ci.org/hackupc/frontend.svg?branch=master)](https://travis-ci.org/hackupc/frontend)
+[![Code Climate](https://codeclimate.com/github/hackupc/frontend/badges/gpa.svg)](https://codeclimate.com/github/hackupc/frontend)
+
+Static frontend page for HackUPC. Includes live schedule and information important during the event.
+
 # Setup
 
 We recommend having Node v6 installed on your computer.
@@ -32,8 +37,6 @@ Use `npm run watch` to compile and serve the dist directory in real time.
 Use `npm run dist` to compile all dist directory.
 
 Use `npm run serve` to serve `/dist` at `http://localhost:8080`.
-
-Use `npm run nocache` to enable cache burst on `index.html` and `live.html`.
 
 Use `npm run -s lint` to run linters manually.
 
