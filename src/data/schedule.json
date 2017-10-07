@@ -72,7 +72,7 @@
 				},
 				{
 					"id":"8",
-					"title": "[Talk] Git",
+					"title": "[Talk] Intro to Git",
 					"startHour": "23:30",
 					"endHour": "23:59",
 					"mapsLink": "/A5/0",
@@ -81,7 +81,7 @@
 				},
 				{
 					"id":"9",
-					"title": "[Talk] Racket",
+					"title": "[Talk] Intro to Racket",
 					"startHour": "23:30",
 					"endHour": "23:59",
 					"mapsLink": "/A5/0",
@@ -97,7 +97,7 @@
 			[
 				{
 					"id":"10",
-					"title": "[Talk] Go",
+					"title": "[Talk] Get started using Go",
 					"startHour": "00:15",
 					"endHour": "00:45",
 					"mapsLink": "/A5/0",
@@ -106,16 +106,16 @@
 				},	
 				{
 					"id":"101",
-					"title": "[Talk] Ethereum",
+					"title": "[Talk] Intro to Android",
 					"startHour": "00:15",
 					"endHour": "00:45",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
-					"description": "Join Scott and discover what Ehereum is"
+					"description": "Join Abdulhakim, a GitHub Campus Expert, and learn the first steps in Android Development"
 				},
 				{
 					"id":"102",
-					"title": "[Talk] Multiplayer Game Development",
+					"title": "[Talk] Enter the Multiplayer Game Development",
 					"startHour": "01:00",
 					"endHour": "01:30",
 					"mapsLink": "/A5/0",
@@ -124,7 +124,7 @@
 				},
 				{
 					"id":"102",
-					"title": "[Talk] Blockchain",
+					"title": "[Talk] Intro to Blockchain",
 					"startHour": "01:00",
 					"endHour": "01:30",
 					"mapsLink": "/A5/0",
@@ -176,21 +176,21 @@
 				},
 				{
 					"id":"15",
-					"title": "[Talk] Skyscanner",
+					"title": "[Talk] Intro to Skyscanner API",
 					"startHour": "11:00",
 					"endHour": "11:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
-					"description": ""
+					"description": "Discover how Skyscanner API works"
 				},
 				{
 					"id":"16",
-					"title": "[Talk] GFT",
+					"title": "[Talk] GFT: Exploring ARMKit in iOS",
 					"startHour": "11:45",
 					"endHour": "12:15",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
-					"description": ""
+					"description": "Learn about how to use ARMKit in iOS development"
 				},
 				{
 					"id":"17",
