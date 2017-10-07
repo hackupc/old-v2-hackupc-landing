@@ -10,7 +10,7 @@ var Util = (function(CONST){
 	var obj = {};
 	/*
 	* Loads a file asynchronously
-	* if succesfull calls cb(response), 
+	* if succesfull calls cb(response),
 	* else calls cberr(statusText)
 	*/
 	obj.loadFile = function (sURL, cb, cberr) {
@@ -21,13 +21,13 @@ var Util = (function(CONST){
 					if(typeof cb == "function")
 						cb(this.responseText);
 				} else {
-					if(typeof cb == "function")
+					if(typeof cberr == "function")
 						cberr(this.statusText);
 				}
 			}
 		};
 		oReq.onerror = function(){
-			if(typeof cb == "function")
+			if(typeof cberr == "function")
 				cberr(this.statusText);
 		};
 		oReq.open("GET", sURL, true);
@@ -141,21 +141,21 @@ var Util = (function(CONST){
 	};
 
 	obj.getHumanTime = function(s){
-		return{ 
-			seconds: parseInt(s%60), 
-			minutes:parseInt(s/60 % 60), 
+		return{
+			seconds: parseInt(s%60),
+			minutes:parseInt(s/60 % 60),
 			hours:parseInt(s/(60*60))
 		};
 	};
 
-	/* 
+	/*
 	* Given a template id, replaces '{key}' with 'data.key'
 	* and returns a clone
 	*/
 	obj.inflateWith = function(templateId, data){
 		var element = document.getElementById(templateId);
 		var clone = element.cloneNode(true);
-		clone.innerHTML = clone.innerHTML.replace(/\{(.+?)\}/g, function(full, label) { 
+		clone.innerHTML = clone.innerHTML.replace(/\{(.+?)\}/g, function(full, label) {
 			return data[label]==null ?  "" : data[label];
 		});
 
