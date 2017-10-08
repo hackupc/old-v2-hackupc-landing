@@ -194,6 +194,7 @@ a{
 				display:block;
 				margin-right:10px;
 				&:before{
+					font-family: FontAwesome;
 					content: '\f041';
 				}
 			}
@@ -216,7 +217,7 @@ a{
 				}
 				&.subscribed{
 					.title:after{
-						font-family: FontAwesome;
+						
 						content:"\f024";
 						font-size: 13px;
 						vertical-align: super;
