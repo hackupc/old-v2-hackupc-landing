@@ -81,8 +81,8 @@ a{
 				flex:1 1 auto;
 				padding:5px 10px;
 				margin:20px;
-				color:$secondaryTextColor;
-				background-color:$highlightColor;
+				color:$contrastColor;
+				background-color:$buttonColor;
 				cursor:pointer;
 			}
 		}
@@ -106,6 +106,10 @@ a{
 
 	.hide-when-small{
 		display:none !important;
+	}
+
+	.events-fancy::before{
+		box-shadow: 0px 189px 75px -60px  rgba($secondaryColor, 0.7) inset !important;
 	}
 }
 
