@@ -5,7 +5,7 @@
 	<title>Live schedule - HackUPC</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/app.min.css" data-finger-print>
 	<script src="assets/js/app.min.js" data-finger-print></script>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="Live schedule - HackUPC | March 3rd - 5th | Barcelona | 500 Hackers"/>
   	<meta property="og:site_name" content="Live schedule - HackUPC"/>
@@ -92,9 +92,9 @@
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
 		<div class="event" data-event-id="{id}" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent" data-update-action="updateFancyEvent">
-			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"><span class="location-icon"></span></a>
+			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"></a>
 			<div class='event-hour'>
-				<div>{startHour}</div> 
+				<div>{startHour}</div>
 				<div class="end-hour">{endHour}</div>
 			</div>
 			<div class="title">
@@ -125,7 +125,7 @@
 			<div>x</div>
 		</div>
 		<div class="logo">
-			<img src="assets/img/logo.png"/>
+			<img src="assets/img/hackupc-header-imagin-bank.png"/>
 		</div>
 		<nav>
 			<ul>
@@ -135,8 +135,8 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li data-bind-view="live">
-					<a href="#/live">Live</a>
+				<li data-bind-view="travel">
+					<a href="#/travel">Travel</a>
 				</li>
 				<li>
 					<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>
@@ -169,8 +169,8 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li data-bind-view="live">
-					<a href="#/live">Live</a>
+				<li data-bind-view="travel">
+					<a href="#/travel">Travel</a>
 				</li>
 				<li id="countdown-li">
 					<div>
@@ -199,7 +199,7 @@
 		<article id="fullscreen">
 			<div>
 				<div id="countdown-full" class="hide-when-small">
-					<img class="logo" src="assets/img/logo.png"/>
+					<img class="logo" src="assets/img/hackupc-header-imagin-bank-white.png"/>
 					<div class="countdown">
 						<div>
 							<span>36:00</span>:00.00
@@ -229,25 +229,25 @@
 				<div class="panel">
 					<h1>Important Info</h1>
 					<div>
-						<h2 class="label">Wifi:</h2> 
-						<span>HackUPC-Wifi</span>
+						<h2 class="label">Wifi:</h2>
+						<span>??</span>
 					</div>
 					<div>
-						<h2 class="label">Password:</h2> 
-						<span>wgBsdYcV</span>
+						<h2 class="label">Password:</h2>
+						<span>??</span>
 					</div>
 					<div>
 						<h2>Links:</h2>
-						<div class="buttons">
+	<!-- 					<div class="buttons">
 							<a target="_blank" href="https://expo.hackupc.com">Projects</a>
+						</div> -->
+						<br>
+						<div class="buttons">
+							<a class="you-lost" href="#">???</a>
 						</div>
 						<br>
 						<div class="buttons">
-							<a target="_blank" class="you-lost" href="https://game.hackupc.com">THE GAME</a>
-						</div>
-						<br>
-						<div class="buttons">
-							<a target="_blank" href="https://hackupc2017w.devpost.com">Submit project  (by Sunday 9:30 AM)</a>
+							<a target="_blank" href="https://hackupc2017f.devpost.com">Submit project  (by Sunday 9:30 AM)</a>
 						</div>
 					</div>
 					<div>
@@ -259,15 +259,15 @@
 				<div class="panel">
 					<h1>Contact</h1>
 					<div>
-						<h2 class="icon">&#9993;</h2> 
+						<h2 class="icon">&#9993;</h2>
 						<span><a href="mailto:contact@hackupc.com" target="_blank">contact@hackupc.com</a></span>
 					</div>
 					<div>
-						<h2 class="icon">#</h2> 
-						<span><a  target="_blank" href="https://hackupc2017w.slack.com">Slack</a></span>
+						<h2 class="icon">#</h2>
+						<span><a  target="_blank" href="https://hackupc2017f.slack.com">Slack</a></span>
 					</div>
 					<div>
-						<h2>Emergency phone</h2> 
+						<h2>Emergency phone</h2>
 						<span>112</span>
 					</div>
 					<div>
@@ -275,6 +275,7 @@
 						<div class="buttons">
 							<a class="fb" target="_blank" href="https://www.facebook.com/hackupc/">Facebook</a>
 							<a class="tw"  target="_blank" href="https://twitter.com/hackupc">Twitter</a>
+							<a  target="_blank" href="https://instagram.com/hackupc">Instagram</a>
 							<a class="yt"  target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g">Youtube</a>
 						</div>
 					</div>
@@ -285,16 +286,16 @@
 						<h2>Via plane</h2>
 						<h3>Arriving</h3>
 						<p>
-							Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="http://maps.hackupc.com">maps</a>. 
+							Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="http://maps.hackupc.com">maps</a>.
 						</p>
 						<p>
-							We recommend checking out the <a href="https://citymapper.com/barcelona" target="_blank">Citymapper app</a>, they usually have a really great updated information about public transportation. 
+							We recommend checking out the <a href="https://citymapper.com/barcelona" target="_blank">Citymapper app</a>, they usually have a really great updated information about public transportation.
 						</p>
 						<p>
 							Don't get a T-10 ticket if you are in the airport, you won't be able to use it from there. Buy a single trip ticket from the airport instead.
 						</p>
 						<h3>Leaving</h3>
-						<p> 
+						<p>
 							Take the metro L9 in <b>Zona Universitària</b> towards <b>Aeroport T1</b>. Stop at either <b> Aeroport T1</b> or <b>Aeroport T2</b> depending on the terminal your plane is departing from.
 						</p><br>
 						<h2>Via train</h2>
@@ -306,6 +307,22 @@
 			<div>
 		</article>
 		<article id="schedule" class="under-header padding-bottom">
+		</article>
+				<article id="travel" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel">
+					<h1>Travel reimbursement</h1>
+					<p>
+						If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement:
+					</p>
+					<ul>
+						<li>Received an email with travel reimbursement amount.</li>
+						<li>Travel reimbursement receipts submitted before the end of HackUPC or before the date specified by the HackUPC Team</li>
+						<li>Project submitted to Devpost before the due date</li>
+					</ul>
+					<p>The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1 - 2 months time period. Also, remember that you need to post a project before the deadline in order to get the reimbursement.</p>
+				</div>
+			</div>
 		</article>
 		<article id="rules" class="under-header padding-bottom">
 			<div class="container">
@@ -398,15 +415,6 @@
 					</ul>
 
 					<p>So don't worry about coming up with the next big idea or building the next Facebook. You'll have plenty of time for that outside the hackathon. just focus on learning, having fun, and making new friends. At the end of the day the skills you learn and the friends you make might lead to the next big thing—but you don't have to do that to win a hackathon.</p>
-					<h2>Travel reimbursement</h2>
-					<p>
-						If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement:
-					</p>
-					<ul>
-						<li>Received an email with travel reimbursement amount.</li>
-						<li>Travel reimbursement receipts submitted before the end of HackUPC or before the date specified by the HackUPC Team</li>
-						<li>Project submitted to Devpost before the due date</li>
-					</ul>
 					<h2>Remember</h2>
 					<p>
 						The competition is just a part of the hackathon. To make the most out of the event, try something new, teach other people, and make new friends!
@@ -422,13 +430,15 @@
 
 				<div class="panel">
 					<h1>Hardware List</h1>
-					<p style="text-align: center">Live hardware lab availability (number of items available / numbers of items at HackUPC)
-					<ul id="hardwareList">
+					<h2 style="text-align: center;">Hardware availability will be available very soon<span style="display: none;">REALLY BAD JOKE</span></h2>
+					<p style="text-align: center;">We thank you for your patience</p>
+<!-- 					<p style="text-align: center">Live hardware lab availability (number of items available / numbers of items at HackUPC)
+					<ul id="hardwareList"> -->
 					<!-- To be filled by Javascript -->
-					</ul>
+<!-- 					</ul>
 					<div class="buttons">
 						<a href="https://hardware.mlh.io" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</article>
@@ -436,7 +446,9 @@
 			<div class="container">
 				<div class="panel large">
 					<h1>HackUPC</h1>
-					<h2>1st prize</h2>
+					<h2 style="text-align: center;">Challenges and prizes will be announced very soon</h2>
+					<p style="text-align: center;">We thank you for your patience</p>
+				<!-- 	<h2>1st prize</h2>
 					<p>
 						Drone kit
 						JetBrains subscription x4
@@ -449,135 +461,16 @@
 					<h2>3rd prize</h2>
 					<p>
 						Arduino kits x4
-					</p>
+					</p> -->
 					<!--You lost-->
-					<h2>The Game</h2>
+					<!-- <h2>The Game</h2>
 					<p>
 						Peeble
 						HackUPC "The game" t-shirt
-					</p>
+					</p> -->
 				</div>
-				<div class="panel">
-					<h1>FIB API Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_fib</span>
-					</div>
-					<p>
-						Build something with the new <a href="https://api.fib.upc.edu">FIB API</a>. Find the guide to the challenge here: <a href="https://bit.ly/fibapi_guide">https://bit.ly/fibapi_guide</a>
-					</p>
-					<h2>Prize</h2>
-					<p>
-						Pioneer headphones
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Between Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_between</span>
-					</div>
-					<p>
-						SmartLocation to save lives.Smartphone with GPS technology can be a very useful tool to save lives in emergency situations. Find a way to help people in need using the geolocation of smartphones. More information on the channel.
-						
-					</p>
-					<h2>Prize</h2>
-					<p>
-						MIXMART Sports Camera 360º
-					</p>
-				</div>
-				<div class="panel">
-					<h1>EVERIS Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_everis</span>
-					</div>
-					<p>
-						Help people with Artificial Intelligence. Develop a project using Everis Cognitive API: <a href="http://everismoriarty.com/demo">EverisMoriarty</a>.
-					</p>
-					<h2>Prize</h2>
-					<p>
-						Chromecast
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Esri Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_esri</span>
-					</div>
-					<p>
-						Create an application that uses Esri’s Technology that improve Blablarcar search algorithm. Check the available guide here:<a href="http://bit.ly/hupc_esrichallenge">http://bit.ly/hupc_esrichallenge</a>.
-						
-					</p>
-					<h2>Prize</h2>
-					<p>
-						Mini drone
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Scalingo Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_scalingo</span>
-					</div>
-					<p>
-						Coolest hack hosted on Scalingo
-					</p>
-					<h2>Prizes</h2>
-					<p>
-						Nerf guns, Credit to host your future projects, Scalingo swag
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Signaturit Challenge</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_signaturit</span>
-					</div>
-					<p>
-						Best use of <a href="http://docs.Signaturit.com">Signaturit API</a>
-					</p>
-					<h2>Prize</h2>
-					<p>
-						Raspberry Pi 3
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Bloomberg prize</h1>
-					<div>
-						<h3 class="label">Channel:</h3> 
-						<span>#challenge_bloomberg</span>
-					</div>
-					<p>
-						Bloomberg's favourite hack. Also includes a HackerRank competition <a href="https://hr.gs/hackupc2017">hr.gs/hackupc2017</a>
-					</p>
-					<h2>Prize</h2>
-					<p>
-						A.R. Drone 2.0
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Shapeways Prize</h1>
-					<p>
-						Best 3D printing hack
-					</p>
-					<h2>Prize</h2>
-					<p>
-						25€ on shapeways
-					</p>
-				</div>
-				<div class="panel">
-					<h1>Best .Tech domain</h1>
-					<p>
-						Best use of .tech domains
-					</p>
-					<h2>Prize</h2>
-					<p>
-						50$ Amazon Gift Card
-					</p>
-				</div>
-				<div class="panel">
+
+<!-- 				<div class="panel">
 					<h1>Best Domain.com domain</h1>
 					<p>
 						Best domain by Domain.com
@@ -606,7 +499,7 @@
 					<p>
 						A HackHarassment hard drive
 					</p>
-				</div>
+				</div> -->
 			</div>
 		</article>
 		<article id="faq" class="under-header padding-bottom">
@@ -626,7 +519,7 @@
 				<div class="panel">
 					<h1>What if I cannot make it in time?</h1>
 					<p>
-						No problem. Just come to our InfoDesk for a late check-in. If you are confused, please reach out to any volunteer (red t-shirts) or organizer (gray t-shirts).
+						No problem. Just come to our InfoDesk for a late check-in. If you are confused, please reach out to any volunteer (white t-shirts) or organizer (black t-shirts).
 					</p>
 				</div>
 				<div class="panel">
@@ -656,7 +549,7 @@
 				<div class="panel">
 					<h1>Deadline for project submissions?</h1>
 					<p>
-						The deadline for project submissions is Sunday 5th 9:30 AM. Submit your projects <a href="https://hackupc2017w.devpost.com">here</a>.
+						The deadline for project submissions is Sunday 5th 9:30 AM. Submit your projects <a href="https://hackupc2017f.devpost.com">here</a>.
 					</p>
 				</div>
 				<div class="panel">
@@ -666,7 +559,7 @@
 					</p>
 				</div>
 				<div class="panel">
-					<h1>When will I get my travel reimbursement?</h1>
+					<h1>Where's my travel reimbursement?</h1>
 					<p>
 						The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1 - 2 months time period. Also, remember that you need to post a project before the deadline in order to get the reimbursement.
 					</p>

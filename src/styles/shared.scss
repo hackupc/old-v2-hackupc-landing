@@ -8,7 +8,7 @@ article{
 	}
 }
 strong{
-	color:$highlightColor;	
+	color:$highlightColor;
 }
 a{
 	color: $highlightColor;
@@ -81,7 +81,8 @@ a{
 				flex:1 1 auto;
 				padding:5px 10px;
 				margin:20px;
-				background-color:$highlightColor;
+				color:$contrastColor;
+				background-color:$buttonColor;
 				cursor:pointer;
 			}
 		}
@@ -106,11 +107,15 @@ a{
 	.hide-when-small{
 		display:none !important;
 	}
+
+	.events-fancy::before{
+		box-shadow: 0px 189px 75px -60px  rgba($secondaryColor, 0.7) inset !important;
+	}
 }
 
 
 /*Specific*/
-.events-fancy{	
+.events-fancy{
 	text-align: left;
 	color: white;
 	position: relative;
@@ -158,9 +163,10 @@ a{
 			position:relative;
 			margin: 15px 0px 15px 0;
 			min-height: 10px;
-			padding: 0px 0px 0 20px;
+			padding: 0px 0px 0 15px;
 			font-size: 28px;
-			border-left: 3px solid $contrastColor;
+			border-left: 3px solid $secondaryTextColor;
+			color: $secondaryTextColor;
 			align-content:center;
 			&:last-child{
 				margin-bottom:400px;
@@ -174,11 +180,11 @@ a{
 			}
 			&.happened{
 				opacity:1;
-				border-left: 2px solid fade($contrastColor, 25%);
+				border-left: 2px solid fade($secondaryTextColor, 25%);
 			}
 			&.happening::before{
 				content: '>';
-				color: $contrastColor;
+				color: $secondaryTextColor;
 				position: absolute;
 				margin-top: -4px;
 				left: -15px;
@@ -186,6 +192,11 @@ a{
 			}
 			a{
 				display:block;
+				margin-right:10px;
+				&:before{
+					font-family: FontAwesome;
+					content: '\f041';
+				}
 			}
 			.event{
 				margin:5px 0;
@@ -206,7 +217,7 @@ a{
 				}
 				&.subscribed{
 					.title:after{
-						font-family: FontAwesome;
+						
 						content:"\f024";
 						font-size: 13px;
 						vertical-align: super;
@@ -217,19 +228,10 @@ a{
 					position:relative;
 					line-height:25px;
 				}
-				
+
 			}
 		}
 	}
-}
-
-.location-icon{
-	display:block;
-	background-image: url('#{$imgDir}/marker.png');
-	background-size: 15px 22px;
-	width: 15px; 
-	height: 22px;
-	margin-right: 10px;
 }
 
 .countdown{
@@ -255,7 +257,7 @@ a{
 		span{
 			&.big{
 				font-size:54px;
-				display: block;	
+				display: block;
 			}
 			&.little{
 				margin-top:7px;
@@ -290,7 +292,7 @@ a{
 		flex:1 1 350px;
 		margin:20px;
 		background-color:$contrastColor;
-		color:$secondaryTextColor;
+		color:$textColor;
 		overflow:hidden;
 		text-align:left;
 		position:relative;
@@ -299,15 +301,15 @@ a{
 		p, ul, ol {
 			margin: 5px 15px 5px 15px;
 		}
-		
+
 		&.large{
 			flex:1 1 600px;
 		}
 		a{
-			color:$bgColor;
+			color:$secondaryColor;
 		}
 		h1{
-			
+
 			width: 100%;
 			margin: 0 0 0 0;
 			padding-top:3px;
@@ -329,7 +331,7 @@ a{
 				flex:1 1 0;
 				color:$contrastColor;
 				text-decoration:none;
-				background-color:$secondaryColor;
+				background-color:$buttonColor;
 				padding: 8px;
 				text-align: center;
 				font-weight:bold;
@@ -358,7 +360,7 @@ a{
 			text-align:center;
 			border-radius:5px;
 			width:30px;
-			background-color: $bgColor;
+			background-color: $buttonColor;
 			color:white;
 			font-weight:normal;
 		}

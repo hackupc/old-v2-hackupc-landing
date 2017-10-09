@@ -6,7 +6,7 @@ body, html{
 	margin:0;
 	background: $bgColor;
 	font-family: 'Ek Mukta', sans-serif;
-	
+
 	transition: opacity $fadeTime;
 }
 
@@ -37,7 +37,7 @@ main{
 			a{
 				display:block;
 				padding:10px 0;
-				color: $secondaryTextColor;
+				color: $textColor;
 				text-decoration:none;
 			}
 
@@ -46,7 +46,7 @@ main{
 			}
 
 			&.selected{
-				box-shadow:0 3px 0 rgba(30,30,30,0.5);	
+				box-shadow:0 3px 0 rgba(30,30,30,0.5);
 				cursor: default;
 			}
 
@@ -110,7 +110,7 @@ main{
 					}
 				}
 			}
-		}		
+		}
 	}
 }
 
@@ -152,7 +152,7 @@ main{
 				flex:1 1 0;
 			}
 		}
-	
+
 	}
 }
 

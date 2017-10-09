@@ -21,6 +21,7 @@
 		"live" : "live",
 		"dayof" : "dayof",
 		"rules" : "rules",
+		"travel" : "travel",
 		"hardware" : "hardware",
 		"faq" : "faq",
 		"schedule" : "schedule",
@@ -109,20 +110,20 @@
 	*/
 	function generateTimestamps(){
 		schedule.days.forEach(function(day){
-			day.startTmsp = Util.dateToSeconds(day.date) 
+			day.startTmsp = Util.dateToSeconds(day.date)
 				+ parseInt(schedule.baseTimeOffset)*60;
 
-			day.endTmsp = day.startTmsp + 24*60*60 
+			day.endTmsp = day.startTmsp + 24*60*60
 				+ parseInt(schedule.baseTimeOffset)*60;
 
 			day.events.forEach(function(event){
-				event.startTmsp = day.startTmsp 
+				event.startTmsp = day.startTmsp
 					+ Util.hourToSeconds(event.startHour);
 				if(!event.endHour){
 					event.endTmsp = event.startTmsp;
 				}
 				else{
-					event.endTmsp = day.startTmsp 
+					event.endTmsp = day.startTmsp
 						+ Util.hourToSeconds(event.endHour);
 				}
 			});
@@ -158,16 +159,16 @@
 				//I think this loop could be a lot simpler
 				//I just don't know how right now
 				//Add events that fit in this step
-				while(nextEventTmsp < i+CONST.SCHEDULE_STEP && 
+				while(nextEventTmsp < i+CONST.SCHEDULE_STEP &&
 						 eventIndex < day.events.length){
 					liEvent.appendChild(
 						Util.inflateWith("fancyEvent", day.events[eventIndex])
 					);
-					
+
 					if(isEventSubscribed(day.events[eventIndex].id)){
 						var lastEvent = liEvent.children[liEvent.children.length-1];
 						lastEvent.classList.add("subscribed");
-						
+
 					}
 					eventIndex++;
 					if(eventIndex < day.events.length){
@@ -183,7 +184,7 @@
 
 
 	/*
-	* Choronological elements store start(optional) 
+	* Choronological elements store start(optional)
 	* and end timestamps (in seconds)
 	* A chronological element can have 3 states: none, happening, happened
 	* An action callback can be specified
@@ -217,7 +218,7 @@
 			{
 				actions[elements[i].dataset.updateAction](elements[i]);
 			}
-			
+
 		}
 	}
 
@@ -283,8 +284,8 @@
 				obj.hours = 36;
 			}
 		}
-	
-		
+
+
 		var element = Util.inflateWith("countdownTimerTemplate",{
 			hours: Util.pad(obj.hours) + ":" + Util.pad(obj.minutes),
 			seconds: Util.pad(obj.seconds),
@@ -385,10 +386,10 @@
 	*/
 	function askSubscribeAll(cb){
 		prompt("Don't miss anything!", "Do you want to subscribe to all the events?"+
-			" You will receive a notification before something happens. You can choose to subscribe/unsubscribe by clicking individually on an event.", 
+			" You will receive a notification before something happens. You can choose to subscribe/unsubscribe by clicking individually on an event.",
 			"Do it!", function(){
 				if(cb) cb();
-				
+
 			},
 			"No, thanks. I'll choose manually", function(){
 				//Do nothing
@@ -402,7 +403,7 @@
 	*/
 	function checkSubscriptionQuestion(){
 		if(!Util.storageGet("askedSubscribeAll")){
-			askSubscribeAll(function(){				
+			askSubscribeAll(function(){
 				subscribeAllEvents();
 			});
 		}
@@ -641,7 +642,7 @@
 			var key = ev.which;
 			if(String.fromCharCode(key) == 'p')
 				toggleFullscreen();
-			
+
 		});
 		document.getElementById("countdown-li").addEventListener("click",function(){
 			goTo(views.live);
@@ -721,7 +722,7 @@
 						setTimeout(function(){
 							Util.fadeIn(main);
 						//we want the screen to actually disappear
-						},CONST.FADE_TIME*1.2); 
+						},CONST.FADE_TIME*1.2);
 					});
 				});
 			}, CONST.SCHEDULE_REFRESH_INTERVAL);
