@@ -150,13 +150,6 @@
 					"description": "Feeling hungry? Come get some sweet waffles"
 				},
 				{
-					"id":"16",
-					"title": "The Game starts",
-					"startHour": "03:14",
-					"mapsLink": "",
-					"description": "You lost"
-				},
-				{
 					"id":"17",
 					"title": "Breakfast",
 					"startHour": "08:00",
