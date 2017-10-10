@@ -31,7 +31,7 @@
 				{
 					"id":"3",
 					"title": "BSC Tour",
-					"startHour": "16:00",
+					"startHour": "16:15",
 					"endHour": "18:00",
 					"mapsLink": "/checkin",
 					"locationName": "A5-A6",
@@ -87,15 +87,6 @@
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
 					"description": "Learn Git with former HackUPC organizer Dani Torramilans"
-				},
-				{
-					"id":"10",
-					"title": "[Talk] Intro to Racket",
-					"startHour": "23:30",
-					"endHour": "23:59",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Join Marce for an awesome introduction to Racket development"
 				}
 			]
 		},
@@ -105,7 +96,7 @@
 			"events":
 			[
 				{
-					"id":"11",
+					"id":"10",
 					"title": "[Talk] Get started using Go",
 					"startHour": "00:15",
 					"endHour": "00:45",
@@ -114,7 +105,7 @@
 					"description": "Get started using Go with Bernat Moix"
 				},	
 				{
-					"id":"12",
+					"id":"11",
 					"title": "[Talk] Intro to Android",
 					"startHour": "00:15",
 					"endHour": "00:45",
@@ -123,7 +114,7 @@
 					"description": "Join Abdulhakim, a GitHub Campus Expert, and learn the first steps in Android Development"
 				},
 				{
-					"id":"13",
+					"id":"12",
 					"title": "[Talk] Enter the Multiplayer Game Development",
 					"startHour": "01:00",
 					"endHour": "01:30",
@@ -132,7 +123,7 @@
 					"description": "Enter the multiplayer game development with David Da Silva"
 				},
 				{
-					"id":"14",
+					"id":"13",
 					"title": "[Talk] Intro to Blockchain",
 					"startHour": "01:00",
 					"endHour": "01:30",
@@ -141,7 +132,7 @@
 					"description": "Join Dario (CTO at VERSE) in a 30 minutes introduction of the Blockchain Technology"
 				},
 				{
-					"id":"15",
+					"id":"14",
 					"title": "Midnight Snacks",
 					"startHour": "01:30",
 					"endHour": "02:30",
@@ -150,7 +141,7 @@
 					"description": "Feeling hungry? Come get some sweet waffles"
 				},
 				{
-					"id":"17",
+					"id":"15",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -159,7 +150,7 @@
 					"description": "Come get some energizing breakfast"
 				},
 				{
-					"id":"18",
+					"id":"16",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
@@ -168,16 +159,16 @@
 					"description": "Don't forget to bring your towel"
 				},
 				{
-					"id":"19",
-					"title": "[Talk] imaginBank",
+					"id":"17",
+					"title": "[Talk] Intro to Racket",
 					"startHour": "10:00",
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
-					"description": ""
+					"description": "Join Marce for an awesome introduction to Racket development"
 				},
 				{
-					"id":"20",
+					"id":"18",
 					"title": "[Talk] Intro to Skyscanner API",
 					"startHour": "11:00",
 					"endHour": "11:30",
@@ -186,7 +177,7 @@
 					"description": "Discover how Skyscanner API works"
 				},
 				{
-					"id":"21",
+					"id":"19",
 					"title": "[Talk] GFT: Exploring ARMKit in iOS",
 					"startHour": "11:45",
 					"endHour": "12:15",
@@ -195,16 +186,7 @@
 					"description": "Learn about how to use ARMKit in iOS development"
 				},
 				{
-					"id":"22",
-					"title": "[Talk] ServiZurich",
-					"startHour": "12:30",
-					"endHour": "13:30",
-					"mapsLink": "/A5/0",
-					"locationName": "A5001",
-					"description": ""
-				},
-				{
-					"id":"23",
+					"id":"20",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -213,7 +195,7 @@
 					"description": "Come and get some delicious food"
 				},
 				{
-					"id":"24",
+					"id":"21",
 					"title": "[Talk] Organize your hackathon",
 					"startHour": "17:00",
 					"endHour": "18:00",
@@ -222,7 +204,7 @@
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
 				{
-					"id":"25",
+					"id":"22",
 					"title": "Dinner",
 					"startHour": "20:00",
 					"endHour": "21:00",
@@ -231,7 +213,7 @@
 					"description": "PIZZA TIME"
 				},
 				{
-					"id":"26",
+					"id":"23",
 					"title": "Slideshow Karaoke",
 					"startHour": "22:00",
 					"endHour": "23:00",
@@ -247,7 +229,7 @@
 			"events":
 			[
 				{
-					"id":"27",
+					"id":"24",
 					"title": "Midnight Snack",
 					"startHour": "00:00",
 					"endHour": "01:00",
@@ -256,7 +238,7 @@
 					"description": "It's been more than 24 hours. Get some sweet snacks to keep yourself motivated"
 				},
 				{
-					"id":"28",
+					"id":"25",
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "01:00",
 					"endHour": "03:00",
@@ -265,7 +247,7 @@
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
-					"id":"29",
+					"id":"26",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -274,7 +256,7 @@
 					"description": "Come charge your energies for the last hours of hacking"
 				},
 				{
-					"id":"30",
+					"id":"27",
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -282,13 +264,13 @@
 					"description": "Submit your project in our Devpost!"
 				},
 				{
-					"id":"31",
+					"id":"28",
 					"title": "Hacking ends",
 					"startHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
-					"id":"32",
+					"id":"29",
 					"title": "Showers",
 					"startHour": "09:00",
 					"endHour": "10:30",
@@ -297,7 +279,7 @@
 					"description": "Relax a bit before the demos start"
 				},
 				{
-					"id":"33",
+					"id":"30",
 					"title": "Demos",
 					"startHour": "10:30",
 					"endHour": "12:30",
@@ -306,7 +288,7 @@
 					"description": "It's demo time!"
 				},
 				{
-					"id":"34",
+					"id":"31",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -315,7 +297,7 @@
 					"description": "Come grab some frankfurts/bratswurts made by our awesome partners Leo Boeck"
 				},
 				{
-					"id":"35",
+					"id":"32",
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",
