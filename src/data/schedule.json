@@ -40,7 +40,7 @@
 				{
 					"id":"4",
 					"title": "Opening Talk",
-					"startHour": "19:15",
+					"startHour": "19:00",
 					"endHour": "21:00",
 					"mapsLink": "/sports",
 					"locationName": "Sports Center",
@@ -85,7 +85,7 @@
 					"startHour": "23:30",
 					"endHour": "23:59",
 					"mapsLink": "/A5/0",
-					"locationName": "A5002",
+					"locationName": "A5001",
 					"description": "Learn Git with former HackUPC organizer Dani Torramilans"
 				}
 			]
