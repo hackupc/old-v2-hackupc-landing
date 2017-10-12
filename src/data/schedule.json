@@ -115,12 +115,12 @@
 				},
 				{
 					"id":"12",
-					"title": "[Talk] Enter the Multiplayer Game Development",
+					"title": "[Talk] Intro to Multiplayer Game Development",
 					"startHour": "01:00",
 					"endHour": "01:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
-					"description": "Enter the multiplayer game development with David Da Silva"
+					"description": "Get into multiplayer game development with David Da Silva"
 				},
 				{
 					"id":"13",
