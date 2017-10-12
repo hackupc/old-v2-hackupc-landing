@@ -160,12 +160,12 @@
 				},
 				{
 					"id":"17",
-					"title": "[Talk] Intro to Racket",
+					"title": "[Talk] Language Oriented Programming",
 					"startHour": "10:00",
 					"endHour": "10:30",
 					"mapsLink": "/A5/0",
 					"locationName": "A5002",
-					"description": "Join Marce for an awesome introduction to Racket development"
+					"description": "Join Marce for an awesome introduction to Language Oriented Programming using Racket"
 				},
 				{
 					"id":"18",

@@ -217,7 +217,7 @@ a{
 				}
 				&.subscribed{
 					.title:after{
-						
+						font-family:FontAwesome;
 						content:"\f024";
 						font-size: 13px;
 						vertical-align: super;
