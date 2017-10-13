@@ -277,10 +277,10 @@ a{
 			background-size: cover;
 			margin-top: 7px;
 			&.run{
-				background-image: url('#{$imgDir}/count_decimals_run.gif');
+				background-image: url('#{$imgDir}/count_decimals_run_White.gif');
 			}
 			&.stop{
-				background-image: url('#{$imgDir}/count_decimals_stop.png');
+				background-image: url('#{$imgDir}/count_decimals_stop_White.png');
 			}
 		}
 	}
