@@ -170,7 +170,7 @@ a{
 			font-size: 28px;
 			border-left: 3px solid $secondaryTextColor;
 			color: $secondaryTextColor;
-			align-content:center;
+			align-content: flex-start;
 			&:last-child{
 				margin-bottom:400px;
 			}
