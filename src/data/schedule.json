@@ -1,7 +1,7 @@
 {
 	"version":1,
 	"message": "HackUPC 2017 fall",
-	"baseTimeOffset":"-60",
+	"baseTimeOffset":"-120",
 	"countdownStart":"13/10/2017 21:00",
 	"days":
 	[
