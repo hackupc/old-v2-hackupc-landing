@@ -688,7 +688,7 @@
 	}
 
 	document.addEventListener("DOMContentLoaded", function(event){
-		buildHardwareLab();
+		// buildHardwareLab();
 		if(!browserIsCompatible()){
 			compatibiliyMode();
 			alert("Please update your browser");
@@ -738,9 +738,9 @@
 			//}, 1000);
 		});
 
-		setInterval(function(){
-			buildHardwareLab();
-		}, 60000);
+		// setInterval(function(){
+		// 	buildHardwareLab();
+		// }, 60000);
 
 
 	});
