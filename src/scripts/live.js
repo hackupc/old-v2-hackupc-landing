@@ -595,7 +595,7 @@
 	////////////////////////
 
 	function buildHardwareLab(cb) {
-		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
+		Util.loadFile('https://hardware.mlh.io/events/hackupc-fall-2017.json?date='+new Date().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
 			hardList.innerHTML="";
@@ -740,7 +740,7 @@
 
 		setInterval(function(){
 			buildHardwareLab();
-		}, 60000);
+		}, 420000);
 
 
 	});
