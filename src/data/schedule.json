@@ -1,6 +1,6 @@
 {
-	"version":2,
-	"message": "Language Oriented Programming talk has been delayed",
+	"version":3,
+	"message": "GFT Exploring ARMkit has been delayed",
 	"baseTimeOffset":"-120",
 	"countdownStart":"13/10/2017 21:00",
 	"days":
@@ -168,15 +168,6 @@
 					"description": "Discover how Skyscanner API works"
 				},
 				{
-					"id":"19",
-					"title": "[Talk] GFT: Exploring ARMKit in iOS",
-					"startHour": "11:45",
-					"endHour": "12:15",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Learn about how to use ARMKit in iOS development"
-				},
-				{
 					"id":"20",
 					"title": "Lunch",
 					"startHour": "13:00",
@@ -193,6 +184,15 @@
 					"mapsLink": "/A5/0",
 					"locationName": "A5001",
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
+				},
+				{
+					"id":"19",
+					"title": "[Talk] GFT: Exploring ARMKit in iOS",
+					"startHour": "16:00",
+					"endHour": "16:30",
+					"mapsLink": "/A5/0",
+					"locationName": "A5002",
+					"description": "Learn about how to use ARMKit in iOS development"
 				},
 				{
 					"id":"22",
