@@ -1,6 +1,6 @@
 {
-	"version":1,
-	"message": "HackUPC 2017 fall",
+	"version":2,
+	"message": "Language Oriented Programming talk has been delayed",
 	"baseTimeOffset":"-120",
 	"countdownStart":"13/10/2017 21:00",
 	"days":
@@ -157,15 +157,6 @@
 					"mapsLink": "/showers",
 					"locationName": "Sports Center",
 					"description": "Don't forget to bring your towel"
-				},
-				{
-					"id":"17",
-					"title": "[Talk] Language Oriented Programming",
-					"startHour": "10:00",
-					"endHour": "10:30",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Join Marce for an awesome introduction to Language Oriented Programming using Racket"
 				},
 				{
 					"id":"18",
