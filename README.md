@@ -45,6 +45,29 @@ Use `npm run -s lint` to run linters manually.
 
 Inspired by this [article](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps)
 
+## HackUPC Server auto-deployment
+
+In order to make development easier, we configured the server do auto-deployment from master. This is done using: `crontab`, `git` hooks and the `npm run dist` combined.
+
+- Add `*/15 * * * * cd /home/user/hackupc/frontend/ && git pull origin master > /home/user/hackupc/frontend/changes.log 2> /home/user/hackupc/frontend/install.log` to `crontab -e`
+- `vim .git/hooks/post-merge`
+- Write the following into the file:
+```
+#!/bin/sh
+cd /home/user/hackupc/frontend/
+npm update
+echo "cleaning..."
+npm run clean
+echo "cleaning...done"
+echo "compiling..."
+npm run dist
+echo "compiling...done"
+echo "Deploy completed. The game is on!"
+```
+- `chmod +x .git/hooks/post-merge`
+
+This makes crontab pull from the repo every 15 minutes. If changes happen, then the post-merge git hook is executed, effectively updating dependencies and compiling a new version of the site.
+
 # Live
 
 Features included
