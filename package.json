@@ -19,10 +19,10 @@
     "postdist:html": "npm-run-all -p nocache:*",
     "nocache:index": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/index.html",
     "nocache:live": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/live.html",
-    "scss:main": "node-sass --output-style compressed src/styles/main.2017f.scss dist/assets/css/main.2017f.min.css",
-    "scss:tiles": "node-sass --output-style compressed src/styles/tiles.scss dist/assets/css/tiles.min.css",
+    "scss:main": "node-sass --output-style compressed src/styles/main.2018f.scss dist/assets/css/main.2018f.min.css",
     "scss:live": "node-sass --output-style compressed  src/styles/app.scss dist/assets/css/app.min.css",
-    "minjs:main": "tsc src/scripts/tiles.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/tiles.webgl.min.js ",
+    "minjs:chroma": "cp node_modules/chroma-js/chroma.min.js dist/assets/js/chroma.min.js",
+    "minjs:main": "tsc src/scripts/barcelona.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/barcelona.min.js ",
     "minjs:live": "uglifyjs src/scripts/config.live.js src/scripts/util.live.js src/scripts/live.js -m -c -o dist/assets/js/app.min.js",
     "watch:js": "onchange \"src/scripts\" -- npm-run-all dist:scripts notify-update",
     "watch:css": "onchange \"src/styles\" -- npm-run-all dist:styles notify-update",
@@ -49,7 +49,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "htmllint": "^0.6.0",
     "htmllint-cli": "0.0.6",
-    "http-server": "^0.9.0",
+    "http-server": "^0.11.1",
     "imagemin-newer": "^1.0.2",
     "mkdirp": "^0.5.1",
     "node-notifier-cli": "^1.0.1",
@@ -59,7 +59,10 @@
     "postcss-cli": "^2.6.0",
     "sass-lint": "^1.10.2",
     "standard": "^8.0.0",
-    "uglify-js": "^2.7.5",
-    "typescript": "^2.0.3"
+    "typescript": "^2.0.3",
+    "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "chroma-js": "^1.3.7"
   }
 }

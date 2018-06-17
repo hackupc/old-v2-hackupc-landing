@@ -25,16 +25,16 @@
 	<meta name="author" content="Hackers@UPC">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<link rel="stylesheet" href="assets/css/main.2017f.min.css" data-finger-print>
+	<link rel="stylesheet" href="assets/css/main.2018f.min.css" data-finger-print>
 
-	<link rel="stylesheet" href="assets/css/tiles.min.css" data-finger-print>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta" rel="stylesheet">
 </head>
 
 <body>
-	<div id="background"></div>
-    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2018/events?utm_source=eu-2018&utm_medium=TrustBadge&utm_campaign=eu-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2018 Hackathon Season" style="width:100%"></a>
+	<div id="background">
+     
+    </div>
     <div class="container" style="-webkit-transform: translateZ(0);">
         <div class="intro">
             <div class="row head-logo">
@@ -213,11 +213,12 @@
         </div>
         <div class="row spring-site">
             <div class="col-md-12">
-                <a href="https://w2017.hackupc.com/">Winter 2017 site</a>
+                <a href="https://f2017.hackupc.com/">Fall 2017 site</a>
             </div>
         </div>
     </div>
-    <script src="assets/js/tiles.webgl.min.js" data-finger-print></script>
+    <script src="assets/js/barcelona.min.js"></script>
+    <script src="assets/js/chroma.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -231,7 +232,7 @@
         window.onscroll = function (e) {
             var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
             var bg = document.getElementById("background");
-            bg.style.opacity = 0.1 + 0.8 * (1 - factor);
+            bg.style.opacity = 0.3 + 0.8 * (1 - factor);
         }
     </script>
     <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>

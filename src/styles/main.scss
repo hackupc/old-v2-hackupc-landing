@@ -15,6 +15,13 @@ main{
 	transition: opacity $fadeTime;
 }
 
+#background{
+	position:absolute;
+	height:100%;
+	/*woah, hax (centering a child larger than parent)*/
+	left:50%;
+	transform: translate(-50%,0);
+}
 
 #header-nav-bar{
 	position:fixed;
