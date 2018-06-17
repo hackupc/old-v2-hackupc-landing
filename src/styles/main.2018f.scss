@@ -188,19 +188,19 @@ h1 {
     text-align: center;
     .peta {
         img {
-            width: 35%
+            width: 30%
         }
-        margin-bottom: 2.5vh;
+        margin-bottom: 5vh;
     }
     .tera {
         img {
-            width: 30%
+            width: 25%
         }
         margin-bottom: 2.5vh;
     }
     .giga {
         img {
-            width: 25%
+            width: 22.5%
         }
         margin-bottom: 2.5vh;
     }
@@ -272,6 +272,11 @@ h1 {
     .separator {
         height: 5vh;
     }
+}
+
+.section-white {
+    width: 100%;
+    background-color: #FFF;
 }
 
 #promo-video {

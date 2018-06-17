@@ -31,9 +31,8 @@
 </head>
 
 <body>
-	<div id="background">
-     
-    </div>
+    <div id="background"></div>
+    
     <div class="container" style="-webkit-transform: translateZ(0);">
         <div class="intro" style="visibility: hidden !important"> <!--Hidden for dev purposes-->
             <div class="row head-logo">
@@ -131,12 +130,15 @@
                 </div>
             </div>
         </section>
-
+        
         <!--Hidden for dev purposes
 	<h1 id="video" class="video-title">Teaser</h1>
         <iframe id="promo-video" class="center-block" src="https://www.youtube.com/embed/voLw_IpG2l0" frameborder="0" allowfullscreen></iframe>-->
-
-        <section> <!-- Sponsors -->
+    </div>
+    
+    <div class="section-white">
+      <div class="container" style="-webkit-transform: translateZ(0);">
+	<section> <!-- Sponsors -->
 	  <h1 id="sponsors" class="sponsors-title">Sponsors</h1>
 	  <div class="row sponsor-images">
 	    <!--<div class="peta col-md-12">
@@ -196,24 +198,27 @@
 	    </div>
 	  </div>
 	</section>
-	
-	<section> <!-- Footer -->
-	  <div class="col-md-12 bottom-footer">
-	    <div class="col-md-6 nospace bottom-left-links">
-		<a class="fa fa-2x fa-envelope" target="_blank" href="mailto:contact@hackupc.com"></a>
-		<a class="fa fa-2x fa-twitter" target="_blank" href="https://twitter.com/hackupc"></a>
-		<a class="fa fa-2x fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g"></a>
-		<a class="fa fa-2x fa-facebook-official" target="_blank" href="https://facebook.com/hackupc"></a>
-		<a class="fa fa-2x fa-instagram" target="_blank" href="https://instagram.com/hackupc"></a>
-		<a class="fa fa-2x fa-github" target="_blank" href="https://github.com/hackupc"></a>
-		<a class="fa fa-2x fa-medium" target="_blank" href="https://medium.com/@hackupc"></a>
-	    </div>
-	    <div class="col-md-6 nospace bottom-right-links">
-		<p><a href="https://f2017.hackupc.com/">Fall 2017 site</a></p>
-		<p>Made with <i class="fa fa-laptop" aria-hidden="true"></i> and <i class="fa fa-heart" aria-hidden="true"></i> by HackUPC</p>
-	    </div>
+      </div>
+    </div>
+      
+    <div class="container" style="-webkit-transform: translateZ(0);">
+      <section> <!-- Footer -->
+	<div class="col-md-12 bottom-footer">
+	  <div class="col-md-6 nospace bottom-left-links">
+	      <a class="fa fa-2x fa-envelope" target="_blank" href="mailto:contact@hackupc.com"></a>
+	      <a class="fa fa-2x fa-twitter" target="_blank" href="https://twitter.com/hackupc"></a>
+	      <a class="fa fa-2x fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g"></a>
+	      <a class="fa fa-2x fa-facebook-official" target="_blank" href="https://facebook.com/hackupc"></a>
+	      <a class="fa fa-2x fa-instagram" target="_blank" href="https://instagram.com/hackupc"></a>
+	      <a class="fa fa-2x fa-github" target="_blank" href="https://github.com/hackupc"></a>
+	      <a class="fa fa-2x fa-medium" target="_blank" href="https://medium.com/@hackupc"></a>
 	  </div>
-	</section>
+	  <div class="col-md-6 nospace bottom-right-links">
+	      <p><a href="https://f2017.hackupc.com/">Fall 2017 site</a></p>
+	      <p>Made with <i class="fa fa-laptop" aria-hidden="true"></i> and <i class="fa fa-heart" aria-hidden="true"></i> by HackUPC</p>
+	  </div>
+	</div>
+      </section>
     </div>
     <script src="assets/js/barcelona.min.js"></script>
     <script src="assets/js/chroma.min.js"></script>
@@ -230,7 +235,7 @@
         window.onscroll = function (e) {
             var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
             var bg = document.getElementById("background");
-            bg.style.opacity = 0.3 + 0.8 * (1 - factor);
+            bg.style.opacity = 0.1 + 0.8 * (1 - factor);
         }
     </script>
     <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>
