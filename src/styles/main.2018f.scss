@@ -378,6 +378,10 @@ h2 {
     margin: 0 !important;
 }
 
+.margin-bottom {
+    margin-bottom: 5vh;
+}
+
 .bottom-left-links {
     @include center-block();
     text-align: left;

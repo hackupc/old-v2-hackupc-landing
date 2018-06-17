@@ -56,7 +56,7 @@
             </div>
         </div>
         <section> <!-- FAQ -->
-            <div class="row col-md-4 section-title-dark">
+	  <div class="row col-md-4 section-title-dark">
 	    <h2 id="faq-title">FAQ</h2>
 	  </div>
             <div class="row faq-questions">
@@ -117,7 +117,7 @@
                     <div class="answer">We accept students up to 1 year after graduation. You can also join us as a mentor! <a target="_blank" href="mailto:mentors@hackupc.com">Contact us</a> for more info.</div>
                 </div>
             </div>
-            <div class="row faq-questions">
+            <div class="row faq-questions margin-bottom">
                 <div class="col-md-4 question">
                     <div class="title">Do you have a code of conduct?</div>
                     <div class="answer"><a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Yes</a>. tl;dr: Be excellent to each other.</div>
@@ -247,7 +247,7 @@
         window.onscroll = function (e) {
             var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
             var bg = document.getElementById("background");
-            bg.style.opacity = 0.1 + 0.8 * (1 - factor);
+            bg.style.opacity = 0.2 + 0.8 * (1 - factor);
             var factor2 = Math.max(Math.min(window.pageYOffset / 1000, 1), 0);
             var factor3 = Math.max(Math.min(window.pageYOffset / 2500, 1), 0);
             var scal = 1+0.5*factor3;
