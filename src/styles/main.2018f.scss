@@ -37,6 +37,7 @@ $color-sky3: #28ADA6;
 $color-back1: #202326;
 $color-back2: #2C3033;
 $background-color: #333;
+$background-color2: #FBFBFB;
 $text-color: #EEE;
 $title-color: $color-accent;
 $link-color: $color-accent;
@@ -78,6 +79,7 @@ canvas {
     position:fixed;
     height:100%;
     overflow:hidden;
+    z-index: -5;
     /*woah, hax (centering a child larger than parent)*/
     left:50%;
     transform: translate(-50%,0);
@@ -276,7 +278,7 @@ h1 {
 
 .section-white {
     width: 100%;
-    background-color: #FFF;
+    background-color: $background-color2;
 }
 
 #promo-video {
