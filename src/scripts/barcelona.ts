@@ -128,6 +128,19 @@ class Barcelona{
 					if (cb) cb();
 					document.getElementById("LUNA").style.fontFamily = "GothamBoldRegular";
 					document.getElementById("LUNA").style.fontWeight = "normal";
+					var cel = document.getElementById("CEL");
+					var llunaArc1 = cel.getElementsByClassName("st1")[0];
+					llunaArc1.setAttribute("rOLD", llunaArc1.getAttribute("r"));
+					llunaArc1.setAttribute("cxOLD", llunaArc1.getAttribute("cx"));
+					llunaArc1.setAttribute("cyOLD", llunaArc1.getAttribute("cy"));
+					var llunaArc2 = cel.getElementsByClassName("st2")[0];
+					llunaArc2.setAttribute("rOLD", llunaArc2.getAttribute("r"));
+					llunaArc2.setAttribute("cxOLD", llunaArc1.getAttribute("cx"));
+					llunaArc2.setAttribute("cyOLD", llunaArc1.getAttribute("cy"));
+					var llunaArc3 = cel.getElementsByClassName("st3")[0];
+					llunaArc3.setAttribute("rOLD", llunaArc3.getAttribute("r"));
+					llunaArc3.setAttribute("cxOLD", llunaArc1.getAttribute("cx"));
+					llunaArc3.setAttribute("cyOLD", llunaArc1.getAttribute("cy"));
 				} 
 				else 
 				{
