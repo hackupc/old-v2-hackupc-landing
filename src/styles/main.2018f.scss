@@ -254,11 +254,15 @@ h1 {
 .partners {
     text-align: center;
     img {
-        width: 12%;
-        margin: 0px 20px;
+        width: 10%;
+        &.mr {
+            margin-right: 2%;
+        }
+        &.ml {
+            margin-left: 2%;
+        }
     }
-    margin-bottom: 10vh;
-
+    margin-bottom: 5vh;
     .separator {
         height: 5vh;
     }
