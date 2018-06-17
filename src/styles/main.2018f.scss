@@ -43,6 +43,7 @@ $text-color: #EEE;
 $title-color: $color-accent;
 $link-color: $color-accent;
 $link-color-dark: darken($link-color, 25%);
+$link-color-light: lighten($link-color, 25%);
 $button-text-color: white;
 $button-body-color: $color-accent;
 $button-highlight-color: #FFF;
@@ -83,7 +84,7 @@ canvas {
     z-index: -5;
     /*woah, hax (centering a child larger than parent)*/
     left:50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     svg{
         /*This works only if all parents have it*/
         height:100%;
@@ -362,6 +363,13 @@ h2 {
     padding: 2.5vh 0 5vh 0;
     p {
         margin-bottom: 0;
+    }
+    a {
+        color: $link-color;
+        text-decoration: none !important;
+        &:hover {
+          color: $link-color-light;
+        }
     }
 }
 
