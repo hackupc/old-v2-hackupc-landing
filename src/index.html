@@ -249,8 +249,9 @@
             var bg = document.getElementById("background");
             bg.style.opacity = 0.1 + 0.8 * (1 - factor);
             var factor2 = Math.max(Math.min(window.pageYOffset / 1000, 1), 0);
-            var scal = 1+0.25*factor2;
-            var scal2 = 0.75*factor2;
+            var factor3 = Math.max(Math.min(window.pageYOffset / 2500, 1), 0);
+            var scal = 1+0.5*factor3;
+            var scal2 = 6*factor3;
             var cenx = scal*(bg.offsetWidth/2);
             var ceny = scal2*(bg.offsetHeight/2);
             bg.style.transformOrigin = 0 + "px " + 0 + "px";
