@@ -5,6 +5,30 @@
     src: url(../fonts/GothamBoldRegular.ttf);
 }
 
+@font-face {
+    font-family: ProximaNovaBlack;
+    src: url(../fonts/ProximaNovaBlack.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url(../fonts/ProximaNovaBold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaSemibold;
+    src: url(../fonts/ProximaNovaSemibold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url(../fonts/ProximaNovaRegular.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url(../fonts/ProximaNovaThin.ttf);
+}
 
 $background-color: #333;
 $text-color: #eee;
@@ -24,7 +48,7 @@ html, body{
 body {
   background: $background-color;
   color: $text-color;
-  font-family: 'Ek Mukta', sans-serif;
+  font-family: ProximaNovaRegular, sans-serif;
   font-weight: bold;
 }
 
