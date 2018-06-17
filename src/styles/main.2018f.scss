@@ -30,13 +30,19 @@
     src: url(../fonts/ProximaNovaThin.ttf);
 }
 
+$color-accent: #E22B57;
+$color-sky1: #0E8C99;
+$color-sky2: #169DA3;
+$color-sky3: #28ADA6;
+$color-back1: #202326;
+$color-back2: #2C3033;
 $background-color: #333;
 $text-color: #EEE;
-$title-color: #E22B57;
-$link-color: #E22B57;
+$title-color: $color-accent;
+$link-color: $color-accent;
 $link-color-dark: darken($link-color, 25%);
 $button-text-color: white;
-$button-body-color: #E22B57;
+$button-body-color: $color-accent;
 $button-highlight-color: #FFF;
 $button-bottom-color: darken($button-body-color, 25%);
 
@@ -146,9 +152,9 @@ canvas {
 
 h1 {
     color: $title-color;
-    margin-top: 10vh;
+    margin-top: 5vh;
     font-size: 3.5em;
-    margin-bottom: 5vh;
+    margin-bottom: 2.5vh;
 }
 
 .button-container > h2 {
@@ -282,11 +288,27 @@ h1 {
     margin-top: 7vh;
 }
 
-.bottom-links, .spring-site {
+.bottom-footer {
+    margin-top: 10vh;
+    border-top: 2px solid $color-accent;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.bottom-left-links {
     @include center-block();
-    text-align: center;
-    margin-top: 25vh;
-    padding-bottom: 10vh;
+    text-align: left;
+    a {
+        padding: 0.4em;
+    }
+}
+
+.bottom-right-links {
+    @include center-block();
+    text-align: right;
     a {
         padding: 0.4em;
     }
