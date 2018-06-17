@@ -315,9 +315,7 @@ h2 {
 }
 
 .bottom-footer {
-    margin-top: 10vh;
-    padding: 2vh 0 2vh 0;
-    border-top: 1px solid $color-accent;
+    padding: 5vh 0 5vh 0;
     p {
         margin-bottom: 0;
     }
@@ -332,16 +330,13 @@ h2 {
     @include center-block();
     text-align: left;
     a {
-        padding: 0.4em;
+        padding: 0.4em 0.4em 0.4em 0;
     }
 }
 
 .bottom-right-links {
     @include center-block();
     text-align: right;
-    a {
-        padding: 0em;
-    }
 }
 
 // Bigger margin around columns so that in mobile
