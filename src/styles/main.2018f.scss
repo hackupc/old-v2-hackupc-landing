@@ -36,6 +36,7 @@ $color-sky2: #169DA3;
 $color-sky3: #28ADA6;
 $color-back1: #202326;
 $color-back2: #2C3033;
+$color-back3: #E4E4E5;
 $background-color: #333;
 $background-color2: #FBFBFB;
 $text-color: #EEE;
@@ -159,6 +160,13 @@ h1 {
     margin-bottom: 2.5vh;
 }
 
+h2 {
+    color: $title-color;
+    margin-top: 5vh;
+    font-size: 2.5em;
+    margin-bottom: 2.5vh;
+}
+
 .button-container > h2 {
     color: $text-color;
 }
@@ -279,6 +287,17 @@ h1 {
 .section-white {
     width: 100%;
     background-color: $background-color2;
+    padding-top: 2.5vh;
+    padding-bottom: 5vh;
+}
+
+.section-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    border-bottom: 1px solid $color-back3;
+    margin-bottom: 7.5vh;
 }
 
 #promo-video {
