@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-md-4 question">
                     <div class="title">Where is it being held?</div>
-                    <div class="answer">Hack UPC will take place in UPC's North Campus FIB buldings (<a href="https://goo.gl/maps/4AHDqtWTZeu" target="_blank">A6 and A5</a>) in sunny Barcelona, Spain.</div>
+                    <div class="answer">Hack UPC will take place in UPC's North Campus FIB buldings (<a href="https://goo.gl/maps/4AHDqtWTZeu" target="_blank">A6 and A5</a>) in sunny Barcelona.</div>
                 </div>
                 <div class="col-md-4 question">
                     <div class="title">What should I bring?</div>
@@ -244,19 +244,19 @@
       ga('send', 'pageview');
     </script>
     <script type="text/javascript">
-        window.onscroll = function (e) {
-            var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
-            var bg = document.getElementById("background");
-            bg.style.opacity = 0.2 + 0.8 * (1 - factor);
-            var factor2 = Math.max(Math.min(window.pageYOffset / 1000, 1), 0);
-            var factor3 = Math.max(Math.min(window.pageYOffset / 2500, 1), 0);
-            var scal = 1+0.5*factor3;
-            var scal2 = 6*factor3;
-            var cenx = scal*(bg.offsetWidth/2);
-            var ceny = scal2*(bg.offsetHeight/2);
-            bg.style.transformOrigin = 0 + "px " + 0 + "px";
-            bg.style.transform = "translate(-" + cenx + "px, -" + ceny + "px) scale(" + scal + ")";
-        }
+      window.onscroll = function (e) {
+	var factor = Math.max(Math.min(window.pageYOffset / 500, 1), 0);
+	var bg = document.getElementById("background");
+	bg.style.opacity = 0.2 + 0.8 * (1 - factor);
+	var factor2 = Math.max(Math.min(window.pageYOffset / 1000, 1), 0);
+	var factor3 = Math.max(Math.min(window.pageYOffset / 2500, 1), 0);
+	var scal = 1+0.5*factor3;
+	var scal2 = 6*factor3;
+	var cenx = scal*(bg.offsetWidth/2);
+	var ceny = scal2*(bg.offsetHeight/2);
+	bg.style.transformOrigin = 0 + "px " + 0 + "px";
+	bg.style.transform = "translate(-" + cenx + "px, -" + ceny + "px) scale(" + scal + ")";
+      }
     </script>
     <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>
 </body>
