@@ -180,50 +180,53 @@ h1 {
 
 .sponsor-images {
     text-align: center;
-
     .peta {
-      img {
-        width: 63%;
-      }
-      margin-bottom: 10vh;
+        img {
+            width: 35%
+        }
+        margin-bottom: 2.5vh;
     }
-
+    .tera {
+        img {
+            width: 30%
+        }
+        margin-bottom: 2.5vh;
+    }
     .giga {
         img {
-            width: 50%
+            width: 25%
         }
-        margin-bottom: 10vh;
+        margin-bottom: 2.5vh;
     }
     .mega {
         img {
-            width: 38%
+            width: 20%
         }
-        margin-bottom: 8vh;
+        margin-bottom: 5vh;
     }
     .kilo {
         img {
-            width: 25%;
+            width: 17.5%;
         }
-        margin-bottom: 8vh;
+        margin-bottom: 5vh;
     }
     .mili {
         img {
-            width: 20%;
+            width: 15%;
         }
-        margin-bottom: 8vh;
+        margin-bottom: 5vh;
     }
     .micro {
         img {
-            width: 15%;
+            width: 12.5%;
         }
     }
-
     img {
         &.mr {
-            margin-right: 25px;
+            margin-right: 2%;
         }
         &.ml {
-            margin-left: 25px;
+            margin-left: 2%;
         }
         &.mega-portrait {
             width: 15%;

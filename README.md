@@ -25,7 +25,7 @@ Use `npm run watch` to compile and serve the dist directory in real time.
 ## Add new logo images for sponsors and partners
 
 - Edit image remove background, add whitespace. Consider checking first sponsor brand use guidelines before editing the image.
-- Resize the image to `600 x 400 px`
+- Resize the image to `600 x 300 px`
 
 # Deploy
 
