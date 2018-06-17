@@ -37,7 +37,7 @@ $color-sky3: #28ADA6;
 $color-back1: #202326;
 $color-back2: #2C3033;
 $color-back3: #E4E4E5;
-$background-color: #333;
+$background-color: #202326;
 $background-color2: #FBFBFB;
 $text-color: #EEE;
 $title-color: $color-accent;
@@ -311,6 +311,7 @@ h2 {
     background-color: $background-color2;
     padding-top: 2.5vh;
     padding-bottom: 0;
+    box-shadow: inset 0 25px 25px -25px rgba(0, 0, 0, 0.25);
 }
 
 .section-grey {
