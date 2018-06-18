@@ -34,7 +34,7 @@
     <div id="background"></div>
 
     <div class="container" style="-webkit-transform: translateZ(0);">
-        <div class="intro"> <!--Hidden for dev purposes-->
+        <div class="intro" style="visibility: hidden !important;"> <!--Hidden for dev purposes-->
             <div class="hupc-title">
                     HACK UPC
             </div>
@@ -247,6 +247,50 @@
             var bg = document.getElementById("background");
             bg.style.opacity = 0.3 + 0.8 * (1 - factor);
       }
+      window.onload = function(){
+	document.getElementById("teleferic-1").setAttribute("pos", 0);
+      }
+      window.setInterval(function(){
+	var numIt = 10;
+	var numIt1 = 100*numIt;
+	var numIt2 = 2*numIt1;
+	var tC = document.getElementById("teleferic-cable");
+	var tCR = tC.getBoundingClientRect();
+	var t1 = document.getElementById("teleferic-1");
+	var t1R = t1.getBoundingClientRect();
+	var t1RPos = t1R.left-tCR.left;
+	var t1RPosRel = t1RPos/tCR.width;
+	var pos = parseInt(t1.getAttribute("pos"));
+	var t1PosAux = pos+1;
+	var t1PosAux2 = t1PosAux;
+	if(t1PosAux > numIt1){
+	  t1PosAux2 = numIt2 - t1PosAux;
+	}
+	if(t1PosAux < 0){
+	  t1PosAux = 0;
+	  t1PosAux2 = 0;
+	}
+	else if(t1PosAux > numIt2){
+	  t1PosAux = 0;
+	  t1PosAux2 = 0;
+	}
+	t1.setAttribute("pos", t1PosAux);
+	t1PosAux2 = tCR.width*(t1PosAux2/numIt1);
+	var t1PosY = (t1PosAux/100);
+	if(t1PosAux > numIt1){
+	  t1PosY = 20.0 - parseFloat(t1PosY);
+	}
+	var t1PosYI = parseInt(t1PosY);
+	var t1PosYR = parseFloat(t1PosY)-t1PosYI;
+	var punts = [0.96, 1, 1, 0.95, 0.89, 0.8, 0.69, 0.55, 0.39, 0.21, 0];
+	var y1 = punts[t1PosYI], y2 = punts[(t1PosYI+1)];
+	var t1PosY2 = Math.abs(y2-y1);
+	t1PosY2 = tCR.height-(tCR.height*((t1PosY*t1PosY2)+y1));
+	console.log(t1PosY2);
+	t1PosY2 = t1PosY2-(0*t1R.height);
+	t1PosAux2 = (1.705*t1PosAux2)-81;
+	document.getElementById("teleferic-1").style.transform = "translate(" + t1PosAux2 + "px, " + t1PosY2 + "px)";
+      }, 10);
     </script>
     <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>
 </body>
