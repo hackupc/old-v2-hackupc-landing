@@ -126,8 +126,6 @@ class Barcelona{
 					document.getElementById(self.containerId)
 						.appendChild(xhr.responseXML.documentElement);
 					if (cb) cb();
-					document.getElementById("LUNA").style.fontFamily = "GothamBoldRegular";
-					document.getElementById("LUNA").style.fontWeight = "normal";
 				} 
 				else 
 				{
@@ -153,6 +151,7 @@ class Barcelona{
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+	console.log("helou");
 	let b = new Barcelona(
 		'background',
 		['red', 'green', 'blue'],
