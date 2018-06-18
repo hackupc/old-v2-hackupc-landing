@@ -41,6 +41,12 @@ class Barcelona{
 	sunColorInterp : any;
 	skyColorInterp : any;
 	sunPosInterp : any;
+	stylesheet : CSSStyleSheet;
+	private readonly _ssTitle : string = "bg";
+	private readonly _sunStyleClass : string = ".cls-8";
+	private readonly _sky1StyleClass : string = ".cls-4";
+	private readonly _sky2StyleClass : string = ".cls-3";
+	private readonly _sky3StyleClass : string = ".cls-2";
 	private readonly _svgFileName : string = "assets/img/bg.svg";
 	private readonly _pngFileName : string = "assets/img/bg.png";
 
@@ -63,6 +69,7 @@ class Barcelona{
 				}
 				self.sunPosInterp = chroma.bezier(c);
 				self.setListener();
+				self.getStyleSheet();
 			});
 		}
 		else
@@ -83,19 +90,16 @@ class Barcelona{
 			//Input
 			scrollTop
 		);
-		//SVG stylesheet
-		//TODO: check for compatibility and reliability
-		let ss : CSSStyleSheet = <CSSStyleSheet>document.styleSheets[3];
 
 		//Set interpolated sun color
 		let sunColor : string = this.sunColorInterp(q).hex();
-		(<CSSStyleRule>ss.cssRules[7]).style.fill = sunColor;
+		this.setFillColor('.cls-8', sunColor);
 
 		//Set interpolated sky color
 		let mainSkyColor : any = this.skyColorInterp(q);
-		(<CSSStyleRule>ss.cssRules[3]).style.fill = mainSkyColor.hex();
-		(<CSSStyleRule>ss.cssRules[2]).style.fill = mainSkyColor.darken(1).hex();
-		(<CSSStyleRule>ss.cssRules[1]).style.fill = mainSkyColor.darken(2).hex();
+		this.setFillColor('.cls-4', mainSkyColor.hex());
+		this.setFillColor('.cls-3', mainSkyColor.darken(0.1).hex());
+		this.setFillColor('.cls-2', mainSkyColor.darken(0.2).hex());
 		
 		//Set interpolated sun position
 		//TODO:do something better
@@ -103,7 +107,33 @@ class Barcelona{
 		let p : Point = new Point(0, posColor[2]);
 		document.getElementById("LUNA").style.transform = "translate("+p.toPx()+")";
 	}
+	/*
+		Get a reference to the SVG's stylesheet
+	*/
+	getStyleSheet() : void{
+		for(let i = 0; i < document.styleSheets.length; i++)
+		{
+			if(document.styleSheets[i].title == this._ssTitle)
+			{
+				this.stylesheet = <CSSStyleSheet>document.styleSheets[i];
+				return;
+			}
+		}
+	}
 
+	/*
+	 Changes the fill style for the class cls with color clr
+	*/
+	setFillColor(cls:string, clr:string) : void{
+		for(let i = 0; i < this.stylesheet.cssRules.length; i++)
+		{
+			let rule = <CSSStyleRule>this.stylesheet.cssRules[i];
+			if(rule.selectorText == cls)
+			{
+				rule.style.fill = clr;
+			}
+		}
+	}
 	setListener() : void{
 		document.addEventListener('scroll', this.update);
 	}
@@ -153,11 +183,11 @@ class Barcelona{
 document.addEventListener("DOMContentLoaded", function(){
 	let b = new Barcelona(
 		'background',
-		['red', 'green', 'blue'],
+		['#e2c02b', '#e22b57', '#ad0909'],
 		[
 			new Point(0,0),
-			new Point(0, 1000)
+			new Point(0, 1500)
 		],
-		['blue', 'red', 'green'],
+		['#28ada6', '#ffa1dd', '#231f6e'],
 	);
 });
