@@ -68,7 +68,7 @@ a {
       color: $link-color-dark;
     }
 }
-#mlh-trust-badge:hover { background-color: transparent }
+
 
 canvas {
     position: fixed;
@@ -89,6 +89,18 @@ canvas {
         /*This works only if all parents have it*/
         height:100%;
     }
+}
+
+.hupc-title{
+    text-align: center;
+    font-size: 10vh;
+    margin-top: 28vh;
+}
+.hupc-subtitle{
+    text-align:center;
+    font-size:3vh;
+    letter-spacing:0.5vh;
+    margin-top:-3vh;
 }
 
 .font-black{
@@ -129,7 +141,6 @@ canvas {
         text-align: center;
     }
     .button-container {
-        display: inline-block;
         a {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             &:not:first-child {
@@ -155,8 +166,12 @@ canvas {
 }
 
 .top-buttons .button-container {
-    margin-top: 6vh;
+    margin-top: 12vh;
     height: 100px;
+}
+
+.top-description{
+    margin-top:7vh;
 }
 
 .top-description p, .bottom-description p, .coming-soon p {

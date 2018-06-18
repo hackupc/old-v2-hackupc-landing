@@ -151,7 +151,6 @@ class Barcelona{
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-	console.log("helou");
 	let b = new Barcelona(
 		'background',
 		['red', 'green', 'blue'],
