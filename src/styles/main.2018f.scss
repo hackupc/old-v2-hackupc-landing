@@ -91,6 +91,42 @@ canvas {
     }
 }
 
+/* teleferic animation*/
+@keyframes teleferic-cont{
+    0%, 5%{
+        transform:translateX(-9.5vh);
+    }
+    95%, 100%{
+        transform:translateX(37.5vh);
+    }
+}
+@keyframes teleferic-obj{
+    0%, 5%{
+        transform:translateY(-0.4vh);
+    }
+    95%, 100%{
+        transform:translateY(-3vh);
+    }
+}
+#tel-cont, #tel-cont2{
+    animation-name:teleferic-cont;
+    animation-duration:20s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+}
+#teleferic-1, #teleferic-2{
+    animation-name:teleferic-obj;
+    animation-duration:20s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function:cubic-bezier(0.3, -0.7, 0.7, 0.8);
+}
+#tel-cont2, #teleferic-2{
+    animation-direction:alternate-reverse;
+}
+
+
 .hupc-title{
     text-align: center;
     font-size: 10vh;
