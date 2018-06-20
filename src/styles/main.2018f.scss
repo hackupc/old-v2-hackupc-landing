@@ -129,14 +129,15 @@ canvas {
 
 .hupc-title{
     text-align: center;
-    font-size: 10vh;
-    margin-top: 28vh;
+    font-size: 95px;
+    margin-top: 165px;
 }
 .hupc-subtitle{
-    text-align:center;
-    font-size:3vh;
-    letter-spacing:0.5vh;
-    margin-top:-3vh;
+    font-family:GothamBoldRegular;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-top: -23px;
 }
 
 .font-black{
@@ -172,45 +173,74 @@ canvas {
 .top-buttons, .top-description {
   font-family: GothamBoldRegular;
 }
+.top-description{
+    width: 402px;
+    margin: 170px auto 0 ;
+    .first-row{
+        display:flex;
+        h2{
+            display: flex;
+            flex: 1 1 auto;
+            color: #EEE;
+            font-size:24px;
+            &:last-child{
+                justify-content:flex-end;
+            }
+        }
+    }
+    h1{
+        color: #EEE;
+        margin-top: -25px;
+        font-size: 50px;
+        letter-spacing: 4px;
+        text-align: center;
+        margin-bottom:0;
+    }
+}
+.bottom-description{
+    margin: auto 0;
+    h2{
+        font-family: GothamBoldRegular;
+        color: #eee;
+        margin: 0;
+        text-align: center;
+        font-size: 28px;
+        margin-top: -15px;
+    }
+}
 .top-buttons, .bottom-buttons {
+    margin-top:20px;
     >div {
         text-align: center;
     }
     .button-container {
         a {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            &:not:first-child {
-                margin-left: 15px;
-            }
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             &:hover {
                 box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
             }
             display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
-            background-color: $button-body-color;
-            color: $button-text-color;
-            width: 160px;
-            padding: 15px 0px 10px;
+            background-color: #E22B57;
+            color: #fff;
+            width: 200px;
+            padding: 10px 0px 10px;
             font-weight: 500;
-            font-size: 1.4em;
+            font-size: 24px;
             border: none;
-            border-bottom: 10px solid $button-bottom-color;
+            border-bottom: 10px solid #7c112b;
             transition: all .2s linear;
         }
     }
 }
 
 .top-buttons .button-container {
-    margin-top: 12vh;
     height: 100px;
 }
 
-.top-description{
-    margin-top:7vh;
-}
 
-.top-description p, .bottom-description p, .coming-soon p {
+.coming-soon p {
     @include center-block();
     color: $text-color;
     font-size: 1.3em;
@@ -218,12 +248,6 @@ canvas {
     text-align: center;
 }
 
-
-.top-description h2 {
-    @include center-block();
-    color: $text-color;
-    text-align: center;
-}
 
 h1 {
     color: $title-color;
@@ -411,11 +435,6 @@ h2 {
 .bottom-buttons {
     margin-top: 3vh;
 }
-
-.bottom-description {
-    margin-top: 7vh;
-}
-
 .bottom-footer {
     padding: 2.5vh 0 5vh 0;
     p {
