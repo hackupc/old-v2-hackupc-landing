@@ -104,35 +104,35 @@ canvas {
 /* teleferic animation*/
 @keyframes teleferic-cont{
     0%, 5%{
-        transform:translateX(-9.5vh);
+        transform:translateX(0);
     }
     95%, 100%{
-        transform:translateX(37.5vh);
+        transform:translateX(405px);
     }
 }
 @keyframes teleferic-obj{
     0%, 5%{
-        transform:translateY(-0.4vh);
+        transform:translateY(0vh);
     }
     95%, 100%{
-        transform:translateY(-3vh);
+        transform:translateY(-25px);
     }
 }
-#tel-cont, #tel-cont2{
+#teleferic-1, #teleferic-2{
     animation-name:teleferic-cont;
     animation-duration:20s;
     animation-iteration-count:infinite;
     animation-direction: alternate;
     animation-timing-function:ease-in-out;
 }
-#teleferic-1, #teleferic-2{
+#teleferic-1-cabina, #teleferic-2-cabina{
     animation-name:teleferic-obj;
     animation-duration:20s;
     animation-iteration-count:infinite;
     animation-direction: alternate;
-    animation-timing-function:cubic-bezier(0.3, -0.7, 0.7, 0.8);
+    animation-timing-function:cubic-bezier(0.4, -0.5, 0.8, 0.8);
 }
-#tel-cont2, #teleferic-2{
+#teleferic-2, #teleferic-2-cabina{
     animation-direction:alternate-reverse;
 }
 
@@ -278,11 +278,11 @@ h2 {
 }
 
 .applications-closed {
-	padding-top: 20px;
+    padding-top: 20px;
 
-	span {
-		font-size: 1.4em;
-	}
+    span {
+        font-size: 1.4em;
+    }
 }
 
 .faq-questions {
