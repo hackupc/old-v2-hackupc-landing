@@ -98,6 +98,8 @@ class Barcelona{
 		this.setFillColor(this._sky2StyleClass, mainSkyColor.darken(0.1).hex());
 		this.setFillColor(this._sky3StyleClass, mainSkyColor.darken(0.2).hex());
 		this.setFillColor(this._sky4StyleClass, mainSkyColor.darken(0.3).hex());
+		//Apply also to page background
+		document.getElementById("sky-extension").style.backgroundColor = mainSkyColor.hex();
 		
 		//Set interpolated sun position
 		let d : number = Util.mapRange(0,1, 0,this.sunDistance, q);
@@ -183,6 +185,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		'background',
 		['#e2c02b', '#e22b57', '#ad0909'],
 		1000,
-		['#28ada6', '#ffa1dd', '#231f6e'],
+		['#0E8C99', '#ffa1dd', '#231f6e'],
 	);
 });

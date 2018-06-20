@@ -59,6 +59,7 @@ body {
   color: $text-color;
   font-family: ProximaNovaRegular, sans-serif;
   font-weight: bold;
+  overflow-x:hidden;
 }
 
 a {
@@ -80,14 +81,23 @@ canvas {
 #background{
     position:absolute;
     height:100%;
-    overflow:hidden;
+    width:100%;
     z-index: -5;
-    /*woah, hax (centering a child larger than parent)*/
-    left:50%;
-    transform: translate(-50%, 0);
+    
+    #sky-extension{
+        position:absolute;
+        width:100%;
+        height:69vh;
+        background-color:$color-sky1;
+    }
     svg{
+        position:absolute;
+        /*woah, hax (centering a child larger than parent)*/
+        left:50%;
+        transform: translate(-50%, 0);
         /*This works only if all parents have it*/
-        height:100%;
+        height:110%;
+        min-width:100%;
     }
 }
 
@@ -129,15 +139,15 @@ canvas {
 
 .hupc-title{
     text-align: center;
-    font-size: 95px;
-    margin-top: 165px;
+    font-size: 12vh;
+    margin-top: 21vh;
 }
 .hupc-subtitle{
     font-family:GothamBoldRegular;
     text-align: center;
-    font-size: 28px;
-    letter-spacing: 4px;
-    margin-top: -23px;
+    font-size: 3.5vh;
+    letter-spacing: 0.5vh;
+    margin-top: -4vh;
 }
 
 .font-black{
@@ -174,15 +184,15 @@ canvas {
   font-family: GothamBoldRegular;
 }
 .top-description{
-    width: 402px;
-    margin: 170px auto 0 ;
+    width: 43vh;
+    margin: 27vh auto 0;
     .first-row{
         display:flex;
         h2{
             display: flex;
             flex: 1 1 auto;
             color: #EEE;
-            font-size:24px;
+            font-size: 3vh;
             &:last-child{
                 justify-content:flex-end;
             }
@@ -190,11 +200,11 @@ canvas {
     }
     h1{
         color: #EEE;
-        margin-top: -25px;
-        font-size: 50px;
-        letter-spacing: 4px;
+        margin-top: -3vh;
+        font-size: 5vh;
+        letter-spacing: 0.6vh;
         text-align: center;
-        margin-bottom:0;
+        margin-bottom: 0;
     }
 }
 .bottom-description{
@@ -204,12 +214,12 @@ canvas {
         color: #eee;
         margin: 0;
         text-align: center;
-        font-size: 28px;
-        margin-top: -15px;
+        font-size: 4vh;
+        margin-top: -4vh;
     }
 }
 .top-buttons, .bottom-buttons {
-    margin-top:20px;
+    margin-top:2vh;
     >div {
         text-align: center;
     }
@@ -224,10 +234,10 @@ canvas {
             text-transform: uppercase;
             background-color: #E22B57;
             color: #fff;
-            width: 200px;
-            padding: 10px 0px 10px;
+            width: 21vh;
+            padding: 1vh 0px 1vh;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 2.5vh;
             border: none;
             border-bottom: 10px solid #7c112b;
             transition: all .2s linear;
@@ -236,7 +246,7 @@ canvas {
 }
 
 .top-buttons .button-container {
-    height: 100px;
+    height: 12vh;
 }
 
 
@@ -353,14 +363,37 @@ h2 {
     margin-bottom: 5vh;
 }
 
-@media(max-width: 600px) {
-    .head-logo img {
-        width: 85%;
+@media(max-width: 500px) {
+    .hupc-title{
+        font-size: 18vw;
+        margin-top: 35vw;
     }
-    .button-container a {
-        display: block;
-        margin-bottom: 10px;
-        margin-right: 0!important;
+    .hupc-subtitle{
+        font-size: 5vw;
+        letter-spacing: 1vw;
+        margin-top: -6vw;
+    }
+    .top-description{
+        width:70vw;
+        min-width: 280px;
+        margin: 42vw auto 0;
+        h2{
+            font-size: 5vw;
+        }
+        h1{
+            margin-top: -5vw;
+            font-size: 8vw;
+        }
+    }
+    .top-buttons{
+        a{
+            width: 31vw;
+            font-size:3.5vw;
+        }
+    }
+    .bottom-description h2{
+        font-size: 6vw;
+        margin-top: -4vw;
     }
 }
 
