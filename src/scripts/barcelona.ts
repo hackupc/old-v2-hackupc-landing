@@ -40,18 +40,21 @@ class Barcelona{
 	containerId : string;
 	sunColorInterp : any;
 	skyColorInterp : any;
-	sunPosInterp : any;
+	sunDistance : number;
 	stylesheet : CSSStyleSheet;
 	private readonly _ssTitle : string = "bg";
-	private readonly _sunStyleClass : string = ".cls-8";
-	private readonly _sky1StyleClass : string = ".cls-4";
-	private readonly _sky2StyleClass : string = ".cls-3";
-	private readonly _sky3StyleClass : string = ".cls-2";
+	private readonly _sunStyleClass : string = ".st6";
+	private readonly _sky1StyleClass : string = ".st0";
+	private readonly _sky2StyleClass : string = ".st1";
+	private readonly _sky3StyleClass : string = ".st2";
+	private readonly _sky4StyleClass : string = ".st3";
+	private readonly _sunId : string = "lluna";
+	private readonly _skyId : string = "cel";
 	private readonly _svgFileName : string = "assets/img/bg.svg";
 	private readonly _pngFileName : string = "assets/img/bg.png";
 
 	constructor(containerId : string, 
-		sunColors : string[], sunPositions: Point[], 
+		sunColors : string[], sunDistance: number, 
 		skyColors : string[]){
 		let self = this;
 		this.containerId = containerId;
@@ -60,14 +63,7 @@ class Barcelona{
 			this.loadSVG(function(){
 				self.sunColorInterp = chroma.bezier(sunColors);
 				self.skyColorInterp = chroma.bezier(skyColors);
-				//yup, interpolating pos as if it were a color
-				//TODO: do something better
-				let c : any[] = [];
-				for(let pos of sunPositions)
-				{
-					c.push("rgb(0,"+pos.x+", "+pos.y+")");
-				}
-				self.sunPosInterp = chroma.bezier(c);
+				self.sunDistance = sunDistance;
 				self.setListener();
 				self.getStyleSheet();
 			});
@@ -79,12 +75,13 @@ class Barcelona{
 	};
 
 
-	update = () => {
+	update = (e) => {
 		//Get normalized scroll position
 		let scrollTop : number = window.pageYOffset;
 		let q : number = Util.mapRange(
 			//From
-			0, document.body.scrollHeight, 
+			//0, document.body.scrollHeight, 
+			0, window.innerHeight, 
 			//To
 			0, 1, 
 			//Input
@@ -93,19 +90,20 @@ class Barcelona{
 
 		//Set interpolated sun color
 		let sunColor : string = this.sunColorInterp(q).hex();
-		this.setFillColor('.cls-8', sunColor);
+		this.setFillColor(this._sunStyleClass, sunColor);
 
 		//Set interpolated sky color
 		let mainSkyColor : any = this.skyColorInterp(q);
-		this.setFillColor('.cls-4', mainSkyColor.hex());
-		this.setFillColor('.cls-3', mainSkyColor.darken(0.1).hex());
-		this.setFillColor('.cls-2', mainSkyColor.darken(0.2).hex());
+		this.setFillColor(this._sky1StyleClass, mainSkyColor.hex());
+		this.setFillColor(this._sky2StyleClass, mainSkyColor.darken(0.1).hex());
+		this.setFillColor(this._sky3StyleClass, mainSkyColor.darken(0.2).hex());
+		this.setFillColor(this._sky4StyleClass, mainSkyColor.darken(0.3).hex());
 		
 		//Set interpolated sun position
-		//TODO:do something better
-		let posColor : any = this.sunPosInterp(q).rgb();
-		let p : Point = new Point(0, posColor[2]);
-		document.getElementById("LUNA").style.transform = "translate("+p.toPx()+")";
+		let d : number = Util.mapRange(0,1, 0,this.sunDistance, q);
+		let p : Point = new Point(0, d);
+		document.getElementById(this._sunId).style.transform = "translate("+p.toPx()+")";
+		document.getElementById(this._skyId).style.transform = "translate("+p.toPx()+")";
 	}
 	/*
 		Get a reference to the SVG's stylesheet
@@ -184,10 +182,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	let b = new Barcelona(
 		'background',
 		['#e2c02b', '#e22b57', '#ad0909'],
-		[
-			new Point(0,0),
-			new Point(0, 1500)
-		],
+		1000,
 		['#28ada6', '#ffa1dd', '#231f6e'],
 	);
 });
