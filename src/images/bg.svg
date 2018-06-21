@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<<<<<<< HEAD
 	 viewBox="0 0 2400 1080" style="enable-background:new 0 0 2400 1080;" xml:space="preserve">
+=======
+	 viewBox="0 0 1920 1188" style="enable-background:new 0 0 1920 1188;" xml:space="preserve">
+>>>>>>> 96620686aa598d06893771a7650778cbd5f03ce1
 <style type="text/css" title="bg">
 	.st0{fill:#0E8C99;}
 	.st1{fill:#1595A3;}
@@ -2231,6 +2235,7 @@
 			<path class="st18" d="M742.3,652.1c-7.4-1.9-11.3-4-17.1-7.6c-0.6-0.4-1.1-0.7-1.5-1v11.6v7.9h39.1v-7.9V649
 				C752.9,654.4,742.3,652.1,742.3,652.1z"/>
 		</g>
+<<<<<<< HEAD
 		<g id="teleferic_2_">
 			<g id="teleferic-2_2_">
 				<path id="teleferic-2-cabina_2_" class="st18" d="M1032.7,567.1v-2.3h-4.2l-0.2-0.9l0.8-3.2c0,0,0.1,0,0.1,0
@@ -2254,6 +2259,29 @@
 					H1027.1z"/>
 				<rect x="1021.5" y="573.2" class="st19" width="10.5" height="1.9"/>
 				<text id="teleferic-1-text_2_" transform="matrix(1 0 0 1 1022.0814 573.9492)"><tspan x="0" y="0" class="st19 st8 st20">Perhaps you came </tspan><tspan x="2.4" y="1" class="st19 st8 st20">too early</tspan></text>
+=======
+		<g id="teleferic">
+			<g id="teleferic-2">
+				<path id="teleferic-2-cabina" class="st7" d="M792.7,567.1v-2.3h-4.2l-0.2-0.9l0.8-3.2c0,0,0.1,0,0.1,0
+					c0.8,0,0.7-1.3,0.7-1.3l-2.2,0c0,0,0-1.5-0.8-1.4s-0.8,1.4-0.8,1.4l-2.4,0c0.2,1.2,0.9,1.3,0.9,1.3s0.6,0,1.3,0l-0.6,4.1H781
+					v2.3c0,0-1.9,5,0,10.5h11.7C792.7,577.7,794.6,574.2,792.7,567.1z M788.3,563.6l-0.4-2.8c0.4,0,0.8,0,1.1,0L788.3,563.6z
+					 M788.3,564.9h-0.2c0,0,0-0.1-0.1-0.2l0.2-0.4L788.3,564.9z M787.6,560.8l0.5,3.1l-0.3,0.5c-0.1-0.2-0.3-0.3-0.5-0.4v-3.2
+					C787.5,560.8,787.6,560.8,787.6,560.8z M786.5,571.3h-4.7c0,0,0-1.9,0.6-3.1h4.1V571.3z M785.8,564.9h-0.2l0.7-4.1
+					c0.1,0,0.2,0,0.3,0v3.2C785.9,564.2,785.8,564.9,785.8,564.9z M787.4,571.3v-3.1h4c0,0,0.4,0.8,0.6,3.1H787.4z"/>
+				<rect x="781.6" y="573.2" class="st8" width="10.5" height="1.9"/>
+				<text id="teleferic-2-text_2_" transform="matrix(1 0 0 1 781.6458 573.9362)"><tspan x="0" y="0" class="st8 st9 st10">Check this in a while </tspan><tspan x="4.8" y="1" class="st8 st9 st10">;)</tspan></text>
+			</g>
+			<path id="teleferic-cable_2_" class="st11" d="M786.5,560.1c205.2,5.6,404.7-23,404.7-23"/>
+			<g id="teleferic-1">
+				<path id="teleferic-1-cabina" class="st7" d="M792.7,567.1v-2.3h-4.4l-0.6-4.1c0.8,0,1.4,0,1.5,0c0.8,0,0.7-1.3,0.7-1.3
+					l-2.2,0c0,0,0-1.5-0.8-1.4s-0.8,1.4-0.8,1.4l-2.4,0c0.2,1,0.7,1.2,0.9,1.2l0.8,3.2l-0.2,1H781l0,2.3c-1.9,7,0,10.6,0,10.6h11.7
+					C794.6,572.1,792.7,567.1,792.7,567.1z M787.4,560.7l0.7,4.1h-0.2c0,0-0.1-0.7-0.7-0.9v-3.2
+					C787.2,560.7,787.3,560.7,787.4,560.7z M784.7,560.7c0.2,0,0.6,0,1.1,0l-0.4,2.8L784.7,560.7z M785.5,564.2l0.2,0.4
+					c-0.1,0.1-0.1,0.3-0.1,0.3h-0.2L785.5,564.2z M786.3,571.3h-4.6c0.3-2.3,0.6-3.1,0.6-3.1h4V571.3z M785.8,564.4l-0.3-0.5
+					l0.5-3.1c0.1,0,0.2,0,0.3,0v3.2C786.1,564.1,785.9,564.2,785.8,564.4z M787.1,571.3v-3.1h4.1c0.6,1.3,0.6,3.1,0.6,3.1H787.1z"/>
+				<rect x="781.5" y="573.2" class="st8" width="10.5" height="1.9"/>
+				<text id="teleferic-1-text_2_" transform="matrix(1 0 0 1 782.0814 573.9492)"><tspan x="0" y="0" class="st8 st9 st10">Perhaps you came </tspan><tspan x="2.4" y="1" class="st8 st9 st10">too early</tspan></text>
+>>>>>>> 96620686aa598d06893771a7650778cbd5f03ce1
 			</g>
 			<path id="teleferic-torre-1_2_" class="st18" d="M1037.1,626.1l2.2-5.1h-2.4l-1.8-43.4l2.8-4.9l-2.6-0.9l-0.8-19.9l-3.2-4.8
 				l-4.2-10l-0.5-19.9l-0.5,19.9l-4.1,10l-3.4,4.8l-0.9,19.9l-3,1.2l3,4.6L1016,621h-2.9l2.7,5.1l-5,46.1h3.3l12.4-24.9l12.8,24.9
