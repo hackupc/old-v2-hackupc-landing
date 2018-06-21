@@ -43,11 +43,11 @@ class Barcelona{
 	sunDistance : number;
 	stylesheet : CSSStyleSheet;
 	private readonly _ssTitle : string = "bg";
-	private readonly _sunStyleClass : string = ".st6";
-	private readonly _sky1StyleClass : string = ".st0";
-	private readonly _sky2StyleClass : string = ".st1";
-	private readonly _sky3StyleClass : string = ".st2";
-	private readonly _sky4StyleClass : string = ".st3";
+	private readonly _sunStyleClass : string = ".st4";
+	private readonly _sky1StyleClass : string = ".st3";
+	private readonly _sky2StyleClass : string = ".st2";
+	private readonly _sky3StyleClass : string = ".st1";
+	private readonly _sky4StyleClass : string = ".st0";
 	private readonly _sunId : string = "lluna";
 	private readonly _skyId : string = "cel";
 	private readonly _svgFileName : string = "assets/img/bg.svg";
