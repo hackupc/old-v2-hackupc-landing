@@ -1,8 +1,28 @@
 @import "bootstrap";
 
 @font-face {
-    font-family: GothamBoldRegular;
-    src: url(../fonts/GothamBoldRegular.ttf);
+    font-family: Gotham-Black;
+    src: url(../fonts/GothamBlack.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(../fonts/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(../fonts/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fonts/GothamLight.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Thin;
+    src: url(../fonts/GothamThin.ttf);
 }
 
 @font-face {
@@ -143,7 +163,7 @@ canvas {
     margin-top: 21vh;
 }
 .hupc-subtitle{
-    font-family:GothamBoldRegular;
+    font-family:Gotham-Bold;
     text-align: center;
     font-size: 3.5vh;
     letter-spacing: 0.5vh;
@@ -181,7 +201,7 @@ canvas {
 }
 
 .top-buttons, .top-description {
-  font-family: GothamBoldRegular;
+  font-family: Gotham-Bold;
 }
 .top-description{
     width: 43vh;
@@ -210,7 +230,7 @@ canvas {
 .bottom-description{
     margin: auto 0;
     h2{
-        font-family: GothamBoldRegular;
+        font-family: Gotham-Bold;
         color: #eee;
         margin: 0;
         text-align: center;
