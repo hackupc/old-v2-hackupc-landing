@@ -191,7 +191,8 @@ canvas {
 }
 
 .intro {
-    height: 100vh;
+    height: 100%;
+	margin-bottom: 7.5vh;
 }
 
 .head-logo img {
@@ -530,3 +531,7 @@ h2 {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+//SVG compatibility
+.st6{font-family:'Gotham-Light' !important; font-weight: normal !important;}
+.st8{font-family:'Gotham-Bold' !important; font-weight: normal !important;}
