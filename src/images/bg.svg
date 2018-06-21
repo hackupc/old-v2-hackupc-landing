@@ -2524,7 +2524,7 @@
 			<text id="info-detall-hores_2_" transform="matrix(0.9561 0 0 1 1290.71 769.5576)" class="st5 st8 st9">36 HOURS</text>
 		</g>
 		<rect id="XMLID_42_" x="830" y="778" class="st18" width="739.9" height="69.5"/>
-		<text id="info-data_2_" transform="matrix(1 0 0 1 917.769 833.4008)" class="st5 st8 st21 st22">OCTOBER 5-7</text>
+		<text id="info-data_2_" transform="matrix(1 0 0 1 917.769 833.4008)" class="st5 st8 st21 st22" textLength="560">OCTOBER 5-7</text>
 	</g>
 	<text id="eslogan_2_" transform="matrix(1 0 0 1 947.6267 1002.9228)" class="st5 st8 st23">Dream it. Hack it. Ship it.</text>
 	<g id="boto_2_">
