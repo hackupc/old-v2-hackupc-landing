@@ -110,6 +110,13 @@ canvas {
         height:62vh;
         background-color:$color-sky1;
     }
+    #ground-extension{
+        position:absolute;
+        width:100%;
+        top:62vh;
+        height:100%;
+        background-color:$color-sky1;   
+    }
     svg{
         position:absolute;
         /*woah, hax (centering a child larger than parent)*/
@@ -118,6 +125,10 @@ canvas {
         /*This works only if all parents have it*/
         height:110%;
         min-width:100%;
+        &#sun{
+            position:fixed;
+            height:180vh;
+        }
     }
 }
 
@@ -307,7 +318,9 @@ h2 {
         font-size: 1.4em;
     }
 }
-
+#faq-section{
+    margin-top:115vh;
+}
 .faq-questions {
     .title {
         font-size: 1.4em;
@@ -388,6 +401,19 @@ h2 {
     margin-bottom: 5vh;
 }
 
+@media(max-aspect-ratio:400/500)
+{
+    #background{
+        height:240vw;
+        svg#sun{
+            height:240vw;
+        }
+    }
+
+    #faq-section{
+        margin-top:160vw;
+    }
+}
 @media(max-width: 500px) {
     .hupc-title{
         font-size: 18vw;
@@ -537,5 +563,5 @@ h2 {
 }
 
 //SVG compatibility
-.st6{font-family:'Gotham-Light' !important; font-weight: normal !important;}
-.st8{font-family:'Gotham-Bold' !important; font-weight: normal !important;}
+.st6{font-family:'Gotham-Light'; font-weight: normal;}
+.st8,.st210{font-family:'Gotham-Bold'; font-weight: normal;}

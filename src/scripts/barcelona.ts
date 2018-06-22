@@ -21,6 +21,26 @@ class Util{
 	static mapRange(a1, b1, a2, b2, q):number{
 		return (q - a1) * (b2 - a2) / (b1 - a1) + a2;
 	}
+
+	/*
+		A factory that creates debounced functions.
+		A debounced function executes only after
+		'wait' ms of the las call.
+	*/
+	static debounce(func, wait, immediate){
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	}
 }
 
 class Point{
@@ -44,17 +64,18 @@ class Barcelona{
 	stylesheet : CSSStyleSheet;
 	private readonly _ssTitle : string = "bg";
 	private readonly _sunStyleClass : string = ".st4";
-	private readonly _sky1StyleClass : string = ".st3";
-	private readonly _sky2StyleClass : string = ".st2";
-	private readonly _sky3StyleClass : string = ".st1";
-	private readonly _sky4StyleClass : string = ".st0";
+	private readonly _sky1StyleClass : string = ".st0";
+	private readonly _sky2StyleClass : string = ".st1";
+	private readonly _sky3StyleClass : string = ".st2";
+	private readonly _sky4StyleClass : string = ".st3";
 	private readonly _sunId : string = "lluna";
 	private readonly _skyId : string = "cel";
-	private readonly _svgFileName : string = "assets/img/bg.svg";
+	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
+	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
 	private readonly _pngFileName : string = "assets/img/bg.png";
 
 	constructor(containerId : string, 
-		sunColors : string[], sunDistance: number, 
+		sunColors : string[],
 		skyColors : string[]){
 		let self = this;
 		this.containerId = containerId;
@@ -63,7 +84,6 @@ class Barcelona{
 			this.loadSVG(function(){
 				self.sunColorInterp = chroma.bezier(sunColors);
 				self.skyColorInterp = chroma.bezier(skyColors);
-				self.sunDistance = sunDistance;
 				self.setListener();
 				self.getStyleSheet();
 			});
@@ -76,12 +96,16 @@ class Barcelona{
 
 
 	update = (e) => {
+		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*1.5, 1), 0);
+	    var bg = document.getElementById("background");
+	    bg.style.opacity = 1 * (1 - factor)+'';
+
 		//Get normalized scroll position
 		let scrollTop : number = window.pageYOffset;
 		let q : number = Util.mapRange(
 			//From
 			//0, document.body.scrollHeight, 
-			0, window.innerHeight, 
+			0, window.innerHeight/1.5, 
 			//To
 			0, 1, 
 			//Input
@@ -95,17 +119,12 @@ class Barcelona{
 		//Set interpolated sky color
 		let mainSkyColor : any = this.skyColorInterp(q);
 		this.setFillColor(this._sky1StyleClass, mainSkyColor.hex());
-		this.setFillColor(this._sky2StyleClass, mainSkyColor.darken(0.1).hex());
-		this.setFillColor(this._sky3StyleClass, mainSkyColor.darken(0.2).hex());
-		this.setFillColor(this._sky4StyleClass, mainSkyColor.darken(0.3).hex());
+		this.setFillColor(this._sky2StyleClass, mainSkyColor.brighten(0.4).hex());
+		this.setFillColor(this._sky3StyleClass, mainSkyColor.brighten(0.8).hex());
+		this.setFillColor(this._sky4StyleClass, mainSkyColor.brighten(1.2).hex());
 		//Apply also to page background
 		document.getElementById("sky-extension").style.backgroundColor = mainSkyColor.hex();
 		
-		//Set interpolated sun position
-		let d : number = Util.mapRange(0,1, 0,this.sunDistance, q);
-		let p : Point = new Point(0, d);
-		document.getElementById(this._sunId).style.transform = "translate("+p.toPx()+")";
-		document.getElementById(this._skyId).style.transform = "translate("+p.toPx()+")";
 	}
 	/*
 		Get a reference to the SVG's stylesheet
@@ -142,32 +161,55 @@ class Barcelona{
 		return typeof SVGRect !== "undefined";
 	}
 
+	//TODO:refactor
 	loadSVG(cb) : void{
 		let self = this;
 		let xhr = new XMLHttpRequest();
 		//Async request
-		xhr.open("GET", this._svgFileName, true);
+		xhr.open("GET", this._svgSunFileName, true);
 		xhr.overrideMimeType("image/svg+xml");
 		xhr.onload = function (e) {
 			if (xhr.readyState === 4) 
 			{
 				if (xhr.status === 200) 
 				{
-					document.getElementById(self.containerId)
-						.appendChild(xhr.responseXML.documentElement);
-					if (cb) cb();
+					var child = document.getElementById(self.containerId)
+									.appendChild(xhr.responseXML.documentElement);
+					child.id = "sun";
+					let xhr2 = new XMLHttpRequest();
+					xhr2.open("GET", self._svgGroundFileName, true);
+					xhr2.overrideMimeType("image/svg+xml");
+					xhr2.onload = function (e) {
+						if (xhr2.readyState === 4) 
+						{
+							if (xhr2.status === 200) 
+							{
+								var child2 = document.getElementById(self.containerId)
+									.appendChild(xhr2.responseXML.documentElement);
+								child2.id = "ground";
+								if (cb) cb();
+							} 
+							else 
+							{
+								console.error("Barcelona (loadSVG-ground):"+xhr2.statusText);
+							}
+						}
+					};
+					xhr2.onerror = function (e) {
+						console.error("Barcelona (loadSVG-ground):"+xhr2.statusText);
+					};
+					xhr2.send(null);
 				} 
 				else 
 				{
-					console.error("Barcelona (loadSVG):"+xhr.statusText);
+					console.error("Barcelona (loadSVG-sun):"+xhr.statusText);
 				}
 			}
 		};
 		xhr.onerror = function (e) {
-			console.error("Barcelona (loadSVG):"+xhr.statusText);
+			console.error("Barcelona (loadSVG-sun):"+xhr.statusText);
 		};
 		xhr.send(null);
-		
 	}
 
 	loadPNG() : void{
@@ -183,8 +225,9 @@ class Barcelona{
 document.addEventListener("DOMContentLoaded", function(){
 	let b = new Barcelona(
 		'background',
-		['#e2c02b', '#e22b57', '#ad0909'],
-		1000,
-		['#0E8C99', '#ffa1dd', '#231f6e'],
+		//Sun colors
+		['#e22b57', 'rgb(116,20,71)', '#ad0909'],
+		//Sky colors
+		['#0E8C99', '#fb90ab', '#0b5e94'],
 	);
 });
