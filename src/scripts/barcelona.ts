@@ -44,10 +44,10 @@ class Barcelona{
 	stylesheet : CSSStyleSheet;
 	private readonly _ssTitle : string = "bg";
 	private readonly _sunStyleClass : string = ".st4";
-	private readonly _sky1StyleClass : string = ".st3";
-	private readonly _sky2StyleClass : string = ".st2";
-	private readonly _sky3StyleClass : string = ".st1";
-	private readonly _sky4StyleClass : string = ".st0";
+	private readonly _sky1StyleClass : string = ".st0";
+	private readonly _sky2StyleClass : string = ".st1";
+	private readonly _sky3StyleClass : string = ".st2";
+	private readonly _sky4StyleClass : string = ".st3";
 	private readonly _sunId : string = "lluna";
 	private readonly _skyId : string = "cel";
 	private readonly _svgFileName : string = "assets/img/bg.svg";
@@ -183,8 +183,10 @@ class Barcelona{
 document.addEventListener("DOMContentLoaded", function(){
 	let b = new Barcelona(
 		'background',
-		['#e2c02b', '#e22b57', '#ad0909'],
+		//Sun colors
+		['#e22b57', 'rgb(116,20,71)', '#ad0909'],
 		1000,
+		//Sky colors
 		['#0E8C99', '#ffa1dd', '#231f6e'],
 	);
 });
