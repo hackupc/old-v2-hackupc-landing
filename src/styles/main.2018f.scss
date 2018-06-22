@@ -307,7 +307,9 @@ h2 {
         font-size: 1.4em;
     }
 }
-
+#faq-section{
+    margin-top:115vh;
+}
 .faq-questions {
     .title {
         font-size: 1.4em;
@@ -388,6 +390,15 @@ h2 {
     margin-bottom: 5vh;
 }
 
+@media(max-aspect-ratio:400/500)
+{
+    #background{
+        height:240vw;
+    }
+    #faq-section{
+        margin-top:160vw;
+    }
+}
 @media(max-width: 500px) {
     .hupc-title{
         font-size: 18vw;

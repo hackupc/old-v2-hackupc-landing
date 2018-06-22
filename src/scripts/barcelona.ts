@@ -54,7 +54,7 @@ class Barcelona{
 	private readonly _pngFileName : string = "assets/img/bg.png";
 
 	constructor(containerId : string, 
-		sunColors : string[], sunDistance: number, 
+		sunColors : string[],
 		skyColors : string[]){
 		let self = this;
 		this.containerId = containerId;
@@ -63,7 +63,6 @@ class Barcelona{
 			this.loadSVG(function(){
 				self.sunColorInterp = chroma.bezier(sunColors);
 				self.skyColorInterp = chroma.bezier(skyColors);
-				self.sunDistance = sunDistance;
 				self.setListener();
 				self.getStyleSheet();
 			});
@@ -81,7 +80,7 @@ class Barcelona{
 		let q : number = Util.mapRange(
 			//From
 			//0, document.body.scrollHeight, 
-			0, window.innerHeight, 
+			0, window.innerHeight/1.5, 
 			//To
 			0, 1, 
 			//Input
@@ -95,17 +94,12 @@ class Barcelona{
 		//Set interpolated sky color
 		let mainSkyColor : any = this.skyColorInterp(q);
 		this.setFillColor(this._sky1StyleClass, mainSkyColor.hex());
-		this.setFillColor(this._sky2StyleClass, mainSkyColor.darken(0.1).hex());
-		this.setFillColor(this._sky3StyleClass, mainSkyColor.darken(0.2).hex());
-		this.setFillColor(this._sky4StyleClass, mainSkyColor.darken(0.3).hex());
+		this.setFillColor(this._sky2StyleClass, mainSkyColor.brighten(0.4).hex());
+		this.setFillColor(this._sky3StyleClass, mainSkyColor.brighten(0.8).hex());
+		this.setFillColor(this._sky4StyleClass, mainSkyColor.brighten(1.2).hex());
 		//Apply also to page background
 		document.getElementById("sky-extension").style.backgroundColor = mainSkyColor.hex();
 		
-		//Set interpolated sun position
-		let d : number = Util.mapRange(0,1, 0,this.sunDistance, q);
-		let p : Point = new Point(0, d);
-		document.getElementById(this._sunId).style.transform = "translate("+p.toPx()+")";
-		document.getElementById(this._skyId).style.transform = "translate("+p.toPx()+")";
 	}
 	/*
 		Get a reference to the SVG's stylesheet
@@ -185,8 +179,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		'background',
 		//Sun colors
 		['#e22b57', 'rgb(116,20,71)', '#ad0909'],
-		1000,
 		//Sky colors
-		['#0E8C99', '#ffa1dd', '#231f6e'],
+		['#0E8C99', '#fb90ab', '#0b5e94'],
 	);
 });
