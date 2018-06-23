@@ -100,7 +100,7 @@ canvas {
 
 #background{
     position:absolute;
-    height:225%;
+    height:180%;
     width:100%;
     z-index: -5;
     
@@ -127,7 +127,7 @@ canvas {
         min-width:100%;
         &#sun{
             position:fixed;
-            height:225vh;
+            height:180vh;
         }
     }
 }
