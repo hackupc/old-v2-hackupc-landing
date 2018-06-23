@@ -96,9 +96,9 @@ class Barcelona{
 
 
 	update = (e) => {
-		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*1.5, 1), 0);
-	    var bg = document.getElementById("background");
-	    bg.style.opacity = 1 * (1 - factor)+'';
+		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
+		var bg = document.getElementById("background");
+		bg.style.opacity = 1 * (1 - factor)+'';
 
 		//Get normalized scroll position
 		let scrollTop : number = window.pageYOffset;

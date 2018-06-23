@@ -103,19 +103,13 @@ canvas {
     height:180%;
     width:100%;
     z-index: -5;
-    
+    //Hides a fixed position child
+    clip:rect(auto, auto, auto, auto);
     #sky-extension{
         position:absolute;
         width:100%;
         height:62vh;
         background-color:$color-sky1;
-    }
-    #ground-extension{
-        position:absolute;
-        width:100%;
-        top:62vh;
-        height:100%;
-        background-color:$color-sky1;   
     }
     svg{
         position:absolute;
