@@ -228,7 +228,7 @@
 </script>
 <script type="text/javascript">
   window.onscroll = function (e) {
-    var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*1, 1), 0);
+    var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
     var bg = document.getElementById("background");
     bg.style.opacity = 1 * (1 - factor);
 }
