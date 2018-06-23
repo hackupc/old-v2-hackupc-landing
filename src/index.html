@@ -231,7 +231,7 @@
     var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
     var bg = document.getElementById("background");
     bg.style.opacity = 1 * (1 - factor);
-    factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*1.5, 1), 0);
+    factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*.5, 1), 0);
     bg = document.getElementById("sun");
     bg.style.opacity = 1 * (1 - factor);
 }
