@@ -34,7 +34,6 @@
 <body>
     <div id="background">
         <div id="sky-extension"></div>
-        <!--<div id="ground-extension"></div>-->
     </div>
 
     <div class="container" style="-webkit-transform: translateZ(0);">
@@ -225,16 +224,6 @@
 
   ga('create', 'UA-69542332-1', 'auto');
   ga('send', 'pageview');
-</script>
-<script type="text/javascript">
-  window.onscroll = function (e) {
-    var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
-    var bg = document.getElementById("background");
-    bg.style.opacity = 1 * (1 - factor);
-    factor = Math.max(Math.min(window.pageYOffset / window.innerHeight*1.5, 1), 0);
-    bg = document.getElementById("sun");
-    bg.style.opacity = 1 * (1 - factor);
-}
 </script>
 <span style="display: none;">BIENE HACKUPC AGAIN! OH NO YOU SAW ME. IF YOU ARE FROM UPC PLS SEND AN EMAIL TO DEVS@HACKUPC.COM</span>
 </body>
