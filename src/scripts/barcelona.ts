@@ -41,18 +41,31 @@ class Util{
 			if (callNow) func.apply(context, args);
 		};
 	}
-}
 
-class Point{
-	x : number;
-	y : number;
-	constructor(x: number, y: number){
-		this.x = x;
-		this.y = y;
-	}
-
-	toPx():string{
-		return this.x + "px, " + this.y + "px";
+	/*
+	* Loads a file asynchronously
+	* if succesfull calls cb(),
+	* else calls cberr()
+	*/
+	static loadFile(sURL, cb, cberr) {
+		var oReq = new XMLHttpRequest();
+		oReq.onload = function(){
+			if (this.readyState === 4) {
+				if (this.status === 200) {
+					if(typeof cb == "function")
+						cb(this);
+				} else {
+					if(typeof cberr == "function")
+						cberr(this);
+				}
+			}
+		};
+		oReq.onerror = function(){
+			if(typeof cberr == "function")
+				cberr(this);
+		};
+		oReq.open("GET", sURL, true);
+		oReq.send(null);
 	}
 }
 
@@ -70,16 +83,25 @@ class Barcelona{
 	private readonly _sky4StyleClass : string = ".st3";
 	private readonly _sunId : string = "lluna";
 	private readonly _skyId : string = "cel";
+	private readonly _buttonId : string = "boto";
+	private readonly _registerUrl : string = "https://my.hackupc.com";
 	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
-	private readonly _pngFileName : string = "assets/img/bg.png";
+	private readonly _svgTextFileName : string = "assets/img/bg-1.svg";
+	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
+	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-phone.png";
+
 
 	constructor(containerId : string, 
 		sunColors : string[],
 		skyColors : string[]){
 		let self = this;
 		this.containerId = containerId;
-		if(this.isBrowserSVGCapable())
+		if(this.isPhone())
+		{
+			this.loadPhoneBg()
+		}
+		else if(this.isBrowserSVGCapable())
 		{
 			this.loadSVG(function(){
 				self.sunColorInterp = chroma.bezier(sunColors);
@@ -126,6 +148,10 @@ class Barcelona{
 		document.getElementById("sky-extension").style.backgroundColor = mainSkyColor.hex();
 		
 	}
+
+	isPhone() : boolean{
+		return (window.innerWidth < 700);
+	}
 	/*
 		Get a reference to the SVG's stylesheet
 	*/
@@ -154,69 +180,60 @@ class Barcelona{
 		}
 	}
 	setListener() : void{
+		let self = this;
 		document.addEventListener('scroll', this.update);
+		document.getElementById(this._buttonId).addEventListener('click', function(){
+			window.open(self._registerUrl);
+		});
 	}
 
 	isBrowserSVGCapable() : boolean{
 		return typeof SVGRect !== "undefined";
+		//return false;
 	}
 
-	//TODO:refactor
 	loadSVG(cb) : void{
 		let self = this;
-		let xhr = new XMLHttpRequest();
-		//Async request
-		xhr.open("GET", this._svgSunFileName, true);
-		xhr.overrideMimeType("image/svg+xml");
-		xhr.onload = function (e) {
-			if (xhr.readyState === 4) 
-			{
-				if (xhr.status === 200) 
-				{
-					var child = document.getElementById(self.containerId)
-									.appendChild(xhr.responseXML.documentElement);
-					child.id = "sun";
-					let xhr2 = new XMLHttpRequest();
-					xhr2.open("GET", self._svgGroundFileName, true);
-					xhr2.overrideMimeType("image/svg+xml");
-					xhr2.onload = function (e) {
-						if (xhr2.readyState === 4) 
-						{
-							if (xhr2.status === 200) 
-							{
-								var child2 = document.getElementById(self.containerId)
-									.appendChild(xhr2.responseXML.documentElement);
-								child2.id = "ground";
-								if (cb) cb();
-							} 
-							else 
-							{
-								console.error("Barcelona (loadSVG-ground):"+xhr2.statusText);
-							}
-						}
-					};
-					xhr2.onerror = function (e) {
-						console.error("Barcelona (loadSVG-ground):"+xhr2.statusText);
-					};
-					xhr2.send(null);
-				} 
-				else 
-				{
-					console.error("Barcelona (loadSVG-sun):"+xhr.statusText);
-				}
-			}
+		let error = (id)=>{
+			console.error("Error while loading background '"+id+"'");
 		};
-		xhr.onerror = function (e) {
-			console.error("Barcelona (loadSVG-sun):"+xhr.statusText);
-		};
-		xhr.send(null);
+
+		let loaded = false;
+		let container = document.getElementById(self.containerId);
+		Util.loadFile(this._svgSunFileName, (xhr)=>{
+			var child = container.insertBefore(xhr.responseXML.documentElement, null);
+			child.id = 'sun';
+			if(loaded && cb) cb()
+			loaded = true
+		},()=>{error('sun')});
+
+		Util.loadFile(this._svgGroundFileName, (xhr2)=>{
+			var child = container.appendChild(xhr2.responseXML.documentElement)
+			child.id = 'ground';
+			if(loaded && cb) cb()
+			loaded = true
+		},()=>{error('ground')});
 	}
 
 	loadPNG() : void{
 		let img = new Image();
 		img.src = this._pngFileName;
+		let self = this;
 		document.getElementById(this.containerId)
-			.appendChild(img);
+			.appendChild(img)
+			.addEventListener('click', function(){
+				window.open(self._registerUrl)
+			});
+	}
+	loadPhoneBg() : void{
+		let img = new Image();
+		img.src = this._phoneBgFileName;
+		let self = this;
+		document.getElementById(this.containerId)
+			.appendChild(img)
+			.addEventListener('click', function(){
+				window.open(self._registerUrl)
+			});
 	}
 
 

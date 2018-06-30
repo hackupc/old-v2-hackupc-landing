@@ -31,7 +31,7 @@
 	.st25{font-size:30px;}
 	.st26{display:none;}
 	.st27{display:inline;fill:url(#SVGID_1_);}
-	.st28{display:inline;fill:url(#SVGID_2_);}
+	.st28{display:inline;fill:url(#SVGID);}
 	.st29{display:inline;fill:url(#SVGID_3_);}
 	.st30{display:inline;fill:url(#SVGID_4_);}
 	.st31{display:inline;fill:url(#SVGID_5_);}
@@ -48,18 +48,18 @@
 		<circle id="cel-4" class="st3" cx="1201.5" cy="332.2" r="332.2"/>
 	</g>
 	<g id="lluna">
-		<g id="lluna-lluna_2_">
-			<path id="lluna-lluna-4_2_" class="st4" d="M1201.5,533.3c41.4,0,79.9-13,111.8-34.2l-223.5,0
+		<g id="lluna-lluna">
+			<path id="lluna-lluna-4" class="st4" d="M1201.5,533.3c41.4,0,79.9-13,111.8-34.2l-223.5,0
 				C1121.6,520.3,1160.1,533.3,1201.5,533.3z"/>
-			<path id="lluna-lluna-3_2_" class="st4" d="M1063.7,477.9l275.6,0c7.5-7.1,14.5-14.9,20.8-23.6l-317.2,0
+			<path id="lluna-lluna-3" class="st4" d="M1063.7,477.9l275.6,0c7.5-7.1,14.5-14.9,20.8-23.6l-317.2,0
 				C1049.2,463,1056.2,470.9,1063.7,477.9z"/>
-			<path id="lluna-lluna-1_2_" class="st4" d="M1400.9,333.9c0-110-89.3-199.2-199.4-199.2c-110.2,0-199.4,89.1-199.4,199.1
+			<path id="lluna-lluna-1" class="st4" d="M1400.9,333.9c0-110-89.3-199.2-199.4-199.2c-110.2,0-199.4,89.1-199.4,199.1
 				c0,25,4.6,49.1,13.1,71.1l372.8,0C1396.3,382.9,1400.9,358.9,1400.9,333.9z"/>
-			<path id="lluna-lluna-2_2_" class="st4" d="M1030.8,437.1l341.3,0c4.2-6.3,7.9-14.1,11.2-21.2l-363.7,0
+			<path id="lluna-lluna-2" class="st4" d="M1030.8,437.1l341.3,0c4.2-6.3,7.9-14.1,11.2-21.2l-363.7,0
 				C1022.9,422.9,1026.7,430.8,1030.8,437.1z"/>
 		</g>
-		<text id="lluna-hackupc_2_" transform="matrix(1 0 0 1 905.4457 364.5693)"><tspan x="0" y="0" class="st5 st6 st7">HACK</tspan><tspan x="344.2" y="0" class="st5 st8 st7">UPC</tspan></text>
-		<text id="lluna-lloc_2_" transform="matrix(1 0 0 1 988.1279 418.8777)" class="st5 st8 st9 st10" textLength="420">BARCELONA 2018</text>
+		<text id="lluna-hackupc" transform="matrix(1 0 0 1 905.4457 364.5693)"><tspan x="0" y="0" class="st5 st6 st7">HACK</tspan><tspan x="344.2" y="0" class="st5 st8 st7">UPC</tspan></text>
+		<text id="lluna-lloc" transform="matrix(1 0 0 1 988.1279 418.8777)" class="st5 st8 st9 st10" textLength="420">BARCELONA 2018</text>
 	</g>
 	<rect id="terra" y="684.7" class="st11" width="2400" height="1475.3"/>
 	<g id="eixample">
@@ -2120,7 +2120,7 @@
 			s-26.1-6.8-40.6-13.9c0,0-29.5-13.8-40.4-22.3s-29.9-16.3-49.1-18.5c-19.2-2.1-42.9-3.7-51.3-3.6s-23.8-0.5-46.7,21.8
 			c-22.9,22.3-57.5,39.5-73.1,40.1s-104.6,8.8-104.6,8.8s-34.7,3.1-48.4,1.1c-13.7-2-24.4-1.9-24.4-1.9s-2.8-6.2-22.2-5.6
 			c-19.3,0.6-34.3,11.4-34.3,11.4s-2.6,2.7-18,5.1c-15.4,2.3-48.6-0.5-56.2-2.1c-7.6-1.6-36.8-6.3-36.8-6.3v22.5H2120.9z"/>
-		<g id="collserola_2_">
+		<g id="collserola">
 			<g id="XMLID_44_">
 				<polygon id="XMLID_80_" class="st17" points="1731.3,529.5 1730,529.5 1730,547.1 1729.5,547.1 1729.5,595 1732.2,595 
 					1732.2,547.1 1731.3,547.1 				"/>
@@ -2191,7 +2191,7 @@
 			</g>
 			<polygon id="XMLID_43_" class="st17" points="1731.7,547.4 1732.2,547.2 1732.2,547.1 1732.2,544 1732.1,544 			"/>
 		</g>
-		<g id="_x34_columnes_2_">
+		<g id="_x34_columnes">
 			<path class="st17" d="M803.4,611.5v-1h-2.9h-1.1h-2.9v1c-0.7,0-1.2,0.6-1.2,1.3c0,0.7,0.6,1.3,1.3,1.3c0.4,0,0.7-0.2,0.9-0.4
 				c-1.7,44,0,51.9,0,51.9h4.9c0,0,1.7-7.9,0-51.8c0.2,0.2,0.5,0.3,0.9,0.3c0.7,0,1.3-0.6,1.3-1.3
 				C804.6,612.1,804.1,611.5,803.4,611.5z"/>
@@ -2205,7 +2205,7 @@
 				c-1.7,44,0,51.9,0,51.9h4.9c0,0,1.7-7.9,0-51.8c0.2,0.2,0.5,0.3,0.9,0.3c0.7,0,1.3-0.6,1.3-1.3
 				C861.1,612.1,860.6,611.5,859.9,611.5z"/>
 		</g>
-		<g id="mafre2_2_">
+		<g id="mafre2">
 			<path class="st18" d="M731.3,635.1h13.2c1.3,0,1.7-0.6,2.8-1.4h-19.2C730.5,635.1,731.3,635.1,731.3,635.1z"/>
 			<rect x="723.6" y="579.3" class="st17" width="39.1" height="1.4"/>
 			<rect x="723.6" y="574.5" class="st17" width="39.1" height="1.4"/>
@@ -2235,21 +2235,21 @@
 			<path class="st17" d="M742.3,652.1c-7.4-1.9-11.3-4-17.1-7.6c-0.6-0.4-1.1-0.7-1.5-1v11.6v7.9h39.1v-7.9V649
 				C752.9,654.4,742.3,652.1,742.3,652.1z"/>
 		</g>
-		<g id="teleferic_2_">
-			<g id="teleferic-2_2_">
-				<path id="teleferic-2-cabina_2_" class="st17" d="M1032.7,567.1v-2.3h-4.2l-0.2-0.9l0.8-3.2c0,0,0.1,0,0.1,0
+		<g id="teleferic">
+			<g id="teleferic-2">
+				<path id="teleferic-2-cabina" class="st17" d="M1032.7,567.1v-2.3h-4.2l-0.2-0.9l0.8-3.2c0,0,0.1,0,0.1,0
 					c0.8,0,0.7-1.3,0.7-1.3l-2.2,0c0,0,0-1.5-0.8-1.4s-0.8,1.4-0.8,1.4l-2.4,0c0.2,1.2,0.9,1.3,0.9,1.3s0.6,0,1.3,0l-0.6,4.1h-4.4
 					v2.3c0,0-1.9,5,0,10.5h11.7C1032.7,577.7,1034.6,574.2,1032.7,567.1z M1028.3,563.6l-0.4-2.8c0.4,0,0.8,0,1.1,0L1028.3,563.6z
 					 M1028.3,564.9h-0.2c0,0,0-0.1-0.1-0.2l0.2-0.4L1028.3,564.9z M1027.6,560.8l0.5,3.1l-0.3,0.5c-0.1-0.2-0.3-0.3-0.5-0.4v-3.2
 					C1027.5,560.8,1027.6,560.8,1027.6,560.8z M1026.5,571.3h-4.7c0,0,0-1.9,0.6-3.1h4.1V571.3z M1025.8,564.9h-0.2l0.7-4.1
 					c0.1,0,0.2,0,0.3,0v3.2C1025.9,564.2,1025.8,564.9,1025.8,564.9z M1027.4,571.3v-3.1h4c0,0,0.4,0.8,0.6,3.1H1027.4z"/>
 				<rect x="1021.6" y="573.2" class="st18" width="10.5" height="1.9"/>
-				<text id="teleferic-2-text_2_" transform="matrix(1 0 0 1 1021.6458 573.9362)"><tspan x="0" y="0" class="st18 st8 st19">Check this in a while </tspan><tspan x="4.8" y="1" class="st18 st8 st19">;)</tspan></text>
+				<text id="teleferic-2-text" transform="matrix(1 0 0 1 1021.6458 573.9362)"><tspan x="0" y="0" class="st18 st8 st19">Check this in a while </tspan><tspan x="4.8" y="1" class="st18 st8 st19">;)</tspan></text>
 			</g>
-			<path id="teleferic-cable_2_" class="st20" d="M1026.5,560.1c13.8,0.4,27.6,0.6,41.3,0.7c46.5,0.3,134.3-3.1,134.3-3.1
+			<path id="teleferic-cable" class="st20" d="M1026.5,560.1c13.8,0.4,27.6,0.6,41.3,0.7c46.5,0.3,134.3-3.1,134.3-3.1
 				s95-5.1,131.9-8.6c59.5-5.6,97.2-12,97.2-12"/>
-			<g id="teleferic-1_2_">
-				<path id="teleferic-1-cabina_2_" class="st17" d="M1032.7,567.1v-2.3h-4.4l-0.6-4.1c0.8,0,1.4,0,1.5,0c0.8,0,0.7-1.3,0.7-1.3
+			<g id="teleferic-1">
+				<path id="teleferic-1-cabina" class="st17" d="M1032.7,567.1v-2.3h-4.4l-0.6-4.1c0.8,0,1.4,0,1.5,0c0.8,0,0.7-1.3,0.7-1.3
 					l-2.2,0c0,0,0-1.5-0.8-1.4c-0.8,0.1-0.8,1.4-0.8,1.4l-2.4,0c0.2,1,0.7,1.2,0.9,1.2l0.8,3.2l-0.2,1h-4.2l0,2.3
 					c-1.9,7,0,10.6,0,10.6h11.7C1034.6,572.1,1032.7,567.1,1032.7,567.1z M1027.4,560.7l0.7,4.1h-0.2c0,0-0.1-0.7-0.7-0.9v-3.2
 					C1027.2,560.7,1027.3,560.7,1027.4,560.7z M1024.7,560.7c0.2,0,0.6,0,1.1,0l-0.4,2.8L1024.7,560.7z M1025.5,564.2l0.2,0.4
@@ -2257,9 +2257,9 @@
 					l0.5-3.1c0.1,0,0.2,0,0.3,0v3.2C1026.1,564.1,1025.9,564.2,1025.8,564.4z M1027.1,571.3v-3.1h4.1c0.6,1.3,0.6,3.1,0.6,3.1
 					H1027.1z"/>
 				<rect x="1021.5" y="573.2" class="st18" width="10.5" height="1.9"/>
-				<text id="teleferic-1-text_2_" transform="matrix(1 0 0 1 1022.0814 573.9492)"><tspan x="0" y="0" class="st18 st8 st19">Perhaps you came </tspan><tspan x="2.4" y="1" class="st18 st8 st19">too early</tspan></text>
+				<text id="teleferic-1-text" transform="matrix(1 0 0 1 1022.0814 573.9492)"><tspan x="0" y="0" class="st18 st8 st19">Perhaps you came </tspan><tspan x="2.4" y="1" class="st18 st8 st19">too early</tspan></text>
 			</g>
-			<path id="teleferic-torre-1_2_" class="st17" d="M1037.1,626.1l2.2-5.1h-2.4l-1.8-43.4l2.8-4.9l-2.6-0.9l-0.8-19.9l-3.2-4.8
+			<path id="teleferic-torre-1" class="st17" d="M1037.1,626.1l2.2-5.1h-2.4l-1.8-43.4l2.8-4.9l-2.6-0.9l-0.8-19.9l-3.2-4.8
 				l-4.2-10l-0.5-19.9l-0.5,19.9l-4.1,10l-3.4,4.8l-0.9,19.9l-3,1.2l3,4.6L1016,621h-2.9l2.7,5.1l-5,46.1h3.3l12.4-24.9l12.8,24.9
 				h3.1L1037.1,626.1z M1025,542.9l1.6-4.1l1.6,4.1H1025l-0.5,1.2h4.1l1.1,2.9h-6.3L1025,542.9z M1020.8,557.5h3.9
 				c0,0,0.7,3,1.9,2.9s1.7-2.9,1.7-2.9h4.1l0.6,12.1h-12.8L1020.8,557.5z M1020,583h12.9l1.6,37.8h-15.8L1020,583z M1014.7,665.5
@@ -2519,19 +2519,19 @@
 </g>
 <g id="text">
 	<g id="info_1_">
-		<g id="info-detall_2_">
-			<text id="info-detall-hackers_2_" transform="matrix(0.9561 0 0 1 922.127 769.5586)" class="st5 st8 st9">700 HACKERS</text>
-			<text id="info-detall-hores_2_" transform="matrix(0.9561 0 0 1 1290.71 769.5576)" class="st5 st8 st9">36 HOURS</text>
+		<g id="info-detall">
+			<text id="info-detall-hackers" transform="matrix(0.9561 0 0 1 922.127 769.5586)" class="st5 st8 st9">700 HACKERS</text>
+			<text id="info-detall-hores" transform="matrix(0.9561 0 0 1 1290.71 769.5576)" class="st5 st8 st9">36 HOURS</text>
 		</g>
 		<rect id="XMLID_42_" x="830" y="778" class="st18" width="739.9" height="69.5"/>
-		<text id="info-data_2_" transform="matrix(1 0 0 1 917.769 833.4008)" class="st5 st8 st21 st22" textLength="560">OCTOBER 5-7</text>
+		<text id="info-data" transform="matrix(1 0 0 1 917.769 833.4008)" class="st5 st8 st21 st22" textLength="560">OCTOBER 5-7</text>
 	</g>
-	<text id="eslogan_2_" transform="matrix(1 0 0 1 947.6267 1002.9228)" class="st5 st8 st23">Dream it. Hack it. Ship it.</text>
-	<g id="boto_2_">
-		<rect id="boto-fons-1_2_" x="1072.1" y="876.6" class="st24" width="259.9" height="64.4"/>
-		<rect id="boto-fons-2_2_" x="1072.1" y="867.5" class="st4" width="259.9" height="64.4"/>
+	<text id="eslogan" transform="matrix(1 0 0 1 947.6267 1002.9228)" class="st5 st8 st23">Dream it. Hack it. Ship it.</text>
+	<g id="boto">
+		<rect id="boto-fons-1" x="1072.1" y="876.6" class="st24" width="259.9" height="64.4"/>
+		<rect id="boto-fons-2" x="1072.1" y="867.5" class="st4" width="259.9" height="64.4"/>
 		<rect id="XMLID_41_" x="1072.1" y="885.9" class="st18" width="259.9" height="27.6"/>
-		<text id="boto-text_2_" transform="matrix(1 0 0 1 1104.214 911.4454)" class="st5 st8 st25">APPLY NOW</text>
+		<text id="boto-text" transform="matrix(1 0 0 1 1104.214 911.4454)" class="st5 st8 st25">APPLY NOW</text>
 	</g>
 </g>
 <g id="llums2" class="st26">
@@ -2542,7 +2542,7 @@
 	</linearGradient>
 	<rect x="1201" y="584.9" class="st27" width="2.2" height="96.1"/>
 	
-		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1196.806" y1="692.4683" x2="1196.806" y2="596.4149" gradientTransform="matrix(0.9848 -0.1736 0.1942 1.1016 -129.7006 143.6618)">
+		<linearGradient id="SVGID" gradientUnits="userSpaceOnUse" x1="1196.806" y1="692.4683" x2="1196.806" y2="596.4149" gradientTransform="matrix(0.9848 -0.1736 0.1942 1.1016 -129.7006 143.6618)">
 		<stop  offset="0" style="stop-color:#D8A127"/>
 		<stop  offset="0.8587" style="stop-color:#D8A127;stop-opacity:0.1413"/>
 		<stop  offset="1" style="stop-color:#D8A127;stop-opacity:0"/>
