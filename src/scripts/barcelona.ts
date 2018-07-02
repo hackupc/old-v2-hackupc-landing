@@ -87,7 +87,6 @@ class Barcelona{
 	private readonly _registerUrl : string = "https://my.hackupc.com";
 	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
-	private readonly _svgTextFileName : string = "assets/img/bg-1.svg";
 	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
 	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-phone.png";
 
@@ -121,7 +120,7 @@ class Barcelona{
 		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
 		var bg = document.getElementById("background");
 		bg.style.opacity = 1 * (1 - factor)+'';
-		bg.style.transform = "scale(" + (1 + factor) + ")";
+		//bg.style.transform = "scale(" + (1 + factor) + ")";
 
 		//Get normalized scroll position
 		let scrollTop : number = window.pageYOffset;
@@ -244,8 +243,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	let b = new Barcelona(
 		'background',
 		//Sun colors
-		['#e22b57', 'rgb(116,20,71)', '#ad0909'],
-		//Sky colors
-		['#0E8C99', '#fb90ab', '#0b5e94'],
+		['#e22b57', 'rgb(116, 43, 19)', '#ad0909'],
+		//Sky colors rgb(146, 60, 66)
+		['#0E8C99', 'rgb(165, 68, 52)', 'rgb(146, 60, 66)', '#0b5e94', '#0b5e94'],
 	);
 });
