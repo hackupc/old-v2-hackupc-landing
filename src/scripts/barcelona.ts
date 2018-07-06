@@ -88,7 +88,7 @@ class Barcelona{
 	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
 	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
-	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-phone.png";
+	private readonly _phoneBgFileName : string = "assets/img/bg-fallback.png";
 
 
 	constructor(containerId : string, 
