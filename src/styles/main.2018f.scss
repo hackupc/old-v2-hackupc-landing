@@ -130,7 +130,7 @@ canvas {
     img{
         position:relative;
         width:100%;
-        z-index:2;
+        z-index: 5;
     }
 }
 
@@ -322,7 +322,7 @@ h2 {
 }
 
 .container{
-    z-index:3;
+    z-index: 10;
 }
 
 #faq-section{
