@@ -71,7 +71,8 @@ $button-bottom-color: darken($button-body-color, 25%);
 
 
 html, body{
-    height:100%;
+    height: 100%;
+	overflow-x: hidden;
 }
 
 body {
