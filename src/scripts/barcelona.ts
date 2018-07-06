@@ -107,8 +107,6 @@ class Barcelona{
 				self.skyColorInterp = chroma.bezier(skyColors);
 				self.setListener();
 				self.getStyleSheet();
-				//Ugly, how to call arrow function myself?
-				setTimeout(this.update, 1)
 			});
 		}
 		else
@@ -119,13 +117,13 @@ class Barcelona{
 
 
 	update = () => {
-		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
+		var factor = Math.max(Math.min(window.scrollY / window.innerHeight, 1), 0);
 		var bg = document.getElementById("background");
 		bg.style.opacity = 1 * (1 - factor)+'';
 		//bg.style.transform = "scale(" + (1 + factor) + ")";
 
 		//Get normalized scroll position
-		let scrollTop : number = window.pageYOffset;
+		let scrollTop : number = window.scrollY;
 		let q : number = Util.mapRange(
 			//From
 			//0, document.body.scrollHeight, 
@@ -242,9 +240,10 @@ class Barcelona{
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-	var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
-		var bg = document.getElementById("background");
-		bg.style.opacity = 1 * (1 - factor)+'';
+	var factor = Math.max(Math.min(window.scrollY / window.innerHeight, 1), 0);
+	var bg = document.getElementById("background");
+	bg.style.opacity = 1 * (1 - factor)+'';
+
 	let b = new Barcelona(
 		'background',
 		//Sun colors
