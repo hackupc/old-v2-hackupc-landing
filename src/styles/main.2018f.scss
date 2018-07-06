@@ -410,14 +410,10 @@ h2 {
 @media(max-aspect-ratio:400/500)
 {
     #background{
-        height:240vw;
+        height:220vw;
         svg#sun{
-            height:240vw;
+            height:220vw;
         }
-    }
-
-    #faq-section{
-        margin-top:-60vw;
     }
 }
 @media(max-width: 500px) {
