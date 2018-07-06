@@ -325,7 +325,7 @@ h2 {
 }
 
 #faq-section{
-    margin-top: -80vh;
+    margin-top: -70vh;
 }
 .faq-questions {
     .title {
@@ -425,6 +425,9 @@ h2 {
 			right: -9999px;
 		}
     }
+	#faq-section{
+		margin-top: -80vh;
+	}
 }
 
 @media(max-width: 500px) {
@@ -444,7 +447,9 @@ h2 {
 			right: -9999px;
 		}
     }
-	
+	#faq-section{
+		margin-top: -80vh;
+	}
     .hupc-title{
         font-size: 18vw;
         margin-top: 35vw;
