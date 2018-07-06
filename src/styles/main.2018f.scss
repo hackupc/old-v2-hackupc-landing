@@ -410,14 +410,15 @@ h2 {
 @media(max-aspect-ratio:400/500)
 {
     #background{
-        height:240vw;
+        height: 180%;
         svg#sun{
-            height:240vw;
+            height: 180%;
         }
 		img{
 			position: absolute;
-			height:100%;
-			width: auto;
+			height: auto;
+			max-width: 300%;
+			max-height: 100%;
 			margin: auto;
 			left: -9999px;
 			right: -9999px;
@@ -427,14 +428,15 @@ h2 {
 
 @media(max-width: 500px) {
 	#background{
-        height:240vw;
+        height: 180%;
         svg#sun{
-            height:240vw;
+            height: 180%;
         }
 		img{
 			position: absolute;
-			height:100%;
-			width: auto;
+			height: auto;
+			max-width: 300%;
+			max-height: 100%;
 			margin: auto;
 			left: -9999px;
 			right: -9999px;
