@@ -415,8 +415,12 @@ h2 {
             height:240vw;
         }
 		img{
+			position: absolute;
 			height:100%;
 			width: auto;
+			margin: auto;
+			left: -9999px;
+			right: -9999px;
 		}
     }
 }
