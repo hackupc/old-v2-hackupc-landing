@@ -107,6 +107,8 @@ class Barcelona{
 				self.skyColorInterp = chroma.bezier(skyColors);
 				self.setListener();
 				self.getStyleSheet();
+				//Ugly, how to call arrow function myself?
+				setTimeout(this.update, 1)
 			});
 		}
 		else
@@ -116,7 +118,7 @@ class Barcelona{
 	};
 
 
-	update = (e) => {
+	update = () => {
 		var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
 		var bg = document.getElementById("background");
 		bg.style.opacity = 1 * (1 - factor)+'';
@@ -239,11 +241,14 @@ class Barcelona{
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+	var factor = Math.max(Math.min(window.pageYOffset / window.innerHeight, 1), 0);
+		var bg = document.getElementById("background");
+		bg.style.opacity = 1 * (1 - factor)+'';
 	let b = new Barcelona(
 		'background',
 		//Sun colors
-		['#e22b57', 'rgb(116, 43, 19)', '#ad0909'],
-		//Sky colors rgb(146, 60, 66)
-		['#0E8C99', 'rgb(165, 68, 52)', 'rgb(146, 60, 66)', '#0b5e94', '#0b5e94'],
+		['#e22b57', '#e22b7b'],
+		//Sky colors rgb(146, 60, 66)'#e22b7b', 
+		['#0E8C99', '#e22b7b', '#e22b7b'],
 	);
 });
