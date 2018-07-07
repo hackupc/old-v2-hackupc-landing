@@ -79,6 +79,7 @@ body {
   color: $text-color;
   font-family: ProximaNovaRegular, sans-serif;
   font-weight: normal;
+  width: 100%;
 }
 
 a {
@@ -101,6 +102,7 @@ canvas {
     position: absolute;
     height: 180%;
     width: 100%;
+	z-index: -100;
     //Hides a fixed position child
     clip:rect(auto, auto, auto, auto);
     #sky-extension{
