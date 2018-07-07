@@ -326,8 +326,13 @@ h2 {
 	position: relative;
 }
 
-#faq-section{
+.faq-container{
     margin-top: 100vh;
+	pointer-events: none;
+}
+	
+
+#faq-section{
     padding-top: 5vh;
 }
 .faq-questions {
@@ -481,6 +486,7 @@ h2 {
 	
 	.bottom-left-links {
 		text-align: center !important;
+		margin-top: 2.5vh;
 	}
 	
 	.bottom-right-links {
