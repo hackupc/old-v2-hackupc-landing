@@ -332,6 +332,7 @@ h2 {
 	top: 100vh;
 	position: absolute;
 	width: 100%;
+	overflow-x: hidden;
 }
 
 .container-grey{
@@ -502,6 +503,69 @@ h2 {
 	
 	.bottom-right-links {
 		text-align: center !important;
+	}
+	
+	.sponsor-images {
+		text-align: center;
+		.peta {
+			img {
+				width: 90%
+			}
+			margin-bottom: 5vh;
+		}
+		.tera {
+			img {
+				width: 75%
+			}
+			margin-bottom: 5vh;
+		}
+		.giga {
+			img {
+				width: 45%
+			}
+			margin-bottom: 2.5vh;
+		}
+		.mega {
+			img {
+				width: 40%
+			}
+			margin-bottom: 2.5vh;
+		}
+		.kilo {
+			img {
+				width: 35%;
+			}
+			margin-bottom: 2.5vh;
+		}
+		.mili {
+			img {
+				width: 30%;
+			}
+			margin-bottom: 2.5vh;
+		}
+		.micro {
+			img {
+				width: 25%;
+			}
+		}
+		img {
+			&.mr {
+				margin-right: 2%;
+			}
+			&.ml {
+				margin-left: 2%;
+			}
+			&.mega-portrait {
+				width: 15%;
+			}
+			&.giga-portrait {
+				width: 18%;
+			}
+		}
+		.separator {
+			height: 2.5vh;
+		}
+		margin-bottom: 5vh;
 	}
 }
 
