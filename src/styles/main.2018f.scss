@@ -98,7 +98,7 @@ canvas {
 }
 
 #background{
-    position: sticky;
+    position: absolute;
     height: 180%;
     width: 100%;
     //Hides a fixed position child
@@ -326,9 +326,6 @@ h2 {
 
 #faq-section{
     margin-top: -70vh;
-	max-width: 1030px;
-	margin-left: auto;
-	margin-right: auto;
 }
 .faq-questions {
     .title {
