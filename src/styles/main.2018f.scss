@@ -321,7 +321,7 @@ h2 {
     }
 }
 
-.wrapper{
+#wrapper{
 	top: 100vh;
 	position: absolute;
 }
@@ -332,10 +332,8 @@ h2 {
 }
 
 .faq-container{
-    margin-top: 100vh;
 	pointer-events: none;
 }
-	
 
 #faq-section{
     padding-top: 5vh;
