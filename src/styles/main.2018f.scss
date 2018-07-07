@@ -505,6 +505,7 @@ h2 {
 		img {
 			width: 20%;
 		}
+		margin-bottom: 7.5vh;
 	}
 	
 	.section-title{
@@ -581,20 +582,10 @@ h2 {
 	}
 
 	.partners {
-		text-align: center;
 		img {
 			width: 10%;
-			&.mr {
-				margin-right: 2%;
-			}
-			&.ml {
-				margin-left: 2%;
-			}
 		}
 		margin-bottom: 5vh;
-		.separator {
-			height: 5vh;
-		}
 	}
 		
 	.section-title {
@@ -603,6 +594,21 @@ h2 {
 
 	.section-title-dark {
 		margin-bottom: 7.5vh;
+	}
+}
+
+.partners {
+	text-align: center;
+	img {
+		&.mr {
+			margin-right: 2%;
+		}
+		&.ml {
+			margin-left: 2%;
+		}
+	}
+	.separator {
+		height: 5vh;
 	}
 }
 
