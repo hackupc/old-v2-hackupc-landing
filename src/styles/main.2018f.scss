@@ -72,6 +72,7 @@ $button-bottom-color: darken($button-body-color, 25%);
 
 html, body{
 	overflow-x: hidden;
+	width: 100%;
 }
 
 body {
@@ -79,7 +80,6 @@ body {
   color: $text-color;
   font-family: ProximaNovaRegular, sans-serif;
   font-weight: normal;
-  width: 100%;
 }
 
 a {
