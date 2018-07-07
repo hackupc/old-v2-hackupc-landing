@@ -100,9 +100,9 @@ canvas {
 }
 
 #background{
-    position:relative;
-    height:180%;
-    width:100%;
+    position: relative;
+    height: 180%;
+    width: 100%;
     //Hides a fixed position child
     clip:rect(auto, auto, auto, auto);
     #sky-extension{
@@ -504,6 +504,7 @@ h2 {
 }
 
 .section-white {
+	position: relative;
     width: 100%;
     background-color: $background-color2;
     padding-top: 2.5vh;
@@ -511,6 +512,7 @@ h2 {
 }
 
 .section-grey {
+	position: relative;
     width: 100%;
     background-color: $color-back1;
     padding-top: 2.5vh;
