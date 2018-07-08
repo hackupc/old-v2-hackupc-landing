@@ -17,6 +17,7 @@
     "dist:scripts": "npm-run-all -p minjs:*",
     "dist:images": "imagemin-newer src/images dist/assets/img -p",
     "dist:html": "cp src/*.html dist",
+    "dist:favicon": "cp src/*.ico dist",
     "postdist:html": "npm-run-all -p nocache:*",
     "nocache:favicon": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/favicon.ico",
     "nocache:index": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/index.html",
