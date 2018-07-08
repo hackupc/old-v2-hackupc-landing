@@ -106,10 +106,13 @@ canvas {
 }
 
 #background{
+	overflow-x: hidden;
     position: absolute;
     height: 180%;
     width: 100%;
 	z-index: -100;
+    //Hides a fixed position child
+    clip:rect(auto, auto, auto, auto);
     #sky-extension{
         position:absolute;
         width:100%;
