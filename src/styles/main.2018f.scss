@@ -131,7 +131,7 @@ canvas {
             position:fixed;
             height:180vh;
         }
-        #boto{
+        #boto_2_{
             cursor:pointer;
         }
     }
@@ -159,21 +159,21 @@ canvas {
         transform:translateY(-25px);
     }
 }
-#teleferic-1, #teleferic-2{
+#teleferic-1_2_, #teleferic-2_2_{
     animation-name:teleferic-cont;
     animation-duration:20s;
     animation-iteration-count:infinite;
     animation-direction: alternate;
     animation-timing-function:ease-in-out;
 }
-#teleferic-1-cabina, #teleferic-2-cabina{
+#teleferic-1-cabina_2_, #teleferic-2-cabina_2_{
     animation-name:teleferic-obj;
     animation-duration:20s;
     animation-iteration-count:infinite;
     animation-direction: alternate;
     animation-timing-function:cubic-bezier(0.4, -0.5, 0.8, 0.8);
 }
-#teleferic-2, #teleferic-2-cabina{
+#teleferic-2_2_, #teleferic-2-cabina_2_{
     animation-direction:alternate-reverse;
 }
 
@@ -381,7 +381,7 @@ h2 {
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 991px) {
 	#background{
         height: 180%;
         svg#sun{
@@ -436,6 +436,10 @@ h2 {
 	}
 	
 	.bottom-right-links {
+		text-align: center !important;
+	}
+	
+	.bottom-bottom-links {
 		text-align: center !important;
 	}
 	
@@ -514,7 +518,7 @@ h2 {
 	}
 }
 
-@media(min-width: 501px) {
+@media(min-width: 992px) {
 	.sponsor-images {
 		text-align: center;
 		.peta {
@@ -697,6 +701,12 @@ h2 {
 .bottom-right-links {
     @include center-block();
     text-align: right;
+}
+
+.bottom-bottom-links {
+    @include center-block();
+    text-align: center;
+    margin-top: 0.5em !important;
 }
 
 // Bigger margin around columns so that in mobile

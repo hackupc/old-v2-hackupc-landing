@@ -83,7 +83,7 @@ class Barcelona{
 	private readonly _sky4StyleClass : string = ".st3";
 	private readonly _sunId : string = "lluna";
 	private readonly _skyId : string = "cel";
-	private readonly _buttonId : string = "boto";
+	private readonly _buttonId : string = "boto_2_";
 	private readonly _registerUrl : string = "https://my.hackupc.com";
 	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
