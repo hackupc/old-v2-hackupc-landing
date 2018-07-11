@@ -1,9 +1,6 @@
-<br>
 <p align="center">
-  <img alt="HackUPC Fall 2016" src="src/images/hackupc-header.png" width="620"/>
+  <img alt="HackUPC 2018" src="src/images/hackupc-ogimage@2x.png" width="100%"/>
 </p>
-<br>
-
 
 # Setup
 
@@ -15,17 +12,14 @@ cd frontend &&
 npm install
 ```
 
-
-
 # Develop
 
 Use `npm run watch` to compile and serve the dist directory in real time.
 
-
 ## Add new logo images for sponsors and partners
 
 - Edit image remove background, add whitespace. Consider checking first sponsor brand use guidelines before editing the image.
-- Resize the image to `600 x 400 px`
+- Resize the image to `600 x 300 px`
 
 # Deploy
 
@@ -100,8 +94,6 @@ Useful to specify events that don't have concept of length or that span through 
 
 Clients will poll constantly the schedule.json file. To update the schedule just change the file and deploy.  
 New versions of the schedule will be loaded only if 'version' is different.
-
-
 
 # License
 
