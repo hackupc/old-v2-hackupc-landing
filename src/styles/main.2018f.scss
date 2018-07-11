@@ -105,6 +105,25 @@ canvas {
     left: 0px;
 }
 
+/* cookie notice */
+#cookie-notice{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:80px;
+    padding-top:5px;
+    text-align: center;
+    transition: height 1s, padding 1s;
+    background-color:$color-accent;
+    div{
+        width:100px;
+        padding:5px 10px;
+        margin: 10px auto;
+        background-color:$color-back1;
+        cursor:pointer;
+    }
+}
+
 #background{
 	overflow: hidden;
     position: absolute;

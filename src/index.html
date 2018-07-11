@@ -39,6 +39,7 @@
     <div id="background">
         <div id="sky-extension"></div>
     </div>
+    
 	<div id="wrapper">
 		<div class="container faq-container" style="-webkit-transform: translateZ(0);">
 			<section id="faq-section"> <!-- FAQ -->
@@ -224,6 +225,30 @@
 			</div>
 		</div>
 	</div>
+<div id="cookie-notice" style="display:none">
+    	<p>
+    		By navigating this site you accept the use of cookies
+    	</p>
+    	<div id="cookie-notice-button">
+    		OK!
+    	</div>
+</div>
+<script>
+	document.addEventListener("DOMContentLoaded", ()=>{
+		if(window.localStorage.getItem("cookies"))
+			return
+		var cne = document.getElementById("cookie-notice")
+		cne.style.display = "block"
+		document.getElementById("cookie-notice-button").addEventListener("click", ()=>{
+			window.localStorage.setItem("cookies", "1")
+			cne.style.height = "0"
+			cne.style.paddingTop = "0"
+			setTimeout(()=>{
+				cne.parentNode.removeChild(cne)
+			}, 1010)
+		})
+	})
+</script>
 <script src="assets/js/chroma.min.js"></script>
 <script src="assets/js/barcelona.min.js"></script>
 <script>
