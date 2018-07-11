@@ -239,8 +239,7 @@
 		cne.style.display = "block"
 		document.getElementById("cookie-notice-button").addEventListener("click", ()=>{
 			window.localStorage.setItem("cookies", "1")
-			cne.style.height = "0"
-			cne.style.paddingTop = "0"
+			cne.style.bottom = "-250px"
 			setTimeout(()=>{
 				cne.parentNode.removeChild(cne)
 			}, 1010)
