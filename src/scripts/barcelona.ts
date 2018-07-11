@@ -98,7 +98,7 @@ class Barcelona{
 		this.containerId = containerId;
 		if(this.isPhone())
 		{
-			this.loadPhoneBg()
+			this.loadBg(this._phoneBgFileName)
 		}
 		else if(this.isBrowserSVGCapable())
 		{
@@ -111,7 +111,7 @@ class Barcelona{
 		}
 		else
 		{
-			this.loadPNG();
+			this.loadBg(this._pngFileName)
 		}
 	};
 
@@ -215,19 +215,9 @@ class Barcelona{
 		},()=>{error('ground')});
 	}
 
-	loadPNG() : void{
+	loadBg(filename) : void{
 		let img = new Image();
-		img.src = this._pngFileName;
-		let self = this;
-		document.getElementById(this.containerId)
-			.appendChild(img)
-			.addEventListener('click', function(){
-				window.open(self._registerUrl)
-			});
-	}
-	loadPhoneBg() : void{
-		let img = new Image();
-		img.src = this._phoneBgFileName;
+		img.src = filename;
 		let self = this;
 		document.getElementById(this.containerId)
 			.appendChild(img)
