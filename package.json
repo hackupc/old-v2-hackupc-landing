@@ -23,6 +23,7 @@
     "nocache:index": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/index.html",
     "nocache:live": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/live.html",
     "scss:main": "node-sass --output-style compressed src/styles/main.2018f.scss dist/assets/css/main.2018f.min.css",
+    "scss:template": "node-sass --output-style compressed src/styles/template.scss dist/assets/css/template.min.css",
     "scss:live": "node-sass --output-style compressed  src/styles/app.scss dist/assets/css/app.min.css",
     "minjs:chroma": "cp node_modules/chroma-js/chroma.min.js dist/assets/js/chroma.min.js",
     "minjs:main": "tsc src/scripts/barcelona.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/barcelona.min.js ",
