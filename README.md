@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="HackUPC Fall 2016" src="src/images/hackupc-ogimage@2x.png" width="100%"/>
+  <img alt="HackUPC 2018" src="src/images/hackupc-ogimage@2x.png" width="100%"/>
 </p>
 
 # Setup
