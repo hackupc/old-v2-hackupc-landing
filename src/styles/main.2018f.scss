@@ -177,6 +177,42 @@ canvas {
     animation-direction:alternate-reverse;
 }
 
+/* biene animation*/
+@keyframes biene-horizontal{
+    0%, 20%{
+        transform:translateX(20px);
+    }
+    80%, 100%{
+        transform:translateX(750px);
+    }
+}
+@keyframes biene-vertical{
+    0%{
+        transform:translateY(60px);
+    }
+    100%{
+        transform:translateY(-60px);
+    }
+}
+
+#abella{
+    animation-name:biene-horizontal;
+    animation-duration:13s;
+    animation-delay:10s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function:cubic-bezier(0.4, -0.5, 0.27, 1);
+}
+#abella-abella{
+    animation-name:biene-vertical;
+    animation-duration:2.3s;
+    animation-delay:10s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function:cubic-bezier(0.4, -0.5, 0.27, 1.5);
+}
+
+
 
 .hupc-title{
     text-align: center;
