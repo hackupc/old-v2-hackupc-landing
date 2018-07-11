@@ -20,7 +20,6 @@
     "dist:favicon": "cp src/*.ico dist",
     "dist:legal": "cp -R src/code_conduct dist/ && cp -R src/legal_notice dist/ && cp -R src/privacy_and_cookies dist/ && cp -R src/terms_and_conditions dist/",
     "postdist:html": "npm-run-all -p nocache:*",
-    "nocache:favicon": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/favicon.ico",
     "nocache:index": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/index.html",
     "nocache:live": "node node_modules/asset-cache-bust/bin/asset-cache-bust --asset-root dist dist/live.html",
     "scss:main": "node-sass --output-style compressed src/styles/main.2018f.scss dist/assets/css/main.2018f.min.css",
