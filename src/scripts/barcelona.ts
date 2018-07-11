@@ -31,19 +31,19 @@ class Util{
 	static loadFile(sURL, cb, cberr) {
 		var oReq = new XMLHttpRequest();
 		oReq.onload = function(){
-			if (this.readyState === 4) {
-				if (this.status === 200) {
-					if(typeof cb == "function")
-						cb(this);
-				} else {
-					if(typeof cberr == "function")
-						cberr(this);
-				}
+			if (this.readyState !== 4) return;
+			if (this.status === 200) {
+				if(typeof cb != "function") return;
+				cb(this);
+			} else {
+				if(typeof cberr != "function") return;
+				cberr(this);
 			}
+			
 		};
 		oReq.onerror = function(){
-			if(typeof cberr == "function")
-				cberr(this);
+			if(typeof cberr != "function") return;
+			cberr(this);
 		};
 		oReq.open("GET", sURL, true);
 		oReq.send(null);
