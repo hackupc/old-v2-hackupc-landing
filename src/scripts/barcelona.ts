@@ -70,6 +70,9 @@ class Barcelona{
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
 	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
 	private readonly _phoneBgFileName : string = "assets/img/bg-fallback.png";
+	private readonly _pngButtonRectMin : [number, number] = [557, 452]
+	private readonly _pngButtonRectMax : [number, number] = [693, 490]
+	private readonly _pngBaseRes : [number, number] = [1250, 1125]
 
 
 	constructor(containerId : string, 
@@ -202,7 +205,18 @@ class Barcelona{
 		let self = this;
 		document.getElementById(this.containerId)
 			.appendChild(img)
-			.addEventListener('click', function(){
+			.addEventListener('click', function(e){
+				let clickCoords : [number, number] = [e.offsetX, e.offsetY]
+				let bsp_x = Util.mapRange(0, img.width, 0, self._pngBaseRes[0], e.offsetX)
+				let bsp_y = Util.mapRange(0, img.height, 0, self._pngBaseRes[1], e.offsetY)
+				let clickBaseSpace : [number, number] = [bsp_x, bsp_y]
+				//Is outside defined rect?
+				if(clickBaseSpace[0] < self._pngButtonRectMin[0]
+					|| clickBaseSpace[1] < self._pngButtonRectMin[1]
+					|| clickBaseSpace[0] > self._pngButtonRectMax[0]
+					|| clickBaseSpace[1] > self._pngButtonRectMax[1])
+					return;
+				//Its inside!
 				window.open(self._registerUrl)
 			});
 	}
