@@ -206,10 +206,11 @@ class Barcelona{
 		document.getElementById(this.containerId)
 			.appendChild(img)
 			.addEventListener('click', function(e){
-				let clickCoords : [number, number] = [e.offsetX, e.offsetY]
-				let bsp_x = Util.mapRange(0, img.width, 0, self._pngBaseRes[0], e.offsetX)
-				let bsp_y = Util.mapRange(0, img.height, 0, self._pngBaseRes[1], e.offsetY)
-				let clickBaseSpace : [number, number] = [bsp_x, bsp_y]
+				let scaleFactor = self._pngBaseRes[0] / img.width
+				let clickBaseSpace : [number, number] = [
+					e.offsetX*scaleFactor, 
+					e.offsetY*scaleFactor
+				]
 				//Is outside defined rect?
 				if(clickBaseSpace[0] < self._pngButtonRectMin[0]
 					|| clickBaseSpace[1] < self._pngButtonRectMin[1]
