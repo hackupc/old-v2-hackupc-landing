@@ -182,21 +182,16 @@ class Barcelona{
 			console.error("Error while loading background '"+id+"'");
 		};
 
-		let loaded = false;
 		let container = document.getElementById(self.containerId);
 		Util.loadFile(this._svgSunFileName, (xhr)=>{
-			var child = container.insertBefore(xhr.responseXML.documentElement, null);
-			child.id = 'sun';
-			if(loaded && cb) cb()
-			loaded = true
+			var child1 = container.appendChild(xhr.responseXML.documentElement)
+			child1.id = 'sun';
+			Util.loadFile(this._svgGroundFileName, (xhr2)=>{
+				var child2 = container.appendChild(xhr2.responseXML.documentElement)
+				child2.id = 'ground';
+				if(cb) cb()
+			},()=>{error('ground')});
 		},()=>{error('sun')});
-
-		Util.loadFile(this._svgGroundFileName, (xhr2)=>{
-			var child = container.appendChild(xhr2.responseXML.documentElement)
-			child.id = 'ground';
-			if(loaded && cb) cb()
-			loaded = true
-		},()=>{error('ground')});
 	}
 
 	loadBg(filename) : void{
