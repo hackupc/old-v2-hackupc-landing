@@ -323,15 +323,15 @@ canvas {
     }
 }
 .top-buttons, .bottom-buttons {
-    margin-top:2vh;
+    margin-top: 1vh;
     >div {
         text-align: center;
     }
     .button-container {
         a {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
             &:hover {
-                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1.5px 5px 0 rgba(0, 0, 0, 0.1);
             }
             display: inline-block;
             text-decoration: none;
@@ -339,11 +339,11 @@ canvas {
             background-color: #E22B57;
             color: #fff;
             width: 21vh;
-            padding: 1vh 0px 1vh;
+            padding: 1.5vh 0px 1vh;
             font-weight: 500;
             font-size: 2.5vh;
             border: none;
-            border-bottom: 10px solid #7c112b;
+            border-bottom: 5px solid #7c112b;
             transition: all .2s linear;
         }
     }
@@ -578,6 +578,9 @@ h2 {
 	
 	.section-title-dark {
 		margin-bottom: 5vh;
+	}
+	.top-buttons, .bottom-buttons {
+		margin-top: 5vh;
 	}
 }
 
