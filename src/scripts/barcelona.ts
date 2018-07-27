@@ -69,7 +69,10 @@ class Barcelona{
 	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
 	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
 	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
-	private readonly _phoneBgFileName : string = "assets/img/bg-fallback.png";
+	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-bq.png";
+	private readonly _pngButtonRectMin : [number, number] = [557, 452]
+	private readonly _pngButtonRectMax : [number, number] = [693, 490]
+	private readonly _pngBaseRes : [number, number] = [1250, 1125]
 
 
 	constructor(containerId : string, 
@@ -179,21 +182,16 @@ class Barcelona{
 			console.error("Error while loading background '"+id+"'");
 		};
 
-		let loaded = false;
 		let container = document.getElementById(self.containerId);
 		Util.loadFile(this._svgSunFileName, (xhr)=>{
-			var child = container.insertBefore(xhr.responseXML.documentElement, null);
-			child.id = 'sun';
-			if(loaded && cb) cb()
-			loaded = true
+			var child1 = container.appendChild(xhr.responseXML.documentElement)
+			child1.id = 'sun';
+			Util.loadFile(this._svgGroundFileName, (xhr2)=>{
+				var child2 = container.appendChild(xhr2.responseXML.documentElement)
+				child2.id = 'ground';
+				if(cb) cb()
+			},()=>{error('ground')});
 		},()=>{error('sun')});
-
-		Util.loadFile(this._svgGroundFileName, (xhr2)=>{
-			var child = container.appendChild(xhr2.responseXML.documentElement)
-			child.id = 'ground';
-			if(loaded && cb) cb()
-			loaded = true
-		},()=>{error('ground')});
 	}
 
 	loadBg(filename) : void{
@@ -202,7 +200,19 @@ class Barcelona{
 		let self = this;
 		document.getElementById(this.containerId)
 			.appendChild(img)
-			.addEventListener('click', function(){
+			.addEventListener('click', function(e){
+				let scaleFactor = self._pngBaseRes[0] / img.width
+				let clickBaseSpace : [number, number] = [
+					e.offsetX*scaleFactor, 
+					e.offsetY*scaleFactor
+				]
+				//Is outside defined rect?
+				if(clickBaseSpace[0] < self._pngButtonRectMin[0]
+					|| clickBaseSpace[1] < self._pngButtonRectMin[1]
+					|| clickBaseSpace[0] > self._pngButtonRectMax[0]
+					|| clickBaseSpace[1] > self._pngButtonRectMax[1])
+					return;
+				//Its inside!
 				window.open(self._registerUrl)
 			});
 	}
