@@ -15,8 +15,8 @@
 	.st9{fill:none;}
 	.st10{enable-background:new    ;}
 	.st11{font-size:36.8504px;}
-	.st12{letter-spacing:4;}
-	.st13{letter-spacing:14;}
+	.st12{letter-spacing:4px;}
+	.st13{letter-spacing:14px;}
 	.st14{fill:#202326;}
 	.st15{fill:#2C3033;}
 	.st16{fill:none;stroke:#2C3033;stroke-width:0.5;stroke-miterlimit:10;}
@@ -26,7 +26,7 @@
 	.st20{opacity:0.75;fill:none;stroke:#11AFC9;stroke-miterlimit:10;enable-background:new    ;}
 	.st21{fill:none;stroke:#11AFC9;stroke-miterlimit:10;}
 	.st22{font-size:65.1969px;}
-	.st23{letter-spacing:8;}
+	.st23{letter-spacing:8px;}
 	.st24{font-size:40px;}
 	.st25{fill:#AA002D;}
 	.st26{font-size:30px;}
