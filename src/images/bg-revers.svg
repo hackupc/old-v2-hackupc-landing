@@ -15,8 +15,8 @@
 	.st9{fill:none;}
 	.st10{enable-background:new    ;}
 	.st11{font-size:36.8504px;}
-	.st12{letter-spacing:4;}
-	.st13{letter-spacing:14;}
+	.st12{letter-spacing:4px;}
+	.st13{letter-spacing:14px;}
 </style>
 <g id="cel">
 	<rect id="cel-1" x="894" y="-684" class="st0" width="2400" height="681"/>
