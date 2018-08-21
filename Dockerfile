@@ -12,3 +12,4 @@ COPY . .
 
 # Build and export the app
 RUN npm run dist
+RUN mkdir /public && cp -r dist /public
