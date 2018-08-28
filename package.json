@@ -15,7 +15,7 @@
     "dist:docs": "cp -R src/docs dist/",
     "dist:styles": "mkdir dist/assets/css && npm-run-all -p scss:* && postcss -u autoprefixer -r dist/assets/css/*",
     "dist:scripts": "npm-run-all -p minjs:*",
-    "dist:images": "cp -R src/images dist/assets/img/",
+    "dist:images": "cp -R src/images/* dist/assets/img/",
     "dist:html": "cp src/*.html dist",
     "dist:favicon": "cp src/*.ico dist",
     "dist:legal": "cp -R src/code_conduct dist/ && cp -R src/legal_notice dist/ && cp -R src/privacy_and_cookies dist/ && cp -R src/terms_and_conditions dist/",
