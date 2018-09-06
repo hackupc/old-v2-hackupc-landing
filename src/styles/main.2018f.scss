@@ -442,6 +442,9 @@ h2 {
 }
 
 @media(max-width: 991px) {
+	#video-section{
+		padding-bottom: 5vh;
+	}
 	#background{
         height: 180%;
         svg#sun{
@@ -592,6 +595,9 @@ h2 {
 }
 
 @media(min-width: 992px) {
+	#video-section{
+		padding-bottom: 10vh;
+	}
 	.sponsor-images {
 		text-align: center;
 		.peta {
@@ -745,6 +751,21 @@ h2 {
     max-width: 700px;
     width: 100%;
     height: 400px;
+}
+
+.embed-container{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+} 
+.embed-container iframe, .embed-container object, .embed-container embed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .bottom-buttons {
