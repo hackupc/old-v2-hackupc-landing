@@ -68,7 +68,6 @@ main{
 					margin-top: -90px;
 					border-radius: 140px;
 					cursor: pointer;
-					box-shadow: 0px 5px 20px 1px #333;
 					transition: margin-top $timerAnimLength, box-shadow $timerAnimLength;
 
 					#countdown-time{
@@ -109,10 +108,11 @@ main{
 					img{
 						width:105%;
 						margin-left:-5px;
+						filter: drop-shadow(0px 0px 20px #3339);
+						-webkit-filter: drop-shadow(0px 0px 25px #3339);
 					}
 
 					&:hover{
-						box-shadow: 0px 10px 25px 1px #333;
 						margin-top:-95px;
 					}
 				}
