@@ -4,8 +4,11 @@ body, html, main{
 body, html{
 	padding:0;
 	margin:0;
-	background: $bgColor;
-	font-family: 'Ek Mukta', sans-serif;
+	background-image: url("../img/background.png");
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: repeat repeat;
+	font-family: 'ProximaNovaRegular', sans-serif;
 
 	transition: opacity $fadeTime;
 }
