@@ -1,5 +1,56 @@
 /* Shared classes: may be overwritten in other files */
 
+
+@font-face {
+    font-family: Gotham-Black;
+    src: url(../fonts/GothamBlack.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(../fonts/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(../fonts/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fonts/GothamLight.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Thin;
+    src: url(../fonts/GothamThin.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaBlack;
+    src: url(../fonts/ProximaNovaBlack.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url(../fonts/ProximaNovaBold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaSemibold;
+    src: url(../fonts/ProximaNovaSemibold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url(../fonts/ProximaNovaRegular.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url(../fonts/ProximaNovaThin.ttf);
+}
+
 /*Generic: incontextual classes*/
 article{
 	display:none !important;
@@ -317,10 +368,11 @@ a{
 			width: 100%;
 			margin: 0 0 0 0;
 			padding-top:3px;
-			font-size:30px;
+			font-size:20px;
 			color:white;
 			background-color: $secondaryColor;
 			text-align: center;
+			padding: 5px 0;
 		}
 		h2{
 			margin:5px 15px;
