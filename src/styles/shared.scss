@@ -292,7 +292,7 @@ a{
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
-	font-family: Orbitron;
+	font-family: 'Gotham-Regular';
 	z-index: 2;
 	flex: 1 1 0;
 	&.show-when-small{
@@ -383,10 +383,18 @@ a{
 				font-family: 'ProximaNovaSemibold', sans-serif;
 			}
 		}
+		.margin-bottom{
+			margin-bottom: 10px;
+		}
+		.text-centered{
+			text-align: center;
+		}
+		.text-normal{
+			font-weight: normal;
+		}
 		.buttons{
 			display: flex;
 			border-radius: 3px;
-			margin:5px;
 			overflow:hidden;
 			a{
 				display:block;
@@ -429,8 +437,8 @@ a{
 
 		& > div{
 			margin:15px 15px;
-			p, h1, h2, .buttons  {
-				margin:0 0;
+			p, h1, h2 {
+				margin: 0 0;
 			}
 		}
 
