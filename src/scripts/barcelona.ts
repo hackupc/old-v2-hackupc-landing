@@ -166,9 +166,11 @@ class Barcelona{
 	setListener() : void{
 		let self = this;
 		document.addEventListener('scroll', this.update);
+		/* ====Applications closed===
 		document.getElementById(this._buttonId).addEventListener('click', function(){
 			window.open(self._registerUrl);
 		});
+		*/
 	}
 
 	isBrowserSVGCapable() : boolean{
@@ -200,6 +202,7 @@ class Barcelona{
 		let self = this;
 		document.getElementById(this.containerId)
 			.appendChild(img)
+			/* ====Applications closed===
 			.addEventListener('click', function(e){
 				let scaleFactor = self._pngBaseRes[0] / img.width
 				let clickBaseSpace : [number, number] = [
@@ -215,6 +218,7 @@ class Barcelona{
 				//Its inside!
 				window.open(self._registerUrl)
 			});
+			*/
 	}
 
 
