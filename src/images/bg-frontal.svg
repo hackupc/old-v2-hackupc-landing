@@ -17,7 +17,10 @@
    style="enable-background:new 894 -684 2400 2160;"
    xml:space="preserve"
    inkscape:version="0.91 r"
-   sodipodi:docname="bg-frontal.svg"><metadata
+   sodipodi:docname="bg-frontal.svg"
+   inkscape:export-filename="/home/oriolclosa/Documents/HackUPC/GitHub/frontend/src/images/bg-fallback.png"
+   inkscape:export-xdpi="93.75"
+   inkscape:export-ydpi="93.75"><metadata
      id="metadata4990"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -34,9 +37,9 @@
      inkscape:window-height="697"
      id="namedview4986"
      showgrid="false"
-     inkscape:zoom="0.34700611"
-     inkscape:cx="1183.1572"
-     inkscape:cy="1345.1161"
+     inkscape:zoom="0.49074074"
+     inkscape:cx="1215.4924"
+     inkscape:cy="1423.7857"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -2127,7 +2130,7 @@
          style="font-size:30px;font-family:Gotham-Bold;fill:#ffffff"
          x="2094.4238"
          y="230.59706"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Gotham Bold';-inkscape-font-specification:'Gotham Bold, Bold';text-align:center;text-anchor:middle"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gotham-Bold;-inkscape-font-specification:Gotham-Bold;text-align:center;text-anchor:middle"
            id="tspan7824">APPLICATIONS CLOSED</tspan></text>
 </g><g
        id="info_1_"><g

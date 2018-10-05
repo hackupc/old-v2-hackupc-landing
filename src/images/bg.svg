@@ -17,10 +17,13 @@
    style="enable-background:new 894 -684 2400 2160;"
    xml:space="preserve"
    inkscape:version="0.91 r"
-   sodipodi:docname="bg.svg"><metadata
+   sodipodi:docname="bg.svg"
+   inkscape:export-filename="/home/oriolclosa/Documents/HackUPC/GitHub/frontend/src/images/bg-fallback.png"
+   inkscape:export-xdpi="93.75"
+   inkscape:export-ydpi="93.75"><metadata
      id="metadata4990"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
      id="defs4988" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -34,9 +37,9 @@
      inkscape:window-height="697"
      id="namedview4986"
      showgrid="false"
-     inkscape:zoom="0.24537037"
-     inkscape:cx="1114.2545"
-     inkscape:cy="1446.8602"
+     inkscape:zoom="0.49074074"
+     inkscape:cx="1215.4924"
+     inkscape:cy="1423.7857"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -109,15 +112,11 @@
            d="M1990.2-179.9l211.4,0c7.5-4.7,14.6-9.8,21.3-15.4l-254.1,0     C1975.6-189.7,1982.8-184.6,1990.2-179.9z" /></g><text
          transform="matrix(1 0 0 1 1799.4457 -319.4307)"
          class="st5 st6 st7"
-         id="text4197"><tspan
-           style="-inkscape-font-specification:'Gotham Light,  Medium';font-family:'Gotham Light';font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan10682">HACK</tspan></text>
+         id="text4197">HACK</text>
 <text
          transform="matrix(1 0 0 1 2143.6458 -319.4307)"
          class="st5 st8 st7"
-         id="text4199"><tspan
-           style="-inkscape-font-specification:'Gotham Bold,  Bold';font-family:'Gotham Bold';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan10684">UPC</tspan></text>
+         id="text4199">UPC</text>
 <rect
          x="1882.1"
          y="-296.4"
@@ -126,15 +125,20 @@
          height="42.3"
          id="rect4201" /><text
          id="lluna-lloc_2_"
-         transform="translate(1882.1279,-265.1221)"
-         class="st10"
-         style="enable-background:new"
-         sodipodi:linespacing="150%"><tspan
+         transform="matrix(1 0 0 1 1882.1279 -265.1221)"
+         class="st10"><tspan
            x="0"
            y="0"
            class="st5 st8 st11 st12"
-           id="tspan4204"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:36.85039902px;font-family:'Gotham Bold';-inkscape-font-specification:'Gotham Bold, Bold';letter-spacing:5.75px;fill:#ffffff;line-height:150%">BARCELONA 2018</tspan></text>
+           id="tspan4204">BARCELONA</tspan><tspan
+           x="291.4"
+           y="0"
+           class="st5 st8 st11 st13"
+           id="tspan4206" /><tspan
+           x="316.5"
+           y="0"
+           class="st5 st8 st11 st12"
+           id="tspan4208">2018</tspan></text>
 </g></g><g
      id="skyline"><rect
        id="terra"
@@ -2192,22 +2196,18 @@
          style="font-size:30px;font-family:Gotham-Bold;fill:#ffffff"
          x="2094.4238"
          y="230.59706"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Gotham Bold';-inkscape-font-specification:'Gotham Bold, Bold';text-align:center;text-anchor:middle"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gotham-Bold;-inkscape-font-specification:Gotham-Bold;text-align:center;text-anchor:middle"
            id="tspan7824">APPLICATIONS CLOSED</tspan></text>
 </g><g
        id="info_1_"><g
          id="info-detall_2_"><text
            id="info-detall-hackers_2_"
            transform="matrix(0.9561 0 0 1 1816.127 85.5586)"
-           class="st5 st8 st11"><tspan
-             style="-inkscape-font-specification:'Gotham Bold,  Bold';font-family:'Gotham Bold';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-             id="tspan10686">700 HACKERS</tspan></text>
+           class="st5 st8 st11">700 HACKERS</text>
 <text
            id="info-detall-hores_2_"
            transform="matrix(0.9561 0 0 1 2184.71 85.5576)"
-           class="st5 st8 st11"><tspan
-             style="-inkscape-font-specification:'Gotham Bold,  Bold';font-family:'Gotham Bold';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-             id="tspan10688">36 HOURS</tspan></text>
+           class="st5 st8 st11">36 HOURS</text>
 </g><rect
          id="XMLID_42_"
          x="1724"
@@ -2217,13 +2217,9 @@
          height="69.5" /><text
          id="info-data_2_"
          transform="matrix(1 0 0 1 1780.5442 151.4999)"
-         class="st5 st8 st22 st23"><tspan
-           style="-inkscape-font-specification:'Gotham Bold,  Bold';font-family:'Gotham Bold';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan10690">OCTOBER 19-21</tspan></text>
+         class="st5 st8 st22 st23">OCTOBER 19-21</text>
 </g><text
        id="eslogan_2_"
        transform="matrix(1 0 0 1 1841.6267 318.9228)"
-       class="st5 st8 st24"><tspan
-         style="-inkscape-font-specification:'Gotham Bold,  Bold';font-family:'Gotham Bold';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-         id="tspan10692">Dream it. Hack it. Ship it.</tspan></text>
+       class="st5 st8 st24">Dream it. Hack it. Ship it.</text>
 </g></svg>
