@@ -2,7 +2,11 @@
 	"version":3,
 	"message": "GFT Exploring ARMkit has been delayed",
 	"baseTimeOffset":"-120",
+<<<<<<< HEAD
 	"countdownStart":"05/10/2018 19:00",
+=======
+	"countdownStart":"04/10/2018 19:00",
+>>>>>>> b4bb9bde41c9f5bd6d8f88c12d8314838713adef
 	"days":
 	[
 		{
