@@ -228,7 +228,7 @@
 	*/
 	function paintSchedule(){
 		var fancyElements = document.querySelectorAll(".events-fancy");
-		var scheduleElement = document.getElementById(views.schedule);
+		var scheduleElement = document.getElementById(views.schedule).getElementsByClassName("container")[0];
 		try{
 			var fancySchedule = generateFancySchedule();
 			for(var i = 0; i < fancyElements.length; i++){

@@ -5,17 +5,20 @@
 		.table-container{
 			color: $secondaryColor;
 			flex: 1 1 0;
-			margin: 0 20px;
+			margin: 0 20px 50px 20px;
 			h1{
-				margin-bottom:0;
+				text-align: center;
+				margin-bottom: 0;
+				padding: 10px;
+				background-color: $secondaryColor;
+				color: #FFFFFF;
+				border-bottom: 1px solid #FFFFFF33;
 			}
 			table{
 				width:100%;
 				color:$textColor;
-				border:thin solid $secondaryColor;
-				border-radius:6px;
 				border-collapse: collapse;
-				border-radius:5px;
+				background-color: $secondaryTextColor;
 				thead{
 					color: $contrastColor;
 					background-color: $secondaryColor;
@@ -35,6 +38,9 @@
 						.location-icon{
 							display:inline-block;
 						}
+					}
+					a{
+						color: $secondaryColor;
 					}
 				}
 
