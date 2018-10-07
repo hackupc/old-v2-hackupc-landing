@@ -2,16 +2,12 @@
 	"version":3,
 	"message": "GFT Exploring ARMkit has been delayed",
 	"baseTimeOffset":"-120",
-<<<<<<< HEAD
-	"countdownStart":"05/10/2018 19:00",
-=======
-	"countdownStart":"04/10/2018 19:00",
->>>>>>> b4bb9bde41c9f5bd6d8f88c12d8314838713adef
+	"countdownStart":"07/10/2018 12:00",
 	"days":
 	[
 		{
 			"name":"Friday",
-			"date":"13/10/2017",
+			"date":"06/10/2018",
 			"events":
 			[
 				{
@@ -96,7 +92,7 @@
 		},
 		{
 			"name":"Saturday",
-			"date":"14/10/2017",
+			"date":"07/10/2018",
 			"events":
 			[
 				{
@@ -220,7 +216,7 @@
 		},
 		{
 			"name":"Sunday",
-			"date":"15/10/2017",
+			"date":"08/10/2018",
 			"events":
 			[
 				{
