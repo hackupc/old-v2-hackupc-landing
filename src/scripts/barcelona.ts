@@ -66,10 +66,10 @@ class Barcelona{
 	private readonly _skyId : string = "cel";
 	private readonly _buttonId : string = "boto_2_";
 	private readonly _registerUrl : string = "https://my.hackupc.com";
-	private readonly _svgSunFileName : string = "assets/img/bg-revers.svg";
-	private readonly _svgGroundFileName : string = "assets/img/bg-frontal.svg";
-	private readonly _pngFileName : string = "assets/img/bg-fallback.png";
-	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-bq.png";
+	private readonly _svgSunFileName : string = "assets/img/bg-revers-closed.svg";
+	private readonly _svgGroundFileName : string = "assets/img/bg-frontal-closed.svg";
+	private readonly _pngFileName : string = "assets/img/bg-fallback-closed.png";
+	private readonly _phoneBgFileName : string = "assets/img/bg-fallback-bq-closed.png";
 	private readonly _pngButtonRectMin : [number, number] = [557, 452]
 	private readonly _pngButtonRectMax : [number, number] = [693, 490]
 	private readonly _pngBaseRes : [number, number] = [1250, 1125]
