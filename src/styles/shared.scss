@@ -67,7 +67,7 @@ a{
 }
 
 .padding-bottom{
-	padding-bottom:100px;
+	padding-bottom: 50px;
 }
 
 .hidden{
@@ -316,7 +316,7 @@ a{
 			}
 			&.little{
 				margin-top:7px;
-				font-size:28px;
+				font-size:18px;
 				min-width:50px;
 				text-align: right;
 			}
@@ -417,6 +417,15 @@ a{
 				&.tw{
 					background-color:$twColor;
 				}
+				&.ig{
+					background-color:$igColor;
+				}
+				&.gt{
+					background-color:$gtColor;
+				}
+				&.me{
+					background-color:$meColor;
+				}
 			}
 		}
 		.label{
@@ -426,7 +435,7 @@ a{
 		.icon{
 			display:inline-block;
 			margin:0;
-			padding:0 2px;
+			padding: 3px;
 			text-align:center;
 			border-radius:5px;
 			width:30px;
@@ -447,6 +456,30 @@ a{
 			padding: 3px 6px;
 			border-radius: 3px;
 			background-color: $lightBgColor;
+		}
+		
+		.get-there{
+			.get-title {
+				
+			}
+			.get-subtitle {
+				margin-top: 0px;
+				margin-bottom: 10px;
+			}
+			p{
+				margin-bottom: 5px;
+			}
+			h2{
+				margin-bottom: 15px;
+			}
+			.get-separator{
+				margin-top: 15px;
+				border-top: 1px solid #49494933;
+				padding-bottom: 25px;
+			}
+			.get-accessible{
+				margin-top: 20px;
+			}
 		}
 	}
 }
