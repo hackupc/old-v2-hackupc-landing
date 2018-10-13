@@ -22,7 +22,7 @@
 		"dayof" : "dayof",
 		"rules" : "rules",
 		"travel" : "travel",
-		"hardware" : "hardware",
+		"streaming" : "streaming",
 		"faq" : "faq",
 		"schedule" : "schedule",
 		"challenges" : "challenges"
@@ -594,7 +594,7 @@
 	// MLH Hardware Lab
 	////////////////////////
 
-	function buildHardwareLab(cb) {
+	/*function buildHardwareLab(cb) {
 		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
@@ -605,7 +605,7 @@
 				);
 			})
 		})
-	}
+	}*/
 
 
 	////////////////////////
