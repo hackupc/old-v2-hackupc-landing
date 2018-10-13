@@ -400,6 +400,9 @@ a{
 		.text-normal{
 			font-weight: normal;
 		}
+		.no-indent {
+			padding-left: 0;
+		}
 		.buttons{
 			display: flex;
 			border-radius: 3px;
@@ -465,10 +468,10 @@ a{
 			border-radius: 3px;
 			background-color: $lightBgColor;
 		}
-		
+
 		.get-there{
 			.get-title {
-				
+
 			}
 			.get-subtitle {
 				margin-top: 0px;
