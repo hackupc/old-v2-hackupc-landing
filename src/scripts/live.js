@@ -25,7 +25,8 @@
 		"streaming" : "streaming",
 		"faq" : "faq",
 		"schedule" : "schedule",
-		"challenges" : "challenges"
+		"challenges" : "challenges",
+		"maps": "maps"
 	};
 
 	var icons ={
