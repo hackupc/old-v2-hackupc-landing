@@ -2,22 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Live schedule - HackUPC</title>
+	<title>Live Shedule | HackUPC</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/app.min.css" data-finger-print>
 	<script src="assets/js/app.min.js" data-finger-print></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta property="og:title" content="Live schedule - HackUPC | Oct 13th - 15th | Barcelona | 700 Hackers"/>
-  	<meta property="og:site_name" content="Live schedule - HackUPC"/>
-  	<meta name="description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 13th-15th.">
-  	<meta property="og:description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 13th-15th."/>
-  	<meta property="og:image" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png"/>
-  	<meta property="og:image:secure_url" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png"/>
+	<meta property="og:title" content="Live Schedule | HackUPC | Oct 19th-21st  | Barcelona | 700 Hackers"/>
+  	<meta property="og:site_name" content="Live Shedule | HackUPC"/>
+  	<meta name="description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st.">
+  	<meta property="og:description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st."/>
+  	<meta property="og:image" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png?v=2018"/>
+  	<meta property="og:image:secure_url" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png?v=2018"/>
   	<meta property="og:url" content="https://hackupc.com/live"/>
   	<meta name="theme-color" content="#03A9B5">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   	<meta name="author" content="Hackers@UPC">
-	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta|Orbitron" rel="stylesheet">
 
 	<!--Prompt-->
 	<template id="promptTemplate">
@@ -124,9 +123,6 @@
 		<div id="close-aside-btn">
 			<div>x</div>
 		</div>
-		<div class="logo">
-			<img src="assets/img/hackupc-header-imagin-bank.png"/>
-		</div>
 		<nav>
 			<ul>
 				<li data-bind-view="dayof">
@@ -138,14 +134,15 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li>
-					<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>
+				<li data-bind-view="maps"><!--<li>-->
+					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
+					<a href="#/maps">Maps</a>
 				</li>
 				<li>
-					<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>
+					<a href="https://mentors.hackupc.com" target="_blank">Mentors</a>
 				</li>
-				<li data-bind-view="hardware">
-					<a href="#/hardware">Hardware</a>
+				<li data-bind-view="streaming">
+					<a href="#/streaming">Streaming</a>
 				</li>
 				<li data-bind-view="challenges">
 					<a href="#/challenges">Challenges</a>
@@ -175,8 +172,9 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li>
-					<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>
+				<li data-bind-view="maps"><!--<li>-->
+					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
+					<a href="#/maps">Maps</a>
 				</li>
 				<li>
 					<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>
@@ -188,8 +186,8 @@
 						<img src="assets/img/resrborder.png"/>
 					</div>
 				</li>
-				<li data-bind-view="hardware">
-					<a href="#/hardware">Hardware</a>
+				<li data-bind-view="streaming">
+					<a href="#/streaming">Streaming</a>
 				</li>
 				<li data-bind-view="challenges">
 					<a href="#/challenges">Challenges</a>
@@ -210,7 +208,6 @@
 		<article id="fullscreen">
 			<div>
 				<div id="countdown-full" class="hide-when-small">
-					<img class="logo" src="assets/img/hackupc-header-imagin-bank-white.png"/>
 					<div class="countdown">
 						<div>
 							<span>36:00</span>:00.00
@@ -240,25 +237,25 @@
 				<div class="panel">
 					<h1>Important Info</h1>
 					<div>
-						<h2 class="label">Wifi:</h2>
-						<span>HackUPC-Wifi</span>
-					</div>
-					<div>
-						<h2 class="label">Password:</h2>
-						<span>h4ckUPC0/</span>
-					</div>
-					<div>
-						<h2>Links:</h2>
-	<!-- 					<div class="buttons">
-							<a target="_blank" href="https://expo.hackupc.com">Projects</a>
-						</div> -->
-						<br>
-						<div class="buttons">
-							<a class="you-lost" href="#">???</a>
+						<div class="panel-info margin-bottom text-centered">
+							<h4 class="label text-normal">Wifi:</h4>
+							<span>HACKUPC2018</span>
 						</div>
-						<br>
-						<div class="buttons">
-							<a target="_blank" href="https://hackupc2017f.devpost.com">Submit project  (by Sunday 9:30 AM)</a>
+						<div class="panel-info text-centered">
+							<h4 class="label text-normal">Password:</h4>
+							<span>BIENE2018</span>
+						</div>
+					</div>
+					<div>
+						<h3 class="text-centered margin-bottom">Links</h3>
+						<div class="buttons margin-bottom">
+							<a target="_blank" href="https://my.hackupc.com">MyHackUPC <div style="font-weight: 100;">Hardware / Baggage / Judging</div></a>
+						</div>
+						<div class="buttons margin-bottom">
+							<a target="_blank" href="https://mentors.hackupc.com">Mentors</a>
+						</div>
+						<div class="buttons margin-bottom">
+							<a target="_blank" href="https://hackupc2018.devpost.com">Devpost</a>
 						</div>
 					</div>
 					<div>
@@ -269,69 +266,74 @@
 				</div>
 				<div class="panel">
 					<h1>Contact</h1>
-					<div>
-						<h2 class="icon">&#9993;</h2>
+					<div class="text-centered">
+						<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+						<span><a  target="_blank" href="https://hackupc2018.slack.com">hackupc2018.slack.com</a></span>
+					</div>
+					<div class="text-centered">
+						<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></p>
 						<span><a href="mailto:contact@hackupc.com" target="_blank">contact@hackupc.com</a></span>
 					</div>
 					<div>
-						<h2 class="icon">#</h2>
-						<span><a  target="_blank" href="https://hackupc2017f.slack.com">Slack</a></span>
+						<h3 class="text-centered margin-bottom">Emergency phone</h3>
+						<div class="text-centered">
+							<p class="icon"><i class="fa fa-phone" aria-hidden="true"></i></p>
+							<span>112</span>
+						</div>
 					</div>
 					<div>
-						<h2>Emergency phone</h2>
-						<span>112</span>
-					</div>
-					<div>
-						<h2>Social media:</h2>
+						<h3 class="text-centered margin-bottom">Social media</h3>
 						<div class="buttons">
-							<a class="fb" target="_blank" href="https://www.facebook.com/hackupc/">Facebook</a>
-							<a class="tw"  target="_blank" href="https://twitter.com/hackupc">Twitter</a>
-							<a  target="_blank" href="https://instagram.com/hackupc">Instagram</a>
-							<a class="yt"  target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g">Youtube</a>
+							<a class="fb" target="_blank" href="https://www.facebook.com/hackupc"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+							<a class="tw" target="_blank" href="https://twitter.com/hackupc"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a class="ig" target="_blank" href="https://instagram.com/hackupc"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a class="yt" target="_blank" href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+							<a class="gt" target="_blank" href="https://github.com/hackupc"><i class="fa fa-github" aria-hidden="true"></i></a>
+							<a class="me" target="_blank" href="https://medium.com/@hackupc"><i class="fa fa-medium" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="panel large">
 					<h1>How to get to HackUPC</h1>
-					<div>
-						<h2>Via plane</h2>
-						<h3>Arriving</h3>
-						<p>
-							Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="http://maps.hackupc.com">maps</a>.
-						</p>
-						<p>
-							We recommend checking out the <a href="https://citymapper.com/barcelona" target="_blank">Citymapper app</a>, they usually have a really great updated information about public transportation.
-						</p>
-						<p>
-							Don't get a T-10 ticket if you are in the airport, you won't be able to use it from there. Buy a single trip ticket from the airport instead.
-						</p>
-						<h3>Leaving</h3>
-						<p>
-							Take the metro L9 in <b>Zona Universitària</b> towards <b>Aeroport T1</b>. Stop at either <b> Aeroport T1</b> or <b>Aeroport T2</b> depending on the terminal your plane is departing from.
-						</p><br>
-						<h2>Via train</h2>
-						<p>
-							If you take the train, you will probably arrive at <b>Sants Estació</b>. From there you need to take the metro L3 towards <b>Zona Universitària</b>. Get off at <b>Palau Reial</b>, from there you should see some signs pointing where HackUPC is, otherwise you can check out our <a href="http://maps.hackupc.com">maps</a>.
-						</p>
+					<div class="get-there">
+						<h2 class="get-title text-centered"><i class="fa fa-plane" aria-hidden="true"></i> By plane</h2>
+						<h3 class="get-subtitle text-centered">Arriving</h3>
+						<p>Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="http://maps.hackupc.com">maps</a>.</p>
+						<p>Don't get a T-10 ticket if you are in the airport, you won't be able to use it from there. Buy a single trip ticket from the airport instead. If you really want to use a T-10, then you can take the train (R2 to Sant Celoni or Maçanet-Massanes) from Terminal 2B (a free shuttle bus from Terminal 1 to Terminal 2B departs every 5 minutes), but the train only runs every 30 minutes. You will have to get down at <b>Sants Estació</b> (3rd stop) and take the metro as explained below.</p>
+						<h3 class="get-subtitle text-centered">Leaving</h3>
+						<p>Take the metro L9 in <b>Zona Universitària</b> towards <b>Aeroport T1</b>. Stop at either <b> Aeroport T1</b> or <b>Aeroport T2</b> depending on the terminal your plane is departing from.</p>
+						<div class="get-accessible">
+						      <p><i style="background-color: #155196;" class="fa fa-wheelchair icon" aria-hidden="true"></i> This itinerary is completely accessible.</p>
+						</div>
+						<div class="get-separator"></div>
+						<h2 class="get-title text-centered margin-bottom"><i class="fa fa-train" aria-hidden="true"></i> By train</h2>
+						<h3 class="get-subtitle text-centered">Arriving</h3>
+						<p>If you take the train, you will probably arrive at <b>Sants Estació</b>. From there you need to take the metro L3, it is located on the north side of the station, follow the signs for the green line (L3), not the blue one (L5). When you reach the station, go towards <b>Zona Universitària</b> (to the right if coming from underground). Get off at <b>Palau Reial</b>, from there you should see some signs pointing where HackUPC is, otherwise you can check out our <a href="http://maps.hackupc.com">maps</a>.</p>
+						<h3 class="get-subtitle text-centered">Leaving</h3>
+						<p>Take the metro L3 in <b>Palau Reial</b> towards <b>Trinitat Nova</b> and get off at <b>Sants Estació</b>. When exiting, the easiest way is to turn left and follow the signs towards the railway station, you can follow the plane sign or the letter R with the orange background.</p>
+						<div class="get-accessible">
+						      <p><i style="background-color: #155196;" class="fa fa-wheelchair icon" aria-hidden="true"></i> This itinerary is completely accessible. To enter the metro, you will have to reach the elevator on the street at Sants Estació.</p>
+						</div>
 					</div>
 				</div>
 			<div>
 		</article>
 		<article id="schedule" class="under-header padding-bottom">
+			<div class="container"></div>
 		</article>
-				<article id="travel" class="under-header padding-bottom">
+		<article id="travel" class="under-header padding-bottom">
 			<div class="container">
 				<div class="panel">
 					<h1>Travel reimbursement</h1>
-					<p>
-						If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement:
-					</p>
-					<ul>
-						<li>Received an email with travel reimbursement amount.</li>
-						<li>Travel reimbursement receipts submitted before the end of HackUPC or before the date specified by the HackUPC Team</li>
-						<li>Project submitted to Devpost before the due date</li>
-					</ul>
-					<p>The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1 - 2 months time period. Also, remember that you need to post a project before the deadline in order to get the reimbursement.</p>
+					<div>
+						<p class="margin-bottom">If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement are as follows.</p>
+						<ul class="margin-bottom">
+							<li>Received an email with travel reimbursement amount.</li>
+							<li>Travel reimbursement receipts submitted before the date specified by HackUPC Team.</li>
+							<li>Project submitted to Devpost before due date.</li>
+						</ul>
+						<p>The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1-2 months time period. Remember that you need to post a project before the deadline in order to get the reimbursement!</p>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -339,117 +341,138 @@
 			<div class="container">
 				<div class="panel">
 					<h1>Hackathon Rules</h1>
-					<p>
-						These are HackUPC Winter 2017 competition rules. They are a customized version of the standard competition rules used at MLH Member Hackathons. If you have a suggestion for these rules or a question about them, please submit an issue <a href="https://github.com/hackupc/hackupc-rules/issues">here</a>.
-					</p>
-					<h2>The spirit of the competition</h2>
-					<p>
-						Remember that hackathons are like marathons. Some people go to compete but most people take part to better themselves and have fun. Whatever the reason is you're at a hackathon, make sure you're upholding the <a href="https://medium.com/@tfogo/the-spirit-of-hackathons-a0d81a65060a#.6cx5ac9t8">hacker spirit</a> by collaborating with other teams, helping beginners, and having fun.
-					</p>
-					<h2>The rules of the competition</h2>
-					<p>
-						<ol>
-							<li>
-								There is no minimum team size, however, the maximum size is 4 people. There will be 1 prize for each member of the team, independently of the team size.
-							</li>
-							<li>
-								Teams should be made up exclusively of students (or recent graduates within one year of having graduated) who are not organizers, judges, sponsors, or in any other privileged position at the event. Volunteers are allowed to participate in their free time, accepting the extra difficulty of hacking and volunteering at the same time, but their role won't give them any judging advantage in front of the rest of participants.
-							</li>
-							<li>
-								All team members should be present at the event. Leaving the venue for some time to hack elsewhere or sleep is fine.
-							</li>
-							<li>
-								Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
-							</li>
-							<li>
-								All work on a project should be done at the hackathon.
-							</li>
-							<li>
-								Teams can use an idea they had before the event.
-							</li>
-							<li>
-								Teams can work on ideas that have already been done. Hacks do not have to be “innovative”. If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
-							</li>
-							<li>
-								Teams can work on an idea that they have worked on before (as long as they do not re-use code).
-							</li>
-							<li>
-								Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
-							</li>
-							<li>
-								Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.
-							</li>
-							<li>
-								Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.
-							</li>
-							<li>
-								Projects that violate the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> are not allowed.
-							</li>
+					<div>
+						<p class="margin-bottom">
+							These are the HackUPC competition rules. They are a customized version of the standard competition rules used at MLH Member Hackathons. If you have a suggestion for these rules or a question about them, please submit an issue <a href="https://github.com/hackupc/hackupc-rules/issues">here</a>.
+						</p>
+						<h2 class="margin-bottom">The spirit of the competition</h2>
+						<p class="margin-bottom">
+							Remember that hackathons are like marathons. Some people go to compete but most people take part to better themselves and have fun. Whatever the reason is you're at a hackathon, make sure you're upholding the <a href="https://medium.com/@tfogo/the-spirit-of-hackathons-a0d81a65060a#.6cx5ac9t8">hacker spirit</a> by collaborating with other teams, helping beginners, and having fun.
+						</p>
+						<h2 class="margin-bottom">The rules of the competition</h2>
+						<p class="margin-bottom">
+							<ol class="margin-bottom">
+								<li>
+									There is no minimum team size, however, the maximum size is 4 people. There will be 1 prize for each member of the team, independently of the team size.
+								</li>
+								<li>
+									Teams should be made up exclusively of students (or recent graduates within one year of having graduated) who are not organizers, judges, sponsors, or in any other privileged position at the event. Volunteers are allowed to participate in their free time, accepting the extra difficulty of hacking and volunteering at the same time, but their role won't give them any judging advantage in front of the rest of participants.
+								</li>
+								<li>
+									All team members should be present at the event. Leaving the venue for some time to hack elsewhere or sleep is fine.
+								</li>
+								<li>
+									Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
+								</li>
+								<li>
+									All work on a project should be done at the hackathon.
+								</li>
+								<li>
+									Teams can use an idea they had before the event.
+								</li>
+								<li>
+									Teams can work on ideas that have already been done. Hacks do not have to be “innovative”. If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
+								</li>
+								<li>
+									Teams can work on an idea that they have worked on before (as long as they do not re-use code).
+								</li>
+								<li>
+									Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
+								</li>
+								<li>
+									Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.
+								</li>
+								<li>
+									Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.
+								</li>
+								<li>
+									Participants who asked for a travel reimbursement need to post a project before the deadline in order to get the reimbursement.
+								</li>
+								<li>
+									Projects that violate the <a href="https://github.com/hackupc/rules/blob/master/CodeofConduct.md">Code of Conduct</a> are not allowed.
+								</li>
+								<li>
+									Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking the <a href="https://github.com/hackupc/rules/blob/master/CodeofConduct.md">Code of Conduct</a>, or other unsporting behaviour.
+								</li>
+							</ol>
+						</p>
+						<h2 class="margin-bottom">Demos</h2>
+						<p class="margin-bottom">
+							After hacking finishes, teams will show their projects to each other and to the judges.
+						</p>
+						<p class="margin-bottom">
+							You are strongly encouraged to present a demo of what you have built. Pitches or presentations are discouraged. You are not judged on the quality of your pitch or the quality of your idea. As you are judged on what you built, you'll only hurt yourself by not showing a demo.
+						</p>
+						<p class="margin-bottom">
+							You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well. Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! For being courageous enough to demo, you'll receive a special MLH "I Demoed" sticker—it doesn't matter how good the demo is! In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. Hearing what other people learned is interesting and inspiring for other attendees.
+						</p>
+						<h2 class="margin-bottom">Judging Criteria</h2>
+						<p class="margin-bottom">
+							Teams will be judged on these four criteria. Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project.
+						</p>
+						<p>
+						<ul class="margin-bottom">
+							<li><b>Technology:</b> How technically impressive was the hack? Was the technical problem the team tackled difficult? Did it use a particularly clever technique or did it use many different components? Did the technology involved make you go "Wow"?</li>
+							<li><b>Design:</b> Did the team put thought into the user experience? How well designed is the interface? For a website, this might be about how beautiful the CSS or graphics are. For a hardware project, it might be more about how good the human-computer interaction is (e.g. is it easy to use or does it use a cool interface?).</li>
+							<li><b>Completion:</b> Does the hack work? Did the team achieve everything they wanted?</li>
+							<li><b>Learning:</b> Did the team stretch themselves? Did they try to learn something new? What kind of projects have they worked on before? If a team which always does virtual reality projects decides to switch up and try doing a mobile app instead, that exploration should be rewarded.</li>
+						</ul>
 
-							<li>
-								Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>, or other unsporting behaviour.
-							</li>
+						<p class="margin-bottom">These criteria will guide judges but ultimately judges are free to make decisions based on their gut feeling of which projects are the most impressive and most deserving.</p>
 
-						</ol>
-					</p>
-					<h2>Demos</h2>
-					<p>
-						After hacking finishes, teams will show their projects each other and to the judges.
-					</p>
-					<p>
-						You are strongly encouraged to present a demo of what you have built. Pitches or presentations are discouraged. You are not judged on the quality of your pitch or the quality of your idea. As you are judged on what you built, you'll only hurt yourself by not showing a demo.
-					</p>
-					<p>
-						You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well. Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! For being courageous enough to demo, you'll receive a special MLH "I Demoed" sticker—it doesn't matter how good the demo is! In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. Hearing what other people learned is interesting and inspiring for other attendees.
-					</p>
-					<h2>Judging Criteria</h2>
-					<p>
-						Teams will be judged on these four criteria. Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project.
-					</p>
-					<p>
-					<ul>
-						<li><strong>Technology:</strong> How technically impressive was the hack? Was the technical problem the team tackled difficult? Did it use a particularly clever technique or did it use many different components? Did the technology involved make you go "Wow"?</li>
-						<li><strong>Design:</strong> Did the team put thought into the user experience? How well designed is the interface? For a website, this might be about how beautiful the CSS or graphics are. For a hardware project, it might be more about how good the human-computer interaction is (e.g. is it easy to use or does it use a cool interface?).</li>
-						<li><strong>Completion:</strong> Does the hack work? Did the team achieve everything they wanted?</li>
-						<li><strong>Learning:</strong> Did the team stretch themselves? Did they try to learn something new? What kind of projects have they worked on before? If a team which always does virtual reality projects decides to switch up and try doing a mobile app instead, that exploration should be rewarded.</li>
-					</ul>
+						<p class="margin-bottom">It's important to note that these judging criteria do not include:</p>
 
-					<p>These criteria will guide judges but ultimately judges are free to make decisions based on their gut feeling of which projects are the most impressive and most deserving.</p>
+						<ul class="margin-bottom">
+						<li>How good your code is. It doesn't matter if your code is messy, or not well commented, or uses inefficient algorithms. Hacking is about playing around, making mistakes, and learning new things. If your code isn't production ready, we're not going to mark you down.</li>
+						<li>How well you pitch. Hacking is about building and learning, not about selling.</li>
+						<li>How good the idea is. Again, hackathons aren't about coming up with innovative ideas. It's about building and learning.</li>
+						<li>How well the project solves a problem. You can build something totally useless and as long as you're learning and having fun, that's a good hack! Sometimes a pointless project is one of the best hacks!</li>
+						</ul>
 
-					<p>It's important to note that these judging criteria do not include:</p>
+						<p class="margin-bottom">So don't worry about coming up with the next big idea or building the next Facebook. You'll have plenty of time for that outside the hackathon. just focus on learning, having fun, and making new friends. At the end of the day the skills you learn and the friends you make might lead to the next big thing—but you don't have to do that to win a hackathon.</p>
 
-					<ul>
-					<li>How good your code is. It doesn't matter if your code is messy, or not well commented, or uses inefficient algorithms. Hacking is about playing around, making mistakes, and learning new things. If your code isn't production ready, we're not going to mark you down.</li>
-					<li>How well you pitch. Hacking is about building and learning, not about selling.</li>
-					<li>How good the idea is. Again, hackathons aren't about coming up with innovative ideas. It's about building and learning.</li>
-					<li>How well the project solves a problem. You can build something totally useless and as long as you're learning and having fun, that's a good hack! Sometimes a pointless project is one of the best hacks!</li>
-					</ul>
+						<h2 class="margin-bottom">Cheating</h2>
+						<p class="margin-bottom">
+							Any cheating allegations will be resolved according to the HackUPC Cheating Response Procedure found <a href="https://github.com/hackupc/rules/blob/master/cheating_response_procedure.md" target="_blank">here</a>.
+						</p>
 
-					<p>So don't worry about coming up with the next big idea or building the next Facebook. You'll have plenty of time for that outside the hackathon. just focus on learning, having fun, and making new friends. At the end of the day the skills you learn and the friends you make might lead to the next big thing—but you don't have to do that to win a hackathon.</p>
-					<h2>Remember</h2>
-					<p>
-						The competition is just a part of the hackathon. To make the most out of the event, try something new, teach other people, and make new friends!
-					</p>
-					<p>
-						Happy Hacking from the HackUPC and MLH team!
-					</p>
+						<h2 class="margin-bottom">Remember</h2>
+						<p class="margin-bottom">
+							The competition is just a part of the hackathon. To make the most out of the event, try something new, teach other people, and make new friends!
+						</p>
+						<p>
+							Happy Hacking from the HackUPC team!
+						</p>
+					</div>
 				</div>
-				</div>
+			</div>
 		</article>
-		<article id="hardware" class="under-header padding-bottom">
+		<article id="streaming" class="under-header padding-bottom">
 			<div class="container">
-
-				<div class="panel">
-					<h1>Hardware List</h1>
-					<h2 style="text-align: center;">There won't be any Hardware Lab for HackUPC</h2>
-					<p style="text-align: center;">We apologize for the inconvinience</p>
-<!-- 					<p style="text-align: center">Live hardware lab availability (number of items available / numbers of items at HackUPC)
-					<ul id="hardwareList"> -->
-					<!-- To be filled by Javascript -->
-<!-- 					</ul>
-					<div class="buttons">
-						<a href="https://hardware.mlh.io" class="mlh-hardware-lab">Request at MLH Hardware Lab</a>
-					</div> -->
+				<div class="panel large">
+					<h1>Streaming</h1>
+					<div>
+						<h2 style="text-align: center;">Live streaming will be available on Friday</h2>
+						<p style="text-align: center;">We thank you for your patience!</p>
+					</div>
+				</div>
+				<!--<div class="panel large no-margin">
+					<h1>Streaming</h1>
+					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+					<div class='embed-container'>
+						<iframe src='https://www.youtube.com/embed//qTijleLsync' frameborder='0' allowfullscreen></iframe>
+					</div>
+				</div>-->
+			</div>
+		</article>
+		<article id="maps" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel large">
+					<h1>Maps</h1>
+					<div>
+						<h2 style="text-align: center;">Maps will be available soon</h2>
+						<p style="text-align: center;">We thank you for your patience!</p>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -457,124 +480,241 @@
 			<div class="container">
 				<div class="panel large">
 					<h1>HackUPC</h1>
-					<h2 style="text-align: center;">HackUPC prizes will be announced very soon</h2>
-					<p style="text-align: center;">We thank you for your patience</p>
-				</div>
-				<div class="panel">
-					<h1>imaginBank</h1>
-					<h2>The best chatbot for a financial app</h2>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#imaginBank</span>
+						<h2 style="text-align: center;">HackUPC prizes will be announced at the opening ceremony</h2>
+						<p style="text-align: center;">We thank you for your patience!</p>
 					</div>
-					<p>
-						What type of chatbot can it be?</p>
-						<ul>
-							<li>A commercial chatbot</li>
-							<li>A customer service chatbot</li>
-							<li>A discounts and advantages chatbot</li>
-							<li>A browsing assistant</li>
+				</div>
+				<div class="panel large">
+					<h1>Sopra Steria</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Find solutions to fight against fake news</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CC7SDC">#soprasteria</a></span>
+						</div>
+						<p>Build a tool that will help users to identify trustworthy or fake news by giving them an overall score.</p>
+						<ul class="no-indent margin-bottom">
+							<li>Considered as tool: website, application, extension, plugin or any other software that will take an input and give a score as output.</li>
+							<li>Users are any person that uses a social network or consumes media or news (online or offline).</li>
+							<li>Scores must be in the 0-10 range. 0 means completely fake while 10 means absolutely reliable (if that’s possible).</li>
 						</ul>
-						<p>What will we take into account? Creativity, Performance and User Experience.
-
-						<br>You see a prototype of their app <a href="https://www.justinmind.com/usernote/tests/25280727/25313669/25423652/index.html" target="_blank">here</a></p>
+						<div>
+							<p><b>Prize:</b> Google Home per each winner team member.</p>
+						</div>
+					</div>
 				</div>
 				<div class="panel">
-					<h1>GFT</h1>
-					<h2>Hack &amp; Help</h2>
+					<h1>Infojobs</h1>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#gft</span>
+						<h2 class="panel-info margin-bottom text-centered">Build your dreamed tech-InfoJobs</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCAN4E">#infojobs</a></span>
+						</div>
+						<p class="margin-bottom">Build your perfect job seeker. We encourage you to propose any change or improvement in our registration process, CV, job search... In other words, everything related to have a more suitable InfoJobs for you and your needs.</p>
+						<p class="margin-bottom">Their API is waiting for you to shake it. Check out its <a href="https://developer.infojobs.net/" target="_blank">documentation</a>.</p>
+						<div>
+							<p><b>Prize:</b> Nintendo Switch per each winner team member.</p>
+						</div>
 					</div>
-					<p>You can find more infomation <a href="http://www.gft.com/microsites/hackupc/" target="_blank">here</a></p>
 				</div>
 				<div class="panel">
-					<h1>ServiZurich</h1>
-					<h2>Help us make smart devices smarter to reduce claims</h2>
+					<h1>AWSEducate</h1>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#servizurich</span>
+						<h2 class="panel-info margin-bottom text-centered">The AWS City of a Cloud Serverless Hackathon</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCUB71TV0">#awseducate</a></span>
+						</div>
+						<p class="margin-bottom">Put your skills to the test and apply the AWS Serverless portfolio to build solutions for cities: City planning, Sanitation, Parks, Street maintenance, Voting and Public Safety.</p>
+						<p class="margin-bottom">For more information click <a href="http://awshackupc.s3-website-eu-west-1.amazonaws.com/" target="_blank">here</a>.</p>
+						<div>
+							<p><b>Prizes:</b></p>
+							<ul class="no-indent">
+								<li>1st Prize: Amazon Echo for every team member.</li>
+								<li>2nd Prize: Amazon Echo dots for each team member.</li>
+								<li>3rd Prize: Amazon Echo dots for each team member.</li>
+								<li>4th Prize: €25 Amazon vouchers for each team member.</li>
+							</ul>
+						</div>
 					</div>
-					<p>25% of all accidents are caused by smart device distractions.</p>
-				</div>
-				<div class="panel">
-					<h1>Skyscanner</h1>
-					<h2>Best use of Skyscanner API</h2>
-					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#skyscanner</span>
-					</div>
-					<p>Come by our Booth to get your API keys.
- <a href="https://skyscanner.github.io/slate/" target="_blank">Documentation</a>. API talk on Saturday morning.</p>
 				</div>
 				<div class="panel">
 					<h1>Everis</h1>
-					<h2>Help People using Ethereum</h2>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#everis</span>
+						<h2 class="panel-info margin-bottom text-centered">Virtual assistants application for social purposes</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCGQP8">#everis</a></span>
+						</div>
+						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<div>
+							<p><b>Prize:</b> Google Home Mini per each winner team member.</p>
+						</div>
 					</div>
-					<p>API documentation  can be found here<a target="_blank" href="http://etheris.everisdigitalchannels.com">here</a></p>
 				</div>
 				<div class="panel">
 					<h1>Itequia</h1>
-					<h2>Text recognition using computer vision API</h2>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#itequia</span>
+						<h2 class="panel-info margin-bottom text-centered">Create an app that allow us to share and draw in a whiteboard in real time with a group of users</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC86PJT9B">#itequia</a></span>
+						</div>
+						<p class="margin-bottom">Here at Itequia we always carry out our meetings next to a whiteboard. We think that having a visual feedback in a meeting helps a lot with transmitting ideas to clients and coworkers. But often we need to have online meetings with team members that are not in the office. That's why we would love to have a way to create and share a whiteboard in real time with a group of users.</p>
+						<div>
+							<p><b>Prize:</b> 50€ Amazon Gift Card for each winner team member.</p>
+						</div>
 					</div>
-					<p>Information and documentation can be found on the channel.</p>
-				</div>
-				<div class="panel">
-					<h1>Doist</h1>
-					<h2>Twist Challenge</h2>
-					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#doist</span>
-					</div>
-					<p>The challenge is to integrate another tool with Twist so that users can enjoy the best of both services and maximize their team’s efficiency. You can read more at <a href="http://bit.ly/doist_hackupc" target="_blank">bit.ly/doist_hackupc</a></p>
-				</div>
-				<div class="panel">
-					<h1>Thoughtworks</h1>
-					<h2>Open Source your City</h2>
-					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#thoughtworks</span>
-					</div>
-					<p></p>
-				</div>
-				<div class="panel">
-					<h1>Bloomberg</h1>
-					<h2>Best Tech Hack</h2>
-					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#bloomberg</span>
-					</div>
-					<p>The best hack decided by Bloomberg staff at HackUPC</p>
 				</div>
 				<div class="panel">
 					<h1>Opentrends</h1>
-					<h2>Match Cities &amp; Cars</h2>
 					<div>
-						<h3 class="label">Channel:</h3>
-						<span>#opentrends</span>
+						<h2 class="panel-info margin-bottom text-centered">IoT & Chatbot for eHealth</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCRD8W">#opentrends</a></span>
+						</div>
+						<p class="margin-bottom">IoT-based healthcare services are expected to reduce costs, increase the quality of life, and enrich the user’s experience. IoT-based healthcare systems can be applied to a diverse array of fields, including care for pediatric and elderly patients, the supervision of chronic diseases, and the management of private health and fitness, among others.</p>
+						<div>
+							<p><b>Prize:</b> Google Home per each winner team member.</p>
+						</div>
 					</div>
-					<p>Use AI and ML to solve real life problems.</p>
 				</div>
 				<div class="panel">
-					<h1>MLH: Qualcomm</h1>
-					<h2>Best IoT Hack Using a Qualcomm Device</h2>
-					<p>Use AI and ML to solve real life problems.</p>
+					<h1>Skyscanner</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Most creative use of Skyscanner's API</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCJM20DU5">#skyscanner</a></span>
+						</div>
+						<p class="margin-bottom">Come by our Booth to get your API keys. Check our <a href="https://skyscanner.github.io/slate/" target="_blank">documentation</a> for more information. Join us on API talk on Saturday morning.</p>
+						<div>
+							<p><b>Prize:</b> 75€ travel voucher.</p>
+						</div>
+					</div>
 				</div>
 				<div class="panel">
-					<h1>MLH: Amazon</h1>
-					<h2>Amazon Web Services - Best Use of AWS</h2>
-					<p></p>
+					<h1>IThinkUPC</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Bring the university life to your smartphone</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCKU9PTND">#ithinkupc</a></span>
+						</div>
+						<p class="margin-bottom">We want to improve UPC student's digital experience by designing a whole new set of apps and resources that help us make a difference in the relationship between university services and students needs and preferences.</p>
+						<p class="margin-bottom">We encourage you to design and build an app that includes your preferred feature and help our university to become digital!</p>
+						<p class="margin-bottom">For more information click <a href="https://drive.google.com/a/hackupc.com/file/d/1vg9ht7NH23BWCI6XiYO3rqs6ejjMbug2/view?usp=sharing" target="_blank">here</a>.</p>
+						<div>
+							<p><b>Prizes:</b></p>
+							<ul class="no-indent">
+								<li>1st Prize: Google Home for every team member.</li>
+								<li>2nd Prize: Arduboy for each team member.</li>
+								<li>3rd Prize: Raspberry Pi 3 for each team member.</li>
+								<li>4th Prize: Google Home Mini for each team member.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="panel">
-					<h1>MLH: Domain.com</h1>
-					<h2>Best Domain Name from Domain.com</h2>
-					<p></p>
+					<h1>ServiZurich</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Millenials on the move</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCTPG6VDX">#servizurich</a></span>
+						</div>
+						<p class="margin-bottom">Research shows that millennials are horrible drivers. Texting, emailing, chatting behind the wheel, running red lights, eating and drinking are just a few of the reckless acts millennials do while driving.</p>
+						<p class="margin-bottom">Are you a millennial? Do you agree? Is the research just wrong?</p>
+						<p class="margin-bottom">We challenge you to find out 1) how millennials really drive 2) how we can help improve and protect the lives of millennials on the move.</p>
+						<div>
+							<p><b>Prize:</b> 80€ on Amazon per each team member.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Vueling</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Vueling prize</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCR2QN5DG">#vueling</a></span>
+						</div>
+						<p>Vueling will award with 1 Round-trip ticket to any Vueling destination for each member of HackUPC winner team!</p>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>ThoughtWorks</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Code what matters</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC7U0NL91">#thoughtworks</a></span>
+						</div>
+						<p class="margin-bottom">This is your moment to have a social impact on your city or community... Use the power of technology to make a positive change or to solve an issue that is close to your heart!</p>
+						<div>
+							<p><b>Prize:</b> Reprap Prusa i3 3D Printer <b>OR</b> Tello Dron.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Bloomberg</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Bloomberg challenge</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCQUSJ99R">#bloomberg</a></span>
+						</div>
+						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<div>
+							<p><b>Prize:</b> It will be announced very soon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Typeform</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Best use of Typeform's API</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CD45YC4P2">#typeform</a></span>
+						</div>
+						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<div>
+							<p><b>Prize:</b> It will be announced very soon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>.tech domains</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Best project hosted on .tech domains</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC7U0UYAX">#tech-domains</a></span>
+						</div>
+						<p class="margin-bottom">Come to Info-Desk for getting promotional codes (and some stickers of course).</p>
+						<div>
+							<p><b>Prize:</b> US$ 250 Amazon Gift Card for the whole team.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Wolfram Language</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Use of Wolfram's API</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC82KAZFC">#wolfram</a></span>
+						</div>
+						<p class="margin-bottom">Wolfram Research is pleased to sponsor HackUPC by providing access to our latest technology, Wolfram|One! For complimentary access to our development platform and the Wolfram API, just click <a href="https://account.wolfram.com/redeem/HackUPC2018" target="_blank">here</a>.</p>
+						<p class="margin-bottom">This URL will take you to a sign-in page and prompt you to log in using your Wolfram ID. If you don't already have a Wolfram ID, you'll be prompted to create one using an active email address. Once logged in, you will see in the Downloads section which platforms of the software you have access to, with their accompanying activation keys. Please download the desktop version to your machine, boot up the application and use the associated activation key when prompted. This will grant you full access for 30 days from your activation date.</p>
+						<div>
+							<p><b>Prize:</b> One year each of Wolfram|One and Wolfram|Alpha Pro for everyone on the top ten teams with a value of $375 per award.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -582,69 +722,91 @@
 			<div class="container">
 				<div class="panel">
 					<h1>When shall I arrive?</h1>
-					<p>
-						Registration will start at 3 PM on Friday. The opening ceremony is at 7 PM.
-					</p>
+					<div>
+						<p>
+							Registration will start at 3 PM on Friday. The opening ceremony is at 7 PM.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>When is HackUPC ending?</h1>
-					<p>
-						The closing ceremony is expected to end on Sunday 5th at 5:00 PM.
-					</p>
+					<div>
+						<p>
+							The closing ceremony is expected to end on Sunday 21st at 5:00 PM.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>What if I cannot make it in time?</h1>
-					<p>
-						No problem. Just come to our InfoDesk for a late check-in. If you are confused, please reach out to any volunteer (white t-shirts) or organizer (black t-shirts).
-					</p>
+					<div>
+						<p>
+							No problem. Just come to our InfoDesk for a late check-in. If you are confused, please reach out to any volunteer (white t-shirts) or organizer (black t-shirts).
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>I'm not in Slack, how do I get in?</h1>
-					<p>
-						Come to the InfoDesk during the event or send us an email to <a href="mailto:contact@hackupc.com" target="_blank">contact@hackupc.com</a>
-					</p>
+					<div>
+						<p>
+							Come to the InfoDesk during the event or send us an email to <a href="mailto:contact@hackupc.com" target="_blank">contact@hackupc.com</a>
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>Can I leave HackUPC?</h1>
-					<p>
-						Yes. However make sure you have your wristband with you, otherwise we might not let you in when you come back.
-					</p>
+					<div>
+						<p>
+							Yes. However make sure you have your wristband with you, otherwise we might not let you in when you come back.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>Can I sleep now?</h1>
-					<p>
-						Yes, sure. You can find the sleeping spaces in A4 2nd floor. Some matresses will be provided. Unfortunately, we don't have enough for everyone!
-					</p>
+					<div>
+						<p>
+							Yes, sure. You can find the sleeping spaces in A3/A4 2nd floor. Some matresses will be provided. Unfortunately, we don't have enough for everyone!
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>Something isn’t working!</h1>
-					<p>
-						If something is not working, please come to our InfoDesk and meet our awesome volunteers. They'll love to help you!
-					</p>
+					<div>
+						<p>
+							If something is not working, please come to our InfoDesk and meet our awesome volunteers. They'll love to help you!
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>Deadline for project submissions?</h1>
-					<p>
-						The deadline for project submissions is Sunday 5th 9:30 AM. Submit your projects <a href="https://hackupc2017f.devpost.com">here</a>.
-					</p>
+					<div>
+						<p>
+							The deadline for project submissions is Sunday 21st 9:00 AM. Submit your projects <a href="https://hackupc2018.devpost.com">here</a>.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>How does judging work?</h1>
-					<p>
-						We will have a judging expo on Sunday from 10:30am-12:30pm. Feel free to wander around and check out other projects, but make sure that  at least <b>one of your team members is at your table</b> ready  to present to the  judges. The top teams will move on to an additional round of panel judging in the Closing ceremony.
-					</p>
+					<div>
+						<p>
+								We will have a judging expo on Sunday from 10:15 am - 13:15 am. We'll assign you a classroom to present your project (one for HackUPC + as many challenges as you participate), you can check how many hacks there are before yours at <a href="https://my.hackupc.com" target="_blank">MyHackUPC</a>. The presentation can only be 3 minutes long and with no slides, Prezi's or any visual support except expect your hack. You can check out other projects at any judging room. The top teams will move on to an additional round of panel judging in the Closing Ceremony. If you participate in a challenge, you'll have to present at the specific sponsor room, which is independent of the HackUPC judging.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>Where's my travel reimbursement?</h1>
-					<p>
-						The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1 - 2 months time period. Also, remember that you need to post a project before the deadline in order to get the reimbursement.
-					</p>
+					<div>
+						<p>
+							The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1 - 2 months time period. Also, remember that you need to post a project before the deadline in order to get the reimbursement.
+						</p>
+					</div>
 				</div>
 				<div class="panel">
 					<h1>I have another question... Biene?</h1>
-					<p>
-						If you have any other questions and you can't find it here, make sure to pay us a visit at our InfoDesk.
-					</p>
+					<div>
+						<p>
+							If you have any other questions and you can't find it here, make sure to pay us a visit at our InfoDesk.
+						</p>
+					</div>
 				</div>
 			</div>
 		</article>

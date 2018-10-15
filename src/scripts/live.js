@@ -22,10 +22,11 @@
 		"dayof" : "dayof",
 		"rules" : "rules",
 		"travel" : "travel",
-		"hardware" : "hardware",
+		"streaming" : "streaming",
 		"faq" : "faq",
 		"schedule" : "schedule",
-		"challenges" : "challenges"
+		"challenges" : "challenges",
+		"maps": "maps"
 	};
 
 	var icons ={
@@ -228,7 +229,7 @@
 	*/
 	function paintSchedule(){
 		var fancyElements = document.querySelectorAll(".events-fancy");
-		var scheduleElement = document.getElementById(views.schedule);
+		var scheduleElement = document.getElementById(views.schedule).getElementsByClassName("container")[0];
 		try{
 			var fancySchedule = generateFancySchedule();
 			for(var i = 0; i < fancyElements.length; i++){
@@ -594,7 +595,7 @@
 	// MLH Hardware Lab
 	////////////////////////
 
-	function buildHardwareLab(cb) {
+	/*function buildHardwareLab(cb) {
 		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
@@ -605,7 +606,7 @@
 				);
 			})
 		})
-	}
+	}*/
 
 
 	////////////////////////
