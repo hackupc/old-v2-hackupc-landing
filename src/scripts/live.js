@@ -26,7 +26,8 @@
 		"faq" : "faq",
 		"schedule" : "schedule",
 		"challenges" : "challenges",
-		"maps": "maps"
+		"maps": "maps",
+		"mentors": "mentors"
 	};
 
 	var icons ={
@@ -233,7 +234,7 @@
 		try{
 			var fancySchedule = generateFancySchedule();
 			for(var i = 0; i < fancyElements.length; i++){
-				fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>";
+				//fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>";
 				fancyElements[i].appendChild(
 					fancySchedule.cloneNode(true)
 				);
