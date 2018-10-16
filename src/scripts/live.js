@@ -26,7 +26,8 @@
 		"faq" : "faq",
 		"schedule" : "schedule",
 		"challenges" : "challenges",
-		"maps": "maps"
+		"maps": "maps",
+		"mentors": "mentors"
 	};
 
 	var icons ={
