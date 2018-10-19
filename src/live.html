@@ -2,13 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Live Shedule | HackUPC</title>
+	<title>Live Schedule | HackUPC</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/app.min.css" data-finger-print>
 	<script src="assets/js/app.min.js" data-finger-print></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="Live Schedule | HackUPC | Oct 19th-21st  | Barcelona | 700 Hackers"/>
-  	<meta property="og:site_name" content="Live Shedule | HackUPC"/>
+  	<meta property="og:site_name" content="Live Schedule | HackUPC"/>
   	<meta name="description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st.">
   	<meta property="og:description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st."/>
   	<meta property="og:image" content="https://hackupc.com/assets/img/hackupc-ogimage@2x.png?v=2018"/>
@@ -138,8 +138,9 @@
 					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
 					<a href="#/maps">Maps</a>
 				</li>
-				<li>
-					<a href="https://mentors.hackupc.com" target="_blank">Mentors</a>
+				<li data-bind-view="mentors"><!--<li>-->
+					<!--<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>-->
+					<a href="#/mentors">Mentors</a>
 				</li>
 				<li data-bind-view="streaming">
 					<a href="#/streaming">Streaming</a>
@@ -173,10 +174,9 @@
 					<a href="#/schedule">Schedule</a>
 				</li>
 				<li data-bind-view="maps"><!--<li>-->
-					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
-					<a href="#/maps">Maps</a>
+					<a href="http://maps.hackupc.com/" target="_blank">Maps</a>
 				</li>
-				<li>
+				<li data-bind-view="mentors"><!--<li>-->
 					<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>
 				</li>
 				<li id="countdown-li">
@@ -404,7 +404,7 @@
 							You are strongly encouraged to present a demo of what you have built. Pitches or presentations are discouraged. You are not judged on the quality of your pitch or the quality of your idea. As you are judged on what you built, you'll only hurt yourself by not showing a demo.
 						</p>
 						<p class="margin-bottom">
-							You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well. Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! For being courageous enough to demo, you'll receive a special MLH "I Demoed" sticker—it doesn't matter how good the demo is! In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. Hearing what other people learned is interesting and inspiring for other attendees.
+							You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well. Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! For being courageous enough to demo, you'll receive a special "I Demoed" sticker—it doesn't matter how good the demo is! In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. Hearing what other people learned is interesting and inspiring for other attendees.
 						</p>
 						<h2 class="margin-bottom">Judging Criteria</h2>
 						<p class="margin-bottom">
@@ -449,20 +449,20 @@
 		</article>
 		<article id="streaming" class="under-header padding-bottom">
 			<div class="container">
-				<div class="panel large">
+				<!--<div class="panel large">
 					<h1>Streaming</h1>
 					<div>
-						<h2 style="text-align: center;">Live streaming will be available on Friday</h2>
+						<h2 style="text-align: center;">Live streaming will be available on Sunday</h2>
 						<p style="text-align: center;">We thank you for your patience!</p>
 					</div>
-				</div>
-				<!--<div class="panel large no-margin">
+				</div>-->
+				<div class="panel large no-margin">
 					<h1>Streaming</h1>
 					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 					<div class='embed-container'>
-						<iframe src='https://www.youtube.com/embed//qTijleLsync' frameborder='0' allowfullscreen></iframe>
+						<iframe src='https://www.youtube.com/embed/qyxlvgvhBvE' frameborder='0' allowfullscreen></iframe>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</article>
 		<article id="maps" class="under-header padding-bottom">
@@ -472,6 +472,17 @@
 					<div>
 						<h2 style="text-align: center;">Maps will be available soon</h2>
 						<p style="text-align: center;">We thank you for your patience!</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="mentors" class="under-header padding-bottom">
+			<div class="container">
+				<div class="panel large">
+					<h1>Mentors</h1>
+					<div>
+						<h2 style="text-align: center;">Need help? Talk to one of our amazing mentors!</h2>
+						<p style="text-align: center;"></p>
 					</div>
 				</div>
 			</div>
@@ -662,14 +673,14 @@
 				<div class="panel">
 					<h1>Bloomberg</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Bloomberg challenge</h2>
+						<h2 class="panel-info margin-bottom text-centered">Best Tech hack</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
 							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCQUSJ99R">#bloomberg</a></span>
 						</div>
-						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<p class="margin-bottom">Bloomberg will award the best tech project of HackUPC 2018! For more information please contact them at their stand or through Slack.</p>
 						<div>
-							<p><b>Prize:</b> It will be announced very soon.</p>
+							<p><b>Prize:</b> Arduino.</p>
 						</div>
 					</div>
 				</div>
@@ -681,9 +692,9 @@
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
 							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CD45YC4P2">#typeform</a></span>
 						</div>
-						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<p class="margin-bottom">For more information please contact them through Slack.</p>
 						<div>
-							<p><b>Prize:</b> It will be announced very soon.</p>
+							<p><b>Prize:</b> Nintendo SNES Classic Console.</p>
 						</div>
 					</div>
 				</div>
