@@ -14,3 +14,4 @@
 - Fix legal pages style because bootrstap was deleted
 - Explain that we use BEM in readme.md
 - Explain lints in readme.md
+- Fix data-finger-print not working
