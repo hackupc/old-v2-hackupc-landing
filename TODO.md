@@ -12,3 +12,5 @@
 - Test if scss works
 - Test if live works
 - Fix legal pages style because bootrstap was deleted
+- Explain that we use BEM in readme.md
+- Explain lints in readme.md
