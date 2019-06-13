@@ -1,0 +1,16 @@
+:root{
+  --cookie-bg: #000;
+}
+.cookies-notice{
+  position: fixed;
+  right: 0; bottom: 0; left: 0;
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+  background-color: var(--cookie-bg);
+  color: white;
+  font-size: 0.85em;
+}
+.cookies-notice--hidden{
+  transform: translateY(100%);
+  pointer-events: none;
+  opacity: 0;
+}
