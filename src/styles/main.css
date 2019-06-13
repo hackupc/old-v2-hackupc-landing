@@ -1,1 +1,21 @@
 *{font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif !important;}
+:root{
+  --primary:       #1A1;
+  --primary-dark:  #1a701a;
+  --secondary:     #cf7f07;
+  --secondary-dark:#946114;
+  --tertiary:      #681fac;
+  --tertiary-dark: #4b2d68;
+  --dark:      #222;
+  --gray-dark: #39383A;
+  --text-dark: #111;
+  --light:     #EEE;
+  --gray-light:#AAA;
+  --text-light:#FFF;
+}
+body{
+  margin: 0 auto;
+  background: var(--dark);
+  color: var(--text-light);
+  max-width: 1000px;
+}
