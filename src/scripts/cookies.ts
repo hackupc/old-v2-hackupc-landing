@@ -4,7 +4,7 @@ cookieNotice.innerHTML = `<p class="cookies-notice__text">${cookieText}</a>.</p>
 cookieNotice.classList.add('cookies-notice')
 
 if (window.localStorage.getItem('cookiesAccepted') !== 'true') {
-  if (document.readyState === 'complete') {
+  if (document.readyState !== 'loading') {    
     document.body.appendChild(cookieNotice)
   }else{
     document.addEventListener('DOMContentLoaded', function () {

@@ -7,10 +7,18 @@
   transition: transform 300ms ease-out, opacity 300ms ease-out;
   background-color: var(--cookie-bg);
   color: white;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 .cookies-notice--hidden{
   transform: translateY(100%);
   pointer-events: none;
   opacity: 0;
+}
+.cookies-notice__text{
+  
+}
+.cookies-notice__button{
+  border: none;
+  background: #7AD78E;
+  color: #fff;
 }
