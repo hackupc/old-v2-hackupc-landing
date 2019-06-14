@@ -41,7 +41,7 @@
     "ts:cookies": "tsc src/scripts/cookies.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/cookies.min.js ",
     "js:live": "uglifyjs src/scripts/config.live.js src/scripts/util.live.js src/scripts/live.js -m -c -o dist/assets/js/live.min.js",
     "lint": "npm-run-all --silent --parallel -c lint:*",
-    "lint:html": "htmllint dist/*.html",
+    "lint:html": "htmlhint src/*.html",
     "lint:js": "eslint src/scripts/*.js"
   },
   "author": "HackUPC Dev Team",
@@ -54,24 +54,19 @@
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.1",
     "onchange": "^3.2.1",
-    "postcss": "^7.0.17",
     "postcss-cli": "^2.6.0",
     "postcss-preset-env": "^6.6.0",
     "typescript": "^2.0.3",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^2.8.29"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "babel-plugin-uglify": "^1.0.2",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "htmllint": "^0.6.0",
-    "htmllint-cli": "0.0.6",
+    "htmlhint": "^0.11.0",
     "http-server": "^0.11.1",
     "node-notifier-cli": "^1.0.1",
     "standard": "^8.6.0"
