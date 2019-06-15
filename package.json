@@ -11,7 +11,7 @@
     "postdist": "npm-run-all -p fingerprint",
     "fingerprint": "asset-cache-bust 'dist/*.html'",
     "serve": "http-server dist",
-    "notify-update": "notify -t 'Hackupc' -m 'Dist updated' -s",
+    "notify-update": "notify -t 'HackUPC frontend' -m 'Dist updated' -open https://localhost:8080/",
     "clean": "rm -Rf dist/*",
     "postclean": "touch dist/.gitkeep",
     "predist:styles": "mkdir -p dist/assets/css",

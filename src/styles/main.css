@@ -132,7 +132,47 @@ p{margin: 0;}
   font-size: 1.1em;
 }
 
+/* Footer section */
+.section--footer{
+  background: var(--light);
+  color: var(--text-dark);
+  max-width: none;
+}
+.section__list--contact{
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.section__list--legal{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Legal */
+
+
+/* Last year */
+.last-year-site{
+  display: block;
+}
+
+/* Contact */
+.contact{
+  display: block;
+  padding: 1em;
+  transition: transform 100ms ease-out;
+}
+.contact__icon{
+  width: 1.3333em;
+}
+.contact:hover{
+  transform: scale(1.5);
+}
+
 /* Easter egg */
 .easter-egg{
   display: none;
+}
+.rainbow-glow{
+  /* TODO: add a rainbow glow */
 }
