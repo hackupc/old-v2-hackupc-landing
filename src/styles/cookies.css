@@ -24,9 +24,21 @@
 }
 .cookies-notice__text{
   font-size: 0.8em;
-  margin: 0;
+  margin: 0 2vw 0 calc(2vw + 0.8rem);
+  line-height: 1;
 }
-.cookies-notice__button{
+.cookie-notice__link{
+  color: #69a9e9;
+  white-space: nowrap;
+}
+
+@keyframes slide-up {
+  0%{transform: translateY(100%)}
+  100%{transform: translateY(0)}
+}
+
+/* Button OK! style */
+/* .cookies-notice__button{
   border: none;
   border-bottom: solid #54885f 4px;
   background: #7AD78E;
@@ -36,13 +48,36 @@
   margin-left: 16px;
   padding: 4px 10px;
   cursor: pointer;
-}
-.cookie-notice__link{
-  color: #69a9e9;
-  margin: 0 4px;
-}
+} */
 
-@keyframes slide-up {
-  0%{transform: translateY(100%)}
-  100%{transform: translateY(0)}
+/* Button x style */
+.cookies-notice__button {
+  font-size: 0;
+  padding: 0;
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+  opacity: 0.7;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 50ms ease-out;
+  color: #fff;
+}
+.cookies-notice__button:hover {
+  opacity: 1;
+}
+.cookies-notice__button:before, .cookies-notice__button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: currentColor;
+}
+.cookies-notice__button:before {
+  transform: rotate(45deg);
+}
+.cookies-notice__button:after {
+  transform: rotate(-45deg);
 }
