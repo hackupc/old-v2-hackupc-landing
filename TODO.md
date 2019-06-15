@@ -2,16 +2,24 @@
 
 - Create issues for all of this tasks
 - Refactor all 2018 for 2019 and any outdated content
-- Update schedule
+- Update schedule.json
 - Make an schedule format example
-- Remove unused dependencies
 - Remove unused styles
-- Update `favicon.ico`
+- Update `favicon.ico` (color)
 - Clear `index.html` and `live.html`
-- Test if all npm scripts work
-- Test if scss works
 - Test if live works
 - Fix legal pages style because bootrstap was deleted
 - Explain that we use BEM in readme.md
 - Explain lints in readme.md
 - Fix data-finger-print not working
+- Update judginc criteria qnd split question
+- Update mentors link
+- Try to show the information in a better way than a FAQ
+- Apply buton shhould be a link
+- make the subscrive page
+- make the applcations closed page
+- update ansqer of volunteers
+- make an example hero-bg with a gradient or canvas
+- mqke h2 preatty
+- finish footer
+- put the logos
