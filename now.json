@@ -1,8 +1,8 @@
 
 {
-  "type": "static",
-  "public": true,
-  "static": {
-    "public": "dist"
-  }
+  "version": 2,
+  "name": "hackupc-frontend",
+  "builds": [
+      { "src": "package.json", "use": "@now/static-build" }
+  ]
 }

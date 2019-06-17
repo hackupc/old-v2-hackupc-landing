@@ -8,8 +8,7 @@
     "watch": "npm-run-all --parallel serve dist watch:*",
     "test": "npm run -s lint",
     "predist": "npm run clean",
-    "postdist": "npm-run-all --parallel fingerprint && npm run --silent notify:build",
-    "fingerprint": "cd dist && asset-cache-bust '*.html'",
+    "postdist": "cd dist && asset-cache-bust '*.html'",
     "serve": "http-server dist",
     "notify:update": "notify -t 'HackUPC frontend' -m 'Dist updated' -open https://localhost:8080/",
     "notify:build": "notify -t 'HackUPC frontend' -m 'Dist builded' -open https://localhost:8080/",
@@ -47,7 +46,8 @@
     "js:live": "uglifyjs src/scripts/config.live.js src/scripts/util.live.js src/scripts/live.js -m -c -o dist/assets/js/live.min.js",
     "lint": "npm-run-all --silent --parallel -c lint:*",
     "lint:html": "htmlhint src/*.html",
-    "lint:js": "eslint src/scripts/*.js"
+    "lint:js": "eslint src/scripts/*.js",
+    "now-build": "npm run dist"
   },
   "author": "HackUPC Dev Team",
   "license": "MIT",
