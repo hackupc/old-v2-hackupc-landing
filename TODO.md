@@ -26,3 +26,6 @@
 - parse legal documents to markdown and add a npm script to compile them
 - resize the images with a npm script
 - make logos list a ul instead of a div
+- remove unused font weights
+- explain .editorconfig in readme
+- fix github continous integration issues
