@@ -1,8 +1,8 @@
 ### Custom ###
-dist/
+dist/*
 !dist/.gitkeep
 .sass-cache
-
+package-lock.json
 
 
 # ------- Generated ------- #
