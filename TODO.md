@@ -29,3 +29,4 @@
 - remove unused font weights
 - explain .editorconfig in readme
 - fix github continous integration issues
+- make the beta branch that autodeploys to beta.hackupc.com
