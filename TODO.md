@@ -31,3 +31,4 @@
 - fix github continous integration issues
 - make the beta branch that autodeploys to beta.hackupc.com
 - add title atribute to the x button in cookies notice
+- fix html-minifier *.html
