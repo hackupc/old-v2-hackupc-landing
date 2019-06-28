@@ -137,6 +137,68 @@ Useful to specify events that don't have concept of length or that span through 
 Clients will poll constantly the schedule.json file. To update the schedule just change the file and deploy.  
 New versions of the schedule will be loaded only if 'version' is different.
 
+## Tech stack
+
+This are the explanations of why we chose each technology, so you can decide whether keep it or change it.
+
+### Conventions
+
+#### English
+
+> Write everything in english please, even comments
+
+- More people can understand the code.
+- Consistent with most libraries.
+
+#### BEM
+
+> [BEM Oficial website](http://getbem.com/naming/)
+
+- Avoids unwanted styles and messy css.
+- Browsers are faster styling by class than by tag.
+- HTML is more clear.
+
+#### Standard JS
+
+> [Standard JS - Oficial website](https://standardjs.com/)
+
+- It can reformat your code automatically so you don't lose time.
+
+*I know... It's wierd not using semicolons, but js doesn't need them.*
+
+### Node.js && npm
+
+> [npm - Oficial website](http://npmjs.com/)
+
+- Keep all libraries easyly updated (try noy to use it over cdn or downloading them yourself).
+- Automate development and deployment.
+- It's simple, so we can focus on other important tasks.
+- It's cool!
+
+### PostCSS
+
+> [PostCSS - Oficial website](https://standardjs.com/)
+
+- All CSS goodies in one package!
+  - Minifyer
+  - Pollyfills
+  - Normalize.css
+  - Autoprefixer
+
+### GitHub
+
+#### Coderain Bot
+
+> [Coderain - Oficial website]()
+
+#### Issues Bot
+
+> [IssuesBot - Oficial website]()
+
+#### Issues
+
+#### Branches
+
 ## Support
 
 If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2019 edition are:
