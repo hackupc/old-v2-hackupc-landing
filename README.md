@@ -1,4 +1,5 @@
 # HackUPC 2019 landing page
+
 ![HackUPC 2019 landing preview](src/images/cover.png)
 
 Hi! This is the code of the HackUPC 2019 landing page.
