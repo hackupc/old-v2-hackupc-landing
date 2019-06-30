@@ -4,3 +4,34 @@
  * You should see it empty in production.
  */
 
+.gradient{
+  background: linear-gradient(to bottom, 
+    var(--sky-gradient-color-1)
+    var(--sky-gradient-color-2)
+    var(--sky-gradient-color-3));
+
+  --sky-gradient-color-1: #A6BA86;
+  --sky-gradient-color-2: #E3C677;
+  --sky-gradient-color-3: #00000080;
+  --sky-gradient-position-1: 95%;
+  --sky-gradient-position-2: 80%;
+  --sky-gradient-position-3: 30%;
+}
+.city{
+  display: flex;
+  justify-content: space-evenly;
+}
+.hero__separator{
+  position: absolute;
+  /* TODO: cut image, instead of using hardcoded values*/
+  right: -12%;
+  bottom: 0;
+  left: -4%;
+  height: 23vw;
+}
+.city__builing{
+  width: 6em;
+}
+.city__builing--small { width: 2em }
+.city__builing--medium{ width: 4em }
+.city__builing--big   { width: 6em }
