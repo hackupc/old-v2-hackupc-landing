@@ -5,14 +5,19 @@
  */
 
 .gradient{
-  background: linear-gradient(to bottom, 
-    #A6BA86 2.5%,
-    #E3C677 20%,
-		#000000 100%);
-
 	position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-	z-index: -5;
+}
+.gradient--sky{
+	background: linear-gradient(to bottom, 
+	#A6BA86 2.5%,
+	#E3C677 20%,
+	#000000 100%);
+}
+.gradient--depths{
+	background: linear-gradient(to bottom, 
+	#0000 40%,
+	#000 80%);
 }
 .hero__separator{
   position: absolute;
