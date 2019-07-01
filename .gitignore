@@ -6,6 +6,7 @@ package-lock.json
 
 
 # ------- Generated ------- #
+#  (one line is commented)  #
 
 # Created by https://www.gitignore.io/api/node,bower,linux,macos,windows,webstorm,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,bower,linux,macos,windows,webstorm,visualstudiocode
@@ -247,7 +248,7 @@ ehthumbs_vista.db
 *.stackdump
 
 # Folder config file
-[Dd]esktop.ini
+# [Dd]esktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

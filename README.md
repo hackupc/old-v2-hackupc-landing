@@ -1,4 +1,5 @@
 # HackUPC 2019 landing page
+
 ![HackUPC 2019 landing preview](src/images/cover.png)
 
 Hi! This is the code of the HackUPC 2019 landing page.
@@ -15,14 +16,14 @@ npm install
 
 ## Develop
 
-Use `npm run watch` to compile and serve the dist directory in real time.
+Use `npm run watch` to compile and serve the dist directory in real time. Then view the website at [https://localhost:8080](https://localhost:8080)
 
 **Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `maskdownlint`, `StandardJS` and `stylelint`. In other editors they may have similar names.
 Or use `npm run lint` to run linters manually from the console to check errors.
 
 We use linters to ensure code quality, please fix all the errors.
 
-Because of cahe busting you may have to clean the cache whrn you reload to see changes. In Chrome you can do `Ctrl` + `F5`.
+Because of cahe busting you may have to clean the cache when you reload to see changes. In Chrome you can do `Ctrl` + `F5`.
 
 **TLDR;**
 
@@ -32,7 +33,7 @@ Run this:
 npm run watch
 ```
 
-View the website at [https://localhost:8080](https://localhost:8080).
+View the website at [https://localhost:8080](https://localhost:8080)
 
 ## Deploy
 
@@ -41,7 +42,7 @@ View the website at [https://localhost:8080](https://localhost:8080).
 Use `npm run dist` to compile all dist directory.
 The files from `/src/` will be compiled to `/dist/`. Notice that the routes change, so when referencing files check where they are in [/dist/](/dist/]).
 
-Use `npm run serve` to serve `/dist` at [https://localhost:8080](https://localhost:8080).
+Use `npm run serve` to just serve `/dist` at [https://localhost:8080](https://localhost:8080).
 
 **TLDR;**
 
@@ -103,6 +104,32 @@ This makes crontab pull from the repo every 15 minutes. If changes happen, then 
 1. Place the file in [/src/images/logos/](/src/images/logos/).
 1. If you plan to customize the logo, save the original in [/src/images/logos/originals/](/src/images/logos/originals/).
 
+### Change theme
+
+> TODO: fill this part
+
+### Update schedule
+
+> TODO: polish this part
+
+Clients will poll constantly the schedule.json file. To update the schedule just change the file and deploy.  
+New versions of the schedule will be loaded only if 'version' is different.
+
+#### Schedule file
+
+- `id` can be whatever you want, but all ids must be different  
+- When writing hours, prepend zeroes: Nice: 01:00; Not-so-nice: 1:00.  
+- Events should be ordered by starting hour  
+- `baseTimeOffset` should be the same output as executing (new Date()).getTimezoneOffset() in a machine with local time. (UTC - localtime in minutes)  
+- `dates` are DD/MM/YYYY format  
+
+> If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
+Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
+
+### Change theme
+
+> TODO: fill this part
+
 ## Live
 
 Features included
@@ -119,23 +146,67 @@ Features included
 Some parameters (offsets, timeouts, defaults) can be changed in `config.live.js`. Keep in mind that some values are just constants and should not be changed.  
 Style can be customized in params.scss (note that some parameters should match some variables in config.live.js).
 
-### Schedule file
+## Tech stack
 
-- `id` can be whatever you want, but all ids must be different  
-- When writing hours, prepend zeroes: Nice: 01:00; Not-so-nice: 1:00.  
-- Events should be ordered by starting hour  
-- `baseTimeOffset` should be the same output as executing (new Date()).getTimezoneOffset() in a machine with local time. (UTC - localtime in minutes)  
-- `dates` are DD/MM/YYYY format  
+This are the explanations of why we chose each technology, so you can decide whether keep it or change it.
 
-### Non-ranged events
+### Conventions
 
-If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
-Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
+#### English
 
-### Updating schedule
+> Write everything in english please, even comments
 
-Clients will poll constantly the schedule.json file. To update the schedule just change the file and deploy.  
-New versions of the schedule will be loaded only if 'version' is different.
+- More people can understand the code.
+- Consistent with most libraries.
+
+#### BEM
+
+> [BEM Oficial website](http://getbem.com/naming/)
+
+- Avoids unwanted styles and messy css.
+- Browsers are faster styling by class than by tag.
+- HTML is more clear.
+
+#### Standard JS
+
+> [Standard JS - Oficial website](https://standardjs.com/)
+
+- It can reformat your code automatically so you don't lose time.
+
+*I know... It's wierd not using semicolons, but js doesn't need them.*
+
+### Node.js && npm
+
+> [npm - Oficial website](http://npmjs.com/)
+
+- Keep all libraries easyly updated (try noy to use it over cdn or downloading them yourself).
+- Automate development and deployment.
+- It's simple, so we can focus on other important tasks.
+- It's cool!
+
+### PostCSS
+
+> [PostCSS - Oficial website](https://standardjs.com/)
+
+- All CSS goodies in one package!
+  - Minifyer
+  - Pollyfills
+  - Normalize.css
+  - Autoprefixer
+
+### GitHub
+
+#### Coderain Bot
+
+> [Coderain - Oficial website]()
+
+#### Issues Bot
+
+> [IssuesBot - Oficial website]()
+
+#### Issues
+
+#### Branches
 
 ## Support
 

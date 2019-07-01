@@ -1,34 +1,46 @@
-# To do list for 2019 edition
+# To do list
 
-- Create issues for all of this tasks
-- Refactor all 2018 for 2019 and any outdated content
-- Update schedule.json
-- Make an schedule format example
-- Remove unused styles
-- Update `favicon.ico` (color)
-- Clear `index.html` and `live.html`
-- Test if live works
-- Fix legal pages style because bootrstap was deleted
-- Explain that we use BEM in readme.md
-- Explain lints in readme.md
-- Fix data-finger-print not working
-- Update judginc criteria qnd split question
-- Update mentors link
-- Try to show the information in a better way than a FAQ
-- Apply buton shhould be a link
-- make the subscrive page
-- make the applcations closed page
-- update ansqer of volunteers
-- make an example hero-bg with a gradient or canvas
-- mqke h2 preatty
-- finish footer
-- put the logos
-- parse legal documents to markdown and add a npm script to compile them
-- resize the images with a npm script
-- make logos list a ul instead of a div
-- remove unused font weights
-- explain .editorconfig in readme
-- fix github continous integration issues
-- make the beta branch that autodeploys to beta.hackupc.com
-- add title atribute to the x button in cookies notice
-- fix html-minifier *.html
+- [ ] Create issues for all of this tasks
+
+## For each edition
+
+- [ ] Refactor all 2018 for 2019 and any outdated content
+- [ ] Update schedule.json
+- [ ] Update `favicon.ico` (color)
+- [ ] Test if live works
+- [ ] Make the applcations closed page
+- [ ] Update FAQ
+- [ ] Make the subscrive page
+- [ ] Put the logos
+- [ ] Make sure that github continous integration accepts the commits
+
+## Improve Repo
+
+- [ ] Remove unused styles
+- [ ] Clear `index.html` and `live.html`
+- [ ] Fix legal pages style because bootrstap was deleted
+- [ ] Fix data-finger-print not working
+- [ ] Update mentors link
+- [ ] Try to show the information in a better way than a FAQ
+- [ ] Update answer of volunteers
+- [ ] Make h2 preatty
+- [ ] Finish footer
+- [ ] Resize the images with a npm script
+- [x] Make logos list a ul instead of a div
+- [ ] Remove unused font weights
+- [ ] Add title atribute to the x button in cookies notice
+
+## Documentation
+
+- [ ] Finish README.md tech stack
+- [ ] Explain .editorconfig in readme
+- [x] Explain that we use BEM in readme.md
+- [ ] Explain lints in readme.md
+- [ ] Make an schedule format example
+
+## Nice things to have
+
+- [ ] Fix html-minifier *.html
+- [ ] Make the beta branch that autodeploys to beta.hackupc.com
+- [ ] Parse legal documents to markdown and add a npm script to compile them
+- [ ] Make an example hero-bg with a gradient or canvas
