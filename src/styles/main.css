@@ -50,8 +50,8 @@ body{background:var(--light);color:var(--text-dark);}
 
 /* Hero */
 .hero{
-  height: 85vh;
-  color: var(--text-dark);
+  height: 90vh;
+  color: var(--text-light);
   font-size: 3vw;
   display: flex;
   align-items: center;
@@ -59,9 +59,11 @@ body{background:var(--light);color:var(--text-dark);}
   flex-direction: column;
   text-transform: uppercase;
   white-space: nowrap;
-  overflow: hidden visible;
   position: relative;
   z-index: 1;
+  line-height: 1;
+  /* This margin is for the hardcoded wall */
+  margin-bottom: 8%;
 }
 @media(min-width: 33.3333em){
   .hero{
@@ -83,15 +85,16 @@ body{background:var(--light);color:var(--text-dark);}
 .hero__date{
   font-size: 2em;
   font-weight: 700;
+  margin-top: 0.1em;
 }
 .hero__date_sufix{
   font-size: 0.5em;
   font-weight: 900;
 }
 .hero__info{
-  margin: 32px 0 64px;
+  margin: 0.5em 0 1.5em;
   font-weight: 500;
-  font-size: 1.4em;
+  font-size: 1em;
 }
 .hero__more-info{
   display: flex;
@@ -99,7 +102,7 @@ body{background:var(--light);color:var(--text-dark);}
   font-weight: 700;
 }
 .hero__button{
-  font-size: 1.5em;
+  font-size: 1em;
   border: none;
   background: var(--primary);
   color: var(--text-light);
