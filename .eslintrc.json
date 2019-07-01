@@ -6,8 +6,8 @@
     ],
     "rules": {
         "semi": ["off", "never"],
-        "indent": ["error", "tab"],
-        "no-tabs": ["off", "false"],
+        "indent": [2, "tab"],
+        "no-tabs": 0,
         "quotes": ["off", "never"]
     }
 }

@@ -14,9 +14,9 @@ Fixes #
 
 
 ## Some questions
-- [] I have read the contributing guidelines
-- [] I abide by this repository Code of Conduct
-- [] I have checked all margins within the sponsor/partners area
+- [ ] I have read the contributing guidelines
+- [ ] I abide by this repository Code of Conduct
+- [ ] I have checked all margins within the sponsor/partners area
 
 <!--You can leave this and check them once the PR has been created.-->
 

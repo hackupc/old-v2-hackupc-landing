@@ -1,0 +1,34 @@
+# To do list for 2019 edition
+
+- Create issues for all of this tasks
+- Refactor all 2018 for 2019 and any outdated content
+- Update schedule.json
+- Make an schedule format example
+- Remove unused styles
+- Update `favicon.ico` (color)
+- Clear `index.html` and `live.html`
+- Test if live works
+- Fix legal pages style because bootrstap was deleted
+- Explain that we use BEM in readme.md
+- Explain lints in readme.md
+- Fix data-finger-print not working
+- Update judginc criteria qnd split question
+- Update mentors link
+- Try to show the information in a better way than a FAQ
+- Apply buton shhould be a link
+- make the subscrive page
+- make the applcations closed page
+- update ansqer of volunteers
+- make an example hero-bg with a gradient or canvas
+- mqke h2 preatty
+- finish footer
+- put the logos
+- parse legal documents to markdown and add a npm script to compile them
+- resize the images with a npm script
+- make logos list a ul instead of a div
+- remove unused font weights
+- explain .editorconfig in readme
+- fix github continous integration issues
+- make the beta branch that autodeploys to beta.hackupc.com
+- add title atribute to the x button in cookies notice
+- fix html-minifier *.html
