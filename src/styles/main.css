@@ -82,6 +82,17 @@ body{background:var(--light);color:var(--text-dark);}
 .hero__title--bold{
   font-weight: 800;
 }
+.hero__letter--fall{
+	display: inline-block;
+	animation: letter-fall 3s 3s cubic-bezier(1,0,.9,1.25), letter-fall 3s steps(1);
+	transform-origin: 37% 87%;
+	transform: translateX(-10%) rotate(20deg);
+	backface-visibility: hidden;
+}
+@keyframes letter-fall {
+	0% {transform: translateX(-10%) rotate(0);}
+	100% {transform: translateX(-10%) rotate(20deg);}
+}
 .hero__date{
   font-size: 2em;
   font-weight: 700;

@@ -29,6 +29,7 @@
 - [x] Make logos list a ul instead of a div
 - [ ] Remove unused font weights
 - [ ] Add title atribute to the x button in cookies notice
+- [ ] Fix FOUC: add a nice animation
 
 ## Documentation
 
