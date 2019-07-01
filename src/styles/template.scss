@@ -1,0 +1,235 @@
+@import "bootstrap";
+
+@font-face {
+    font-family: Gotham-Black;
+    src: url(../fonts/GothamBlack.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(../fonts/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(../fonts/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fonts/GothamLight.ttf);
+}
+
+@font-face {
+    font-family: Gotham-Thin;
+    src: url(../fonts/GothamThin.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaBlack;
+    src: url(../fonts/ProximaNovaBlack.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url(../fonts/ProximaNovaBold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaSemibold;
+    src: url(../fonts/ProximaNovaSemibold.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url(../fonts/ProximaNovaRegular.ttf);
+}
+
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url(../fonts/ProximaNovaThin.ttf);
+}
+
+$color-accent: #E22B57;
+$color-sky1: #0E8C99;
+$color-sky2: #169DA3;
+$color-sky3: #28ADA6;
+$color-back1: #202326;
+$color-back2: #2C3033;
+$color-back3: #E4E4E5;
+$background-color: #202326;
+$background-color2: #FBFBFB;
+$text-color: #EEE;
+$title-color: $color-accent;
+$link-color: $color-accent;
+$link-color-dark: darken($link-color, 25%);
+$link-color-light: lighten($link-color, 25%);
+$button-text-color: white;
+$button-body-color: $color-accent;
+$button-highlight-color: #FFF;
+$button-bottom-color: darken($button-body-color, 25%);
+
+html {
+	height: 100%;
+}
+
+html, body{
+	overflow-x: hidden;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+    color: $text-color;
+    font-family: ProximaNovaRegular, sans-serif;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &::before{
+        background-image:url(../img/eixample-bg.png);
+        background-size:cover;
+        background-position-x:center;
+        display:block;
+        content:' ';
+        position:fixed;
+        width:100%;
+        height:100%;
+        z-index:-1;
+    }
+}
+
+a {
+    color: $link-color;
+    text-decoration: none !important;
+    &:hover {
+      color: $link-color-dark;
+    }
+}
+
+
+canvas {
+    position: fixed;
+    z-index: -20;
+    top: 0px;
+    left: 0px;
+}
+
+h1{
+    padding-top:0;
+    &::after{
+        content: ' ';
+        display:block;
+        height:2px;
+        width:80%;
+        background-color:black;
+	margin-bottom: 20px;
+    }
+}
+h2{
+    font-size:20px;
+}
+
+/* cookie notice */
+#cookie-notice{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding: 0.5em 1em;
+    text-align: center;
+    transition: bottom 1s;
+    background-color:$color-accent;
+    div{
+        width: 100px;
+        padding: 5px 10px;
+        margin: 0.5em auto;
+        background-color:$color-back1;
+        cursor: pointer;
+    }
+    box-shadow: 0px 15px 15px 15px black;
+}
+
+#cookies-a {
+    color: #FFF;
+    text-decoration: underline !important;
+}
+
+
+
+#wrapper{
+    max-width:950px;
+    width:80%;
+    margin:50px auto;
+    background-color:white;
+    color:black;
+    padding: 2em 3em;
+    box-shadow:0 0 20px -10px black;
+}
+
+.section-grey {
+    position: relative;
+    width: 100%;
+    background-color: $color-back1;
+    padding-top: 2.5vh;
+    padding-bottom: 0;
+    box-shadow: 0 0 15px 0 black;
+}
+
+#promo-video {
+    max-width: 700px;
+    width: 100%;
+    height: 400px;
+}
+
+.bottom-buttons {
+    margin-top: 3vh;
+}
+.bottom-footer {
+    padding: 2.5vh 0 5vh 0;
+    p {
+        margin-bottom: 0;
+    }
+    a {
+        color: $link-color;
+        text-decoration: none !important;
+        &:hover {
+          color: $link-color-light;
+        }
+    }
+}
+
+.nospace {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.margin-bottom {
+    margin-bottom: 5vh;
+}
+
+.bottom-left-links {
+    @include center-block();
+    text-align: left;
+    a {
+        padding: 0.4em 0.4em 0.4em 0;
+    }
+}
+
+.bottom-right-links {
+    @include center-block();
+    text-align: right;
+}
+
+.bottom-bottom-links {
+    @include center-block();
+    text-align: center;
+    margin-top: 0.5em !important;
+}
+
+// Bigger margin around columns so that in mobile
+// text is not glued to screen border
+.col-md-4 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
