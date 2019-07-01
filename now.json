@@ -1,0 +1,8 @@
+
+{
+  "type": "static",
+  "public": true,
+  "static": {
+    "public": "dist"
+  }
+}
