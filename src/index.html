@@ -64,13 +64,24 @@
       <p class="hero__date"><time datetime="2019-10-11/2019-10-13">October 11<small class="hero__date_sufix">th</small>&ndash;13<small class="hero__date_sufix">th</small></time></p>
     </div>
     <a class="hero__button" href="https://my.hackupc.com/apply" hreflang="en">Apply now</a>
-    <div class="hero__background">
+
+    <div class="hero__background parallax">
+			<div class="gradient"></div>
+			<div class="city">
+				<img class="city__builing city__builing--small" src="/assets/img/hero/SVG/building_agbar.svg"/>
+				<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_regular.svg"/>
+				<img class="city__builing city__builing--big" src="/assets/img/hero/SVG/building_hackupc.svg"/>
+				<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_biene.svg"/>
+				<img class="city__builing city__builing--small" src="/assets/img/hero/SVG/building_arch.svg"/>
+			</div>
     </div>
+		<div class="hero__separator">
+			<img src="/assets/img/hero/SVG/wall.svg"/>
+		</div>
   </header>
 
   <section class="section section--faq">
     <h2 class="section__title"><abbr title="Frequent Asked Questions">FAQ</abbr></h2>
-    <!-- TODO: use abrebiation tag -->
     <div class="section__list section__list--faq">
       <div class="question">
         <h3 class="question__title">What is a hackathon?</h3>
@@ -308,7 +319,11 @@
     </script> -->
 
   <!-- Scripts -->
-  <script src="/assets/js/cookies.min.js" async></script>
+	<script src="/assets/js/cookies.min.js" async></script>
+
+	<!-- Parallax -->
+	<script type="text/javascript" src="lib/smooth-parallax.min.js"></script>
+	<script type="text/javascript">window.addEventListener("load", function () {SmoothParallax.init();});</script>
 
   <!-- Easter Egg -->
 	<i class="easter-egg">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
