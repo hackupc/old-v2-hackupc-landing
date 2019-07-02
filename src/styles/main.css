@@ -18,10 +18,16 @@ abbr{text-decoration: none;}
   --tertiary-dark: #735c99;
   --dark:      #222;
   --gray-dark: #39383A;
-  --text-dark: #111;
-  --light:     #EEE;
   --gray-light:#AAA;
+  --light:     #EEE;
+  --text-dark: #111;
   --text-light:#FFF;
+
+  /* 
+  --dark:      #595959;
+  --gray-dark: #B3B3B3;
+  --gray-light:#F4F4F4;
+  --light:     #FFF; 
 
   --sky-gradient-color-1: #A6BA86;
   --sky-gradient-color-2: #E3C677;
@@ -36,6 +42,7 @@ abbr{text-decoration: none;}
   --sky-gradient-alt-position-1: 95%;
   --sky-gradient-alt-position-2: 70%;
   --sky-gradient-alt-position-3:  5%;
+  */
 
   --ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
