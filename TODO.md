@@ -45,3 +45,4 @@
 - [ ] Make the beta branch that autodeploys to beta.hackupc.com
 - [ ] Parse legal documents to markdown and add a npm script to compile them
 - [ ] Make an example hero-bg with a gradient or canvas
+- [ ] Cookies banner like [this](https://speckyboy.com/)

@@ -30,7 +30,7 @@
 	width: 6em;
 	margin: 0 0.5em;
 }
-.city__builing--small { width: 4em; margin-top: 6em; }
-.city__builing--medium{ width: 5em; margin-top: 2em;}
-.city__builing--big   { width: 7em; }
-.city__builing--short { width: 6em; }
+.city__builing--big   { width: 11em; }
+.city__builing--medium{ width: 7em; margin-top: 2em; }
+.city__builing--small { width: 0em; margin-top: 6em; display: none; transition: none !important;}
+.city__builing--short { width: 0em; }

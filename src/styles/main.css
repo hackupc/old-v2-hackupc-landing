@@ -76,9 +76,10 @@ body{background:var(--light);color:var(--text-dark);}
   .hero{
     font-size: 1em;
   }
-  .city__building--small{
-    display: none;
-  }
+  .city__builing--big   { width: 7em !important; }
+  .city__builing--medium{ width: 5em !important; }
+  .city__builing--small { width: 4em !important; display: block !important; }
+  .city__builing--short { width: 6em !important; display: block !important; }
 }
 .hero__title{
   font-size: 6em;
