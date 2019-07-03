@@ -30,6 +30,7 @@
 - [ ] Remove unused font weights
 - [ ] Add title atribute to the x button in cookies notice
 - [ ] Fix FOUC: add a nice animation
+- [ ] Split the main.css into small .css and join them with includes
 
 ## Documentation
 
