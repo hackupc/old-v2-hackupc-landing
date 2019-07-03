@@ -67,23 +67,24 @@ body{background:var(--light);color:var(--text-dark);}
   text-transform: uppercase;
   white-space: nowrap;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   line-height: 1;
-  /* This margin is for the hardcoded wall */
-  margin-bottom: 8%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 @media(min-width: 33.3333em){
   .hero{
     font-size: 1em;
   }
+  .city{ height: 11em !important; }
   .city__builing--big   { width: 7em !important; }
-  .city__builing--medium{ width: 5em !important; }
+  .city__builing--medium{ width: 5em !important; margin-top: 4em !important;}
   .city__builing--small { width: 4em !important; display: block !important; }
   .city__builing--short { width: 6em !important; display: block !important; }
 }
 .hero__title{
   font-size: 6em;
-  margin: 32px 0 0;
+  margin: 0;
   font-weight: 300;
   white-space: nowrap;
 }
@@ -172,7 +173,7 @@ body{background:var(--light);color:var(--text-dark);}
 }
 .hero__separator{
 	--wall-height: 200px;
-	--wall-offset: -0.6666;
+	--wall-offset: -0.355;
 
   position: absolute;
 	right: 0; left: 0;
@@ -181,7 +182,8 @@ body{background:var(--light);color:var(--text-dark);}
 	width: 100%;
   max-width: 1000px;
   margin: auto;
-	object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
 }
 
 /* Section elements */
@@ -204,6 +206,9 @@ body{background:var(--light);color:var(--text-dark);}
 }
 
 /* FAQ - Questions */
+.section--faq{
+  margin-top: 100px;
+}
 .section__list--faq{
   margin: -8px
 }

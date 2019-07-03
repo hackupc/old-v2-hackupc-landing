@@ -23,8 +23,7 @@
   display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	position: absolute;
-  top: 5%; right: 0; left: 0;
+	height: 17em;
 }
 .city__builing{
 	width: 6em;
@@ -34,3 +33,9 @@
 .city__builing--medium{ width: 7em; margin-top: 2em; }
 .city__builing--small { width: 0em; margin-top: 6em; display: none; transition: none !important;}
 .city__builing--short { width: 0em; }
+
+/* .hero__title{
+	background-image: linear-gradient(to right, #A6BA86, #E3C677);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */

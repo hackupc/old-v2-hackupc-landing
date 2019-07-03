@@ -58,27 +58,29 @@
 		<div class="hero__background">
 			<div class="gradient gradient--sky"></div>
       <img class="landscape" src="/assets/img/hero/SVG/landscape.svg" alt="City landscape"/>
-			<div class="city">
-				<img class="city__builing city__builing--small" src="/assets/img/hero/SVG/building_agbar.svg" alt="Agbar building"/>
-				<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_regular.svg" alt="Regular building"/>
-				<img class="city__builing city__builing--big" src="/assets/img/hero/SVG/building_hackupc.svg" alt="Hackupc building"/>
-				<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_biene.svg" alt="Biene building"/>
-				<img class="city__builing city__builing--small city__builing--short" src="/assets/img/hero/SVG/building_arch.svg" alt="Arch building"/>
-			</div>
 			<div class="gradient gradient--depths"></div>
 		</div>
-    <h1 class="hero__title">Hack<span class="hero__title--bold">U<span class="hero__letter--fall">P</span>C</span></h1>
-    <div class="hero__info">
+		<div class="city lax" data-lax-translate-y="0 0, vh (vh*0.6667)">
+			<img class="city__builing city__builing--small" src="/assets/img/hero/SVG/building_agbar.svg" alt="Agbar building"/>
+			<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_regular.svg" alt="Regular building"/>
+			<img class="city__builing city__builing--big" src="/assets/img/hero/SVG/building_hackupc.svg" alt="Hackupc building"/>
+			<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_biene.svg" alt="Biene building"/>
+			<img class="city__builing city__builing--small city__builing--short" src="/assets/img/hero/SVG/building_arch.svg" alt="Arch building"/>
+		</div>
+		<h1 class="hero__title lax" data-lax-translate-y="0 0, vh (vh*0.5)">Hack<span class="hero__title--bold">U<span class="hero__letter--fall">P</span>C</span></h1>
+		<div class="hero__info lax" data-lax-translate-y="0 0, vh (vh*0.5)">
       <p class="hero__more-info">
         <span class="hero__hackers">700 Hackers</span>
         <span class="hero__hours">36 Hours</span>
       </p>
       <p class="hero__date"><time datetime="2019-10-11/2019-10-13">October 11<small class="hero__date_sufix">th</small>&ndash;13<small class="hero__date_sufix">th</small></time></p>
-    </div>
-    <a class="hero__button" href="https://my.hackupc.com/apply" hreflang="en">Apply now</a>
+		</div>
+		<div class="lax" data-lax-translate-y="0 0, vh (vh*0.5)">
+			<a class="hero__button" href="https://my.hackupc.com/apply" hreflang="en">Apply now</a>
+		</div>
 
-    <img class="hero__separator" src="/assets/img/hero/SVG/wall.svg"/>
 	</header>
+	<img class="hero__separator" src="/assets/img/hero/SVG/wall.svg"/>
 
   <section class="section section--faq">
     <h2 class="section__title"><abbr title="Frequent Asked Questions">FAQ</abbr></h2>
@@ -322,9 +324,19 @@
 	<script src="/assets/js/cookies.min.js" async></script>
 
 	<!-- Parallax -->
-	<script type="text/javascript" src="lib/smooth-parallax.min.js"></script>
-	<script type="text/javascript">window.addEventListener("load", function () {SmoothParallax.init();});</script>
+	<script type="text/javascript" src="lib/lax.min.js"></script>
+	<!-- <script type="text/javascript" src="lib/smooth-parallax.min.js"></script> -->
+	<!-- <script type="text/javascript">window.addEventListener("load", function () {SmoothParallax.init();});</script> -->
+	<script>window.onload = function() {
+		lax.setup() // init
 
+		const updateLax = () => {
+			lax.update(window.scrollY)
+			window.requestAnimationFrame(updateLax)
+		}
+
+		window.requestAnimationFrame(updateLax)
+	}</script>
   <!-- Easter Egg -->
 	<i class="easter-egg">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
 </body>
