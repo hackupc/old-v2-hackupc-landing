@@ -178,6 +178,8 @@ body{background:var(--light);color:var(--text-dark);}
 	bottom: calc(var(--wall-offset) * var(--wall-height)); 
 	height: var(--wall-height);
 	width: 100%;
+  max-width: 1000px;
+  margin: auto;
 	object-fit: cover;
 }
 
