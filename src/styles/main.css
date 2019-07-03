@@ -110,14 +110,14 @@ body{background:var(--light);color:var(--text-dark);}
 }
 .hero__letter--fall{
 	display: inline-block;
-	animation: letter-fall 3s 3s cubic-bezier(1,0,.9,1.25), letter-fall 3s steps(1);
+	animation: letter-fall 3s 1s cubic-bezier(1,0,.9,1.25), letter-fall 1s steps(1);
 	transform-origin: 37% 87%;
-	transform: translateX(-10%) rotate(20deg);
+	transform: translateX(-5%) rotate(15deg);
 	backface-visibility: hidden;
 }
 @keyframes letter-fall {
-	0% {transform: translateX(-10%) rotate(0);}
-	100% {transform: translateX(-10%) rotate(20deg);}
+	0% {transform: translateX(-5%) rotate(0);}
+	100% {transform: translateX(-5%) rotate(15deg);}
 }
 .hero__date{
   font-size: 2em;
