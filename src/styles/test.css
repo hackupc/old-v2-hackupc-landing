@@ -46,6 +46,19 @@
   .city__builing--short { width: 6em !important; display: block !important; }
 }
 
+.section__list--participate{
+	justify-content: space-around;
+}
+.button--sponsor, .button--volunteer, .button--mentor{
+	background: var(--tertiary);
+	flex-basis: 9em;
+}
+.button--sponsor::before, .button--volunteer::before, .button--mentor::before{
+	background: var(--tertiary-dark);
+}
+.button--sponsor::after, .button--volunteer::after, .button--mentor::after{
+	background: var(--tertiary);
+}
 /* .hero__title{
 	background-image: linear-gradient(to right, #A6BA86, #E3C677);
 	background-clip: text;
