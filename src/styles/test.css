@@ -19,22 +19,6 @@
 	#0000 40%,
 	#000 80%);
 }
-.hero__separator{
-  position: absolute;
-  /* TODO: cut image, instead of using hardcoded values*/
-  right: 0; bottom: -8vw; left: 0;
-	margin-left: -4%;
-	height: 23vw;
-	overflow: visible;
-}
-/* This wired structure is because overflow: visible scroll; does not work */
-.hero__separator--no-overflow{
-	overflow: hidden;
-	width: 100%;
-}
-.hero__separator-img{
-	width: 112%;
-}
 .city{
   display: flex;
 	justify-content: center;
