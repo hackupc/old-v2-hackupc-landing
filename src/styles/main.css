@@ -112,7 +112,7 @@ body{background:var(--light);color:var(--text-dark);}
 .hero__info{
   margin: 0.5em 0 1.5em;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1.3em;
 }
 .hero__more-info{
   display: flex;
@@ -120,7 +120,7 @@ body{background:var(--light);color:var(--text-dark);}
   font-weight: 700;
 }
 .hero__button{
-  font-size: 1em;
+  font-size: 1.2em;
   border: none;
   background: var(--primary);
   color: var(--text-light);
