@@ -97,7 +97,7 @@ body{background:var(--light);color:var(--text-dark);}
 }
 @media(min-width: 33.3333em){
   .hero{ font-size: 1em; }
-  .button--hero{ font-size: 1.2em; }
+  .button--hero{ font-size: 1.2em !important; }
 }
 .hero__title{
   font-size: 6em;
@@ -218,9 +218,13 @@ body{background:var(--light);color:var(--text-dark);}
 .section__list--sponsors, .section__list--partners{
   align-items: center;
 }
+.sponsor:hover, .partner:hover{
+  transform: scale(1.25);
+}
 .sponsor, .partner{
   flex: 1;
   margin: 12.5px;
+  transition: transform .1s ease-out;
 }
 .sponsor__img, .partner__img{
   max-width: 100px;
