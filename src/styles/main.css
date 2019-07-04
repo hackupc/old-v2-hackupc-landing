@@ -79,6 +79,7 @@ body{background:var(--light);color:var(--text-dark);}
 .button:hover::before{ transform: translateY(0.5em); }
 .button:active{ transform: translateY(0.625em); }
 .button:active::before{ transform: translateY(0em); }
+.section--dark{background: var(--dark); color: var(--text-light);}
 
 /* Hero */
 .hero{
