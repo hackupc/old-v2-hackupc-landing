@@ -196,14 +196,14 @@ body{background:var(--light);color:var(--text-dark);}
 }
 .hero__separator__img{
 	--wall-height: 200px;
-	--wall-offset: -0.69;
+	--wall-offset: -0.46666;
 
   position: absolute;
 	right: 0; left: 0;
 	bottom: calc(var(--wall-offset) * var(--wall-height)); 
 	height: var(--wall-height);
 	width: 100%;
-  max-width: 1000px;
+  max-width: 2130px;
   margin: auto;
   object-fit: cover;
   z-index: 1;
