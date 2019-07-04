@@ -4,24 +4,21 @@
  * You should see it empty in production.
  */
 
-.gradient{
+.hero__layer{
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 }
-.gradient--sky{
+.hero__layer--sky{
 	background: linear-gradient(to bottom, 
 	#A6BA86 2.5%,
 	#E3C677 20%,
 	#000000 100%);
 }
-.gradient--depths{
+.hero__layer--depths{
 	background: linear-gradient(to bottom, 
 	#0000 40%,
 	#000 80%);
-}
-.fog{
-	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
 }
 /* .hero__title{
 	background-image: linear-gradient(to right, #A6BA86, #E3C677);
