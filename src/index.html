@@ -55,11 +55,12 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="hero">
-		<div class="hero__background">
-			<div class="gradient gradient--sky lax" data-lax-translate-y="0 0, vh (vh*0.9)"></div>
-      <img class="landscape lax" data-lax-translate-y="0 0, vh (vh*0.8)" src="/assets/img/hero/SVG/landscape.svg" alt="City landscape"/>
-			<div class="gradient gradient--depths"></div>
+		<div class="hero__background lax" data-lax-translate-y="0 0, vh (vh*0.9)">
+			<div class="gradient gradient--sky"></div>
+      <img class="landscape" src="/assets/img/hero/SVG/landscape.svg" alt="City landscape"/>
+			<div id="particles-js" class="fog"></div>
 		</div>
+		<div class="gradient gradient--depths"></div>
 		<div class="city lax" data-lax-translate-y="0 0, vh (vh*0.7)">
 			<img class="city__builing city__builing--small" src="/assets/img/hero/SVG/building_agbar.svg" alt="Agbar building"/>
 			<img class="city__builing city__builing--medium" src="/assets/img/hero/SVG/building_regular.svg" alt="Regular building"/>
@@ -184,25 +185,6 @@
 		</div>
 	</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section class="section">
     <h2 class="section__title">Sponsors</h2>
     <div class="section__list section__list--sponsors">
@@ -232,7 +214,6 @@
 			<a class="sponsor sponsor--mega" href="https://website.com/" target="_blank">
         <img class="sponsor__img" alt="Skyscanner logo" src="/assets/img/logos/skyscanner.png">
 			</a>
-
 
 
 			<!-- Not accepted -->
@@ -314,40 +295,6 @@
     </div>
 	</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <footer class="section section--footer">
     <ul class="section__list section__list--contact">
       <li class="contact"><a class="contact__link" target="_blank" href="mailto:contact@hackupc.com">
@@ -400,6 +347,10 @@
 
   <!-- Scripts -->
 	<script src="/assets/js/cookies.min.js" async></script>
+
+	<!-- Particles -->
+	<script src="lib/particles.js"></script>
+	<script>particlesJS.load('particles-js', 'data/particlesjs-config.json');</script>
 
 	<!-- Parallax -->
 	<script type="text/javascript" src="lib/lax.min.js"></script>
