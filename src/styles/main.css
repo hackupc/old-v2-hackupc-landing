@@ -190,6 +190,7 @@ body{background:var(--light);color:var(--text-dark);}
   overflow: visible;
   position: relative;
   user-select: none;
+  pointer-events: none;
 }
 .hero__separator__img{
 	--wall-height: 200px;
