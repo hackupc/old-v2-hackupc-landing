@@ -49,3 +49,4 @@
 - [ ] Parse legal documents to markdown and add a npm script to compile them
 - [ ] Make an example hero-bg with a gradient or canvas
 - [ ] Cookies banner like [this](https://speckyboy.com/)
+- [ ] Generate favicon with cli-real-favicon in npm
