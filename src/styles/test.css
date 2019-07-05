@@ -18,7 +18,13 @@
 	background: linear-gradient(to bottom, 
 	#0000 40%,
 	#000 80%);
-	z-index: -1;
+}
+.hero__layer--depths-small{
+	top: 80%;
+	background: linear-gradient(to bottom, 
+	#0000 0%,
+	#000 100%);
+	z-index: 1;
 }
 /* .hero__title{
 	background-image: linear-gradient(to right, #A6BA86, #E3C677);
