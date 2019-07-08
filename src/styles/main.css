@@ -53,15 +53,15 @@ abbr{text-decoration: none;}
 a{color: var(--secondary-dark);}
 body{background:var(--light);color:var(--text-dark);}
 ::selection{background: var(--primary);color: var(--text-dark);}
+abbr{text-decoration: none !important;}
 
 /* General */
 .button{
   border: none;
   background: var(--primary);
   color: var(--text-light);
-  padding: 0.625em 1.5em 0.625em 1.75em;
+  padding: 0.625em 1.25em 0.625em;
   cursor: pointer;
-  letter-spacing: 0.25em;
   font-weight: bold;
   position: relative;
   text-decoration: none;
@@ -85,7 +85,7 @@ body{background:var(--light);color:var(--text-dark);}
   content: '';
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  background: var(--primary);
+  background: inherit;
   z-index: -1;
 }
 .button:hover{ transform: translateY(0.125em); }
@@ -146,12 +146,13 @@ body{background:var(--light);color:var(--text-dark);}
   font-weight: 700;
   margin-top: 0.1em;
 }
+/* we don't have the th now
 .hero__date_sufix{
   font-size: 0.5em;
   font-weight: 900;
-}
+} */
 .hero__info{
-  margin: 0.5em 0 1.5em;
+  margin: 0.5em 0 1em;
   font-weight: 500;
   font-size: 1.3em;
 }
@@ -194,7 +195,7 @@ body{background:var(--light);color:var(--text-dark);}
 
 /* When screen is big */
 @media(min-width: 46em){
-  .city{ height: 11em !important; font-size: 1.5em !important; }
+  .city{ height: 11em !important; font-size: 1.25em !important; }
   .city__builing--big   { width: 7em !important; }
   .city__builing--medium{ width: 5em !important; margin-top: 4em !important;}
   .city__builing--small { width: 4em !important; display: block !important; }
@@ -234,6 +235,9 @@ body{background:var(--light);color:var(--text-dark);}
   max-width: 1000px;
   margin: 0 auto;
 }
+.section__title{
+  color: var(--tertiary-dark);
+}
 .section__list{
   display: flex;
   flex-wrap: wrap;
@@ -248,7 +252,7 @@ body{background:var(--light);color:var(--text-dark);}
 
 /* FAQ - Questions */
 .section--faq{
-  margin-top: 48px;
+  margin-top: 64px;
 }
 .section__list--faq{
   margin: -8px
@@ -260,6 +264,10 @@ body{background:var(--light);color:var(--text-dark);}
 .question__title{
   font-weight: bold;
   font-size: 1.1em;
+  color: var(--tertiary-dark);
+}
+.question__answer{
+  text-align: left;
 }
 
 /* More applications */
@@ -272,9 +280,6 @@ body{background:var(--light);color:var(--text-dark);}
 }
 .button--sponsor::before, .button--volunteer::before, .button--mentor::before{
 	background: var(--tertiary-dark);
-}
-.button--sponsor::after, .button--volunteer::after, .button--mentor::after{
-	background: var(--tertiary);
 }
 
 /* Sponsors */
@@ -331,7 +336,7 @@ body{background:var(--light);color:var(--text-dark);}
   display: none;
 }
 .signature{
-  padding: 0 0 8px 0;
+  scroll-padding-bottom: 16px;
 }
 .signature__link{
   color: inherit;
