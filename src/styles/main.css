@@ -121,6 +121,12 @@ body{background:var(--light);color:var(--text-dark);}
   white-space: nowrap;
   mix-blend-mode: screen;
 }
+.hero__title--dust{
+	background: white url(/assets/img/hero/2x/dust@2x-20.jpg) center/512px;
+	background-clip: text;
+	color: transparent;
+	mix-blend-mode: screen;
+}
 .hero__title--bold{
   font-weight: 800;
 }
