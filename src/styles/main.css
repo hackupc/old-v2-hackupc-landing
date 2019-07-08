@@ -119,6 +119,7 @@ body{background:var(--light);color:var(--text-dark);}
   margin: 0;
   font-weight: 300;
   white-space: nowrap;
+  mix-blend-mode: screen;
 }
 .hero__title--bold{
   font-weight: 800;

@@ -27,8 +27,9 @@
 	#000 100%);
 	z-index: 1;
 }
-/* .hero__title{
-	background-image: linear-gradient(to right, #A6BA86, #E3C677);
+.hero__title--dust{
+	background: white url(/assets/img/hero/2x/dust@2x-20.jpg) center/512px;
 	background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */
+	color: transparent;
+	mix-blend-mode: screen;
+}
