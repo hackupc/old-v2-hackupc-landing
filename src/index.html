@@ -71,13 +71,44 @@
 			<div id="particles-js" class="hero__layer hero__layer--fog"></div>
 		</div>
 		<div class="hero__layer hero__layer--depths"></div>
-		<div class="city lax" data-lax-translate-y="0 0, vh (vh*0.7)">
+		<picture class="buildings lax" data-lax-translate-y="0 0, vh (vh*0.7)">
+			<source
+				media="(max-width: 42em)"
+				type="image/png"
+				srcset="/assets/img/hero/1x/buildings-mobile.png 1x,
+								/assets/img/hero/1.5x/buildings-mobile@1.5x.png 1.5x,
+								/assets/img/hero/2x/buildings-mobile@2x.png 2x,
+								/assets/img/hero/3x/buildings-mobile@3x.png 3x,
+								/assets/img/hero/4x/buildings-mobile@4x.png 4x">
+			<source media="(max-width: 42em)" srcset="/assets/img/hero/SVG/buildings-mobile.svg" type="image/svg+xml">
+
+			<source
+				media="(min-width: 42em)"
+				type="image/png"
+				srcset="/assets/img/hero/1x/buildings.png 1x,
+								/assets/img/hero/1.5x/buildings@1.5x.png 1.5x,
+								/assets/img/hero/2x/buildings@2x.png 2x,
+								/assets/img/hero/3x/buildings@3x.png 3x,
+								/assets/img/hero/4x/buildings@4x.png 4x">
+			<source media="(min-width: 42em)" srcset="/assets/img/hero/SVG/buildings.svg" type="image/svg+xml">
+
+			<img
+				class="buildings__img"
+				src="/assets/img/hero/1x/buildings.png"
+				srcset="/assets/img/hero/1.5x/buildings@1.5x.png 1.5x,
+								/assets/img/hero/2x/buildings@2x.png 2x,
+								/assets/img/hero/3x/buildings@3x.png 3x,
+								/assets/img/hero/4x/buildings@4x.png 4x"
+				alt="Destroyed Barcelona buildings">
+		</picture>
+		<!-- Old city -->
+		<!-- <div class="city lax" data-lax-translate-y="0 0, vh (vh*0.7)">
 			<img class="city__builing city__builing--small" src="/assets/img/hero/2x/building_agbar@2x.png" alt="Agbar building"/>
 			<img class="city__builing city__builing--medium" src="/assets/img/hero/2x/building_regular@2x.png" alt="Regular building"/>
 			<img class="city__builing city__builing--big" src="/assets/img/hero/2x/building_hackupc@2x.png" alt="Hackupc building"/>
 			<img class="city__builing city__builing--medium" src="/assets/img/hero/2x/building_biene@2x.png" alt="Biene building"/>
 			<img class="city__builing city__builing--small city__builing--short" src="/assets/img/hero/2x/building_arch@2x.png" alt="Arch building"/>
-		</div>
+		</div> -->
 		<h1 class="hero__title hero__title--dust lax" data-lax-translate-y="0 0, vh (vh*0.6)">Hack<span class="hero__title--bold">U<span class="hero__letter--fall hero__title--dust">P</span>C</span></h1>
 		<div class="hero__info lax" data-lax-translate-y="0 0, vh (vh*0.6)">
       <p class="hero__more-info">

@@ -173,7 +173,10 @@ abbr{text-decoration: none !important;}
 	height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: top;
 }
+/* Old buildings styles */
+/*
 .city{
   display: flex;
 	justify-content: center;
@@ -187,20 +190,21 @@ abbr{text-decoration: none !important;}
 	margin: 0 0.25em;
 }
 
-/* When screen is small */
+When screen is small
 .city__builing--big   { width: 11em; }
 .city__builing--medium{ width: 7em; margin-top: 2em; }
 .city__builing--small { width: 0em; margin-top: 6em; display: none; transition: none !important;}
 .city__builing--short { width: 0em; }
 
-/* When screen is big */
-@media(min-width: 46em){
-  .city{ height: 11em !important; font-size: 1.25em !important; }
+When screen is big
+@media(min-width: 46rem){
+  .city{ height: 9em !important; font-size: 1.25em !important; }
   .city__builing--big   { width: 7em !important; }
   .city__builing--medium{ width: 5em !important; margin-top: 4em !important;}
   .city__builing--small { width: 4em !important; display: block !important; }
-  .city__builing--short { width: 6em !important; display: block !important; }
+  .city__builing--short { width: 6em !important; display: block !important; } 
 }
+*/
 .hero__layer--fog{
 	bottom: 20%;
 }
