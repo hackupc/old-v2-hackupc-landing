@@ -27,15 +27,3 @@
 	#000 100%);
 	z-index: 1;
 }
-.buildings{
-	height: 17em;
-	width: 56em;
-  font-size: 1em;
-	user-select: none;
-}
-@media(min-width: 42em){
-	.buildings{ height: 12em !important; font-size: 1.25em !important; }
-}
-.buildings__img{
-	width: 100%;
-}

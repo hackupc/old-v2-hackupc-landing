@@ -146,11 +146,6 @@ abbr{text-decoration: none !important;}
   font-weight: 700;
   margin-top: 0.1em;
 }
-/* we don't have the th now
-.hero__date_sufix{
-  font-size: 0.5em;
-  font-weight: 900;
-} */
 .hero__info{
   margin: 0.5em 0 1em;
   font-weight: 500;
@@ -175,38 +170,63 @@ abbr{text-decoration: none !important;}
   object-fit: cover;
   object-position: top;
 }
-/* Old buildings styles */
-/*
-.city{
-  display: flex;
-	justify-content: center;
-	align-items: flex-start;
+
+/* Hero buildings */
+.buildings{
 	height: 17em;
+	width: 56em;
   font-size: 1em;
-  user-select: none;
+	user-select: none;
 }
-.city__builing{
-	width: 6em;
-	margin: 0 0.25em;
+@media(min-width: 42em){
+	.buildings{ height: 12em !important; font-size: 1.25em !important; }
 }
-
-When screen is small
-.city__builing--big   { width: 11em; }
-.city__builing--medium{ width: 7em; margin-top: 2em; }
-.city__builing--small { width: 0em; margin-top: 6em; display: none; transition: none !important;}
-.city__builing--short { width: 0em; }
-
-When screen is big
-@media(min-width: 46rem){
-  .city{ height: 9em !important; font-size: 1.25em !important; }
-  .city__builing--big   { width: 7em !important; }
-  .city__builing--medium{ width: 5em !important; margin-top: 4em !important;}
-  .city__builing--small { width: 4em !important; display: block !important; }
-  .city__builing--short { width: 6em !important; display: block !important; } 
+.buildings__img{
+	width: 100%;
 }
-*/
 .hero__layer--fog{
 	bottom: 20%;
+}
+
+/* Wall plants */
+.plant{
+	--plant-height: 0;
+	--plant-aspect-ratio: 1;
+	--plant-offset: 0;
+
+	height: var(--plant-height);
+	width: calc(var(--plant-height) / var(--plant-aspect-ratio));
+	
+	z-index: 2;
+	position: absolute;
+	object-fit: cover;
+}
+.plant--bottom{ bottom: calc(var(--plant-offset) * var(--plant-height)); }
+.plant--top{ top: calc(var(--plant-offset) * var(--plant-height)); }
+.plant--right{ right: 0; object-position: left; }
+.plant--left{ left: 0; object-position: right; }
+/* Right & Bottom */
+.plant--1{
+	--plant-height: 40vw;
+	--plant-aspect-ratio: 1.7;
+	--plant-offset: -0.4;
+}
+/* Left & Top */
+.plant--2{
+	--plant-height: 33.3333vw;
+  --plant-aspect-ratio: 0.515;
+  --plant-offset: -0.33333;
+}
+/* Left & Bottom */
+.plant--3{
+  --plant-height: 45vw;
+  --plant-aspect-ratio: 2.2;
+  --plant-offset: -0.54;
+}
+@media(min-width: 800px){
+	.plant--1{ --plant-height: 320px; /* 320px = 800px * 40vw/100vw */ }
+	.plant--2{ --plant-height: 266.67px; /* 266.67px = 800px * 33.333vw/100vw */ }
+	.plant--3{ --plant-height: 360px; /* 360px = 800px * 45vw/100vw */ }
 }
 
 .hero__separator{
