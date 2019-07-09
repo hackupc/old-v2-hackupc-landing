@@ -32,7 +32,7 @@
 - [ ] Fix FOUC: add a nice animation
 - [ ] Split the main.css into small .css and join them with includes
 - [ ] Minify particles.js
-- [ ] Make landscape shorter
+- [ ] Crop title text filter image to reduce size
 
 ## Documentation
 
