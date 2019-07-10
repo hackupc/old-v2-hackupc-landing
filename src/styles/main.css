@@ -384,6 +384,7 @@ only screen and (                min-resolution: 2dppx) {
 /* FAQ - Questions */
 .section--faq{
   margin-top: 64px;
+  position: relative;
 }
 .section__list--faq{
   margin: -8px
