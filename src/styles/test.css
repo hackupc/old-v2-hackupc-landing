@@ -7,33 +7,33 @@
 .no-overflow{
 	overflow: hidden;
 }
-.grafittis{
+.graffitis{
   position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	z-index: -1;
 }
-.grafitti{
+.graffiti{
 	--size: 10vw;
 	position: absolute;
 	width: var(--size);
 	min-width: 96px;
 }
-.grafitti--warning{
+.graffiti--warning{
 	--size: 7vw;
 	top: -4%;
 	right: 0;
 }
-.grafitti--hackupc{
+.graffiti--hackupc{
 	--size: 20vw;
 	top: 35%;
   left: calc(100% + 10px);
 }
-.grafitti--system{
+.graffiti--system{
 	--size: 20vw;
 	top: 20%;
 	right: calc(100% + 10px);
 }
-.grafitti--fallout{
+.graffiti--fallout{
 	--size: 16vw;
 	bottom: 20%;
   right: calc(100% + 20px);
