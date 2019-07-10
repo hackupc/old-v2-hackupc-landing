@@ -13,7 +13,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500,600,700,800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,700,800&display=block">
   <link rel="stylesheet" href="assets/css/main.min.css" data-finger-print>
   <link rel="stylesheet" href="assets/css/cookies.min.css" data-finger-print>
   <link rel="stylesheet" href="assets/css/test.min.css" data-finger-print>
@@ -95,7 +95,8 @@
 								/assets/img/hero/2x/buildings%402x.png 2x,
 								/assets/img/hero/3x/buildings%403x.png 3x,
 								/assets/img/hero/4x/buildings%404x.png 4x"
-				alt="Destroyed Barcelona buildings">
+				alt="Destroyed Barcelona buildings"
+				onload="this.parentElement.classList.add('buildings--animation'); this.classList.add('buildings__img--animation')">
 		</picture>
 		<h1 class="hero__title hero__title--dust lax" data-lax-translate-y="0 0, vh (vh*0.6)">Hack<span class="hero__title--bold">U<span class="hero__letter--fall hero__title--dust">P</span>C</span></h1>
 		<div class="hero__info lax" data-lax-translate-y="0 0, vh (vh*0.6)">
