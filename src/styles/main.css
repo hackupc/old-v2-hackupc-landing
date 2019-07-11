@@ -262,27 +262,27 @@ only screen and (                min-resolution: 2dppx) {
 .plant--right{ right: 0; object-position: left; }
 .plant--left{ left: 0; object-position: right; }
 /* Right & Bottom */
-.plant--1{
+.plant-wall-right{
 	--plant-height: 40vw;
 	--plant-aspect-ratio: 1.7;
 	--plant-offset: -0.4;
 }
 /* Left & Top */
-.plant--2{
+.plant-sky{
 	--plant-height: 33.3333vw;
   --plant-aspect-ratio: 0.515;
   --plant-offset: -0.33333;
 }
 /* Left & Bottom */
-.plant--3{
+.plant-wall-left{
   --plant-height: 45vw;
   --plant-aspect-ratio: 2.2;
   --plant-offset: -0.54;
 }
 @media(min-width: 800px){
-	.plant--1{ --plant-height: 320px; /* 320px = 800px * 40vw/100vw */ }
-	.plant--2{ --plant-height: 266.67px; /* 266.67px = 800px * 33.333vw/100vw */ }
-	.plant--3{ --plant-height: 360px; /* 360px = 800px * 45vw/100vw */ }
+	.plant-wall-right{ --plant-height: 320px; /* 320px = 800px * 40vw/100vw */ }
+	.plant-sky{ --plant-height: 266.67px; /* 266.67px = 800px * 33.333vw/100vw */ }
+	.plant-wall-left{ --plant-height: 360px; /* 360px = 800px * 45vw/100vw */ }
 }
 
 .hero__separator{
@@ -315,21 +315,21 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Plant animations */
-.plant--1{ animation: plant1 8s 2s ease-out, plant1 2s steps(1); transform-origin: right bottom; }
-.plant--2{ animation: plant2 10.4s 2.4s ease-out, plant2 2.4s steps(1); transform-origin: left top; }
-.plant--3{ animation: plant3 9s 2.15s ease-out, plant3 2.15s steps(1); transform-origin: left bottom; 
+.plant-wall-right{ animation: plant_wall_right 8s 2s ease-out, plant_wall_right 2s steps(1); transform-origin: right bottom; }
+.plant-sky{ animation: plant_sky 10.4s 2.4s ease-out, plant_sky 2.4s steps(1); transform-origin: left top; }
+.plant-wall-left{ animation: plant_wall_left 9s 2.15s ease-out, plant_wall_left 2.15s steps(1); transform-origin: left bottom; 
 	transform: translate(-19%) rotate(14deg);
 }
 
-@keyframes plant1 {
+@keyframes plant_wall_right {
 	0% {transform: translate(166%,10%) rotate(-40deg);}
 	100% {transform: translate(0) rotate(0);}
 }
-@keyframes plant2 {
+@keyframes plant_sky {
 	0% {transform: translate(-88%,12%) rotate(25deg);}
 	100% {transform: translate(0) rotate(0);}
 }
-@keyframes plant3 {
+@keyframes plant_wall_left {
 	0% {transform: translate(-207%,8%) rotate(80deg);}
 	100% {transform: translate(-19%) rotate(14deg);}
 }
