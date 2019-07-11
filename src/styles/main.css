@@ -56,6 +56,10 @@ abbr{text-decoration: none !important;}
 strong{font-weight: 500;}
 
 /* General */
+.body{
+	background: #E7E7E7 url(/assets/img/hero/1x/wall_texture.png) center;
+	color: var(--text-dark);
+}
 .button{
   border: none;
   background: var(--primary);
@@ -250,7 +254,8 @@ only screen and (                min-resolution: 2dppx) {
 	
 	z-index: 2;
 	position: absolute;
-	object-fit: cover;
+  object-fit: cover;
+  color: var(--text-light);
 }
 .plant--bottom{ bottom: calc(var(--plant-offset) * var(--plant-height)); }
 .plant--top{ top: calc(var(--plant-offset) * var(--plant-height)); }
