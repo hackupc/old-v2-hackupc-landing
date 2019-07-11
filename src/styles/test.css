@@ -4,38 +4,8 @@
  * You should see it empty in production.
  */
 
-.no-overflow{
-	overflow: hidden;
+.body{
+	background: #E7E7E7 url(/assets/img/hero/1x/wall_texture.png) center;
+	color: var(--text-dark);
 }
-.graffitis{
-  position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	z-index: -1;
-}
-.graffiti{
-	--size: 10vw;
-	position: absolute;
-	width: var(--size);
-	min-width: 96px;
-}
-.graffiti--warning{
-	--size: 7vw;
-	top: -4%;
-	right: 0;
-}
-.graffiti--hackupc{
-	--size: 20vw;
-	top: 35%;
-  left: calc(100% + 10px);
-}
-.graffiti--system{
-	--size: 20vw;
-	top: 20%;
-	right: calc(100% + 10px);
-}
-.graffiti--fallout{
-	--size: 16vw;
-	bottom: 20%;
-  right: calc(100% + 20px);
-}
-strong{font-weight: 500;}
+ 

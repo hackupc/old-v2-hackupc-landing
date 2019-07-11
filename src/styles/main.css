@@ -51,9 +51,9 @@ abbr{text-decoration: none;}
 /* Custom element style */
 *{font-family: var(--font-family) !important;}
 a{color: var(--secondary-dark);}
-body{background:var(--light);color:var(--text-dark);}
 ::selection{background: var(--primary);color: var(--text-dark);}
 abbr{text-decoration: none !important;}
+strong{font-weight: 500;}
 
 /* General */
 .button{
@@ -359,6 +359,42 @@ only screen and (                min-resolution: 2dppx) {
 	100% {transform: translateX(-0.25px);}
 }
 
+/* Grafittis */
+.no-overflow{
+	overflow: hidden;
+}
+.graffitis{
+  position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+}
+.graffiti{
+	--size: 10vw;
+	position: absolute;
+	width: var(--size);
+	min-width: 96px;
+}
+.graffiti--warning{
+	--size: 7vw;
+	top: -4%;
+	right: 0;
+}
+.graffiti--hackupc{
+	--size: 20vw;
+	top: 35%;
+  left: calc(100% + 10px);
+}
+.graffiti--system{
+	--size: 20vw;
+	top: 20%;
+	right: calc(100% + 10px);
+}
+.graffiti--fallout{
+	--size: 16vw;
+	bottom: 20%;
+  right: calc(100% + 20px);
+}
+
 /* Section elements */
 .section{
   padding: 16px;
@@ -442,8 +478,6 @@ only screen and (                min-resolution: 2dppx) {
 
 /* Footer section */
 .section--footer{
-  background: var(--light);
-  color: var(--text-dark);
   max-width: none;
   padding-bottom: 0;
 }
