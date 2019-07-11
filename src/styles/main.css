@@ -397,9 +397,11 @@ only screen and (                min-resolution: 2dppx) {
   font-weight: bold;
   font-size: 1.1em;
   color: var(--tertiary-dark);
+  margin: 1em 0 0.5em;
 }
 .question__answer{
   text-align: left;
+  line-height: 1.23;
 }
 
 /* More applications */
@@ -498,8 +500,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Easter egg */
-.easter-egg{
-  display: none;
-}
+.easter-egg{display: none;}
+.secret-link{color: inherit; text-decoration: inherit;}
 /* TODO: add a rainbow glow */
 /* .rainbow-glow{} */
