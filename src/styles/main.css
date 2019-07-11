@@ -450,11 +450,11 @@ only screen and (                min-resolution: 2dppx) {
 	justify-content: space-around;
 }
 .button--sponsor, .button--volunteer, .button--mentor{
-	background: var(--tertiary);
+	background: var(--primary);
 	flex-basis: 9em;
 }
 .button--sponsor::before, .button--volunteer::before, .button--mentor::before{
-	background: var(--tertiary-dark);
+	background: var(--primary-dark);
 }
 
 /* Sponsors */
