@@ -456,6 +456,11 @@ only screen and (                min-resolution: 2dppx) {
 .button--sponsor::before, .button--volunteer::before, .button--mentor::before{
 	background: var(--primary-dark);
 }
+.button--disabled{
+  filter: saturate(0.15);
+  cursor: not-allowed;
+  /* pointer-events: none; */
+}
 
 /* Sponsors */
 .section__list--sponsors, .section__list--partners{
