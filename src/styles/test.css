@@ -4,3 +4,40 @@
  * You should see it empty in production.
  */
 
+.plant{
+	--plant-offset-x: 0;
+	--plant-offset-y: 0;
+	
+	z-index: 2;
+	position: absolute;
+  color: var(--text-light);
+}
+.plant--bottom{ bottom: var(--plant-offset-y); }
+.plant--top{    top:    var(--plant-offset-y); }
+.plant--right{  right:  var(--plant-offset-x); }
+.plant--left{   left:   var(--plant-offset-x); }
+
+.plant-sky{
+	--plant-offset-x: -70px;
+	--plant-offset-y: -20px;
+	height: 33.3333vw;
+	transform-origin: left top;
+}
+.plant-wall-right{
+	--plant-offset-x: -30px;
+	--plant-offset-y: -120px;
+	height: 40vw;
+	transform-origin: right bottom;
+}
+.plant-wall-left{
+	--plant-offset-x: -65px;
+	--plant-offset-y: -120px;
+  height: 45vw;
+	transform-origin: right bottom;
+	transform: translate(-19%) rotate(14deg);
+}
+@media(min-width: 800px){
+	.plant-wall-right{ height: 320px; }
+	.plant-sky{        height: 266.67px; }
+	.plant-wall-left{  height: 360px; }
+}

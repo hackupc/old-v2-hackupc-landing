@@ -67,8 +67,8 @@
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<header class="hero">
-		<div class="hero__layer lax" data-lax-translate-y="0 0, vh (vh*0.9)">
+	<header class="hero no-overflow">
+		<div class="hero__layer no-overflow lax" data-lax-translate-y="0 0, vh (vh*0.9)">
 			<div class="hero__layer hero__layer--sky"></div>
 			<img class="landscape" src="/assets/img/hero/SVG/landscape.svg" alt="City landscape" />
 			<div id="particles-js" class="hero__layer hero__layer--fog"></div>
@@ -103,11 +103,13 @@
 		<div class="lax" data-lax-translate-y="0 0, vh (vh*0.6)">
 			<a class="button button--hero" href="https://my.hackupc.com/" hreflang="en">Apply now</a>
 		</div>
-		<div class="hero__layer">
+		<div class="hero__layer no-overflow">
 			<img class="plant plant--top plant--left plant-sky" src="/assets/img/hero/1x/plant_sky.png" srcset="/assets/img/hero/1.5x/plant_sky%401.5x.png 1.5x,
 								/assets/img/hero/2x/plant_sky%402x.png 2x,
 								/assets/img/hero/3x/plant_sky%403x.png 3x,
-								/assets/img/hero/4x/plant_sky%404x.png 4x" alt="Plant">
+								/assets/img/hero/4x/plant_sky%404x.png 4x" alt="Plant"
+								style="display: none;"
+								onload="this.style.display = 'block'; this.classList.add('plant-sky--animation');">
 		</div>
 		<div class="hero__layer hero__layer--depths-small"></div>
 	</header>
@@ -117,11 +119,15 @@
 			<img class="plant plant--bottom plant--right plant-wall-right" src="/assets/img/hero/1x/plant_wall_right.png" srcset="/assets/img/hero/1.5x/plant_wall_right%401.5x.png 1.5x,
 									/assets/img/hero/2x/plant_wall_right%402x.png 2x,
 									/assets/img/hero/3x/plant_wall_right%403x.png 3x,
-									/assets/img/hero/4x/plant_wall_right%404x.png 4x" alt="Plant">
+									/assets/img/hero/4x/plant_wall_right%404x.png 4x" alt="Plant"
+									style="display: none;"
+									onload="this.style.display = 'block'; this.classList.add('plant-wall-right--animation');">
 			<img class="plant plant--bottom plant--left plant-wall-left" src="/assets/img/hero/1x/plant_wall_left.png" srcset="/assets/img/hero/1.5x/plant_wall_left%401.5x.png 1.5x,
 								/assets/img/hero/2x/plant_wall_left%402x.png 2x,
 								/assets/img/hero/3x/plant_wall_left%403x.png 3x,
-								/assets/img/hero/4x/plant_wall_left%404x.png 4x" alt="Plant">
+								/assets/img/hero/4x/plant_wall_left%404x.png 4x" alt="Plant"
+								style="display: none;"
+								onload="this.style.display = 'block'; this.classList.add('plant-wall-left--animation');">
 		</div>
 	</div>
 	<section class="no-overflow">

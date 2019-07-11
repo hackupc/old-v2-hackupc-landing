@@ -203,21 +203,22 @@ only screen and (                min-resolution: 2dppx) {
 /* Hero buildings */
 .buildings{
   width: 56em;
+  height: 40em;
   margin-bottom: -21em;
   overflow: hidden;
   font-size: 1em;
   user-select: none;
   pointer-events: none;
 }
-@media(min-width: 42em){
-	.buildings{ margin-bottom: -14em !important; font-size: 1.25em !important; }
-  .buildings__img{ margin-left: 2% !important; }
-}
 .buildings__img{
   width: 100%;
   margin-left: -1%;
   max-height: 100%;
   object-fit: contain;
+}
+@media(min-width: 42em){
+	.buildings{ margin-bottom: -14em; font-size: 1.25em; height: 28em;}
+  .buildings__img{ margin-left: 2%; }
 }
 .hero__layer--fog{
 	bottom: 20%;
@@ -248,46 +249,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Wall plants */
-.plant{
-	--plant-height: 0;
-	--plant-aspect-ratio: 1;
-	--plant-offset: 0;
 
-	height: var(--plant-height);
-	width: calc(var(--plant-height) / var(--plant-aspect-ratio));
-	
-	z-index: 2;
-	position: absolute;
-  object-fit: cover;
-  color: var(--text-light);
-}
-.plant--bottom{ bottom: calc(var(--plant-offset) * var(--plant-height)); }
-.plant--top{ top: calc(var(--plant-offset) * var(--plant-height)); }
-.plant--right{ right: 0; object-position: left; }
-.plant--left{ left: 0; object-position: right; }
-/* Right & Bottom */
-.plant-wall-right{
-	--plant-height: 40vw;
-	--plant-aspect-ratio: 1.7;
-	--plant-offset: -0.4;
-}
-/* Left & Top */
-.plant-sky{
-	--plant-height: 33.3333vw;
-  --plant-aspect-ratio: 0.515;
-  --plant-offset: -0.33333;
-}
-/* Left & Bottom */
-.plant-wall-left{
-  --plant-height: 45vw;
-  --plant-aspect-ratio: 2.2;
-  --plant-offset: -0.54;
-}
-@media(min-width: 800px){
-	.plant-wall-right{ --plant-height: 320px; /* 320px = 800px * 40vw/100vw */ }
-	.plant-sky{ --plant-height: 266.67px; /* 266.67px = 800px * 33.333vw/100vw */ }
-	.plant-wall-left{ --plant-height: 360px; /* 360px = 800px * 45vw/100vw */ }
-}
 
 .hero__separator{
   overflow: hidden;
@@ -319,18 +281,16 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Plant animations */
-.plant-wall-right{ animation: plant_wall_right 8s 2s ease-out, plant_wall_right 2s steps(1); transform-origin: right bottom; }
-.plant-sky{ animation: plant_sky 10.4s 2.4s ease-out, plant_sky 2.4s steps(1); transform-origin: left top; }
-.plant-wall-left{ animation: plant_wall_left 9s 2.15s ease-out, plant_wall_left 2.15s steps(1); transform-origin: left bottom; 
-	transform: translate(-19%) rotate(14deg);
-}
+.plant-sky--animation{ animation: plant_sky 10.4s 2.4s ease-out, plant_sky 2.4s steps(1); }
+.plant-wall-right--animation{ animation: plant_wall_right 8s 2s ease-out, plant_wall_right 2s steps(1); }
+.plant-wall-left--animation{ animation: plant_wall_left 9s 2.15s ease-out, plant_wall_left 2.15s steps(1); }
 
+@keyframes plant_sky {
+  0% {transform: translate(-88%,12%) rotate(25deg);}
+  100% {transform: translate(0) rotate(0);}
+}
 @keyframes plant_wall_right {
 	0% {transform: translate(166%,10%) rotate(-40deg);}
-	100% {transform: translate(0) rotate(0);}
-}
-@keyframes plant_sky {
-	0% {transform: translate(-88%,12%) rotate(25deg);}
 	100% {transform: translate(0) rotate(0);}
 }
 @keyframes plant_wall_left {
