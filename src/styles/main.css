@@ -426,29 +426,43 @@ only screen and (                min-resolution: 2dppx) {
   /* pointer-events: none; */
 }
 
-/* Sponsors */
+/* Sponsors & Partners */
 .section__list--sponsors, .section__list--partners{
-  align-items: center;
+	align-items: center;
+	justify-content: center;
 }
 .sponsor:hover, .partner:hover{
+	/* transform: scale( calc( calc( var(--size) + 25px) / var(--size) ) ); */
   transform: scale(1.25);
 }
 .sponsor, .partner{
-  flex: 1;
-  margin: 12.5px;
-  transition: transform .1s ease-out;
+	--aspect-ratio: 0.75;
+	--size: 100px;
+  margin: 0 25px;
+	transition: transform .1s ease-out;
+	width: var(--size);
+	height: calc(var(--size) * var(--aspect-ratio));
+	max-width: 100%;
+	max-height: calc(100% * var(--aspect-ratio));
 }
 .sponsor__img, .partner__img{
-  max-width: 100px;
-  max-height: 100px;
-}
-.sponsor__img--small, .partner__img--small{
-  max-width: 50px;
-  max-height: 50px;
+  width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
 }
 
-/* Partners */
+.sponsor--tera{ --size: 250px; }
+.sponsor--giga{ --size: 200px; }
+.sponsor--kilo{ --size: 150px; }
+.sponsor--mega, 
+.partner--normal{ --size: 100px; margin: 0 12.5px; }
 
+.sponsor--tera:hover{ transform: scale(1.1); }
+.sponsor--giga:hover{ transform: scale(1.125); }
+.sponsor--kilo:hover{ transform: scale(1.16667); }
+.sponsor--mega:hover, 
+.partner--normal:hover{ transform: scale(1.25); }
 
 /* Footer section */
 .section--footer{
