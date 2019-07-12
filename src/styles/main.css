@@ -341,12 +341,15 @@ only screen and (                min-resolution: 2dppx) {
 	--size: 10vw;
 	position: absolute;
 	width: var(--size);
-	min-width: 96px;
+	min-width: 80px;
 }
 .graffiti--warning{
-	--size: 7vw;
-	top: -4%;
-	right: 0;
+  --size: 18vw;
+  top: -4%;
+  right: 5%;
+  z-index: 1;
+  max-width: 110px;
+  transform: rotate(5deg);
 }
 .graffiti--hackupc{
 	--size: 20vw;
