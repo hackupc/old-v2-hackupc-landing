@@ -57,7 +57,7 @@ strong{font-weight: 500;}
 
 /* General */
 .body{
-	background: #E7E7E7 url(/assets/img/hero/1x/wall_texture.png) center;
+	background: #E7E7E7 url(/assets/img/wall.jpg) center 70vh;
 	color: var(--text-dark);
 }
 .button{
@@ -426,6 +426,7 @@ only screen and (                min-resolution: 2dppx) {
   max-height: calc(calc(100vw - 32px) * 0.5625) ;
   width: 853.333333px;
   height: 480px;
+  border-radius: 5px;
 }
 
 /* FAQ - Questions */
