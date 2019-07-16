@@ -50,7 +50,7 @@ abbr{text-decoration: none;}
 
 /* Custom element style */
 *{font-family: var(--font-family) !important;}
-a{color: var(--secondary-dark);}
+a{color: var(--tertiary);}
 ::selection{background: var(--primary);color: var(--text-dark);}
 abbr{text-decoration: none !important;}
 strong{font-weight: 500;}
@@ -280,23 +280,62 @@ only screen and (                min-resolution: 2dppx) {
   z-index: 1;
 }
 
+.plant{
+	--plant-offset-x: 0;
+	--plant-offset-y: 0;
+	
+	z-index: 2;
+	position: absolute;
+	color: var(--text-light);
+}
+.plant--bottom{ bottom: var(--plant-offset-y); }
+.plant--top{    top:    var(--plant-offset-y); }
+.plant--right{  right:  var(--plant-offset-x); }
+.plant--left{   left:   var(--plant-offset-x); }
+
+.plant-sky{
+	--plant-offset-x: -70px;
+	--plant-offset-y: -35px;
+	height: 33.3333vw;
+	transform-origin: left top;
+}
+.plant-wall-right{
+	--plant-offset-x: -30px;
+	--plant-offset-y: -120px;
+	height: 40vw;
+	transform-origin: right bottom;
+}
+.plant-wall-left{
+	--plant-offset-x: -65px;
+	--plant-offset-y: -120px;
+	height: 45vw;
+	transform-origin: left bottom;
+	transform: translate(-15%) rotate(20deg);
+}
+@media(min-width: 800px){
+	.plant-wall-right{ height: 320px; }
+	.plant-sky{        height: 266.67px; }
+	.plant-wall-left{  height: 360px; }
+}
+
 /* Plant animations */
-.plant-sky--animation{ animation: plant_sky 10.4s 2.4s ease-out, plant_sky 2.4s steps(1); }
-.plant-wall-right--animation{ animation: plant_wall_right 8s 2s ease-out, plant_wall_right 2s steps(1); }
-.plant-wall-left--animation{ animation: plant_wall_left 9s 2.15s ease-out, plant_wall_left 2.15s steps(1); }
+.plant-sky--animation{        animation: plant_sky        4.3s 0.1s ease-out, plant_sky        0.1s steps(1); }
+.plant-wall-right--animation{ animation: plant_wall_right 3.1s 0.8s ease-out, plant_wall_right 0.8s steps(1); }
+.plant-wall-left--animation{  animation: plant_wall_left  4s  0.25s ease-out, plant_wall_left 0.25s steps(1); }
 
 @keyframes plant_sky {
-  0% {transform: translate(-88%,12%) rotate(25deg);}
+  0% {transform: translate(-88%,12%) rotate(45deg);}
   100% {transform: translate(0) rotate(0);}
 }
 @keyframes plant_wall_right {
-	0% {transform: translate(166%,10%) rotate(-40deg);}
+	0% {transform: translate(150%,-10%) rotate(-75deg);}
 	100% {transform: translate(0) rotate(0);}
 }
 @keyframes plant_wall_left {
-	0% {transform: translate(-207%,8%) rotate(80deg);}
-	100% {transform: translate(-19%) rotate(14deg);}
+	0% {transform: translate(-207%,-33%) rotate(120deg);}
+	100% {transform: translate(-15%) rotate(20deg);}
 }
+
 /* Buildings animation */
 .buildings--animation{ animation: buildings-up 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), fade-in 2s ease-in; }
 .buildings__img--animation{ animation: 
