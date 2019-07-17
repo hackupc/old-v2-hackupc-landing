@@ -3,7 +3,7 @@
 // const cookieText = 'This website uses cookies to analyze site usage. <a class="cookie-notice__link" href="/privacy_and_cookies" target="_blank">Privacy and Cookies Policy</a>'
 const cookieText = 'We uses cookies to analyze site usage. <a class="cookie-notice__link" href="/privacy_and_cookies" target="_blank">More info</a>'
 const cookieNotice = document.createElement('div')
-cookieNotice.innerHTML = `<p class="cookies-notice__text">${cookieText}</p><button class="cookies-notice__button" onclick="acceptCookies()">OK</button>`
+cookieNotice.innerHTML = `<p class="cookies-notice__text">${cookieText}</p><button class="cookies-notice__button" onclick="acceptCookies()" title="Close">OK</button>`
 cookieNotice.classList.add('cookies-notice')
 
 if (window.localStorage.getItem('cookies') !== '1') {
