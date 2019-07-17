@@ -54,6 +54,7 @@ a{color: var(--tertiary);}
 ::selection{background: var(--primary);color: var(--text-dark);}
 abbr{text-decoration: none !important;}
 strong{font-weight: 500;}
+img{display: block;}
 
 /* General */
 .body{
@@ -492,7 +493,6 @@ only screen and (                min-resolution: 2dppx) {
   width: 100%;
 	height: 100%;
 	object-fit: contain;
-	display: block;
 }
 
 .sponsor--tera{ --size: 250px; }
@@ -512,25 +512,51 @@ only screen and (                min-resolution: 2dppx) {
   max-width: none;
   position: relative;
   color: var(--text-light);
-  margin-top: 96px;
+  /* margin-top: 96px; */
+  margin-top: 128px;
 }
 .footer__link{
   color: var(--secondary);
   text-decoration: none;
 }
+.footer__img{
+  /* height: 250px; */
+  height: 300px;
+}
+.no-overflow--footer{
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.footer_column{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+.section__list--packed{
+  display: block;
+}
+.footer__element { margin: 1em auto; }
+.footer__element--first{ margin-top: 0; }
+.footer__element--last{ margin-bottom: 0; }
+
+.footer_column__element{ margin: 0.5em; }
 
 /* Legal */
-.section__list--legal{
+.section__list--links-list{
   max-width: 500px;
-  margin: 1em auto;
   flex-wrap: nowrap;
   align-items: center;
 }
-.legal{
+.links-list{
   text-decoration: none;
   line-height: 1;
 }
-.legal__separator{
+.links-list__separator{
   line-height: 1;
   opacity: 0.5;
 }
@@ -538,17 +564,14 @@ only screen and (                min-resolution: 2dppx) {
 /* Last year & Signature */
 .last-year-site{
   display: block;
-  margin-bottom: 1em;
-}
-.signature{
 }
 
 /* Contact */
 .section__list--contact{
-  margin: 0 auto;
   justify-content: center;
   flex-wrap: nowrap;
   max-width: 17.5em;
+  flex-basis: 17.5em;
 }
 .contact{
   transition: transform 100ms ease-out;
@@ -562,6 +585,7 @@ only screen and (                min-resolution: 2dppx) {
 .contact__icon{
   width: 1.25em;
   min-width: 20px;
+  margin: auto;
 }
 .contact:hover{
   transform: scale(1.25);
