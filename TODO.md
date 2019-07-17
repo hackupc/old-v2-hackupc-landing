@@ -4,12 +4,12 @@
 
 ## For each edition
 
-- [ ] Refactor all 2018 for 2019 and any outdated content
+- [x] Refactor all 2018 for 2019 and any outdated content
 - [ ] Update schedule.json
 - [ ] Update `favicon.ico` (color)
 - [ ] Test if live works
 - [ ] Make the applcations closed page
-- [ ] Update FAQ
+- [x] Update FAQ
 - [ ] Make the subscrive page
 - [ ] Put the logos
 - [ ] Make sure that github continous integration accepts the commits
@@ -17,22 +17,24 @@
 ## Improve Repo
 
 - [ ] Remove unused styles
-- [ ] Clear `index.html` and `live.html`
-- [ ] Fix legal pages style because bootrstap was deleted
-- [ ] Fix data-finger-print not working
-- [ ] Update mentors link
+- [x] Clear `index.html`
+- [ ] Clear `live.html`
+- [x] Fix legal pages style because bootrstap was deleted
+- [x] Fix data-finger-print not working
+- [x] Update mentors link
 - [ ] Try to show the information in a better way than a FAQ
-- [ ] Update answer of volunteers
-- [ ] Make h2 preatty
-- [ ] Finish footer
+- [x] Update answer of volunteers
+- [x] Make h2 preatty
+- [x] Finish footer
 - [ ] Resize the images with a npm script
 - [x] Make logos list a ul instead of a div
-- [ ] Remove unused font weights
-- [ ] Add title atribute to the x button in cookies notice
-- [ ] Fix FOUC: add a nice animation
+- [x] Remove unused font weights
+- [x] Add title atribute to the x button in cookies notice
+- [x] Fix FOUC: add a nice animation
 - [ ] Split the main.css into small .css and join them with includes
 - [ ] Minify particles.js
 - [ ] Crop title text filter image to reduce size
+- [ ] Create footer.css file and make it like the cookies
 
 ## Documentation
 
