@@ -4,3 +4,14 @@
  * You should see it empty in production.
  */
 
+ .footer__img{
+  width: 100%;
+  min-width: 1000px;
+}
+.no-overflow--footer{
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
