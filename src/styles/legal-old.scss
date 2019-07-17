@@ -37,7 +37,8 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     &::before{
-        background-image:url(../img/eixample-bg.png);
+        background-color:#E7E7E7;
+        background-image:url(/assets/img/wall.jpg);
         background-size:cover;
         background-position-x:center;
         display:block;
@@ -46,8 +47,20 @@ body {
         width:100%;
         height:100%;
         z-index:-1;
-    }
+		}
 }
+.bg{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+}
+.bg__img{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+.bg__img--left{right: unset;}
+.bg__img--right{left: unset;}
+.bg__img--top{bottom: unset;}
 
 a {
     color: $link-color;
@@ -158,7 +171,7 @@ h2{
 }
 
 .bottom-left-links {
-    @include center-block();
+    // @include center-block();
     text-align: left;
     a {
         padding: 0.4em 0.4em 0.4em 0;
@@ -166,12 +179,12 @@ h2{
 }
 
 .bottom-right-links {
-    @include center-block();
+    // @include center-block();
     text-align: right;
 }
 
 .bottom-bottom-links {
-    @include center-block();
+    // @include center-block();
     text-align: center;
     margin-top: 0.5em !important;
 }
