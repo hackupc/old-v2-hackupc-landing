@@ -20,7 +20,7 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "/assets/img/hero/1x/fog.png",
+        "src": "/assets/img/multisize/1x/fog.png",
         "width": 300,
         "height": 24
       }

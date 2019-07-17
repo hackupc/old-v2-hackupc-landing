@@ -123,16 +123,15 @@
 	<meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml?v=kP3Ep7we4e">
 	<meta name="theme-color" content="#b4c959">
 
-	<!-- Google Tag Manager -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-KQRP3ZG');</script>
-	<!-- End Google Tag Manager -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69542332-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-69542332-1');
+</script>
 </head>
 
 <body class="body">
@@ -143,25 +142,25 @@
 	<header class="hero no-overflow">
 		<div class="hero__layer no-overflow lax" data-lax-translate-y="0 0, vh (vh*0.9)">
 			<div class="hero__layer hero__layer--sky"></div>
-			<img class="landscape" src="/assets/img/hero/SVG/landscape.svg" alt="City landscape" />
+			<img class="landscape" src="/assets/img/multisize/SVG/landscape.svg" alt="City landscape" />
 			<div id="particles-js" class="hero__layer hero__layer--fog"></div>
 		</div>
 		<div class="hero__layer hero__layer--depths"></div>
 		<picture class="buildings lax" data-lax-translate-y="0 0, vh (vh*0.7)">
-			<source media="(max-width: 42em)" type="image/png" srcset="/assets/img/hero/1x/buildings-mobile.png 1x,
-								/assets/img/hero/1.5x/buildings-mobile%401.5x.png 1.5x,
-								/assets/img/hero/2x/buildings-mobile%402x.png 2x,
-								/assets/img/hero/3x/buildings-mobile%403x.png 3x,
-								/assets/img/hero/4x/buildings-mobile%404x.png 4x">
-			<source media="(min-width: 42em)" type="image/png" srcset="/assets/img/hero/1x/buildings.png 1x,
-								/assets/img/hero/1.5x/buildings%401.5x.png 1.5x,
-								/assets/img/hero/2x/buildings%402x.png 2x,
-								/assets/img/hero/3x/buildings%403x.png 3x,
-								/assets/img/hero/4x/buildings%404x.png 4x">
-			<img class="buildings__img" src="/assets/img/hero/1x/buildings.png" srcset="/assets/img/hero/1.5x/buildings%401.5x.png 1.5x,
-								/assets/img/hero/2x/buildings%402x.png 2x,
-								/assets/img/hero/3x/buildings%403x.png 3x,
-								/assets/img/hero/4x/buildings%404x.png 4x" alt="Destroyed Barcelona buildings"
+			<source media="(max-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
+								/assets/img/multisize/1.5x/buildings-mobile%401.5x.png 1.5x,
+								/assets/img/multisize/2x/buildings-mobile%402x.png 2x,
+								/assets/img/multisize/3x/buildings-mobile%403x.png 3x,
+								/assets/img/multisize/4x/buildings-mobile%404x.png 4x">
+			<source media="(min-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings.png 1x,
+								/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
+								/assets/img/multisize/2x/buildings%402x.png 2x,
+								/assets/img/multisize/3x/buildings%403x.png 3x,
+								/assets/img/multisize/4x/buildings%404x.png 4x">
+			<img class="buildings__img" src="/assets/img/multisize/1x/buildings.png" srcset="/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
+								/assets/img/multisize/2x/buildings%402x.png 2x,
+								/assets/img/multisize/3x/buildings%403x.png 3x,
+								/assets/img/multisize/4x/buildings%404x.png 4x" alt="Destroyed Barcelona buildings"
 				onload="this.parentElement.classList.add('buildings--animation'); this.classList.add('buildings__img--animation')">
 		</picture>
 		<h1 class="hero__title hero__title--dust lax" data-lax-translate-y="0 0, vh (vh*0.6)">Hack<strong
@@ -177,10 +176,10 @@
 			<a class="button button--hero" href="https://my.hackupc.com/" hreflang="en">Apply now</a>
 		</div>
 		<div class="hero__layer no-overflow">
-			<img class="plant plant--top plant--left plant-sky" src="/assets/img/hero/1x/plant_sky.png" srcset="/assets/img/hero/1.5x/plant_sky%401.5x.png 1.5x,
-								/assets/img/hero/2x/plant_sky%402x.png 2x,
-								/assets/img/hero/3x/plant_sky%403x.png 3x,
-								/assets/img/hero/4x/plant_sky%404x.png 4x" alt="Plant"
+			<img class="plant plant--top plant--left plant-sky" src="/assets/img/multisize/1x/plant_sky.png" srcset="/assets/img/multisize/1.5x/plant_sky%401.5x.png 1.5x,
+								/assets/img/multisize/2x/plant_sky%402x.png 2x,
+								/assets/img/multisize/3x/plant_sky%403x.png 3x,
+								/assets/img/multisize/4x/plant_sky%404x.png 4x" alt="Plant"
 								style="display: none;"
 								onload="this.style.display = 'block'; this.classList.add('plant-sky--animation');">
 		</div>
@@ -188,17 +187,17 @@
 	</header>
 	<div class="hero__separator">
 		<div class="hero__separator__content">
-			<img class="hero__separator__img" src="/assets/img/hero/SVG/wall.svg" alt="Brick wall separator" />
-			<img class="plant plant--bottom plant--right plant-wall-right" src="/assets/img/hero/1x/plant_wall_right.png" srcset="/assets/img/hero/1.5x/plant_wall_right%401.5x.png 1.5x,
-									/assets/img/hero/2x/plant_wall_right%402x.png 2x,
-									/assets/img/hero/3x/plant_wall_right%403x.png 3x,
-									/assets/img/hero/4x/plant_wall_right%404x.png 4x" alt="Plant"
+			<img class="hero__separator__img" src="/assets/img/multisize/SVG/wall.svg" alt="Brick wall separator" />
+			<img class="plant plant--bottom plant--right plant-wall-right" src="/assets/img/multisize/1x/plant_wall_right.png" srcset="/assets/img/multisize/1.5x/plant_wall_right%401.5x.png 1.5x,
+									/assets/img/multisize/2x/plant_wall_right%402x.png 2x,
+									/assets/img/multisize/3x/plant_wall_right%403x.png 3x,
+									/assets/img/multisize/4x/plant_wall_right%404x.png 4x" alt="Plant"
 									style="display: none;"
 									onload="this.style.display = 'block'; this.classList.add('plant-wall-right--animation');">
-			<img class="plant plant--bottom plant--left plant-wall-left" src="/assets/img/hero/1x/plant_wall_left.png" srcset="/assets/img/hero/1.5x/plant_wall_left%401.5x.png 1.5x,
-								/assets/img/hero/2x/plant_wall_left%402x.png 2x,
-								/assets/img/hero/3x/plant_wall_left%403x.png 3x,
-								/assets/img/hero/4x/plant_wall_left%404x.png 4x" alt="Plant"
+			<img class="plant plant--bottom plant--left plant-wall-left" src="/assets/img/multisize/1x/plant_wall_left.png" srcset="/assets/img/multisize/1.5x/plant_wall_left%401.5x.png 1.5x,
+								/assets/img/multisize/2x/plant_wall_left%402x.png 2x,
+								/assets/img/multisize/3x/plant_wall_left%403x.png 3x,
+								/assets/img/multisize/4x/plant_wall_left%404x.png 4x" alt="Plant"
 								style="display: none;"
 								onload="this.style.display = 'block'; this.classList.add('plant-wall-left--animation');">
 			<img class="graffiti graffiti--warning" src="assets/img/graffitis/warning.svg" alt="Warning graffiti">
@@ -240,7 +239,7 @@
 						<time datetime="2019-10-11 19:00">7:00 p.m.</time>,
 						also on friday. We expect to finish HackUPC by <time datetime="2019-10-13 17:00">5:00 p.m. on Sunday
 							13th</time>.<br>HackUPC will take place in <strong>UPC's North Campus FIB</strong> buildings (<a
-							href="https://goo.gl/maps/4AHDqtWTZeu" target="_blank">A3, A4, A5 and A6</a>) in sunny Barcelona.
+							href="https://goo.gl/maps/4AHDqtWTZeu" target="_blank" rel="noopener">A3, A4, A5 and A6</a>) in sunny Barcelona.
 					</div>
 				</div>
 				<div class="question">
@@ -311,7 +310,7 @@
 				<div class="question">
 					<h3 class="question__title">What if I have another question?</h3>
 					<div class="question__answer"><strong>Tweet us</strong> at <a href="http://twitter.com/hackupc"
-							target="_blank" hreflang="en">@hackupc</a> or
+							target="_blank" rel="noopener" hreflang="en">@hackupc</a> or
 						drop us a line at <a href="mailto:contact@hackupc.com">contact@hackupc.com</a>.</div>
 				</div>
 			</div>
@@ -336,29 +335,29 @@
 	<section class="section">
 		<h2 class="section__title">Sponsors</h2>
 		<div class="section__list section__list--sponsors">
-			<!-- <a class="sponsor sponsor--giga" href="https://www.soprasteria.com/en" hreflang="en" target="_blank">
+			<!-- <a class="sponsor sponsor--giga" href="https://www.soprasteria.com/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Sopra_steria logo" src="/assets/img/logos/sopra_steria.png">
 			</a> -->
-			<a class="sponsor sponsor--giga" href="https://www.everis.com/global/en" hreflang="en" target="_blank">
+			<a class="sponsor sponsor--giga" href="https://www.everis.com/global/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Everis logo" src="/assets/img/logos/everis.png">
 			</a>
 		</div>
 		<div class="section__list section__list--sponsors">
-			<!-- <a class="sponsor sponsor--kilo" href="https://www.thoughtworks.com/" hreflang="en" target="_blank">
+			<!-- <a class="sponsor sponsor--kilo" href="https://www.thoughtworks.com/" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Thought_works logo" src="/assets/img/logos/thought_works.png">
 			</a> -->
 		</div>
 		<div class="section__list section__list--sponsors">
-			<!-- <a class="sponsor sponsor--mega" href="https://www.ithinkupc.com/es" hreflang="es-ES" target="_blank">
+			<!-- <a class="sponsor sponsor--mega" href="https://www.ithinkupc.com/es" hreflang="es-ES" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="I_think_upc logo" src="/assets/img/logos/i_think_upc.png">
 			</a> -->
-			<a class="sponsor sponsor--mega" href="https://itequia.com/en/" hreflang="en" target="_blank">
+			<a class="sponsor sponsor--mega" href="https://itequia.com/en/" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Itequia logo" src="/assets/img/logos/itequia.png">
 			</a>
-			<!-- <a class="sponsor sponsor--mega" href="https://opentrends.net/en" hreflang="en" target="_blank">
+			<!-- <a class="sponsor sponsor--mega" href="https://opentrends.net/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Opentrends logo" src="/assets/img/logos/opentrends.png">
 			</a>
-			<a class="sponsor sponsor--mega" href="https://www.skyscanner.net/" hreflang="en" target="_blank">
+			<a class="sponsor sponsor--mega" href="https://www.skyscanner.net/" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Skyscanner logo" src="/assets/img/logos/skyscanner.png">
 			</a> -->
 		</div>
@@ -367,37 +366,37 @@
 		<!-- Not accepted -->
 		<!--
 		<div class="section__list section__list--sponsors">
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Artiach logo" src="/assets/img/logos/artiach.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Aws_educate logo" src="/assets/img/logos/aws_educate.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Bloomberg logo" src="/assets/img/logos/bloomberg.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Bsc logo" src="/assets/img/logos/bsc.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Github logo" src="/assets/img/logos/github.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Infojobs logo" src="/assets/img/logos/infojobs.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Red_bull logo" src="/assets/img/logos/red_bull.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Servi_zurich logo" src="/assets/img/logos/servi_zurich.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Tech logo" src="/assets/img/logos/tech.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Typeform logo" src="/assets/img/logos/typeform.png">
       </a>
-      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank">
+      <a class="sponsor sponsor--giga" href="https://website.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="sponsor__img" alt="Vueling logo" src="/assets/img/logos/vueling.png">
 			</a>
 		</div>
@@ -407,36 +406,36 @@
 	<section class="section section--partners">
 		<h2 class="section__title">Partners</h2>
 		<div class="section__list section__list--partners">
-			<!-- <a class="partner" href="{{ website }}" target="_blank">
+			<!-- <a class="partner" href="{{ website }}" target="_blank" rel="noopener">
         <img class="partner__img" alt="{{ brandFullName }} logo" src="/assets/img/logos/{{ brandName }}.png">
 			</a> -->
 
 			<!-- Accepted -->
-			<a class="partner partner--normal" href="https://www.upc.edu/en" hreflang="en" target="_blank">
+			<a class="partner partner--normal" href="https://www.upc.edu/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Upc logo" src="/assets/img/logos/upc.png">
 			</a>
-			<a class="partner partner--normal" href="https://www.fib.upc.edu/en" hreflang="en" target="_blank">
+			<a class="partner partner--normal" href="https://www.fib.upc.edu/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Fib logo" src="/assets/img/logos/fib.png">
 			</a>
-			<a class="partner partner--normal" href="https://cfis.upc.edu/en" hreflang="en" target="_blank">
+			<a class="partner partner--normal" href="https://cfis.upc.edu/en" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Cfis logo" src="/assets/img/logos/cfis.png">
 			</a>
 
 			<!-- Not accepted -->
 			<!--
-      <a class="partner" href="http://www.wolfram.com/" hreflang="en" target="_blank">
+      <a class="partner" href="http://www.wolfram.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="partner__img" alt="Wolfram logo" src="/assets/img/logos/wolfram.png">
 			</a>
-			<a class="partner" href="http://www.fritravich.com/en/" hreflang="en" target="_blank">
+			<a class="partner" href="http://www.fritravich.com/en/" hreflang="en" target="_blank" rel="noopener">
         <img class="partner__img" alt="Frit_ravich logo" src="/assets/img/logos/frit_ravich.png">
 			</a>
-			<a class="partner" href="https://www.illy.com/" hreflang="en" target="_blank">
+			<a class="partner" href="https://www.illy.com/" hreflang="en" target="_blank" rel="noopener">
         <img class="partner__img" alt="Illy logo" src="/assets/img/logos/illy.png">
       </a>
-      <a class="partner" href="http://www.zanuy.com/index.php/en/" hreflang="en" target="_blank">
+      <a class="partner" href="http://www.zanuy.com/index.php/en/" hreflang="en" target="_blank" rel="noopener">
         <img class="partner__img" alt="Zanuy logo" src="/assets/img/logos/zanuy.png">
 			</a>
-			<a class="partner" href="https://leoboeck.com/" hreflang="es-ES" target="_blank">
+			<a class="partner" href="https://leoboeck.com/" hreflang="es-ES" target="_blank" rel="noopener">
         <img class="partner__img" alt="Leo_boeck logo" src="/assets/img/logos/leo_boeck.png">
 			</a>
 			 -->
@@ -451,33 +450,33 @@
 				<li class="contact"><a class="contact__link" target="_blank" href="mailto:contact@hackupc.com">
 						<img inline class="contact__icon" src="/assets/img/social/email.svg" alt="Email">
 					</a></li>
-				<li class="contact"><a class="contact__link" target="_blank" href="https://twitter.com/hackupc" hreflang="en">
+				<li class="contact"><a class="contact__link" target="_blank" rel="noopener" href="https://twitter.com/hackupc" hreflang="en">
 						<img inline class="contact__icon" src="/assets/img/social/twitter.svg" alt="Twitter">
 					</a></li>
-				<li class="contact"><a class="contact__link" target="_blank"
+				<li class="contact"><a class="contact__link" target="_blank" rel="noopener"
 						href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g">
 						<img inline class="contact__icon" src="/assets/img/social/youtube.svg" alt="Youtube">
 					</a></li>
-				<li class="contact"><a class="contact__link" target="_blank" href="https://facebook.com/hackupc" hreflang="en">
+				<li class="contact"><a class="contact__link" target="_blank" rel="noopener" href="https://facebook.com/hackupc" hreflang="en">
 						<img inline class="contact__icon" src="/assets/img/social/facebook.svg" alt="Facebook">
 					</a></li>
-					<li class="contact"><a class="contact__link" target="_blank" href="https://medium.com/@hackupc" hreflang="en">
+					<li class="contact"><a class="contact__link" target="_blank" rel="noopener" href="https://medium.com/@hackupc" hreflang="en">
 						<img inline class="contact__icon" src="/assets/img/social/medium.svg" alt="Medium">
 					</a></li>
-					<li class="contact"><a class="contact__link" target="_blank" href="https://github.com/hackupc" hreflang="en">
+					<li class="contact"><a class="contact__link" target="_blank" rel="noopener" href="https://github.com/hackupc" hreflang="en">
 						<img inline class="contact__icon" src="/assets/img/social/github.svg" alt="Github">
 					</a></li>
-					<li class="contact"><a class="contact__link" target="_blank" href="https://instagram.com/hackupc" hreflang="en">
+					<li class="contact"><a class="contact__link" target="_blank" rel="noopener" href="https://instagram.com/hackupc" hreflang="en">
 							<img inline class="contact__icon" src="/assets/img/social/instagram.svg" alt="Instagram">
 						</a></li>
 			</ul>
 
 			<div class="section__list section__list--links-list section__list--packed footer_column__element">
-				<a class="links-list footer__link" target="_blank" href="https://hackersatupc.org/" hreflang="en">Hackers@UPC</a>
+				<a class="links-list footer__link" target="_blank" rel="noopener" href="https://hackersatupc.org/" hreflang="en">Hackers@UPC</a>
 				<span class="links-list__separator">|</span>
-				<a class="links-list footer__link" target="_blank" href="https://hacknights.dev/" hreflang="en">Hacknights</a>
+				<a class="links-list footer__link" target="_blank" rel="noopener" href="https://hacknights.dev/" hreflang="en">Hacknights</a>
 				<span class="links-list__separator">|</span>
-				<a class="links-list footer__link" target="_blank" href="https://hackstart.dev/" hreflang="en">Hackstart</a>
+				<a class="links-list footer__link" target="_blank" rel="noopener" href="https://hackstart.dev/" hreflang="en">Hackstart</a>
 			</div>
 		</div>
 		<div class="section__list section__list--links-list footer__element">
@@ -492,27 +491,15 @@
 					hreflang="en">Hackers@UPC</a></b></q>
 
 		<div class="no-overflow no-overflow--footer">
-			<img class="footer__img" src="/assets/img/hero/1x/footer.png" srcset="/assets/img/hero/1.5x/footer%401.5x.png 1.5x,
-								/assets/img/hero/2x/footer%402x.png 2x,
-								/assets/img/hero/3x/footer%403x.png 3x,
-								/assets/img/hero/4x/footer%404x.png 4x" alt="Dirt with some plants">
+			<img class="footer__img" src="/assets/img/multisize/1x/footer.png" srcset="/assets/img/multisize/1.5x/footer%401.5x.png 1.5x,
+								/assets/img/multisize/2x/footer%402x.png 2x,
+								/assets/img/multisize/3x/footer%403x.png 3x,
+								/assets/img/multisize/4x/footer%404x.png 4x" alt="Dirt with some plants">
 		</div>
 	</footer>
 
-<script>
-	(function (i, s, o, g, r, a, m) {
-	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-		(i[r].q = i[r].q || []).push(arguments)
-	}, i[r].l = 1 * new Date(); a = s.createElement(o),
-		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-	ga('create', 'UA-69542332-1', 'auto');
-	ga('send', 'pageview');
-</script>
-
 	<!-- Scripts -->
-	<script src="/assets/js/cookies.min.js" async></script>
+	<script src="/assets/js/cookies.min.js" defer async></script>
 
 	<!-- Particles -->
 	<script src="lib/particles.js"></script>

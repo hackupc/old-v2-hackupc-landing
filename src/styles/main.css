@@ -142,7 +142,7 @@ img{display: block;}
 	content: "";
 	position: absolute;
 	top:1px;right:1px;bottom:1px;left:1px;
-	background: white url(/assets/img/hero/1x/dust-20.jpg) center/512px;
+	background: white url(/assets/img/multisize/1x/dust-20.jpg) center/512px;
 	mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -154,7 +154,8 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-	.hero__title--dust::before{background-image: url(/assets/img/hero/2x/dust@2x-20.jpg);}
+	.hero__title--dust::before{background-image: url(/assets/img/multisize/2x/dust@2x-20.jpg);}
+	/* .body{background-image: url(/assets/img/multisize/2x/wall@2x.jpg);} */
 }
 .hero__title--bold{
   font-weight: 800;
