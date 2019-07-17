@@ -93,32 +93,6 @@ h2{
     font-size:20px;
 }
 
-/* cookie notice */
-#cookie-notice{
-    position:fixed;
-    bottom:0;
-    width:100%;
-    padding: 0.5em 1em;
-    text-align: center;
-    transition: bottom 1s;
-    background-color:$color-accent;
-    div{
-        width: 100px;
-        padding: 5px 10px;
-        margin: 0.5em auto;
-        background-color:$color-back1;
-        cursor: pointer;
-    }
-    box-shadow: 0px 15px 15px 15px black;
-}
-
-#cookies-a {
-    color: #FFF;
-    text-decoration: underline !important;
-}
-
-
-
 #wrapper{
     max-width:950px;
     width:80%;
