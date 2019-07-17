@@ -512,12 +512,17 @@ only screen and (                min-resolution: 2dppx) {
   max-width: none;
   position: relative;
   color: var(--text-light);
+  margin-top: 96px;
+}
+.footer__link{
+  color: var(--secondary);
+  text-decoration: none;
 }
 
 /* Legal */
 .section__list--legal{
   max-width: 500px;
-  margin: 16px auto;
+  margin: 1em auto;
   flex-wrap: nowrap;
   align-items: center;
 }
@@ -533,12 +538,9 @@ only screen and (                min-resolution: 2dppx) {
 /* Last year & Signature */
 .last-year-site{
   display: block;
-  display: none;
+  margin-bottom: 1em;
 }
 .signature{
-}
-.signature__link{
-  color: inherit;
 }
 
 /* Contact */
