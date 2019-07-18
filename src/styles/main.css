@@ -584,9 +584,9 @@ only screen and (                min-resolution: 2dppx) {
 .links-list{
   text-decoration: none;
   line-height: 1;
+  vertical-align: middle;
 }
 .links-list__separator{
-  line-height: 1;
   opacity: 0.5;
 }
 
@@ -612,7 +612,7 @@ only screen and (                min-resolution: 2dppx) {
   line-height: 1;
 }
 .contact__icon{
-  width: 1.25em;
+  width: 1.5em;
   min-width: 20px;
   margin: auto;
 }
