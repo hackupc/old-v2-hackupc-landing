@@ -39,7 +39,7 @@
       "value": 200,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 5,
         "size_min": 66.67,
         "sync": false
@@ -54,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 0.5,
+      "speed": 1,
       "direction": "none",
       "random": true,
       "straight": false,
