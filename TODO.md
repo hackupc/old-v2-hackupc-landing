@@ -35,6 +35,7 @@
 - [ ] Minify particles.js
 - [ ] Crop title text filter image to reduce size
 - [ ] Create footer.css file and make it like the cookies
+- [ ] Update cookies notice text to be clearer and shorter
 
 ## Documentation
 
