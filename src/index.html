@@ -328,8 +328,8 @@
 		<h2 class="section__title">More ways to participate</h2>
 		<div class="section__list section__list--participate">
 			<a class="button button--sponsor" href="mailto:sponsor@hackupc.com">Sponsor</a>
-			<a class="button button--volunteer button--disabled" onclick="//event.preventDefault();" title="Applications not opened yet" href="https://hackersatupc.typeform.com/to/Dct1O8" hreflang="en">Volunteer</a>
-			<a class="button button--mentor button--disabled" onclick="event.preventDefault();" title="Applications not opened yet" href="mailto:logistics@hackupc.com" hreflang="en">Mentor</a>
+			<a class="button button--volunteer button--disabled" onclick="event.preventDefault();let el=this.lastChild;el.style.animation='none';el.offsetHeight;el.style.animation=null;" title="Applications not opened yet" href="https://hackersatupc.typeform.com/to/Dct1O8" hreflang="en">Volunteer<span class="button__tooltip">Not open</span></a>
+			<a class="button button--mentor button--disabled" onclick="event.preventDefault();let el=this.lastChild;el.style.animation='none';el.offsetHeight;el.style.animation=null;" title="Applications not opened yet" href="mailto:logistics@hackupc.com" hreflang="en">Mentor<span class="button__tooltip">Not open</span></a>
 		</div>
 	</section>
 
