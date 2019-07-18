@@ -501,7 +501,7 @@ only screen and (                min-resolution: 2dppx) {
 .button__tooltip{
 	position: absolute;
 	white-space: nowrap;
-	top: -2.5em;
+	top: -2em;
 	line-height: 1;
 	left: 50%;
 	background: var(--gray-dark);
