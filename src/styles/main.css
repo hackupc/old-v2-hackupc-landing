@@ -529,12 +529,15 @@ only screen and (                min-resolution: 2dppx) {
 .sponsor--kilo{ --size: 150px; }
 .sponsor--mega, 
 .partner--normal{ --size: 100px; margin: 0 12.5px; }
+.sponsor--mili{ --size: 90px; }
 
+/* scale = (--size + 25px ) / --size */
 .sponsor--tera:hover{ transform: scale(1.1); }
 .sponsor--giga:hover{ transform: scale(1.125); }
 .sponsor--kilo:hover{ transform: scale(1.16667); }
 .sponsor--mega:hover, 
 .partner--normal:hover{ transform: scale(1.25); }
+.partner--mili:hover{ transform: scale(1,2778); }
 
 /* Footer section */
 .section--footer{
