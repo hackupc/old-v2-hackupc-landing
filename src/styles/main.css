@@ -218,6 +218,7 @@ only screen and (                min-resolution: 2dppx) {
   font-size: 1em;
   user-select: none;
   pointer-events: none;
+  z-index: 0;
 }
 .buildings__img{
   width: 100%;
