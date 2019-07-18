@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#fff"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "image",
@@ -41,7 +41,7 @@
       "anim": {
         "enable": true,
         "speed": 5,
-        "size_min": 66.6667,
+        "size_min": 66.67,
         "sync": false
       }
     },
