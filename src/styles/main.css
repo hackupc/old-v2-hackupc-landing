@@ -575,6 +575,7 @@ only screen and (                min-resolution: 2dppx) {
   color: var(--text-light);
   /* margin-top: 96px; */
   margin-top: 128px;
+  padding-bottom: 1.5em;
 }
 .footer__link{
   color: var(--secondary);
