@@ -285,7 +285,7 @@ only screen and (                min-resolution: 2dppx) {
 	height: var(--wall-height);
 	width: 100%;
   max-width: 2130px;
-  margin: auto;
+  margin: 0 auto;
   object-fit: cover;
   z-index: 1;
 }
