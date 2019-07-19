@@ -573,39 +573,43 @@ only screen and (                min-resolution: 2dppx) {
   max-width: none;
   position: relative;
   color: var(--text-light);
-  /* margin-top: 96px; */
-  margin-top: 128px;
   padding-bottom: 1.5em;
+  padding-top: calc(128px + 1em);
+  overflow: hidden;
 }
 .footer__link{
   color: var(--secondary);
   text-decoration: none;
 }
 .footer__img{
-  /* height: 250px; */
-  height: 300px;
+  height: 350px;
+}
+.no-overflow--footer::before{
+  content: '';
+  position: absolute;
+  top: 350px; bottom: 0; left: 0; right: 0;
+  background-color: #4D4233;
+  z-index: -1;
 }
 .no-overflow--footer{
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  top: 0; left: 0; bottom: 0; right: 0;
   display: flex;
   justify-content: center;
   z-index: -1;
 }
+
+.footer__element { margin: 1em auto; }
+.footer__element--first{ margin-top: 0; }
+.footer__element--last{ margin-bottom: 0; }
 
 .footer_column{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1200px;
+  margin: -0.5em auto;
 }
-.section__list--packed{
-  display: block;
-}
-.footer__element { margin: 1em auto; }
-.footer__element--first{ margin-top: 0; }
-.footer__element--last{ margin-bottom: 0; }
-
 .footer_column__element{ margin: 0.5em; }
 
 /* Legal */
@@ -613,6 +617,13 @@ only screen and (                min-resolution: 2dppx) {
   max-width: 500px;
   flex-wrap: nowrap;
   align-items: center;
+}
+.section__list--packed{
+  max-width: 350px;
+  flex-grow: 1;
+}
+@media(max-width: 25em){
+  .section__list--packed{ font-size: 4vw; }
 }
 .links-list{
   text-decoration: none;
@@ -625,7 +636,7 @@ only screen and (                min-resolution: 2dppx) {
 
 /* Last year & Signature */
 .last-year-site{
-  display: block;
+  display: inline-block;
 }
 
 /* Contact */
