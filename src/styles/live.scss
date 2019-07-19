@@ -1,11 +1,8 @@
-#live{
-	.container-live{
-		display:flex;
-		top:0px;
-		bottom:0;
-		width:100%;
-		position: fixed;
-		justify-content: center;
-		overflow:auto;
-	}
-}
+/* CSS3/SASS Document */
+@import "live/params";
+@import "live/shared";
+@import "live/live";
+@import "live/full";
+@import "live/hardware";
+@import "live/rules";
+@import "live/schedule";

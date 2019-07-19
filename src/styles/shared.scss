@@ -1,56 +1,6 @@
 /* Shared classes: may be overwritten in other files */
 
 
-@font-face {
-    font-family: Gotham-Black;
-    src: url(../fonts/GothamBlack.ttf);
-}
-
-@font-face {
-    font-family: Gotham-Bold;
-    src: url(../fonts/GothamBold.ttf);
-}
-
-@font-face {
-    font-family: Gotham-Medium;
-    src: url(../fonts/GothamMedium.ttf);
-}
-
-@font-face {
-    font-family: Gotham-Light;
-    src: url(../fonts/GothamLight.ttf);
-}
-
-@font-face {
-    font-family: Gotham-Thin;
-    src: url(../fonts/GothamThin.ttf);
-}
-
-@font-face {
-    font-family: ProximaNovaBlack;
-    src: url(../fonts/ProximaNovaBlack.ttf);
-}
-
-@font-face {
-    font-family: ProximaNovaBold;
-    src: url(../fonts/ProximaNovaBold.ttf);
-}
-
-@font-face {
-    font-family: ProximaNovaSemibold;
-    src: url(../fonts/ProximaNovaSemibold.ttf);
-}
-
-@font-face {
-    font-family: ProximaNovaRegular;
-    src: url(../fonts/ProximaNovaRegular.ttf);
-}
-
-@font-face {
-    font-family: ProximaNovaThin;
-    src: url(../fonts/ProximaNovaThin.ttf);
-}
-
 /*Generic: incontextual classes*/
 article{
 	display:none !important;
@@ -270,7 +220,7 @@ a{
 				.event-hour{
 					width:54px;
 					display:flex;
-					font-family: Gotham-Medium;
+					font-family: 'Montserrat', sans-serif;
 					flex-direction:column;
 					text-align:right;
 					font-weight: bold;
@@ -283,7 +233,7 @@ a{
 				}
 				&.subscribed{
 					.title:after{
-						font-family:FontAwesome;
+						font-family: FontAwesome;
 						content:"\f024";
 						font-size: 13px;
 						vertical-align: super;
@@ -304,7 +254,7 @@ a{
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
-	font-family: 'Gotham-Medium';
+	font-family: 'Montserrat', sans-serif;
 	z-index: 2;
 	flex: 1 1 0;
 	&.show-when-small{
@@ -392,7 +342,7 @@ a{
 		.panel-info{
 			h3{
 				font-weight: normal;
-				font-family: 'ProximaNovaSemibold', sans-serif;
+				font-family: 'Montserrat', sans-serif;
 			}
 		}
 		.margin-bottom{
