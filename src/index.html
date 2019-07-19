@@ -147,7 +147,7 @@
 			<div id="particles-js" class="hero__layer hero__layer--fog"></div>
 		</div>
 		<div class="hero__layer hero__layer--depths"></div>
-		<picture class="buildings lax" data-lax-translate-y="0 0, vh (vh*0.7)">
+		<picture class="buildings lax buildings--hidden" data-lax-translate-y="0 0, vh (vh*0.7)">
 			<source media="(max-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
 								/assets/img/multisize/1.5x/buildings-mobile%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings-mobile%402x.png 2x,
@@ -162,7 +162,7 @@
 								/assets/img/multisize/2x/buildings%402x.png 2x,
 								/assets/img/multisize/3x/buildings%403x.png 3x,
 								/assets/img/multisize/4x/buildings%404x.png 4x" alt="Destroyed Barcelona buildings"
-				onload="this.parentElement.classList.add('buildings--animation'); this.classList.add('buildings__img--animation')">
+				onload="this.parentElement.classList.add('buildings--animation'); this.parentElement.classList.remove('buildings--hidden'); this.classList.add('buildings__img--animation')">
 		</picture>
 		<h1 class="hero__title hero__title--dust lax" data-lax-translate-y="0 0, vh (vh*0.6)">Hack<strong
 				class="hero__title--bold">U<span class="hero__letter--fall hero__title--dust">P</span>C</strong></h1>
@@ -207,7 +207,7 @@
 	<section class="no-overflow">
 		<div class="section section--faq">
 			<div class="graffitis">
-				<img class="graffiti graffiti--hackupc" src="assets/img/graffitis/hackupc.svg" alt="HackUPC graffiti">
+				<img class="graffiti graffiti--hackupc" src="assets/img/graffitis/hackupc_alt.svg" alt="HackUPC graffiti">
 				<img class="graffiti graffiti--system" src="assets/img/graffitis/system.svg" alt="Change the System graffiti">
 				<img class="graffiti graffiti--fallout" src="assets/img/graffitis/fallout.svg" alt="Fallout graffiti">
 			</div>

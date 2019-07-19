@@ -373,6 +373,7 @@ only screen and (                min-resolution: 2dppx) {
 	shake3 0.05s 1.75s cubic-bezier(0.45, 0.05, 0.55, 0.95) 3.5 alternate
 	;
 }
+.buildings--hidden{ opacity: 0;}
 
 @keyframes buildings-up {
 	0% {transform: translateY(1em);}
