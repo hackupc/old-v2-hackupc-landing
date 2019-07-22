@@ -2,7 +2,7 @@
 dist/*
 !dist/.gitkeep
 .sass-cache
-
+package-lock.json
 
 # ------- Generated ------- #
 # Created by https://www.gitignore.io/api/node,bower,linux,macos,windows,webstorm,visualstudiocode
