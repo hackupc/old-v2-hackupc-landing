@@ -6,7 +6,12 @@ Hi! This is the code of the HackUPC 2019 landing page.
 
 ## Setup
 
-Install the latest version Node.js (at least v10.15.3). [Find how here](https://nodejs.org/en/download/package-manager/).
+Install the latest version Node.js (at least v12.6.0). [Find how here](https://nodejs.org/en/download/package-manager/).
+```sh
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n latest
+```
 
 ```sh
 git clone git@github.com:hackupc/frontend.git
@@ -186,7 +191,7 @@ This are the explanations of why we chose each technology, so you can decide whe
 
 ### PostCSS
 
-> [PostCSS - Oficial website](https://standardjs.com/)
+> [PostCSS - Oficial website](https://postcss.org/)
 
 - All CSS goodies in one package!
   - Minifyer
