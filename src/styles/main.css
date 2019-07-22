@@ -20,7 +20,8 @@ abbr{text-decoration: none;}
   --tertiary:      #E87A54;
   --tertiary-dark: #9E5235;
   --dark:      #222;
-  --gray-dark: #39383A;
+  --gray-dark: #545355;
+  /* --gray-dark: #39383A; */
   --gray-light:#AAA;
   --light:     #EEE;
   --text-dark: #111;
@@ -530,45 +531,53 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Sponsors & Partners */
-.section__list--sponsors, .section__list--partners{
+.section__list--sponsors{
 	align-items: center;
 	justify-content: center;
+	padding: 0.5em;
 }
-.sponsor:hover, .partner:hover{
+.sponsor:hover{
 	/* transform: scale( calc( calc( var(--size) + 25px) / var(--size) ) ); */
-  transform: scale(1.25);
+	transform: scale(1.25);
 }
-.sponsor, .partner{
-	--aspect-ratio: 0.75;
-	--size: 100px;
-  margin: 0 25px;
+.sponsor{
+	height: 2em;
+	margin: 0.5em;
 	transition: transform .1s ease-out;
-	width: var(--size);
-	height: calc(var(--size) * var(--aspect-ratio));
 	max-width: 100%;
-	max-height: calc(100% * var(--aspect-ratio));
+	display: block;
 }
-.sponsor__img, .partner__img{
-  width: 100%;
+.sponsor__img{
 	height: 100%;
+	max-width: 100%;
 	object-fit: contain;
 }
 
-.sponsor--tera{ --size: 250px; }
-.sponsor--giga{ --size: 200px; }
-.sponsor--kilo{ --size: 150px; }
-.sponsor--mega, 
-.partner--normal{ --size: 100px; margin: 0 12.5px; }
-.sponsor--mili{ --size: 90px; }
+.sponsor--tera{ height: 12em; }
+.sponsor--giga{ height: 6em; }
+.sponsor--kilo{ height: 4em; }
+.sponsor--mega{ height: 2em; }
+.sponsor--mili{ height: 1em; }
+.sponsor--partner{ height: 3em; }
 
-/* scale = (--size + 25px ) / --size */
-.sponsor--tera:hover{ transform: scale(1.1); }
-.sponsor--giga:hover{ transform: scale(1.125); }
-.sponsor--kilo:hover{ transform: scale(1.16667); }
-.sponsor--mega:hover, 
-.partner--normal:hover{ transform: scale(1.25); }
-.partner--mili:hover{ transform: scale(1,2778); }
+/* scale = (height + 0.5em ) / height */
+.sponsor--tera:hover{ transform: scale(1.04167); }
+.sponsor--giga:hover{ transform: scale(1.08333); }
+.sponsor--kilo:hover{ transform: scale(1.125); }
+.sponsor--mega:hover{ transform: scale(1.25); } 
+.sponsor--partner:hover{ transform: scale(1.16667); }
 
+.sponsor-type{
+	margin: 2em auto 0;
+	text-align: center;
+	color: var(--gray-dark);
+	text-transform: uppercase;
+	font-size: 1em;
+}
+.sponsor-type::before, .sponsor-type::after{
+	content: '·';
+	margin: 0 1em;
+}
 /* Footer section */
 .section--footer{
   max-width: none;
