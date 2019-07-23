@@ -565,7 +565,7 @@ only screen and (                min-resolution: 2dppx) {
 .sponsor--mega{ height: 2em; }
 .sponsor--mili{ height: 1em; }
 .sponsor--partner{ height: 4em; }
-.sponsor--support{ height: 4em; }
+.sponsor--support{ height: 3.5em; }
 
 /* scale = (height + 0.5em ) / height */
 .sponsor--tera:hover{ transform: scale(1.04167); }
@@ -573,7 +573,7 @@ only screen and (                min-resolution: 2dppx) {
 .sponsor--kilo:hover{ transform: scale(1.125); }
 .sponsor--mega:hover{ transform: scale(1.25); } 
 .sponsor--partner:hover{ transform: scale(1.125); }
-.sponsor--support:hover{ transform: scale(1.125); }
+.sponsor--support:hover{ transform: scale(1.14286); }
 
 /* Footer section */
 .section--footer{
