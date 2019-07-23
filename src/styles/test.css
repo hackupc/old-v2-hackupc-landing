@@ -39,10 +39,10 @@
 	padding: 1em 2em;
 	max-width: 800px;
 }
-/* .sponsor:hover {
-	transform: scale( calc( calc( var(--size) + 25px) / var(--size) ) );
-	transform: scale(1.25);
-} */
+.sponsor:hover {
+	/* transform: scale( calc( calc( var(--size) + 25px) / var(--size) ) ); */
+	transform: scale(1.1);
+}
 .sponsor {
 	transition: transform .1s ease-out;
 	width: 100%;
