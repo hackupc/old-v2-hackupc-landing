@@ -531,6 +531,12 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Sponsors & Partners */
+.section__title--logos{
+  margin: 0;
+}
+.section__title--support{
+  font-size: 1.1em;
+}
 .section__list--sponsors{
 	align-items: center;
 	justify-content: center;
@@ -558,14 +564,16 @@ only screen and (                min-resolution: 2dppx) {
 .sponsor--kilo{ height: 4em; }
 .sponsor--mega{ height: 2em; }
 .sponsor--mili{ height: 1em; }
-.sponsor--partner{ height: 3em; }
+.sponsor--partner{ height: 4em; }
+.sponsor--support{ height: 4em; }
 
 /* scale = (height + 0.5em ) / height */
 .sponsor--tera:hover{ transform: scale(1.04167); }
 .sponsor--giga:hover{ transform: scale(1.08333); }
 .sponsor--kilo:hover{ transform: scale(1.125); }
 .sponsor--mega:hover{ transform: scale(1.25); } 
-.sponsor--partner:hover{ transform: scale(1.16667); }
+.sponsor--partner:hover{ transform: scale(1.125); }
+.sponsor--support:hover{ transform: scale(1.125); }
 
 /* Footer section */
 .section--footer{
