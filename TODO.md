@@ -13,6 +13,7 @@
 - [ ] Make the subscrive page
 - [ ] Put the logos
 - [ ] Make sure that github continous integration accepts the commits
+- [ ] Update directors names' in the legal pages
 
 ## Improve Repo
 

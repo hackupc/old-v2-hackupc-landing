@@ -1,5 +1,8 @@
 :root{
   --cookie-bg: rgba(49, 49, 49, 0.9);
+  --button-color: #B4C959;
+  --button-color-dark: #5F723F;
+  --url-color: #69A9E9;
 }
 .cookies-notice{
   position: fixed;
@@ -29,7 +32,7 @@
   max-width: 800px;
 }
 .cookie-notice__link{
-  color: #69A9E9;
+  color: var(--url-color);
   /* white-space: nowrap; */
 }
 
@@ -41,8 +44,8 @@
 /* Button OK! style */
 .cookies-notice__button{
   border: none;
-  border-bottom: solid #54885F 4px;
-  background: #7AD78E;
+  border-bottom: solid var(--button-color-dark) 4px;
+  background: var(--button-color);
   color: #FFF;
   font-size: 0.8em;
   font-weight: bold;
