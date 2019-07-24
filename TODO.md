@@ -32,7 +32,7 @@
 - [x] Remove unused font weights
 - [x] Add title atribute to the x button in cookies notice
 - [x] Fix FOUC: add a nice animation
-- [ ] Split the main.css into small .css and join them with includes
+- [x] Split the landing.css into small .css and join them with includes
 - [ ] Minify particles.js
 - [ ] Crop title text filter image to reduce size
 - [ ] Create footer.css file and make it like the cookies

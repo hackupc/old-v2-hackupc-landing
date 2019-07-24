@@ -1,0 +1,15 @@
+/* Keep the order, it's important for overrides */
+@import "normalize.css";
+
+@import "shared/reset.css";
+@import "shared/variables.css";
+@import "shared/custom.css";
+@import "shared/general.css";
+
+@import "landing/hero.css";
+@import "landing/faq.css";
+@import "landing/moreaplications.css";
+@import "landing/sponsors.css";
+
+@import "shared/footer.css";
+@import "shared/extras.css";
