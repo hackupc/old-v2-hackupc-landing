@@ -1,6 +1,6 @@
 {
   "name": "hackupc-frontend",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "HackUPC static landing and live web pages",
   "landing": "dist/index.html",
   "scripts": {
