@@ -19,7 +19,7 @@
   content: '';
   position: absolute;
   top: 350px; bottom: 0; left: 0; right: 0;
-  background-color: #4D4233;
+  background-color: #5C5242;
   z-index: -1;
 }
 .no-overflow--footer{
