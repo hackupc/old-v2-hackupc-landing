@@ -1,0 +1,4 @@
+/* Custom element style */
+body{font-family:var(--font-family);}
+a{color:var(--tertiary);}
+::selection{background:var(--primary);color:var(--text-dark);}
