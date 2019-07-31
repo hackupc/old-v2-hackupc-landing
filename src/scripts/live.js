@@ -112,7 +112,7 @@
 	*/
 	function generateTimestamps(){
 		schedule.days.forEach(function(day){
-			day.startTmsp = Util.dateToSeconds(day.date)
+			day.startTmsp = Util.dateStringToSeconds(day.date)
 				+ parseInt(schedule.baseTimeOffset)*60;
 
 			day.endTmsp = day.startTmsp + 24*60*60
@@ -120,13 +120,13 @@
 
 			day.events.forEach(function(event){
 				event.startTmsp = day.startTmsp
-					+ Util.hourToSeconds(event.startHour);
+					+ Util.hourStringToSeconds(event.startHour);
 				if(!event.endHour){
 					event.endTmsp = event.startTmsp;
 				}
 				else{
 					event.endTmsp = day.startTmsp
-						+ Util.hourToSeconds(event.endHour);
+						+ Util.hourStringToSeconds(event.endHour);
 				}
 			});
 		});
@@ -269,7 +269,7 @@
 
 	function updateCountdown(){
 
-		var countdownStart = Util.dateToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
+		var countdownStart = Util.dateStringToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset)*60;
 		var running = false;
 		var obj = {hours: 0, minutes: 0, seconds: 0};
 		var elapsed = Util.getNowSeconds() - countdownStart;
@@ -437,7 +437,7 @@
 	* Added actual datetime to avoid browser cached copies of schedule
 	*/
 	function updateSchedule(cb){
-		Util.loadFile("/data/schedule.json?date="+new Date().getTime(), function(data){
+		Util.loadFile("/data/schedule.json?date="+Util.getNowDate().getTime(), function(data){
 			var newSchedule = JSON.parse(data);
 
 			if(!newSchedule.version)
@@ -450,7 +450,7 @@
 				generateEventReferences();
 				if(typeof cb == "function")
 					cb();
-				console.info("Schedule updated on (" + (new Date()) + "): \n"+schedule.message);
+				console.info("Schedule updated on (" + Util.getNowDate() + "): \n"+schedule.message);
 			}
 			else{
 				console.info("Schedule up to date");
@@ -597,7 +597,7 @@
 	////////////////////////
 
 	/*function buildHardwareLab(cb) {
-		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+new Date().getTime(), function(data) {
+		Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+Util.getNowDate().getTime(), function(data) {
 			var hardElems = JSON.parse(data)['data'];
 			var hardList = document.getElementById("hardwareList");
 			hardList.innerHTML="";

@@ -114,7 +114,7 @@ var Util = (function(CONST){
 	/*
 	* HH:MM format hour to seconds (delta)
 	*/
-	obj.hourToSeconds = function(hour){
+	obj.hourStringToSeconds = function(hour){
 		var hp = hour.split(':');
 		return hp[0]*60*60+hp[1]*60;
 	};
@@ -122,22 +122,24 @@ var Util = (function(CONST){
 	/*
 	* Seconds passed between epoch and 'date'
 	*/
-	obj.dateToSeconds = function(d){
-		var dateHour = d.split(" ");
-		var hour = [0,0];
-		var date = dateHour[0].split("/") || [0,0,0];
-
-		if(dateHour.length > 1)
-			hour = dateHour[1].split(":");
-
-		return Date.UTC(date[2], date[1]-1,
-			date[0], hour[0], hour[1])/1000;
+	obj.dateStringToSeconds = function(d){
+		var dateFormat = /^([0-3]?\d)\W([0-1]?\d)\W(\d{4})(\W([0-2]?\d)\W([0-5]?\d))?$/;
+		var result = d.match(dateFormat);
+		return Date.UTC(result[3], result[2]-1, result[1],
+										result[6] || 0, result[5] || 0)/1000;
 	};
 
+	var realStartDate = new Date();
+
 	obj.getNowSeconds = function(){
-		return Date.now()/1000;
-		//Testing
-		//return Date.UTC(2017,2,3,23,56)/1000;
+		if(CONST.FAKE_DATE)
+			return (CONST.FAKE_DATE.getTime() + Date.now() - realStartDate.getTime())/1000;
+		else
+			return Date.now()/1000;
+	};
+
+	obj.getNowDate = function(){
+		return new Date(obj.getNowSeconds()*1000);
 	};
 
 	obj.getHumanTime = function(s){
