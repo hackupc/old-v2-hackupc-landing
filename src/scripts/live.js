@@ -437,7 +437,7 @@
 	* Added actual datetime to avoid browser cached copies of schedule
 	*/
 	function updateSchedule(cb){
-		Util.loadFile("assets/data/schedule.json?date="+new Date().getTime(), function(data){
+		Util.loadFile("/data/schedule.json?date="+new Date().getTime(), function(data){
 			var newSchedule = JSON.parse(data);
 
 			if(!newSchedule.version)

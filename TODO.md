@@ -54,3 +54,7 @@
 - [ ] Make an example hero-bg with a gradient or canvas
 - [ ] Cookies banner like [this](https://speckyboy.com/)
 - [ ] Generate favicon with cli-real-favicon in npm
+
+## Live
+
+- [ ] Don't show popup if notifications are accepted
