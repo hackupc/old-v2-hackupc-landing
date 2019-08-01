@@ -1,13 +1,25 @@
 {
-    "extends": "standard",
-    "plugins": [
-        "standard",
-        "promise"
+  "extends": "standard",
+  "plugins": [
+    "standard",
+    "promise"
+  ],
+  "rules": {
+    "semi": [
+      "off",
+      "never"
     ],
-    "rules": {
-        "semi": ["off", "never"],
-        "indent": [2, "tab"],
-        "no-tabs": 0,
-        "quotes": ["off", "never"]
-    }
+    "indent": [
+      2,
+      "space"
+    ],
+    "no-tabs": 0,
+    "quotes": [
+      "off",
+      "never"
+    ]
+  },
+  "env": {
+    "browser": 1
+  }
 }

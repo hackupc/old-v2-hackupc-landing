@@ -8,16 +8,16 @@ cookieNotice.innerHTML = `<p class="cookies-notice__text">${cookieText}</p><butt
 cookieNotice.classList.add('cookies-notice')
 
 if (window.localStorage.getItem('cookies') !== '1') {
-  if (document.readyState !== 'loading') {    
+  if (document.readyState !== 'loading') {
     document.body.appendChild(cookieNotice)
-  }else{
+  } else {
     document.addEventListener('DOMContentLoaded', function () {
       document.body.appendChild(cookieNotice)
     })
   }
 }
 
-function acceptCookies () {
+function acceptCookies() {
   window.localStorage.setItem('cookies', '1')
   cookieNotice.classList.add('cookies-notice--hidden')
 }
