@@ -3,5 +3,9 @@
   "editor.tabSize": 2,
   "editor.tabCompletion": "on",
   "javascript.validate.enable": false,
-  "javascript.format.enable": false
+  "javascript.format.enable": false,
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }

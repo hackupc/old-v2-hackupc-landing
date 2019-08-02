@@ -1,7 +1,7 @@
 # top-most EditorConfig file
 root = true
 
-[*.{js,html,scss}]
+[*.{js,ts,html,css,scss,json,yml}]
 indent_style = tab
 indent_size = 2
 end_of_line = lf
