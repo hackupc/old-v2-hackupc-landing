@@ -54,7 +54,8 @@
     "lint": "npm-run-all --silent --parallel -c lint:*",
     "lint:html": "htmlhint src/**/*.html",
     "lint:js": "eslint src/**/*.js",
-    "lint:styles": "stylelint \"src/**/*.{css,scss}\" \"!**/lib/**\""
+    "lint:styles": "stylelint \"src/**/*.{css,scss}\" \"!**/lib/**\"",
+    "autofix": "stylelint \"src/**/*.{css,scss}\" \"!**/lib/**\" --fix"
   },
   "author": "HackUPC Dev Team",
   "license": "MIT",
@@ -87,6 +88,7 @@
     "htmlhint": "^0.11.0",
     "http-server": "^0.11.1",
     "standard": "^12.0.1",
+    "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0"
   }
 }
