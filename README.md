@@ -7,6 +7,7 @@ Hi! This is the code of the HackUPC 2019 landing page.
 ## Setup
 
 Install the latest version Node.js (at least v12.6.0). [Find how here](https://nodejs.org/en/download/package-manager/).
+
 ```sh
 sudo npm cache clean -f
 sudo npm install -g n
@@ -131,10 +132,6 @@ New versions of the schedule will be loaded only if 'version' is different.
 > If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
 Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
 
-### Change theme
-
-> TODO: fill this part
-
 ## Live
 
 Features included
@@ -201,17 +198,25 @@ This are the explanations of why we chose each technology, so you can decide whe
 
 ### GitHub
 
-#### Coderain Bot
+#### Code Climate
 
-> [Coderain - Oficial website]()
+> [Code Climate - Oficial website](https://github.com/marketplace/code-climate)
+Ensure code quality and mantainability.
 
-#### Issues Bot
+#### ImgBot
 
-> [IssuesBot - Oficial website]()
+> [ImgBot - Oficial website](https://github.com/marketplace/imgbot)
+Compress images.
 
-#### Issues
+#### Stale
 
-#### Branches
+> [Stale - Oficial website](https://github.com/marketplace/stale)
+Closes Issues
+
+#### Travis
+
+> [Travis - Oficial website](https://github.com/marketplace/travis-ci)
+Runs linterns.
 
 ## Support
 
