@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "mkaufman.htmlhint",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "davidanson.vscode-markdownlint",
+    "chenxsan.vscode-standardjs",
+    "shinnn.stylelint",
+    "eg2.vscode-npm-script"
+  ]
+}

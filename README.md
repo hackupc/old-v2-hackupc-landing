@@ -23,7 +23,7 @@ npm install
 
 Use `npm run watch` to compile and serve the dist directory in real time. Then view the website at [https://localhost:8080](https://localhost:8080)
 
-**Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `maskdownlint`, `StandardJS` and `stylelint`. In other editors they may have similar names.
+**Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `markdownlint`, `StandardJS`, `stylelint` and `npm`. In other editors they may have similar names.
 Or use `npm run lint` to run linters manually from the console to check errors.
 
 We use linters to ensure code quality, please fix all the errors.
