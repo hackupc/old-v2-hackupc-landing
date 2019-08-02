@@ -1,6 +1,5 @@
 {
   "standard.autoFixOnSave": true,
-  "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.tabCompletion": "on",
   "javascript.validate.enable": false,
