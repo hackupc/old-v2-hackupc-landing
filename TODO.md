@@ -6,18 +6,18 @@
 
 - [x] Refactor all 2018 for 2019 and any outdated content
 - [ ] Update schedule.json
-- [ ] Update `favicon.ico` (color)
+- [x] Update `favicon.ico` (color)
 - [ ] Test if live works
 - [ ] Make the applcations closed page
 - [x] Update FAQ
 - [ ] Make the subscrive page
-- [ ] Put the logos
-- [ ] Make sure that github continous integration accepts the commits
-- [ ] Update directors names' in the legal pages
+- [x] Put the logos
+- [x] Make sure that github continous integration accepts the commits
+- [x] Update directors names' in the legal pages
 
 ## Improve Repo
 
-- [ ] Remove unused styles
+- [x] Remove unused styles
 - [x] Clear `index.html`
 - [ ] Clear `live.html`
 - [x] Fix legal pages style because bootrstap was deleted
@@ -49,12 +49,16 @@
 ## Nice things to have
 
 - [ ] Fix html-minifier *.html
+- [ ] Make the master branch that autodeploys to hackupc.com
 - [ ] Make the beta branch that autodeploys to beta.hackupc.com
 - [ ] Parse legal documents to markdown and add a npm script to compile them
-- [ ] Make an example hero-bg with a gradient or canvas
+- [ ] Make an example hero-bg with a gradient
 - [ ] Cookies banner like [this](https://speckyboy.com/)
 - [ ] Generate favicon with cli-real-favicon in npm
+- [ ] Use babel instead of uglify
 
 ## Live
 
 - [ ] Don't show popup if notifications are accepted
+- [ ] Remove .sass files
+- [ ] Use ES6
