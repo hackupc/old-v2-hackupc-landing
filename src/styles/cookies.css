@@ -36,7 +36,7 @@
 	/* white-space: nowrap; */
 }
 
-@keyframes slide-up  {
+@keyframes slide-up {
 	0% { transform: translateY(100%) }
 	100% { transform: translateY(0) }
 }
@@ -56,7 +56,7 @@
 /* end Button OK! style */
 
 /* Button x style */
-/* .cookies-notice__button  {
+/* .cookies-notice__button {
 	font-size: 0;
 	padding: 0;
 	position: relative;
@@ -69,10 +69,10 @@
 	transition: opacity 50ms ease-out;
 	color: #FFF;
 } 
-.cookies-notice__button:hover  {
+.cookies-notice__button:hover {
 	opacity: 1;
 }
-.cookies-notice__button:before, .cookies-notice__button:after  {
+.cookies-notice__button:before, .cookies-notice__button:after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -80,10 +80,10 @@
 	width: 2px;
 	background-color: currentColor;
 }
-.cookies-notice__button:before  {
+.cookies-notice__button:before {
 	transform: rotate(45deg);
 }
-.cookies-notice__button:after  {
+.cookies-notice__button:after {
 	transform: rotate(-45deg);
 } */
 /* end Button x style */

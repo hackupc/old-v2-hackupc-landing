@@ -30,9 +30,9 @@
 	z-index: -1;
  }
 
-.footer__element  { margin: 1em auto;  }
-.footer__element--first { margin-top: 0;  }
-.footer__element--last { margin-bottom: 0;  }
+.footer__element { margin: 1em auto; }
+.footer__element--first { margin-top: 0; }
+.footer__element--last { margin-bottom: 0; }
 
 .footer_column {
 	display: flex;
@@ -41,7 +41,7 @@
 	max-width: 1200px;
 	margin: -0.5em auto;
  }
-.footer_column__element { margin: 0.5em;  }
+.footer_column__element { margin: 0.5em; }
 
 /* Legal */
 .section__list--links-list {
@@ -54,7 +54,7 @@
 	flex-grow: 1;
  }
 @media(max-width: 25em) {
-	.section__list--packed { font-size: 4vw;  }
+	.section__list--packed { font-size: 4vw; }
  }
 .links-list {
 	text-decoration: none;

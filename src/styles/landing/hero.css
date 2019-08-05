@@ -18,8 +18,8 @@
 	background-color: #a6ba86;
  }
 @media(min-width: 33.3333em) {
-	.hero { font-size: 1em;  }
-	.button--hero { font-size: 1.2em !important;  }
+	.hero { font-size: 1em; }
+	.button--hero { font-size: 1.2em !important; }
  }
 .hero__title {
 	font-size: 6em;
@@ -48,17 +48,17 @@ only screen and (	 -moz-min-device-pixel-ratio: 2),
 only screen and (		 -o-min-device-pixel-ratio: 2/1),
 only screen and (				min-device-pixel-ratio: 2),
 only screen and (								min-resolution: 192dpi),
-only screen and (								min-resolution: 2dppx)  { 
+only screen and (								min-resolution: 2dppx) { 
 	.hero__title--dust::before { background-image: url(/assets/img/multisize/2x/dust@2x-20.jpg); }
 	/* .body { background-image: url(/assets/img/multisize/2x/wall@2x.jpg); } */
  }
-@supports not (mix-blend-mode: multiply)  {
+@supports not (mix-blend-mode: multiply) {
 	.hero__title--dust {
 	-webkit-text-fill-color: transparent;
 	background-clip: text !important;
 	background: white url(/assets/img/multisize/1x/dust-20.jpg) center/512px;
 	 }
-	.hero__title--dust::before { content: none;  }
+	.hero__title--dust::before { content: none; }
  }
 .hero__title--bold {
 	font-weight: 800;
@@ -70,9 +70,9 @@ only screen and (								min-resolution: 2dppx)  {
 	transform: translateX(-5%) rotate(15deg);
 	backface-visibility: hidden;
  }
-@keyframes letter-fall  {
-	0%  { transform: translateX(-5%) rotate(0); }
-	100%  { transform: translateX(-5%) rotate(15deg); }
+@keyframes letter-fall {
+	0% { transform: translateX(-5%) rotate(0); }
+	100% { transform: translateX(-5%) rotate(15deg); }
  }
 .hero__date {
 	font-size: 2em;
@@ -124,7 +124,7 @@ only screen and (								min-resolution: 2dppx)  {
  }
 @media(min-width: 42em) {
 	.buildings { margin-bottom: -14em; font-size: 1.25em; height: 28em; }
-	.buildings__img { margin-left: 2%;  }
+	.buildings__img { margin-left: 2%; }
  }
 .hero__layer--fog {
 	bottom: 20%;
@@ -194,10 +194,10 @@ only screen and (								min-resolution: 2dppx)  {
 	position: absolute;
 	color: var(--text-light);
  }
-.plant--bottom { bottom: var(--plant-offset-y);  }
-.plant--top { 		top:		var(--plant-offset-y);  }
-.plant--right { 	right:	var(--plant-offset-x);  }
-.plant--left { 	 left:	 var(--plant-offset-x);  }
+.plant--bottom { bottom: var(--plant-offset-y); }
+.plant--top { 		top:		var(--plant-offset-y); }
+.plant--right { 	right:	var(--plant-offset-x); }
+.plant--left { 	 left:	 var(--plant-offset-x); }
 
 .plant-sky {
 	--plant-offset-x: -70px;
@@ -219,49 +219,49 @@ only screen and (								min-resolution: 2dppx)  {
 	transform: translate(-15%) rotate(20deg);
  }
 @media(min-width: 800px) {
-	.plant-wall-right { height: 320px;  }
-	.plant-sky { 				height: 266.67px;  }
-	.plant-wall-left { 	height: 360px;  }
+	.plant-wall-right { height: 320px; }
+	.plant-sky { 				height: 266.67px; }
+	.plant-wall-left { 	height: 360px; }
  }
 
 /* Plant animations */
-.plant-sky--animation { 				animation: plant_sky				4.3s 0.1s ease-out, plant_sky-copy				0.1s steps(1);  }
-.plant-wall-right--animation { animation: plant_wall_right 3.1s 0.8s ease-out, plant_wall_right-copy 0.8s steps(1);  }
-.plant-wall-left--animation { 	animation: plant_wall_left	4s	0.25s ease-out, plant_wall_left-copy 0.25s steps(1);  }
+.plant-sky--animation { 				animation: plant_sky				4.3s 0.1s ease-out, plant_sky-copy				0.1s steps(1); }
+.plant-wall-right--animation { animation: plant_wall_right 3.1s 0.8s ease-out, plant_wall_right-copy 0.8s steps(1); }
+.plant-wall-left--animation { 	animation: plant_wall_left	4s	0.25s ease-out, plant_wall_left-copy 0.25s steps(1); }
 
-@keyframes plant_sky  {
-	0%  { transform: translate(-88%,12%) rotate(45deg); }
-	100%  { transform: translate(0) rotate(0); }
+@keyframes plant_sky {
+	0% { transform: translate(-88%,12%) rotate(45deg); }
+	100% { transform: translate(0) rotate(0); }
  }
-@keyframes plant_wall_right  {
-	0%  { transform: translate(150%,-10%) rotate(-75deg); }
-	100%  { transform: translate(0) rotate(0); }
+@keyframes plant_wall_right {
+	0% { transform: translate(150%,-10%) rotate(-75deg); }
+	100% { transform: translate(0) rotate(0); }
  }
-@keyframes plant_wall_left  {
-	0%  { transform: translate(-207%,-33%) rotate(120deg); }
-	100%  { transform: translate(-15%) rotate(20deg); }
+@keyframes plant_wall_left {
+	0% { transform: translate(-207%,-33%) rotate(120deg); }
+	100% { transform: translate(-15%) rotate(20deg); }
  }
 
 /* The animation's copy is to fix a Safari and Edge bug, when tow animations have the same name */
-@keyframes letter-fall-copy  {
-	0%  { transform: translateX(-5%) rotate(0); }
-	100%  { transform: translateX(-5%) rotate(15deg); }
+@keyframes letter-fall-copy {
+	0% { transform: translateX(-5%) rotate(0); }
+	100% { transform: translateX(-5%) rotate(15deg); }
  }
-@keyframes plant_sky-copy  {
-	0%  { transform: translate(-88%,12%) rotate(45deg); }
-	100%  { transform: translate(0) rotate(0); }
+@keyframes plant_sky-copy {
+	0% { transform: translate(-88%,12%) rotate(45deg); }
+	100% { transform: translate(0) rotate(0); }
  }
-@keyframes plant_wall_right-copy  {
-	0%  { transform: translate(150%,-10%) rotate(-75deg); }
-	100%  { transform: translate(0) rotate(0); }
+@keyframes plant_wall_right-copy {
+	0% { transform: translate(150%,-10%) rotate(-75deg); }
+	100% { transform: translate(0) rotate(0); }
  }
-@keyframes plant_wall_left-copy  {
-	0%  { transform: translate(-207%,-33%) rotate(120deg); }
-	100%  { transform: translate(-15%) rotate(20deg); }
+@keyframes plant_wall_left-copy {
+	0% { transform: translate(-207%,-33%) rotate(120deg); }
+	100% { transform: translate(-15%) rotate(20deg); }
  }
 
 /* Buildings animation */
-.buildings--animation { animation: buildings-up 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), fade-in 2s ease-in;  }
+.buildings--animation { animation: buildings-up 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), fade-in 2s ease-in; }
 .buildings__img--animation { animation: 
 	shake1 0.05s 0s cubic-bezier(0.45, 0.05, 0.55, 0.95) 20 alternate,
 	shake2 0.05s 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 10 alternate,
@@ -270,25 +270,25 @@ only screen and (								min-resolution: 2dppx)  {
  }
 .buildings--hidden { opacity: 0; }
 
-@keyframes buildings-up  {
-	0%  { transform: translateY(1em); }
-	100%  { transform: translateY(0); }
+@keyframes buildings-up {
+	0% { transform: translateY(1em); }
+	100% { transform: translateY(0); }
  }
-@keyframes shake1  {
-	0%  { transform: translateX(1.5px); }
-	100%  { transform: translateX(-1.5px); }
+@keyframes shake1 {
+	0% { transform: translateX(1.5px); }
+	100% { transform: translateX(-1.5px); }
  }
-@keyframes shake2  {
-	0%  { transform: translateX(1px); }
-	100%  { transform: translateX(-1px); }
+@keyframes shake2 {
+	0% { transform: translateX(1px); }
+	100% { transform: translateX(-1px); }
  }
-@keyframes shake3  {
-	0%  { transform: translateX(0.5px); }
-	100%  { transform: translateX(-0.5px); }
+@keyframes shake3 {
+	0% { transform: translateX(0.5px); }
+	100% { transform: translateX(-0.5px); }
  }
-@keyframes shake4  {
-	0%  { transform: translateX(0.25px); }
-	100%  { transform: translateX(-0.25px); }
+@keyframes shake4 {
+	0% { transform: translateX(0.25px); }
+	100% { transform: translateX(-0.25px); }
  }
 
 /* Grafittis */

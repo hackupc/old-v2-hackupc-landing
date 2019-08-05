@@ -15,8 +15,8 @@
 	cursor: not-allowed;
 	/* pointer-events: none; */
  }
-.button--disabled:hover { transform: none;  }
-.button--disabled:hover::before { transform: translateY(0.625em);  }
+.button--disabled:hover { transform: none; }
+.button--disabled:hover::before { transform: translateY(0.625em); }
 .button__tooltip {
 	position: absolute;
 	white-space: nowrap;
