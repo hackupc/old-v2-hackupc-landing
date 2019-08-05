@@ -363,24 +363,12 @@ a {
 				&:not(:first-child) {
 					border-left: thin solid white;
 				}
-				&.fb {
-					background-color: $fbColor;
-				}
-				&.yt {
-					background-color: $ytColor;
-				}
-				&.tw {
-					background-color: $twColor;
-				}
-				&.ig {
-					background-color: $igColor;
-				}
-				&.gt {
-					background-color: $gtColor;
-				}
-				&.me {
-					background-color: $meColor;
-				}
+				// &.fb { background-color: $fbColor; }
+				// &.yt { background-color: $ytColor; }
+				// &.tw { background-color: $twColor; }
+				// &.ig { background-color: $igColor; }
+				// &.gt { background-color: $gtColor; }
+				// &.me { background-color: $meColor; }
 			}
 		}
 		.label {
