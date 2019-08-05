@@ -16,85 +16,83 @@
 	box-sizing: border-box;
 	padding: 48px 0;
 	background-color: #a6ba86;
- }
+}
 @media(min-width: 33.3333em) {
 	.hero { font-size: 1em; }
 	.button--hero { font-size: 1.2em !important; }
- }
+}
 .hero__title {
 	font-size: 6em;
 	margin: 0;
 	font-weight: 300;
 	white-space: nowrap;
- }
+}
 .hero__title--dust {
 	position: relative;
 	color: #fff;
 	background: #000;
 	mix-blend-mode: screen;
- }
+}
 .hero__title--dust::before {
 	content: "";
 	position: absolute;
-	top:1px;right:1px;bottom:1px;left:1px;
+	top: 1px; right: 1px; bottom: 1px; left: 1px;
 	background: white url(/assets/img/multisize/1x/dust-20.jpg) center/512px;
 	mix-blend-mode: multiply;
 	pointer-events: none;
- }
+}
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (	 min--moz-device-pixel-ratio: 2),
-only screen and (	 -moz-min-device-pixel-ratio: 2),
-only screen and (		 -o-min-device-pixel-ratio: 2/1),
-only screen and (				min-device-pixel-ratio: 2),
-only screen and (								min-resolution: 192dpi),
-only screen and (								min-resolution: 2dppx) { 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   -moz-min-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
 	.hero__title--dust::before { background-image: url(/assets/img/multisize/2x/dust@2x-20.jpg); }
 	/* .body { background-image: url(/assets/img/multisize/2x/wall@2x.jpg); } */
- }
+}
 @supports not (mix-blend-mode: multiply) {
 	.hero__title--dust {
-	-webkit-text-fill-color: transparent;
-	background-clip: text !important;
-	background: white url(/assets/img/multisize/1x/dust-20.jpg) center/512px;
-	 }
+		background: white url(/assets/img/multisize/1x/dust-20.jpg) center/512px;
+		-webkit-text-fill-color: transparent;
+		background-clip: text !important;
+	}
 	.hero__title--dust::before { content: none; }
- }
+}
 .hero__title--bold {
 	font-weight: 800;
- }
+}
 .hero__letter--fall {
 	display: inline-block;
-	animation: letter-fall 1.5s cubic-bezier(1,0,.9,1.25) 2.5s, letter-fall-copy 2.5s steps(1);
+	animation: letter-fall 1.5s cubic-bezier(1, 0, 0.9, 1.25) 2.5s, letter-fall-copy 2.5s steps(1);
 	transform-origin: 37% 87%;
 	transform: translateX(-5%) rotate(15deg);
 	backface-visibility: hidden;
- }
+}
 @keyframes letter-fall {
 	0% { transform: translateX(-5%) rotate(0); }
 	100% { transform: translateX(-5%) rotate(15deg); }
- }
+}
 .hero__date {
 	font-size: 2em;
 	font-weight: 700;
 	margin-top: 0.1em;
- }
+}
 .hero__info {
 	margin: 0.5em 0 1em;
 	font-weight: 500;
 	font-size: 1.3em;
 	z-index: 0;
- }
+}
 .hero__more-info {
 	display: flex;
 	justify-content: space-between;
 	font-weight: 700;
- }
+}
 .button--hero {
 	font-size: 1.8em;
-	margin: 0 0 .625em;
+	margin: 0 0 0.625em;
 	z-index: 0;
- }
+}
 /* Hero background */
 .landscape {
 	position: absolute;
@@ -103,7 +101,7 @@ only screen and (								min-resolution: 2dppx) {
 	width: 100%;
 	object-fit: cover;
 	object-position: top;
- }
+}
 
 /* Hero buildings */
 .buildings {
@@ -115,47 +113,39 @@ only screen and (								min-resolution: 2dppx) {
 	user-select: none;
 	pointer-events: none;
 	z-index: 0;
- }
+}
 .buildings__img {
 	width: 100%;
 	margin-left: -1%;
 	max-height: 100%;
 	object-fit: contain;
- }
+}
 @media(min-width: 42em) {
 	.buildings { margin-bottom: -14em; font-size: 1.25em; height: 28em; }
 	.buildings__img { margin-left: 2%; }
- }
+}
 .hero__layer--fog {
 	bottom: 20%;
- }
+}
 
 .hero__layer {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	pointer-events: none;
- }
+}
 .hero__layer--sky {
-	background: linear-gradient(to bottom, 
-	#A6BA86 2.5%,
-	#E3C677 20%,
-	#000000 100%);
- }
+	background: linear-gradient(to bottom, #a6ba86 2.5%, #e3c677 20%, #000 100%);
+}
 .hero__layer--depths {
-	background: linear-gradient(to bottom, 
-	#0000 40%,
-	#000 80%);
- }
+	background: linear-gradient(to bottom, #0000 40%, #000 80%);
+}
 .hero__layer--depths-small {
 	top: 90%;
-	background: linear-gradient(to bottom, 
-	#0000 0%,
-	#000 100%);
+	background: linear-gradient(to bottom, #0000 0%, #000 100%);
 	z-index: 1;
- }
+}
 
 /* Wall plants */
-
 
 .hero__separator {
 	overflow: hidden;
@@ -163,169 +153,178 @@ only screen and (								min-resolution: 2dppx) {
 	margin: -300px 0;
 	pointer-events: none;
 	user-select: none;
- }
+}
 .hero__separator__content {
 	width: 100%;
 	height: 0;
 	margin-top: 300px;
 	overflow: visible;
 	position: relative;
- }
+}
 .hero__separator__img {
 	--wall-height: 150px;
 	--wall-offset: -0.46666;
 
 	position: absolute;
 	right: 0; left: 0;
-	bottom: calc(var(--wall-offset) * var(--wall-height)); 
+	bottom: calc(var(--wall-offset) * var(--wall-height));
 	height: var(--wall-height);
 	width: 100%;
 	max-width: 2130px;
 	margin: 0 auto;
 	object-fit: cover;
 	z-index: 1;
- }
+}
 
 .plant {
 	--plant-offset-x: 0;
 	--plant-offset-y: 0;
-	
+
 	z-index: 2;
 	position: absolute;
 	color: var(--text-light);
- }
+}
 .plant--bottom { bottom: var(--plant-offset-y); }
-.plant--top { 		top:		var(--plant-offset-y); }
-.plant--right { 	right:	var(--plant-offset-x); }
-.plant--left { 	 left:	 var(--plant-offset-x); }
+.plant--top { top: var(--plant-offset-y); }
+.plant--right { right: var(--plant-offset-x); }
+.plant--left { left: var(--plant-offset-x); }
 
 .plant-sky {
 	--plant-offset-x: -70px;
 	--plant-offset-y: -35px;
+
 	height: 33.3333vw;
 	transform-origin: left top;
- }
+}
 .plant-wall-right {
 	--plant-offset-x: -30px;
 	--plant-offset-y: -120px;
+
 	height: 40vw;
 	transform-origin: right bottom;
- }
+}
 .plant-wall-left {
 	--plant-offset-x: -65px;
 	--plant-offset-y: -120px;
+
 	height: 45vw;
 	transform-origin: left bottom;
 	transform: translate(-15%) rotate(20deg);
- }
+}
 @media(min-width: 800px) {
 	.plant-wall-right { height: 320px; }
-	.plant-sky { 				height: 266.67px; }
-	.plant-wall-left { 	height: 360px; }
- }
+	.plant-sky { height: 266.67px; }
+	.plant-wall-left { height: 360px; }
+}
 
 /* Plant animations */
-.plant-sky--animation { 				animation: plant_sky				4.3s 0.1s ease-out, plant_sky-copy				0.1s steps(1); }
+.plant-sky--animation { animation: plant_sky 4.3s 0.1s ease-out, plant_sky-copy 0.1s steps(1); }
 .plant-wall-right--animation { animation: plant_wall_right 3.1s 0.8s ease-out, plant_wall_right-copy 0.8s steps(1); }
-.plant-wall-left--animation { 	animation: plant_wall_left	4s	0.25s ease-out, plant_wall_left-copy 0.25s steps(1); }
+.plant-wall-left--animation { animation: plant_wall_left 4s 0.25s ease-out, plant_wall_left-copy 0.25s steps(1); }
 
 @keyframes plant_sky {
-	0% { transform: translate(-88%,12%) rotate(45deg); }
+	0% { transform: translate(-88%, 12%) rotate(45deg); }
 	100% { transform: translate(0) rotate(0); }
- }
+}
 @keyframes plant_wall_right {
-	0% { transform: translate(150%,-10%) rotate(-75deg); }
+	0% { transform: translate(150%, -10%) rotate(-75deg); }
 	100% { transform: translate(0) rotate(0); }
- }
+}
 @keyframes plant_wall_left {
-	0% { transform: translate(-207%,-33%) rotate(120deg); }
+	0% { transform: translate(-207%, -33%) rotate(120deg); }
 	100% { transform: translate(-15%) rotate(20deg); }
- }
+}
 
 /* The animation's copy is to fix a Safari and Edge bug, when tow animations have the same name */
 @keyframes letter-fall-copy {
 	0% { transform: translateX(-5%) rotate(0); }
 	100% { transform: translateX(-5%) rotate(15deg); }
- }
+}
 @keyframes plant_sky-copy {
-	0% { transform: translate(-88%,12%) rotate(45deg); }
+	0% { transform: translate(-88%, 12%) rotate(45deg); }
 	100% { transform: translate(0) rotate(0); }
- }
+}
 @keyframes plant_wall_right-copy {
-	0% { transform: translate(150%,-10%) rotate(-75deg); }
+	0% { transform: translate(150%, -10%) rotate(-75deg); }
 	100% { transform: translate(0) rotate(0); }
- }
+}
 @keyframes plant_wall_left-copy {
-	0% { transform: translate(-207%,-33%) rotate(120deg); }
+	0% { transform: translate(-207%, -33%) rotate(120deg); }
 	100% { transform: translate(-15%) rotate(20deg); }
- }
+}
 
 /* Buildings animation */
 .buildings--animation { animation: buildings-up 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), fade-in 2s ease-in; }
-.buildings__img--animation { animation: 
-	shake1 0.05s 0s cubic-bezier(0.45, 0.05, 0.55, 0.95) 20 alternate,
-	shake2 0.05s 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 10 alternate,
-	shake3 0.05s 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) 5 alternate,
-	shake3 0.05s 1.75s cubic-bezier(0.45, 0.05, 0.55, 0.95) 3.5 alternate;
- }
+.buildings__img--animation {
+	animation:
+		shake1 0.05s 0s cubic-bezier(0.45, 0.05, 0.55, 0.95) 20 alternate,
+		shake2 0.05s 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 10 alternate,
+		shake3 0.05s 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) 5 alternate,
+		shake3 0.05s 1.75s cubic-bezier(0.45, 0.05, 0.55, 0.95) 3.5 alternate;
+}
 .buildings--hidden { opacity: 0; }
 
 @keyframes buildings-up {
 	0% { transform: translateY(1em); }
 	100% { transform: translateY(0); }
- }
+}
 @keyframes shake1 {
 	0% { transform: translateX(1.5px); }
 	100% { transform: translateX(-1.5px); }
- }
+}
 @keyframes shake2 {
 	0% { transform: translateX(1px); }
 	100% { transform: translateX(-1px); }
- }
+}
 @keyframes shake3 {
 	0% { transform: translateX(0.5px); }
 	100% { transform: translateX(-0.5px); }
- }
+}
 @keyframes shake4 {
 	0% { transform: translateX(0.25px); }
 	100% { transform: translateX(-0.25px); }
- }
+}
 
 /* Grafittis */
 .no-overflow {
 	overflow: hidden;
- }
+}
 .graffitis {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	z-index: -1;
- }
+}
 .graffiti {
 	--size: 10vw;
+
 	position: absolute;
 	width: var(--size);
 	min-width: 80px;
- }
+}
 .graffiti--warning {
 	--size: 18vw;
+
 	top: -4%;
 	right: 5%;
 	z-index: 1;
 	max-width: 110px;
 	transform: rotate(5deg);
- }
+}
 .graffiti--hackupc {
 	--size: 20vw;
+
 	top: 35%;
 	left: calc(100% + 10px);
- }
+}
 .graffiti--system {
 	--size: 20vw;
+
 	top: 20%;
 	right: calc(100% + 10px);
- }
+}
 .graffiti--fallout {
 	--size: 16vw;
+
 	bottom: 20%;
 	right: calc(100% + 20px);
- }
+}

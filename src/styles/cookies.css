@@ -1,8 +1,8 @@
 :root {
 	--cookie-bg: rgba(49, 49, 49, 0.9);
-	--button-color: #B4C959;
-	--button-color-dark: #5F723F;
-	--url-color: #69A9E9;
+	--button-color: #b4c959;
+	--button-color-dark: #5f723f;
+	--url-color: #69a9e9;
 }
 .cookies-notice {
 	position: fixed;
@@ -37,8 +37,8 @@
 }
 
 @keyframes slide-up {
-	0% { transform: translateY(100%) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(100%); }
+	100% { transform: translateY(0); }
 }
 
 /* Button OK! style */
@@ -46,7 +46,7 @@
 	border: none;
 	border-bottom: solid var(--button-color-dark) 4px;
 	background: var(--button-color);
-	color: #FFF;
+	color: #fff;
 	font-size: 0.8em;
 	font-weight: bold;
 	margin-left: 16px;
@@ -68,7 +68,7 @@
 	cursor: pointer;
 	transition: opacity 50ms ease-out;
 	color: #FFF;
-} 
+}
 .cookies-notice__button:hover {
 	opacity: 1;
 }

@@ -8,6 +8,7 @@
     "declaration-block-semicolon-newline-after": null,
     "indentation": "tab",
     "comment-empty-line-before": null,
-    "rule-empty-line-before": null
+    "rule-empty-line-before": null,
+    "selector-list-comma-newline-after": null
   }
 }
