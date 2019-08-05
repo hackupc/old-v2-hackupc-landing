@@ -172,7 +172,14 @@ This are the explanations of why we chose each technology, so you can decide whe
 
 - Avoids unwanted styles and messy css.
 - Browsers are faster styling by class than by tag.
-- HTML is more clear.
+- HTML & CSS is clearer.
+
+#### StyleLint
+
+> [StyleLint Oficial website](https://stylelint.io/)
+
+- CSS is clearer.
+- Avoid small errors.
 
 #### Standard JS
 
@@ -201,7 +208,19 @@ This are the explanations of why we chose each technology, so you can decide whe
   - Normalize.css
   - Autoprefixer
 
+### npm packages
+
+#### Babel
+
+> [Babel - Oficial website](https://babeljs.io/)
+Use lattest JavaScript features in all browsers.
+
 ### GitHub
+
+#### Netlify
+
+> [Netlify - Oficial website](https://www.netlify.com/)
+Generate previews of the builds in Pull Requests.
 
 #### Code Climate
 
