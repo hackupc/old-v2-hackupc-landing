@@ -11,7 +11,7 @@
 	var smallHeader
 	var aside
 	var viewElements
-	var countdown
+	// var countdown
 	var schedule = { 'version': -1 }
 	var canNotify = false
 	let itsFullscreen = false
@@ -562,14 +562,14 @@
 	}
 
 	function initNotifications () {
-		if (!('Notification' in window)) {
-			console.warn('This browser does not support desktop notification')
-		} else {
+		if ('Notification' in window) {
 			if (Notification.permission !== 'denied') {
 				Notification.requestPermission(function (permission) {
-					if (permission === 'granted') { canNotify = true }
+					if (permission === 'granted') canNotify = true
 				})
 			}
+		} else {
+			console.warn('This browser does not support desktop notification')
 		}
 	}
 
