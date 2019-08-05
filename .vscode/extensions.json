@@ -1,10 +1,9 @@
 {
   "recommendations": [
+		"dbaeumer.vscode-eslint",
     "mkaufman.htmlhint",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "davidanson.vscode-markdownlint",
-    "chenxsan.vscode-standardjs",
-		"eg2.vscode-npm-script",
-		"capaj.vscode-standardjs-snippets"
+		"eg2.vscode-npm-script"
   ]
 }

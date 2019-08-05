@@ -498,7 +498,7 @@
 
 	function notify (msg, title, icon, cb) {
 		var ntitle = title || CONST.DEFAULT_NOTIFICATION_TITLE
-		var notification = new window.Notification(ntitle, {
+		var notification = new Notification(ntitle, {
 			body: msg,
 			icon: icon || CONST.DEFAULT_NOTIFICATION_ICON
 		})
@@ -565,8 +565,8 @@
 		if (!('Notification' in window)) {
 			console.warn('This browser does not support desktop notification')
 		} else {
-			if (window.Notification.permission !== 'denied') {
-				window.Notification.requestPermission(function (permission) {
+			if (Notification.permission !== 'denied') {
+				Notification.requestPermission(function (permission) {
 					if (permission === 'granted') { canNotify = true }
 				})
 			}
@@ -618,7 +618,7 @@
 		// buildHardwareLab();
 		if (!browserIsCompatible()) {
 			compatibiliyMode()
-			window.alert('Please update your browser')
+			alert('Please update your browser')
 			return
 		}
 
