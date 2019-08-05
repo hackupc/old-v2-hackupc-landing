@@ -1,23 +1,23 @@
 
 /* FAQ - Questions */
 .section--faq{
-  margin-top: 64px;
-  position: relative;
+	margin-top: 64px;
+	position: relative;
 }
 .section__list--faq{
-  margin: -8px
+	margin: -8px
 }
 .question{
-  flex: 1 1 250px;
-  margin: 8px;
+	flex: 1 1 250px;
+	margin: 8px;
 }
 .question__title{
-  font-weight: bold;
-  font-size: 1.1em;
-  color: var(--tertiary-dark);
-  margin: 1em 0 0.5em;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: var(--tertiary-dark);
+	margin: 1em 0 0.5em;
 }
 .question__answer{
-  text-align: left;
-  line-height: 1.23;
+	text-align: left;
+	line-height: 1.23;
 }

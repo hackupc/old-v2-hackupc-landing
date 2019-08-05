@@ -11,9 +11,9 @@
 	background: var(--primary-dark);
 }
 .button--disabled{
-  filter: saturate(0.15);
-  cursor: not-allowed;
-  /* pointer-events: none; */
+	filter: saturate(0.15);
+	cursor: not-allowed;
+	/* pointer-events: none; */
 }
 .button--disabled:hover{ transform: none; }
 .button--disabled:hover::before{ transform: translateY(0.625em); }
@@ -29,7 +29,7 @@
 	border-radius: 5px;
 	padding: .25em .5em;
 	animation: 
-		tooltip-in  .3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s,
+		tooltip-in	.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s,
 		tooltip-stay 1s linear .3s,
 		tooltip-out .2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.3s;
 	user-select: none;

@@ -43,12 +43,12 @@
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (   -moz-min-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
+only screen and (	 min--moz-device-pixel-ratio: 2),
+only screen and (	 -moz-min-device-pixel-ratio: 2),
+only screen and (		 -o-min-device-pixel-ratio: 2/1),
+only screen and (				min-device-pixel-ratio: 2),
+only screen and (								min-resolution: 192dpi),
+only screen and (								min-resolution: 2dppx) { 
 	.hero__title--dust::before{background-image: url(/assets/img/multisize/2x/dust@2x-20.jpg);}
 	/* .body{background-image: url(/assets/img/multisize/2x/wall@2x.jpg);} */
 }
@@ -195,9 +195,9 @@ only screen and (                min-resolution: 2dppx) {
 	color: var(--text-light);
 }
 .plant--bottom{ bottom: var(--plant-offset-y); }
-.plant--top{    top:    var(--plant-offset-y); }
-.plant--right{  right:  var(--plant-offset-x); }
-.plant--left{   left:   var(--plant-offset-x); }
+.plant--top{		top:		var(--plant-offset-y); }
+.plant--right{	right:	var(--plant-offset-x); }
+.plant--left{	 left:	 var(--plant-offset-x); }
 
 .plant-sky{
 	--plant-offset-x: -70px;
@@ -220,14 +220,14 @@ only screen and (                min-resolution: 2dppx) {
 }
 @media(min-width: 800px){
 	.plant-wall-right{ height: 320px; }
-	.plant-sky{        height: 266.67px; }
-	.plant-wall-left{  height: 360px; }
+	.plant-sky{				height: 266.67px; }
+	.plant-wall-left{	height: 360px; }
 }
 
 /* Plant animations */
-.plant-sky--animation{        animation: plant_sky        4.3s 0.1s ease-out, plant_sky-copy        0.1s steps(1); }
+.plant-sky--animation{				animation: plant_sky				4.3s 0.1s ease-out, plant_sky-copy				0.1s steps(1); }
 .plant-wall-right--animation{ animation: plant_wall_right 3.1s 0.8s ease-out, plant_wall_right-copy 0.8s steps(1); }
-.plant-wall-left--animation{  animation: plant_wall_left  4s  0.25s ease-out, plant_wall_left-copy 0.25s steps(1); }
+.plant-wall-left--animation{	animation: plant_wall_left	4s	0.25s ease-out, plant_wall_left-copy 0.25s steps(1); }
 
 @keyframes plant_sky {
 	0% {transform: translate(-88%,12%) rotate(45deg);}
