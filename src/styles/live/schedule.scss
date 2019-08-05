@@ -1,49 +1,48 @@
-#schedule{
-	& > div{
-		display:flex;
-		flex-wrap:wrap;
-		.table-container{
+#schedule {
+	& > div {
+		display: flex;
+		flex-wrap: wrap;
+		.table-container {
 			color: $secondaryColor;
 			flex: 1 1 0;
 			margin: 0 20px 50px 20px;
-			h1{
+			h1 {
 				text-align: center;
 				margin-bottom: 0;
 				padding: 10px;
 				background-color: $secondaryColor;
-				color: #FFFFFF;
-				border-bottom: 1px solid #FFFFFF33;
+				color: #fff;
+				border-bottom: 1px solid #fff3;
 			}
-			table{
-				width:100%;
-				color:$textColor;
+			table {
+				width: 100%;
+				color: $textColor;
 				border-collapse: collapse;
 				background-color: $secondaryTextColor;
-				thead{
+				thead {
 					color: $contrastColor;
 					background-color: $secondaryColor;
 				}
 
-				td,th{
-					padding:10px;
-					text-aligh: left;
+				td,th {
+					padding: 10px;
+					text-align: left;
 				}
-				td{
-					border:thin solid fade($secondaryColor,20%);
-					&:last-child{
-						min-width:200px;
+				td {
+					border: thin solid fade($secondaryColor, 20%);
+					&:last-child {
+						min-width: 200px;
 					}
-					&:first-child{
+					&:first-child {
 						text-align: center;
-						.location-icon{
-							display:inline-block;
+						.location-icon {
+							display: inline-block;
 						}
 					}
-					a{
+					a {
 						color: $secondaryColor;
 					}
 				}
-
 			}
 		}
 	}

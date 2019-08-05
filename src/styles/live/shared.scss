@@ -1,61 +1,60 @@
 /* Shared classes: may be overwritten in other files */
 
-
-/*Generic: incontextual classes*/
-article{
-	display:none !important;
-	&.active{
-		display:block !important;
+/* Generic: incontextual classes */
+article {
+	display: none !important;
+	&.active {
+		display: block !important;
 	}
 }
-strong{
-	color:$highlightColor;
-}
-a{
+strong {
 	color: $highlightColor;
-	text-decoration:none;
+}
+a {
+	color: $highlightColor;
+	text-decoration: none;
 }
 
-.padding-bottom{
+.padding-bottom {
 	padding-bottom: 50px;
 }
 
-.hidden{
-	display:none !important;
+.hidden {
+	display: none !important;
 }
 
-.faded{
+.faded {
 	opacity: 0;
 	transition: opacity $fadeTime;
 }
-.veil::before{
+.veil::before {
 	content: ' ';
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: $overlayColor;
 	z-index: 100;
-	opacity:0;
-	transition:opacity $fadeTime;
+	opacity: 0;
+	transition: opacity $fadeTime;
 }
 
-.veiled::before{
-	opacity:1 !important;
-	transition:opacity $fadeTime;
+.veiled::before {
+	opacity: 1 !important;
+	transition: opacity $fadeTime;
 }
-.centered{
-	display:block;
-	margin:0 auto;
+.centered {
+	display: block;
+	margin: 0 auto;
 }
 
-.happened{
+.happened {
 	opacity: $happenedOpacity;
 }
-.happening{
+.happening {
 	font-weight: bold !important;
 }
 
-.prompt{
+.prompt {
 	position: absolute;
 	display: flex;
 	width: 100%;
@@ -65,64 +64,64 @@ a{
 	align-items: center;
 	z-index: 110;
 
-	.box{
-		color:$textColor;
-		background-color:$bgColor;
-		padding:20px;
-		margin:20px;
-		h1{
-			margin:0;
-			padding:0;
+	.box {
+		color: $textColor;
+		background-color: $bgColor;
+		padding: 20px;
+		margin: 20px;
+		h1 {
+			margin: 0;
+			padding: 0;
 		}
-		.buttons{
-			display:flex;
+		.buttons {
+			display: flex;
 			justify-content: flex-end;
-			flex-wrap:wrap;
-			div{
-				flex:1 1 auto;
-				padding:5px 10px;
-				margin:20px;
-				color:$contrastColor;
-				background-color:$buttonColor;
-				cursor:pointer;
+			flex-wrap: wrap;
+			div {
+				flex: 1 1 auto;
+				padding: 5px 10px;
+				margin: 20px;
+				color: $contrastColor;
+				background-color: $buttonColor;
+				cursor: pointer;
 			}
 		}
 	}
 }
 
-@media (min-width:720px){
-	.under-header{
-		padding-top:150px;
+@media (min-width: 720px) {
+	.under-header {
+		padding-top: 150px;
 	}
 
-	.show-when-small{
-		display:none !important;
+	.show-when-small {
+		display: none !important;
 	}
 }
 
-@media (max-width:720px){
-	.under-header{
-		padding-top:60px;
+@media (max-width: 720px) {
+	.under-header {
+		padding-top: 60px;
 	}
 
-	.hide-when-small{
-		display:none !important;
+	.hide-when-small {
+		display: none !important;
 	}
 
-	.events-fancy{
+	.events-fancy {
 		ul {
 			padding-left: 25px !important;
 		}
 		/*
-		&::before{
-			box-shadow: 0px 1000px 50px -855px #9f3e56 inset !important;
-		}*/
+		&::before {
+			box-shadow: 0 1000px 50px -855px #9f3e56 inset !important;
+		}
+		*/
 	}
 }
 
-
-/*Specific*/
-.events-fancy{
+/* Specific */
+.events-fancy {
 	text-align: left;
 	color: white;
 	position: relative;
@@ -131,72 +130,66 @@ a{
 	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
 
-	&::before{
-		box-shadow:0px 325px 100px -200px #2c3033 inset;
+	&::before {
+		box-shadow: 0 325px 100px -200px #2c3033 inset;
 		position: fixed;
 		width: 100%;
 		height: 250px;
 		content: ' ';
-		z-index:10;
+		z-index: 10;
 		pointer-events: none;
 	}
 
-	&::after{
-		box-shadow:0px -250px 100px -200px #2c3033 inset;
+	&::after {
+		box-shadow: 0 -250px 100px -200px #2c3033 inset;
 		position: fixed;
 		width: 100%;
 		height: 200px;
-		bottom:0;
+		bottom: 0;
 		content: ' ';
-		z-index:10;
+		z-index: 10;
 		pointer-events: none;
 	}
 
-	/*.hide-scroll-hack {
+	/* .hide-scroll-hack  {
 		position: absolute;
 		width: 20px;
 		height: 100%;
 		background: $bgColor;
 		right: 0;
-		z-index:2;
-	}*/
+		z-index: 2;
+	}
+	*/
 
-	ul{
-		list-style:none;
+	ul {
+		list-style: none;
 		margin: 0;
 		min-height: 200px;
 		max-height: 100%;
 		overflow-y: scroll;
-		padding-top:200px;
+		padding-top: 200px;
 		padding-left: 100px;
 		box-sizing: content-box;
-		li{
-			display:flex;
-			flex-wrap:wrap;
-			flex-direction:column;
-			position:relative;
-			margin: 15px 0px 15px 0;
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			position: relative;
+			margin: 15px 0 15px 0;
 			min-height: 10px;
-			padding: 0px 0px 0 15px;
+			padding: 0 0 0 15px;
 			font-size: 28px;
 			border-left: 3px solid $secondaryTextColor;
 			color: $secondaryTextColor;
 			align-content: flex-start;
-			&:last-child{
-				margin-bottom:400px;
-			}
-			h1{
-				margin:0px;
-				font-weight: normal;
-			}
-			& > div{
-				display:flex;
-			}
-			&.happened{
-				opacity:1;
+			&:last-child { margin-bottom: 400px; }
+			h1 { margin: 0; font-weight: normal; }
+			& > div { display: flex; }
+			&.happened {
+				opacity: 1;
 				border-left: 2px solid fade($secondaryTextColor, 25%);
 			}
-			&.happening::before{
+			&.happening::before {
 				content: '\f061';
 				font: normal normal normal 14px/1 FontAwesome;
 				color: $secondaryTextColor;
@@ -205,251 +198,242 @@ a{
 				left: -35px;
 				font-size: 25px;
 			}
-			a{
-				display:block;
-				margin-right:10px;
-				&:before{
+			a {
+				display: block;
+				margin-right: 10px;
+				color: $secondaryColor;
+				&::before {
 					font-family: FontAwesome;
 					content: '\f041';
 				}
-				color:$secondaryColor;
 			}
-			.event{
-				margin:5px 0;
-				cursor:pointer;
-				.event-hour{
-					width:54px;
-					display:flex;
+			.event {
+				margin: 5px 0;
+				cursor: pointer;
+				.event-hour {
+					width: 54px;
+					display: flex;
 					font-family: 'Montserrat', sans-serif;
-					flex-direction:column;
-					text-align:right;
+					flex-direction: column;
+					text-align: right;
 					font-weight: bold;
 					font-size: 15px;
-					margin-top:3px;
-					margin-right:10px;
-					.end-hour{
+					margin-top: 3px;
+					margin-right: 10px;
+					.end-hour {
 						font-size: 12px;
 					}
 				}
-				&.subscribed{
-					.title:after{
+				&.subscribed {
+					.title::after {
 						font-family: FontAwesome;
-						content:"\f024";
+						content: "\f024";
 						font-size: 13px;
 						vertical-align: super;
-						line-height: 0px;
+						line-height: 0;
 					}
 				}
-				.title{
-					position:relative;
-					line-height:25px;
+				.title {
+					position: relative;
+					line-height: 25px;
 				}
-
 			}
 		}
 	}
 }
 
-.countdown{
+.countdown {
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
 	font-family: 'Montserrat', sans-serif;
 	z-index: 2;
 	flex: 1 1 0;
-	&.show-when-small{
+	&.show-when-small {
 		z-index: 30;
 		position: fixed;
 		pointer-events: none;
 	}
-
-	div{
-		color:white;
-		font-size:30px;
+	div {
+		color: white;
+		font-size: 30px;
 	}
-	.countdown-time{
-		justify-content:center;
-		font-weight:bold;
-		display:flex;
-		span{
-			&.big{
-				font-size:54px;
+	.countdown-time {
+		justify-content: center;
+		font-weight: bold;
+		display: flex;
+		span {
+			&.big {
+				font-size: 54px;
 				display: block;
 			}
-			&.little{
-				margin-top:7px;
-				font-size:18px;
-				min-width:50px;
+			&.little {
+				margin-top: 7px;
+				font-size: 18px;
+				min-width: 50px;
 				text-align: right;
 			}
 		}
-		div.decimals{
+		div.decimals {
 			width: 50px;
 			height: 20px;
 			display: inline;
 			background-size: cover;
 			margin-top: 7px;
-			&.run{
-				background-image: url('#{$imgDir}/count_decimals_run_White.gif');
+			&.run {
+				background-image: url('# {$imgDir}/count_decimals_run_White.gif');
 			}
-			&.stop{
-				background-image: url('#{$imgDir}/count_decimals_stop_White.png');
+			&.stop {
+				background-image: url('# {$imgDir}/count_decimals_stop_White.png');
 			}
 		}
 	}
 }
 
-.container{
-	display:flex;
-	justify-content:center;
-	flex-wrap:wrap;
-	max-width:1024px;
-	margin:0 auto;
-	.panel{
-		flex:1 1 350px;
-		margin:20px;
-		background-color:$contrastColor;
-		color:$textColor;
-		overflow:hidden;
-		text-align:left;
-		position:relative;
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1024px;
+	margin: 0 auto;
+	.panel {
+		flex: 1 1 350px;
+		margin: 20px;
+		background-color: $contrastColor;
+		color: $textColor;
+		overflow: hidden;
+		text-align: left;
+		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 		p, ul, ol {
 			margin: 5px 15px 5px 15px;
 		}
 
-		&.large{
-			flex:1 1 600px;
+		&.large {
+			flex: 1 1 600px;
 		}
-		a{
-			color:$secondaryColor;
+		a {
+			color: $secondaryColor;
 		}
-		h1{
-
+		h1 {
 			width: 100%;
 			margin: 0 0 0 0;
-			padding-top:3px;
-			font-size:20px;
-			color:white;
+			font-size: 20px;
+			color: white;
 			background-color: $secondaryColor;
 			text-align: center;
 			padding: 5px 0;
+			padding-top: 3px;
 		}
-		h2{
-			margin:5px 15px;
+		h2 {
+			margin: 5px 15px;
 		}
-		.panel-info{
-			h3{
+		.panel-info {
+			h3 {
 				font-weight: normal;
 				font-family: 'Montserrat', sans-serif;
 			}
 		}
-		.margin-bottom{
+		.margin-bottom {
 			margin-bottom: 10px;
 		}
-		.text-centered{
+		.text-centered {
 			text-align: center;
 		}
-		.text-normal{
+		.text-normal {
 			font-weight: normal;
 		}
 		.no-indent {
 			padding-left: 0;
 		}
-		.buttons{
+		.buttons {
 			display: flex;
 			border-radius: 3px;
-			overflow:hidden;
-			a{
-				display:block;
-				flex:1 1 0;
-				color:$contrastColor;
-				text-decoration:none;
-				background-color:$buttonColor;
+			overflow: hidden;
+			a {
+				display: block;
+				flex: 1 1 0;
+				color: $contrastColor;
+				text-decoration: none;
+				background-color: $buttonColor;
 				padding: 8px;
 				text-align: center;
-				font-weight:bold;
-				&:not(:first-child){
-					border-left:thin solid white;
+				font-weight: bold;
+				&:not(:first-child) {
+					border-left: thin solid white;
 				}
-				&.fb{
-					background-color:$fbColor;
+				&.fb {
+					background-color: $fbColor;
 				}
-				&.yt{
-					background-color:$ytColor;
+				&.yt {
+					background-color: $ytColor;
 				}
-				&.tw{
-					background-color:$twColor;
+				&.tw {
+					background-color: $twColor;
 				}
-				&.ig{
-					background-color:$igColor;
+				&.ig {
+					background-color: $igColor;
 				}
-				&.gt{
-					background-color:$gtColor;
+				&.gt {
+					background-color: $gtColor;
 				}
-				&.me{
-					background-color:$meColor;
+				&.me {
+					background-color: $meColor;
 				}
 			}
 		}
-		.label{
-			display:inline;
+		.label {
+			display: inline;
 		}
 
-		.icon{
-			display:inline-block;
-			margin:0;
+		.icon {
+			display: inline-block;
+			margin: 0;
 			padding: 3px;
-			text-align:center;
-			border-radius:5px;
-			width:30px;
+			text-align: center;
+			border-radius: 5px;
+			width: 30px;
 			background-color: $buttonColor;
-			color:white;
-			font-weight:normal;
+			color: white;
+			font-weight: normal;
 		}
 
-		& > div{
-			margin:15px 15px;
+		& > div {
+			margin: 15px 15px;
 			p, h1, h2 {
 				margin: 0 0;
 			}
 		}
 
-		span{
+		span {
 			display: inline-block;
 			padding: 3px 6px;
 			border-radius: 3px;
 			background-color: $lightBgColor;
 		}
 
-		.get-there{
-			.get-title {
-
-			}
+		.get-there {
+			.get-title  {}
 			.get-subtitle {
-				margin-top: 0px;
+				margin-top: 0;
 				margin-bottom: 10px;
 			}
-			p{
-				margin-bottom: 5px;
-			}
-			h2{
-				margin-bottom: 15px;
-			}
-			.get-separator{
+			p { margin-bottom: 5px; }
+			h2 { margin-bottom: 15px; }
+			.get-separator {
 				margin-top: 15px;
 				border-top: 1px solid #49494933;
 				padding-bottom: 25px;
 			}
-			.get-accessible{
+			.get-accessible {
 				margin-top: 20px;
 			}
 		}
 	}
-	
-	.no-margin{
-		div{
+
+	.no-margin {
+		div {
 			margin: 0;
 		}
 	}

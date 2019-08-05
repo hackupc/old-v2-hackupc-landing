@@ -1,70 +1,67 @@
-body, html, main{
-	height:100%;
+body, html, main {
+	height: 100%;
 }
-body, html{
-	padding:0;
-	margin:0;
+body, html {
+	padding: 0;
+	margin: 0;
 	background-image: url("../img/live/background.png");
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: repeat repeat;
 	font-family: 'Montserrat', sans-serif;
-
 	transition: opacity $fadeTime;
 }
 
-
-main{
+main {
 	transition: opacity $fadeTime;
 }
 
-#background{
-	position:absolute;
-	height:100%;
-	/*woah, hax (centering a child larger than parent)*/
-	left:50%;
-	transform: translate(-50%,0);
+#background {
+	position: absolute;
+	height: 100%;
+	/* woah, hax (centering a child larger than parent) */
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
-#header-nav-bar{
-	position:fixed;
-	width:100%;
-	z-index:50;
-	ul{
-		display:flex;
-		flex-direction:row;
-		padding:0;
-		margin:0;
-		list-style:none;
+#header-nav-bar {
+	position: fixed;
+	width: 100%;
+	z-index: 50;
+	ul {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		list-style: none;
 		justify-content: center;
-		box-shadow:0 3px 0 rgba(30,30,30,0.2);
-		li{
-
-			flex:1 1 0;
-			border-left:thin solid rgba(30,30,30,0.2);
-			text-align:center;
+		box-shadow: 0 3px 0 rgba(30, 30, 30, 0.2);
+		li {
+			flex: 1 1 0;
+			border-left: thin solid rgba(30, 30, 30, 0.2);
+			text-align: center;
 			background: white;
-			a{
-				display:block;
-				padding:10px 0;
+			a {
+				display: block;
+				padding: 10px 0;
 				color: $textColor;
-				text-decoration:none;
+				text-decoration: none;
 			}
 
-			&:first-child{
-				border-left:none;
+			&:first-child {
+				border-left: none;
 			}
 
-			&.selected{
-				box-shadow:0 3px 0 rgba(30,30,30,0.5);
+			&.selected {
+				box-shadow: 0 3px 0 rgba(30, 30, 30, 0.5);
 				cursor: default;
 			}
 
-			&#countdown-li{
-				flex:0 0 215px;
-				position:relative;
-				padding:0;
-				& > div{
+			&#countdown-li {
+				flex: 0 0 215px;
+				position: relative;
+				padding: 0;
+				& > div {
 					position: absolute;
 					width: 100%;
 					height: 217px;
@@ -73,7 +70,7 @@ main{
 					cursor: pointer;
 					transition: margin-top $timerAnimLength, box-shadow $timerAnimLength;
 
-					#countdown-time{
+					#countdown-time {
 						display: flex;
 						align-content: center;
 						justify-content: center;
@@ -82,40 +79,40 @@ main{
 						z-index: 2;
 						width: 100%;
 
-						div.countdown-time{
-							padding: 10px 8px 0px;
-							color:white;
-							font-size:14px;
+						div.countdown-time {
+							padding: 10px 8px 0;
+							color: white;
+							font-size: 14px;
 						}
-						div.decimals{
+						div.decimals {
 							width: 27px;
 							height: 13px;
 							margin-top: 3px;
 						}
 
-						span{
-							&.big{
-								font-size:24px;
+						span {
+							&.big {
+								font-size: 24px;
 								display: block;
 								float: left;
 							}
-							&.little{
-								margin-top:4px;
-								font-size:13px;
-								min-width:25px;
+							&.little {
+								margin-top: 4px;
+								font-size: 13px;
+								min-width: 25px;
 							}
 						}
 					}
 
-					img{
-						width:105%;
-						margin-left:-5px;
-						filter: drop-shadow(0px 0px 20px #3339);
-						-webkit-filter: drop-shadow(0px 0px 25px #3339);
+					img {
+						width: 105%;
+						margin-left: -5px;
+						filter: drop-shadow(0 0 20px #3339);
+						-webkit-filter: drop-shadow(0 0 25px #3339);
 					}
 
-					&:hover{
-						margin-top:-95px;
+					&:hover {
+						margin-top: -95px;
 					}
 				}
 			}
@@ -123,100 +120,93 @@ main{
 	}
 }
 
-#header-small{
-	position:fixed;
-	width:100%;
-	z-index:99;
+#header-small {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
 
-	.bar{
-		position:relative;
-		height:50px;
-		background-color:$contrastColor;
-		color:$secondaryTextColor;
+	.bar {
+		position: relative;
+		height: 50px;
+		background-color: $contrastColor;
+		color: $secondaryTextColor;
 		border-bottom: thin solid rgba(125, 125, 125, 0.3);
-    	box-shadow: 0 0 10px 0px rgba(125, 125, 125, 0.6);
+		box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.6);
 
-		.title-container{
-			display:flex;
+		.title-container {
+			display: flex;
 			align-items: center;
-			text-align:center;
-			height:100%;
-			h1{
-				flex:1 1 0;
-				margin:0;
-				padding:0;
+			text-align: center;
+			height: 100%;
+			h1 {
+				flex: 1 1 0;
+				margin: 0;
+				padding: 0;
 			}
 		}
-		#open-aside-btn{
-			display:flex;
-			position:absolute;
-			font-size:20px;
-			color:black;
+		#open-aside-btn {
+			display: flex;
+			position: absolute;
+			font-size: 20px;
+			color: black;
 			align-items: center;
 			width: 50px;
 			height: 100%;
 			text-align: center;
-			cursor:pointer;
+			cursor: pointer;
 			span {
-				flex:1 1 0;
+				flex: 1 1 0;
 			}
 		}
-
 	}
 }
 
-#aside-small-menu{
+#aside-small-menu {
 	height: 100%;
 	position: fixed;
 	background-color: $bgColor;
 	width: 200px;
-	box-shadow: 0px 0 13px 1px rgba(0,0,0,0.6);
-	z-index:150;
-	overflow:auto; /*just in case*/
-
-	left:0;
-	&.closed{
-		left:-210px;
-	}
+	box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.6);
+	z-index: 150;
+	overflow: auto; /* just in case */
+	left: 0;
 	transition: left $asideOpenTime;
+	&.closed { left: -210px; }
 
-	#close-aside-btn{
-		display:flex;
-		align-items:center;
-		text-align:center;
-		height:50px;
-		width:50px;
-		cursor:pointer;
-		div{
-		    flex: 1 1 0;
-    		font-size: 25px;
+	#close-aside-btn {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		div {
+			flex: 1 1 0;
+			font-size: 25px;
 		}
-
 	}
 
-	div.logo{
+	div.logo {
 		margin-top: 20px;
-		text-align:center;
-		img{
-			width:90%;
-		}
+		text-align: center;
+		img { width: 90%; }
 	}
-	nav{
-		margin-top:10px;
+	nav {
+		margin-top: 10px;
 		background-color: darken($bgColor, 5%);
-		ul{
-			list-style:none;
-			padding:0;
-			li{
-				border-top:thin solid rgba(255,255,255,0.3);
-				&.selected{
-					font-weight:bold;
-					background-color:darken($bgColor, 15%);
+		ul {
+			list-style: none;
+			padding: 0;
+			li {
+				border-top: thin solid rgba(255, 255, 255, 0.3);
+				&.selected {
+					font-weight: bold;
+					background-color: darken($bgColor, 15%);
 				}
-				a{
-					display:block;
-					padding:10px 20px;
-					color:$textColor;
+				a {
+					display: block;
+					padding: 10px 20px;
+					color: $textColor;
 					text-decoration: none;
 				}
 			}
