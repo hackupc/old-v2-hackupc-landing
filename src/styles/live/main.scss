@@ -154,7 +154,9 @@ main {
 			height: 100%;
 			text-align: center;
 			cursor: pointer;
+			/* stylelint-disable */
 			span { flex: 1 1 0; }
+			/* stylelint-enable */
 		}
 	}
 }
@@ -178,7 +180,9 @@ main {
 		height: 50px;
 		width: 50px;
 		cursor: pointer;
+		/* stylelint-disable */
 		div {
+			/* stylelint-enable */
 			flex: 1 1 0;
 			font-size: 25px;
 		}
@@ -187,7 +191,9 @@ main {
 	div.logo {
 		margin-top: 20px;
 		text-align: center;
+		/* stylelint-disable */
 		img { width: 90%; }
+		/* stylelint-enable */
 	}
 	nav {
 		margin-top: 10px;
@@ -195,7 +201,9 @@ main {
 		ul {
 			list-style: none;
 			padding: 0;
+			/* stylelint-disable */
 			li {
+				/* stylelint-enable */
 				border-top: thin solid rgba(255, 255, 255, 0.3);
 				&.selected {
 					font-weight: bold;

@@ -183,15 +183,17 @@ a {
 			color: $secondaryTextColor;
 			align-content: flex-start;
 			&:last-child { margin-bottom: 400px; }
+			/* stylelint-disable */
 			h1 { margin: 0; font-weight: normal; }
 			& > div { display: flex; }
+			/* stylelint-enable */
 			&.happened {
 				opacity: 1;
 				border-left: 2px solid fade($secondaryTextColor, 25%);
 			}
 			&.happening::before {
 				content: '\f061';
-				font: normal normal normal 14px/1 FontAwesome;
+				font: normal normal normal 14px/1 FontAwesome, sans-serif;
 				color: $secondaryTextColor;
 				position: absolute;
 				margin-top: -7.5px;
@@ -203,7 +205,7 @@ a {
 				margin-right: 10px;
 				color: $secondaryColor;
 				&::before {
-					font-family: FontAwesome;
+					font-family: FontAwesome, sans-serif;
 					content: '\f041';
 				}
 			}
@@ -226,7 +228,7 @@ a {
 				}
 				&.subscribed {
 					.title::after {
-						font-family: FontAwesome;
+						font-family: FontAwesome, sans-serif;
 						content: "\f024";
 						font-size: 13px;
 						vertical-align: super;
@@ -254,7 +256,9 @@ a {
 		position: fixed;
 		pointer-events: none;
 	}
+	/* stylelint-disable */
 	div {
+		/* stylelint-enable */
 		color: white;
 		font-size: 30px;
 	}
@@ -387,7 +391,9 @@ a {
 			font-weight: normal;
 		}
 
+		/* stylelint-disable */
 		& > div {
+			/* stylelint-enable */
 			margin: 15px 15px;
 			p, h1, h2 {
 				margin: 0 0;
@@ -421,7 +427,9 @@ a {
 	}
 
 	.no-margin {
+		/* stylelint-disable */
 		div {
+			/* stylelint-enable */
 			margin: 0;
 		}
 	}
