@@ -7,37 +7,42 @@
 	font-size: 1.1em;
 }
 .section__list--sponsors {
-	display: grid;
-	align-content: center;
-	justify-items: center;
-	grid-gap: 4vw;
-	align-items: center;
+	--gap: 2vw;
+
+	display: flex;
 	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
 	padding: 1em 0;
 	margin: auto;
 }
-.section__list--sponsors-tera { grid-template-columns: 1fr; max-width: unset; }
-.section__list--sponsors-giga { grid-template-columns: 1fr; max-width: 80%; }
+.section__list--sponsors-tera { --columns: 1; max-width: unset; }
+.section__list--sponsors-giga { --columns: 1; max-width: 80%; }
 .section__list--sponsors:nth-child(2):not(.section__list--sponsors-tera) { max-width: unset; } /* If there are no Tera, make giga the largest */
-.section__list--sponsors-mega { grid-template-columns: 1fr 1fr; }
-.section__list--sponsors-kilo { grid-template-columns: 1fr 1fr 1fr; }
-.section__list--sponsors-mili { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.section__list--sponsors-mega { --columns: 2; }
+.section__list--sponsors-kilo { --columns: 3; }
+.section__list--sponsors-mili { --columns: 4; }
 @media(min-width: 544px) {
-	.section__list--sponsors-tera { grid-template-columns: 1fr; max-width: 75%; }
-	.section__list--sponsors-giga { grid-template-columns: 1fr 1fr; max-width: unset; }
-	.section__list--sponsors-mega { grid-template-columns: 1fr 1fr 1fr; }
-	.section__list--sponsors-kilo { grid-template-columns: 1fr 1fr 1fr 1fr; }
-	.section__list--sponsors-mili { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-	.section__list--sponsors { grid-gap: 2em; padding: 2em 0; }
+	.section__list--sponsors-tera { --columns: 1; max-width: 75%; }
+	.section__list--sponsors-giga { --columns: 2; max-width: unset; }
+	.section__list--sponsors-mega { --columns: 3; }
+	.section__list--sponsors-kilo { --columns: 4; }
+	.section__list--sponsors-mili { --columns: 5; }
+	.section__list--sponsors { --gap: 1em; padding: 2em 0; }
 }
+
 .section--sponsors {
 	padding: 1em 2em;
 	max-width: 800px;
 }
 .sponsor {
+	--scale: 1;
+
 	transition: transform 0.1s ease-out;
-	width: 100%;
+	width: calc(calc(calc(100% / var(--columns)) - calc(var(--gap) * 2)) * var(--scale));
 	display: block;
+	margin: var(--gap);
 }
 .sponsor:hover {
 	/* transform: scale( calc( calc( var(--size) + 25px) / var(--size) ) ); */
