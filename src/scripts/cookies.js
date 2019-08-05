@@ -17,6 +17,7 @@ if (window.localStorage.getItem('cookies') !== '1') {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function acceptCookies () {
 	window.localStorage.setItem('cookies', '1')
 	cookieNotice.classList.add('cookies-notice--hidden')

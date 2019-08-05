@@ -62,3 +62,4 @@
 - [ ] Don't show popup if notifications are accepted
 - [ ] Remove .sass files
 - [ ] Use ES6
+- [ ] Refactor Util as a module

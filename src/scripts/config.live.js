@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 var CONST = {
 	'FAKE_DATE': new Date('2018-10-19 21:15'),
 	'FADE_CLASS': 'faded',
@@ -11,9 +12,9 @@ var CONST = {
 	// Time in seconds for every step
 	'SCHEDULE_STEP': 3600,
 	// ms of fade animation (should match params.less)
-	'FADE_TIME': 300,
+	'FADE_ANIMATION_DURATION': 300,
 	// ms of aside opening animation (should match params.less)
-	'ASIDE_OPEN_TIME': 300,
+	'ASIDE_OPEN_ANIMATION_DURATION': 300,
 	// ms to timeout an async req
 	'REQ_TIMEOUT': 2000,
 	'SCHEDULE_REFRESH_INTERVAL': 60000,

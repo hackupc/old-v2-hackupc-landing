@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 var Util = (function (CONST) {
 	'use strict'
 	if (!CONST) {
@@ -37,14 +38,14 @@ var Util = (function (CONST) {
 		element.classList.add(CONST.FADE_CLASS)
 		setTimeout(function () {
 			if (typeof cb === 'function') cb()
-		}, CONST.FADE_TIME)
+		}, CONST.FADE_ANIMATION_DURATION)
 	}
 
 	obj.fadeIn = function (element, cb) {
 		element.classList.remove(CONST.FADE_CLASS)
 		setTimeout(function () {
 			if (typeof cb === 'function') cb()
-		}, CONST.FADE_TIME)
+		}, CONST.FADE_ANIMATION_DURATION)
 	}
 
 	/*
@@ -71,14 +72,14 @@ var Util = (function (CONST) {
 		}, 1)
 		setTimeout(function () {
 			if (typeof cb === 'function') cb()
-		}, CONST.FADE_TIME)
+		}, CONST.FADE_ANIMATION_DURATION)
 	}
 	obj.unveil = function (element, cb) {
 		element.classList.remove(CONST.VEILED_CLASS)
 		setTimeout(function () {
 			element.classList.remove(CONST.VEIL_CLASS)
 			if (typeof cb === 'function') cb()
-		}, CONST.FADE_TIME)
+		}, CONST.FADE_ANIMATION_DURATION)
 	}
 
 	/*
@@ -105,7 +106,7 @@ var Util = (function (CONST) {
 	/*
 	* HH:MM format hour to seconds (delta)
 	*/
-	obj.hourToSeconds = function (hour) {
+	obj.hourStringToSeconds = function (hour) {
 		var hp = hour.split(':')
 		return hp[0] * 60 * 60 + hp[1] * 60
 	}
@@ -164,4 +165,5 @@ var Util = (function (CONST) {
 	}
 
 	return obj
+// eslint-disable-next-line no-undef
 })(CONST)

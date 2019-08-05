@@ -534,7 +534,7 @@
 		setTimeout(function () {
 			aside.classList.add('hidden')
 			Util.releaseScroll(body)
-		}, CONST.ASIDE_OPEN_TIME)
+		}, CONST.ASIDE_OPEN_ANIMATION_DURATION)
 	}
 
 	/// /////////////////////
@@ -649,7 +649,7 @@
 						setTimeout(function () {
 							Util.fadeIn(main)
 							// we want the screen to actually disappear
-						}, CONST.FADE_TIME * 1.2)
+						}, CONST.FADE_ANIMATION_DURATION * 1.2)
 					})
 				})
 			}, CONST.SCHEDULE_REFRESH_INTERVAL)
