@@ -1,5 +1,5 @@
 /* Variables */
-:root{
+:root {
 	--primary-ligth: #E5F2AE;
 	--primary:			 #B4C959;
 	--primary-dark:	#5F723F;
@@ -37,4 +37,4 @@
 	--ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
 	--font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+ }

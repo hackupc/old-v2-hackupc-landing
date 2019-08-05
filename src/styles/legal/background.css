@@ -1,8 +1,8 @@
 
-.bg{display: none;}
+.bg { display: none; }
 
-@media (min-width: 475px){
-	.bg{
+@media (min-width: 475px) {
+	.bg {
 		display: block;
 		position: fixed;
 		top: 0; right: 0; bottom: 0; left: 0;
@@ -10,12 +10,12 @@
 		background-color: var(--legal-bg-color);
 		background-image: var(--legal-bg-image);
 		background-size: cover;
-	}
-	.bg__img{
+	 }
+	.bg__img {
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-	}
-	.bg__img--left{right: unset;}
-	.bg__img--right{left: unset;}
-	.bg__img--top{bottom: unset;}
+	 }
+	.bg__img--left { right: unset; }
+	.bg__img--right { left: unset; }
+	.bg__img--top { bottom: unset; }
 }
