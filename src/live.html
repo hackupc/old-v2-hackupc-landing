@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="author"      content="Hackers@UPC">
-	<meta name="description" content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st.">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#03A9B5">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta property="og:title"            content="Live Schedule | HackUPC | Oct 19th-21st  | Barcelona | 700 Hackers">
-	<meta property="og:site_name"        content="Live Schedule | HackUPC">
-	<meta property="og:description"      content="Join us for BarcelonaTech's hackathon. 700 hackers. 36h. Oct 19th-21st.">
-	<meta property="og:image"            content="https://hackupc.com/assets/img/hackupc-ogimage.png?v=2018">
-	<meta property="og:image:secure_url" content="https://hackupc.com/assets/img/hackupc-ogimage.png?v=2018">
-	<meta property="og:url"              content="https://hackupc.com/live">
-
+	<!-- SEO -->
 	<title>Live Schedule | HackUPC</title>
+	<meta name="description"      content="da events information and more info.">
+	<meta name="author"           content="Hackers@UPC">
+	<meta name="web_author"       content="Hackers@UPC">
+	<meta name="keywords"         content="Hackathon, Hacker, Student, University, Collage, Programming, Technology, UPC, Barcelona, Spain">
+	<meta name="revisit-after"    content="7 days">
+	<meta name="reply-to"         content="contact@hackupc.com">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized"  content="320">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://hackupc.com/" hreflang="en">
+	<link rel="alternate" href="https://www.hackupc.com/" hreflang="en">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="assets/css/landing.min.css" data-finger-print>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,700,800&display=block">
+	<link rel="stylesheet" href="/assets/css/cookies.min.css" data-finger-print>
+	<link rel="stylesheet" href="assets/css/test.min.css" data-finger-print>
+
+	<!-- Open graph properties -->
+	<!-- Generated with: https://webcode.tools/ -->
+	<meta property="og:title"       content="HackUPC | Oct 11&ndash;13  | Barcelona | 700 Hackers">
+	<meta property="og:type"        content="website">
+	<meta property="og:site_name"   content="HackUPC">
+	<meta property="og:description" content="Upcoming events information and more info.">
+	<meta property="og:url"         content="https://hackupc.com/">
+	<meta property="og:image"       content="https://hackupc.com/assets/img/ogimage.png?v=2019">
+
+	<meta name="twitter:card"        content="summary_large_image">
+	<meta name="twitter:site"        content="@hackupc">
+	<meta name="twitter:creator"     content="@hackupc">
+	<meta name="twitter:title"       content="HackUPC | Oct 11&ndash;13 | Barcelona | 700 Hackers">
+	<meta name="twitter:description" content="Upcoming events information and more info.">
+	<meta name="twitter:image"       content="https://hackupc.com/assets/img/ogimage.png?v=2019">
+	<!-- <meta property="fb:admins"      content="id" /> -->
+
+	<!-- Favicon -->
+	<!-- Generated with: https://realfavicongenerator.net/ -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png?v=00zyG6kr2M">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png?v=00zyG6kr2M">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png?v=00zyG6kr2M">
+	<link rel="manifest" href="/assets/img/favicon/site.webmanifest?v=00zyG6kr2M">
+	<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg?v=00zyG6kr2M" color="#5f723f">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico?v=00zyG6kr2M">
+	<meta name="apple-mobile-web-app-title" content="My HackUPC">
+	<meta name="application-name" content="My HackUPC">
+	<meta name="msapplication-TileColor" content="#5f723f">
+	<meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml?v=00zyG6kr2M">
+	<meta name="theme-color" content="#5f723f">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69542332-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-69542332-1');
+</script>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/live.min.css" data-finger-print>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,400i,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<script src="assets/js/live.min.js" data-finger-print></script>
+	<script src="assets/js/config.live.js" data-finger-print></script>
+	<script src="assets/js/util.live.js" data-finger-print></script>
+	<script src="assets/js/live.js" data-finger-print></script>
 
 	<!--Prompt-->
 	<template id="promptTemplate">
@@ -97,7 +149,7 @@
 	<template id="fancyEvent">
 		<div class="event" data-event-id="{id}" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent" data-update-action="updateFancyEvent">
 			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"></a>
-			<div class='event-hour'>
+			<div class="event-hour">
 				<div>{startHour}</div>
 				<div class="end-hour">{endHour}</div>
 			</div>
@@ -190,7 +242,7 @@
 					<div>
 						<div id="countdown-time" class="countdown">
 						</div>
-						<img src="assets/img/resrborder.png"/>
+						<img src="assets/img/live/resrborder.png"/>
 					</div>
 				</li>
 				<li data-bind-view="streaming">
@@ -220,7 +272,7 @@
 							<span>36:00</span>:00.00
 						</div>
 					</div>
-					<img class="bg" src="assets/img/resrborder.png"/>
+					<img class="bg" src="assets/img/live/resrborder.png"/>
 				</div>
 				<div class="events-fancy">
 					<!--To be filled by js-->
@@ -323,7 +375,7 @@
 						</div>
 					</div>
 				</div>
-			<div>
+			</div>
 		</article>
 		<article id="schedule" class="under-header padding-bottom">
 			<div class="container"></div>
@@ -417,7 +469,6 @@
 						<p class="margin-bottom">
 							Teams will be judged on these four criteria. Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project.
 						</p>
-						<p>
 						<ul class="margin-bottom">
 							<li><b>Technology:</b> How technically impressive was the hack? Was the technical problem the team tackled difficult? Did it use a particularly clever technique or did it use many different components? Did the technology involved make you go "Wow"?</li>
 							<li><b>Design:</b> Did the team put thought into the user experience? How well designed is the interface? For a website, this might be about how beautiful the CSS or graphics are. For a hardware project, it might be more about how good the human-computer interaction is (e.g. is it easy to use or does it use a cool interface?).</li>

@@ -1,49 +1,49 @@
 
 /* More applications */
-.section__list--participate{
+.section__list--participate {
 	justify-content: space-around;
 }
-.button--sponsor, .button--volunteer, .button--mentor{
+.button--sponsor, .button--volunteer, .button--mentor {
 	background: var(--primary);
 	flex-basis: 9em;
 }
-.button--sponsor::before, .button--volunteer::before, .button--mentor::before{
+.button--sponsor::before, .button--volunteer::before, .button--mentor::before {
 	background: var(--primary-dark);
 }
-.button--disabled{
-  filter: saturate(0.15);
-  cursor: not-allowed;
-  /* pointer-events: none; */
+.button--disabled {
+	filter: saturate(0.15);
+	cursor: not-allowed;
+	/* pointer-events: none; */
 }
-.button--disabled:hover{ transform: none; }
-.button--disabled:hover::before{ transform: translateY(0.625em); }
-.button__tooltip{
+.button--disabled:hover { transform: none; }
+.button--disabled:hover::before { transform: translateY(0.625em); }
+.button__tooltip {
 	position: absolute;
 	white-space: nowrap;
 	top: -2em;
 	line-height: 1;
 	left: 50%;
 	background: var(--gray-dark);
-	transform: translate(-50%,2.625em);
+	transform: translate(-50%, 2.625em);
 	z-index: -3;
 	border-radius: 5px;
-	padding: .25em .5em;
-	animation: 
-		tooltip-in  .3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s,
-		tooltip-stay 1s linear .3s,
-		tooltip-out .2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.3s;
+	padding: 0.25em 0.5em;
+	animation:
+		tooltip-in 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s,
+		tooltip-stay 1s linear 0.3s,
+		tooltip-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.3s;
 	user-select: none;
 }
 
-@keyframes tooltip-in{
-	0%{transform: translate(-50%, 2.625em);}
-	100%{transform: translate(-50%, 0);}
+@keyframes tooltip-in {
+	0% { transform: translate(-50%, 2.625em); }
+	100% { transform: translate(-50%, 0); }
 }
-@keyframes tooltip-out{
-	0%{transform: translate(-50%, 0);}
-	100%{transform: translate(-50%, 2.625em);}
+@keyframes tooltip-out {
+	0% { transform: translate(-50%, 0); }
+	100% { transform: translate(-50%, 2.625em); }
 }
-@keyframes tooltip-stay{
-	0%{transform: translate(-50%, 0);}
-	100%{transform: translate(-50%, 0);}
+@keyframes tooltip-stay {
+	0% { transform: translate(-50%, 0); }
+	100% { transform: translate(-50%, 0); }
 }

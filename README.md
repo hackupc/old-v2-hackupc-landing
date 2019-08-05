@@ -7,6 +7,7 @@ Hi! This is the code of the HackUPC 2019 landing page.
 ## Setup
 
 Install the latest version Node.js (at least v12.6.0). [Find how here](https://nodejs.org/en/download/package-manager/).
+
 ```sh
 sudo npm cache clean -f
 sudo npm install -g n
@@ -23,7 +24,7 @@ npm install
 
 Use `npm run watch` to compile and serve the dist directory in real time. Then view the website at [https://localhost:8080](https://localhost:8080)
 
-**Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `maskdownlint`, `StandardJS` and `stylelint`. In other editors they may have similar names.
+**Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `markdownlint`, `StandardJS`, `stylelint` and `npm`. In other editors they may have similar names.
 Or use `npm run lint` to run linters manually from the console to check errors.
 
 We use linters to ensure code quality, please fix all the errors.
@@ -39,6 +40,11 @@ npm run watch
 ```
 
 View the website at [https://localhost:8080](https://localhost:8080)
+
+## General info
+
+Every file was updated in the 2019 version. So they follow the same style and logic.
+Exept the `.sass` files from the live, so you may want to refactor them to CSS :D .
 
 ## Deploy
 
@@ -131,10 +137,6 @@ New versions of the schedule will be loaded only if 'version' is different.
 > If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
 Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
 
-### Change theme
-
-> TODO: fill this part
-
 ## Live
 
 Features included
@@ -170,7 +172,14 @@ This are the explanations of why we chose each technology, so you can decide whe
 
 - Avoids unwanted styles and messy css.
 - Browsers are faster styling by class than by tag.
-- HTML is more clear.
+- HTML & CSS is clearer.
+
+#### StyleLint
+
+> [StyleLint Oficial website](https://stylelint.io/)
+
+- CSS is clearer.
+- Avoid small errors.
 
 #### Standard JS
 
@@ -199,19 +208,39 @@ This are the explanations of why we chose each technology, so you can decide whe
   - Normalize.css
   - Autoprefixer
 
+### npm packages
+
+#### Babel
+
+> [Babel - Oficial website](https://babeljs.io/)
+Use lattest JavaScript features in all browsers.
+
 ### GitHub
 
-#### Coderain Bot
+#### Netlify
 
-> [Coderain - Oficial website]()
+> [Netlify - Oficial website](https://www.netlify.com/)
+Generate previews of the builds in Pull Requests.
 
-#### Issues Bot
+#### Code Climate
 
-> [IssuesBot - Oficial website]()
+> [Code Climate - Oficial website](https://github.com/marketplace/code-climate)
+Ensure code quality and mantainability.
 
-#### Issues
+#### ImgBot
 
-#### Branches
+> [ImgBot - Oficial website](https://github.com/marketplace/imgbot)
+Compress images.
+
+#### Stale
+
+> [Stale - Oficial website](https://github.com/marketplace/stale)
+Closes Issues
+
+#### Travis
+
+> [Travis - Oficial website](https://github.com/marketplace/travis-ci)
+Runs linterns.
 
 ## Support
 

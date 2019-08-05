@@ -1,19 +1,18 @@
-#hardware{
-	.container{
-		ul{
-			padding:0;
-			display:flex;
-			flex-wrap:wrap;
+#hardware {
+	.container {
+		ul {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
 			list-style: none;
-			li{
-				text-align:center;
+			li {
+				text-align: center;
 				flex: 1 1 310px;
 			}
 		}
 	}
-	.mlh-hardware-lab{
-		margin:0 0 10px;
+	.mlh-hardware-lab {
+		margin: 0 0 10px;
 		background-color: $mlhHardwareBtn;
 	}
-
 }

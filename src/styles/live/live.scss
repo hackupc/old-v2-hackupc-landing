@@ -1,11 +1,11 @@
-#live{
-	.container-live{
-		display:flex;
-		top:0px;
-		bottom:0;
-		width:100%;
+#live {
+	.container-live {
+		display: flex;
+		top: 0;
+		bottom: 0;
+		width: 100%;
 		position: fixed;
 		justify-content: center;
-		overflow:auto;
+		overflow: auto;
 	}
 }

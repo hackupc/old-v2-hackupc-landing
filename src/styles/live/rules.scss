@@ -1,11 +1,10 @@
-#rules{
-	h1{
-		font-size:30px;
+#rules {
+	h1 {
+		font-size: 30px;
 	}
-	& > div{
-	    max-width: 720px;
-	    margin: 0 auto;
-	    color: $textColor;
+	& > div {
+		max-width: 720px;
+		margin: 0 auto;
+		color: $textColor;
 	}
-
 }
