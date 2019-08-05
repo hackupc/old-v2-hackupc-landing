@@ -60,6 +60,6 @@
 ## Live
 
 - [ ] Don't show popup if notifications are accepted
-- [ ] Remove .sass files
+- [ ] Refactor .sass files to .css matching the style (and remove explanation from readme)
 - [ ] Use ES6
 - [ ] Refactor Util as a module

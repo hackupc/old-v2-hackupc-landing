@@ -41,6 +41,11 @@ npm run watch
 
 View the website at [https://localhost:8080](https://localhost:8080)
 
+## General info
+
+Every file was updated in the 2019 version. So they follow the same style and logic.
+Exept the `.sass` files from the live, so you may want to refactor them to CSS :D .
+
 ## Deploy
 
 ### Deploy to localhost
