@@ -1,7 +1,7 @@
 var Util = (function (CONST) {
 	'use strict'
 	if (!CONST) {
-		console.error("CONST module not found at this point")
+		console.error('CONST module not found at this point')
 		return null
 	}
 
@@ -16,16 +16,16 @@ var Util = (function (CONST) {
 		oReq.onload = function () {
 			if (this.readyState === 4) {
 				if (this.status === 200) {
-					if (typeof cb === "function") cb(this.responseText)
+					if (typeof cb === 'function') cb(this.responseText)
 				} else {
-					if (typeof cberr === "function") cberr(this.statusText)
+					if (typeof cberr === 'function') cberr(this.statusText)
 				}
 			}
 		}
 		oReq.onerror = function () {
-			if (typeof cberr === "function") cberr(this.statusText)
+			if (typeof cberr === 'function') cberr(this.statusText)
 		}
-		oReq.open("GET", sURL, true)
+		oReq.open('GET', sURL, true)
 		oReq.timeout = CONST.REQ_TIMEOUT
 		oReq.send(null)
 	}
@@ -36,14 +36,14 @@ var Util = (function (CONST) {
 	obj.fadeOut = function (element, cb) {
 		element.classList.add(CONST.FADE_CLASS)
 		setTimeout(function () {
-			if (typeof cb === "function") cb()
+			if (typeof cb === 'function') cb()
 		}, CONST.FADE_TIME)
 	}
 
 	obj.fadeIn = function (element, cb) {
 		element.classList.remove(CONST.FADE_CLASS)
 		setTimeout(function () {
-			if (typeof cb === "function") cb()
+			if (typeof cb === 'function') cb()
 		}, CONST.FADE_TIME)
 	}
 
@@ -70,14 +70,14 @@ var Util = (function (CONST) {
 			element.classList.add(CONST.VEILED_CLASS)
 		}, 1)
 		setTimeout(function () {
-			if (typeof cb === "function") cb()
+			if (typeof cb === 'function') cb()
 		}, CONST.FADE_TIME)
 	}
 	obj.unveil = function (element, cb) {
 		element.classList.remove(CONST.VEILED_CLASS)
 		setTimeout(function () {
 			element.classList.remove(CONST.VEIL_CLASS)
-			if (typeof cb === "function") cb()
+			if (typeof cb === 'function') cb()
 		}, CONST.FADE_TIME)
 	}
 
@@ -87,11 +87,11 @@ var Util = (function (CONST) {
 	*/
 
 	obj.blockScroll = function (element) {
-		element.style.overflow = "hidden"
+		element.style.overflow = 'hidden'
 	}
 
 	obj.releaseScroll = function (element) {
-		element.style.overflow = "auto"
+		element.style.overflow = 'auto'
 	}
 
 	/*
@@ -99,7 +99,7 @@ var Util = (function (CONST) {
 	* Useful for displaying hours
 	*/
 	obj.pad = function (number) {
-		return ("0" + number).slice(-2)
+		return ('0' + number).slice(-2)
 	}
 
 	/*
@@ -111,25 +111,23 @@ var Util = (function (CONST) {
 	}
 
 	/*
-	* Seconds passed between epoch and 'date'
-	*/
-	obj.dateToSeconds = function (d) {
-		var dateHour = d.split(" ")
-		var hour = [0, 0]
-		var date = dateHour[0].split("/") || [0, 0, 0]
-
-		if (dateHour.length > 1) {
-			hour = dateHour[1].split(":")
-		}
-
-		return Date.UTC(date[2], date[1] - 1,
-			date[0], hour[0], hour[1]) / 1000
+  * Seconds passed between epoch and 'date'
+  */
+	obj.dateStringToSeconds = function (d) {
+		var dateFormat = /^([0-3]?\d)\W([0-1]?\d)\W(\d{4})(\W([0-2]?\d)\W([0-5]?\d))?$/
+		var result = d.match(dateFormat)
+		return Date.UTC(result[3], result[2] - 1, result[1],
+			result[6] || 0, result[5] || 0) / 1000
 	}
 
+	var realStartDate = new Date()
+
 	obj.getNowSeconds = function () {
-		return Date.now() / 1000
-		// Testing
-		// return Date.UTC(2017,2,3,23,56)/1000
+		if (CONST.FAKE_DATE) { return (CONST.FAKE_DATE.getTime() + Date.now() - realStartDate.getTime()) / 1000 } else { return Date.now() / 1000 }
+	}
+
+	obj.getNowDate = function () {
+		return new Date(obj.getNowSeconds() * 1000)
 	}
 
 	obj.getHumanTime = function (s) {
@@ -155,14 +153,14 @@ var Util = (function (CONST) {
 	}
 
 	obj.storageGet = function (key) {
-		var storage = JSON.parse(window.localStorage["appData"] || "{}")
+		var storage = JSON.parse(window.localStorage['appData'] || '{}')
 		return storage[key] ? storage[key] : null
 	}
 
 	obj.storagePut = function (key, value) {
-		var storage = JSON.parse(window.localStorage["appData"] || "{}")
+		var storage = JSON.parse(window.localStorage['appData'] || '{}')
 		storage[key] = value
-		window.localStorage["appData"] = JSON.stringify(storage)
+		window.localStorage['appData'] = JSON.stringify(storage)
 	}
 
 	return obj
