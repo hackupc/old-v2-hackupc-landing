@@ -246,7 +246,7 @@ Runs linterns.
 
 If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2019 edition are:
 
-- Maurici Abad Gutierrez: Slack `@mauriciabad`
+- Maurici Abad Gutierrez: Slack `@mauriciabad` [mauriciabad.com](https://mauriciabad.com/)
 
 ## License
 
