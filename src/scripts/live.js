@@ -13,6 +13,7 @@
 	var viewElements
 	// var countdown
 	var schedule = { 'version': -1 }
+	// eslint-disable-next-line no-unused-vars
 	var canNotify = false
 	let itsFullscreen = false
 	// To add a view, add here the id of the new article
@@ -669,4 +670,5 @@
 		//   buildHardwareLab();
 		// }, 60000);
 	})
+// eslint-disable-next-line no-undef
 }(CONST, Util))
