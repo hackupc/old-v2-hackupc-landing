@@ -1,25 +1,16 @@
 {
   "extends": "standard",
+  "parser": "babel-eslint",
   "plugins": [
+    "html",
     "standard",
     "promise"
   ],
   "rules": {
-    "semi": [
-      "off",
-      "never"
-    ],
-    "indent": [
-      2,
-      "tab"
-    ],
+    "semi": ["off", "never"],
+    "indent": [2, "tab"],
     "no-tabs": 0,
-    "quotes": [
-      "off",
-      "never"
-    ]
+    "quotes": ["off", "never"]
   },
-  "env": {
-    "browser": true
-  }
+  "env": { "browser": true }
 }
