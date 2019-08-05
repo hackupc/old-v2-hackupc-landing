@@ -7,7 +7,7 @@
     "dist": "npm-run-all --parallel dist:*",
     "w": "npm run watch",
     "watch": "npm-run-all --parallel serve dist watch:* watch:*:*",
-    "test": "npm run -s lint",
+    "test": "npm-run-all --silent --parallel -c lint:*",
     "predist": "npm run clean",
     "postdist": "cd dist && asset-cache-bust '*.html' # --Commented-- && inline-source *.html && html-minifier *.html",
     "serve": "http-server dist",
@@ -51,7 +51,6 @@
     "watch:lib": "onchange \"src/lib\" -- npm-run-all dist:lib notify:update",
     "ts:cookies": "tsc src/scripts/cookies.ts --outFile /dev/stdout | uglifyjs -m -c -o dist/assets/js/cookies.min.js ",
     "js:live": "uglifyjs src/scripts/config.live.js src/scripts/util.live.js src/scripts/live.js -m -c -o dist/assets/js/live.min.js",
-    "lint": "npm-run-all --silent --parallel -c lint:*",
     "lint:html": "htmlhint src/**/*.html",
     "lint:js": "eslint src/**/*.js",
     "lint:styles": "stylelint \"src/**/*.{css,scss}\" \"!**/lib/**\"",
@@ -79,6 +78,7 @@
     "uglify-js": "^3.6.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.0",
