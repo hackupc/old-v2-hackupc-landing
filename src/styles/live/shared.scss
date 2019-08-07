@@ -52,7 +52,6 @@ a {
 }
 .happening {
 	font-weight: bold !important;
-	background-color: #eee;
 }
 
 .prompt {
@@ -132,7 +131,7 @@ a {
 	-webkit-overflow-scrolling: touch;
 
 	&::before {
-		box-shadow: 0 325px 100px -200px rgba(0, 0, 0, 0.15) inset;
+		box-shadow: 0 325px 100px -200px #f4f4f4 inset;
 		position: fixed;
 		width: 100%;
 		height: 250px;
@@ -142,7 +141,7 @@ a {
 	}
 
 	&::after {
-		box-shadow: 0 -250px 100px -200px rgba(0, 0, 0, 0.15) inset;
+		box-shadow: 0 -250px 100px -200px #f4f4f4 inset;
 		position: fixed;
 		width: 100%;
 		height: 200px;
