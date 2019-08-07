@@ -14,7 +14,7 @@
 	align-items: center;
 	justify-items: center;
 	align-content: center;
-	padding: 1em 0;
+	padding: var(--gap) calc(var(--gap) * 3);
 	margin: auto;
 }
 .section__list--sponsors-tera { --columns: 1; max-width: unset; }
@@ -29,11 +29,11 @@
 	.section__list--sponsors-mega { --columns: 3; }
 	.section__list--sponsors-kilo { --columns: 4; }
 	.section__list--sponsors-mili { --columns: 5; }
-	.section__list--sponsors { --gap: 1em; padding: 2em 0; }
+	.section__list--sponsors { --gap: 1em; }
 }
 
 .section--sponsors {
-	padding: 1em 2em;
+	padding: 1em 0;
 	max-width: 800px;
 }
 .sponsor {
