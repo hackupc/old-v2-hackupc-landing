@@ -4,7 +4,7 @@ body, html, main {
 body, html {
 	padding: 0;
 	margin: 0;
-	background-image: url("../img/live/background.png");
+	background-image: url("/assets/img/wall.jpg");
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: repeat repeat;
@@ -78,6 +78,7 @@ main {
 						margin-top: 100px;
 						z-index: 2;
 						width: 100%;
+						text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 
 						div.countdown-time {
 							padding: 10px 8px 0;

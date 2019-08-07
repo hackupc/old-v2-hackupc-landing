@@ -1,23 +1,24 @@
 /* --- COLORS --- */
-$bgColor: #efeae4;
-$lightBgColor: #e8c4c4;
+$bgColor: #e7e7e7;
+$lightBgColor: #e5f2ae;
 $textColor: #494949;
-$contrastColor: white;
-$secondaryColor: #e22b57;
-$buttonColor: #494949;
-$secondaryTextColor: #fff;
+$contrastColor: #fff;
+$secondaryColor: #e87a54;
+$buttonColor: #b4c959;
+$secondaryTextColor: #222;
 $headerSelectorColor: gray;
 $overlayColor: rgba(0, 0, 0, 0.4);
 //Links
-$highlightColor: darken($secondaryColor, 25%);
+// $highlightColor: darken($secondaryColor, 25%);
+$highlightColor: #9e5235;
 $mlhHardwareBtn: $highlightColor;
 
-$fbcolor: #3b5998;
-$ytcolor: #cc181e;
-$twcolor: #1da1f2;
-$igcolor: #c32aa3;
-$gtcolor: #333;
-$mecolor: #02b875;
+// $fbcolor: #3b5998;
+// $ytcolor: #cc181e;
+// $twcolor: #1da1f2;
+// $igcolor: #c32aa3;
+// $gtcolor: #333;
+// $mecolor: #02b875;
 
 /* --- PATHS --- */
 $fontsDir: "../fonts";
@@ -28,3 +29,5 @@ $fadeTime: 300ms;
 $asideOpenTime: 300ms;
 $timerAnimLength: 300ms;
 $happenedOpacity: 0.5;
+
+$borderRadius: 3px;
