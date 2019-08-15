@@ -24,7 +24,7 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="assets/css/landing.min.css" data-finger-print>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,700,800&display=block">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Ubuntu+Mono:700&display=block">
 	<link rel="stylesheet" href="/assets/css/cookies.min.css" data-finger-print>
 	<link rel="stylesheet" href="assets/css/test.min.css" data-finger-print>
 
@@ -101,7 +101,9 @@
 	<!--Countdown-->
 	<template id="countdownTimerTemplate">
 		<div class="countdown-time">
-			<span class="big">{hours}</span><span class="little">{seconds}</span><div class="decimals {running}"></div>
+			<span class="big">{hours}</span>
+			<span class="little">{seconds}</span>
+			<!-- <div class="decimals {running}"></div> -->
 		</div>
 	</template>
 	<!--Schedule row-->
@@ -890,5 +892,8 @@
 			</div>
 		</article>
 	</main>
+	<!-- Easter Egg -->
+	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', "font-size: 1.5em; line-height: 2;"))</script>
+	<i style="display: none;">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
 </body>
 </html>

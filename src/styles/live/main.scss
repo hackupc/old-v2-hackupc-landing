@@ -79,11 +79,12 @@ main {
 						z-index: 2;
 						width: 100%;
 						text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+						font-size: 1rem;
 
 						div.countdown-time {
-							padding: 10px 8px 0;
+							padding-top: 8px;
 							color: white;
-							font-size: 14px;
+							font-size: 3em;
 						}
 						div.decimals {
 							width: 27px;
@@ -93,14 +94,13 @@ main {
 
 						span {
 							&.big {
-								font-size: 24px;
+								font-size: 1em;
 								display: block;
 								float: left;
 							}
 							&.little {
-								margin-top: 4px;
-								font-size: 13px;
-								min-width: 25px;
+								margin-top: 0.2em;
+								font-size: 0.5em;
 							}
 						}
 					}
