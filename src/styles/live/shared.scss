@@ -248,7 +248,7 @@ a {
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu Mono', monospace;
 	z-index: 2;
 	flex: 1 1 0;
 	&.show-when-small {
@@ -266,16 +266,15 @@ a {
 		justify-content: center;
 		font-weight: bold;
 		display: flex;
+		color: $secondaryTextColor;
 		span {
 			&.big {
 				font-size: 54px;
 				display: block;
 			}
 			&.little {
-				margin-top: 7px;
-				font-size: 18px;
-				min-width: 50px;
-				text-align: right;
+				margin-top: 0.2em;
+				margin-left: 0.2em;
 			}
 		}
 		div.decimals {
@@ -300,10 +299,11 @@ a {
 	flex-wrap: wrap;
 	max-width: 1024px;
 	margin: 0 auto;
+	padding: 16px;
 	.panel {
 		border-radius: $borderRadius;
 		flex: 1 1 350px;
-		margin: 20px;
+		margin: 16px;
 		background-color: $contrastColor;
 		color: $textColor;
 		overflow: hidden;

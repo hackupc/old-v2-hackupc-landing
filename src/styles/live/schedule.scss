@@ -2,16 +2,20 @@
 	& > div {
 		display: flex;
 		flex-wrap: wrap;
+
+		div {
+			max-width: 100%;
+		}
 		.table-container {
 			color: $secondaryColor;
 			flex: 1 1 0;
-			margin: 0 20px 50px 20px;
+			margin-bottom: 50px;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 			h1 {
 				border-radius: $borderRadius $borderRadius 0 0;
 				text-align: center;
-				margin-bottom: 0;
+				margin: 0;
 				padding: 10px;
 				background-color: $secondaryColor;
 				color: #fff;
