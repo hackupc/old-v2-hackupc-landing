@@ -66,18 +66,18 @@
 
 	<!-- Event Microdata -->
 	<!-- Generated with: https://webcode.tools/ -->
-	<!-- Test here: http://www.google.com/webmasters/tools/richsnippets -->
-	<!-- When applications close write: ****"availability": "http://schema.org/SoldOut",**** inside offer  -->
+	<!-- Test here: https://www.google.com/webmasters/tools/richsnippets -->
+	<!-- When applications close write: ****"availability": "https://schema.org/SoldOut",**** inside offer  -->
 	<script type="application/ld+json">
 		{
-			"@context": "http://schema.org/",
+			"@context": "https://schema.org/",
 			"@type": "EducationEvent",
 			"name": "HackUPC",
 			"about": ["Hackathon", "Hacker", "Student", "University", "Collage", "Programming", "Technology", "UPC", "Barcelona", "Spain"],
 			"description": "HackUPC is the first student hackathon in Spain. This will be our sixth edition with 700 awesome hackers and lots of side activities to learn new technologies, meet interesting people and have fun. Come make history with us!",
 			"startDate": "2019-10-11 15:00",
 			"endDate": "2019-10-13 17:00",
-			"url": "http://hackupc.com/",
+			"url": "https://hackupc.com/",
 			"location": {
 				"@type": "Place",
 				"name": "UPC's North Campus FIB",
@@ -90,7 +90,7 @@
 			},
 			"potentialAction":{
 				"@type": "RegisterAction",
-				"target": "http://my.hackupc.com/"
+				"target": "https://my.hackupc.com/"
 			},
 			"image": "https://hackupc.com/assets/img/ogimage.png?v=2019",
 			"maximumAttendeeCapacity": 700,
@@ -99,13 +99,20 @@
 				"@type": "Offer",
 				"price": "0.00",
 				"priceCurrency": "EUR",
-				"url": "http://my.hackupc.com/",
+				"url": "https://my.hackupc.com/",
 				"validFrom": "2019-07-18",
-				"validThrough": "2019-09-30"
+				"validThrough": "2019-09-30",
+				"availability": "InStock"
 			},
 			"typicalAgeRange": "14+",
 			"inLanguage": "en",
 			"organizer": {
+				"@type": "Organization",
+				"url": "https://hackersatupc.org/",
+				"name": "Hackers@UPC",
+				"email": "contact@hackupc.com"
+			},
+			"performer": {
 				"@type": "Organization",
 				"url": "https://hackersatupc.org/",
 				"name": "Hackers@UPC",
@@ -116,15 +123,11 @@
 				{
 					"@type": "Organization",
 					"name": "FIB",
-					"url": "http://fib.upc.com/"
+					"url": "https://fib.upc.com/"
 				}, {
 					"@type": "Organization",
 					"name": "UPC",
-					"url": "http://upc.edu/"
-				}, {
-					"@type": "Organization",
-					"name": "CFIS",
-					"url": "https://cfis.upc.edu/"
+					"url": "https://upc.edu/"
 				}
 			]
 		}
@@ -316,7 +319,7 @@
 				</div>
 				<div class="question">
 					<h3 class="question__title">What if I have another question?</h3>
-					<div class="question__answer"><strong>Tweet us</strong> at <a href="http://twitter.com/hackupc"
+					<div class="question__answer"><strong>Tweet us</strong> at <a href="https://twitter.com/hackupc"
 							target="_blank" rel="noopener" hreflang="en">@hackupc</a> or
 						drop us a line at <a href="mailto:contact@hackupc.com">contact@hackupc.com</a>.</div>
 				</div>
@@ -454,13 +457,13 @@
 			<a class="partner" style="height: 3.25em;" href="https://www.illy.com/" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Illy logo" src="/assets/img/logos/illy.svg">
 			</a>
-			<a class="partner" style="height: 3.75em;" href="http://www.fritravich.com/en/" hreflang="en" target="_blank" rel="noopener">
+			<a class="partner" style="height: 3.75em;" href="https://www.fritravich.com/en/" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Frit Ravich logo" src="/assets/img/logos/frit_ravich.png">
 			</a>
-			<!-- <a class="partner" href="http://www.wolfram.com/" hreflang="en" target="_blank" rel="noopener">
+			<!-- <a class="partner" href="https://www.wolfram.com/" hreflang="en" target="_blank" rel="noopener">
 				<img class="sponsor__img" alt="Wolfram logo" src="/assets/img/logos/wolfram.png">
 			</a>
-			<a class="partner" href="http://www.zanuy.com/index.php/en/" hreflang="en" target="_blank" rel="noopener">
+			<a class="partner" href="https://www.zanuy.com/index.php/en/" hreflang="en" target="_blank" rel="noopener">
 				<img class="partner__img" alt="Zanuy logo" src="/assets/img/logos/zanuy.png">
 			</a>
 			<a class="partner" href="https://leoboeck.com/" hreflang="es-ES" target="_blank" rel="noopener">
