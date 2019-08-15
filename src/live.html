@@ -109,21 +109,11 @@
 	<!--Schedule row-->
 	<template id="scheduleRow">
 		<tr data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}">
-			<td>
-				<a target="_blank" href="http://maps.hackupc.com/#{mapsLink}">{locationName}</a>
-			</td>
-			<td>
-				{startHour}
-			</td>
-			<td>
-				{endHour}
-			</td>
-			<td>
-				{title}
-			</td>
-			<td class="hide-when-small">
-				{description}
-			</td>
+			<td><a target="_blank" href="http://maps.hackupc.com/#{mapsLink}">{locationName}</a></td>
+			<td>{startHour}</td>
+			<td>{endHour}</td>
+			<td>{title}</td>
+			<td class="hide-when-small">{description}</td>
 		</tr>
 	</template>
 	<!--Schedule day table-->
