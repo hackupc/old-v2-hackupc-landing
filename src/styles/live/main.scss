@@ -10,6 +10,7 @@ body, html {
 	background-repeat: repeat repeat;
 	font-family: 'Montserrat', sans-serif;
 	transition: opacity $fadeTime;
+	-webkit-tap-highlight-color: $tapColor;
 }
 
 main {
