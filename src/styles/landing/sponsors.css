@@ -24,7 +24,7 @@
 .section__list--sponsors-kilo { --columns: 3; }
 .section__list--sponsors-mili { --columns: 4; }
 @media(min-width: 544px) {
-	.section__list--sponsors-tera { --columns: 1; max-width: 75%; }
+	.section__list--sponsors-tera { --columns: 1; max-width: 60%; }
 	.section__list--sponsors-giga { --columns: 2; max-width: unset; }
 	.section__list--sponsors-mega { --columns: 3; }
 	.section__list--sponsors-kilo { --columns: 4; }
