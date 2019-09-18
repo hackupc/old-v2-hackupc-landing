@@ -73,14 +73,13 @@ a {
 			margin: 0;
 			padding: 0;
 		}
+		p { margin: 16px; }
 		.buttons {
-			display: flex;
-			justify-content: flex-end;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 8px;
 			div {
-				flex: 1 1 auto;
 				padding: 5px 10px;
-				margin: 20px;
 				color: $contrastColor;
 				background-color: $buttonColor;
 				cursor: pointer;

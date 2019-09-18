@@ -355,7 +355,7 @@
 			function () {
 				if (cb) cb()
 			},
-			"No, thanks. I'll choose manually", function () {
+			'No, thanks.', function () {
 				// Do nothing
 			})
 
