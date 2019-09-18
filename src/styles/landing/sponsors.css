@@ -73,6 +73,8 @@
 .partner--support:hover { transform: scale(1.14286); } */
 
 .section__list--partners {
+	max-width: 40em;
+	margin: auto;
 	align-items: center;
 	justify-content: center;
 	padding: 0.5em;

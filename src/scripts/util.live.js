@@ -147,7 +147,7 @@ var Util = (function (CONST) {
 		var element = document.getElementById(templateId)
 		var clone = element.cloneNode(true)
 		clone.innerHTML = clone.innerHTML.replace(/\{(.+?)\}/g, function (full, label) {
-			return data[label] === null ? '' : data[label]
+			return data[label] === null || data[label] === undefined ? '' : data[label]
 		})
 
 		return document.importNode(clone.content, true)
