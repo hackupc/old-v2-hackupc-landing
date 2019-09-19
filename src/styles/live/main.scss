@@ -1,6 +1,4 @@
-body, html, main {
-	height: 100%;
-}
+body, html, main { height: 100%; }
 body, html {
 	padding: 0;
 	margin: 0;
@@ -13,9 +11,7 @@ body, html {
 	-webkit-tap-highlight-color: $tapColor;
 }
 
-main {
-	transition: opacity $fadeTime;
-}
+main { transition: opacity $fadeTime; }
 
 #background {
 	position: absolute;
@@ -49,9 +45,7 @@ main {
 				text-decoration: none;
 			}
 
-			&:first-child {
-				border-left: none;
-			}
+			&:first-child { border-left: none; }
 
 			&.selected {
 				box-shadow: 0 3px 0 rgba(30, 30, 30, 0.5);
@@ -113,9 +107,7 @@ main {
 						-webkit-filter: drop-shadow(0 0 25px #3339);
 					}
 
-					&:hover {
-						margin-top: -95px;
-					}
+					&:hover { margin-top: -95px; }
 				}
 			}
 		}

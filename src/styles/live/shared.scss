@@ -3,25 +3,17 @@
 /* Generic: incontextual classes */
 article {
 	display: none !important;
-	&.active {
-		display: block !important;
-	}
+	&.active { display: block !important; }
 }
-strong {
-	color: $highlightColor;
-}
+strong { color: $highlightColor; }
 a {
 	color: $highlightColor;
 	text-decoration: none;
 }
 
-.padding-bottom {
-	padding-bottom: 50px;
-}
+.padding-bottom { padding-bottom: 50px; }
 
-.hidden {
-	display: none !important;
-}
+.hidden { display: none !important; }
 
 .faded {
 	opacity: 0;
@@ -47,12 +39,8 @@ a {
 	margin: 0 auto;
 }
 
-.happened {
-	opacity: $happenedOpacity;
-}
-.happening {
-	font-weight: bold !important;
-}
+.happened { opacity: $happenedOpacity; }
+.happening { font-weight: bold !important; }
 
 .prompt {
 	position: absolute;
@@ -90,32 +78,20 @@ a {
 }
 
 @media (min-width: 720px) {
-	.under-header {
-		padding-top: 150px;
-	}
+	.under-header { padding-top: 150px; }
 
-	.show-when-small {
-		display: none !important;
-	}
+	.show-when-small { display: none !important; }
 }
 
 @media (max-width: 720px) {
-	.under-header {
-		padding-top: 60px;
-	}
+	.under-header { padding-top: 60px; }
 
-	.hide-when-small {
-		display: none !important;
-	}
+	.hide-when-small { display: none !important; }
 
 	.events-fancy {
-		ul {
-			padding-left: 25px !important;
-		}
+		ul { padding-left: 25px !important; }
 		/*
-		&::before {
-			box-shadow: 0 1000px 50px -855px #9f3e56 inset !important;
-		}
+		&::before { box-shadow: 0 1000px 50px -855px #9f3e56 inset !important;}
 		*/
 	}
 }
@@ -222,9 +198,7 @@ a {
 					font-size: 15px;
 					margin-top: 3px;
 					margin-right: 10px;
-					.end-hour {
-						font-size: 12px;
-					}
+					.end-hour { font-size: 12px; }
 				}
 				&.subscribed {
 					.title::after {
@@ -283,12 +257,8 @@ a {
 			display: inline;
 			background-size: cover;
 			margin-top: 7px;
-			&.run {
-				background-image: url('# {$imgDir}/count_decimals_run_White.gif');
-			}
-			&.stop {
-				background-image: url('# {$imgDir}/count_decimals_stop_White.png');
-			}
+			&.run { background-image: url('# {$imgDir}/count_decimals_run_White.gif'); }
+			&.stop { background-image: url('# {$imgDir}/count_decimals_stop_White.png'); }
 		}
 	}
 }
@@ -311,16 +281,17 @@ a {
 		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-		p, ul, ol {
-			margin: 5px 15px 5px 15px;
-		}
+		p, ul, ol { margin: 5px 15px 5px 15px; }
 
-		&.large {
-			flex: 1 1 600px;
-		}
-		a {
-			color: $secondaryColor;
-		}
+		ul { list-style-type: disc; }
+		ol { list-style-type: decimal; }
+		ul, ol { padding-left: 8px; }
+		/* stylelint-disable */
+		li { list-style: inherit; display: list-item; }
+		/* stylelint-enable */
+
+		&.large { flex: 1 1 600px; }
+		a { color: $secondaryColor; }
 		h1 {
 			width: 100%;
 			margin: 0 0 0 0;
@@ -331,27 +302,17 @@ a {
 			padding: 5px 0;
 			padding-top: 3px;
 		}
-		h2 {
-			margin: 5px 15px;
-		}
+		h2 { margin: 5px 15px; }
 		.panel-info {
 			h3 {
 				font-weight: normal;
 				font-family: 'Montserrat', sans-serif;
 			}
 		}
-		.margin-bottom {
-			margin-bottom: 10px;
-		}
-		.text-centered {
-			text-align: center;
-		}
-		.text-normal {
-			font-weight: normal;
-		}
-		.no-indent {
-			padding-left: 0;
-		}
+		.margin-bottom { margin-bottom: 10px; }
+		.text-centered { text-align: center; }
+		.text-normal { font-weight: normal; }
+		.no-indent { padding-left: 0; }
 		.buttons {
 			display: flex;
 			border-radius: 3px;
@@ -365,9 +326,7 @@ a {
 				padding: 8px;
 				text-align: center;
 				font-weight: bold;
-				&:not(:first-child) {
-					border-left: thin solid white;
-				}
+				&:not(:first-child) { border-left: thin solid white; }
 				// &.fb { background-color: $fbColor; }
 				// &.yt { background-color: $ytColor; }
 				// &.tw { background-color: $twColor; }
@@ -376,9 +335,7 @@ a {
 				// &.me { background-color: $meColor; }
 			}
 		}
-		.label {
-			display: inline;
-		}
+		.label { display: inline; }
 
 		.icon {
 			display: inline-block;
@@ -396,9 +353,7 @@ a {
 		& > div {
 			/* stylelint-enable */
 			margin: 15px 15px;
-			p, h1, h2 {
-				margin: 0 0;
-			}
+			p, h1, h2 { margin: 0 0; }
 		}
 
 		span {
@@ -427,9 +382,7 @@ a {
 				border-top: 1px solid #49494933;
 				padding-bottom: 25px;
 			}
-			.get-accessible {
-				margin-top: 20px;
-			}
+			.get-accessible { margin-top: 20px; }
 		}
 	}
 
