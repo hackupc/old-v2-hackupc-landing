@@ -3,9 +3,7 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		div {
-			max-width: 100%;
-		}
+		div { max-width: 100%; }
 		.table-container {
 			color: $secondaryColor;
 			flex: 1 1 0;
@@ -40,18 +38,12 @@
 				}
 				td {
 					border: thin solid fade($secondaryColor, 20%);
-					&:last-child {
-						min-width: 200px;
-					}
+					&:last-child { min-width: 200px; }
 					&:first-child {
 						text-align: center;
-						.location-icon {
-							display: inline-block;
-						}
+						.location-icon { display: inline-block; }
 					}
-					a {
-						color: $secondaryColor;
-					}
+					a { color: $secondaryColor; }
 				}
 			}
 		}
