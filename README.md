@@ -153,6 +153,8 @@ Features included
 Some parameters (offsets, timeouts, defaults) can be changed in `config.live.js`. Keep in mind that some values are just constants and should not be changed.  
 Style can be customized in params.scss (note that some parameters should match some variables in config.live.js).
 
+Here you can edit the `FAKE_DATE` parameter to test funtionalities.
+
 ## Tech stack
 
 This are the explanations of why we chose each technology, so you can decide whether keep it or change it.
