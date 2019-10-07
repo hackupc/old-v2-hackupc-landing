@@ -11,7 +11,7 @@
 			"events":
 			[
 				{
-					"id": "37",
+					"id": "0",
 					"title": "Registration",
 					"startHour": "16:00",
 					"endHour": "18:45",
@@ -20,7 +20,7 @@
 					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
 				},
 				{
-					"id": "38",
+					"id": "1",
 					"title": "Baggage check-in",
 					"startHour": "16:00",
 					"endHour": "18:45",
@@ -29,7 +29,7 @@
 					"description": "Bring your baggage and we will store it for you"
 				},
 				{
-					"id": "0",
+					"id": "2",
 					"title": "Opening Ceremony",
 					"startHour": "19:00",
 					"endHour": "21:00",
@@ -38,7 +38,7 @@
 					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
 				{
-					"id": "1",
+					"id": "3",
 					"title": "Hacking Starts",
 					"startHour": "21:00",
 					"locationId": "hacking",
@@ -46,7 +46,7 @@
 					"description": "Ready. Set. GO!"
 				},
 				{
-					"id": "2",
+					"id": "4",
 					"title": "Dinner",
 					"startHour": "21:00",
 					"endHour": "23:00",
@@ -55,7 +55,7 @@
 					"description": "Enjoy our first meal"
 				},
 				{
-					"id": "3",
+					"id": "5",
 					"title": "Team Building",
 					"startHour": "22:30",
 					"endHour": "23:30",
@@ -64,7 +64,7 @@
 					"description": "Looking for a team or new teammates?"
 				},
 				{
-					"id": "4",
+					"id": "6",
 					"title": "Git & GitHub: Intro to git",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -75,7 +75,7 @@
 					"description": "Learn how to code with multiple people in the same project and never lose a single line."
 				},
 				{
-					"id": "5",
+					"id": "7",
 					"title": "Initial Brainstorming",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -86,7 +86,7 @@
 					"description": "We'll help your team come up with project ideas"
 				},
 				{
-					"id": "6",
+					"id": "8",
 					"title": "Data for good cities",
 					"talk": true,
 					"author": "Everis",
@@ -97,7 +97,7 @@
 					"description": ""
 				},
 				{
-					"id": "7",
+					"id": "9",
 					"title": "Crush your coding interview workshop",
 					"talk": true,
 					"author": "Facebook",
@@ -108,7 +108,7 @@
 					"description": ""
 				},
 				{
-					"id": "8",
+					"id": "10",
 					"title": "The future of 3D Printing",
 					"talk": true,
 					"author": "HP",
@@ -119,7 +119,7 @@
 					"description": ""
 				},
 				{
-					"id": "9",
+					"id": "11",
 					"title": "Are you Redis?",
 					"talk": true,
 					"author": "Vueling",
@@ -137,7 +137,7 @@
 			"events":
 			[
 				{
-					"id": "10",
+					"id": "12",
 					"title": "APIs for first timers",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -148,7 +148,7 @@
 					"description": "Learn how to fetch APIs and use it's data"
 				},
 				{
-					"id": "11",
+					"id": "13",
 					"title": "Programmatic art & Online multiplayer Gamedev 101",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -159,7 +159,7 @@
 					"description": ""
 				},
 				{
-					"id": "12",
+					"id": "14",
 					"title": "Midnight Snacks",
 					"startHour": "01:30",
 					"endHour": "02:30",
@@ -168,13 +168,13 @@
 					"description": "Feeling hungry? Come get some DIY yogurts"
 				},
 				{
-					"id": "13",
+					"id": "15",
 					"title": "The Game starts",
 					"startHour": "03:14",
 					"description": "Hello dear Hacker"
 				},
 				{
-					"id": "14",
+					"id": "16",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -183,7 +183,7 @@
 					"description": "Come get some energizing breakfast"
 				},
 				{
-					"id": "15",
+					"id": "17",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
@@ -192,7 +192,7 @@
 					"description": "Don't forget to bring your towel"
 				},
 				{
-					"id": "16",
+					"id": "18",
 					"title": "Microservices at Scale",
 					"talk": true,
 					"author": "Skyscanner",
@@ -203,7 +203,7 @@
 					"description": "Discover how Skyscanner API works"
 				},
 				{
-					"id": "17",
+					"id": "19",
 					"title": "",
 					"talk": true,
 					"author": "McKinsey",
@@ -214,7 +214,7 @@
 					"description": ""
 				},
 				{
-					"id": "18",
+					"id": "20",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:30",
@@ -223,7 +223,7 @@
 					"description": "Come and get some delicious paella"
 				},
 				{
-					"id": "19",
+					"id": "21",
 					"title": "Meetup Hacktoberfest",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -234,7 +234,7 @@
 					"description": "Cheers"
 				},
 				{
-					"id": "20",
+					"id": "22",
 					"title": "How to organize your hackathon",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -245,7 +245,7 @@
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
 				{
-					"id": "21",
+					"id": "23",
 					"title": "Agile workshop with Lego",
 					"talk": true,
 					"author": "Hackers@UPC",
@@ -256,7 +256,7 @@
 					"description": "Stop starting, start finishing."
 				},
 				{
-					"id": "22",
+					"id": "24",
 					"title": "Lego Tournament",
 					"startHour": "18:00",
 					"endHour": "18:30",
@@ -265,7 +265,7 @@
 					"description": "Call to \"Master Builders\", capable of building anything from their imagination without instructions"
 				},
 				{
-					"id": "23",
+					"id": "25",
 					"title": "Rubik Tournament",
 					"startHour": "19:00",
 					"endHour": "20:30",
@@ -274,7 +274,7 @@
 					"description": "Show your skills solving Rubik cubes!"
 				},
 				{
-					"id": "24",
+					"id": "26",
 					"title": "Dinner",
 					"startHour": "20:00",
 					"endHour": "21:30",
@@ -283,7 +283,7 @@
 					"description": "PIZZA TIME"
 				},
 				{
-					"id": "25",
+					"id": "27",
 					"title": "Slideshow Karaoke",
 					"startHour": "22:00",
 					"endHour": "23:00",
@@ -299,7 +299,7 @@
 			"events":
 			[
 				{
-					"id": "26",
+					"id": "28",
 					"title": "Sticker Exchange",
 					"startHour": "00:00",
 					"endHour": "01:00",
@@ -308,7 +308,7 @@
 					"description": "You give stickers, you receive stickers. Ez pz"
 				},
 				{
-					"id": "27",
+					"id": "29",
 					"title": "Midnight Snack",
 					"startHour": "01:00",
 					"endHour": "02:00",
@@ -317,7 +317,7 @@
 					"description": "It's been more than 24 hours. Get some sweet waffles to keep yourself motivated"
 				},
 				{
-					"id": "28",
+					"id": "30",
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "01:00",
 					"endHour": "03:00",
@@ -326,13 +326,13 @@
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
-					"id": "29",
+					"id": "31",
 					"title": "The Game ends",
 					"startHour": "03:14",
 					"description": "You lost"
 				},
 				{
-					"id": "30",
+					"id": "32",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -341,7 +341,7 @@
 					"description": "Come charge your energies for the last hours of hacking"
 				},
 				{
-					"id": "31",
+					"id": "33",
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:15",
@@ -349,13 +349,13 @@
 					"description": "Submit your project in our Devpost!"
 				},
 				{
-					"id": "32",
+					"id": "34",
 					"title": "Hacking ends",
 					"startHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
-					"id": "33",
+					"id": "35",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
@@ -364,7 +364,7 @@
 					"description": "Relax a bit before the demos start"
 				},
 				{
-					"id": "34",
+					"id": "36",
 					"title": "Hack Demos",
 					"startHour": "10:15",
 					"endHour": "13:15",
@@ -373,7 +373,7 @@
 					"description": "It's demo time!"
 				},
 				{
-					"id": "35",
+					"id": "37",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -382,7 +382,7 @@
 					"description": "Mmmmmmm... frankfurt..."
 				},
 				{
-					"id": "36",
+					"id": "38",
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",
