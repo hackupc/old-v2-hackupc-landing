@@ -391,6 +391,19 @@
 	}
 
 	/*
+  * Generates events table to keep track of subscriptions (notifications)
+  */
+	function generateScheduleCompositedFields () {
+		schedule.days.forEach(function (day) {
+			day.events.forEach(function (event) {
+				event.title = (event.talk ? '[Talk] ' : '') +
+					(event.author ? (event.author + ': ') : '') +
+					(event.title || '')
+			})
+		})
+	}
+
+	/*
   * Loads the schedule in the global scope
   * and checks version.
   * If version is different from local
@@ -408,6 +421,7 @@
 				schedule = newSchedule
 				generateTimestamps()
 				generateEventReferences()
+				generateScheduleCompositedFields()
 				if (typeof cb === 'function') { cb() }
 				console.info('Schedule updated on (' + Util.getNowDate() + '): \n' + schedule.message)
 			} else {
