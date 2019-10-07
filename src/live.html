@@ -109,7 +109,7 @@
 	<!--Schedule row-->
 	<template id="scheduleRow">
 		<tr data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}">
-			<td><a target="_blank" href="http://maps.hackupc.com/#{mapsLink}">{locationName}</a></td>
+			<td><a href="#/map/{locationId}">{locationName}</a></td>
 			<td>{startHour}</td>
 			<td>{endHour}</td>
 			<td>{title}</td>
@@ -152,7 +152,7 @@
 	<!--Fancy schedule event-->
 	<template id="fancyEvent">
 		<div class="event" data-event-id="{id}" data-start-timestamp="{startTmsp}" data-end-timestamp="{endTmsp}" data-end-action="removeEndedEvent" data-update-action="updateFancyEvent">
-			<a  target="_blank" href="http://maps.hackupc.com/#{mapsLink}"></a>
+			<a href="#/map/{locationId}"></a>
 			<div class="event-hour">
 				<div>{startHour}</div>
 				<div class="end-hour">{endHour}</div>
@@ -195,9 +195,8 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li data-bind-view="maps"><!--<li>-->
-					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
-					<a href="#/maps">Maps</a>
+				<li data-bind-view="map">
+					<a href="#/map">Map</a>
 				</li>
 				<li data-bind-view="mentors"><!--<li>-->
 					<!--<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>-->
@@ -234,9 +233,8 @@
 				<li data-bind-view="schedule">
 					<a href="#/schedule">Schedule</a>
 				</li>
-				<li data-bind-view="maps"><!--<li>-->
-					<!--<a href="http://maps.hackupc.com/#/UPC" target="_blank">Maps</a>-->
-					<a href="#/maps">Maps</a>
+				<li data-bind-view="map">
+					<a href="#/map">Map</a>
 				</li>
 				<li data-bind-view="mentors"><!--<li>-->
 					<!--<a href="https://mentors.hackupc.com/" target="_blank">Mentors</a>-->
@@ -361,7 +359,7 @@
 					<div class="get-there">
 						<h2 class="get-title text-centered"><i class="fa fa-plane" aria-hidden="true"></i> By plane</h2>
 						<h3 class="get-subtitle text-centered">Arriving</h3>
-						<p>Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="http://maps.hackupc.com">maps</a>.</p>
+						<p>Take the metro L9 in either <b>Aeroport T2</b> or <b>Aeroport T1</b> towards <b>Zona Universitària</b>. Go to the last station <b>Zona Universitària</b>. Our venue is a 10 minute walk from there. To get to our check-in point please check out our <a href="#/map/">map</a>.</p>
 						<p>Don't get a T-10 ticket if you are in the airport, you won't be able to use it from there. Buy a single trip ticket from the airport instead. If you really want to use a T-10, then you can take the train (R2 to Sant Celoni or Maçanet-Massanes) from Terminal 2B (a free shuttle bus from Terminal 1 to Terminal 2B departs every 5 minutes), but the train only runs every 30 minutes. You will have to get down at <b>Sants Estació</b> (3rd stop) and take the metro as explained below.</p>
 						<h3 class="get-subtitle text-centered">Leaving</h3>
 						<p>Take the metro L9 in <b>Zona Universitària</b> towards <b>Aeroport T1</b>. Stop at either <b> Aeroport T1</b> or <b>Aeroport T2</b> depending on the terminal your plane is departing from.</p>
@@ -371,7 +369,7 @@
 						<div class="get-separator"></div>
 						<h2 class="get-title text-centered margin-bottom"><i class="fa fa-train" aria-hidden="true"></i> By train</h2>
 						<h3 class="get-subtitle text-centered">Arriving</h3>
-						<p>If you take the train, you will probably arrive at <b>Sants Estació</b>. From there you need to take the metro L3, it is located on the north side of the station, follow the signs for the green line (L3), not the blue one (L5). When you reach the station, go towards <b>Zona Universitària</b> (to the right if coming from underground). Get off at <b>Palau Reial</b>, from there you should see some signs pointing where HackUPC is, otherwise you can check out our <a href="http://maps.hackupc.com">maps</a>.</p>
+						<p>If you take the train, you will probably arrive at <b>Sants Estació</b>. From there you need to take the metro L3, it is located on the north side of the station, follow the signs for the green line (L3), not the blue one (L5). When you reach the station, go towards <b>Zona Universitària</b> (to the right if coming from underground). Get off at <b>Palau Reial</b>, from there you should see some signs pointing where HackUPC is, otherwise you can check out our <a href="#/map/">map</a>.</p>
 						<h3 class="get-subtitle text-centered" style="margin-top: 20px;">Leaving</h3>
 						<p>Take the metro L3 in <b>Palau Reial</b> towards <b>Trinitat Nova</b> and get off at <b>Sants Estació</b>. When exiting, the easiest way is to turn left and follow the signs towards the railway station, you can follow the plane sign or the letter R with the orange background.</p>
 						<div class="get-accessible">
@@ -524,12 +522,12 @@
 				</div>-->
 			</div>
 		</article>
-		<article id="maps" class="under-header padding-bottom">
+		<article id="map" class="under-header padding-bottom">
 			<div class="container">
 				<div class="panel large">
-					<h1>Maps</h1>
+					<h1>Map</h1>
 					<div>
-						<h2 style="text-align: center;">Maps will be available soon</h2>
+						<h2 style="text-align: center;">Map will be available soon</h2>
 						<p style="text-align: center;">We thank you for your patience!</p>
 					</div>
 				</div>

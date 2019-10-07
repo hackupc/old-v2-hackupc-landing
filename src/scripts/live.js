@@ -27,7 +27,7 @@
 		'faq': 'faq',
 		'schedule': 'schedule',
 		'challenges': 'challenges',
-		'maps': 'maps',
+		'map': 'map',
 		'mentors': 'mentors'
 	}
 
@@ -453,8 +453,9 @@
 	function onRouteChange () {
 		if (window.location.hash && window.location.hash.indexOf('/') !== -1) {
 			var route = window.location.hash.slice(window.location.hash.indexOf('/') + 1)
-			if (views[route]) {
-				updateBindings(route)
+			var routeRoot = route.substring(0, route.indexOf('/')) || route
+			if (views[routeRoot]) {
+				updateBindings(routeRoot)
 				showView(route)
 			} else {
 				console.warn("View '" + route + "' doesn't exist. Showing default (' + CONST.DEFAULT_VIEW + ').")
@@ -472,8 +473,16 @@
 			viewElements[i].classList.remove(CONST.ACTIVE_CLASS)
 		}
 
-		document.getElementById(view).classList.add(CONST.ACTIVE_CLASS)
+		let viewRoot = view.substring(0, view.indexOf('/')) || view
+		document.getElementById(viewRoot).classList.add(CONST.ACTIVE_CLASS)
+
+		if (viewRoot === 'map') changeMapView(view.substring(view.indexOf('/') + 1));
 	}
+
+	function changeMapView (locationId) {
+		// TODO: go to specified map location
+	}
+
 	function toggleFullscreen () {
 		if (itsFullscreen) {
 			hideFullscreen()

@@ -15,7 +15,7 @@
 					"title": "Registration",
 					"startHour": "16:00",
 					"endHour": "18:45",
-					"mapsLink": "/checkin",
+					"locationId": "checkin",
 					"locationName": "A5-A6 Underground corridor",
 					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
 				},
@@ -24,7 +24,7 @@
 					"title": "Baggage check-in",
 					"startHour": "16:00",
 					"endHour": "18:45",
-					"mapsLink": "/infodesk",
+					"locationId": "infodesk",
 					"locationName": "Info Desk",
 					"description": "Bring your baggage and we will store it for you"
 				},
@@ -33,7 +33,7 @@
 					"title": "Opening Ceremony",
 					"startHour": "19:00",
 					"endHour": "21:00",
-					"mapsLink": "/vertex",
+					"locationId": "vertex",
 					"locationName": "Vèrtex",
 					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
@@ -41,7 +41,7 @@
 					"id": "1",
 					"title": "Hacking Starts",
 					"startHour": "21:00",
-					"mapsLink": "/hacking",
+					"locationId": "hacking",
 					"locationName": "Hacking rooms",
 					"description": "Ready. Set. GO!"
 				},
@@ -50,7 +50,7 @@
 					"title": "Dinner",
 					"startHour": "21:00",
 					"endHour": "23:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal zone",
 					"description": "Enjoy our first meal"
 				},
@@ -59,7 +59,7 @@
 					"title": "Team Building",
 					"startHour": "22:30",
 					"endHour": "23:30",
-					"mapsLink": "/A4002",
+					"locationId": "A4002",
 					"locationName": "A4002",
 					"description": "Looking for a team or new teammates?"
 				},
@@ -70,7 +70,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "22:30",
 					"endHour": "23:00",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "Learn how to code with multiple people in the same project and never lose a single line."
 				},
@@ -81,7 +81,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "22:30",
 					"endHour": "23:00",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": "We'll help your team come up with project ideas"
 				},
@@ -92,7 +92,7 @@
 					"author": "Everis",
 					"startHour": "23:00",
 					"endHour": "23:30",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": ""
 				},
@@ -103,7 +103,7 @@
 					"author": "Facebook",
 					"startHour": "23:00",
 					"endHour": "23:30",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": ""
 				},
@@ -114,7 +114,7 @@
 					"author": "HP",
 					"startHour": "23:30",
 					"endHour": "23:59",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": ""
 				},
@@ -125,7 +125,7 @@
 					"author": "Vueling",
 					"startHour": "23:30",
 					"endHour": "23:59",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": ""
 				}
@@ -143,7 +143,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "00:00",
 					"endHour": "00:30",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "Learn how to fetch APIs and use it's data"
 				},
@@ -154,7 +154,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "00:30",
 					"endHour": "01:00",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": ""
 				},
@@ -163,7 +163,7 @@
 					"title": "Midnight Snacks",
 					"startHour": "01:30",
 					"endHour": "02:30",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Feeling hungry? Come get some DIY yogurts"
 				},
@@ -178,7 +178,7 @@
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Come get some energizing breakfast"
 				},
@@ -187,7 +187,7 @@
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
-					"mapsLink": "/showers",
+					"locationId": "showers",
 					"locationName": "Sports Center",
 					"description": "Don't forget to bring your towel"
 				},
@@ -198,7 +198,7 @@
 					"author": "Skyscanner",
 					"startHour": "10:00",
 					"endHour": "10:30",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "Discover how Skyscanner API works"
 				},
@@ -209,7 +209,7 @@
 					"author": "McKinsey",
 					"startHour": "11:00",
 					"endHour": "12:00",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": ""
 				},
@@ -218,7 +218,7 @@
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:30",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal zone",
 					"description": "Come and get some delicious paella"
 				},
@@ -229,7 +229,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "16:00",
 					"endHour": "17:00",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "Cheers"
 				},
@@ -240,7 +240,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "17:00",
 					"endHour": "18:00",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
 				},
@@ -251,7 +251,7 @@
 					"author": "Hackers@UPC",
 					"startHour": "17:00",
 					"endHour": "17:30",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": "Stop starting, start finishing."
 				},
@@ -260,7 +260,7 @@
 					"title": "Lego Tournament",
 					"startHour": "18:00",
 					"endHour": "18:30",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": "Call to \"Master Builders\", capable of building anything from their imagination without instructions"
 				},
@@ -269,7 +269,7 @@
 					"title": "Rubik Tournament",
 					"startHour": "19:00",
 					"endHour": "20:30",
-					"mapsLink": "/A5002",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": "Show your skills solving Rubik cubes!"
 				},
@@ -278,7 +278,7 @@
 					"title": "Dinner",
 					"startHour": "20:00",
 					"endHour": "21:30",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "PIZZA TIME"
 				},
@@ -287,7 +287,7 @@
 					"title": "Slideshow Karaoke",
 					"startHour": "22:00",
 					"endHour": "23:00",
-					"mapsLink": "/A5001",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "A hackers favourite game. Are you ready to improvise?"
 				}
@@ -303,7 +303,7 @@
 					"title": "Sticker Exchange",
 					"startHour": "00:00",
 					"endHour": "01:00",
-					"mapsLink": "/A6106",
+					"locationId": "A6106",
 					"locationName": "Cafeteria (A6106)",
 					"description": "You give stickers, you receive stickers. Ez pz"
 				},
@@ -312,7 +312,7 @@
 					"title": "Midnight Snack",
 					"startHour": "01:00",
 					"endHour": "02:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "It's been more than 24 hours. Get some sweet waffles to keep yourself motivated"
 				},
@@ -321,7 +321,7 @@
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "01:00",
 					"endHour": "03:00",
-					"mapsLink": "/A4101",
+					"locationId": "A4101",
 					"locationName": "A4101/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
@@ -336,7 +336,7 @@
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Come charge your energies for the last hours of hacking"
 				},
@@ -359,7 +359,7 @@
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
-					"mapsLink": "/showers",
+					"locationId": "showers",
 					"locationName": "Sports Center",
 					"description": "Relax a bit before the demos start"
 				},
@@ -368,7 +368,7 @@
 					"title": "Hack Demos",
 					"startHour": "10:15",
 					"endHour": "13:15",
-					"mapsLink": "/A4",
+					"locationId": "A4",
 					"locationName": "A3 & A4",
 					"description": "It's demo time!"
 				},
@@ -377,7 +377,7 @@
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Mmmmmmm... frankfurt..."
 				},
@@ -386,7 +386,7 @@
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",
-					"mapsLink": "/vertex",
+					"locationId": "vertex",
 					"locationName": "Vèrtex",
 					"description": "And the winners are... Come watch the finalists and winners!"
 				}
