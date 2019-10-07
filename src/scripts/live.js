@@ -604,8 +604,8 @@
 
 		window.addEventListener('hashchange', onRouteChange)
 		document.addEventListener('keypress', function (ev) {
-			var key = ev.which
-			if (String.fromCharCode(key) === 'p') { toggleFullscreen() }
+			var key = String.fromCharCode(ev.which)
+			if (key === 'p' || key === 'f' || key === ' ') { toggleFullscreen() }
 		})
 		document.getElementById('countdown-li').addEventListener('click', function () {
 			goTo(views.live)
