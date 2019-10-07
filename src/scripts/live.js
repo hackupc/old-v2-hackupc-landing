@@ -353,7 +353,7 @@
 		prompt('Notifications for upcoming events',
 			'<p>Do you want to subscribe to all the events? </p>' +
 				'<p>You will receive a notification 2 minutes before something happens. </p>' +
-				'<p><b>We won\'t spam you:</b> You can always choose to subscribe/unsubscribe by clicking individually on an event.</p><br>',
+				'<p><b>We won\'t spam you:</b> You can always choose to subscribe/unsubscribe by clicking individually on an event.</p>',
 			'All right', function () { if (cb) cb() },
 			'Nope', function () { /* Do nothing */ })
 		Util.storagePut('askedSubscribeAll', true)
