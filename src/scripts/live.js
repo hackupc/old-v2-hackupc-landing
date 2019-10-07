@@ -209,7 +209,7 @@
 		try {
 			var fancySchedule = generateFancySchedule()
 			for (let i = 0; i < fancyElements.length; i++) {
-				// fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>";
+				// fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>"
 				fancyElements[i].appendChild(
 					fancySchedule.cloneNode(true)
 				)
@@ -476,7 +476,7 @@
 		let viewRoot = view.substring(0, view.indexOf('/')) || view
 		document.getElementById(viewRoot).classList.add(CONST.ACTIVE_CLASS)
 
-		if (viewRoot === 'map') changeMapView(view.substring(view.indexOf('/') + 1));
+		if (viewRoot === 'map') changeMapView(view.substring(view.indexOf('/') + 1))
 	}
 
 	function changeMapView (locationId) {
@@ -567,13 +567,13 @@
 
 	/* function buildHardwareLab(cb) {
     Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+Util.getNowDate().getTime(), function(data) {
-      var hardElems = JSON.parse(data)['data'];
-      var hardList = document.getElementById("hardwareList");
-      hardList.innerHTML="";
+      var hardElems = JSON.parse(data)['data']
+      var hardList = document.getElementById("hardwareList")
+      hardList.innerHTML=""
       hardElems.forEach(function(hardElem) {
         hardList.appendChild(
           Util.inflateWith("hardwareElem", hardElem)
-        );
+        )
       })
     })
   } */
@@ -639,7 +639,7 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function (event) {
-		// buildHardwareLab();
+		// buildHardwareLab()
 		if (!browserIsCompatible()) {
 			compatibiliyMode()
 			alert('Please update your browser')
@@ -686,12 +686,12 @@
 				updateChronologicalElements()
 			}, 60000)
 			// Testing
-			// }, 1000);
+			// }, 1000)
 		})
 
 		// setInterval(function(){
-		//   buildHardwareLab();
-		// }, 60000);
+		//   buildHardwareLab()
+		// }, 60000)
 	})
 // eslint-disable-next-line no-undef
 }(CONST, Util))
