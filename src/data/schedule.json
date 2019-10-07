@@ -77,8 +77,6 @@
 				{
 					"id": "7",
 					"title": "Initial Brainstorming",
-					"talk": true,
-					"author": "Hackers@UPC",
 					"startHour": "22:30",
 					"endHour": "23:00",
 					"locationId": "A5002",
@@ -225,8 +223,6 @@
 				{
 					"id": "21",
 					"title": "Meetup Hacktoberfest",
-					"talk": true,
-					"author": "Hackers@UPC",
 					"startHour": "16:00",
 					"endHour": "17:00",
 					"locationId": "A5001",
@@ -247,8 +243,6 @@
 				{
 					"id": "23",
 					"title": "Agile workshop with Lego",
-					"talk": true,
-					"author": "Hackers@UPC",
 					"startHour": "17:00",
 					"endHour": "17:30",
 					"locationId": "A5002",
@@ -284,7 +278,7 @@
 				},
 				{
 					"id": "27",
-					"title": "Slideshow Karaoke",
+					"title": "SlideShare Show",
 					"startHour": "22:00",
 					"endHour": "23:00",
 					"locationId": "A5001",
