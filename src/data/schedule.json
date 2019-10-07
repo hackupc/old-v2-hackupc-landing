@@ -65,23 +65,25 @@
 				},
 				{
 					"id": "6",
-					"title": "Git & GitHub: Intro to git",
+					"title": "Git & GitHub",
 					"talk": true,
 					"author": "GitHub",
 					"startHour": "22:30",
 					"endHour": "23:00",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Learn how to code with multiple people in the same project and never lose a single line."
+					"description": "Introduction to git and GitHub, learn the most basic commands for git and collaborate with GitHub"
 				},
 				{
 					"id": "7",
 					"title": "Initial Brainstorming",
+					"talk": true,
+					"author": "Opentrends",
 					"startHour": "22:30",
 					"endHour": "23:00",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "We'll help your team come up with project ideas"
+					"description": "Opentrends is helping you choose the right project. In our workshop we're going to implement design thinking methodologies to find your most appropiate challenge. Don't miss out!"
 				},
 				{
 					"id": "8",
@@ -92,7 +94,7 @@
 					"endHour": "23:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": ""
+					"description": "More and more companies are attempting to become data-driven. Turning data into knowledge and knowledge into intelligent actions is crucial for digital transformation. Let's see some interesting examples of how to do it for a good purpose."
 				},
 				{
 					"id": "9",
@@ -103,7 +105,7 @@
 					"endHour": "23:30",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": ""
+					"description": "Never experienced a technical interview before? Want to extra-prepare for your next one? Technical interviews are one of the major hurdles of landing an awesome internship or full time career. Open for currently enrolled University students, come learn about the common pitfalls and tips to help you crush your next coding interview! Learn how to put your best foot forward at this Crush Your Coding Interview Workshop."
 				},
 				{
 					"id": "10",
@@ -114,7 +116,7 @@
 					"endHour": "23:59",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": ""
+					"description": "Discover one of the most trend manufacturing technology with HP."
 				},
 				{
 					"id": "11",
@@ -125,7 +127,7 @@
 					"endHour": "23:59",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": ""
+					"description": "In-memory data structure store database, cache and message broker"
 				}
 			]
 		},
@@ -138,12 +140,12 @@
 					"id": "12",
 					"title": "APIs for first timers",
 					"talk": true,
-					"author": "Hackers@UPC",
+					"author": "Typeform",
 					"startHour": "00:00",
 					"endHour": "00:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Learn how to fetch APIs and use it's data"
+					"description": "Is this your first hackathon? You heard the word API or SDK prounounced many times during the opening ceremony but you have no idea what it means? Then you should come to this workshop to discover the beautiful world of APIs 🤩. In this talk we will cover the basic principles of APIs, how to call them, talk about security and showcase of examples of APIs you could use in your project. "
 				},
 				{
 					"id": "13",
@@ -198,14 +200,25 @@
 					"endHour": "10:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Discover how Skyscanner API works"
+					"description": "How Skyscanner handles thousands of deployments a day. Skyscanner serves over 80 Million unique visitors each months through its evolving architecture formed of thousands of micro-services. The continuous generation, maintenance deployment of old and new services can be a time-consuming and onerous task that we want to avoid. To ensure that our engineers can focus on our travelers rather than on our infrastructure, over the year Skyscaner has developed an articulate list of solution to run multiservices at scale, from their creation and deployment to the support of a full continuous integration pipeline. In Skyscanner, even an Intern can get a world-class-engineering service up and running in less than 10 minutes, fancy having a look at how we do it?"
 				},
 				{
 					"id": "19",
-					"title": "",
+					"title": "Clean code for Analytics",
 					"talk": true,
-					"author": "McKinsey",
+					"author": "McKinsey & Company",
 					"startHour": "11:00",
+					"endHour": "11:30",
+					"locationId": "A5001",
+					"locationName": "A5001",
+					"description": ""
+				},
+				{
+					"id": "19",
+					"title": "Implementing R projects as libraries",
+					"talk": true,
+					"author": "McKinsey & Company",
+					"startHour": "11:30",
 					"endHour": "12:00",
 					"locationId": "A5001",
 					"locationName": "A5001",
@@ -223,6 +236,8 @@
 				{
 					"id": "21",
 					"title": "Meetup Hacktoberfest",
+					"talk": true,
+					"author": "GitHub",
 					"startHour": "16:00",
 					"endHour": "17:00",
 					"locationId": "A5001",
@@ -243,6 +258,8 @@
 				{
 					"id": "23",
 					"title": "Agile workshop with Lego",
+					"activity": true,
+					"author":"McKinsey & Company",
 					"startHour": "17:00",
 					"endHour": "17:30",
 					"locationId": "A5002",
@@ -252,6 +269,8 @@
 				{
 					"id": "24",
 					"title": "Lego Tournament",
+					"activity": true,
+					"author":"Itequia",
 					"startHour": "18:00",
 					"endHour": "18:30",
 					"locationId": "A5002",
@@ -261,6 +280,8 @@
 				{
 					"id": "25",
 					"title": "Rubik Tournament",
+					"activity": true,
+					"author":"iThinkUPC",
 					"startHour": "19:00",
 					"endHour": "20:30",
 					"locationId": "A5002",
