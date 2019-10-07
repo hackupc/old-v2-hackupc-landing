@@ -253,7 +253,7 @@
 					"endHour": "18:00",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
+					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy, we're here to help you!"
 				},
 				{
 					"id": "23",
@@ -318,8 +318,8 @@
 					"title": "Sticker Exchange",
 					"startHour": "00:00",
 					"endHour": "01:00",
-					"locationId": "A6106",
-					"locationName": "Cafeteria (A6106)",
+					"locationId": "A5105",
+					"locationName": "Cafeteria (A5105)",
 					"description": "You give stickers, you receive stickers. Ez pz"
 				},
 				{
