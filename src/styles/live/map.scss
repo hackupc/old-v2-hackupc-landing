@@ -19,13 +19,14 @@
 		background-color: #e2e0d8;
 		border: 2px solid #b4b3ac;
 
-		@media (min-width: 720px) {
-			padding: 24vh 0.5vh 7vh 0.5vh;
-		}
-
 		span {
 			text-align: center;
 		}
+	}
+
+	@media (min-width: 720px) {
+		.floors { display: none; }
+		img { height: unset; width: 100%;}
 	}
 
 	img {
