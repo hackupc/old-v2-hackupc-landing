@@ -27,7 +27,7 @@
 		'faq': 'faq',
 		'schedule': 'schedule',
 		'challenges': 'challenges',
-		'maps': 'maps',
+		'map': 'map',
 		'mentors': 'mentors'
 	}
 
@@ -209,7 +209,7 @@
 		try {
 			var fancySchedule = generateFancySchedule()
 			for (let i = 0; i < fancyElements.length; i++) {
-				// fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>";
+				// fancyElements[i].innerHTML = "<div class='hide-scroll-hack'></div>"
 				fancyElements[i].appendChild(
 					fancySchedule.cloneNode(true)
 				)
@@ -350,15 +350,12 @@
   * Result is stored in localStorage
   */
 	function askSubscribeAll (cb) {
-		prompt("Don't miss anything!", 'Do you want to subscribe to all the events? You will receive a notification before something happens. You can choose to subscribe/unsubscribe by clicking individually on an event.',
-			'Do it!',
-			function () {
-				if (cb) cb()
-			},
-			'No, thanks.', function () {
-				// Do nothing
-			})
-
+		prompt('Notifications for upcoming events',
+			'<p>Do you want to subscribe to all the events? </p>' +
+				'<p>You will receive a notification 2 minutes before something happens. </p>' +
+				'<p><b>We won\'t spam you:</b> You can always choose to subscribe/unsubscribe by clicking individually on an event.</p>',
+			'All right', function () { if (cb) cb() },
+			'Nope', function () { /* Do nothing */ })
 		Util.storagePut('askedSubscribeAll', true)
 	}
 
@@ -391,6 +388,19 @@
 	}
 
 	/*
+  * Generates events table to keep track of subscriptions (notifications)
+  */
+	function generateScheduleCompositedFields () {
+		schedule.days.forEach(function (day) {
+			day.events.forEach(function (event) {
+				event.title = (event.talk ? '[Talk] ' : '') +
+					(event.author ? (event.author + ': ') : '') +
+					(event.title || '')
+			})
+		})
+	}
+
+	/*
   * Loads the schedule in the global scope
   * and checks version.
   * If version is different from local
@@ -408,6 +418,7 @@
 				schedule = newSchedule
 				generateTimestamps()
 				generateEventReferences()
+				generateScheduleCompositedFields()
 				if (typeof cb === 'function') { cb() }
 				console.info('Schedule updated on (' + Util.getNowDate() + '): \n' + schedule.message)
 			} else {
@@ -439,8 +450,9 @@
 	function onRouteChange () {
 		if (window.location.hash && window.location.hash.indexOf('/') !== -1) {
 			var route = window.location.hash.slice(window.location.hash.indexOf('/') + 1)
-			if (views[route]) {
-				updateBindings(route)
+			var routeRoot = route.substring(0, route.indexOf('/')) || route
+			if (views[routeRoot]) {
+				updateBindings(routeRoot)
 				showView(route)
 			} else {
 				console.warn("View '" + route + "' doesn't exist. Showing default (' + CONST.DEFAULT_VIEW + ').")
@@ -458,8 +470,16 @@
 			viewElements[i].classList.remove(CONST.ACTIVE_CLASS)
 		}
 
-		document.getElementById(view).classList.add(CONST.ACTIVE_CLASS)
+		let viewRoot = view.substring(0, view.indexOf('/')) || view
+		document.getElementById(viewRoot).classList.add(CONST.ACTIVE_CLASS)
+
+		if (viewRoot === 'map') changeMapView(view.substring(view.indexOf('/') + 1))
 	}
+
+	function changeMapView (locationId) {
+		// TODO: go to specified map location
+	}
+
 	function toggleFullscreen () {
 		if (itsFullscreen) {
 			hideFullscreen()
@@ -544,13 +564,13 @@
 
 	/* function buildHardwareLab(cb) {
     Util.loadFile('https://hardware.mlh.io/events/hackupc-winter.json?date='+Util.getNowDate().getTime(), function(data) {
-      var hardElems = JSON.parse(data)['data'];
-      var hardList = document.getElementById("hardwareList");
-      hardList.innerHTML="";
+      var hardElems = JSON.parse(data)['data']
+      var hardList = document.getElementById("hardwareList")
+      hardList.innerHTML=""
       hardElems.forEach(function(hardElem) {
         hardList.appendChild(
           Util.inflateWith("hardwareElem", hardElem)
-        );
+        )
       })
     })
   } */
@@ -584,8 +604,8 @@
 
 		window.addEventListener('hashchange', onRouteChange)
 		document.addEventListener('keypress', function (ev) {
-			var key = ev.which
-			if (String.fromCharCode(key) === 'p') { toggleFullscreen() }
+			var key = String.fromCharCode(ev.which)
+			if (key === 'p' || key === 'f' || key === ' ') { toggleFullscreen() }
 		})
 		document.getElementById('countdown-li').addEventListener('click', function () {
 			goTo(views.live)
@@ -616,7 +636,7 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function (event) {
-		// buildHardwareLab();
+		// buildHardwareLab()
 		if (!browserIsCompatible()) {
 			compatibiliyMode()
 			alert('Please update your browser')
@@ -663,12 +683,12 @@
 				updateChronologicalElements()
 			}, 60000)
 			// Testing
-			// }, 1000);
+			// }, 1000)
 		})
 
 		// setInterval(function(){
-		//   buildHardwareLab();
-		// }, 60000);
+		//   buildHardwareLab()
+		// }, 60000)
 	})
 // eslint-disable-next-line no-undef
 }(CONST, Util))

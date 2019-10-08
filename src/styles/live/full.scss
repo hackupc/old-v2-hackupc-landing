@@ -34,11 +34,15 @@
 	justify-content: center;
 	align-items: center;
 	flex: 1 1 auto;
-	width: 50%;
-	max-width: 550px;
-	position: relative;
-	margin-right: 50%;
+	position: absolute;
+	width: 33.333vw;
+	height: 33.333vw;
+	top: calc(50vh - 16.667vw);
+	left: 8vw;
 	z-index: 50;
+	border-radius: 50%;
+	box-shadow: 0 4px 42px 0 rgba(0, 0, 0, 0.3);
+	text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 
 	.bg {
 		position: absolute;
@@ -46,13 +50,12 @@
 		left: 0;
 	}
 
-	.countdown { margin-top: 0; }
+	.countdown { margin-top: 0; color: $contrastColor; }
 
 	.countdown-time {
-		.decimals {
-			margin-top: 0;
-			width: 40px;
-			height: 15px;
-		}
+		color: white;
+
+		.big { font-size: 6vw; }
+		.little { font-size: 3vw; }
 	}
 }

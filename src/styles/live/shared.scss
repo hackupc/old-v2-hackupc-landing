@@ -51,28 +51,40 @@ a {
 	justify-content: center;
 	align-items: center;
 	z-index: 110;
+	backdrop-filter: blur(10px);
 
 	.box {
 		color: $textColor;
 		background-color: $bgColor;
 		padding: 20px;
 		margin: 20px;
+		max-width: 575px;
+		border-radius: 5px;
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 		h1 {
 			margin: 0;
 			padding: 0;
 		}
 		p { margin: 16px 0; }
 		.buttons {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-gap: 8px;
+			display: flex;
+			justify-content: flex-end;
 			div {
 				padding: 5px 10px;
 				color: $contrastColor;
 				background-color: $buttonColor;
 				cursor: pointer;
+				border-radius: 5px;
+				margin-left: 16px;
+				font-weight: bold;
+				letter-spacing: 1px;
 			}
-			#promptCancel { background-color: $overlayColor; }
+			#promptCancel {
+				background-color: #ddd;
+				color: #666;
+				font-weight: normal;
+				letter-spacing: 0;
+			}
 		}
 	}
 }

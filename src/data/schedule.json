@@ -2,264 +2,307 @@
 	"version": 1,
 	"message": "",
 	"baseTimeOffset":"-120",
-	"countdownStart":"19/10/2018 21:00",
+	"countdownStart":"11/10/2019 21:00",
 	"days":
 	[
 		{
 			"name":"Friday",
-			"date":"19/10/2018",
+			"date":"11/10/2019",
 			"events":
 			[
 				{
-					"id":"1",
+					"id": "0",
 					"title": "Registration",
-					"startHour": "15:00",
+					"startHour": "16:00",
 					"endHour": "18:45",
-					"mapsLink": "/checkin",
-					"locationName": "A5-A6",
+					"locationId": "checkin",
+					"locationName": "A5-A6 Underground corridor",
 					"description": "Register to the hackathon and get your swag! Make sure to have your ID ready"
 				},
 				{
-					"id":"2",
+					"id": "1",
 					"title": "Baggage check-in",
-					"startHour": "15:00",
+					"startHour": "16:00",
 					"endHour": "18:45",
-					"mapsLink": "/A6/1",
-					"locationName": "Lobby",
+					"locationId": "infodesk",
+					"locationName": "Info Desk",
 					"description": "Bring your baggage and we will store it for you"
 				},
 				{
-					"id":"3",
-					"title": "BSC Tour",
-					"startHour": "16:00",
-					"endHour": "18:00",
-					"mapsLink": "/bsc",
-					"locationName": "BSC",
-					"description": "Discover Barcelona Supercomputing Center in three batches of 30 minutes"
-				},
-				{
-					"id":"4",
-					"title": "Opening Talk",
+					"id": "2",
+					"title": "Opening Ceremony",
 					"startHour": "19:00",
 					"endHour": "21:00",
-					"mapsLink": "/vertex",
+					"locationId": "vertex",
 					"locationName": "Vèrtex",
 					"description": "Introductory talk. Meet our sponsors and discover the prizes"
 				},
 				{
-					"id":"5",
+					"id": "3",
 					"title": "Hacking Starts",
 					"startHour": "21:00",
+					"locationId": "hacking",
+					"locationName": "Hacking rooms",
 					"description": "Ready. Set. GO!"
 				},
 				{
-					"id":"6",
+					"id": "4",
 					"title": "Dinner",
 					"startHour": "21:00",
 					"endHour": "23:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal zone",
 					"description": "Enjoy our first meal"
 				},
 				{
-					"id":"7",
+					"id": "5",
 					"title": "Team Building",
 					"startHour": "22:30",
 					"endHour": "23:30",
-					"mapsLink": "/A4/0",
+					"locationId": "A4002",
 					"locationName": "A4002",
 					"description": "Looking for a team or new teammates?"
 				},
 				{
-					"id":"8",
-					"title": "[Talk] GitHub: Intro to Git",
+					"id": "6",
+					"title": "Git & GitHub",
+					"talk": true,
+					"author": "GitHub",
 					"startHour": "22:30",
 					"endHour": "23:00",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Learn Git with Abdulhakim Ajetunmobi & Pandelis Zembashis, GitHub Campus Experts"
+					"description": "Introduction to git and GitHub, learn the most basic commands for git and collaborate with GitHub"
 				},
 				{
-					"id":"9",
-					"title": "[Talk] InfoJobs: Kotlin, a modern language for modern times",
+					"id": "7",
+					"title": "Initial Brainstorming",
+					"talk": true,
+					"author": "Opentrends",
 					"startHour": "22:30",
 					"endHour": "23:00",
-					"mapsLink": "/A5/0",
+					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "Getting started with Kotlin easily with an expert from InfoJobs"
+					"description": "Opentrends is helping you choose the right project. In our workshop we're going to implement design thinking methodologies to find your most appropiate challenge. Don't miss out!"
 				},
 				{
-					"id":"10",
-					"title": "[Talk] iThinkUPC: Getting started with iThinkUPC Challenge",
+					"id": "8",
+					"title": "Data for good cities",
+					"talk": true,
+					"author": "Everis",
 					"startHour": "23:00",
 					"endHour": "23:30",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Some doubts with their challenge? Join us to this intro talk"
+					"description": "More and more companies are attempting to become data-driven. Turning data into knowledge and knowledge into intelligent actions is crucial for digital transformation. Let's see some interesting examples of how to do it for a good purpose."
 				},
 				{
-					"id":"11",
-					"title": "[Talk] Itequia: Let's make some music with Javascript",
+					"id": "9",
+					"title": "Crush your coding interview workshop",
+					"talk": true,
+					"author": "Facebook",
 					"startHour": "23:00",
 					"endHour": "23:30",
-					"mapsLink": "/A5/0",
+					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "Delight you merging the wonderful world of music with programming"
+					"description": "Never experienced a technical interview before? Want to extra-prepare for your next one? Technical interviews are one of the major hurdles of landing an awesome internship or full time career. Open for currently enrolled University students, come learn about the common pitfalls and tips to help you crush your next coding interview! Learn how to put your best foot forward at this Crush Your Coding Interview Workshop."
 				},
 				{
-					"id":"12",
-					"title": "[Talk] Everis: Intro to Virtual Assistants",
+					"id": "10",
+					"title": "The future of 3D Printing",
+					"talk": true,
+					"author": "HP",
 					"startHour": "23:30",
 					"endHour": "23:59",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Learn about Virtual Assistants with this awesome talk"
+					"description": "Discover one of the most trend manufacturing technology with HP."
 				},
 				{
-					"id":"13",
-					"title": "[Talk] Opentrends: Chat bot with Google Assistant",
+					"id": "11",
+					"title": "Are you Redis?",
+					"talk": true,
+					"author": "Vueling",
 					"startHour": "23:30",
 					"endHour": "23:59",
-					"mapsLink": "/A5/0",
+					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "You will easily create a simple chat to solve some disease"
+					"description": "In-memory data structure store database, cache and message broker"
 				}
 			]
 		},
 		{
 			"name":"Saturday",
-			"date":"20/10/2018",
+			"date":"12/10/2019",
 			"events":
 			[
 				{
-					"id":"14",
-					"title": "[Talk] AWSEducate: Getting started with Serverless Architectures",
+					"id": "12",
+					"title": "APIs for first timers",
+					"talk": true,
+					"author": "Typeform",
 					"startHour": "00:00",
 					"endHour": "00:30",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "An expert from AWS will give a brief overview of serverless services and some examples of serverless architectures"
-				},	
-				{
-					"id":"15",
-					"title": "[Talk] API 101",
-					"startHour": "00:00",
-					"endHour": "00:30",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Join Nicolas Grenié and learn whatever you need about APIs"
+					"description": "Is this your first hackathon? You heard the word API or SDK prounounced many times during the opening ceremony but you have no idea what it means? Then you should come to this workshop to discover the beautiful world of APIs 🤩. In this talk we will cover the basic principles of APIs, how to call them, talk about security and showcase of examples of APIs you could use in your project. "
 				},
 				{
-					"id":"16",
+					"id": "13",
+					"title": "Programmatic art & Online multiplayer Gamedev 101",
+					"talk": true,
+					"author": "Hackers@UPC",
+					"startHour": "00:30",
+					"endHour": "01:00",
+					"locationId": "A5002",
+					"locationName": "A5002",
+					"description": ""
+				},
+				{
+					"id": "14",
 					"title": "Midnight Snacks",
 					"startHour": "01:30",
 					"endHour": "02:30",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Feeling hungry? Come get some DIY yogurts"
 				},
 				{
-					"id":"17",
+					"id": "15",
 					"title": "The Game starts",
 					"startHour": "03:14",
 					"description": "Hello dear Hacker"
 				},
 				{
-					"id":"18",
+					"id": "16",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Come get some energizing breakfast"
 				},
 				{
-					"id":"19",
+					"id": "17",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
-					"mapsLink": "/showers",
+					"locationId": "showers",
 					"locationName": "Sports Center",
 					"description": "Don't forget to bring your towel"
 				},
 				{
-					"id":"20",
-					"title": "[Talk] Skyscanner: Intro to Skyscanner API",
+					"id": "18",
+					"title": "Microservices at Scale",
+					"talk": true,
+					"author": "Skyscanner",
 					"startHour": "10:00",
 					"endHour": "10:30",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Discover how Skyscanner API works"
+					"description": "How Skyscanner handles thousands of deployments a day. Skyscanner serves over 80 Million unique visitors each months through its evolving architecture formed of thousands of micro-services. The continuous generation, maintenance deployment of old and new services can be a time-consuming and onerous task that we want to avoid. To ensure that our engineers can focus on our travelers rather than on our infrastructure, over the year Skyscaner has developed an articulate list of solution to run multiservices at scale, from their creation and deployment to the support of a full continuous integration pipeline. In Skyscanner, even an Intern can get a world-class-engineering service up and running in less than 10 minutes, fancy having a look at how we do it?"
 				},
 				{
-					"id":"21",
-					"title": "[Talk] Vueling: Getting fast responses from massive databases",
+					"id": "19",
+					"title": "Clean code for Analytics",
+					"talk": true,
+					"author": "McKinsey & Company",
 					"startHour": "11:00",
 					"endHour": "11:30",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Tired of databases latency? This talk will save your day!"
+					"locationId": "A5001",
+					"locationName": "A5001",
+					"description": ""
 				},
 				{
-					"id":"22",
-					"title": "[Talk] ServiZurich: In memory processing pipelines running in the cloud",
+					"id": "19",
+					"title": "Implementing R projects as libraries",
+					"talk": true,
+					"author": "McKinsey & Company",
 					"startHour": "11:30",
 					"endHour": "12:00",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Get into cloud systems with Jose Luís Sánchez"
+					"description": ""
 				},
 				{
-					"id":"23",
-					"title": "[Talk] Sopra Steria: Getting started with Natural Language Processing",
-					"startHour": "12:00",
-					"endHour": "13:00",
-					"mapsLink": "/A5/0",
-					"locationName": "A5002",
-					"description": "Join this talk and learn the first steps in NLP"
-				},
-				{
-					"id":"24",
+					"id": "20",
 					"title": "Lunch",
 					"startHour": "13:00",
-					"endHour": "14:00",
-					"mapsLink": "/meal",
+					"endHour": "14:30",
+					"locationId": "meal",
 					"locationName": "Meal zone",
 					"description": "Come and get some delicious paella"
 				},
 				{
-					"id":"25",
-					"title": "[Talk] Organize your hackathon",
-					"startHour": "17:00",
-					"endHour": "18:00",
-					"mapsLink": "/A5/0",
+					"id": "21",
+					"title": "Meetup Hacktoberfest",
+					"talk": true,
+					"author": "GitHub",
+					"startHour": "16:00",
+					"endHour": "17:00",
+					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy! We are here to help you!"
+					"description": "Cheers"
 				},
 				{
-					"id":"26",
+					"id": "22",
+					"title": "How to organize your hackathon",
+					"talk": true,
+					"author": "Hackers@UPC",
+					"startHour": "17:00",
+					"endHour": "18:00",
+					"locationId": "A5001",
+					"locationName": "A5001",
+					"description": "Would you like to organize a hackathon? Come listen some of our experiences and tips. Don't be shy, we're here to help you!"
+				},
+				{
+					"id": "23",
+					"title": "Agile workshop with Lego",
+					"activity": true,
+					"author":"McKinsey & Company",
+					"startHour": "17:00",
+					"endHour": "17:30",
+					"locationId": "A5002",
+					"locationName": "A5002",
+					"description": "Stop starting, start finishing."
+				},
+				{
+					"id": "24",
+					"title": "Lego Tournament",
+					"activity": true,
+					"author":"Itequia",
+					"startHour": "18:00",
+					"endHour": "18:30",
+					"locationId": "A5002",
+					"locationName": "A5002",
+					"description": "Call to \"Master Builders\", capable of building anything from their imagination without instructions"
+				},
+				{
+					"id": "25",
 					"title": "Rubik Tournament",
+					"activity": true,
+					"author":"iThinkUPC",
 					"startHour": "19:00",
-					"endHour": "20:00",
-					"mapsLink": "/A5/0",
+					"endHour": "20:30",
+					"locationId": "A5002",
 					"locationName": "A5002",
 					"description": "Show your skills solving Rubik cubes!"
 				},
 				{
-					"id":"27",
+					"id": "26",
 					"title": "Dinner",
 					"startHour": "20:00",
 					"endHour": "21:30",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "PIZZA TIME"
 				},
 				{
-					"id":"28",
-					"title": "Slideshow Karaoke",
+					"id": "27",
+					"title": "SlideShare Show",
 					"startHour": "22:00",
 					"endHour": "23:00",
-					"mapsLink": "/A5/0",
+					"locationId": "A5001",
 					"locationName": "A5001",
 					"description": "A hackers favourite game. Are you ready to improvise?"
 				}
@@ -267,53 +310,53 @@
 		},
 		{
 			"name":"Sunday",
-			"date":"21/10/2018",
+			"date":"13/10/2019",
 			"events":
 			[
 				{
-					"id":"29",
+					"id": "28",
 					"title": "Sticker Exchange",
 					"startHour": "00:00",
 					"endHour": "01:00",
-					"mapsLink": "/A6/1",
-					"locationName": "Cafeteria (A6106)",
+					"locationId": "A5105",
+					"locationName": "Cafeteria (A5105)",
 					"description": "You give stickers, you receive stickers. Ez pz"
 				},
 				{
-					"id":"30",
+					"id": "29",
 					"title": "Midnight Snack",
 					"startHour": "01:00",
 					"endHour": "02:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "It's been more than 24 hours. Get some sweet waffles to keep yourself motivated"
 				},
 				{
-					"id":"31",
+					"id": "30",
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "01:00",
 					"endHour": "03:00",
-					"mapsLink": "/A4/2",
+					"locationId": "A4101",
 					"locationName": "A4101/2",
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
-					"id":"32",
+					"id": "31",
 					"title": "The Game ends",
 					"startHour": "03:14",
 					"description": "You lost"
 				},
 				{
-					"id":"33",
+					"id": "32",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
 					"description": "Come charge your energies for the last hours of hacking"
 				},
 				{
-					"id":"34",
+					"id": "33",
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:15",
@@ -321,44 +364,44 @@
 					"description": "Submit your project in our Devpost!"
 				},
 				{
-					"id":"35",
+					"id": "34",
 					"title": "Hacking ends",
 					"startHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
-					"id":"36",
+					"id": "35",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
-					"mapsLink": "/showers",
+					"locationId": "showers",
 					"locationName": "Sports Center",
 					"description": "Relax a bit before the demos start"
 				},
 				{
-					"id":"37",
+					"id": "36",
 					"title": "Hack Demos",
 					"startHour": "10:15",
 					"endHour": "13:15",
-					"mapsLink": "/A4",
-					"locationName": "A3/A4",
+					"locationId": "A4",
+					"locationName": "A3 & A4",
 					"description": "It's demo time!"
 				},
 				{
-					"id":"38",
+					"id": "37",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
-					"mapsLink": "/meal",
+					"locationId": "meal",
 					"locationName": "Meal Zone",
-					"description": "Come grab some frankfurts/bratswurts made by our awesome partners Leo Boeck"
+					"description": "Mmmmmmm... frankfurt..."
 				},
 				{
-					"id":"39",
+					"id": "38",
 					"title": "Closing Ceremony",
-					"startHour": "15:30",
-					"endHour": "17:30",
-					"mapsLink": "/vertex",
+					"startHour": "14:30",
+					"endHour": "16:30",
+					"locationId": "vertex",
 					"locationName": "Vèrtex",
 					"description": "And the winners are... Come watch the finalists and winners!"
 				}
