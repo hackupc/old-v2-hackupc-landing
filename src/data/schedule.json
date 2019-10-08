@@ -127,7 +127,7 @@
 					"endHour": "23:59",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "In-memory data structure store database, cache and message broker"
+					"description": "You want to know how to improve your applications? Then cache could be a valid approach, learn how Redis is used in a big company like Vueling."
 				}
 			]
 		},
@@ -145,7 +145,7 @@
 					"endHour": "00:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "Is this your first hackathon? You heard the word API or SDK prounounced many times during the opening ceremony but you have no idea what it means? Then you should come to this workshop to discover the beautiful world of APIs 🤩. In this talk we will cover the basic principles of APIs, how to call them, talk about security and showcase of examples of APIs you could use in your project. "
+					"description": "Is this your first hackathon? You heard the word API or SDK prounounced many times during the opening ceremony but you have no idea what it means? Then you should come to this workshop to discover the beautiful world of APIs 🤩. In this talk we will cover the basic principles of APIs, how to call them, talk about security and showcase of examples of APIs you could use in your project."
 				},
 				{
 					"id": "13",
@@ -200,7 +200,7 @@
 					"endHour": "10:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": "How Skyscanner handles thousands of deployments a day. Skyscanner serves over 80 Million unique visitors each months through its evolving architecture formed of thousands of micro-services. The continuous generation, maintenance deployment of old and new services can be a time-consuming and onerous task that we want to avoid. To ensure that our engineers can focus on our travelers rather than on our infrastructure, over the year Skyscaner has developed an articulate list of solution to run multiservices at scale, from their creation and deployment to the support of a full continuous integration pipeline. In Skyscanner, even an Intern can get a world-class-engineering service up and running in less than 10 minutes, fancy having a look at how we do it?"
+					"description": "Building a world class engineering service up and running from scratch in less than 10 minutes, fancy having a look at how we do it?"
 				},
 				{
 					"id": "19",
