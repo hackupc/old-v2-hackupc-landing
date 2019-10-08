@@ -609,7 +609,10 @@
 			if (key === 'p' || key === 'f' || key === ' ') { toggleFullscreen() }
 		})
 		document.getElementById('countdown-li').addEventListener('click', function () {
-			goTo(views.live)
+			toggleFullscreen()
+		})
+		document.getElementById('countdown-full').addEventListener('click', function () {
+			toggleFullscreen()
 		})
 
 		document.getElementById('open-aside-btn').addEventListener('click', function () {
