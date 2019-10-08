@@ -23,10 +23,10 @@
 	<meta name="distribution" content="global">
 
 	<!-- Styles -->
-	<link rel="stylesheet" href="assets/css/landing.min.css" data-finger-print>
+	<link rel="stylesheet" href="/assets/css/landing.min.css" data-finger-print>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Ubuntu+Mono:700&display=block">
 	<link rel="stylesheet" href="/assets/css/cookies.min.css" data-finger-print>
-	<link rel="stylesheet" href="assets/css/test.min.css" data-finger-print>
+	<link rel="stylesheet" href="/assets/css/test.min.css" data-finger-print>
 
 	<!-- Open graph properties -->
 	<!-- Check it here: https://developers.facebook.com/tools/debug/sharing/?q=hackupc.com -->
@@ -76,14 +76,14 @@
 		gtag('config', 'UA-69542332-1');
 </script>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/live.min.css" data-finger-print>
+	<link rel="stylesheet" type="text/css" href="/assets/css/live.min.css" data-finger-print>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,400i,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<script src="assets/js/config.live.js" data-finger-print></script>
-	<script src="assets/js/util.live.js" data-finger-print></script>
-	<script src="assets/js/live.js" data-finger-print></script>
+	<script src="/assets/js/config.live.js" data-finger-print></script>
+	<script src="/assets/js/util.live.js" data-finger-print></script>
+	<script src="/assets/js/live.js" data-finger-print></script>
 
 	<!--Prompt-->
 	<template id="promptTemplate">
@@ -246,7 +246,7 @@
 					<div>
 						<div id="countdown-time" class="countdown">
 						</div>
-						<img src="assets/img/live/resrborder.png"/>
+						<img src="/assets/img/live/resrborder.png"/>
 					</div>
 				</li>
 				<li data-bind-view="streaming">
@@ -276,7 +276,7 @@
 							<span>36:00</span>:00.00
 						</div>
 					</div>
-					<img class="bg" src="assets/img/live/resrborder.png"/>
+					<img class="bg" src="/assets/img/live/resrborder.png"/>
 				</div>
 				<div class="events-fancy">
 					<!--To be filled by js-->
@@ -547,243 +547,260 @@
 				<div class="panel large">
 					<h1>HackUPC</h1>
 					<div>
-						<h2 style="text-align: center;">HackUPC prizes will be announced at the opening ceremony</h2>
-						<p style="text-align: center;">We thank you for your patience!</p>
+						<h2 style="text-align: center;">Hackathon Prizes</h2>
+						<div class="prizes-container">
+							<div><h3>1st</h3></div>
+							<div><h3>2nd</h3></div>
+							<div><h3>3rd</h3></div>
+						</div>
 					</div>
 				</div>
+
+				<!-- Template challenge -->
 				<!--
-				<div class="panel large">
-					<h1>Sopra Steria</h1>
+				<div class="panel">
+					<h1>{sponsor}</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Find solutions to fight against fake news</h2>
+						<h2 class="panel-info margin-bottom text-centered">{title}</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CC7SDC">#soprasteria</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel={slackChanelId}">{hashtag}</a></span>
 						</div>
-						<p>Build a tool that will help users to identify trustworthy or fake news by giving them an overall score.</p>
-						<ul class="no-indent margin-bottom">
-							<li>Considered as tool: website, application, extension, plugin or any other software that will take an input and give a score as output.</li>
-							<li>Users are any person that uses a social network or consumes media or news (online or offline).</li>
-							<li>Scores must be in the 0-10 range. 0 means completely fake while 10 means absolutely reliable (if that’s possible).</li>
-						</ul>
+						<p class="margin-bottom">{description}</p>
 						<div>
-							<p><b>Prize:</b> Google Home per each winner team member.</p>
+							<p><b>Prize: </b>{prize}</p>
+							<p><b>Prizes:</b></p>
+							<ul class="no-indent">
+								<li>1st Prize: {prizes[0]}</li>
+								<li>2nd Prize: {prizes[1]}</li>
+								<li>3rd Prize: {prizes[2]}</li>
+								<li>4th Prize: {prizes[3]}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				-->
+
+				<div class="panel">
+					<h1>McKinsey&Company</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Hack the crash</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNNHM7L8P">#mckinsey</a></span>
+						</div>
+						<p class="margin-bottom">Help us predict damage inflicted in traffic accidents</p>
+						<div>
+							<p><b>Prize: </b>Nintendo switch lite <i>(1 per team member)</i>.</p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>Infojobs</h1>
+					<h1>HP</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Build your dreamed tech-InfoJobs</h2>
+						<h2 class="panel-info margin-bottom text-centered">Talk to 3D Print!</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCAN4E">#infojobs</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CN97WQW3V">#hp</a></span>
 						</div>
-						<p class="margin-bottom">Build your perfect job seeker. We encourage you to propose any change or improvement in our registration process, CV, job search... In other words, everything related to have a more suitable InfoJobs for you and your needs.</p>
-						<p class="margin-bottom">Their API is waiting for you to shake it. Check out its <a href="https://developer.infojobs.net/" target="_blank">documentation</a>.</p>
+						<p class="margin-bottom">Are you able to create a 3D geometry that we can print by voice commands?  Your creativity is welcomed, unleash your imagination to test your skills! Come to our booth A5 1st floor our through Slack</p>
 						<div>
-							<p><b>Prize:</b> Nintendo Switch per each winner team member.</p>
+							<p><b>Prize: </b>4 Soprocket <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>AWSEducate</h1>
+					<h1>Facebook</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">The AWS City of a Cloud Serverless Hackathon</h2>
+						<h2 class="panel-info margin-bottom text-centered">Bring Communities Closer Together</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCUB71TV0">#awseducate</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNLMVBJKS">#facebook</a></span>
 						</div>
-						<p class="margin-bottom">Put your skills to the test and apply the AWS Serverless portfolio to build solutions for cities: City planning, Sanitation, Parks, Street maintenance, Voting and Public Safety.</p>
-						<p class="margin-bottom">For more information click <a href="http://awshackupc.s3-website-eu-west-1.amazonaws.com/" target="_blank">here</a>.</p>
+						<p class="margin-bottom">In Facebook our mission is to bring the world closer together. We build products and applications that build community and would love to see you create something that does the same! It does not need to be a social platform, but just any product that you believe would help bridge people together. Whether it is within your study group, your family, your hometown or the wider world around us, show us something that creates opportunities for people to help and support one another.</p>
 						<div>
 							<p><b>Prizes:</b></p>
 							<ul class="no-indent">
-								<li>1st Prize: Amazon Echo for every team member.</li>
-								<li>2nd Prize: Amazon Echo dots for each team member.</li>
-								<li>3rd Prize: Amazon Echo dots for each team member.</li>
-								<li>4th Prize: €25 Amazon vouchers for each team member.</li>
+								<li>1st Prize: Oculus Go <i>(1 per team member)</i></li>
+								<li>2nd Prize: Phillips Bluetooth Headphones <i>(1 per team member)</i></li>
+								<li>3rd Prize: Facebook Branded Backpacks <i>(1 per team member)</i></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>Everis</h1>
+					<h1>SopraSteria</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Virtual assistants application for social purposes</h2>
+						<h2 class="panel-info margin-bottom text-centered">EX_MACHINA: ¿can you fool a human?</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCGQP8">#everis</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CN97WP3LK">#soprasteria</a></span>
 						</div>
-						<p class="margin-bottom">For more information please contact them at their stand or through Slack.</p>
+						<p class="margin-bottom">Sopra Steria will introduce a challenge in which the participants will aim to design and implement a solution that must pass a variation of the Turing test.</p>
+						<p class="margin-bottom">Participants should satisfy a series of evaluation criteria, such as interface design (app, voice, conversational agent , console, ...), character and empathy, context and memory, complexity of the conversation and, of course, the technical solution and its architecture.</p>
 						<div>
-							<p><b>Prize:</b> Google Home Mini per each winner team member.</p>
+							<p><b>Prize: </b>Drone <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
 					<h1>Itequia</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Create an app that allow us to share and draw in a whiteboard in real time with a group of users</h2>
+						<h2 class="panel-info margin-bottom text-centered">We want you to build a solution that solves real problems using Artificial Intelligence.</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC86PJT9B">#itequia</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNLMV4E8G">#itequia</a></span>
 						</div>
-						<p class="margin-bottom">Here at Itequia we always carry out our meetings next to a whiteboard. We think that having a visual feedback in a meeting helps a lot with transmitting ideas to clients and coworkers. But often we need to have online meetings with team members that are not in the office. That's why we would love to have a way to create and share a whiteboard in real time with a group of users.</p>
+						<p class="margin-bottom">We at Itequia care about technology but we also care about people and for some time now, as a society, we are facing many problems that we are not able to fix: climate change, natural disasters, manmade disasters, poverty...</p>
 						<div>
-							<p><b>Prize:</b> 50€ Amazon Gift Card for each winner team member.</p>
+							<p><b>Prizes:</b></p>
+							<ul class="no-indent">
+								<li>1st Prize: Google Nest Hub <i>(1 per team member)</i></li>
+								<li>2nd Prize: Google Home Mini <i>(1 per team member)</i></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
 					<h1>Opentrends</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">IoT & Chatbot for eHealth</h2>
+						<h2 class="panel-info margin-bottom text-centered">Climate Crisis in your hands. Show your tech skills and save the planet</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC9CCRD8W">#opentrends</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNNHLKRCP">#opentrends</a></span>
 						</div>
-						<p class="margin-bottom">IoT-based healthcare services are expected to reduce costs, increase the quality of life, and enrich the user’s experience. IoT-based healthcare systems can be applied to a diverse array of fields, including care for pediatric and elderly patients, the supervision of chronic diseases, and the management of private health and fitness, among others.</p>
+						<p class="margin-bottom">How do you imagine living in 2050? Predictions are the worst for our planet in the next years. It's not just melting poles or plastic in the ocean, it is way more: irreversible effects are about to happen. There's not another planet to move so it is time to do something urgent.</p>
 						<div>
-							<p><b>Prize:</b> Google Home per each winner team member.</p>
+							<p><b>Prize: </b>Amazon €200 gift card <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>Skyscanner</h1>
+					<h1>Everis</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Most creative use of Skyscanner's API</h2>
+						<h2 class="panel-info margin-bottom text-centered">From data to citizens. Make cities inclusive, safe, resilient and sustainable</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCJM20DU5">#skyscanner</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNL83LE5A">#everis</a></span>
 						</div>
-						<p class="margin-bottom">Come by our Booth to get your API keys. Check our <a href="https://skyscanner.github.io/slate/" target="_blank">documentation</a> for more information. Join us on API talk on Saturday morning.</p>
+						<p class="margin-bottom">With the number of people living within cities projected to rise to 5 billion people by 2030, it’s important that efficient urban planning and management practices are in place to deal with the urbanization.</p>
+						<p class="margin-bottom">Congestion, lack of funds to provide basic services, a shortage of adequate housing, declining infrastructure, safe removal and management of solid waste and rising air pollution, can be overcome in ways that allow them to continue to thrive and grow, while improving resource use and reducing pollution and poverty.</p>
+						<p class="margin-bottom">Are you ready to hack for good? Take the datasets and build a great technological solution that makes cities inclusive, safe, resilient and sustainable. Make something innovative that brings positive change to the world, even something that solves a small problem. It's that simple #everisHack4good</p>
 						<div>
-							<p><b>Prize:</b> 75€ travel voucher.</p>
+							<p><b>Prize: </b>4 Hoverboards</p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>IThinkUPC</h1>
+					<h1>iThinkUPC</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Bring the university life to your smartphone</h2>
+						<h2 class="panel-info margin-bottom text-centered">Build the app everybody will love at your university</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCKU9PTND">#ithinkupc</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNLMW6E77">#ithinkupc</a></span>
 						</div>
 						<p class="margin-bottom">We want to improve UPC student's digital experience by designing a whole new set of apps and resources that help us make a difference in the relationship between university services and students needs and preferences.</p>
+						<p class="margin-bottom">We're talking about all kinds of features, not just the boring, academic stuff (just joking) but also any other feature that might be useful for students during their studies: information on public transport services, emergency services, restaurants and gyms, news; booking of labs and technical resources; social interaction; work offers; and any other interesting service you can think of. </p>
 						<p class="margin-bottom">We encourage you to design and build an app that includes your preferred feature and help our university to become digital!</p>
-						<p class="margin-bottom">For more information click <a href="https://drive.google.com/a/hackupc.com/file/d/1vg9ht7NH23BWCI6XiYO3rqs6ejjMbug2/view?usp=sharing" target="_blank">here</a>.</p>
 						<div>
 							<p><b>Prizes:</b></p>
 							<ul class="no-indent">
-								<li>1st Prize: Google Home for every team member.</li>
-								<li>2nd Prize: Arduboy for each team member.</li>
-								<li>3rd Prize: Raspberry Pi 3 for each team member.</li>
-								<li>4th Prize: Google Home Mini for each team member.</li>
+								<li>1st Prize: 4 Echo show 5</li>
+								<li>2nd Prize: 4 Google home mini</li>
+								<li>3rd Prize: 4 Fire TV stick</li>
+								<li>4th Prize: 4 Chromecast</li>
 							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<h1>ServiZurich</h1>
-					<div>
-						<h2 class="panel-info margin-bottom text-centered">Millenials on the move</h2>
-						<div class="margin-bottom text-centered">
-							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCTPG6VDX">#servizurich</a></span>
-						</div>
-						<p class="margin-bottom">Research shows that millennials are horrible drivers. Texting, emailing, chatting behind the wheel, running red lights, eating and drinking are just a few of the reckless acts millennials do while driving.</p>
-						<p class="margin-bottom">Are you a millennial? Do you agree? Is the research just wrong?</p>
-						<p class="margin-bottom">We challenge you to find out 1) how millennials really drive 2) how we can help improve and protect the lives of millennials on the move.</p>
-						<div>
-							<p><b>Prize:</b> 80€ on Amazon per each team member.</p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
 					<h1>Vueling</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Vueling prize</h2>
+						<h2 class="panel-info margin-bottom text-centered">Boarding queue entertaining system</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCR2QN5DG">#vueling</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNNHLCQMV">#vueling</a></span>
 						</div>
-						<p>Vueling will award with 1 Round-trip ticket to any Vueling destination for each member of HackUPC winner team!</p>
-					</div>
-				</div>
-				<div class="panel">
-					<h1>ThoughtWorks</h1>
-					<div>
-						<h2 class="panel-info margin-bottom text-centered">Code what matters</h2>
-						<div class="margin-bottom text-centered">
-							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC7U0NL91">#thoughtworks</a></span>
-						</div>
-						<p class="margin-bottom">This is your moment to have a social impact on your city or community... Use the power of technology to make a positive change or to solve an issue that is close to your heart!</p>
+						<p class="margin-bottom">Develop an interactive experience (or a game) for our customers who are waiting in line before the boarding gate. It should make them have a good time and interact with one another. So here are a few requirements: It has to be multiplayer, cooperative, accessible for everyone, and without the need for chat (it should be as least language dependent as possible to allow interaction of people from different nationalities).</p>
 						<div>
-							<p><b>Prize:</b> Reprap Prusa i3 3D Printer <b>OR</b> Tello Dron.</p>
+							<p><b>Prize: </b>Round-trip ticket to any Vueling destination <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>Bloomberg</h1>
+					<h1>EY</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Best Tech hack</h2>
+						<h2 class="panel-info margin-bottom text-centered">EY Challenge: Hospitality Experience Guests/Employees</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CCQUSJ99R">#bloomberg</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CN97VRKQT">#ey</a></span>
 						</div>
-						<p class="margin-bottom">Bloomberg will award the best tech project of HackUPC 2018! For more information please contact them at their stand or through Slack.</p>
+						<p class="margin-bottom">Improve the guest or employee experience thorough the use of new technologies while interacting in hotels/resorts/amusement parks : Communicate, Share, Interact, Plan, Coordinate & Execute</p>
 						<div>
-							<p><b>Prize:</b> Arduino.</p>
+							<p><b>Prize: </b>4 iwatch</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<h1>Skyscanner</h1>
+					<div>
+						<h2 class="panel-info margin-bottom text-centered">Innovation with travel</h2>
+						<div class="margin-bottom text-centered">
+							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNL839AA0">#skyscanner</a></span>
+						</div>
+						<p class="margin-bottom">The most visionary use of our APIs and/or OpenSource tech﻿</p>
+						<div>
+							<p><b>Prize: </b>Noise Cancelling Bluetooth Headphones</p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
 					<h1>Typeform</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Best use of Typeform's API</h2>
+						<h2 class="panel-info margin-bottom text-centered">Typeform or VideoAsk APIs</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CD45YC4P2">#typeform</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CN7UF6M4J">#typeform</a></span>
 						</div>
-						<p class="margin-bottom">For more information please contact them through Slack.</p>
+						<p class="margin-bottom">Most innovative use of Typeform or VideoAsk APIs</p>
 						<div>
-							<p><b>Prize:</b> Nintendo SNES Classic Console.</p>
+							<p><b>Prize: </b>Retro console <i>(1 per team member, up to 3)</i> <b>AND</b> 1 year of typeform PRO <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>.tech domains</h1>
+					<h1>Thoughtworks</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Best project hosted on .tech domains</h2>
+						<h2 class="panel-info margin-bottom text-centered">We can’t code planet B</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC7U0UYAX">#tech-domains</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNL82PPDJ">#thoughtworks</a></span>
 						</div>
-						<p class="margin-bottom">Come to Info-Desk for getting promotional codes (and some stickers of course).</p>
+						<p class="margin-bottom">CLIMATE JUSTICE (Solutions for the most vulnerable people that suffer the impact of climate change)</p>
+						<p class="margin-bottom">REDUCE CARBON FOOTPRINT Cities generate ~70% of greenhouse gases. How can we measure our impact? How can we decrease our carbon footprint?</p>
+						<p class="margin-bottom">RAISE AWARENESS Spread the word about the climate crisis. Help people understand the urgency of this matter."</p>
 						<div>
-							<p><b>Prize:</b> US$ 250 Amazon Gift Card for the whole team.</p>
+							<p><b>Prize: </b>4 Amazon Alexa</p>
 						</div>
 					</div>
 				</div>
 				<div class="panel">
-					<h1>Wolfram Language</h1>
+					<h1>Restb.ai</h1>
 					<div>
-						<h2 class="panel-info margin-bottom text-centered">Use of Wolfram's API</h2>
+						<h2 class="panel-info margin-bottom text-centered">Most disruptive use of Restb.ai API</h2>
 						<div class="margin-bottom text-centered">
 							<p class="icon"><i class="fa fa-slack" aria-hidden="true"></i></p>
-							<span><a  target="_blank" href="https://hackupc2018.slack.com/messages/CC82KAZFC">#wolfram</a></span>
+							<span><a target="_blank" href="https://hackupc2019.slack.com/app_redirect?channel=CNE9QCY01">#restbai</a></span>
 						</div>
-						<p class="margin-bottom">Wolfram Research is pleased to sponsor HackUPC by providing access to our latest technology, Wolfram|One! For complimentary access to our development platform and the Wolfram API, just click <a href="https://account.wolfram.com/redeem/HackUPC2018" target="_blank">here</a>.</p>
-						<p class="margin-bottom">This URL will take you to a sign-in page and prompt you to log in using your Wolfram ID. If you don't already have a Wolfram ID, you'll be prompted to create one using an active email address. Once logged in, you will see in the Downloads section which platforms of the software you have access to, with their accompanying activation keys. Please download the desktop version to your machine, boot up the application and use the associated activation key when prompted. This will grant you full access for 30 days from your activation date.</p>
+						<p class="margin-bottom">Build your project using one (or more) of our available AI Computer Vision APIs. From Real Estate CV classification solutions to a broad collection of object and features detection models and even Image Similarity Search. Our API is waiting for you!</p>
+						<p class="margin-bottom">Get a free API key with tons of requests <a href="https://restb.ai/hackupc">here</a>.</p>
+						<p class="margin-bottom">For more details, please check our <a href="https://docs.restb.ai">docs page</a> or come visit us at our booth; we promise we are really friendly and would love to chat with you about anything that comes to your mind!</p>
 						<div>
-							<p><b>Prize:</b> One year each of Wolfram|One and Wolfram|Alpha Pro for everyone on the top ten teams with a value of $375 per award.</p>
+							<p><b>Prize: </b>Sound cancelling bluetooth headphones <i>(1 per team member)</i></p>
 						</div>
 					</div>
 				</div>
-				-->
 			</div>
 		</article>
 		<article id="faq" class="under-header padding-bottom">
