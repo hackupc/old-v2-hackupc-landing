@@ -404,6 +404,12 @@
 					"locationId": "vertex",
 					"locationName": "Vèrtex",
 					"description": "And the winners are... Come watch the finalists and winners!"
+				},
+				{
+					"id": "39",
+					"title": "Ciao Hackers",
+					"startHour": "16:30",
+					"description": "It's been a pleasure, see you next time"
 				}
 			]
 		}
