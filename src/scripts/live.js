@@ -302,6 +302,7 @@
 	}
 
 	function subscribeEvent (id) {
+		initNotifications()
 		var refs = Util.storageGet('eventSubscriptions')
 		if (refs && refs[id]) {
 			refs[id].subscribed = true
@@ -353,7 +354,7 @@
 		prompt('Notifications for upcoming events',
 			'<p>Do you want to subscribe to all the events? </p>' +
 				'<p>You will receive a notification 2 minutes before something happens. </p>' +
-				'<p><b>We won\'t spam you:</b> You can always choose to subscribe/unsubscribe by clicking individually on an event.</p>',
+				'<p><b>We won\'t spam you:</b> You can always choose to subscribe or unsubscribe by clicking individually on an event.</p>',
 			'All right', function () { if (cb) cb() },
 			'Nope', function () { /* Do nothing */ })
 		Util.storagePut('askedSubscribeAll', true)
@@ -584,7 +585,7 @@
 
 	function initNotifications () {
 		if ('Notification' in window) {
-			if (Notification.permission !== 'denied') {
+			if (Notification.permission !== 'granted') {
 				Notification.requestPermission(function (permission) {
 					if (permission === 'granted') canNotify = true
 				})
@@ -651,7 +652,7 @@
 			// Load current view
 			onRouteChange()
 
-			initNotifications()
+			// initNotifications() // now is asked when user clicks subscribe
 
 			setTimeout(function () {
 				checkSubscriptionQuestion()
