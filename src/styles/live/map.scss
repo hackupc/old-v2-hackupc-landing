@@ -2,7 +2,7 @@
 	height: 100vh;
 	box-sizing: border-box;
 	background-color: #e2e0d8;
-	overflow: auto;
+	overflow: auto hidden;
 	position: relative;
 
 	.floors {
@@ -22,6 +22,15 @@
 		span {
 			text-align: center;
 		}
+	}
+
+	scroll-snap-type: x proximity;
+	white-space: nowrap;
+
+	.snap {
+		scroll-snap-align: start;
+		width: 54.5vh;
+		display: inline-block;
 	}
 
 	img {
