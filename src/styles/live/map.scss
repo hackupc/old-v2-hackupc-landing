@@ -24,15 +24,6 @@
 		}
 	}
 
-	scroll-snap-type: x proximity;
-	white-space: nowrap;
-
-	.snap {
-		scroll-snap-align: start;
-		width: 54.5vh;
-		display: inline-block;
-	}
-
 	img {
 		height: 100%;
 	}
