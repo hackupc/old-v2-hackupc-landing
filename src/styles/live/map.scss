@@ -1,0 +1,30 @@
+#map {
+	height: 100vh;
+	box-sizing: border-box;
+	background-color: #e2e0d8;
+	overflow: auto;
+	position: relative;
+
+	.floors {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		font-weight: 900;
+		font-size: 5vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 14.5vh 0.5vh 8vh 0.5vh;
+		background-color: #e2e0d8;
+		border: 2px solid #b4b3ac;
+
+		span {
+			text-align: center;
+		}
+	}
+
+	img {
+		height: 100%;
+	}
+}
