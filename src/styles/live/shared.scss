@@ -43,11 +43,10 @@ a {
 .happening { font-weight: bold !important; }
 
 .prompt {
-	position: absolute;
+	position: fixed;
 	display: flex;
-	width: 100%;
-	height: 100%;
-	top: 0;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
 	justify-content: center;
 	align-items: center;
 	z-index: 110;
@@ -234,7 +233,7 @@ a {
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
-	font-family: 'Ubuntu Mono', monospace;
+	font-family: 'VT323', monospace;
 	z-index: 2;
 	flex: 1 1 0;
 	&.show-when-small {
@@ -260,7 +259,8 @@ a {
 			}
 			&.little {
 				margin-top: 0.2em;
-				margin-left: 0.2em;
+				margin-left: 0;
+				text-shadow: 0 0 8px #fff, 0 0 16px #fff;
 			}
 		}
 		div.decimals {
@@ -309,7 +309,7 @@ a {
 			margin: 0 0 0 0;
 			font-size: 20px;
 			color: white;
-			background-color: $secondaryColor;
+			background-color: #60733f;
 			text-align: center;
 			padding: 5px 0;
 			padding-top: 3px;
@@ -334,7 +334,7 @@ a {
 				flex: 1 1 0;
 				color: $textColor;
 				text-decoration: none;
-				background-color: $lightBgColor;
+				background-color: #f2e7bf;
 				padding: 8px;
 				text-align: center;
 				font-weight: bold;
@@ -356,7 +356,7 @@ a {
 			text-align: center;
 			border-radius: 5px;
 			width: 30px;
-			background-color: $buttonColor;
+			background-color: $secondaryColor;
 			color: white;
 			font-weight: normal;
 		}
@@ -372,12 +372,12 @@ a {
 			display: inline-block;
 			padding: 3px 6px;
 			border-radius: 3px;
-			background-color: $lightBgColor;
+			background-color: #f8d6c6;
 
 			/* stylelint-disable */
 			a {
 				/* stylelint-enable */
-				color: $textColor;
+				color: #000;
 			}
 		}
 

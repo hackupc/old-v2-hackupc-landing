@@ -302,6 +302,7 @@
 	}
 
 	function subscribeEvent (id) {
+		initNotifications()
 		var refs = Util.storageGet('eventSubscriptions')
 		if (refs && refs[id]) {
 			refs[id].subscribed = true
@@ -353,7 +354,7 @@
 		prompt('Notifications for upcoming events',
 			'<p>Do you want to subscribe to all the events? </p>' +
 				'<p>You will receive a notification 2 minutes before something happens. </p>' +
-				'<p><b>We won\'t spam you:</b> You can always choose to subscribe/unsubscribe by clicking individually on an event.</p>',
+				'<p><b>We won\'t spam you:</b> You can always choose to subscribe or unsubscribe by clicking individually on an event.</p>',
 			'All right', function () { if (cb) cb() },
 			'Nope', function () { /* Do nothing */ })
 		Util.storagePut('askedSubscribeAll', true)
@@ -477,7 +478,22 @@
 	}
 
 	function changeMapView (locationId) {
-		// TODO: go to specified map location
+		switch (locationId) {
+		case 'campus':
+			document.getElementById('map-button-out').style.display = 'none'
+			document.getElementById('map-rooms').style.display = 'none'
+			document.getElementById('map-floors').style.display = 'none'
+			document.getElementById('map-button-in').style.display = ''
+			document.getElementById('map-campus').style.display = ''
+			break
+		case 'rooms':
+			document.getElementById('map-button-in').style.display = 'none'
+			document.getElementById('map-campus').style.display = 'none'
+			document.getElementById('map-button-out').style.display = ''
+			document.getElementById('map-rooms').style.display = ''
+			document.getElementById('map-floors').style.display = ''
+			break
+		}
 	}
 
 	function toggleFullscreen () {
@@ -584,7 +600,7 @@
 
 	function initNotifications () {
 		if ('Notification' in window) {
-			if (Notification.permission !== 'denied') {
+			if (Notification.permission !== 'granted') {
 				Notification.requestPermission(function (permission) {
 					if (permission === 'granted') canNotify = true
 				})
@@ -608,7 +624,10 @@
 			if (key === 'p' || key === 'f' || key === ' ') { toggleFullscreen() }
 		})
 		document.getElementById('countdown-li').addEventListener('click', function () {
-			goTo(views.live)
+			toggleFullscreen()
+		})
+		document.getElementById('countdown-full').addEventListener('click', function () {
+			toggleFullscreen()
 		})
 
 		document.getElementById('open-aside-btn').addEventListener('click', function () {
@@ -651,7 +670,7 @@
 			// Load current view
 			onRouteChange()
 
-			initNotifications()
+			// initNotifications() // now is asked when user clicks subscribe
 
 			setTimeout(function () {
 				checkSubscriptionQuestion()
