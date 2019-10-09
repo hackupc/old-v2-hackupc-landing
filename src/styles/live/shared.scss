@@ -233,7 +233,7 @@ a {
 	position: fixed;
 	text-align: center;
 	margin-top: 65px;
-	font-family: 'Ubuntu Mono', monospace;
+	font-family: 'VT323', monospace;
 	z-index: 2;
 	flex: 1 1 0;
 	&.show-when-small {
@@ -259,7 +259,8 @@ a {
 			}
 			&.little {
 				margin-top: 0.2em;
-				margin-left: 0.2em;
+				margin-left: 0;
+				text-shadow: 0 0 8px #fff, 0 0 16px #fff;
 			}
 		}
 		div.decimals {
