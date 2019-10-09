@@ -516,8 +516,13 @@
 			</div>
 		</article>
 		<article id="map" class="under-header padding-bottom">
-			<div class="floors"><span>2</span><span>1</span><span>0</span></div>
-			<img src="/assets/img/live/map.svg" alt="Map">
+			<div id="map-floors" class="floors"><span>2</span><span>1</span><span>0</span></div>
+			<img src="/assets/img/live/map.svg" alt="Indoors Map" id="map-rooms">
+			<img src="/assets/img/live/campus.svg" alt="Campus Map" id="map-campus" style="display: none;">
+			<div class="map-button-container">
+				<a id="map-button-out" href="#/map/campus">Zoom out - Explore Campus</a>
+				<a id="map-button-in" href="#/map/rooms" style="display: none;">Zoom in - Explore Rooms</a>
+			</div>
 		</article>
 		<article id="mentors" class="under-header padding-bottom">
 			<div class="container">

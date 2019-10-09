@@ -478,7 +478,22 @@
 	}
 
 	function changeMapView (locationId) {
-		// TODO: go to specified map location
+		switch (locationId) {
+		case 'campus':
+			document.getElementById('map-button-out').style.display = 'none'
+			document.getElementById('map-rooms').style.display = 'none'
+			document.getElementById('map-floors').style.display = 'none'
+			document.getElementById('map-button-in').style.display = ''
+			document.getElementById('map-campus').style.display = ''
+			break
+		case 'rooms':
+			document.getElementById('map-button-in').style.display = 'none'
+			document.getElementById('map-campus').style.display = 'none'
+			document.getElementById('map-button-out').style.display = ''
+			document.getElementById('map-rooms').style.display = ''
+			document.getElementById('map-floors').style.display = ''
+			break
+		}
 	}
 
 	function toggleFullscreen () {
