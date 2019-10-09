@@ -24,7 +24,7 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/landing.min.css" data-finger-print>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Ubuntu+Mono:700&display=block">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|VT323&display=block">
 	<link rel="stylesheet" href="/assets/css/cookies.min.css" data-finger-print>
 	<link rel="stylesheet" href="/assets/css/test.min.css" data-finger-print>
 
@@ -101,8 +101,7 @@
 	<!--Countdown-->
 	<template id="countdownTimerTemplate">
 		<div class="countdown-time">
-			<span class="big">{hours}</span>
-			<span class="little">{seconds}</span>
+			<span class="big">{hours}<span class="little">{seconds}</span></span>
 			<!-- <div class="decimals {running}"></div> -->
 		</div>
 	</template>
@@ -209,8 +208,10 @@
 				<li data-bind-view="challenges">
 					<a href="#/challenges">Challenges</a>
 				</li>
-				<li data-bind-view="travel">
-					<a href="#/travel">Travel</a>
+				<!-- <li data-bind-view="guides">-->
+				<li>
+					<!-- <a href="#/guides">Guides</a> -->
+					<a href="https://guides.hackupc.com/guide/hacker" target="_blank">Guides</a>
 				</li>
 				<li data-bind-view="rules">
 					<a href="#/rules">Rules</a>
@@ -246,7 +247,10 @@
 					<div>
 						<div id="countdown-time" class="countdown">
 						</div>
-						<img src="/assets/img/live/resrborder.png"/>
+						<img
+							src="/assets/img/live/countdown1x.png"
+							srcset="/assets/img/live/countdown2x.png 2x, /assets/img/live/countdown4x.png 4x"
+							alt="HackUPC logo">
 					</div>
 				</li>
 				<li data-bind-view="streaming">
@@ -255,8 +259,10 @@
 				<li data-bind-view="challenges">
 					<a href="#/challenges">Challenges</a>
 				</li>
-				<li data-bind-view="travel">
-					<a href="#/travel">Travel</a>
+				<!-- <li data-bind-view="guides">-->
+				<li>
+					<!-- <a href="#/guides">Guides</a> -->
+					<a href="https://guides.hackupc.com/guide/hacker" target="_blank">Guides</a>
 				</li>
 				<li data-bind-view="rules">
 					<a href="#/rules">Rules</a>
@@ -276,7 +282,10 @@
 							<span>36:00</span>:00.00
 						</div>
 					</div>
-					<img class="bg" src="/assets/img/live/resrborder.png"/>
+					<img class="bg"
+							src="/assets/img/live/countdown1x.png"
+							srcset="/assets/img/live/countdown2x.png 2x, /assets/img/live/countdown4x.png 4x"
+							alt="HackUPC logo">
 				</div>
 				<div class="events-fancy">
 					<!--To be filled by js-->
@@ -318,10 +327,10 @@
 							<a target="_blank" href="https://mentors.hackupc.com">Mentors</a>
 						</div>
 						<div class="buttons margin-bottom">
-							<a target="_blank" href="https://hackupc2019.devpost.com">Devpost</a>
+							<a target="_blank" href="https://guides.hackupc.com/guide/hacker">Guides</a>
 						</div>
 						<div class="buttons margin-bottom">
-							<a target="_blank" href="https://guides.hackupc.com/guide/hacker">Guides</a>
+							<a target="_blank" href="https://hackupc2019.devpost.com">Devpost</a>
 						</div>
 					</div>
 					<div>
@@ -386,22 +395,6 @@
 		</article>
 		<article id="schedule" class="under-header padding-bottom">
 			<div class="container"></div>
-		</article>
-		<article id="travel" class="under-header padding-bottom">
-			<div class="container">
-				<div class="panel">
-					<h1>Travel reimbursement</h1>
-					<div>
-						<p class="margin-bottom">If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement are as follows.</p>
-						<ul class="margin-bottom">
-							<li>Received an email with travel reimbursement amount.</li>
-							<li>Travel reimbursement receipts submitted before the date specified by HackUPC Team.</li>
-							<li>Project submitted to Devpost before due date.</li>
-						</ul>
-						<p>The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1-2 months time period. Remember that you need to post a project before the deadline in order to get the reimbursement!</p>
-					</div>
-				</div>
-			</div>
 		</article>
 		<article id="rules" class="under-header padding-bottom">
 			<div class="container">
@@ -528,8 +521,13 @@
 			</div>
 		</article>
 		<article id="map" class="under-header padding-bottom">
-			<div class="floors"><span>2</span><span>1</span><span>0</span></div>
-			<img src="/assets/img/live/map.svg" alt="Map">
+			<div id="map-floors" class="floors"><span>2</span><span>1</span><span>0</span></div>
+			<img src="/assets/img/live/map.svg" alt="Indoors Map" id="map-rooms">
+			<img src="/assets/img/live/campus.svg" alt="Campus Map" id="map-campus" style="display: none;">
+			<div class="map-button-container">
+				<a id="map-button-out" href="#/map/campus">Zoom out - Explore Campus</a>
+				<a id="map-button-in" href="#/map/rooms" style="display: none;">Zoom in - Explore Rooms</a>
+			</div>
 		</article>
 		<article id="mentors" class="under-header padding-bottom">
 			<div class="container">
@@ -805,6 +803,18 @@
 		</article>
 		<article id="faq" class="under-header padding-bottom">
 			<div class="container">
+					<div class="panel large">
+						<h1>Travel reimbursement</h1>
+						<div>
+							<p class="margin-bottom">If you have been elected to receive a travel reimbursement, we will contact you after the hackathon to send it to you. You will receive a maximum that has been specified on the email, based on current travelling prices and distances. Requirements to receive travel reimbursement are as follows.</p>
+							<ul class="margin-bottom">
+								<li>Received an email with travel reimbursement amount.</li>
+								<li>Travel reimbursement receipts submitted before the date specified by HackUPC Team.</li>
+								<li>Project submitted to Devpost before due date.</li>
+							</ul>
+							<p>The processing of travel reimbursements takes some time. Our schedule depends on our sponsors' schedule. We expect to have them sent out in a 1-2 months time period. Remember that you need to post a project before the deadline in order to get the reimbursement!</p>
+						</div>
+					</div>
 				<div class="panel">
 					<h1>When shall I arrive?</h1>
 					<div>
