@@ -309,7 +309,7 @@ a {
 			margin: 0 0 0 0;
 			font-size: 20px;
 			color: white;
-			background-color: $secondaryColor;
+			background-color: #60733f;
 			text-align: center;
 			padding: 5px 0;
 			padding-top: 3px;
@@ -334,7 +334,7 @@ a {
 				flex: 1 1 0;
 				color: $textColor;
 				text-decoration: none;
-				background-color: $lightBgColor;
+				background-color: #f2e7bf;
 				padding: 8px;
 				text-align: center;
 				font-weight: bold;
@@ -356,7 +356,7 @@ a {
 			text-align: center;
 			border-radius: 5px;
 			width: 30px;
-			background-color: $buttonColor;
+			background-color: $secondaryColor;
 			color: white;
 			font-weight: normal;
 		}
@@ -372,12 +372,12 @@ a {
 			display: inline-block;
 			padding: 3px 6px;
 			border-radius: 3px;
-			background-color: $lightBgColor;
+			background-color: #f8d6c6;
 
 			/* stylelint-disable */
 			a {
 				/* stylelint-enable */
-				color: $textColor;
+				color: #000;
 			}
 		}
 
