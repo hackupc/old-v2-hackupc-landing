@@ -269,7 +269,6 @@
 				{
 					"id": "24",
 					"title": "Lego Tournament",
-					"activity": true,
 					"author":"Itequia",
 					"startHour": "18:00",
 					"endHour": "18:30",
@@ -280,7 +279,6 @@
 				{
 					"id": "25",
 					"title": "Rubik Tournament",
-					"activity": true,
 					"author":"iThinkUPC",
 					"startHour": "19:00",
 					"endHour": "20:30",
