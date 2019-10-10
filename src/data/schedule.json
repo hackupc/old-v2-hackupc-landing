@@ -257,14 +257,14 @@
 				},
 				{
 					"id": "23",
-					"title": "Agile workshop with Lego",
+					"title": "Robot building",
 					"activity": true,
 					"author":"McKinsey & Company",
 					"startHour": "17:00",
 					"endHour": "17:30",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": "Stop starting, start finishing."
+					"description": "Nothing to learn, just come for a fun time building a robot that won’t fall off a cliff!."
 				},
 				{
 					"id": "24",
