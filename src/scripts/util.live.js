@@ -115,7 +115,7 @@ var Util = (function (CONST) {
   * Seconds passed between epoch and 'date'
   */
 	obj.dateStringToSeconds = function (d) {
-		var dateFormat = /([0-1]?\d)\W([0-3]?\d)\W(\d{4})(\W([0-2]?\d)\W([0-5]?\d)\W?([0-5]?\d)?)?/
+		var dateFormat = /([0-3]?\d)\W([0-1]?\d)\W(\d{4})(\W([0-2]?\d)\W([0-5]?\d)\W?([0-5]?\d)?)?/
 		var result = d.match(dateFormat)
 		return Date.UTC(result[3], result[2] - 1, result[1],
 			result[5] || 0, result[6] || 0, result[7] || 0) / 1000
