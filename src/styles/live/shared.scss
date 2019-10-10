@@ -240,6 +240,7 @@ a {
 	box-shadow: 0 -5px 42px rgba(0, 0, 0, 0.4);
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
 	.countdown-time {
 		z-index: 1;
@@ -248,7 +249,7 @@ a {
 		white-space: nowrap;
 		text-align: center;
 		font-weight: bold;
-		padding-left: 11.5%;
+		padding-left: 0.125em;
 		text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 	}
 
@@ -270,6 +271,10 @@ a {
 .countdown-time .seconds {
 	vertical-align: top;
 	font-size: 0.6em;
+	width: 1.25em;
+	display: inline-block;
+	text-align: left;
+	margin-left: 0.125em;
 }
 
 .countdown-time__mobile {
@@ -279,7 +284,6 @@ a {
 	z-index: 100;
 	font-size: 4em;
 	font-weight: bold;
-	left: calc(50% - 110px);
 }
 
 .container {
