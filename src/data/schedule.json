@@ -211,7 +211,7 @@
 					"endHour": "11:30",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": ""
+					"description": "Keeping solutions scalable is key, even if it is just a model to be run by others. This session will go about how to ensure anyone can understand what you code."
 				},
 				{
 					"id": "19",
@@ -222,7 +222,7 @@
 					"endHour": "12:00",
 					"locationId": "A5001",
 					"locationName": "A5001",
-					"description": ""
+					"description": "Learn how to structure a project as an R library by one of our expert coders!"
 				},
 				{
 					"id": "20",
