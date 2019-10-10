@@ -25,7 +25,7 @@
     "images:copy": "cp -r src/images/* dist/assets/img",
     "images:minify": "# --Commented-- Help, nothing works: imagemin-cli does not keep folders, node-compress-image-cli does not detect compress command, imageoptim-cli is only for mac. Workarround: use github image bot",
     "dist:data": "cp -a src/data/. dist/data",
-    "dist:html": "cp src/index.html dist && mkdir -p dist/live && cp src/live.html dist/live/index.html",
+    "dist:html": "cp src/index.html dist && cp src/live.html dist/index.html",
     "dist:legal": "cd src/legal && for x in *.html; do mkdir -p \"../../dist/${x%.*}\" && cp \"$x\" \"../../dist/${x%.*}/index.html\"; done && cd ../..",
     "dist:lib": "npm-run-all --parallel lib:*",
     "lib:folder": "cp -a src/lib/. dist/lib",
