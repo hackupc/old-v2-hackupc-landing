@@ -514,7 +514,7 @@
 			changeView(
 				window.location.hash.slice(window.location.hash.indexOf('/') + 1)
 			)
-			Util.fadeIn(body)
+			Util.fadeIn(body, () => { document.exitFullscreen() })
 		})
 	}
 
@@ -523,7 +523,7 @@
 			Util.hide(header)
 			Util.hide(smallHeader)
 			changeView(views.fullscreen)
-			Util.fadeIn(body)
+			Util.fadeIn(body, () => { document.documentElement.requestFullscreen() })
 		})
 	}
 
