@@ -240,30 +240,31 @@
 
 	function updateCountdown () {
 		var countdownStart = Util.dateStringToSeconds(schedule.countdownStart) + parseInt(schedule.baseTimeOffset) * 60
-		var running = false
+		// var running = false
 		var obj = { hours: 0, minutes: 0, seconds: 0 }
 		var elapsed = Util.getNowSeconds() - countdownStart
 		var current = CONST.HACKATHON_DURATION - elapsed
 		if (current > 0 && current < CONST.HACKATHON_DURATION) {
 			obj = Util.getHumanTime(current)
-			running = true
+			// running = true
 		} else {
 			if (current > CONST.HACKATHON_DURATION) {
 				obj.hours = 36
 			}
 		}
 
-		var element = Util.inflateWith('countdownTimerTemplate', {
-			hours: Util.pad(obj.hours) + ':' + Util.pad(obj.minutes),
-			seconds: Util.pad(obj.seconds),
-			running: running ? 'run' : 'stop'
-		})
-		var countdownElements = document.querySelectorAll('.countdown')
-		for (let i = 0; i < countdownElements.length; i++) {
-			countdownElements[i].innerHTML = ''
-			countdownElements[i].appendChild(
-				element.cloneNode(true)
-			)
+		let hours = Util.pad(obj.hours)
+		let minutes = Util.pad(obj.minutes)
+		let seconds = Util.pad(obj.seconds)
+
+		var countdownElements = document.querySelectorAll('.countdown-time')
+		for (const elem of countdownElements) {
+			let hoursElem = elem.getElementsByClassName('hours')[0]
+			let minutesElem = elem.getElementsByClassName('minutes')[0]
+			let secondsElem = elem.getElementsByClassName('seconds')[0]
+			if (hoursElem && hoursElem.textContent !== hours) hoursElem.textContent = hours
+			if (minutesElem && minutesElem.textContent !== minutes) minutesElem.textContent = minutes
+			if (secondsElem && secondsElem.textContent !== seconds) secondsElem.textContent = seconds
 		}
 	}
 

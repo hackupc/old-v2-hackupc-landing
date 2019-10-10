@@ -56,65 +56,12 @@ main { transition: opacity $fadeTime; }
 				flex: 0 0 215px;
 				position: relative;
 				padding: 0;
-				& > div {
-					position: absolute;
-					width: 100%;
-					height: 217px;
+
+				.countdown {
 					margin-top: -90px;
-					border-radius: 140px;
-					cursor: pointer;
-					transition: margin-top $timerAnimLength, box-shadow $timerAnimLength;
-
-					#countdown-time {
-						display: flex;
-						align-content: center;
-						justify-content: center;
-						position: absolute;
-						margin-top: 100px;
-						z-index: 2;
-						width: 100%;
-						font-size: 1rem;
-
-						div.countdown-time {
-							padding-top: 0;
-							font-size: 4.5em;
-							text-shadow:
-								0 0 16px #fff,
-								0 0 24px #fff,
-								0 0 32px #fff,
-								0 0 48px #fff;
-							color: #5f723f;
-						}
-						// div.decimals {
-						// 	width: 24px;
-						// 	height: 13px;
-						// 	margin-top: 3px;
-						// }
-
-						span {
-							&.big {
-								font-size: 1em;
-								display: block;
-							}
-							&.little {
-								vertical-align: top;
-								font-size: 0.6em;
-								text-shadow: 0 0 8px #fff, 0 0 16px #fff;
-							}
-						}
-					}
-
-					img {
-						width: 105%;
-						margin-left: -5px;
-						border-radius: 100%;
-						box-shadow: 0 -5px 42px rgba(0, 0, 0, 0.4);
-						border: 4px solid #5f723f;
-						box-sizing: border-box;
-					}
-
-					&:hover { margin-top: -95px; }
+					padding: 90px 0 55px;
 				}
+				.countdown:hover { transform: translateY(-5px); }
 			}
 		}
 	}
