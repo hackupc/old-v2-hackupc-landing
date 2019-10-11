@@ -480,19 +480,39 @@
 
 	function changeMapView (locationId) {
 		switch (locationId) {
-		case 'campus':
-			document.getElementById('map-button-out').style.display = 'none'
-			document.getElementById('map-rooms').style.display = 'none'
-			document.getElementById('map-floors').style.display = 'none'
-			document.getElementById('map-button-in').style.display = ''
-			document.getElementById('map-campus').style.display = ''
-			break
-		case 'rooms':
-			document.getElementById('map-button-in').style.display = 'none'
+		case 'indoors':
+			document.getElementById('map-indoors').style.display = ''
 			document.getElementById('map-campus').style.display = 'none'
-			document.getElementById('map-button-out').style.display = ''
-			document.getElementById('map-rooms').style.display = ''
-			document.getElementById('map-floors').style.display = ''
+			document.getElementById('map-judging').style.display = 'none'
+
+			document.getElementById('map-legend-floors').style.display = ''
+
+			document.getElementById('map-button-indoors').style.display = 'none'
+			document.getElementById('map-button-campus').style.display = ''
+			document.getElementById('map-button-judging').style.display = ''
+			break
+		case 'campus':
+			document.getElementById('map-indoors').style.display = 'none'
+			document.getElementById('map-campus').style.display = ''
+			document.getElementById('map-judging').style.display = 'none'
+
+			document.getElementById('map-legend-floors').style.display = 'none'
+
+			document.getElementById('map-button-indoors').style.display = ''
+			document.getElementById('map-button-campus').style.display = 'none'
+			document.getElementById('map-button-judging').style.display = ''
+
+			break
+		case 'judging':
+			document.getElementById('map-indoors').style.display = 'none'
+			document.getElementById('map-campus').style.display = 'none'
+			document.getElementById('map-judging').style.display = ''
+
+			document.getElementById('map-legend-floors').style.display = ''
+
+			document.getElementById('map-button-indoors').style.display = ''
+			document.getElementById('map-button-campus').style.display = ''
+			document.getElementById('map-button-judging').style.display = 'none'
 			break
 		}
 	}
