@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 var CONST = {
-	// 'FAKE_DATE': new Date('2019-10-11 15:55'),
+	// 'FAKE_DATE': new Date('2019-10-12 15:59:55'), // Keep this order in the digits!
 	'FADE_CLASS': 'faded',
 	'HIDE_CLASS': 'hidden',
 	'VEIL_CLASS': 'veil',
