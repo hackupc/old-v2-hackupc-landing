@@ -149,14 +149,14 @@
 				},
 				{
 					"id": "13",
-					"title": "Programmatic art & Online multiplayer Gamedev 101",
+					"title": "Programmatic Art & Online Multiplayer Gamedev 101",
 					"talk": true,
-					"author": "Hackers@UPC",
+					"author": "dasilvacontin",
 					"startHour": "00:30",
 					"endHour": "01:00",
 					"locationId": "A5002",
 					"locationName": "A5002",
-					"description": ""
+					"description": "Visual journey through the creating an MOG. Some programmatic art tricks and techniques too. HTML+JS+Node.js"
 				},
 				{
 					"id": "14",
