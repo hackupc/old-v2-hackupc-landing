@@ -642,9 +642,9 @@
 	// Try to be useful for incompatible browsers too
 	function compatibiliyMode () {
 		updateSchedule(function () {
-			var htmlString = "<article  style='color:white' class='active' id='schedule'>"
+			var htmlString = '<article  style="color:white" class="active" id="schedule">'
 			schedule.days.forEach(function (day) {
-				htmlString += `<h1>${day.name || ''}</h1><table><thead style='color:black;background-color:white'><tr><th>Location</th><th>Start</th><th>End</th><th>Title</th><th>Description</th></tr></thead>`
+				htmlString += `<h1>${day.name || ''}</h1><table><thead style="color:black;background-color:white"><tr><th>Location</th><th>Start</th><th>End</th><th>Title</th><th>Description</th></tr></thead>`
 				day.events.forEach(function (event) {
 					htmlString += `<tr><td>${event.locationName || ''}</td><td>${event.startHour || ''}</td><td>${event.endHour || ''}</td><td>${event.title || ''}</td><td>${event.description || ''}</td></tr>`
 				})

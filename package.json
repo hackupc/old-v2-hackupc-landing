@@ -20,7 +20,7 @@
     "predist:images": "mkdir -p dist/assets/img",
     "predist:lib": "mkdir -p dist/lib",
     "dist:styles": "npm-run-all --parallel scss:* css:*",
-    "dist:scripts": "babel src/scripts -d dist/assets/js",
+    "dist:scripts": "babel src/scripts -d dist/assets/js --source-maps true",
     "dist:images": "npm-run-all images:copy images:minify",
     "images:copy": "cp -r src/images/* dist/assets/img",
     "images:minify": "# --Commented-- Help, nothing works: imagemin-cli does not keep folders, node-compress-image-cli does not detect compress command, imageoptim-cli is only for mac. Workarround: use github image bot",
