@@ -297,6 +297,15 @@
 				},
 				{
 					"id": "27",
+					"title": "Photocall: Join the last survivors",
+					"startHour": "21:30",
+					"endHour": "22:00",
+					"locationId": "infodesk",
+					"locationName": "Under Info Desk",
+					"description": "Have you already seen our photocall? Come and get a souvenir photo from our photographers."
+				},
+				{
+					"id": "28",
 					"title": "SlideShare Show",
 					"startHour": "22:00",
 					"endHour": "23:00",
@@ -312,7 +321,7 @@
 			"events":
 			[
 				{
-					"id": "28",
+					"id": "29",
 					"title": "Sticker Exchange",
 					"startHour": "00:00",
 					"endHour": "01:00",
@@ -321,7 +330,7 @@
 					"description": "You give stickers, you receive stickers. Ez pz"
 				},
 				{
-					"id": "29",
+					"id": "30",
 					"title": "Midnight Snack",
 					"startHour": "01:00",
 					"endHour": "02:00",
@@ -330,7 +339,7 @@
 					"description": "It's been more than 24 hours. Get some sweet waffles to keep yourself motivated"
 				},
 				{
-					"id": "30",
+					"id": "31",
 					"title": "EPIC NERF GUNS BATTLE",
 					"startHour": "01:00",
 					"endHour": "03:00",
@@ -339,13 +348,13 @@
 					"description": "Come and play a HackUPC classic. Nerf guns, 2 teams, a full classroom. Will you miss it?"
 				},
 				{
-					"id": "31",
+					"id": "32",
 					"title": "The Game ends",
 					"startHour": "03:14",
 					"description": "You lost"
 				},
 				{
-					"id": "32",
+					"id": "33",
 					"title": "Breakfast",
 					"startHour": "08:00",
 					"endHour": "09:00",
@@ -354,7 +363,7 @@
 					"description": "Come charge your energies for the last hours of hacking"
 				},
 				{
-					"id": "33",
+					"id": "34",
 					"title": "Hack submissions",
 					"startHour": "08:00",
 					"endHour": "09:15",
@@ -362,13 +371,13 @@
 					"description": "Submit your project in our Devpost!"
 				},
 				{
-					"id": "34",
+					"id": "35",
 					"title": "Hacking ends",
 					"startHour": "09:00",
 					"description": "SUBMIT YOUR PROJECT BEFORE IT'S TOO LATE"
 				},
 				{
-					"id": "35",
+					"id": "36",
 					"title": "Showers",
 					"startHour": "09:15",
 					"endHour": "11:00",
@@ -377,7 +386,7 @@
 					"description": "Relax a bit before the demos start"
 				},
 				{
-					"id": "36",
+					"id": "37",
 					"title": "Hack Demos",
 					"startHour": "10:15",
 					"endHour": "13:15",
@@ -386,7 +395,7 @@
 					"description": "It's demo time!"
 				},
 				{
-					"id": "37",
+					"id": "38",
 					"title": "Lunch",
 					"startHour": "13:00",
 					"endHour": "14:00",
@@ -395,7 +404,7 @@
 					"description": "Mmmmmmm... frankfurt..."
 				},
 				{
-					"id": "38",
+					"id": "39",
 					"title": "Closing Ceremony",
 					"startHour": "14:30",
 					"endHour": "16:30",
@@ -404,7 +413,7 @@
 					"description": "And the winners are... Come watch the finalists and winners!"
 				},
 				{
-					"id": "39",
+					"id": "40",
 					"title": "Ciao Hackers",
 					"startHour": "16:30",
 					"description": "It's been a pleasure, see you next time"
