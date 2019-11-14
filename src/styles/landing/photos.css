@@ -5,16 +5,23 @@
 	gap: 1em;
 	position: relative;
 }
-.photo-grid::before {
-	content: '';
+.photo-grid__overlay {
+	opacity: 0;
 	position: absolute;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	height: 50%;
-	background: linear-gradient(to bottom, transparent, #fff);
+	top: -1em; right: -1em; bottom: -1em; left: -1em;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 400ms ease-out;
+	border-radius: 1em;
 }
-
+.photo-grid__overlay-img {
+	width: 25%;
+}
+.photo-grid:hover > .photo-grid__overlay {
+	opacity: 1;
+}
 .photo-grid__photo {
 	width: 100%;
 	border-radius: 3px;
@@ -22,4 +29,6 @@
 
 .photo-grid-wrapper {
 	display: block;
+	margin: auto;
+  max-width: 700px;
 }
