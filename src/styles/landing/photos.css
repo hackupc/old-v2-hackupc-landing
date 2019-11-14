@@ -30,5 +30,25 @@
 .photo-grid-wrapper {
 	display: block;
 	margin: auto;
-  max-width: 700px;
+	max-width: 700px;
+	text-decoration: none;
+}
+
+.photo-grid__more {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	flex-wrap: wrap;
+	font-size: 3em;
+	font-weight: 900;
+	line-height: 1;
+	background: rgba(0, 0, 0, 0.33);
+	color: var(--text-light);
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+.photo-grid__more-text--small {
+	font-size: 0.85em;
 }
