@@ -1,0 +1,25 @@
+
+.photo-grid {
+	display: grid;
+	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+	gap: 1em;
+	position: relative;
+}
+.photo-grid::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 50%;
+	background: linear-gradient(to bottom, transparent, #fff);
+}
+
+.photo-grid__photo {
+	width: 100%;
+	border-radius: 3px;
+}
+
+.photo-grid-wrapper {
+	display: block;
+}
