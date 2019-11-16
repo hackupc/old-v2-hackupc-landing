@@ -5,6 +5,7 @@ before_install:
   - npm install -g @lhci/cli
 script:
   - npm run dist
-  - lhci autorun --rc-overrides.upload.target=temporary-public-storage
+after_success:
+  - lhci autorun
 addons:
   chrome: stable # for lighthouse
