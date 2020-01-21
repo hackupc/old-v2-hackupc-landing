@@ -1,5 +1,7 @@
 # HackUPC 2019 landing page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys)
+
 ![HackUPC 2019 landing preview](src/images/ogimage.png)
 
 Hi! This is the code of the HackUPC 2019 landing page.
