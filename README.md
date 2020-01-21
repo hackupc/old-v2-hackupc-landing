@@ -68,38 +68,11 @@ npm run serve
 
 View the website at [https://localhost:8080](https://localhost:8080).
 
-### Manual Deploy to HackUPC server
+### Deploy to production
 
-1. Ask ssh access to server
-1. Add remote to your local git: `git remote add live ssh://deploy@hackupc.com/home/deploy/repo/w2017.git`
-1. Push new changes to server (only master branch) with: `git push live master`
+**Push to master**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
 
-Inspired by this [article](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps)
-
-### HackUPC Server auto-deployment
-
-In order to make development easier, we configured the server do auto-deployment from master. This is done using: `crontab`, `git` hooks and the `npm run dist` combined.
-
-1. Add `*/15 * * * * cd /home/user/hackupc/frontend/ && git pull origin master > /home/user/hackupc/frontend/changes.log 2> /home/user/hackupc/frontend/install.log` to `crontab -e`
-1. `vim .git/hooks/post-merge`
-1. Write the following into the file:
-
-```sh
-#!/bin/sh
-cd /home/user/hackupc/frontend/
-npm update
-echo "cleaning..."
-npm run clean
-echo "cleaning...done"
-echo "compiling..."
-npm run dist
-echo "compiling...done"
-echo "Deploy completed. The game is on!"
-```
-
-- `chmod +x .git/hooks/post-merge`
-
-This makes crontab pull from the repo every 15 minutes. If changes happen, then the post-merge git hook is executed, effectively updating dependencies and compiling a new version of the site.
+If you push something that doesn't build, don't worry, it won't be published.
 
 ## Edit content
 
