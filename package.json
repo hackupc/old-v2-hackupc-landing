@@ -19,7 +19,7 @@
     "predist:scripts": "mkdir -p dist/assets/js",
     "predist:images": "mkdir -p dist/assets/img",
     "predist:lib": "mkdir -p dist/lib",
-    "dist:styles": "npm-run-all --parallel scss:* css:*",
+    "dist:styles": "npm-run-all --parallel css:*",
     "dist:scripts": "babel src/scripts -d dist/assets/js --source-maps true",
     "dist:images": "npm-run-all images:copy images:minify",
     "images:copy": "cp -r src/images/* dist/assets/img",
