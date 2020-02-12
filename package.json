@@ -1,7 +1,7 @@
 {
   "name": "hackupc-frontend",
   "version": "2.0.0",
-  "description": "HackUPC static landing and live web pages",
+  "description": "HackUPC static landing pages",
   "landing": "dist/index.html",
   "scripts": {
     "dist": "npm-run-all --parallel dist:*",
@@ -26,7 +26,6 @@
     "images:minify": "# --Commented-- Help, nothing works: imagemin-cli does not keep folders, node-compress-image-cli does not detect compress command, imageoptim-cli is only for mac. Workarround: use github image bot",
     "dist:data": "cp -a src/data/. dist/data",
     "dist:html": "cp src/*.html dist",
-    "dist:htmlNEW": "#  --Commented-- To enable this update the nginx live.hackupc.com pointer. # cp src/index.html dist && mkdir -p dist/live && cp src/live.html dist/live/index.html",
     "dist:legal": "cp -a src/legal/. dist",
     "dist:legalNEW": "# --Commented-- To enable this be sure that nginx works properly. # cd src/legal && for x in *.html; do mkdir -p \"../../dist/${x%.*}\" && cp \"$x\" \"../../dist/${x%.*}/index.html\"; done && cd ../..",
     "dist:lib": "npm-run-all --parallel lib:*",
@@ -40,7 +39,6 @@
     "watch:scripts": "onchange \"src/scripts\" -- npm-run-all dist:scripts notify:update",
     "watch:styles:legal": "onchange \"src/styles/legal\" \"src/styles/legal.css\" -- npm-run-all css:legal notify:update",
     "watch:styles:cookies": "onchange \"src/styles/cookies.css\" -- npm-run-all css:cookies notify:update",
-    "watch:styles:live": "onchange \"src/styles/live\" \"src/styles/live.scss\" -- npm-run-all scss:live notify:update",
     "watch:styles:landing": "onchange \"src/styles/landing\" \"src/styles/landing.css\" -- npm-run-all css:landing notify:update",
     "watch:styles:shared": "onchange \"src/styles/shared\" -- npm-run-all dist:styles notify:update",
     "watch:styles:test": "onchange \"src/styles/test.css\" -- npm-run-all css:test notify:update",
