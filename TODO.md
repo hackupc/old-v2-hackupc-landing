@@ -7,7 +7,6 @@
 - [x] Refactor all 2018 for 2019 and any outdated content
 - [ ] Update schedule.json
 - [x] Update `favicon.ico` (color)
-- [ ] Test if live works
 - [ ] Make the applcations closed page
 - [x] Update FAQ
 - [ ] Make the subscrive page
@@ -19,7 +18,6 @@
 
 - [x] Remove unused styles
 - [x] Clear `index.html`
-- [ ] Clear `live.html`
 - [x] Fix legal pages style because bootrstap was deleted
 - [x] Fix data-finger-print not working
 - [x] Update mentors link
@@ -56,10 +54,3 @@
 - [ ] Cookies banner like [this](https://speckyboy.com/)
 - [ ] Generate favicon with cli-real-favicon in npm
 - [ ] Use babel instead of uglify
-
-## Live
-
-- [ ] Don't show popup if notifications are accepted
-- [ ] Refactor .sass files to .css matching the style (and remove explanation from readme)
-- [ ] Use ES6
-- [ ] Refactor Util as a module

@@ -46,7 +46,6 @@ View the website at [https://localhost:8080](https://localhost:8080)
 ## General info
 
 Every file was updated in the 2019 version. So they follow the same style and logic.
-Exept the html and `.sass` files from the live, so you may want to refactor them to CSS :D .
 
 ## Deploy
 
@@ -111,24 +110,6 @@ New versions of the schedule will be loaded only if 'version' is different.
 
 > If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
 Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
-
-## Live
-
-Features included
-
-- Optional subscription to events - 5 minutes before notifications
-- Schedule live reload
-- Fancy schedule with time padding
-- Normal tabular schedule
-- Countdown
-- Full-screen mode by pressing `p`
-
-### Config
-
-Some parameters (offsets, timeouts, defaults) can be changed in `config.live.js`. Keep in mind that some values are just constants and should not be changed.  
-Style can be customized in params.scss (note that some parameters should match some variables in config.live.js).
-
-Here you can edit the `FAKE_DATE` parameter to test funtionalities.
 
 ## Tech stack
 
