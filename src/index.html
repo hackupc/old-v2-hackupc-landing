@@ -734,10 +734,19 @@
 					hreflang="en">Hackers@UPC</a></b></q>
 
 		<div class="no-overflow no-overflow--footer">
-			<img class="footer__img" src="/assets/img/multisize/1x/footer.png" srcset="/assets/img/multisize/1.5x/footer%401.5x.png 1.5x,
-				/assets/img/multisize/2x/footer%402x.png 2x,
-				/assets/img/multisize/3x/footer%403x.png 3x,
-				/assets/img/multisize/4x/footer%404x.png 4x" alt="Dirt with some plants">
+			<picture>
+				<source class="footer__img"
+					srcset="/assets/img/multisize/1.5x/footer%401.5x.webp 1.5x,
+						/assets/img/multisize/2x/footer%402x.webp 2x,
+						/assets/img/multisize/3x/footer%403x.webp 3x,
+						/assets/img/multisize/4x/footer%404x.webp 4x">
+				<source class="footer__img"
+					srcset="/assets/img/multisize/1.5x/footer%401.5x.png 1.5x,
+						/assets/img/multisize/2x/footer%402x.png 2x,
+						/assets/img/multisize/3x/footer%403x.png 3x,
+						/assets/img/multisize/4x/footer%404x.png 4x">
+				<img class="footer__img" src="/assets/img/multisize/1x/footer.png" alt="Dirt with some plants">
+			</picture>
 		</div>
 	</footer>
 
