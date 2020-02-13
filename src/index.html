@@ -141,11 +141,10 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69542332-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-69542332-1');
+		window.dataLayer = window.dataLayer || []
+		function gtag () { dataLayer.push(arguments) }
+		gtag('js', new Date())
+		gtag('config', 'UA-69542332-1')
 </script>
 </head>
 
@@ -162,17 +161,20 @@
 		</div>
 		<div class="hero__layer hero__layer--depths"></div>
 		<picture class="buildings lax buildings--hidden" data-lax-translate-y="0 0, vh (vh*0.7)">
-			<source media="(max-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
+			<source media="(max-width: 42em)" type="image/png"
+				srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
 								/assets/img/multisize/1.5x/buildings-mobile%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings-mobile%402x.png 2x,
 								/assets/img/multisize/3x/buildings-mobile%403x.png 3x,
 								/assets/img/multisize/4x/buildings-mobile%404x.png 4x">
-			<source media="(min-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings.png 1x,
+			<source media="(min-width: 42em)" type="image/png"
+				srcset="/assets/img/multisize/1x/buildings.png 1x,
 								/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings%402x.png 2x,
 								/assets/img/multisize/3x/buildings%403x.png 3x,
 								/assets/img/multisize/4x/buildings%404x.png 4x">
-			<img class="buildings__img" src="/assets/img/multisize/1x/buildings.png" srcset="/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
+			<img class="buildings__img" src="/assets/img/multisize/1x/buildings.png"
+				srcset="/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings%402x.png 2x,
 								/assets/img/multisize/3x/buildings%403x.png 3x,
 								/assets/img/multisize/4x/buildings%404x.png 4x" alt="Destroyed Barcelona buildings"
@@ -498,13 +500,13 @@
 				</picture>
 				<picture>
 					<source type="image/webp" class="photo-grid__photo"
-						srcset="/assets/img/photos/multisize/HackUPC-380-2.webp 50w,
-						/assets/img/photos/multisize/HackUPC-380-5.webp 50w,
-						/assets/img/photos/multisize/HackUPC-380-10.webp 100w,
-						/assets/img/photos/multisize/HackUPC-380-20.webp 200w,
-						/assets/img/photos/multisize/HackUPC-380-40.webp 400w,
-						/assets/img/photos/multisize/HackUPC-380-60.webp 600w,
-						/assets/img/photos/multisize/HackUPC-380-80.webp 800w"
+						srcset="/assets/img/photos/multisize/HackUPC-380-20px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-380-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-380-100px.webp 100w,
+						/assets/img/photos/multisize/HackUPC-380-200px.webp 200w,
+						/assets/img/photos/multisize/HackUPC-380-400px.webp 400w,
+						/assets/img/photos/multisize/HackUPC-380-600px.webp 600w,
+						/assets/img/photos/multisize/HackUPC-380-800px.webp 800w"
 						loadsizes="100vw" ing="lazy">
 					<source type="image/jpg" class="photo-grid__photo"
 						srcset="/assets/img/photos/multisize/HackUPC-380-25px.jpg 50w,
@@ -761,7 +763,7 @@
 	<script type="text/javascript" src="lib/lax.min.js"></script>
 	<script>window.onload = function () { lax.setup(); const updateLax = () => { lax.update(window.scrollY); window.requestAnimationFrame(updateLax) }; window.requestAnimationFrame(updateLax) }</script>
 	<!-- Easter Egg -->
-	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', "font-size: 1.5em; line-height: 2;"))</script>
+	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', 'font-size: 1.5em; line-height: 2;'))</script>
 	<i style="display: none;">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
 </body>
 
