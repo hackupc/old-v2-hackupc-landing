@@ -746,14 +746,23 @@
 
 	<!-- Scripts -->
 	<script src="/assets/js/cookies.js" defer async></script>
-
-	<!-- Particles -->
 	<script src="lib/particles.js"></script>
-	<script>particlesJS.load('particles-js', 'data/particlesjs-config.json')</script>
+	<script src="lib/lax.min.js"></script>
+	<script>
+		window.onload = () => {
+			lax.setup()
 
-	<!-- Parallax -->
-	<script type="text/javascript" src="lib/lax.min.js"></script>
-	<script>window.onload = function () { lax.setup(); const updateLax = () => { lax.update(window.scrollY); window.requestAnimationFrame(updateLax) }; window.requestAnimationFrame(updateLax) }</script>
+			const updateLax = () => {
+				lax.update(window.scrollY)
+				window.requestAnimationFrame(updateLax)
+			}
+
+			window.requestAnimationFrame(updateLax)
+
+			particlesJS.load('particles-js', 'data/particlesjs-config.json')
+		}
+	</script>
+
 	<!-- Easter Egg -->
 	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', 'font-size: 1.5em; line-height: 2;'))</script>
 	<i style="display: none;">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
