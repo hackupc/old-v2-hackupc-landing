@@ -1,6 +1,5 @@
 ci:
   assert:
-    preset: lighthouse:recommended
     assertions:
       uses-http2: 'off'
       canonical: 'off'
