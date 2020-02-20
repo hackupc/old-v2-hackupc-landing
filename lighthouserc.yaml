@@ -4,16 +4,16 @@ ci:
       uses-http2: 'off'
       canonical: 'off'
       categories:performance:
-        - warn
-        - minScore: 0.6
+        - error
+        - minScore: 0.5
       categories:seo:
-        - warn
-        - minScore: 0.9
+        - error
+        - minScore: 0.8
       categories:accessibility:
         - error
-        - minScore: 0.95
+        - minScore: 0.9
       categories:best-practices:
-        - warn
-        - minScore: 0.85
+        - error
+        - minScore: 0.8
   upload:
     target: temporary-public-storage
