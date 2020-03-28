@@ -46,7 +46,6 @@ View the website at [https://localhost:8080](https://localhost:8080)
 ## General info
 
 Every file was updated in the 2019 version. So they follow the same style and logic.
-Exept the html and `.sass` files from the live, so you may want to refactor them to CSS :D .
 
 ## Deploy
 
@@ -93,131 +92,6 @@ If you push something that doesn't build, don't worry, it won't be published.
 ### Change theme
 
 > TODO: fill this part
-
-### Update schedule
-
-> TODO: polish this part
-
-Clients will poll constantly the schedule.json file. To update the schedule just change the file and deploy.  
-New versions of the schedule will be loaded only if 'version' is different.
-
-#### Schedule file
-
-- `id` can be whatever you want, but all ids must be different  
-- When writing hours, prepend zeroes: Nice: 01:00; Not-so-nice: 1:00.  
-- Events should be ordered by starting hour  
-- `baseTimeOffset` should be the same output as executing (new Date()).getTimezoneOffset() in a machine with local time. (UTC - localtime in minutes)  
-- `dates` are DD/MM/YYYY format  
-
-> If an event doesn't have endHour, then will show only startHour and it will finish at the same time as it starts.  
-Useful to specify events that don't have concept of length or that span through more than one day ("Event start", "Event end")
-
-## Live
-
-Features included
-
-- Optional subscription to events - 5 minutes before notifications
-- Schedule live reload
-- Fancy schedule with time padding
-- Normal tabular schedule
-- Countdown
-- Full-screen mode by pressing `p`
-
-### Config
-
-Some parameters (offsets, timeouts, defaults) can be changed in `config.live.js`. Keep in mind that some values are just constants and should not be changed.  
-Style can be customized in params.scss (note that some parameters should match some variables in config.live.js).
-
-Here you can edit the `FAKE_DATE` parameter to test funtionalities.
-
-## Tech stack
-
-This are the explanations of why we chose each technology, so you can decide whether keep it or change it.
-
-### Conventions
-
-#### English
-
-> Write everything in english please, even comments
-
-- More people can understand the code.
-- Consistent with most libraries.
-
-#### BEM
-
-> [BEM Oficial website](http://getbem.com/naming/)
-
-- Avoids unwanted styles and messy css.
-- Browsers are faster styling by class than by tag.
-- HTML & CSS is clearer.
-
-#### StyleLint
-
-> [StyleLint Oficial website](https://stylelint.io/)
-
-- CSS is clearer.
-- Avoid small errors.
-
-#### Standard JS
-
-> [Standard JS - Oficial website](https://standardjs.com/)
-
-- It can reformat your code automatically so you don't lose time.
-
-*I know... It's wierd not using semicolons, but js doesn't need them.*
-
-### Node.js && npm
-
-> [npm - Oficial website](http://npmjs.com/)
-
-- Keep all libraries easyly updated (try noy to use it over cdn or downloading them yourself).
-- Automate development and deployment.
-- It's simple, so we can focus on other important tasks.
-- It's cool!
-
-### PostCSS
-
-> [PostCSS - Oficial website](https://postcss.org/)
-
-- All CSS goodies in one package!
-  - Minifyer
-  - Pollyfills
-  - Normalize.css
-  - Autoprefixer
-
-### npm packages
-
-#### Babel
-
-> [Babel - Oficial website](https://babeljs.io/)
-Use lattest JavaScript features in all browsers.
-
-### GitHub
-
-#### Netlify
-
-> [Netlify - Oficial website](https://www.netlify.com/)
-Generate previews of the builds in Pull Requests.
-
-#### Code Climate
-
-> [Code Climate - Oficial website](https://github.com/marketplace/code-climate)
-Ensure code quality and mantainability.
-
-#### ImgBot
-
-> [ImgBot - Oficial website](https://github.com/marketplace/imgbot)
-Compress images.
-
-#### Stale
-
-> [Stale - Oficial website](https://github.com/marketplace/stale)
-Closes Issues
-
-#### Travis
-
-> [Travis - Oficial website](https://github.com/marketplace/travis-ci)
-Runs linterns.
 
 ## Support
 

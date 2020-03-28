@@ -17,7 +17,8 @@
 	<meta name="MobileOptimized"  content="320">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="canonical" href="https://hackupc.com/" hreflang="en">
+	<link rel="canonical" href="/index.html" hreflang="en">
+	<link rel="alternate" href="https://hackupc.com/" hreflang="en">
 	<link rel="alternate" href="https://www.hackupc.com/" hreflang="en">
 	<meta name="city" content="Barclona">
 	<meta name="country" content="ES">
@@ -140,11 +141,10 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69542332-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-69542332-1');
+		window.dataLayer = window.dataLayer || []
+		function gtag () { dataLayer.push(arguments) }
+		gtag('js', new Date())
+		gtag('config', 'UA-69542332-1')
 </script>
 </head>
 
@@ -161,17 +161,20 @@
 		</div>
 		<div class="hero__layer hero__layer--depths"></div>
 		<picture class="buildings lax buildings--hidden" data-lax-translate-y="0 0, vh (vh*0.7)">
-			<source media="(max-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
+			<source media="(max-width: 42em)" type="image/png"
+				srcset="/assets/img/multisize/1x/buildings-mobile.png 1x,
 								/assets/img/multisize/1.5x/buildings-mobile%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings-mobile%402x.png 2x,
 								/assets/img/multisize/3x/buildings-mobile%403x.png 3x,
 								/assets/img/multisize/4x/buildings-mobile%404x.png 4x">
-			<source media="(min-width: 42em)" type="image/png" srcset="/assets/img/multisize/1x/buildings.png 1x,
+			<source media="(min-width: 42em)" type="image/png"
+				srcset="/assets/img/multisize/1x/buildings.png 1x,
 								/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings%402x.png 2x,
 								/assets/img/multisize/3x/buildings%403x.png 3x,
 								/assets/img/multisize/4x/buildings%404x.png 4x">
-			<img class="buildings__img" src="/assets/img/multisize/1x/buildings.png" srcset="/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
+			<img class="buildings__img" src="/assets/img/multisize/1x/buildings.png"
+				srcset="/assets/img/multisize/1.5x/buildings%401.5x.png 1.5x,
 								/assets/img/multisize/2x/buildings%402x.png 2x,
 								/assets/img/multisize/3x/buildings%403x.png 3x,
 								/assets/img/multisize/4x/buildings%404x.png 4x" alt="Destroyed Barcelona buildings"
@@ -188,7 +191,7 @@
 		</div>
 		<div class="lax" data-lax-translate-y="0 0, vh (vh*0.6)">
 			<!-- <a class="button button--hero" href="https://my.hackupc.com/" hreflang="en">Apply now</a> -->
-			<!-- <a class="button button--hero" href="/live" hreflang="en">&#11044; Live</a> -->
+			<!-- <a class="button button--hero" href="https://live.hackupc.com/" hreflang="en">&#11044; Live</a> -->
 			<a class="button button--hero" href="http://eepurl.com/glXp-X" hreflang="en">Subscribe</a>
 		</div>
 		<div class="hero__layer no-overflow">
@@ -335,91 +338,179 @@
 
 	<section class="section section--photos">
 		<h2 class="section__title">Photos</h2>
-		<!-- <img srcset="/assets/img/photos/multisize/{photoName}-25px.jpg 25w,
-								 /assets/img/photos/multisize/{photoName}50px.jpg 50w,
-								 /assets/img/photos/multisize/{photoName}-100px.jpg 100w,
-								 /assets/img/photos/multisize/{photoName}-200px.jpg 200w,
-								 /assets/img/photos/multisize/{photoName}-400px.jpg 400w,
-								 /assets/img/photos/multisize/{photoName}-600px.jpg 600w,
-								 /assets/img/photos/multisize/{photoName}-800px.jpg 800w
-     src="/assets/img/photos/{photoName}.jpg" alt="Example photo took in the event" loading="lazy"> -->
 		<a class="photo-grid-wrapper" href="https://mega.nz/#F!CL5BFIAQ!2WJgTnZKkIYEJhy7Q-qveQ">
 			<div class="photo-grid">
 				<div class="photo-grid__overlay">
 					<img src="/assets/img/icons/eye.svg" alt="View" class="photo-grid__overlay-img">
 				</div>
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-240-25px.jpg 25w,
-								/assets/img/photos/multisize/HackUPC-240-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-240-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-240-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-240-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-240-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-240-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-240.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-409-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-409-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-409-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-409-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-409-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-409-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-409-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-409.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-563-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-563-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-563-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-563-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-563-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-563-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-563-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-563.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-884-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-884-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-884-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-884-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-884-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-884-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-884-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-884.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-1179-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-1179-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-1179-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-1179-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-1179-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-1179-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-1179-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-1179.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-766-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-766-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-766-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-766-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-766-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-766-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-766-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-766.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-1193-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-1193-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-1193-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-1193-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-1193-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-1193-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-1193-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-1193.jpg" alt="Example photo took in the event" loading="lazy">
-				<img class="photo-grid__photo"
-				srcset="/assets/img/photos/multisize/HackUPC-380-25px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-380-50px.jpg 50w,
-								/assets/img/photos/multisize/HackUPC-380-100px.jpg 100w,
-								/assets/img/photos/multisize/HackUPC-380-200px.jpg 200w,
-								/assets/img/photos/multisize/HackUPC-380-400px.jpg 400w,
-								/assets/img/photos/multisize/HackUPC-380-600px.jpg 600w,
-								/assets/img/photos/multisize/HackUPC-380-800px.jpg 800w"
-				src="/assets/img/photos/HackUPC-380.jpg" alt="Example photo took in the event" loading="lazy">
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-240-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-240-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-240-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-240-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-240-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-240-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-240-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-240-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-240-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-240-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-240-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-240-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-240-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-409-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-409-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-409-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-409-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-409-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-409-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-409-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-409-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-409-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-409-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-409-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-409-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-409-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-563-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-563-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-563-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-563-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-563-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-563-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-563-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-563-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-563-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-563-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-563-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-563-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-563-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-884-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-884-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-884-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-884-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-884-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-884-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-884-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-884-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-884-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-884-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-884-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-884-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-884-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-1179-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-1179-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-1179-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-1179-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-1179-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-1179-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-1179-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-1179-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-1179-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-1179-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-1179-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-1179-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-1179-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-766-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-766-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-766-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-766-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-766-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-766-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-766-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-766-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-766-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-766-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-766-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-766-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-766-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-1193-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-1193-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-1193-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-1193-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-1193-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-1193-1000px.webp 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-1193-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-1193-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-1193-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-1193-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-1193-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-1193-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy" alt="Example photo took in the event">
+					<img src="/assets/img/photos/multisize/HackUPC-1193-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
+				<picture>
+					<source type="image/webp" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-380-50px.webp 50w,
+						/assets/img/photos/multisize/HackUPC-380-125px.webp 125w,
+						/assets/img/photos/multisize/HackUPC-380-250px.webp 250w,
+						/assets/img/photos/multisize/HackUPC-380-500px.webp 500w,
+						/assets/img/photos/multisize/HackUPC-380-750px.webp 750w,
+						/assets/img/photos/multisize/HackUPC-380-1000px.webp 1000w"
+						loadsizes="100vw" ing="lazy">
+					<source type="image/jpg" class="photo-grid__photo"
+						srcset="
+						/assets/img/photos/multisize/HackUPC-380-50px.jpg 50w,
+						/assets/img/photos/multisize/HackUPC-380-125px.jpg 125w,
+						/assets/img/photos/multisize/HackUPC-380-250px.jpg 250w,
+						/assets/img/photos/multisize/HackUPC-380-500px.jpg 500w,
+						/assets/img/photos/multisize/HackUPC-380-750px.jpg 750w,
+						/assets/img/photos/multisize/HackUPC-380-1000px.jpg 1000w"
+						sizes="100vw" loading="lazy">
+					<img src="/assets/img/photos/multisize/HackUPC-380-250px.jpg" alt="Example photo took in the event" class="photo-grid__photo" loading="lazy">
+				</picture>
 
 				<div class="photo-grid__more">
 					<span>+1220 <span class="photo-grid__more-text photo-grid__more-text--small">photos</span></span>
@@ -585,7 +676,7 @@
 				<img class="partner__img" loading="lazy" alt="Ajuntament de Barcelona" src="/assets/img/logos/ajuntament_de_barcelona.svg">
 			</a>
 		</div>
-		<div style="font-size: 0.7rem;height: 0;color: #888;">This site is powered by <a href="https://www.netlify.com/" style="color: inherit;">Netlify</a></div>
+		<div style="font-size: 0.7rem; height: 0; color: #888;">This site is powered by <a href="https://www.netlify.com/" style="color: inherit;">Netlify</a></div>
 	</section>
 
 	<footer class="section section--footer">
@@ -637,25 +728,43 @@
 					hreflang="en">Hackers@UPC</a></b></q>
 
 		<div class="no-overflow no-overflow--footer">
-			<img class="footer__img" src="/assets/img/multisize/1x/footer.png" srcset="/assets/img/multisize/1.5x/footer%401.5x.png 1.5x,
-				/assets/img/multisize/2x/footer%402x.png 2x,
-				/assets/img/multisize/3x/footer%403x.png 3x,
-				/assets/img/multisize/4x/footer%404x.png 4x" alt="Dirt with some plants">
+			<picture>
+				<source class="footer__img"
+					srcset="/assets/img/multisize/1.5x/footer%401.5x.webp 1.5x,
+						/assets/img/multisize/2x/footer%402x.webp 2x,
+						/assets/img/multisize/3x/footer%403x.webp 3x,
+						/assets/img/multisize/4x/footer%404x.webp 4x">
+				<source class="footer__img"
+					srcset="/assets/img/multisize/1.5x/footer%401.5x.png 1.5x,
+						/assets/img/multisize/2x/footer%402x.png 2x,
+						/assets/img/multisize/3x/footer%403x.png 3x,
+						/assets/img/multisize/4x/footer%404x.png 4x">
+				<img class="footer__img" src="/assets/img/multisize/1x/footer.png" alt="Dirt with some plants">
+			</picture>
 		</div>
 	</footer>
 
 	<!-- Scripts -->
 	<script src="/assets/js/cookies.js" defer async></script>
-
-	<!-- Particles -->
 	<script src="lib/particles.js"></script>
-	<script>particlesJS.load('particles-js', 'data/particlesjs-config.json')</script>
+	<script src="lib/lax.min.js"></script>
+	<script>
+		window.onload = () => {
+			lax.setup()
 
-	<!-- Parallax -->
-	<script type="text/javascript" src="lib/lax.min.js"></script>
-	<script>window.onload = function () { lax.setup(); const updateLax = () => { lax.update(window.scrollY); window.requestAnimationFrame(updateLax) }; window.requestAnimationFrame(updateLax) }</script>
+			const updateLax = () => {
+				lax.update(window.scrollY)
+				window.requestAnimationFrame(updateLax)
+			}
+
+			window.requestAnimationFrame(updateLax)
+
+			particlesJS.load('particles-js', 'data/particlesjs-config.json')
+		}
+	</script>
+
 	<!-- Easter Egg -->
-	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', "font-size: 1.5em; line-height: 2;"))</script>
+	<script>setTimeout(console.log.bind(console, '%c🐝 BIENE HACKUPC 🐝', 'font-size: 1.5em; line-height: 2;'))</script>
 	<i style="display: none;">🐝 BIENE HACKUPC AGAIN! 💃🏽 OH NO YOU SAW ME 😱. IF YOU ARE FROM UPC 🎓 PLS SEND AN EMAIL 📧 TO DEVS@HACKUPC.COM 💖</i>
 </body>
 
