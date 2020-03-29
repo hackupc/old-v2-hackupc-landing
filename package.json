@@ -6,6 +6,10 @@
   "license": "MIT",
   "homepage": "https://hackupc.com",
   "repository": "github:hackupc/hackupc-landing",
+  "scripts": {
+    "start": "webpack-dev-server --open --config=config/webpack.dev.js",
+    "build": "webpack --config=config/webpack.prod.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
@@ -17,7 +21,7 @@
     "cssnano": "^4.1.0",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^4.0.0-beta.14",
+    "html-webpack-plugin": "^4.0.3",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
@@ -32,17 +36,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
   },
-  "scripts": {
-    "start": "webpack-dev-server --open --config=config/webpack.dev.js",
-    "build": "webpack --config=config/webpack.prod.js"
-  },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
     "core-js": "3"
-  },
-  "browserslist": [
-    "> 1%",
-    "not ie <= 9",
-    "last 2 versions"
-  ]
+  }
 }
