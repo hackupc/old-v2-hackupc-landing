@@ -1,6 +1,6 @@
 # HackUPC 2019 landing page
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys) [![Build Status](https://travis-ci.com/hackupc/hackupc-landing.svg?branch=master)](https://travis-ci.com/hackupc/hackupc-landing)
 
 ![HackUPC 2019 landing preview](src/images/ogimage.png)
 
