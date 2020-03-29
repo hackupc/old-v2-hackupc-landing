@@ -1,0 +1,8 @@
+a {
+  color: $c-primary;
+}
+
+::selection {
+  background-color: $c-primary;
+  color: $c-txt-light;
+}
