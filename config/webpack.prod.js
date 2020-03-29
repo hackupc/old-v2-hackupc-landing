@@ -8,6 +8,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const BrotliPlugin = require("brotli-webpack-plugin");
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const glob = require("glob");
+const RealFaviconPlugin = require('real-favicon-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -91,6 +92,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].[chunkhash:8].bundle.css",
       chunkFilename: "[name].[chunkhash:8].chunk.css",
+    }),
+    // Generate favicon with https://realfavicongenerator.net/
+    new RealFaviconPlugin({
+      faviconJson: 'src/assets/favicon/faviconDescription.json',
+      outputPath: 'build/assets/favicon',
+      inject: true
     }),
     // The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags
     new HtmlWebpackPlugin({
