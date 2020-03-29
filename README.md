@@ -1,10 +1,10 @@
-# HackUPC 2019 landing page
+# HackUPC 2020 landing page
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys) [![Build Status](https://travis-ci.com/hackupc/hackupc-landing.svg?branch=master)](https://travis-ci.com/hackupc/hackupc-landing)
 
-![HackUPC 2019 landing preview](src/images/ogimage.png)
+![HackUPC 2020 landing preview](src/images/ogimage.png)
 
-Hi! This is the code of the HackUPC 2019 landing page.
+Hi! This is the code of the HackUPC 2020 landing page.
 
 ## Setup
 
@@ -95,7 +95,7 @@ If you push something that doesn't build, don't worry, it won't be published.
 
 ## Support
 
-If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2019 edition are:
+If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2020 edition are:
 
 - Maurici Abad Gutierrez: Slack `@mauriciabad` [mauriciabad.com](https://mauriciabad.com/)
 

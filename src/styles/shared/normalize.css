@@ -1,6 +1,0 @@
-/* This is a workarround to allow
- * postcss-normalize and postcss-import
- * to work at the same time
- */
-
-@import "normalize.css";

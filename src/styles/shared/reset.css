@@ -1,9 +1,0 @@
-/* Custom styles to start with */
-body { margin: 0; box-sizing: border-box; }
-button { font: inherit; outline: none; text-transform: inherit; }
-ul,ol,li { margin: 0; padding: 0; list-style: none; display: block; }
-q,img { display: block; }
-q::before,q::after { content: none; }
-abbr { text-decoration: none; }
-strong { font-weight: 500; }
-p { margin: 0; }

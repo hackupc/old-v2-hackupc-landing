@@ -7,7 +7,7 @@ cache:
 before_install:
   - npm install -g @lhci/cli
 script:
-  - npm run dist
+  - npm run build
 after_success:
   - lhci autorun
 addons:
