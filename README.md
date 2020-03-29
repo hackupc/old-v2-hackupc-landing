@@ -24,7 +24,7 @@ npm install
 
 ## Develop
 
-Use `npm run watch` to compile and serve the dist directory in real time. Then view the website at [https://localhost:8080](https://localhost:8080)
+Use `npm run start` to compile and serve the build directory in real time. Then view the website at [https://localhost:3000](https://localhost:3000)
 
 **Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `markdownlint`, `StandardJS`, `stylelint` and `npm`. In other editors they may have similar names.
 Or use `npm run lint` to run linters manually from the console to check errors.
@@ -38,10 +38,10 @@ Because of cahe busting you may have to clean the cache when you reload to see c
 Run this:
 
 ```sh
-npm run watch
+npm run start
 ```
 
-View the website at [https://localhost:8080](https://localhost:8080)
+View the website at [https://localhost:3000](https://localhost:3000)
 
 ## General info
 
@@ -51,21 +51,21 @@ Every file was updated in the 2019 version. So they follow the same style and lo
 
 ### Deploy to localhost
 
-Use `npm run dist` to compile all dist directory.
-The files from `/src/` will be compiled to `/dist/`. Notice that the routes change, so when referencing files check where they are in [/dist/](/dist/]).
+Use `npm run build` to compile all build directory.
+The files from `/src/` will be compiled to `/build/`. Notice that the routes change, so when referencing files check where they are in [/build/](/build/]).
 
-Use `npm run serve` to just serve `/dist` at [https://localhost:8080](https://localhost:8080).
+Use `npm run serve` to just serve `/build` at [https://localhost:3000](https://localhost:3000).
 
 **TLDR;**
 
 Run this:
 
 ```sh
-npm run dist
+npm run build
 npm run serve
 ```
 
-View the website at [https://localhost:8080](https://localhost:8080).
+View the website at [https://localhost:3000](https://localhost:3000).
 
 ### Deploy to production
 

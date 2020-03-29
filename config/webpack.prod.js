@@ -14,7 +14,7 @@ module.exports = {
     main: "./src/index.js"
   },
   output: {
-    path: path.join(__dirname, "../dist"),
+    path: path.join(__dirname, "../build"),
     filename: "[name].[chunkhash:8].bundle.js",
     chunkFilename: "[name].[chunkhash:8].chunk.js"
   },
