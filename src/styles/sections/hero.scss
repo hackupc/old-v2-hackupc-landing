@@ -1,0 +1,26 @@
+.section--hero {
+  perspective: 100rem;
+  background-color: $c-bg-dark;
+  // 4rem for the bottom gap
+  // 3rem for the nav heigth
+  height: calc(100vh - 4rem - 3rem);
+  height: calc((var(--vh, 1vh) * 100) - 4rem - 3rem);
+  max-width: unset;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 50rem;
+    bottom: 0%;
+    left: calc(50% - 25rem);
+    transform-origin: bottom center;
+    border-bottom: 100px solid transparent;
+    transform: rotateX(80deg);
+  }
+
+  h1 {
+    margin: 0;
+  }
+}

@@ -3,3 +3,9 @@ body {
   background: $c-bg-light;
   color: $c-txt-light;
 }
+.section {
+  min-height: 10rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
