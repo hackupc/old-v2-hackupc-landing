@@ -15,7 +15,7 @@ module.exports = {
     main: "./src/index.js"
   },
   output: {
-    path: path.join(__dirname, "../build"),
+    path: path.join(__dirname, "../dist"),
     filename: "[name].[chunkhash:8].bundle.js",
     chunkFilename: "[name].[chunkhash:8].chunk.js"
   },
@@ -96,7 +96,7 @@ module.exports = {
     // Generate favicon with https://realfavicongenerator.net/
     new RealFaviconPlugin({
       faviconJson: 'src/assets/favicon/faviconDescription.json',
-      outputPath: 'build/assets/favicon',
+      outputPath: 'dist/assets/favicon',
       inject: true
     }),
     // The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags

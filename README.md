@@ -51,17 +51,17 @@ Every file was updated in the 2019 version. So they follow the same style and lo
 
 ### Deploy to localhost
 
-Use `npm run build` to compile all build directory.
-The files from `/src/` will be compiled to `/build/`. Notice that the routes change, so when referencing files check where they are in [/build/](/build/]).
+Use `npm run dist` to compile all build directory.
+The files from `/src/` will be compiled to `/dist/`. Notice that the routes change, so when referencing files check where they are in [/dist/](/dist/]).
 
-Use `npm run serve` to just serve `/build` at [https://localhost:3000](https://localhost:3000).
+Use `npm run serve` to just serve `/dist` at [https://localhost:3000](https://localhost:3000).
 
 **TLDR;**
 
 Run this:
 
 ```sh
-npm run build
+npm run dist
 npm run serve
 ```
 

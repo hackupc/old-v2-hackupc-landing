@@ -8,12 +8,12 @@ module.exports = {
     main: "./src/index.js"
   },
   output: {
-    path: path.join(__dirname, "../build"),
+    path: path.join(__dirname, "../dist"),
     filename: "[name].bundle.js"
   },
   mode: "development",
   devServer: {
-    contentBase: path.join(__dirname, "../build"),
+    contentBase: path.join(__dirname, "../dist"),
     compress: true,
     port: 3000,
     overlay: true
