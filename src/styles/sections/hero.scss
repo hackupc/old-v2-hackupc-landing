@@ -15,6 +15,18 @@
   perspective-origin: 50% 25vh;
   backface-visibility: hidden;
 
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    right: -30px;
+    height: 30px;
+    background-color: darken($c-bg-light, 8%);
+    transform: rotateX(90deg);
+    transform-origin: bottom center;
+  }
+
   .screen, .table, .objects {
     background-color: $c-bg-light;
     position: absolute;
@@ -71,7 +83,7 @@
     left: 0;
     right: 0;
     height: 15px;
-    background-color: #2a2050;
+    background-color: darken($c-bg-light, 8%);
     transform: rotateX(-90deg);
     transform-origin: top center;
   }
