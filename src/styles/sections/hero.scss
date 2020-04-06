@@ -37,33 +37,39 @@
     backface-visibility: hidden;
   }
 
+  $screen-center-width: 50vw;
+  $screen-left-width: $screen-center-width * 0.8;
+  $screen-right-width: $screen-center-width * 0.8;
+  $screen-height: $screen-center-width * 2/3;
+  $screen-gap: 2vw;
+
   .screen, .table, .objects {
     background-color: $c-bg-light;
   }
   .screen {
-    height: 400px;
+    height: $screen-height;
   }
   .screen--left {
     bottom: 0; 
-    right: calc(50% - 300px); 
-    width: 500px; 
+    right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
+    width: $screen-left-width; 
     transform-origin: right center; 
-    transform: translate3d(-600px,-27vh,-600px) rotateY(30deg);
-    margin-right: 25px;
+    transform: translate3d(0,-24vh,-600px) rotateY(30deg);
+    margin-right: $screen-gap / 2;
   }
   .screen--center { 
     bottom: 0; 
-    left: calc(50% - 300px); 
-    width: 600px; 
+    left: calc(50% - #{$screen-center-width / 2}); 
+    width: $screen-center-width; 
     transform-origin: center center; 
-    transform: translate3d(0,-27vh,-600px); 
+    transform: translate3d(0,-24vh,-600px); 
   }
   .screen--right  { bottom: 0; 
-    left: calc(50% - 300px); 
-    width: 500px; 
+    left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
+    width: $screen-right-width;
     transform-origin: left center; 
-    transform: translate3d(600px,-27vh,-600px) rotateY(-30deg);
-    margin-left: 25px;
+    transform: translate3d(0px,-24vh,-600px) rotateY(-30deg);
+    margin-left: $screen-gap / 2;
   }
   .screen::before {
     content: '';
