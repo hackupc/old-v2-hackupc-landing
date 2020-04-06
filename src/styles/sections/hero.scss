@@ -27,14 +27,20 @@
     transform-origin: bottom center;
   }
 
-  .screen, .table, .objects {
-    background-color: $c-bg-light;
+  & > * {
     position: absolute;
     transform-style: preserve-3d;
   }
+
+  & * {
+    backface-visibility: hidden;
+  }
+
+  .screen, .table, .objects {
+    background-color: $c-bg-light;
+  }
   .screen {
     height: 400px;
-    z-index: 1;
   }
   .screen--left {
     bottom: 0; 
@@ -64,19 +70,21 @@
     height: 200px;
     transform-origin: bottom;
     left: calc(50% - 500px);
-    z-index: 2;
+    backface-visibility: hidden;
   }
   .table-front {
     bottom: 100px;
     transform: translateZ(0px) rotateX(90deg);
-    z-index: 2;
   }
   .table-back {
     bottom: 100px;
     transform: translateZ(-300px) rotateX(90deg); 
-    z-index: 1;
   }
-  .table::before {
+  .table-backface{
+    background-color: transparent;
+    pointer-events: none;
+  }
+  .table-backface::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -86,8 +94,10 @@
     background-color: darken($c-bg-light, 8%);
     transform: rotateX(-90deg);
     transform-origin: top center;
+    backface-visibility: hidden;
+    pointer-events: none;
   }
-  .table::after {
+  .table-backface::after {
     content: '';
     position: absolute;
     top: 0;
@@ -96,12 +106,45 @@
     bottom: 0;
     background-color: $c-bg-light;
     transform: rotateX(-180deg) translateZ(15px);
+    backface-visibility: hidden;
+    pointer-events: none;
   }
   .objects {
 
   }
   .objects-front { width: 600px; }
   .objects-back  { width: 600px; }
+
+  .apply-button {
+    background-color: $c-primary;
+    padding: 1rem 1.9rem 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, -100px,-80px);
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-rendering: optimizeLegibility;
+    font-smoothing: subpixel-antialiased;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .apply-button::before {
+    content: '';
+    position: absolute;
+    transform: rotateX(90deg);
+    transform-origin: bottom center;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 75%;
+    background: #b14f50;
+  }
 
   // img {
   //   position: absolute;
