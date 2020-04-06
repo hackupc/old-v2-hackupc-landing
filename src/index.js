@@ -29,3 +29,14 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+/* ---------- Update hero perspective ---------- */
+const heroElem = document.getElementsByClassName('section--hero')[0];
+window.addEventListener('scroll', updateHeroPerspective, {passive: true});
+updateHeroPerspective();
+
+function updateHeroPerspective() {
+	if(window.pageYOffset <= window.innerHeight) {
+		heroElem.style.perspectiveOrigin = `50% ${window.pageYOffset + window.innerHeight / 4}px`;
+	}
+}

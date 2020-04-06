@@ -11,6 +11,8 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective-origin: 50% 25vh;
 
   .screen, .table, .objects {
     background-color: $c-bg-light;
