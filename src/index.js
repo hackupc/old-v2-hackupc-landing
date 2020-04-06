@@ -34,9 +34,14 @@ window.addEventListener('resize', () => {
 const heroElem = document.getElementsByClassName('section--hero')[0];
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 updateHeroPerspective();
+let heroWaitingRefresh = false;
 
 function updateHeroPerspective() {
-	if(window.pageYOffset <= window.innerHeight) {
-		heroElem.style.perspectiveOrigin = `50% ${window.pageYOffset + window.innerHeight / 4}px`;
+	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
+		heroWaitingRefresh = true;
+		window.requestAnimationFrame(() => {
+			heroElem.style.perspectiveOrigin = `50% ${window.pageYOffset + window.innerHeight / 4}px`;
+			heroWaitingRefresh = false;
+		});
 	}
 }
