@@ -65,6 +65,33 @@
     transform: translate3d(600px,-27vh,-600px) rotateY(-30deg);
     margin-left: 25px;
   }
+  .screen::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background-color: darken($c-bg-light, 8%);
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+    backface-visibility: hidden;
+    pointer-events: none;
+  }
+  // You can't see this face, but i coded it in case you need it
+  // .screen::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 100%;
+  //   left: 0;
+  //   right: 0;
+  //   height: 75px;
+  //   background-color: darken($c-bg-light, 8%);
+  //   transform: rotateX(90deg);
+  //   transform-origin: bottom center;
+  //   backface-visibility: hidden;
+  //   pointer-events: none;
+  // }
   
   .table {
     width: 1000px;
