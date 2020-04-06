@@ -77,7 +77,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    height: 75px;
+    height: $screen-gap * 2;
     background-color: darken($c-bg-light, 8%);
     transform: rotateX(-90deg);
     transform-origin: top center;
