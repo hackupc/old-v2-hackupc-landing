@@ -20,3 +20,7 @@
 @import "sections/photos.scss";
 @import "sections/sponsors.scss";
 @import "sections/what-is-a-hackathon.scss";
+
+// Hide navbar
+.nav { display: none; }
+body{ padding-top: 0; }
