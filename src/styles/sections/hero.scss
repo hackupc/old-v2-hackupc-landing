@@ -13,13 +13,16 @@
   overflow: hidden;
   transform-style: preserve-3d;
   perspective-origin: 50% 25vh;
+  backface-visibility: hidden;
 
   .screen, .table, .objects {
     background-color: $c-bg-light;
     position: absolute;
+    transform-style: preserve-3d;
   }
   .screen {
     height: 400px;
+    z-index: 1;
   }
   .screen--left {
     bottom: 0; 
@@ -49,10 +52,39 @@
     height: 200px;
     transform-origin: bottom;
     left: calc(50% - 500px);
+    z-index: 2;
   }
-  .table-front { bottom: 100px; transform: translateZ(0px)   rotateX(90deg); }
-  .table-back  { bottom: 100px; transform: translateZ(-300px) rotateX(90deg); }
-  
+  .table-front {
+    bottom: 100px;
+    transform: translateZ(0px) rotateX(90deg);
+    z-index: 2;
+  }
+  .table-back {
+    bottom: 100px;
+    transform: translateZ(-300px) rotateX(90deg); 
+    z-index: 1;
+  }
+  .table::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-color: #2a2050;
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+  }
+  .table::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $c-bg-light;
+    transform: rotateX(-180deg) translateZ(15px);
+  }
   .objects {
 
   }
