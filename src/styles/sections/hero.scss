@@ -96,20 +96,27 @@ $screen-depth: $table-height * 4.5;
     transform-origin: top center;
     backface-visibility: hidden;
   }
-  // You can't see this face, but i coded it in case you need it
-  // .screen::after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 100%;
-  //   left: 0;
-  //   right: 0;
-  //   height: 75px;
-  //   background-color: darken($c-bg-light, 8%);
-  //   transform: rotateX(90deg);
-  //   transform-origin: bottom center;
-  //   backface-visibility: hidden;
-  // }
-  
+
+  .screen--left::after,
+  .screen--right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $screen-gap * 2;
+    background-color: darken($c-bg-light, 8%);
+    backface-visibility: hidden;
+  }
+  .screen--left::after {
+    right: 100%;
+    transform: rotateY(-90deg);
+    transform-origin: right center;
+  }
+  .screen--right::after{
+    left: 100%;
+    transform: rotateY(90deg);
+    transform-origin: left center;
+  }
   .table {
     width: $table-width;
     height: $table-height;
