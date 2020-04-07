@@ -34,13 +34,13 @@ window.addEventListener('resize', () => {
 const heroElem = document.getElementsByClassName('section--hero')[0];
 let mouseX = 0;
 let mouseY = 0;
-let clientBeta = 0;
-let clientAlpha = 0;
+// let clientBeta = 0;
+// let clientAlpha = 0;
 let perspectiveX = 0;
 let perspectiveY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective, {passive: true});
-window.addEventListener("deviceorientation", updateHeroPerspective, true);
+// window.addEventListener("deviceorientation", updateHeroPerspective, true);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
@@ -48,15 +48,14 @@ function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event?.clientX !== undefined) mouseX = event.clientX;
 		if(event?.clientY !== undefined) mouseY = event.clientY;
-		if(event?.beta !== undefined) clientBeta = event.beta; // Y (rotation axis X)
-		if(event?.beta !== undefined) clientAlpha = event.alpha; // X (rotation axis Y)
+		// if(event?.beta !== undefined) clientBeta = event.beta; // Y (rotation axis X)
+		// if(event?.beta !== undefined) clientAlpha = event.alpha; // X (rotation axis Y)
 		
 		heroWaitingRefresh = true;
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ (window.innerWidth/2 - mouseX)/10
-			+ clientAlpha/180 * 100;
+			+ (window.innerWidth/2 - mouseX)/10;
 
 			perspectiveY = 0
 			+ window.pageYOffset 
