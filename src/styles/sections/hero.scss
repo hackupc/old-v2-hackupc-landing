@@ -48,6 +48,13 @@
   }
   .screen {
     height: $screen-height;
+
+    img { // TODO: remove
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      box-sizing: border-box;
+    }
   }
   .screen--left {
     bottom: 0; 
@@ -62,7 +69,9 @@
     left: calc(50% - #{$screen-center-width / 2}); 
     width: $screen-center-width; 
     transform-origin: center center; 
-    transform: translate3d(0,-24vh,-600px); 
+    transform: translate3d(0,-24vh,-600px);
+
+    img {padding: 5%;} // TODO: remove
   }
   .screen--right  { bottom: 0; 
     left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
