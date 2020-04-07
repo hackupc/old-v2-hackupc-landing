@@ -34,20 +34,38 @@ window.addEventListener('resize', () => {
 const heroElem = document.getElementsByClassName('section--hero')[0];
 let mouseX = 0;
 let mouseY = 0;
+let clientBeta = 0;
+let clientAlpha = 0;
+let perspectiveX = 0;
+let perspectiveY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective, {passive: true});
+window.addEventListener("deviceorientation", updateHeroPerspective, true);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
 function updateHeroPerspective(event) {
-	if(event.clientX !== undefined) mouseX = event.clientX;
-	if(event.clientY !== undefined) mouseY = event.clientY;
-
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
+		if(event?.clientX !== undefined) mouseX = event.clientX;
+		if(event?.clientY !== undefined) mouseY = event.clientY;
+		if(event?.beta !== undefined) clientBeta = event.beta; // Y (rotation axis X)
+		if(event?.beta !== undefined) clientAlpha = event.alpha; // X (rotation axis Y)
+		
 		heroWaitingRefresh = true;
 		window.requestAnimationFrame(() => {
-			heroElem.style.perspectiveOrigin = `${window.innerWidth/2 + (window.innerWidth/2 - mouseX)/10}px ${window.pageYOffset + window.innerHeight / 4 + (window.innerHeight * 3/4 - mouseY)/10}px`;
+			perspectiveX = 0
+			+ window.innerWidth/2 
+			+ (window.innerWidth/2 - mouseX)/10
+			+ window.innerWidth * Math.tan(clientAlpha * Math.PI/180);
+
+			perspectiveY = 0
+			+ window.pageYOffset 
+			+ window.innerHeight / 4 
+			+ (window.innerHeight * 3/4 - mouseY)/10;
+
+			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
 			heroWaitingRefresh = false;
 		});
 	}
 }
+
