@@ -32,15 +32,21 @@ window.addEventListener('resize', () => {
 
 /* ---------- Update hero perspective ---------- */
 const heroElem = document.getElementsByClassName('section--hero')[0];
+let mouseX = 0;
+let mouseY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
+window.addEventListener('mousemove', updateHeroPerspective, {passive: true});
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
-function updateHeroPerspective() {
+function updateHeroPerspective(event) {
+	if(event.clientX !== undefined) mouseX = event.clientX;
+	if(event.clientY !== undefined) mouseY = event.clientY;
+
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		heroWaitingRefresh = true;
 		window.requestAnimationFrame(() => {
-			heroElem.style.perspectiveOrigin = `50% ${window.pageYOffset + window.innerHeight / 4}px`;
+			heroElem.style.perspectiveOrigin = `${window.innerWidth/2 + (window.innerWidth/2 - mouseX)/10}px ${window.pageYOffset + window.innerHeight / 4 + (window.innerHeight * 3/4 - mouseY)/10}px`;
 			heroWaitingRefresh = false;
 		});
 	}
