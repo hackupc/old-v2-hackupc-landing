@@ -56,7 +56,7 @@ function updateHeroPerspective(event) {
 			perspectiveX = 0
 			+ window.innerWidth/2 
 			+ (window.innerWidth/2 - mouseX)/10
-			+ window.innerWidth * Math.tan(clientAlpha * Math.PI/180);
+			+ clientAlpha/180 * 100;
 
 			perspectiveY = 0
 			+ window.pageYOffset 
