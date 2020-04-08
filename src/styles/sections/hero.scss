@@ -216,25 +216,44 @@ $screen-depth: $table-height * 4.5;
   .objects-front { transform: translate3d(0, -10vh, -$table-height * 0.5); }
   .objects-back  { transform: translate3d(0, -10vh, -$table-height * 2.5); }
 
+  $computer-width: 15%;
+  $computer-distance-edge: 20%;
   .pc {
-    width: 17.5%;
+    width: $computer-width;
     display: block;
+    transform: translateX(-50%);
   }
-  .pc-left { left: 7.5%;}
-  .pc-center { left: 50%; transform: translateX(-50%);}
-  .pc-right { right: 7.5%;}
+  .pc--cowsay { left: 0% + $computer-distance-edge;}
+  .pc--design { left: 0% + $computer-distance-edge;}
+  .pc--glitch { left: 50%}
+  .pc--thegame { left: 100% - $computer-distance-edge;}
+  .pc--doublescreen { left: 100% - $computer-distance-edge; width: 1.97 * $computer-width;}
 
-  // img {
-  //   position: absolute;
-  //   width: 50rem;
-  //   bottom: 0%;
-  //   left: calc(50% - 25rem);
-  //   transform-origin: bottom center;
-  //   border-bottom: 100px solid transparent;
-  //   transform: rotateX(80deg);
-  // }
+  .sitting-silhouette {
+    width: 0.15 * $table-width; 
+    left: 50%;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: translate3d(-50%, -4vh, -$table-height*1.5);
+  }
+  
+  .object {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  //                          <width>                             <x-pos>                                <z-pos>
+  .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--lego       {width:  4.00%; transform: translate3d(calc(#{0.30 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--rocket     {width:  3.00%; transform: translate3d(calc(#{0.62 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.90 * $table-width} - 50%), 0, 0.00 * $table-height) scaleX(-1);}
+  .object--lamp       {width: 10.00%; transform: translate3d(calc(#{0.99 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0, 0.00 * $table-height);}
+  .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.96 * $table-width} - 50%), 0, 0.00 * $table-height);}
 
-  // h1 {
-  //   margin: 0;
-  // }
+  //                           <width>                             <x-pos>                             <y-pos>
+  .object--paper-text  {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%), calc(#{-0.40 * $table-height} + 50%), 0) rotate(-3deg);}
+  .object--pencil      {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%), calc(#{-0.35 * $table-height} + 50%), 0) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
+  .object--paper-biene {width:  7.00%; transform: translate3d(calc(#{0.90 * $table-width} - 50%), calc(#{-0.42 * $table-height} + 50%), 0) rotate(2deg);}
 }
