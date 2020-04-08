@@ -224,21 +224,21 @@ $screen-depth: $table-height * 4.5;
   .object--pc-glitch  {width: 15.00%; transform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);}
   .object--pc-thegame {width: 15.00%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
   .object--pc-double  {width: 29.50%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.198* $table-width} - 50%), 0%, -0.50 * $table-height); cursor: pointer; transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
-  .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--lego       {width:  4.00%; transform: translate3d(calc(#{0.30 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+  .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height); cursor: pointer; transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
+  .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.08 * $table-width} - 50%), 0%, -0.43 * $table-height);}
+  .object--lego       {width:  5.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.70 * $table-height);}
   .object--rocket     {width:  3.00%; transform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.90 * $table-width} - 50%), 0%, -0.50 * $table-height) scaleX(-1);}
-  .object--lamp       {width: 10.00%; transform: translate3d(calc(#{0.96 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.96 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+  .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
+  .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
+  .object--lamp       {width: 11.00%; transform: translate3d(calc(#{0.92 * $table-width} - 50%), 0%, -0.25 * $table-height);}
+  .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
+  .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
   .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),50%, -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
   .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%),50%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
-  .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.90 * $table-width} - 50%),50%, -0.42 * $table-height) rotateX(90deg) rotate(2deg);}
+  .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.89 * $table-width} - 50%),50%, -0.32 * $table-height) rotateX(90deg) rotate(4deg);}
 
   .object--rubber-duck:hover {
-    transform: translate3d(calc(#{0.195 * $table-width} - 50%), 0%, -0.50 * $table-height) scale(1.5);
+    transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
   }
 
   .sitting-silhouette {
