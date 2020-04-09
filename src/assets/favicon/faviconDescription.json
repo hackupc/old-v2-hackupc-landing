@@ -8,7 +8,7 @@
 				"content": "src/assets/favicon/favicon-white.svg"
 			},
 			"pictureAspect": "backgroundAndMargin",
-			"backgroundColor": "#e94662",
+			"backgroundColor": "#ec6162",
 			"margin": "14%",
 			"assets": {
 				"ios6AndPriorIcons": false,
@@ -30,7 +30,7 @@
 				"content": "src/assets/favicon/favicon-white.svg"
 			},
 			"pictureAspect": "noChange",
-			"backgroundColor": "#e94662",
+			"backgroundColor": "#ec6162",
 			"onConflict": "override",
 			"assets": {
 				"windows80Ie10Tile": false,
@@ -45,7 +45,7 @@
 		},
 		"androidChrome": {
 			"pictureAspect": "noChange",
-			"themeColor": "#e94662",
+			"themeColor": "#ec6162",
 			"manifest": {
 				"name": "HackUPC",
 				"display": "browser",
@@ -61,7 +61,7 @@
 		"safariPinnedTab": {
 			"pictureAspect": "blackAndWhite",
 			"threshold": 90,
-			"themeColor": "#e94662"
+			"themeColor": "#ec6162"
 		}
 	},
 	"settings": {
