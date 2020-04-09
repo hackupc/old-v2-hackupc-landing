@@ -40,6 +40,7 @@ $screen-depth: $table-height * 4.5;
 
   & > * {
     position: absolute;
+    display: block;
   }
 
   & * {
@@ -47,13 +48,15 @@ $screen-depth: $table-height * 4.5;
     transform-style: preserve-3d;
   }
 
-  .screen, .table, .objects {
+  .subscreen, .table, .objects {
     background-color: $c-bg-light;
   }
   .screen {
     height: $screen-height;
+    display: grid;
+    gap: $screen-gap;
 
-    img { // TODO: remove
+    & img { // TODO: remove
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -61,6 +64,7 @@ $screen-depth: $table-height * 4.5;
     }
   }
   .screen--left {
+    grid-template-columns: 5fr 1fr;
     bottom: 0; 
     right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
     width: $screen-left-width; 
@@ -74,17 +78,20 @@ $screen-depth: $table-height * 4.5;
     width: $screen-center-width; 
     transform-origin: center center; 
     transform: translate3d(0,-24vh,-$screen-depth);
-
-    img {padding: 5%;} // TODO: remove
   }
-  .screen--right  { bottom: 0; 
+  .screen--right  { 
+    grid-template: 2fr 5fr / 1fr 1fr;
+    grid-template-areas: 
+    'top top'
+    'left right';
+    bottom: 0; 
     left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
     width: $screen-right-width;
     transform-origin: left center; 
     transform: translate3d(0px,-24vh,-$screen-depth) rotateY(-30deg);
     margin-left: $screen-gap / 2;
   }
-  .screen::before {
+  .subscreen::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -97,8 +104,8 @@ $screen-depth: $table-height * 4.5;
     backface-visibility: hidden;
   }
 
-  .screen--left::after,
-  .screen--right::after {
+  .screen--left .subscreen::after,
+  .screen--right .subscreen::after {
     content: '';
     position: absolute;
     top: 0;
@@ -107,16 +114,24 @@ $screen-depth: $table-height * 4.5;
     background-color: darken($c-bg-light, 8%);
     backface-visibility: hidden;
   }
-  .screen--left::after {
+  .screen--left .subscreen::after {
     right: 100%;
     transform: rotateY(-90deg);
     transform-origin: right center;
   }
-  .screen--right::after{
+  .screen--right .subscreen::after{
     left: 100%;
     transform: rotateY(90deg);
     transform-origin: left center;
   }
+  .subscreen {
+    min-width: 0;
+    min-height: 0;
+  }
+  .subscreen--map img {object-fit: cover;}
+  .subscreen--timeline {grid-area: top;}
+  .subscreen--rubberduck {grid-area: left;}
+  .subscreen--plots {grid-area: right;}
   .table {
     width: $table-width;
     height: $table-height;
