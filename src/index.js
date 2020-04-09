@@ -68,3 +68,10 @@ function updateHeroPerspective(event) {
 	}
 }
 
+/* ---------- Animations ---------- */
+const lampOnElem = document.getElementById('lamp-on');
+let lampIsOn = 1;
+lampOnElem.addEventListener('mousedown', event => {
+	lampIsOn = !lampIsOn;
+	lampOnElem.style.opacity = lampIsOn + 0;
+});
