@@ -231,6 +231,7 @@ $countdown-width: $screen-left-width/8;
   .objects-front { transform: translate3d(0, -10vh, -0 * $table-height); }
   .objects-back  { transform: translate3d(0, -10vh, -2 * $table-height); }
 
+  $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
   //                         <width>                               <x-pos>                         <z-pos>
   .object--pc-cowsay  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height); pointer-events: none;}
   .object--pc-design  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height);}
@@ -240,7 +241,7 @@ $countdown-width: $screen-left-width/8;
   .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height); cursor: pointer; transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
   .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.08 * $table-width} - 50%), 0%, -0.43 * $table-height);}
   .object--lego       {width:  5.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.70 * $table-height);}
-  .object--rocket     {width:  3.00%; transform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+  .object--rocket     {width:  3.00%; transform: $rocketBaseTransform;}
   .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
   .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
   .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height); cursor: pointer; transition: opacity 100ms $ease-quad;}
@@ -276,6 +277,74 @@ $countdown-width: $screen-left-width/8;
     bottom: 0;
     transform-origin: bottom;
     transform: translate3d(-50%, -4vh, -$table-height*1.5);
+  }
+
+
+
+  // Rocket animation ----------------------
+
+  $rocketLunchDuration: 4s;
+  $rocketFlyDuration: 3s;
+  $rocketHideDuration: 1s;
+  $rocketAppearDuration: 1s;
+  .object--rocket{
+    transform-origin: center bottom;
+    animation: 
+      rocket-lunch $rocketLunchDuration $ease-quad-in, 
+      rocket-shake ($rocketLunchDuration/100*2) $rocketLunchDuration linear infinite,
+      rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
+      rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
+  }
+  .rocket-wrapper{
+    animation: rocket-fly $rocketFlyDuration $rocketLunchDuration cubic-bezier(0.32, 0.43, 0.86, -0.51);
+  }
+  .fire-img{
+    position: absolute;
+    top: 80%;
+    transform-origin: center top;
+    opacity: 0;
+    animation: 
+    rocket-fire ($rocketLunchDuration/100*2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
+    rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
+  }
+
+  .stop-animation {
+    animation: none;
+    cursor: pointer;
+
+    & * {
+      animation: none;
+    }
+  }
+
+  @keyframes rocket-lunch {
+    @for $i from 0 through 100 {
+      #{$i}% {transform: $rocketBaseTransform translateX($i * 0.125% * if($i % 2 == 0, 1, -1));}
+    }
+  }
+
+  @keyframes rocket-shake {
+    from {transform: $rocketBaseTransform translateX(+12.5%);}
+    to   {transform: $rocketBaseTransform translateX(-12.5%);}
+  }
+
+  @keyframes rocket-fly {
+    from {transform: translateY(0);}
+    to   {transform: translateY(-100vh);}
+  }
+
+  @keyframes rocket-fire {
+    from {opacity:1; transform: scale(0.75,0.5);}
+    to   {opacity:1; transform: scale(1,1);}
+  }
+
+  @keyframes rocket-hide {
+    from,to {opacity:0;}
+  }
+
+  @keyframes rocket-appear {
+    from {opacity:0.6667; transform: $rocketBaseTransform scale(0);}
+    to   {opacity:1; transform: $rocketBaseTransform scale(1);}
   }
 
   // Countdown screen ----------------------
