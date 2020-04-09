@@ -245,7 +245,7 @@ $screen-depth: $table-height * 4.5;
   .object--rocket     {width:  3.00%; transform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);}
   .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
   .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
-  .object--lamp       {width: 11.00%; transform: translate3d(calc(#{0.92 * $table-width} - 50%), 0%, -0.25 * $table-height);}
+  .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height);}
   .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
   .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
   .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),50%, -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
