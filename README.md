@@ -6,7 +6,9 @@
 
 Hi! This is the code of the HackUPC 2020 landing page.
 
-## Setup
+## Develop
+
+Clone the repo and run `npm install` the first time:
 
 ```sh
 git clone git@github.com:hackupc/hackupc-landing.git
@@ -14,41 +16,13 @@ cd hackupc-landing
 npm install
 ```
 
-## Develop
-
 Use `npm run start` to compile and serve the build directory in real time. It reloads everytime there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
-
-**TLDR;**
-
-Run this:
 
 ```sh
 npm run start
 ```
 
-View the website at [https://localhost:3000](https://localhost:3000)
-
 ## Deploy
-
-### Deploy to localhost
-
-Use `npm run dist` to compile all build directory.
-The files from `/src/` will be compiled to `/dist/`. Notice that the routes change, so when referencing files check where they are in [/dist/](/dist/]).
-
-Use `npm run serve` to just serve `/dist` at [https://localhost:3000](https://localhost:3000).
-
-**TLDR;**
-
-Run this:
-
-```sh
-npm run dist
-npm run serve
-```
-
-View the website at [https://localhost:3000](https://localhost:3000).
-
-### Deploy to production
 
 **Push to master**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
 
@@ -59,18 +33,18 @@ If you push something that doesn't build, don't worry, it won't be published.
 ### Add new logos
 
 1. Checking the company brand use guidelines before editing the image.
-1. Use .svg over .png.
-1. The size should be greater than 600 x 300 px. They are scaled down automatically.
+1. Use `.svg` over `.png`.
+1. Use the right resolution: not too big neither too small.
 1. Remove the background if any.
 1. Name the file in [snake_case](https://medium.com/swlh/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841).
-1. Place the file in [/src/images/logos/](/src/images/logos/).
-1. If you plan to customize the logo, save the original in [/src/images/logos/originals/](/src/images/logos/originals/).
+1. Place the file in [/src/assets/logos/](/src/assets/logos/).
+1. If you plan to customize the logo, save the original with `_original` at the end of the file name.
 
 ## Support
 
 If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2020 edition are:
 
-- Maurici Abad Gutierrez: Slack `@mauriciabad` [mauriciabad.com](https://mauriciabad.com/)
+- Maurici Abad Gutierrez: Slack `@mauri` [mauriciabad.com](https://mauriciabad.com/)
 
 ## License
 
