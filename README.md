@@ -8,30 +8,15 @@ Hi! This is the code of the HackUPC 2020 landing page.
 
 ## Setup
 
-Install the latest version Node.js (at least v12.6.0). [Find how here](https://nodejs.org/en/download/package-manager/).
-
 ```sh
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n latest
-```
-
-```sh
-git clone git@github.com:hackupc/frontend.git
-cd frontend
+git clone git@github.com:hackupc/hackupc-landing.git
+cd hackupc-landing
 npm install
 ```
 
 ## Develop
 
-Use `npm run start` to compile and serve the build directory in real time. Then view the website at [https://localhost:3000](https://localhost:3000)
-
-**Install linters** extensions in your favorite editor. In VS Code install: `HTMLHint`, `TSLint`, `markdownlint`, `StandardJS`, `stylelint` and `npm`. In other editors they may have similar names.
-Or use `npm run lint` to run linters manually from the console to check errors.
-
-We use linters to ensure code quality, please fix all the errors.
-
-Because of cahe busting you may have to clean the cache when you reload to see changes. In Chrome you can do `Ctrl` + `F5`.
+Use `npm run start` to compile and serve the build directory in real time. It reloads everytime there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
 
 **TLDR;**
 
@@ -42,10 +27,6 @@ npm run start
 ```
 
 View the website at [https://localhost:3000](https://localhost:3000)
-
-## General info
-
-Every file was updated in the 2019 version. So they follow the same style and logic.
 
 ## Deploy
 
@@ -75,10 +56,6 @@ If you push something that doesn't build, don't worry, it won't be published.
 
 ## Edit content
 
-### Update legal documents
-
-1. Just edit the Markdown files from [src/legal](src/legal)
-
 ### Add new logos
 
 1. Checking the company brand use guidelines before editing the image.
@@ -88,10 +65,6 @@ If you push something that doesn't build, don't worry, it won't be published.
 1. Name the file in [snake_case](https://medium.com/swlh/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841).
 1. Place the file in [/src/images/logos/](/src/images/logos/).
 1. If you plan to customize the logo, save the original in [/src/images/logos/originals/](/src/images/logos/originals/).
-
-### Change theme
-
-> TODO: fill this part
 
 ## Support
 

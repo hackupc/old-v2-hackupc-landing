@@ -11,11 +11,7 @@
 - [ ] Make sure that github continous integration accepts the commits
 - [x] Update directors names' in the legal pages
 
-## Documentation
-
-- [ ] Clean README.md
-
-## Nice things to have
+## List
 
 - [ ] Use browserlist based on google analytics using [browserslist-ga](https://github.com/browserslist/browserslist-ga)
 - [ ] Cookies banner like [this](https://speckyboy.com/)
