@@ -40,12 +40,12 @@ $screen-depth: $table-height * 4.5;
 
   & > * {
     position: absolute;
-    display: block;
   }
-
+  
   & * {
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    display: block;
   }
 
   .subscreen, .table, .objects {
@@ -254,6 +254,22 @@ $screen-depth: $table-height * 4.5;
 
   .object--rubber-duck:hover {
     transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
+  }
+
+  .object--pc-cowsay::before,
+  .object--pc-design::before,
+  .object--pc-glitch::before,
+  .object--pc-thegame::before,
+  .object--pc-double::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    background-color: darken($c-bg-light, 4%);
+    border-radius: 100%;
+    height: 0.15 * $table-height;
+    transform: translate(-50%, 50%) rotateX(90deg);
   }
 
   .sitting-silhouette {
