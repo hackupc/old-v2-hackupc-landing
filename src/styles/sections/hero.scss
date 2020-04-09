@@ -1,11 +1,11 @@
 $table-width: 1000px;
 $table-height: $table-width * 0.2;
 
-$screen-center-width: 50vw;
+$screen-height: 66vh;
+$screen-center-width: $screen-height * 3/2;
 $screen-left-width: $screen-center-width * 0.8;
 $screen-right-width: $screen-center-width * 0.8;
-$screen-height: $screen-center-width * 2/3;
-$screen-gap: 2vw;
+$screen-gap: $screen-height / 30;
 $screen-depth: $table-height * 4.5;
 
 .section--hero {
