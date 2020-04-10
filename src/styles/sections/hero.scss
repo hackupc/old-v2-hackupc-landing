@@ -29,6 +29,7 @@ $countdown-width: $screen-left-width/8;
   overflow: hidden;
   transform-style: preserve-3d;
   perspective-origin: 50% 25vh;
+  user-select: none;
 
   &::after {
     content: '';
@@ -82,6 +83,7 @@ $countdown-width: $screen-left-width/8;
     width: $screen-center-width;
     transform-origin: center center;
     transform: translate3d(0,$screen-y-pos,-$screen-depth);
+    user-select: all;
   }
   .screen--right  {
     grid-template: 2fr 5fr / 1fr 1fr;
