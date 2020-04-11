@@ -4,6 +4,9 @@ a {
 }
 
 ::selection {
-  background-color: $c-primary;
+  background-color: transparentize($c-primary, 0.01);
   color: $c-txt-light;
+}
+img::selection{
+  background-color: transparentize($c-primary, 0.5);
 }

@@ -24,7 +24,7 @@ $countdown-width: $screen-left-width/8;
   max-height: calc((var(--vh, 1vh) * 100) - 2rem);
   max-width: unset;
   overflow: hidden;
-  
+ 
   .hero-3d-space{
     perspective: 1000px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ $countdown-width: $screen-left-width/8;
     & > * {
       position: absolute;
     }
-    
+
     & *, & *::before, & *::after {
       transform-style: preserve-3d;
       display: block;
@@ -79,29 +79,29 @@ $countdown-width: $screen-left-width/8;
     }
     .screen--left {
       grid-template-columns: 5fr 1fr;
-      bottom: 0; 
-      right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
-      width: $screen-left-width; 
-      transform-origin: right center; 
+      bottom: 0;
+      right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
+      width: $screen-left-width;
+      transform-origin: right center;
       transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(30deg);
       margin-right: $screen-gap / 2;
     }
-    .screen--center { 
-      bottom: 0; 
-      left: calc(50% - #{$screen-center-width / 2}); 
-      width: $screen-center-width; 
-      transform-origin: center center; 
+    .screen--center {
+      bottom: 0;
+      left: calc(50% - #{$screen-center-width / 2});
+      width: $screen-center-width;
+      transform-origin: center center;
       transform: translate3d(0,$screen-y-pos,-$screen-depth);
     }
-    .screen--right  { 
+    .screen--right  {
       grid-template: 2fr 5fr / 1fr 1fr;
-      grid-template-areas: 
+      grid-template-areas:
       'top top'
       'left right';
-      bottom: 0; 
-      left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
+      bottom: 0;
+      left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
       width: $screen-right-width;
-      transform-origin: left center; 
+      transform-origin: left center;
       transform: translate3d(0px,$screen-y-pos,-$screen-depth) rotateY(-30deg);
       margin-left: $screen-gap / 2;
     }
@@ -156,7 +156,7 @@ $countdown-width: $screen-left-width/8;
     }
     .table-back {
       bottom: 0;
-      transform: translate3d(0,-10vh,-$table-height*2) rotateX(90deg); 
+      transform: translate3d(0,-10vh,-$table-height*2) rotateX(90deg);
     }
     .table-backface{
       background-color: transparent;
@@ -201,6 +201,7 @@ $countdown-width: $screen-left-width/8;
       transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2);
       transform-origin: bottom center;
       transition: transform 150ms $ease-bounce;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
     .apply-button::before {
@@ -282,14 +283,12 @@ $countdown-width: $screen-left-width/8;
     }
 
     .sitting-silhouette {
-      width: 0.15 * $table-width; 
+      width: 0.15 * $table-width;
       left: 50%;
       bottom: 0;
       transform-origin: bottom;
       transform: translate3d(-50%, -4vh, -$table-height*1.5);
     }
-
-
 
     // Rocket animation ----------------------
 
@@ -299,8 +298,8 @@ $countdown-width: $screen-left-width/8;
     $rocketAppearDuration: 1s;
     .object--rocket{
       transform-origin: center bottom;
-      animation: 
-        rocket-lunch $rocketLunchDuration $ease-quad-in, 
+      animation:
+        rocket-lunch $rocketLunchDuration $ease-quad-in,
         rocket-shake ($rocketLunchDuration/100*2) $rocketLunchDuration linear infinite,
         rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
         rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
@@ -313,7 +312,7 @@ $countdown-width: $screen-left-width/8;
       top: 80%;
       transform-origin: center top;
       opacity: 0;
-      animation: 
+      animation:
       rocket-fire ($rocketLunchDuration/100*2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
       rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
     }
@@ -365,7 +364,7 @@ $countdown-width: $screen-left-width/8;
       justify-content: space-evenly;
 
       .countdown__cell {
-        
+       
         .countdown__circle {
           background-color: $c-bg-dark;
           display: block;
