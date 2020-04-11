@@ -44,8 +44,12 @@ window.addEventListener('resize', () => {
 const heroElem = document.getElementsByClassName('hero-3d-space')[0];
 let mouseX = 0;
 let mouseY = 0;
+let clientAlpha = 0;
 let clientBeta = 0;
 let clientGamma = 0;
+let clientAlphaOrig;
+let clientBetaOrig;
+let clientGammaOrig;
 let perspectiveX = 0;
 let perspectiveY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
@@ -58,20 +62,26 @@ function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event?.clientX) mouseX = event.clientX;
 		if(event?.clientY) mouseY = event.clientY;
+		if(event?.alpha) clientAlpha = event.alpha;
 		if(event?.beta) clientBeta = event.beta;
 		if(event?.gamma) clientGamma = event.gamma;
-		
+		if(clientAlphaOrig === undefined && clientAlpha !== undefined) {
+			clientAlphaOrig = clientAlpha;
+			clientBetaOrig = clientBeta;
+			clientGammaOrig = clientGamma;
+		}
+
 		heroWaitingRefresh = true;
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ clientGamma
+			+ (clientGamma - clientGammaOrig) + (clientAlpha - clientAlphaOrig)
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
-			+ clientBeta
+			+ (clientBeta - clientBetaOrig) * 2
 			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
