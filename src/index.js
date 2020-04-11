@@ -62,9 +62,9 @@ function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event?.clientX) mouseX = event.clientX;
 		if(event?.clientY) mouseY = event.clientY;
-		if(event?.alpha) clientAlpha = event.alpha;
-		if(event?.beta) clientBeta = event.beta;
-		if(event?.gamma) clientGamma = event.gamma;
+		if(event?.alpha) clientAlpha = (event.alpha/360 + 0.5)%1;        // alpha [0,360]   -->[0,1]
+		if(event?.beta) clientBeta = (event.beta + 180)/360;   // beta  [-180,180]-->[0,1]
+		if(event?.gamma) clientGamma = (event.gamma + 90)/180; // gamma [-90,90]  -->[0,1]
 		if(clientAlphaOrig === 0 && clientAlpha !== 0) {
 			clientAlphaOrig = clientAlpha;
 			clientBetaOrig = clientBeta;
@@ -75,14 +75,14 @@ function updateHeroPerspective(event) {
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ window.innerWidth*2 * (clientGamma - clientGammaOrig)/90 
-			+ window.innerWidth*2 * (clientAlpha - clientAlphaOrig)/90
+			+ 1000 * ((clientGamma - clientGammaOrig) % 1 - 0.0) * 2
+			+ 1000 * ((clientAlpha - clientAlphaOrig) % 1 - 0.0) * 2
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
-			+ window.innerWidth * (clientBeta - clientBetaOrig)/90
+			+ 1000 * ((clientBeta - clientBetaOrig) % 1 - 0.0) * 2
 			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
