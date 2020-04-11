@@ -381,6 +381,53 @@ $countdown-width: $screen-left-width/8;
       to   {opacity:0.75;}
     }
 
+    $titleFontSize: $screen-center-width / 11.5;
+    // Title screen ----------------------
+    .subscreen--title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: $titleFontSize;
+      text-transform: uppercase;
+      line-height: 0.75;
+      white-space: nowrap;
+      
+      .title__title {
+        font-weight: 300;
+        margin: 0;
+        margin-left: -0.1em;
+      }
+      .title__title--bold {
+        font-weight: 800;
+        display: inline-block;
+      }
+      .title__more-info {
+        font-weight: 600;
+        font-size: 0.6667 * $titleFontSize;
+        margin: 0;
+        margin-top: 0.5 * $titleFontSize;
+        display: flex;
+        justify-content: space-between;
+        width: 10.25 * $titleFontSize;
+        
+        
+        .title__hackers {
+          
+        }
+        .title__hours {
+          
+        }
+      }
+      .title__date {
+        margin: 0;
+        margin-top: 1 * $titleFontSize;
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 0.1 * $titleFontSize;
+      }
+    }
+
     // Countdown screen ----------------------
     .countdown {
       height: 100%;
