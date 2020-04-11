@@ -246,10 +246,11 @@ $countdown-width: $screen-left-width/8;
     .objects-back  { transform: translate3d(0, -10vh, -2 * $table-height); }
 
     $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
+    $glitchBaseTransform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);
     //                         <width>                               <x-pos>                         <z-pos>
     .object--pc-cowsay  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height); pointer-events: none;}
     .object--pc-design  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-    .object--pc-glitch  {width: 15.00%; transform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+    .object--pc-glitch  {width: 15.00%; transform: $glitchBaseTransform;}
     .object--pc-thegame {width: 15.00%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
     .object--pc-double  {width: 29.50%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
     .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height); transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
@@ -360,6 +361,24 @@ $countdown-width: $screen-left-width/8;
     @keyframes rocket-appear {
       from {opacity:0.6667; transform: $rocketBaseTransform scale(0);}
       to   {opacity:1; transform: $rocketBaseTransform scale(1);}
+    }
+
+    // Glitch animation -------------
+
+    .object--pc-glitch-1 {
+      animation: blink 250ms 50ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      transform: $glitchBaseTransform;
+      pointer-events: none;
+    }
+    .object--pc-glitch-2 {
+      animation: blink 100ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      transform: $glitchBaseTransform scaleX(-1);
+      pointer-events: none;
+    }
+
+    @keyframes blink {
+      from {opacity:0.25;}
+      to   {opacity:0.75;}
     }
 
     // Countdown screen ----------------------
