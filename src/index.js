@@ -47,9 +47,9 @@ let mouseY = 0;
 let clientAlpha = 0;
 let clientBeta = 0;
 let clientGamma = 0;
-let clientAlphaOrig;
-let clientBetaOrig;
-let clientGammaOrig;
+let clientAlphaOrig = 0;
+let clientBetaOrig = 0;
+let clientGammaOrig = 0;
 let perspectiveX = 0;
 let perspectiveY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
@@ -65,7 +65,7 @@ function updateHeroPerspective(event) {
 		if(event?.alpha) clientAlpha = event.alpha;
 		if(event?.beta) clientBeta = event.beta;
 		if(event?.gamma) clientGamma = event.gamma;
-		if(clientAlphaOrig === undefined && clientAlpha !== undefined) {
+		if(clientAlphaOrig === 0 && clientAlpha !== 0) {
 			clientAlphaOrig = clientAlpha;
 			clientBetaOrig = clientBeta;
 			clientGammaOrig = clientGamma;
