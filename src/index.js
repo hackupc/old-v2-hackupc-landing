@@ -45,12 +45,12 @@ const heroElem = document.getElementsByClassName('hero-3d-space')[0];
 let mouseX = 0;
 let mouseY = 0;
 let clientBeta = 0;
-let clientAlpha = 0;
+let clientGamma = 0;
 let perspectiveX = 0;
 let perspectiveY = 0;
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective);
-window.addEventListener("deviceorientation", updateHeroPerspective, true);
+window.addEventListener('deviceorientation', updateHeroPerspective, true);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
@@ -59,13 +59,13 @@ function updateHeroPerspective(event) {
 		if(event?.clientX) mouseX = event.clientX;
 		if(event?.clientY) mouseY = event.clientY;
 		if(event?.beta) clientBeta = event.beta;
-		if(event?.alpha) clientAlpha = event.alpha;
+		if(event?.gamma) clientGamma = event.gamma;
 		
 		heroWaitingRefresh = true;
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ clientAlpha
+			+ clientGamma
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0

@@ -15,7 +15,11 @@ module.exports = {
     contentBase: path.join(__dirname, "../dist"),
     compress: true,
     port: 3000,
-    overlay: true
+    overlay: true,
+    // Uncomment the two lines below to 
+    // enable hot reload on mobile
+    host: '172.17.197.80', // Your ip, update it. This is mine.
+    disableHostCheck: true,
   },
   devtool: "cheap-module-eval-source-map",
   module: {
