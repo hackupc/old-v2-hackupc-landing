@@ -14,4 +14,8 @@
 ## List
 
 - [ ] Use browserlist based on google analytics using [browserslist-ga](https://github.com/browserslist/browserslist-ga)
-- [ ] Cookies banner like [this](https://speckyboy.com/)
+
+Cool cookies banner:
+- https://speckyboy.com/
+- https://designmodo.com/
+- https://jetbrains.com/
