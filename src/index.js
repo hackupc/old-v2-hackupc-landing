@@ -75,13 +75,14 @@ function updateHeroPerspective(event) {
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ (clientGamma - clientGammaOrig) + (clientAlpha - clientAlphaOrig)
+			+ window.innerWidth*2 * (clientGamma - clientGammaOrig)/90 
+			+ window.innerWidth*2 * (clientAlpha - clientAlphaOrig)/90
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
-			+ (clientBeta - clientBetaOrig) * 2
+			+ window.innerWidth * (clientBeta - clientBetaOrig)/90
 			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
