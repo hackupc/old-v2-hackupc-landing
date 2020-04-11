@@ -219,10 +219,27 @@ $countdown-width: $screen-left-width/8;
       height: $apply-depth;
       background: #b14f50;
     }
+    .apply-button__side {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: $apply-depth;
+      background: #9c4749;
+    }
+    .apply-button__side--left{
+      left: 100%;
+      transform-origin: left center;
+      transform: rotateY(90deg);
+    }
+    .apply-button__side--right{
+      right: 100%;
+      transform-origin: right center;
+      transform: rotateY(-90deg);
+    }
     .apply-button:active {
       transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2) scale3d(1.2, 0.8, 1.2);
     }
-
 
     // Objects ----------------------
     .objects {
