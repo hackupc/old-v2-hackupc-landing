@@ -150,89 +150,91 @@
       </ul>
     </nav>
 
-    <header class="section section--hero" id="hero">
-      <div class="screen screen--left">
-        <div class="subscreen subscreen--map">
-          <img src="assets/images/screen-map.svg" alt="Gigant screen with a map">
-        </div>
-        <div class="subscreen subscreen--countdown countdown">
-          <div class="countdown__cell" data-unit="day">
-            <span class="countdown__circle">
-              <span class="countdown__number">0</span>
-            </span>
-            <span class="countdown__label">day<span class="countdown__label-plural">s</span></span>
+    <header class="section section--hero">
+      <div class="hero-3d-space">
+        <div class="screen screen--left">
+          <div class="subscreen subscreen--map">
+            <img src="assets/images/screen-map.svg" alt="Gigant screen with a map">
           </div>
-          <div class="countdown__cell" data-unit="hour">
-            <span class="countdown__circle">
-              <span class="countdown__number">0</span>
-            </span>
-            <span class="countdown__label">hour<span class="countdown__label-plural">s</span></span>
-          </div>
-          <div class="countdown__cell" data-unit="minute">
-            <span class="countdown__circle">
-              <span class="countdown__number">0</span>
-            </span>
-            <span class="countdown__label">minute<span class="countdown__label-plural">s</span></span>
-          </div>
-          <div class="countdown__cell" data-unit="second">
-            <span class="countdown__circle">
-              <span class="countdown__number">0</span>
-            </span>
-            <span class="countdown__label">second<span class="countdown__label-plural">s</span></span>
-          </div>
-          <!-- <img src="assets/images/screen-countdown.svg" alt="Gigant screen with a countdown"> -->
-        </div>
-      </div>
-      <div class="screen screen--center">
-        <div class="subscreen subscreen--title">
-          <img src="assets/images/screen-title.svg" alt="Gigant screen with title">
-        </div>
-      </div>
-      <div class="screen screen--right">
-        <div class="subscreen subscreen--timeline">
-          <img src="assets/images/screen-timeline.svg" alt="Gigant screen with hackupc timeline">
-        </div>
-        <div class="subscreen subscreen--rubberduck">
-          <img src="assets/images/screen-rubberduck.svg" alt="Gigant screen with a wanted sign of a rubberduck">
-        </div>
-        <div class="subscreen subscreen--plots">
-          <img src="assets/images/screen-plots.svg" alt="Gigant screen with plots">
-        </div>
-      </div>
-      <div class="table table-back"></div>
-      <div class="objects objects-back">
-        <img class="object object--rubber-duck" src="assets/images/rubberduck.svg" alt="Hidden rubber duck">
-        <div class="object object--pc-cowsay"><img src="assets/images/pc-cowsay.svg" alt="Computer screen with a terminal open showing the output from cowsay"></div>
-        <div class="object object--pc-glitch"><img src="assets/images/pc-glitch.svg" alt="Computer screen with glitched screen"></div>
-        <div class="object object--pc-thegame"><img src="assets/images/pc-thegame.svg" alt="Computer screen with the 'The Game' open"></div>
-        <img class="object object--mug-left" src="assets/images/mug.svg" alt="Mug">
-        <img class="object object--lego" src="assets/images/lego.svg" alt="Lego">
-        <img class="object object--cactus" src="assets/images/cactus.svg" alt="Cactus">
-        <div class="object object--rocket stop-animation">
-          <div class="rocket-wrapper">
-            <img class="fire-img" src="assets/images/fire.svg" alt="Rocket fire">
-            <img class="rocket-img" src="assets/images/rocket.svg" alt="Rocket">
+          <div class="subscreen subscreen--countdown countdown">
+            <div class="countdown__cell" data-unit="day">
+              <span class="countdown__circle">
+                <span class="countdown__number">0</span>
+              </span>
+              <span class="countdown__label">day<span class="countdown__label-plural">s</span></span>
+            </div>
+            <div class="countdown__cell" data-unit="hour">
+              <span class="countdown__circle">
+                <span class="countdown__number">0</span>
+              </span>
+              <span class="countdown__label">hour<span class="countdown__label-plural">s</span></span>
+            </div>
+            <div class="countdown__cell" data-unit="minute">
+              <span class="countdown__circle">
+                <span class="countdown__number">0</span>
+              </span>
+              <span class="countdown__label">minute<span class="countdown__label-plural">s</span></span>
+            </div>
+            <div class="countdown__cell" data-unit="second">
+              <span class="countdown__circle">
+                <span class="countdown__number">0</span>
+              </span>
+              <span class="countdown__label">second<span class="countdown__label-plural">s</span></span>
+            </div>
+            <!-- <img src="assets/images/screen-countdown.svg" alt="Gigant screen with a countdown"> -->
           </div>
         </div>
-        <img class="object object--mug-right" src="assets/images/mug.svg" alt="Mug">
-        <img class="object object--lamp" src="assets/images/lamp-off.svg" alt="Lamp" id="lamp-off" style="pointer-events: none;">
-        <img class="object object--lamp" src="assets/images/lamp.svg" alt="Lamp" id="lamp-on">
+        <div class="screen screen--center clickable">
+          <div class="subscreen subscreen--title">
+            <img src="assets/images/screen-title.svg" alt="Gigant screen with title">
+          </div>
+        </div>
+        <div class="screen screen--right">
+          <div class="subscreen subscreen--timeline">
+            <img src="assets/images/screen-timeline.svg" alt="Gigant screen with hackupc timeline">
+          </div>
+          <div class="subscreen subscreen--rubberduck">
+            <img src="assets/images/screen-rubberduck.svg" alt="Gigant screen with a wanted sign of a rubberduck">
+          </div>
+          <div class="subscreen subscreen--plots">
+            <img src="assets/images/screen-plots.svg" alt="Gigant screen with plots">
+          </div>
+        </div>
+        <div class="table table-back"></div>
+        <div class="objects objects-back">
+          <img class="object object--rubber-duck clickable" src="assets/images/rubberduck.svg" alt="Hidden rubber duck">
+          <div class="object object--pc-cowsay"><img src="assets/images/pc-cowsay.svg" alt="Computer screen with a terminal open showing the output from cowsay"></div>
+          <div class="object object--pc-glitch"><img src="assets/images/pc-glitch.svg" alt="Computer screen with glitched screen"></div>
+          <div class="object object--pc-thegame"><img src="assets/images/pc-thegame.svg" alt="Computer screen with the 'The Game' open"></div>
+          <img class="object object--mug-left" src="assets/images/mug.svg" alt="Mug">
+          <img class="object object--lego" src="assets/images/lego.svg" alt="Lego">
+          <img class="object object--cactus" src="assets/images/cactus.svg" alt="Cactus">
+          <div class="object object--rocket stop-animation clickable">
+            <div class="rocket-wrapper">
+              <img class="fire-img" src="assets/images/fire.svg" alt="Rocket fire">
+              <img class="rocket-img" src="assets/images/rocket.svg" alt="Rocket">
+            </div>
+          </div>
+          <img class="object object--mug-right" src="assets/images/mug.svg" alt="Mug">
+          <img class="object object--lamp" src="assets/images/lamp-off.svg" alt="Lamp" id="lamp-off" style="pointer-events: none;">
+          <img class="object object--lamp clickable" src="assets/images/lamp.svg" alt="Lamp" id="lamp-on">
+        </div>
+        <div class="table table-back table-backface"></div>
+        <img class="sitting-silhouette" src="assets/images/silhouette-4.svg" alt="Silhouette of a person sitting">
+        <div class="table table-front"></div>
+        <div class="objects objects-front">
+          <div class="object object--pc-design"><img src="assets/images/pc-design.svg" alt="Computer screen with a design app"></div>
+          <div class="object object--pc-double"><img src="assets/images/pc-doublescreen.svg" alt="Computer screen with 2 screens"></div>
+          <img class="object object--paper-text" src="assets/images/paper-text.svg" alt="Paper with text">
+          <img class="object object--pencil" src="assets/images/pencil.svg" alt="Pencil">
+          <img class="object object--paper-biene" src="assets/images/paper-biene.svg" alt="Paper with a drawing of a biene">
+          <a href="#" class="apply-button clickable">Apply now</a>
+          <img class="object object--penholder" src="assets/images/penholder.svg" alt="Penholder">
+          <img class="object object--drink" src="assets/images/drink.svg" alt="Drink">
+        </div>
+        <div class="table table-front table-backface"></div>
+        <!-- <img class="lax" data-lax-rotate-x="0 80, vh 110" src="assets/ogimage.png" alt="HackUPC landing page screenshot"> -->
       </div>
-      <div class="table table-back table-backface"></div>
-      <img class="sitting-silhouette" src="assets/images/silhouette-4.svg" alt="Silhouette of a person sitting">
-      <div class="table table-front"></div>
-      <div class="objects objects-front">
-        <div class="object object--pc-design"><img src="assets/images/pc-design.svg" alt="Computer screen with a design app"></div>
-        <div class="object object--pc-double"><img src="assets/images/pc-doublescreen.svg" alt="Computer screen with 2 screens"></div>
-        <img class="object object--paper-text" src="assets/images/paper-text.svg" alt="Paper with text">
-        <img class="object object--pencil" src="assets/images/pencil.svg" alt="Pencil">
-        <img class="object object--paper-biene" src="assets/images/paper-biene.svg" alt="Paper with a drawing of a biene">
-        <a href="#" class="apply-button">Apply now</a>
-        <img class="object object--penholder" src="assets/images/penholder.svg" alt="Penholder">
-        <img class="object object--drink" src="assets/images/drink.svg" alt="Drink">
-      </div>
-      <div class="table table-front table-backface"></div>
-      <!-- <img class="lax" data-lax-rotate-x="0 80, vh 110" src="assets/ogimage.png" alt="HackUPC landing page screenshot"> -->
     </header>
 
     <main class="main">

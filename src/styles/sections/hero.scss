@@ -22,377 +22,387 @@ $countdown-width: $screen-left-width/8;
   // height: calc((var(--vh, 1vh) * 100) - 4rem - 3rem);
   height: 800px;
   max-height: calc((var(--vh, 1vh) * 100) - 2rem);
-  perspective: 1000px;
   max-width: unset;
-  box-sizing: border-box;
-  position: relative;
   overflow: hidden;
-  transform-style: preserve-3d;
-  perspective-origin: 50% 25vh;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -30px;
-    right: -30px;
-    height: 30px;
-    background-color: darken($c-bg-light, 8%);
-    transform: rotateX(90deg);
-    transform-origin: bottom center;
-  }
-
-  & > * {
-    position: absolute;
-  }
   
-  & *, & *::before, & *::after {
-    transform-style: preserve-3d;
-    display: block;
-    backface-visibility: hidden;
-  }
-
-  .subscreen, .table, .objects {
-    background-color: $c-bg-light;
-  }
-  .screen {
-    height: $screen-height;
-    display: grid;
-    gap: $screen-gap;
-
-    & img { // TODO: remove
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      box-sizing: border-box;
-    }
-  }
-  .screen--left {
-    grid-template-columns: 5fr 1fr;
-    bottom: 0; 
-    right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
-    width: $screen-left-width; 
-    transform-origin: right center; 
-    transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(30deg);
-    margin-right: $screen-gap / 2;
-  }
-  .screen--center { 
-    bottom: 0; 
-    left: calc(50% - #{$screen-center-width / 2}); 
-    width: $screen-center-width; 
-    transform-origin: center center; 
-    transform: translate3d(0,$screen-y-pos,-$screen-depth);
-  }
-  .screen--right  { 
-    grid-template: 2fr 5fr / 1fr 1fr;
-    grid-template-areas: 
-    'top top'
-    'left right';
-    bottom: 0; 
-    left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
-    width: $screen-right-width;
-    transform-origin: left center; 
-    transform: translate3d(0px,$screen-y-pos,-$screen-depth) rotateY(-30deg);
-    margin-left: $screen-gap / 2;
-  }
-  .subscreen::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: $screen-gap * 2;
-    background-color: darken($c-bg-light, 8%);
-    transform: rotateX(-90deg);
-    transform-origin: top center;
-  }
-
-  .screen--left .subscreen::after,
-  .screen--right .subscreen::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: $screen-gap * 2;
-    background-color: darken($c-bg-light, 8%);
-  }
-  .screen--left .subscreen::after {
-    right: 100%;
-    transform: rotateY(-90deg);
-    transform-origin: right center;
-  }
-  .screen--right .subscreen::after{
-    left: 100%;
-    transform: rotateY(90deg);
-    transform-origin: left center;
-  }
-  .subscreen {
-    min-width: 0;
-    min-height: 0;
-  }
-  .subscreen--map img {object-fit: cover;}
-  .subscreen--timeline {grid-area: top;}
-  .subscreen--rubberduck {grid-area: left;}
-  .subscreen--plots {grid-area: right;}
-  .table {
-    width: $table-width;
-    height: $table-height;
-    transform-origin: bottom;
-    left: calc(50% - #{$table-width / 2});
-  }
-  .table-front {
-    bottom: 0;
-    transform: translate3d(0,-10vh,0px) rotateX(90deg);
-  }
-  .table-back {
-    bottom: 0;
-    transform: translate3d(0,-10vh,-$table-height*2) rotateX(90deg); 
-  }
-  .table-backface{
-    background-color: transparent;
-    pointer-events: none;
-  }
-  .table-backface::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 15px;
-    background-color: darken($c-bg-light, 8%);
-    transform: rotateX(-90deg);
-    transform-origin: top center;
-  }
-  .table-backface::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $c-bg-light;
-    transform: rotateX(-180deg) translateZ(15px);
-  }
-
-  // Apply Button ----------------------
-  .apply-button {
-    background-color: $c-primary;
-    padding: 1rem 1.9rem 1rem 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.25rem;
-    line-height: 1;
-    white-space: nowrap;
+  .hero-3d-space{
+    perspective: 1000px;
+    box-sizing: border-box;
     position: relative;
-    display: inline-block;
-    transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2);
-    pointer-events: all;
-    transform-origin: bottom center;
-    transition: transform 150ms $ease-bounce;
-  }
+    transform-style: preserve-3d;
+    perspective-origin: 50% 25vh;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 
-  .apply-button::before {
-    content: '';
-    position: absolute;
-    transform: rotateX(90deg);
-    transform-origin: bottom center;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    height: $apply-depth;
-    background: #b14f50;
-  }
-  .apply-button:active {
-    transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2) scale3d(1.2, 0.8, 1.2);
-  }
-
-
-  // Objects ----------------------
-  .objects {
-    width: $table-width;
-    left: calc(50% - #{$table-width / 2});
-    background-color: transparent;
-    bottom: 0;
-    right: 0;
-    transform: translate3d(0, -10vh,-80px);
-    transform-origin: bottom center;
-    text-rendering: optimizeLegibility;
-    font-smoothing: subpixel-antialiased;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      right: -30px;
+      height: 30px;
+      background-color: darken($c-bg-light, 8%);
+      transform: rotateX(90deg);
+      transform-origin: bottom center;
+    }
 
     & > * {
       position: absolute;
-      bottom: 0;
+    }
+    
+    & *, & *::before, & *::after {
+      transform-style: preserve-3d;
+      display: block;
+      backface-visibility: hidden;
+    }
+
+    .clickable {
+      pointer-events: all;
+      cursor: pointer;
+    }
+
+    .subscreen, .table, .objects {
+      background-color: $c-bg-light;
+    }
+    .screen {
+      height: $screen-height;
+      display: grid;
+      gap: $screen-gap;
+
+      & img { // TODO: remove
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        box-sizing: border-box;
+      }
+    }
+    .screen--left {
+      grid-template-columns: 5fr 1fr;
+      bottom: 0; 
+      right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
+      width: $screen-left-width; 
+      transform-origin: right center; 
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(30deg);
+      margin-right: $screen-gap / 2;
+    }
+    .screen--center { 
+      bottom: 0; 
+      left: calc(50% - #{$screen-center-width / 2}); 
+      width: $screen-center-width; 
+      transform-origin: center center; 
+      transform: translate3d(0,$screen-y-pos,-$screen-depth);
+    }
+    .screen--right  { 
+      grid-template: 2fr 5fr / 1fr 1fr;
+      grid-template-areas: 
+      'top top'
+      'left right';
+      bottom: 0; 
+      left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2}); 
+      width: $screen-right-width;
+      transform-origin: left center; 
+      transform: translate3d(0px,$screen-y-pos,-$screen-depth) rotateY(-30deg);
+      margin-left: $screen-gap / 2;
+    }
+    .subscreen::before {
+      content: '';
+      position: absolute;
+      top: 100%;
       left: 0;
+      right: 0;
+      height: $screen-gap * 2;
+      background-color: darken($c-bg-light, 8%);
+      transform: rotateX(-90deg);
+      transform-origin: top center;
     }
-  }
-  .objects-front { transform: translate3d(0, -10vh, -0 * $table-height); }
-  .objects-back  { transform: translate3d(0, -10vh, -2 * $table-height); }
 
-  $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
-  //                         <width>                               <x-pos>                         <z-pos>
-  .object--pc-cowsay  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height); pointer-events: none;}
-  .object--pc-design  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--pc-glitch  {width: 15.00%; transform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--pc-thegame {width: 15.00%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--pc-double  {width: 29.50%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-  .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height); cursor: pointer; transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
-  .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.08 * $table-width} - 50%), 0%, -0.43 * $table-height);}
-  .object--lego       {width:  5.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.70 * $table-height);}
-  .object--rocket     {width:  3.00%; transform: $rocketBaseTransform;}
-  .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
-  .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
-  .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height); cursor: pointer; transition: opacity 100ms $ease-quad;}
-  .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
-  .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
-  .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),50%, -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
-  .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%),50%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
-  .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.89 * $table-width} - 50%),50%, -0.32 * $table-height) rotateX(90deg) rotate(4deg);}
-
-  .object--rubber-duck:hover {
-    transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
-  }
-
-  .object--pc-cowsay::before,
-  .object--pc-design::before,
-  .object--pc-glitch::before,
-  .object--pc-thegame::before,
-  .object--pc-double::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.25;
-    border-radius: 100%;
-    height: 0.15 * $table-height;
-    transform: translate(-50%, 49%) rotateX(90deg);
-  }
-
-  .sitting-silhouette {
-    width: 0.15 * $table-width; 
-    left: 50%;
-    bottom: 0;
-    transform-origin: bottom;
-    transform: translate3d(-50%, -4vh, -$table-height*1.5);
-  }
-
-
-
-  // Rocket animation ----------------------
-
-  $rocketLunchDuration: 4s;
-  $rocketFlyDuration: 3s;
-  $rocketHideDuration: 1s;
-  $rocketAppearDuration: 1s;
-  .object--rocket{
-    transform-origin: center bottom;
-    animation: 
-      rocket-lunch $rocketLunchDuration $ease-quad-in, 
-      rocket-shake ($rocketLunchDuration/100*2) $rocketLunchDuration linear infinite,
-      rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
-      rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
-  }
-  .rocket-wrapper{
-    animation: rocket-fly $rocketFlyDuration $rocketLunchDuration cubic-bezier(0.32, 0.43, 0.86, -0.51);
-  }
-  .fire-img{
-    position: absolute;
-    top: 80%;
-    transform-origin: center top;
-    opacity: 0;
-    animation: 
-    rocket-fire ($rocketLunchDuration/100*2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
-    rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
-  }
-
-  .stop-animation {
-    animation: none;
-    cursor: pointer;
-
-    & * {
-      animation: none;
+    .screen--left .subscreen::after,
+    .screen--right .subscreen::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: $screen-gap * 2;
+      background-color: darken($c-bg-light, 8%);
     }
-  }
-
-  @keyframes rocket-lunch {
-    @for $i from 0 through 100 {
-      #{$i}% {transform: $rocketBaseTransform translateX($i * 0.125% * if($i % 2 == 0, 1, -1));}
+    .screen--left .subscreen::after {
+      right: 100%;
+      transform: rotateY(-90deg);
+      transform-origin: right center;
     }
-  }
+    .screen--right .subscreen::after{
+      left: 100%;
+      transform: rotateY(90deg);
+      transform-origin: left center;
+    }
+    .subscreen {
+      min-width: 0;
+      min-height: 0;
+    }
+    .subscreen--map img {object-fit: cover;}
+    .subscreen--timeline {grid-area: top;}
+    .subscreen--rubberduck {grid-area: left;}
+    .subscreen--plots {grid-area: right;}
+    .table {
+      width: $table-width;
+      height: $table-height;
+      transform-origin: bottom;
+      left: calc(50% - #{$table-width / 2});
+    }
+    .table-front {
+      bottom: 0;
+      transform: translate3d(0,-10vh,0px) rotateX(90deg);
+    }
+    .table-back {
+      bottom: 0;
+      transform: translate3d(0,-10vh,-$table-height*2) rotateX(90deg); 
+    }
+    .table-backface{
+      background-color: transparent;
+      pointer-events: none;
+    }
+    .table-backface::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background-color: darken($c-bg-light, 8%);
+      transform: rotateX(-90deg);
+      transform-origin: top center;
+    }
+    .table-backface::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $c-bg-light;
+      transform: rotateX(-180deg) translateZ(15px);
+    }
 
-  @keyframes rocket-shake {
-    from {transform: $rocketBaseTransform translateX(+12.5%);}
-    to   {transform: $rocketBaseTransform translateX(-12.5%);}
-  }
+    // Apply Button ----------------------
+    .apply-button {
+      background-color: $c-primary;
+      padding: 1rem 1.9rem 1rem 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25rem;
+      line-height: 1;
+      white-space: nowrap;
+      position: relative;
+      display: inline-block;
+      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2);
+      transform-origin: bottom center;
+      transition: transform 150ms $ease-bounce;
+    }
 
-  @keyframes rocket-fly {
-    from {transform: translateY(0);}
-    to   {transform: translateY(-100vh);}
-  }
+    .apply-button::before {
+      content: '';
+      position: absolute;
+      transform: rotateX(90deg);
+      transform-origin: bottom center;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      height: $apply-depth;
+      background: #b14f50;
+    }
+    .apply-button:active {
+      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2) scale3d(1.2, 0.8, 1.2);
+    }
 
-  @keyframes rocket-fire {
-    from {opacity:1; transform: scale(0.75,0.5);}
-    to   {opacity:1; transform: scale(1,1);}
-  }
 
-  @keyframes rocket-hide {
-    from,to {opacity:0;}
-  }
+    // Objects ----------------------
+    .objects {
+      width: $table-width;
+      left: calc(50% - #{$table-width / 2});
+      background-color: transparent;
+      bottom: 0;
+      right: 0;
+      transform: translate3d(0, -10vh,-80px);
+      transform-origin: bottom center;
+      text-rendering: optimizeLegibility;
+      font-smoothing: subpixel-antialiased;
 
-  @keyframes rocket-appear {
-    from {opacity:0.6667; transform: $rocketBaseTransform scale(0);}
-    to   {opacity:1; transform: $rocketBaseTransform scale(1);}
-  }
-
-  // Countdown screen ----------------------
-  .countdown {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    .countdown__cell {
-      
-      .countdown__circle {
-        background-color: $c-bg-dark;
-        display: block;
-        width: $countdown-width;
-        height: $countdown-width;
-        border-radius: 100%;
-        margin: auto;
-        position: relative;
-      }
-      .countdown__number {
+      & > * {
         position: absolute;
-        width: 4em;
-        height: 1em;
-        top: 50%;
-        left: 50%;
-        transform: translate(-2em,-0.5em);
-        font-size: $countdown-width / 2;
-        font-weight: bold;
-        will-change: contents;
-        line-height: 1;
+        bottom: 0;
+        left: 0;
       }
+    }
+    .objects-front { transform: translate3d(0, -10vh, -0 * $table-height); }
+    .objects-back  { transform: translate3d(0, -10vh, -2 * $table-height); }
 
-      .countdown__label {
-        font-size: $countdown-width / 5;
-        font-weight: bold;
-        text-align: center;
-        margin: $countdown-width / 10 auto 0;
-        white-space: nowrap;
-        text-transform: uppercase;
-        color: $c-bg-lighter;
+    $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
+    //                         <width>                               <x-pos>                         <z-pos>
+    .object--pc-cowsay  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height); pointer-events: none;}
+    .object--pc-design  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+    .object--pc-glitch  {width: 15.00%; transform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+    .object--pc-thegame {width: 15.00%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+    .object--pc-double  {width: 29.50%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
+    .object--rubber-duck{width:  5.00%; transform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height); transform-origin: bottom center; transition: transform 200ms $ease-bounce;}
+    .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.08 * $table-width} - 50%), 0%, -0.43 * $table-height);}
+    .object--lego       {width:  5.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.70 * $table-height);}
+    .object--rocket     {width:  3.00%; transform: $rocketBaseTransform;}
+    .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
+    .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
+    .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height); transition: opacity 100ms $ease-quad;}
+    .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
+    .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
+    .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),50%, -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
+    .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%),50%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
+    .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.89 * $table-width} - 50%),50%, -0.32 * $table-height) rotateX(90deg) rotate(4deg);}
 
-        .countdown__label-plural {
-          display: inline-block;
+    .object--rubber-duck:hover {
+      transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
+    }
+
+    .object--pc-cowsay::before,
+    .object--pc-design::before,
+    .object--pc-glitch::before,
+    .object--pc-thegame::before,
+    .object--pc-double::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      background-color: #000;
+      opacity: 0.25;
+      border-radius: 100%;
+      height: 0.15 * $table-height;
+      transform: translate(-50%, 49%) rotateX(90deg);
+    }
+
+    .sitting-silhouette {
+      width: 0.15 * $table-width; 
+      left: 50%;
+      bottom: 0;
+      transform-origin: bottom;
+      transform: translate3d(-50%, -4vh, -$table-height*1.5);
+    }
+
+
+
+    // Rocket animation ----------------------
+
+    $rocketLunchDuration: 4s;
+    $rocketFlyDuration: 3s;
+    $rocketHideDuration: 1s;
+    $rocketAppearDuration: 1s;
+    .object--rocket{
+      transform-origin: center bottom;
+      animation: 
+        rocket-lunch $rocketLunchDuration $ease-quad-in, 
+        rocket-shake ($rocketLunchDuration/100*2) $rocketLunchDuration linear infinite,
+        rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
+        rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
+    }
+    .rocket-wrapper{
+      animation: rocket-fly $rocketFlyDuration $rocketLunchDuration cubic-bezier(0.32, 0.43, 0.86, -0.51);
+    }
+    .fire-img{
+      position: absolute;
+      top: 80%;
+      transform-origin: center top;
+      opacity: 0;
+      animation: 
+      rocket-fire ($rocketLunchDuration/100*2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
+      rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
+    }
+
+    .stop-animation {
+      animation: none;
+      cursor: pointer;
+
+      & * {
+        animation: none;
+      }
+    }
+
+    @keyframes rocket-lunch {
+      @for $i from 0 through 100 {
+        #{$i}% {transform: $rocketBaseTransform translateX($i * 0.125% * if($i % 2 == 0, 1, -1));}
+      }
+    }
+
+    @keyframes rocket-shake {
+      from {transform: $rocketBaseTransform translateX(+12.5%);}
+      to   {transform: $rocketBaseTransform translateX(-12.5%);}
+    }
+
+    @keyframes rocket-fly {
+      from {transform: translateY(0);}
+      to   {transform: translateY(-100vh);}
+    }
+
+    @keyframes rocket-fire {
+      from {opacity:1; transform: scale(0.75,0.5);}
+      to   {opacity:1; transform: scale(1,1);}
+    }
+
+    @keyframes rocket-hide {
+      from,to {opacity:0;}
+    }
+
+    @keyframes rocket-appear {
+      from {opacity:0.6667; transform: $rocketBaseTransform scale(0);}
+      to   {opacity:1; transform: $rocketBaseTransform scale(1);}
+    }
+
+    // Countdown screen ----------------------
+    .countdown {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .countdown__cell {
+        
+        .countdown__circle {
+          background-color: $c-bg-dark;
+          display: block;
+          width: $countdown-width;
+          height: $countdown-width;
+          border-radius: 100%;
+          margin: auto;
+          position: relative;
+        }
+        .countdown__number {
+          position: absolute;
+          width: 4em;
+          height: 1em;
+          top: 50%;
+          left: 50%;
+          transform: translate(-2em,-0.5em);
+          font-size: $countdown-width / 2;
+          font-weight: bold;
+          will-change: contents;
+          line-height: 1;
+        }
+
+        .countdown__label {
+          font-size: $countdown-width / 5;
+          font-weight: bold;
+          text-align: center;
+          margin: $countdown-width / 10 auto 0;
+          white-space: nowrap;
+          text-transform: uppercase;
+          color: $c-bg-lighter;
+
+          .countdown__label-plural {
+            display: inline-block;
+          }
         }
       }
     }
-  }
 
+  }
 }

@@ -31,7 +31,7 @@ window.addEventListener('resize', () => {
 });
 
 /* ---------- Update hero perspective ---------- */
-const heroElem = document.getElementsByClassName('section--hero')[0];
+const heroElem = document.getElementsByClassName('hero-3d-space')[0];
 let mouseX = 0;
 let mouseY = 0;
 // let clientBeta = 0;
