@@ -62,6 +62,10 @@ $countdown-width: $screen-left-width/8;
       cursor: pointer;
     }
 
+    .selectable {
+      pointer-events: all;
+    }
+
     .subscreen, .table, .objects {
       background-color: $c-bg-light;
     }
