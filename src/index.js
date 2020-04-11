@@ -6,19 +6,29 @@ import 'normalize.css';
 import './styles/style.scss';
 
 
-/* ---------- Lax.js ---------- */
-import lax from 'lax.js'
-
-window.onload = function() {
-	lax.setup() // init
-
-	const updateLax = () => {
-		lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
+/* ---------- Webfont (asyncronously load fonts) ---------- */
+import webfont from 'webfontloader';
+ 
+webfont.load({
+	google: {
+		families: ['Montserrat:300,400,400i,600,700,800']
 	}
+});
+	
 
-	window.requestAnimationFrame(updateLax)
-}
+/* ---------- Lax.js ---------- */
+// import lax from 'lax.js'
+
+// window.onload = function() {
+// 	lax.setup() // init
+
+// 	const updateLax = () => {
+// 		lax.update(window.scrollY)
+// 		window.requestAnimationFrame(updateLax)
+// 	}
+
+// 	window.requestAnimationFrame(updateLax)
+// }
 
 /* ---------- Real vh ---------- */
 // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
