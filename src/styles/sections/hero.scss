@@ -301,6 +301,7 @@ $countdown-width: $screen-left-width/8;
     $rocketHideDuration: 1s;
     $rocketAppearDuration: 1s;
     .object--rocket{
+      will-change: transform, opacity;
       transform-origin: center bottom;
       animation:
         rocket-lunch $rocketLunchDuration $ease-quad-in,
@@ -309,6 +310,7 @@ $countdown-width: $screen-left-width/8;
         rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
     }
     .rocket-wrapper{
+      will-change: transform;
       animation: rocket-fly $rocketFlyDuration $rocketLunchDuration cubic-bezier(0.32, 0.43, 0.86, -0.51);
     }
     .fire-img{
