@@ -64,14 +64,14 @@ updateHeroPerspective();
 let heroWaitingRefresh = false;
 
 // iOS 13+ device orientation requestPermission
-const orientationPermision = localStorage.getItem('orientationPermision') || false;
+const orientationPermision = JSON.parse(localStorage.getItem('orientationPermision')) || false;
 if (typeof window.DeviceOrientationEvent.requestPermission === 'function' && !orientationPermision) {
 	heroElem.addEventListener('click', (event) => {
 		if(event.currentTarget !== applyElem){
 			window.DeviceOrientationEvent.requestPermission()
 			.then(permissionState => {
 				orientationPermision = permissionState === 'granted';
-				localStorage.setItem('orientationPermision', orientationPermision);
+				localStorage.setItem('orientationPermision', JSON.stringify(orientationPermision));
 				if (orientationPermision) {
 					window.addEventListener('deviceorientation', updateHeroPerspective, false);
 				}
