@@ -108,9 +108,26 @@ $countdown-width: $screen-left-width/8;
       left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
       width: $screen-right-width;
       transform-origin: left center;
-      transform: translate3d(0px,$screen-y-pos,-$screen-depth) rotateY(-30deg);
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-30deg);
       margin-left: $screen-gap / 2;
     }
+
+    @media screen and (max-height: 550px) {
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(30deg);}
+      .screen--center {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(-30deg);}  
+    }
+    @media screen and (max-height: 450px) {
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(30deg);}
+      .screen--center {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(-30deg);}  
+    }
+    @media screen and (max-height: 400px) {
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(30deg);}
+      .screen--center {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(-30deg);}  
+    }
+
     .subscreen::before {
       content: '';
       position: absolute;
