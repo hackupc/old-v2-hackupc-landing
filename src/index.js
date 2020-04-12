@@ -236,7 +236,10 @@ duckElem.addEventListener('click', (event) => {
 	duckElem.classList.remove('clickable');
 	setTimeout(() => {
 		duckSilhouetteElem.classList.remove('wanted__duck-silhouette--missing')
+		duckSilhouetteElem.classList.add('wanted__duck-silhouette--found')
 		duckListElem.classList.remove('clickable');
-		duckSignElem.textContent = 'FOUND';
+		setTimeout(() => {
+			duckSignElem.textContent = 'FOUND';
+		}, 200);
 	}, 1000);
 });
