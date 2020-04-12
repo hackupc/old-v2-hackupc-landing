@@ -63,14 +63,30 @@ function updateHeroPerspective(event) {
 		if(event){
 			if(event.clientX !== undefined) mouseX = event.clientX;
 			if(event.clientY !== undefined) mouseY = event.clientY;
-			if(event.alpha !== undefined) clientAlpha = mod(event.alpha/360);                  // alpha [0,360]   -->[0,1]
-			if(event.beta !== undefined) clientBeta = mod((event.beta + 180)/360 - 0.625); // beta  [-180,180]-->[0,1]
-			if(event.gamma !== undefined) clientGamma = mod((event.gamma + 90)/180 - 0.5); // gamma [-90,90]  -->[0,1]
-			if(clientAlphaOrig === 0 && clientAlpha !== 0) {
-				// Set 0,0,0 to phone tilted 45deg in portrait to the front
-				clientAlphaOrig = clientAlpha;
-				clientBetaOrig = clientBeta;
-				clientGammaOrig = clientGamma;
+
+			if(event.alpha !== undefined) { // alpha [0,360]  -->[0,1]
+				const newClientAlpha = mod(event.alpha/360 + 0.5); 
+				clientAlpha = smooth(newClientAlpha, clientAlpha);
+				if(clientAlphaOrig === 0){
+					clientAlpha = newClientAlpha;
+					clientAlphaOrig = newClientAlpha;
+				}
+			}
+			if(event.beta !== undefined) { // beta  [-180,180]-->[0,1]
+				const newClientBeta = mod((event.beta + 180)/360 - 0.125); 
+				clientBeta = smooth(newClientBeta, clientBeta);
+				if(clientBetaOrig === 0){
+					clientBeta = newClientBeta;
+					clientBetaOrig = newClientBeta;
+				}
+			}
+			if(event.gamma !== undefined) { // gamma [-90,90] -->[0,1]
+				const newClientGamma = mod((event.gamma + 90)/180); 
+				clientGamma = smooth(newClientGamma, clientGamma);
+				if(clientGammaOrig === 0){
+					clientGamma = newClientGamma;
+					clientGammaOrig = newClientGamma;
+				}
 			}
 		}
 
@@ -78,14 +94,14 @@ function updateHeroPerspective(event) {
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ 1000 * Math.tan((mod(clientAlpha - clientAlphaOrig + 0.5) - 0.5) * 2)
-			+ 1000 * Math.tan((mod(clientGamma - clientGammaOrig + 0.5) - 0.5) * 2)
+			+ 2000 * Math.tan((mod(clientAlpha - clientAlphaOrig + 0.5) - 0.5) * 2)
+			+ 2000 * Math.tan((mod(clientGamma - clientGammaOrig + 0.5) - 0.5) * 2)
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
-			+ 500 * Math.atan((mod(clientBeta - clientBetaOrig + 0.5) - 0.5) * 2)
+			+ 750 * Math.atan((mod(clientBeta - clientBetaOrig + 0.5) - 0.5) * 2)
 			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
@@ -94,9 +110,32 @@ function updateHeroPerspective(event) {
 	}
 }
 
-function mod(n){
-	return ((n % 1) + 1) % 1;
+function mod(n,m=1){
+	return ((n % m) + m) % m;
 }
+
+function smooth(final, initial=0) {
+	let dif = final - initial;
+	let s = dif >= 0 ? +1 : -1;
+	return (initial + s * dif**2);
+}
+// function smooth(final, initial=0) {
+// 	let dif = final - initial;
+// 	if(dif < 0.01 && dif > -0.01) return initial;
+// 	else return (initial + dif);
+// }
+// function smooth(final, initial=0) {
+// 	let dif = final - initial;
+// 	dif = Math.min(dif, 0.1)
+// 	dif = Math.max(dif, -0.1)
+// 	return (initial + dif);
+// }
+// function smooth(final, initial=0) {
+//   return (initial + final)/2;
+// }
+// function smooth(final, initial=0) {
+//   return final;
+// }
 /* ---------- Animations ---------- */
 
 // Animation Lamp
