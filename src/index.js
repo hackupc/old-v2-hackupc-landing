@@ -225,3 +225,18 @@ rocketElem.addEventListener('click', event => {
 	}
 });
 
+// Animation duck
+
+const duckElem = document.getElementsByClassName('object--rubber-duck')[0];
+const duckSilhouetteElem = document.getElementsByClassName('wanted__duck-silhouette--missing')[0];
+const duckSignElem = document.getElementsByClassName('wanted__sign')[0];
+const duckListElem = document.getElementsByClassName('wanted__list')[0];
+duckElem.addEventListener('click', (event) => {
+	duckElem.classList.add('duck-cliked');
+	duckElem.classList.remove('clickable');
+	setTimeout(() => {
+		duckSilhouetteElem.classList.remove('wanted__duck-silhouette--missing')
+		duckListElem.classList.remove('clickable');
+		duckSignElem.textContent = 'FOUND';
+	}, 1000);
+});
