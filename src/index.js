@@ -63,6 +63,7 @@ if(!!window.DeviceOrientationEvent) {
 	window.addEventListener('devicemotion', updateHeroPerspective);
 }
 window.addEventListener('mousemove', updateHeroPerspective);
+window.addEventListener('resize', updateHeroPerspective);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
