@@ -34,11 +34,11 @@ webfont.load({
 // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 
 // We listen to the resize event
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+// window.addEventListener('resize', () => {
+//   // We execute the same script as before
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+// });
 
 /* ---------- Update hero perspective ---------- */
 const heroElem = document.getElementsByClassName('hero-3d-space')[0];
