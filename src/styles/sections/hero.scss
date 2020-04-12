@@ -521,6 +521,7 @@ $countdown-width: $screen-left-width/8;
         background-color: #483a7b;
         border-radius: $screen-height/25;
         padding: $screen-height/90 $screen-height/45;
+        position: relative;
 
         .wanted__duck-silhouette {
           height: $screen-height/18;
@@ -530,6 +531,29 @@ $countdown-width: $screen-left-width/8;
         }
         .wanted__duck-silhouette--missing {
           animation: soft-fade-in 2000ms cubic-bezier(0.67, 0, 0.33, 1) infinite alternate-reverse;
+        }
+        .wanted__tooltip {
+          position: absolute;
+          top: 100%;
+          left: -10%;
+          right: 10%;
+          width: 120%;
+          text-align: center;
+          font-size: $screen-height/30;
+          white-space: nowrap;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          color: $c-bg-lighter;
+          text-transform: uppercase;
+          display: block;
+          transform: translateY(-100%) scale(1);
+          padding: $screen-height/45 0 ;
+          opacity: 0;
+          transition: transform 200ms ease-out, opacity 200ms ease-out;
+        }
+        &:hover .wanted__tooltip {
+          transform: none;
+          opacity: 1;
         }
 
         .stop-animation {
