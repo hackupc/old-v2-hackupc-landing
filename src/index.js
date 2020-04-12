@@ -94,14 +94,14 @@ function updateHeroPerspective(event) {
 		window.requestAnimationFrame(() => {
 			perspectiveX = 0
 			+ window.innerWidth/2 
-			+ 2000 * Math.tan((mod(clientAlpha - clientAlphaOrig + 0.5) - 0.5) * 2)
-			+ 2000 * Math.tan((mod(clientGamma - clientGammaOrig + 0.5) - 0.5) * 2)
+			+ 250 * magnet((mod(clientAlpha - clientAlphaOrig + 0.5) - 0.5) * 2)
+			+ 250 * magnet((mod(clientGamma - clientGammaOrig + 0.5) - 0.5) * 2)
 			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
-			+ 750 * Math.atan((mod(clientBeta - clientBetaOrig + 0.5) - 0.5) * 2)
+			+ 500 * magnet((mod(clientBeta - clientBetaOrig + 0.5) - 0.5) * 2)
 			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
@@ -112,6 +112,9 @@ function updateHeroPerspective(event) {
 
 function mod(n,m=1){
 	return ((n % m) + m) % m;
+}
+function magnet(x=0.5) {
+	return Math.sin(Math.PI/2*x);
 }
 
 function smooth(final, initial=0) {
