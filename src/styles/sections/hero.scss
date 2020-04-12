@@ -450,8 +450,11 @@ $countdown-width: $screen-left-width/8;
     // Countdown screen ----------------------
     .countdown {
       height: 100%;
-      display: grid;
-      align-content: space-evenly;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: $screen-height/30 0;
 
       .countdown__cell {
        
