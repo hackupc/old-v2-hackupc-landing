@@ -42,8 +42,8 @@ webfont.load({
 
 /* ---------- Update hero perspective ---------- */
 const heroElem = document.getElementsByClassName('hero-3d-space')[0];
-let mouseX = 0;
-let mouseY = 0;
+let mouseX = 0.5;
+let mouseY = 0.5;
 
 let alpha = 0;
 let beta = 0;
@@ -53,41 +53,44 @@ let alphaOrig = 0;
 let betaOrig = 0;
 let gammaOrig = 0;
 
-let perspectiveX = 0;
-let perspectiveY = 0;
+let perspectiveX = window.innerWidth/2;
+let perspectiveY = window.innerHeight/4;
 
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 if(!!window.DeviceOrientationEvent) {
 	window.addEventListener('deviceorientation', updateHeroPerspective, true);
 }else if(!!window.DeviceMotionEvent) {
 	window.addEventListener('devicemotion', updateHeroPerspective, true);
-}else{
-	window.addEventListener('mousemove', updateHeroPerspective);
 }
+window.addEventListener('mousemove', updateHeroPerspective);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
 function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event){
-			if(event.clientX !== undefined) mouseX = event.clientX;
-			if(event.clientY !== undefined) mouseY = event.clientY;
 
-			let newAlpha = event.alpha || event.rotationRate?.alpha || 0;
-			let newBeta  = event.beta  || event.rotationRate?.beta  || 0;
-			let newGamma = event.gamma || event.rotationRate?.gamma || 0;
+			let newMouseX = event.clientX;
+			let newMouseY = event.clientY;
+			let newAlpha  = event.alpha || event.rotationRate?.alpha || 0;
+			let newBeta   = event.beta  || event.rotationRate?.beta  || 0;
+			let newGamma  = event.gamma || event.rotationRate?.gamma || 0;
 
 			// alpha [0,360]  -->[0,1]
 			// beta  [-180,180]-->[0,1]
 			// gamma [-90,90] -->[0,1]
+			
+			newMouseX = mod(newMouseX/window.innerWidth); 
+			newMouseY = mod(newMouseY/window.innerHeight); 
+			newAlpha  = mod(newAlpha/360 + 0.5); 
+			newBeta   = mod((newBeta + 180)/360 - 0.125); 
+			newGamma  = mod((newGamma + 90)/180); 
 
-			newAlpha = mod(newAlpha/360 + 0.5); 
-			newBeta  = mod((newBeta + 180)/360 - 0.125); 
-			newGamma = mod((newGamma + 90)/180); 
-
-			alpha = smooth(newAlpha, alpha);
-			beta  = smooth(newBeta,  beta);
-			gamma = smooth(newGamma, gamma);
+			mouseX = smooth(newMouseX, mouseX);
+			mouseY = smooth(newMouseY, mouseY);
+			alpha  = smooth(newAlpha,  alpha);
+			beta   = smooth(newBeta,   beta);
+			gamma  = smooth(newGamma,  gamma);
 
 			if(alphaOrig === 0){ alpha = newAlpha; alphaOrig = newAlpha; }
 			if(betaOrig  === 0){ beta  = newBeta;  betaOrig  = newBeta;  }
@@ -100,13 +103,13 @@ function updateHeroPerspective(event) {
 			+ window.innerWidth/2 
 			+ 250 * magnet((mod(alpha - alphaOrig + 0.5) - 0.5) * 2)
 			+ 250 * magnet((mod(gamma - gammaOrig + 0.5) - 0.5) * 2)
-			+ window.innerWidth/50 * Math.atan((window.innerWidth/2 - mouseX) * 2 * Math.PI / window.innerWidth);
+			+ -100 * magnet((mouseX - 0.5) * 2)
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
 			+ 500 * magnet((mod(beta - betaOrig + 0.5) - 0.5) * 2)
-			+ window.innerHeight/50 * Math.atan((window.innerHeight/2 - mouseY) * 2 * Math.PI / window.innerHeight);
+			+ -50 * magnet((mouseY - 0.6667) * 2)
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
 			heroWaitingRefresh = false;
@@ -122,6 +125,8 @@ function magnet(x=0.5) {
 }
 
 function smooth(final, initial=0) {
+	if(isNaN(final)) return initial;
+
 	let dif = final - initial;
 	let s = dif >= 0 ? +1 : -1;
 	return (initial + s * dif**2);
