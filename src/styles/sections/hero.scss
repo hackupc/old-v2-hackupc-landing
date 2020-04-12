@@ -385,17 +385,17 @@ $countdown-width: $screen-left-width/8;
     // Glitch animation -------------
 
     .object--pc-glitch-1 {
-      animation: blink 250ms 50ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      animation: half-blink 250ms 50ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
       transform: $glitchBaseTransform;
       pointer-events: none;
     }
     .object--pc-glitch-2 {
-      animation: blink 100ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      animation: half-blink 100ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
       transform: $glitchBaseTransform scaleX(-1);
       pointer-events: none;
     }
 
-    @keyframes blink {
+    @keyframes half-blink {
       from {opacity:0.25;}
       to   {opacity:0.75;}
     }
@@ -497,5 +497,51 @@ $countdown-width: $screen-left-width/8;
       }
     }
 
+    // Countdown screen ----------------------
+
+    .subscreen--rubberduck {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .wanted__duck {
+        width: 47.5%;
+        height: auto;
+      }
+      .wanted__sign {
+        display: block;
+        margin: 0.66em 0;
+        font-size: $screen-height/14;
+        font-weight: 800;
+        color: $c-bg-lighter;
+      }
+      .wanted__list {
+        display: flex;
+        background-color: #483a7b;
+        border-radius: $screen-height/25;
+        padding: $screen-height/90 $screen-height/45;
+
+        .wanted__duck-silhouette {
+          height: $screen-height/18;
+          width: auto;
+          margin: $screen-height/150;
+          opacity: 0.4;
+        }
+        .wanted__duck-silhouette--missing {
+          animation: soft-fade-in 2000ms cubic-bezier(0.67, 0, 0.33, 1) infinite alternate-reverse;
+        }
+
+        .stop-animation {
+          animation: none;
+          opacity: 0;
+        }
+
+      }
+    }
+    @keyframes soft-fade-in {
+      from {opacity:0.05;}
+      to   {opacity:0.4;}
+    }
   }
 }
