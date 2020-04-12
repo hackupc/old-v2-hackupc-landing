@@ -42,6 +42,7 @@ webfont.load({
 
 /* ---------- Update hero perspective ---------- */
 const heroElem = document.getElementsByClassName('hero-3d-space')[0];
+const applyElem = document.getElementsByClassName('apply-button')[0];
 let mouseX = 0.5;
 let mouseY = 0.5;
 
@@ -57,35 +58,42 @@ let perspectiveX = window.innerWidth/2;
 let perspectiveY = window.innerHeight/4;
 
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
-if(!!window.DeviceOrientationEvent) {
-	window.addEventListener('deviceorientation', updateHeroPerspective);
-}else if(!!window.DeviceMotionEvent) {
-	window.addEventListener('devicemotion', updateHeroPerspective);
-}
 window.addEventListener('mousemove', updateHeroPerspective);
 window.addEventListener('resize', updateHeroPerspective);
 updateHeroPerspective();
 let heroWaitingRefresh = false;
 
+// iOS 13+ device orientation requestPermission
+const orientationPermision = localStorage.getItem('orientationPermision') || false;
+if (typeof window.DeviceOrientationEvent.requestPermission === 'function' && !orientationPermision) {
+	heroElem.addEventListener('click', (event) => {
+		if(event.currentTarget !== applyElem){
+			window.DeviceOrientationEvent.requestPermission()
+			.then(permissionState => {
+				orientationPermision = permissionState === 'granted';
+				localStorage.setItem('orientationPermision', orientationPermision);
+				if (orientationPermision) {
+					window.addEventListener('deviceorientation', updateHeroPerspective, false);
+				}
+			}).catch(console.error);
+		}
+	});
+} else {
+	window.addEventListener('deviceorientation', updateHeroPerspective, false);
+}
+
 function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event){
-
-			let newMouseX = event.clientX;
-			let newMouseY = event.clientY;
-			let newAlpha  = event.alpha || event.rotationRate?.alpha;
-			let newBeta   = event.beta  || event.rotationRate?.beta ;
-			let newGamma  = event.gamma || event.rotationRate?.gamma;
-
 			// alpha [0,360]  -->[0,1]
 			// beta  [-180,180]-->[0,1]
 			// gamma [-90,90] -->[0,1]
 			
-			newMouseX = mod(newMouseX/window.innerWidth); 
-			newMouseY = mod(newMouseY/window.innerHeight); 
-			newAlpha  = mod(newAlpha/360 + 0.5); 
-			newBeta   = mod((newBeta + 180)/360 - 0.125); 
-			newGamma  = mod((newGamma + 90)/180); 
+			let newMouseX = mod(event.clientX/window.innerWidth); 
+			let newMouseY = mod(event.clientY/window.innerHeight); 
+			let newAlpha  = mod(event.alpha/360 + 0.5); 
+			let newBeta   = mod((event.beta + 180)/360 - 0.125); 
+			let newGamma  = mod((event.gamma + 90)/180); 
 
 			mouseX = smooth(newMouseX, mouseX);
 			mouseY = smooth(newMouseY, mouseY);
