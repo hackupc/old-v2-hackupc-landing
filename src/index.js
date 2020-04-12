@@ -79,6 +79,12 @@ if (typeof window.DeviceOrientationEvent.requestPermission === 'function') {
 	window.addEventListener('deviceorientation', updateHeroPerspective, false);
 }
 
+document.addEventListener('visibilitychange', () => {
+	alphaOrig = 0.5;
+	betaOrig  = 0.5;
+	gammaOrig = 0.5;
+});
+
 function updateHeroPerspective(event) {
 	if(window.pageYOffset <= window.innerHeight && !heroWaitingRefresh) {
 		if(event){
