@@ -58,9 +58,9 @@ let perspectiveY = window.innerHeight/4;
 
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 if(!!window.DeviceOrientationEvent) {
-	window.addEventListener('deviceorientation', updateHeroPerspective, true);
+	window.addEventListener('deviceorientation', updateHeroPerspective);
 }else if(!!window.DeviceMotionEvent) {
-	window.addEventListener('devicemotion', updateHeroPerspective, true);
+	window.addEventListener('devicemotion', updateHeroPerspective);
 }
 window.addEventListener('mousemove', updateHeroPerspective);
 updateHeroPerspective();
@@ -103,13 +103,13 @@ function updateHeroPerspective(event) {
 			+ window.innerWidth/2 
 			+ 250 * magnet((mod(alpha - alphaOrig + 0.5) - 0.5) * 2)
 			+ 250 * magnet((mod(gamma - gammaOrig + 0.5) - 0.5) * 2)
-			+ -100 * magnet((mouseX - 0.5) * 2)
+			+ -window.innerWidth/40 * magnet((mouseX - 0.5) * 2)
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
 			+ window.innerHeight / 4 
 			+ 500 * magnet((mod(beta - betaOrig + 0.5) - 0.5) * 2)
-			+ -50 * magnet((mouseY - 0.6667) * 2)
+			+ -window.innerHeight/40 * magnet((mouseY - 0.6667) * 2)
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
 			heroWaitingRefresh = false;
