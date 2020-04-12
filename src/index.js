@@ -45,13 +45,13 @@ const heroElem = document.getElementsByClassName('hero-3d-space')[0];
 let mouseX = 0.5;
 let mouseY = 0.5;
 
-let alpha = 0;
-let beta = 0;
-let gamma = 0;
+let alpha = 0.5;
+let beta = 0.5;
+let gamma = 0.5;
 
-let alphaOrig = 0;
-let betaOrig = 0;
-let gammaOrig = 0;
+let alphaOrig = 0.5;
+let betaOrig = 0.5;
+let gammaOrig = 0.5;
 
 let perspectiveX = window.innerWidth/2;
 let perspectiveY = window.innerHeight/4;
@@ -72,9 +72,9 @@ function updateHeroPerspective(event) {
 
 			let newMouseX = event.clientX;
 			let newMouseY = event.clientY;
-			let newAlpha  = event.alpha || event.rotationRate?.alpha || 0;
-			let newBeta   = event.beta  || event.rotationRate?.beta  || 0;
-			let newGamma  = event.gamma || event.rotationRate?.gamma || 0;
+			let newAlpha  = event.alpha || event.rotationRate?.alpha;
+			let newBeta   = event.beta  || event.rotationRate?.beta ;
+			let newGamma  = event.gamma || event.rotationRate?.gamma;
 
 			// alpha [0,360]  -->[0,1]
 			// beta  [-180,180]-->[0,1]
@@ -92,9 +92,9 @@ function updateHeroPerspective(event) {
 			beta   = smooth(newBeta,   beta);
 			gamma  = smooth(newGamma,  gamma);
 
-			if(alphaOrig === 0){ alpha = newAlpha; alphaOrig = newAlpha; }
-			if(betaOrig  === 0){ beta  = newBeta;  betaOrig  = newBeta;  }
-			if(gammaOrig === 0){ gamma = newGamma; gammaOrig = newGamma; }
+			if(!isNaN(newAlpha) && alphaOrig === 0.5){ alpha = newAlpha; alphaOrig = newAlpha; }
+			if(!isNaN(newBeta ) && betaOrig  === 0.5){ beta  = newBeta;  betaOrig  = newBeta;  }
+			if(!isNaN(newGamma) && gammaOrig === 0.5){ gamma = newGamma; gammaOrig = newGamma; }
 		}
 
 		heroWaitingRefresh = true;
