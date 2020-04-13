@@ -16,11 +16,11 @@ module.exports = {
     compress: true,
     port: 3000,
     overlay: true,
-    // Uncomment the two lines below to 
+    // Uncomment the two lines below to
     // enable hot reload on mobile
-    host: '172.17.197.80', // Your ip, update it. This is mine.
-    disableHostCheck: true,
-    http2: true,
+    // host: '172.17.197.80', // Your ip, update it. This is mine.
+    // disableHostCheck: true,
+    // http2: true,
   },
   devtool: "cheap-module-eval-source-map",
   module: {
