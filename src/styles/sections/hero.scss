@@ -8,6 +8,7 @@ $screen-right-width: $screen-center-width * 0.8;
 $screen-gap: $screen-height / 30;
 $screen-depth: $table-height * 4.5;
 $screen-y-pos: -1.25 * $table-height;
+$screen-angle: 30deg;
 
 $apply-depth: 40px;
 
@@ -89,7 +90,7 @@ $countdown-width: $screen-left-width/8;
       right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
       width: $screen-left-width;
       transform-origin: right center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(30deg);
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY($screen-angle);
       margin-right: $screen-gap / 2;
     }
     .screen--center {
@@ -108,24 +109,24 @@ $countdown-width: $screen-left-width/8;
       left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
       width: $screen-right-width;
       transform-origin: left center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-30deg);
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-$screen-angle);
       margin-left: $screen-gap / 2;
     }
 
     @media screen and (max-height: 550px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(30deg);}
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY($screen-angle);}
       .screen--center {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(-30deg);}  
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(-$screen-angle);}  
     }
     @media screen and (max-height: 450px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(30deg);}
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY($screen-angle);}
       .screen--center {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(-30deg);}  
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(-$screen-angle);}  
     }
     @media screen and (max-height: 400px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(30deg);}
+      .screen--left {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY($screen-angle);}
       .screen--center {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(-30deg);}  
+      .screen--right  {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(-$screen-angle);}  
     }
 
     .subscreen::before {
@@ -353,6 +354,32 @@ $countdown-width: $screen-left-width/8;
       bottom: 0;
       transform-origin: bottom;
       transform: translate3d(-50%, -4vh, -$table-height*1.5);
+    }
+    $silhoueteBasicTransform: translate3d(-50%, $screen-y-pos*0.25, -$screen-depth*0.6);
+    .silhouette {
+      height: $screen-center-width*0.46;
+      left: 50%;
+      bottom: 0;
+      transform-origin: bottom;
+      transform: $silhoueteBasicTransform;
+    }
+    .silhouette--left-left {
+      height: $screen-center-width*0.47;
+      transform: 
+        $silhoueteBasicTransform
+        translate3d(-0.85*$screen-center-width,0,0);
+    }
+    .silhouette--left-right {
+      transform: 
+        $silhoueteBasicTransform
+        translate3d(-0.65*$screen-center-width,0,0);
+    }
+    .silhouette--right {
+      // height: $screen-center-width*0.4;
+      transform: 
+        $silhoueteBasicTransform
+        translate3d(0.85*$screen-center-width,0,-$screen-depth*0.2)
+        rotateY(-$screen-angle);
     }
 
     // Rocket animation ----------------------
