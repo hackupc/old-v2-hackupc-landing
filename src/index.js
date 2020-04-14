@@ -55,7 +55,7 @@ let betaOrig = 0.5;
 let gammaOrig = 0.5;
 
 let perspectiveX = window.innerWidth/2;
-let perspectiveY = window.innerHeight/4;
+let perspectiveY = window.innerHeight * 0.20;
 
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective);
@@ -119,7 +119,7 @@ function updateHeroPerspective(event) {
 			
 			perspectiveY = 0
 			+ window.pageYOffset 
-			+ window.innerHeight / 4 
+			+ window.innerHeight * 0.20
 			+ 500 * magnet((mod(beta - betaOrig + 0.5) - 0.5) * 2)
 			+ -window.innerHeight/40 * magnet((mouseY - 0.6667) * 2)
 
