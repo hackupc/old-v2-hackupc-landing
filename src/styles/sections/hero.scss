@@ -469,6 +469,65 @@ $countdown-width: $screen-left-width/8;
       to   {opacity:0.75;}
     }
 
+    // Cowsay animation ----------------
+    .cowsay__overlay {
+      position: absolute;
+      top: 5.5%;
+      left: 5%;
+      right: 5%;
+      bottom: 40%;
+      background-color: #33323f;
+      transform-origin: bottom center;
+      transform: scaleY(0);
+
+      $cowsay-time: 3000ms;
+      $cowsay-delay: 2000ms;
+
+      animation: 
+        wait-breakpoint-0 1*$cowsay-time + $cowsay-delay,
+        wait-breakpoint-1 1*$cowsay-time 1*$cowsay-time + $cowsay-delay,
+        show-result-cmd-2  0.2*$cowsay-time 2*$cowsay-time + $cowsay-delay steps(8);
+        
+      $overlay-break-point-0: 0.92;
+      $overlay-break-point-1: 0.82;
+      $overlay-break-point-2: 0.0;
+
+      @keyframes show-cmd-1 {
+        0%  {transform: scaleY($overlay-break-point-0);}
+        100%{transform: scaleY($overlay-break-point-1);}
+      }
+      @keyframes show-result-cmd-2 {
+        0%  {transform: scaleY($overlay-break-point-1);}
+        100%{transform: scaleY($overlay-break-point-2);}
+      }
+      @keyframes wait-breakpoint-0{0%,100%{transform:scaleY($overlay-break-point-0);}}
+      @keyframes wait-breakpoint-1{0%,100%{transform:scaleY($overlay-break-point-1);}}
+
+      .cowsay__overlay--cmd {
+        position: absolute;
+        bottom: 99%;
+        left: 44%;
+        right: 0;
+        top: -11%;
+        transform-origin: center right;
+        background-color: #33323f;
+        transform: scaleX(0);
+        animation: 
+          display-line $cowsay-delay step-end,
+          show-line $cowsay-time $cowsay-delay steps(16,end) 2;
+
+        @keyframes display-line {
+          0%,100% {transform: scaleX(1);}
+        }
+        @keyframes show-line {
+          0%  {transform: scaleX(1);}
+          50%  {transform: scaleX(1);}
+          90% {transform: scaleX(0);}
+          100%{transform: scaleX(0);}
+        }
+      }
+    }
+
     $titleFontSize: $screen-center-width / 11.5;
     // Title screen ----------------------
     .subscreen--title {
