@@ -528,6 +528,30 @@ $countdown-width: $screen-left-width/8;
       }
     }
 
+    // Mug ------------
+    $mug-smoke-height: $table-width*0.035;
+    .object--mug {
+    }
+    .mug-smoke {
+      mask-image: linear-gradient(to top, black, cubic-bezier(.4,.8,.75,1), transparent);
+      position: absolute;
+      bottom: $mug-smoke-height;
+      height: $mug-smoke-height;
+      left: 10%;
+      right: 35%;
+
+      img {
+        opacity: 0.2;
+        animation: smoke-up 3s infinite linear;
+        will-change: translate;
+  
+        @keyframes smoke-up {
+          from {transform: translateY(0);}
+          to   {transform: translateY(-50%);}
+        }
+      }
+    }
+
     $titleFontSize: $screen-center-width / 11.5;
     // Title screen ----------------------
     .subscreen--title {
