@@ -357,7 +357,7 @@ $countdown-width: $screen-left-width/8;
       transform-origin: bottom;
       transform: translate3d(-50%, -4vh, -$table-height*1.5);
     }
-    $silhoueteBasicTransform: translate3d(-50%, $screen-y-pos*0.25, -$screen-depth*0.6);
+    $silhoueteBasicTransform: translate3d(-50%, $screen-y-pos*0.35, -$screen-depth*0.666);
     .silhouette {
       height: $screen-center-width*0.46;
       left: 50%;
@@ -369,7 +369,8 @@ $countdown-width: $screen-left-width/8;
       height: $screen-center-width*0.47;
       transform:
         $silhoueteBasicTransform
-        translate3d(-0.85*$screen-center-width,0,0);
+        translate3d(-0.85*$screen-center-width,0,0)
+        rotateY($screen-angle);
     }
     .silhouette--left-right {
       transform:
@@ -380,8 +381,7 @@ $countdown-width: $screen-left-width/8;
       // height: $screen-center-width*0.4;
       transform:
         $silhoueteBasicTransform
-        translate3d(0.85*$screen-center-width,0,-$screen-depth*0.2)
-        rotateY(-$screen-angle);
+        translate3d(0.81*$screen-center-width,0,0);
     }
 
     // Rocket animation ----------------------
