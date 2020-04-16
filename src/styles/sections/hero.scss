@@ -227,6 +227,7 @@ $countdown-width: $screen-left-width/8;
       transform-origin: bottom center;
       transition: transform 150ms $ease-bounce;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
+      z-index: 1;
     }
 
     .apply-button::before {
