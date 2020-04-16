@@ -302,7 +302,7 @@ $countdown-width: $screen-left-width/8;
     .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height); transition: opacity 100ms $ease-quad;}
     .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
     .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
-    .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%),50%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
+    .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%), 0%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
     .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),49.9%, -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
     .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.89 * $table-width} - 50%),49.9%, -0.32 * $table-height) rotateX(90deg) rotate(4deg);}
 
