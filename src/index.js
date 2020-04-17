@@ -64,7 +64,7 @@ updateHeroPerspective();
 let heroWaitingRefresh = false;
 
 // iOS 13+ device orientation requestPermission
-if (typeof window.DeviceOrientationEvent.requestPermission === 'function') {
+if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
 	heroElem.addEventListener('click', (event) => {
 		if(event.currentTarget !== applyElem){
 			window.DeviceOrientationEvent.requestPermission()
