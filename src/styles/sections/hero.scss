@@ -624,9 +624,8 @@ $countdown-width: $screen-left-width/8;
           position: absolute;
           width: 100%;
           height: 100%;
-          top: 50%;
+          top: 0;
           left: 0;
-          transform: translate(-2em,-0.5em);
           font-size: $countdown-width / 2;
           font-weight: bold;
           will-change: contents;
@@ -635,7 +634,6 @@ $countdown-width: $screen-left-width/8;
         }
 
         .countdown__label {
-          display: inline-block;
           font-size: $countdown-width / 5;
           font-weight: bold;
           text-align: center;
@@ -645,6 +643,7 @@ $countdown-width: $screen-left-width/8;
           color: $c-bg-lighter;
 
           .countdown__label-plural {
+            display: inline-block;
           }
         }
       }
