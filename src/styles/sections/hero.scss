@@ -385,6 +385,45 @@ $countdown-width: $screen-left-width/8;
         translate3d(0.81*$screen-center-width,0,0);
     }
 
+    // Map screen ----------------------
+    .map__pointer{
+      $map-pointer-border-width: 2px;
+
+      position: absolute;
+      left: 25.5%;
+      top: 27%;
+      background-color: transparentize($color: $c-bg-dark, $amount: 0.15);
+      padding: 0.5em 0.75em;
+      border: solid currentColor $map-pointer-border-width;
+      border-radius: 0.25em;
+      line-height: 1;
+      box-sizing: border-box;
+      font-size: 0.03*$screen-height;
+      white-space: nowrap;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 2px);
+        right: calc(100% - 2px);
+        height: $map-pointer-border-width;
+        width: 0.1*$screen-height;
+        transform-origin: bottom right;
+        transform: rotate(-45deg);
+        background-color: currentColor;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% - 2px + #{0.07*$screen-height});
+        right: calc(100% - 2px + #{0.07*$screen-height});
+        height: 0.02*$screen-height;
+        width: 0.02*$screen-height;
+        box-sizing: border-box;
+        border: solid currentColor $map-pointer-border-width;
+      }
+    }
     // Rocket animation ----------------------
 
     $rocketLunchDuration: 4s;
