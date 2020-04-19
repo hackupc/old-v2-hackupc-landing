@@ -493,6 +493,8 @@ $countdown-width: $screen-left-width/8;
             stroke-width: 3px;
             stroke-linejoin: round;
             stroke-linecap: round;
+            transition: d 1s cubic-bezier(0, 0, 0.3333, 1);
+            will-change: d;
           }
           .plot__plot-line--1 { color: #964ac6; }
           .plot__plot-line--2 { color: #39a5b7; }

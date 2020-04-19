@@ -257,30 +257,12 @@ const plotLines = [
 	document.getElementsByClassName('plot__plot-line--4')[0],
 ];
 
-for (const plotLine of plotLines) {
-	plotLine.innerHTML = ''
-		+ generateAnimateTag()
-		+ generateAnimateTag()
-		+ generateAnimateTag()
-		+ generateAnimateTag()
-		+ generateAnimateTag();
-}
-
-const plotLinesAnimates = [
-	document.querySelectorAll('.plot__plot-line--1 animate'),
-	document.querySelectorAll('.plot__plot-line--2 animate'),
-	document.querySelectorAll('.plot__plot-line--3 animate'),
-	document.querySelectorAll('.plot__plot-line--4 animate'),
-]
-const plotLinesAnimatesIndex = [0,0,0,0];
-
 for (const i in plotLines) {
 	animatePlotLine(i);
 }
 
 function animatePlotLine(i){
-	plotLinesAnimatesIndex[i] = (plotLinesAnimatesIndex[i] + 1) % plotLinesAnimates[i].length;
-	plotLinesAnimates[i][plotLinesAnimatesIndex[i]].beginElement();
+	plotLines[i].style.d = `path("${generatePattern()}")`;
 
 	setTimeout(() => {
 		animatePlotLine(i);
@@ -288,6 +270,9 @@ function animatePlotLine(i){
 }
 
 function generatePattern(){
+	// If you want to understand whow the curve is build read this article:
+	// https://css-tricks.com/svg-path-syntax-illustrated-guide/
+
 	let pattern = `M ${plotWidth},${Math.floor(Math.random()*100.99)}`;
 
 	for (let i = plotLinesSteps-1; i >= 0 ; i--) {
@@ -297,8 +282,4 @@ function generatePattern(){
 		pattern += ` S ${x+plotHandle},${y} ${x},${y}`;
 	}
 	return pattern;
-}
-
-function generateAnimateTag(){
-	return `<animate to="${generatePattern()}" dur="500ms" begin="indefinite" attributeName="d" fill="freeze"/>`
 }
