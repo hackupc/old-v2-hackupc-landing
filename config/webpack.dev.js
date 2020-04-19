@@ -59,9 +59,8 @@ module.exports = {
         use: {
           loader: "html-loader",
           options: {
-            attrs: ["img:src", ":data-src"],
-            minimize: true,
-            scriptLoading: 'defer'
+            attributes: true,
+            minimize: true
           }
         }
       }
