@@ -243,3 +243,60 @@ duckElem.addEventListener('click', (event) => {
 		}, 200);
 	}, 1000);
 });
+
+// Plot animation 
+
+const plotLinesSteps = 5;
+const plotWidth = 200;
+
+const plotLines = [
+	document.getElementsByClassName('plot__plot-line--1')[0],
+	document.getElementsByClassName('plot__plot-line--2')[0],
+	document.getElementsByClassName('plot__plot-line--3')[0],
+	document.getElementsByClassName('plot__plot-line--4')[0],
+];
+
+for (const plotLine of plotLines) {
+	plotLine.innerHTML = ''
+		+ generateAnimateTag()
+		+ generateAnimateTag()
+		+ generateAnimateTag()
+		+ generateAnimateTag()
+		+ generateAnimateTag();
+}
+
+const plotLinesAnimates = [
+	document.querySelectorAll('.plot__plot-line--1 animate'),
+	document.querySelectorAll('.plot__plot-line--2 animate'),
+	document.querySelectorAll('.plot__plot-line--3 animate'),
+	document.querySelectorAll('.plot__plot-line--4 animate'),
+]
+const plotLinesAnimatesIndex = [0,0,0,0];
+
+for (const i in plotLines) {
+	animatePlotLine(i);
+}
+
+function animatePlotLine(i){
+	plotLinesAnimatesIndex[i] = (plotLinesAnimatesIndex[i] + 1) % plotLinesAnimates[i].length;
+	plotLinesAnimates[i][plotLinesAnimatesIndex[i]].beginElement();
+
+	setTimeout(() => {
+		animatePlotLine(i);
+	}, Math.random()*5000+5500);
+}
+
+function generatePattern(){
+	let pattern = '';
+	for (let i = 0; i <= plotLinesSteps; i++) {
+		pattern += ' ' 
+			+ Math.floor(plotWidth/plotLinesSteps*i) 
+			+ ',' 
+			+ Math.floor(Math.random()*100.99);
+	}
+	return pattern;
+}
+
+function generateAnimateTag(){
+	return `<animate to="${generatePattern()}" dur="500ms" begin="indefinite" attributeName="points" fill="freeze"/>`
+}

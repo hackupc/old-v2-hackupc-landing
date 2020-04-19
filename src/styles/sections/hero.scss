@@ -424,6 +424,85 @@ $countdown-width: $screen-left-width/8;
         border: solid currentColor $map-pointer-border-width;
       }
     }
+
+    // Map screen ----------------------
+
+    .subscreen--plots {
+      $plot-icon-width: 0.08*$screen-height;
+
+      display: grid;
+      grid-template: min-content 1fr 1fr / repeat(4, 1fr);
+      grid-template-areas: 
+        'ico1 ico2 ico3 ico4'
+        'bar1 bar2 bar3 bar4'
+        'plot plot plot plot';
+      padding: 1rem;
+      gap: 1rem;
+      place-items: center;
+      place-content: center;
+
+      .plot__ico{
+        background-color: $c-bg-lighter;
+        border-radius: 100%;
+        padding: 10%;
+        width: $plot-icon-width;
+        height: $plot-icon-width;
+        box-sizing: border-box;
+      }
+
+      .plot__bar {
+        height: 100%;
+        background-color: $c-bg-lighter;
+        opacity: 0.6667;
+        border-radius: 0.5rem;
+        width: 0.8*$plot-icon-width;
+      }
+
+      .plot__plot{
+        grid-area: plot;
+        color: $c-bg-lighter;
+        border: solid 2px currentColor;
+        border-top: transparent;
+        border-right: transparent;
+        width: 100%;
+        height: 100%;
+
+        &::before{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: calc(100% + 1px);
+          width: 0.15*$plot-icon-width;
+          height: 0.15*$plot-icon-width;
+          border: solid 2px currentColor;
+          border-left: none;
+          border-bottom: none;
+          transform-origin: top right;
+          transform: rotate(45deg);
+          box-sizing: border-box;
+        }
+
+        .plot__plot-lines{
+          height: 100%;
+          width: 100%;
+          overflow: visible;
+
+          .plot__plot-line {
+            fill:none;
+            stroke:currentColor;
+            stroke-width: 3px;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+          }
+          .plot__plot-line--1 { color: #964ac6; }
+          .plot__plot-line--2 { color: #39a5b7; }
+          .plot__plot-line--3 { color: #b4426f; }
+          .plot__plot-line--4 { color: #522dc8; }
+        }
+      }
+    }
+
+
     // Rocket animation ----------------------
 
     $rocketLunchDuration: 4s;
