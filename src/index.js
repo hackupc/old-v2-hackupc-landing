@@ -248,6 +248,7 @@ duckElem.addEventListener('click', (event) => {
 
 const plotLinesSteps = 5;
 const plotWidth = 200;
+const plotHandle = plotWidth/plotLinesSteps/3;
 
 const plotLines = [
 	document.getElementsByClassName('plot__plot-line--1')[0],
@@ -287,16 +288,17 @@ function animatePlotLine(i){
 }
 
 function generatePattern(){
-	let pattern = '';
-	for (let i = 0; i <= plotLinesSteps; i++) {
-		pattern += ' ' 
-			+ Math.floor(plotWidth/plotLinesSteps*i) 
-			+ ',' 
-			+ Math.floor(Math.random()*100.99);
+	let pattern = `M ${plotWidth},${Math.floor(Math.random()*100.99)}`;
+
+	for (let i = plotLinesSteps-1; i >= 0 ; i--) {
+		let x = Math.floor(plotWidth/plotLinesSteps*i);
+		let y = Math.floor(Math.random()*100.99);
+
+		pattern += ` S ${x+plotHandle},${y} ${x},${y}`;
 	}
 	return pattern;
 }
 
 function generateAnimateTag(){
-	return `<animate to="${generatePattern()}" dur="500ms" begin="indefinite" attributeName="points" fill="freeze"/>`
+	return `<animate to="${generatePattern()}" dur="500ms" begin="indefinite" attributeName="d" fill="freeze"/>`
 }
