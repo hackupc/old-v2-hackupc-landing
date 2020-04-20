@@ -5,26 +5,20 @@ body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.25);
 }
 .content__wrapper {
-  min-height: 10rem;
+  min-height: 30rem;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  padding: 1rem;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
 }
 .section {
-  background: $c-bg-light;
-
-
-  h2 {
-    margin: 0 0 1rem;
-    text-transform: uppercase;
-  }
-}
-
-.section--footer {
   background: $c-bg-dark;
 
+
   h2 {
-    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
   }
 }
