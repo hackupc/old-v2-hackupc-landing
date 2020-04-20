@@ -40,17 +40,17 @@ $countdown-width: $screen-left-width/8;
     pointer-events: none;
     will-change: perspective-origin;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -30px;
-      right: -30px;
-      height: 30px;
-      background-color: darken($c-bg-light, 8%);
-      transform: rotateX(90deg);
-      transform-origin: bottom center;
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: -30px;
+    //   right: -30px;
+    //   height: 30px;
+    //   background-color: darken($c-bg-light, 8%);
+    //   transform: rotateX(90deg);
+    //   transform-origin: bottom center;
+    // }
 
     & > * {
       position: absolute;
