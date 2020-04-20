@@ -1,40 +1,38 @@
 $table-width: 1000px;
 $table-height: $table-width * 0.2;
 
-$screen-height: 60vh;
-$screen-center-width: $screen-height * 3/2;
-$screen-left-width: $screen-center-width * 0.8;
-$screen-right-width: $screen-center-width * 0.8;
-$screen-gap: $screen-height / 30;
-$screen-depth: $table-height * 4.5;
-$screen-y-pos: -1 * $table-height;
-$screen-angle: 30deg;
-
 $apply-depth: 40px;
 
-$countdown-width: $screen-left-width/8;
-
 .section--hero {
+  --hero-height: 100vh;
+  --screen-height: calc(0.8 * var(--hero-height));
+  --screen-center-width: calc(var(--screen-height) * 3 / 2);
+  --screen-gap: calc(var(--screen-height) / 30);
+
+  --screen-depth: 900px; // 4.5 * $table-height
+  --screen-y-pos: -150px; // -0.75 * $table-height
+  --screen-angle: 22.5deg;
+
   // perspective: 100rem;
   background-color: $c-bg-dark;
-  // 4rem for the bottom gap
-  // 3rem for the nav heigth
-  // height: calc(100vh - 4rem - 3rem);
-  // height: calc((var(--vh, 1vh) * 100) - 4rem - 3rem);
-  height: 800px;
-  // max-height: calc((var(--vh, 1vh) * 100) - 2rem);
-  // max-height: calc(100vh - 2rem);
-  // max-height: 90vh;
-  max-height: calc(var(--vh, 1vh) * 100);
+  height: 900px;
+  max-height: 100vh;
   max-width: unset;
   overflow: hidden;
+
+  @media screen and (min-height: 900px) {
+    --hero-height: 900px;
+  }
+  @media screen and (max-width: 600px) {
+    --screen-height: calc(115vw);
+  }
 
   .hero-3d-space{
     perspective: 1000px;
     box-sizing: border-box;
     position: relative;
     transform-style: preserve-3d;
-    perspective-origin: 50% 20vh;
+    perspective-origin: 50% calc(var(--screen-height) / 4);
     height: 100%;
     width: 100%;
     pointer-events: none;
@@ -75,9 +73,9 @@ $countdown-width: $screen-left-width/8;
       background-color: $c-bg-light;
     }
     .screen {
-      height: $screen-height;
+      height: var(--screen-height);
       display: grid;
-      gap: $screen-gap;
+      gap: var(--screen-gap);
       overflow: hidden;
 
       & img { // TODO: remove
@@ -90,18 +88,18 @@ $countdown-width: $screen-left-width/8;
     .screen--left {
       grid-template-columns: 5fr 1fr;
       bottom: 0;
-      right: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
-      width: $screen-left-width;
+      right: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
+      width: calc(var(--screen-center-width) * 0.8);
       transform-origin: right center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY($screen-angle);
-      margin-right: $screen-gap / 2;
+      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));
+      margin-right: calc(var(--screen-gap) / 2);
     }
     .screen--center {
       bottom: 0;
-      left: calc(50% - #{$screen-center-width / 2});
-      width: $screen-center-width;
+      left: calc(50% - var(--screen-center-width) / 2);
+      width: var(--screen-center-width);
       transform-origin: center center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth);
+      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth)));
     }
     .screen--right  {
       grid-template: 2fr 5fr / 1fr 1fr;
@@ -109,27 +107,27 @@ $countdown-width: $screen-left-width/8;
       'top top'
       'left right';
       bottom: 0;
-      left: calc(50% + #{$screen-center-width / 2 + $screen-gap / 2});
-      width: $screen-right-width;
+      left: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
+      width: calc(var(--screen-center-width) * 0.8);
       transform-origin: left center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-$screen-angle);
-      margin-left: $screen-gap / 2;
+      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));
+      margin-left: calc(var(--screen-gap) / 2);
     }
 
     @media screen and (max-height: 550px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.8,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
+      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth)));}
+      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
     }
     @media screen and (max-height: 450px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.75,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
+      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth)));}
+      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
     }
     @media screen and (max-height: 400px) {
-      .screen--left {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos*0.7,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
+      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth)));}
+      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
     }
 
     .subscreen::before {
@@ -138,7 +136,7 @@ $countdown-width: $screen-left-width/8;
       top: 100%;
       left: 0;
       right: 0;
-      height: $screen-gap * 2;
+      height: calc(var(--screen-gap) * 2);
       background-color: darken($c-bg-light, 8%);
       transform: rotateX(-90deg);
       transform-origin: top center;
@@ -150,7 +148,7 @@ $countdown-width: $screen-left-width/8;
       position: absolute;
       top: 0;
       bottom: 0;
-      width: $screen-gap * 2;
+      width: calc(var(--screen-gap) * 2);
       background-color: darken($c-bg-light, 8%);
     }
     .screen--left .subscreen::after {
@@ -179,11 +177,11 @@ $countdown-width: $screen-left-width/8;
     }
     .table-front {
       bottom: 0;
-      transform: translate3d(0,-10vh,0px) rotateX(90deg);
+      transform: translate3d(0,calc(-0.1 * var(--hero-height)),0px) rotateX(90deg);
     }
     .table-back {
       bottom: 0;
-      transform: translate3d(0,-10vh,-$table-height*2) rotateX(90deg);
+      transform: translate3d(0,calc(-0.1 * var(--hero-height)),-$table-height * 2) rotateX(90deg);
     }
     .table-backface{
       background-color: transparent;
@@ -225,7 +223,7 @@ $countdown-width: $screen-left-width/8;
       white-space: nowrap;
       position: relative;
       display: inline-block;
-      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2);
+      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth / 2);
       transform-origin: bottom center;
       transition: transform 150ms $ease-bounce;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -262,7 +260,7 @@ $countdown-width: $screen-left-width/8;
       transform: rotateY(-90deg);
     }
     .apply-button:active {
-      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth/2) scale3d(1.2, 0.8, 1.2);
+      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth / 2) scale3d(1.2, 0.8, 1.2);
     }
 
     // Objects ----------------------
@@ -272,7 +270,7 @@ $countdown-width: $screen-left-width/8;
       background-color: transparent;
       bottom: 0;
       right: 0;
-      transform: translate3d(0, -10vh,-80px);
+      transform: translate3d(0, calc(-0.1 * var(--hero-height)),-80px);
       transform-origin: bottom center;
       text-rendering: optimizeLegibility;
       font-smoothing: subpixel-antialiased;
@@ -283,8 +281,8 @@ $countdown-width: $screen-left-width/8;
         left: 0;
       }
     }
-    .objects-front { transform: translate3d(0, -10vh, -0 * $table-height); }
-    .objects-back  { transform: translate3d(0, -10vh, -2 * $table-height); }
+    .objects-front { transform: translate3d(0, calc(-0.1 * var(--hero-height)), -0 * $table-height); }
+    .objects-back  { transform: translate3d(0, calc(-0.1 * var(--hero-height)), -2 * $table-height); }
 
     $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
     $glitchBaseTransform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);
@@ -357,33 +355,33 @@ $countdown-width: $screen-left-width/8;
       left: 50%;
       bottom: 0;
       transform-origin: bottom;
-      transform: translate3d(-50%, -4vh, -$table-height*1.5);
+      transform: translate3d(-50%, calc(-0.04 * var(--hero-height)), -$table-height * 1.5);
     }
-    $silhoueteBasicTransform: translate3d(-50%, $screen-y-pos*0.35, -$screen-depth*0.666);
+    $silhoueteBasicTransform: translate3d(-50%, calc(-0.5 * var(--screen-y-pos)), calc(-1 * var(--screen-depth) * 0.666));
     .silhouette {
-      height: $screen-center-width*0.46;
+      height: calc(var(--screen-center-width) * 0.46);
       left: 50%;
       bottom: 0;
       transform-origin: bottom;
       transform: $silhoueteBasicTransform;
     }
     .silhouette--left-left {
-      height: $screen-center-width*0.47;
+      height: calc(var(--screen-center-width) * 0.47);
       transform:
         $silhoueteBasicTransform
-        translate3d(-0.85*$screen-center-width,0,0)
-        rotateY($screen-angle);
+        translate3d(calc(-0.85 * var(--screen-center-width)),0,0)
+        rotateY(var(--screen-angle));
     }
     .silhouette--left-right {
       transform:
         $silhoueteBasicTransform
-        translate3d(-0.65*$screen-center-width,0,0);
+        translate3d(calc(-0.65 * var(--screen-center-width)),0,0);
     }
     .silhouette--right {
-      // height: $screen-center-width*0.4;
+      // height: calc(var(--screen-center-width) * 0.4);
       transform:
         $silhoueteBasicTransform
-        translate3d(0.81*$screen-center-width,0,0);
+        translate3d(calc(0.81 * var(--screen-center-width)),0,0);
     }
 
     // Map screen ----------------------
@@ -399,7 +397,7 @@ $countdown-width: $screen-left-width/8;
       border-radius: 0.25em;
       line-height: 1;
       box-sizing: border-box;
-      font-size: 0.03*$screen-height;
+      font-size: calc(0.03 * var(--screen-height));
       white-space: nowrap;
 
       &::before {
@@ -408,7 +406,7 @@ $countdown-width: $screen-left-width/8;
         top: calc(100% - 2px);
         right: calc(100% - 2px);
         height: $map-pointer-border-width;
-        width: 0.1*$screen-height;
+        width: calc(0.1 * var(--screen-height));
         transform-origin: bottom right;
         transform: rotate(-45deg);
         background-color: currentColor;
@@ -417,10 +415,10 @@ $countdown-width: $screen-left-width/8;
       &::after {
         content: '';
         position: absolute;
-        top: calc(100% - 2px + #{0.07*$screen-height});
-        right: calc(100% - 2px + #{0.07*$screen-height});
-        height: 0.02*$screen-height;
-        width: 0.02*$screen-height;
+        top: calc(100% - 2px + 0.07 * var(--screen-height));
+        right: calc(100% - 2px + 0.07 * var(--screen-height));
+        height: calc(0.02 * var(--screen-height));
+        width: calc(0.02 * var(--screen-height));
         box-sizing: border-box;
         border: solid currentColor $map-pointer-border-width;
       }
@@ -429,7 +427,7 @@ $countdown-width: $screen-left-width/8;
     // Map screen ----------------------
 
     .subscreen--plots {
-      $plot-icon-width: 0.08*$screen-height;
+      --plot-icon-width: calc(0.08 * var(--screen-height));
 
       display: grid;
       grid-template: min-content 1fr 1fr / repeat(4, 1fr);
@@ -446,8 +444,8 @@ $countdown-width: $screen-left-width/8;
         background-color: $c-bg-lighter;
         border-radius: 100%;
         padding: 10%;
-        width: $plot-icon-width;
-        height: $plot-icon-width;
+        width: var(--plot-icon-width);
+        height: var(--plot-icon-width);
         box-sizing: border-box;
       }
 
@@ -456,7 +454,7 @@ $countdown-width: $screen-left-width/8;
         background-color: $c-bg-lighter;
         opacity: 0.6667;
         border-radius: 0.5rem;
-        width: 0.8*$plot-icon-width;
+        width: calc(0.8 * var(--plot-icon-width));
 
         .plot__bar-content{
           height: 100%;
@@ -490,8 +488,8 @@ $countdown-width: $screen-left-width/8;
           position: absolute;
           right: 0;
           top: calc(100% + 1px);
-          width: 0.15*$plot-icon-width;
-          height: 0.15*$plot-icon-width;
+          width: calc(0.15 * var(--plot-icon-width));
+          height: calc(0.15 * var(--plot-icon-width));
           border: solid 2px currentColor;
           border-left: none;
           border-bottom: none;
@@ -534,7 +532,7 @@ $countdown-width: $screen-left-width/8;
       transform-origin: center bottom;
       animation:
         rocket-lunch $rocketLunchDuration $ease-quad-in,
-        rocket-shake ($rocketLunchDuration/100*2) $rocketLunchDuration linear infinite,
+        rocket-shake ($rocketLunchDuration / 100 * 2) $rocketLunchDuration linear infinite,
         rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
         rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
     }
@@ -548,7 +546,7 @@ $countdown-width: $screen-left-width/8;
       transform-origin: center top;
       opacity: 0;
       animation:
-      rocket-fire ($rocketLunchDuration/100*2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
+      rocket-fire ($rocketLunchDuration / 100 * 2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
       rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
     }
 
@@ -574,7 +572,7 @@ $countdown-width: $screen-left-width/8;
 
     @keyframes rocket-fly {
       from {transform: translateY(0);}
-      to   {transform: translateY(-100vh);}
+      to   {transform: translateY(calc(-1 * var(--hero-height)));}
     }
 
     @keyframes rocket-fire {
@@ -624,9 +622,9 @@ $countdown-width: $screen-left-width/8;
       $cowsay-delay: 2000ms;
 
       animation: 
-        wait-breakpoint-0 1*$cowsay-time + $cowsay-delay,
-        wait-breakpoint-1 1*$cowsay-time 1*$cowsay-time + $cowsay-delay,
-        show-result-cmd-2  0.2*$cowsay-time 2*$cowsay-time + $cowsay-delay steps(8);
+        wait-breakpoint-0 1 * $cowsay-time + $cowsay-delay,
+        wait-breakpoint-1 1 * $cowsay-time 1 * $cowsay-time + $cowsay-delay,
+        show-result-cmd-2  0.2 * $cowsay-time 2 * $cowsay-time + $cowsay-delay steps(8);
         
       $overlay-break-point-0: 0.92;
       $overlay-break-point-1: 0.82;
@@ -669,7 +667,7 @@ $countdown-width: $screen-left-width/8;
     }
 
     // Mug ------------
-    $mug-smoke-height: $table-width*0.035;
+    $mug-smoke-height: $table-width * 0.035;
     .object--mug {
     }
     .mug-smoke {
@@ -692,14 +690,13 @@ $countdown-width: $screen-left-width/8;
       }
     }
 
-    $titleFontSize: $screen-center-width / 11.5;
     // Title screen ----------------------
     .subscreen--title {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-size: $titleFontSize;
+      font-size: calc(var(--screen-center-width) / 11.5);
       text-transform: uppercase;
       line-height: 0.75;
       white-space: nowrap;
@@ -715,12 +712,12 @@ $countdown-width: $screen-left-width/8;
       }
       .title__more-info {
         font-weight: 600;
-        font-size: 0.6667 * $titleFontSize;
+        font-size: 0.6667em;
         margin: 0;
-        margin-top: 0.5 * $titleFontSize;
+        margin-top: 0.75em;
         display: flex;
         justify-content: space-between;
-        width: 10.25 * $titleFontSize;
+        width: 15.375em;
 
 
         .title__hackers {
@@ -732,29 +729,30 @@ $countdown-width: $screen-left-width/8;
       }
       .title__date {
         margin: 0;
-        margin-top: 1 * $titleFontSize;
+        margin-top: 1em;
         font-size: 1em;
         font-weight: 600;
-        letter-spacing: 0.1 * $titleFontSize;
+        letter-spacing: 0.1em;
       }
     }
 
     // Countdown screen ----------------------
     .countdown {
+      --countdown-width: calc(var(--screen-center-width) * 0.8 / 8);
       height: 100%;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       box-sizing: border-box;
-      padding: $screen-height/30 0;
+      padding: calc(var(--screen-height) / 30) 0;
 
       .countdown__cell {
 
         .countdown__circle {
           background-color: $c-bg-dark;
           display: block;
-          width: $countdown-width;
-          height: $countdown-width;
+          width: var(--countdown-width);
+          height: var(--countdown-width);
           border-radius: 100%;
           margin: auto;
           position: relative;
@@ -765,18 +763,18 @@ $countdown-width: $screen-left-width/8;
           height: 100%;
           top: 0;
           left: 0;
-          font-size: $countdown-width / 2;
+          font-size: calc(var(--countdown-width) / 2);
           font-weight: bold;
           will-change: contents;
-          line-height: $countdown-width;
+          line-height: var(--countdown-width);
           text-align: center;
         }
 
         .countdown__label {
-          font-size: $countdown-width / 5;
+          font-size: calc(var(--countdown-width) / 5);
           font-weight: bold;
           text-align: center;
-          margin: $countdown-width / 10 auto 0;
+          margin: calc(var(--countdown-width) / 10) auto 0;
           white-space: nowrap;
           text-transform: uppercase;
           color: $c-bg-lighter;
@@ -803,21 +801,21 @@ $countdown-width: $screen-left-width/8;
       .wanted__sign {
         display: block;
         margin: 0.66em 0;
-        font-size: $screen-height/14;
+        font-size: calc(var(--screen-height) / 14);
         font-weight: 800;
         color: $c-bg-lighter;
       }
       .wanted__list {
         display: flex;
         background-color: #483a7b;
-        border-radius: $screen-height/25;
-        padding: $screen-height/90 $screen-height/45;
+        border-radius: calc(var(--screen-height) / 25);
+        padding: calc(var(--screen-height) / 90) calc(var(--screen-height) / 45);
         position: relative;
 
         .wanted__duck-silhouette {
-          height: $screen-height/18;
+          height: calc(var(--screen-height) / 18);
           width: auto;
-          margin: $screen-height/150;
+          margin: calc(var(--screen-height) / 150);
           opacity: 0.4;
         }
         .wanted__duck-silhouette--missing {
@@ -830,7 +828,7 @@ $countdown-width: $screen-left-width/8;
           right: 10%;
           width: 120%;
           text-align: center;
-          font-size: $screen-height/30;
+          font-size: calc(var(--screen-height) / 30);
           white-space: nowrap;
           font-weight: bold;
           letter-spacing: 0.1em;
@@ -838,7 +836,7 @@ $countdown-width: $screen-left-width/8;
           text-transform: uppercase;
           display: block;
           transform: translateY(-100%) scale(1);
-          padding: $screen-height/45 0 ;
+          padding: 0.6667em 0 ;
           opacity: 0;
           transition: transform 200ms ease-out, opacity 200ms ease-out;
         }
@@ -856,7 +854,7 @@ $countdown-width: $screen-left-width/8;
 
       }
       @keyframes found-duck-scale-down {
-        from {transform: translateZ($screen-height/2) scale(50);}
+        from {transform: translateZ(250px) scale(50);}
         to   {transform: none;}
       }
       @keyframes found-duck-fade-in {
