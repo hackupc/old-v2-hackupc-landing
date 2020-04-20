@@ -24,7 +24,8 @@ $countdown-width: $screen-left-width/8;
   height: 800px;
   // max-height: calc((var(--vh, 1vh) * 100) - 2rem);
   // max-height: calc(100vh - 2rem);
-  max-height: 90vh;
+  // max-height: 90vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   max-width: unset;
   overflow: hidden;
 
