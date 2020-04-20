@@ -248,7 +248,7 @@ duckElem.addEventListener('click', (event) => {
 
 const plotLinesSteps = 5;
 const plotWidth = 200;
-const plotHandle = plotWidth/plotLinesSteps/3;
+const plotHandle = Math.floor(plotWidth/plotLinesSteps/3);
 
 const plotLines = [
 	document.getElementsByClassName('plot__plot-line--1')[0],
@@ -273,13 +273,13 @@ function generatePattern(){
 	// If you want to understand whow the curve is build read this article:
 	// https://css-tricks.com/svg-path-syntax-illustrated-guide/
 
-	let pattern = `M ${plotWidth},${Math.floor(Math.random()*100.99)}`;
+	let pattern = `M${plotWidth},${Math.floor(Math.random()*100.99)}`;
 
 	for (let i = plotLinesSteps-1; i >= 0 ; i--) {
 		let x = Math.floor(plotWidth/plotLinesSteps*i);
 		let y = Math.floor(Math.random()*100.99);
 
-		pattern += ` S ${x+plotHandle},${y} ${x},${y}`;
+		pattern += ` S${x+plotHandle},${y} ${x},${y}`;
 	}
 	return pattern;
 }
