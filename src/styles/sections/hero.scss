@@ -456,6 +456,23 @@ $countdown-width: $screen-left-width/8;
         opacity: 0.6667;
         border-radius: 0.5rem;
         width: 0.8*$plot-icon-width;
+
+        .plot__bar-content{
+          height: 100%;
+          width: 150%;
+          margin: 0 -25%;
+          background-color: currentColor;
+          transform: scaleY(0.5);
+          transform-origin: bottom center;
+          border-radius: inherit;
+          opacity: 0.75;
+          transition: transform 1s cubic-bezier(0, 0, 0.3333, 1);
+          will-change: transform;
+        }
+        .plot__bar-content--1{color: #964ac6;}
+        .plot__bar-content--2{color: #39a5b7;}
+        .plot__bar-content--3{color: #b4426f;}
+        .plot__bar-content--4{color: #522dc8;}
       }
 
       .plot__plot{
@@ -472,7 +489,7 @@ $countdown-width: $screen-left-width/8;
           position: absolute;
           right: 0;
           top: calc(100% + 1px);
-          width: 0.15*$plot-icon-width;
+          width: 0.25*$plot-icon-width;
           height: 0.15*$plot-icon-width;
           border: solid 2px currentColor;
           border-left: none;

@@ -256,6 +256,12 @@ const plotLines = [
 	document.getElementsByClassName('plot__plot-line--3')[0],
 	document.getElementsByClassName('plot__plot-line--4')[0],
 ];
+const barContents = [
+	document.getElementsByClassName('plot__bar-content--1')[0],
+	document.getElementsByClassName('plot__bar-content--2')[0],
+	document.getElementsByClassName('plot__bar-content--3')[0],
+	document.getElementsByClassName('plot__bar-content--4')[0],
+];
 
 for (const i in plotLines) {
 	animatePlotLine(i);
@@ -263,6 +269,7 @@ for (const i in plotLines) {
 
 function animatePlotLine(i){
 	plotLines[i].style.d = `path("${generatePattern()}")`;
+	barContents[i].style.transform = `scaleY(${Math.random()})`;
 
 	setTimeout(() => {
 		animatePlotLine(i);
