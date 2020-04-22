@@ -19,3 +19,4 @@ Cool cookies banner:
 - https://speckyboy.com/
 - https://designmodo.com/
 - https://jetbrains.com/
+- https://www.thegamer.com/
