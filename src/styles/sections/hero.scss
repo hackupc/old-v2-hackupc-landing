@@ -27,7 +27,7 @@ $apply-depth: 40px;
     --screen-height: calc(115vw);
   }
 
-  .hero-3d-space{
+  .hero-3d-space {
     perspective: 1000px;
     box-sizing: border-box;
     position: relative;
@@ -35,7 +35,7 @@ $apply-depth: 40px;
     perspective-origin: 50% calc(var(--screen-height) / 4);
     height: 100%;
     width: 100%;
-    pointer-events: none;
+    // pointer-events: none;
     will-change: perspective-origin;
 
     // &::after {
@@ -431,7 +431,7 @@ $apply-depth: 40px;
 
       display: grid;
       grid-template: min-content 1fr 1fr / repeat(4, 1fr);
-      grid-template-areas: 
+      grid-template-areas:
         'ico1 ico2 ico3 ico4'
         'bar1 bar2 bar3 bar4'
         'plot plot plot plot';
@@ -621,11 +621,11 @@ $apply-depth: 40px;
       $cowsay-time: 3000ms;
       $cowsay-delay: 2000ms;
 
-      animation: 
+      animation:
         wait-breakpoint-0 1 * $cowsay-time + $cowsay-delay,
         wait-breakpoint-1 1 * $cowsay-time 1 * $cowsay-time + $cowsay-delay,
         show-result-cmd-2  0.2 * $cowsay-time 2 * $cowsay-time + $cowsay-delay steps(8);
-        
+
       $overlay-break-point-0: 0.92;
       $overlay-break-point-1: 0.82;
       $overlay-break-point-2: 0.0;
@@ -650,7 +650,7 @@ $apply-depth: 40px;
         transform-origin: center right;
         background-color: #33323f;
         transform: scaleX(0);
-        animation: 
+        animation:
           display-line $cowsay-delay step-end,
           show-line $cowsay-time $cowsay-delay steps(16,end) 2;
 
@@ -683,7 +683,7 @@ $apply-depth: 40px;
         opacity: 0.2;
         animation: smoke-up 3s infinite linear;
         will-change: translate;
-  
+
         @keyframes smoke-up {
           from {transform: translateY(0);}
           to   {transform: translateY(-50%);}
