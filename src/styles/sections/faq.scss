@@ -39,19 +39,37 @@
 
 .faq__question {
   margin: 1rem 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.075);
   border-radius: $border-radius;
   padding: 1rem;
   padding-bottom: 0;
   text-align: left;
-  transition: padding-bottom 200ms $ease-quad;
+  transition: 
+    padding-bottom 200ms $ease-quad,
+    box-shadow 200ms $ease-bounce,
+    background-color 0.5s $ease-quad;
+
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3333);
 
   &:first-child {
     margin-top: 0;
   }
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.3333);
+  }
+  &:active {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3333);
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 
+    padding-bottom 200ms $ease-quad,
+    box-shadow 200ms $ease-bounce,
+    background-color 0s $ease-quad;
   }
 }
 
@@ -70,6 +88,7 @@ $faq-arrow-angle: 40deg;
   cursor: pointer;
   border-radius: $border-radius;
   position: relative;
+  outline: none;
 
   &::before,
   &::after{
