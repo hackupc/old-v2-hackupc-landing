@@ -301,15 +301,18 @@ for (const faqQuestionTitleElem of faqQuestionTitleElems) {
 	faqQuestionTitleElem.addEventListener('click', function(event) {
 		const faqQuestionElem = this.closest('.faq__question');
 		const faqAnswerElem = faqQuestionElem.querySelector('.faq__question-answer');
-
-		faqQuestionElem.classList.toggle('faq__question--expanded');
+		// const faqLinksElems = faqQuestionElem.querySelectorAll('a');
 
     if (faqQuestionTitleElem.getAttribute('aria-expanded') === 'true') {
-			faqAnswerElem.style.maxHeight = null;
+			faqQuestionElem.classList.remove('faq__question--expanded');
 			faqQuestionTitleElem.setAttribute('aria-expanded', 'false');
+			faqAnswerElem.setAttribute('aria-hidden', 'true');
+			faqAnswerElem.style.maxHeight = null;
     } else {
-			faqAnswerElem.style.maxHeight = faqAnswerElem.scrollHeight + "px";
+			faqQuestionElem.classList.add('faq__question--expanded');
+			faqAnswerElem.setAttribute('aria-hidden', 'false');
 			faqQuestionTitleElem.setAttribute('aria-expanded', 'true');
+			faqAnswerElem.style.maxHeight = `${faqAnswerElem.scrollHeight}px`;
     }
 	});
 }
