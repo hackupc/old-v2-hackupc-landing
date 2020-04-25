@@ -82,7 +82,7 @@ $faq-arrow-angle: 40deg;
   margin: -1rem;
   padding: 1rem 4rem 1rem 1rem;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1;
   text-align: inherit;
   width: calc(100% + 2rem);
@@ -90,6 +90,7 @@ $faq-arrow-angle: 40deg;
   border-radius: $border-radius;
   position: relative;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &::before,
   &::after{
