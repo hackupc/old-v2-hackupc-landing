@@ -14,3 +14,12 @@ img::selection{
 p {
   line-height: 1.6667;
 }
+
+// Pollyfill for :focus-visible
+// Disable focus by default except if its triggered by keyboard
+.js-focus-visible :focus:not(.focus-visible) {  
+  outline: none;  
+}
+.js-focus-visible .focus-visible {  
+  outline: solid 0.25rem currentColor;
+}

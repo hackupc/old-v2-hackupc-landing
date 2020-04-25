@@ -41,6 +41,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "core-js": "^3.6.5",
+    "focus-visible": "^5.1.0",
     "lax.js": "^1.2.5",
     "normalize.css": "^8.0.1"
   }

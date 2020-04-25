@@ -5,6 +5,7 @@
 import 'normalize.css';
 import './styles/style.scss';
 
+import 'focus-visible';
 
 /* ---------- Webfont (asyncronously load fonts) ---------- */
 import webfont from 'webfontloader';
