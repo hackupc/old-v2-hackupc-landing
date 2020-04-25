@@ -1,5 +1,5 @@
 .section--faq {
-  background-color: $c-bg-light;
+  background-color: $c-faq-0;
 
   h2 > small {
     font-size: 1em;
@@ -26,7 +26,7 @@
 .faq__category {
   margin: 0.5rem;
   display: block;
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: $c-faq-1;
   border-radius: $border-radius-big;
   padding: 1rem;
 }
@@ -40,24 +40,20 @@
 
 .faq__question {
   margin: 1rem 0;
-  background-color: rgba(255, 255, 255, 0.09);
+  background-color: $c-faq-2;
   border-radius: $border-radius-small;
   padding: 1rem;
   padding-bottom: 0;
   text-align: left;
   transition: 
     padding-bottom 200ms $ease-quad,
-    box-shadow 200ms $ease-bounce,
-    background-color 0.5s $ease-quad;
+    box-shadow 200ms $ease-bounce;
 
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3333);
+  position: relative;
 
-  &:first-child {
-    margin-top: 0;
-  }
-  &:last-child {
-    margin-bottom: 0;
-  }
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
 
   &:focus-within {
     box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.3333);
@@ -65,12 +61,22 @@
   &:active {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3333);
   }
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.14);
-    transition: 
-    padding-bottom 200ms $ease-quad,
-    box-shadow 200ms $ease-bounce,
-    background-color 0s $ease-quad;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(135deg,#523696,#5a41a7);
+    opacity: 0;
+    transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: $border-radius-small;
+  }
+  &:hover::before {
+    opacity: 1;
+    transition: opacity 50ms $ease-cubic;
   }
 }
 
@@ -118,6 +124,7 @@ $faq-arrow-angle: 40deg;
   overflow: hidden;
   max-height: 0;
   transition: max-height 200ms $ease-quad;
+  position: relative;
 }
 
 .faq__question--expanded {
