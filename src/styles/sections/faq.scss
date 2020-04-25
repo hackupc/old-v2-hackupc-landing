@@ -100,7 +100,7 @@ $faq-arrow-angle: 40deg;
     background-color: currentColor;
     height: 0.25rem;
     width: 1rem;
-    transition: transform 300ms $ease-bounce;
+    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.35, 1.15);
   }
   &::before{
     transform-origin: left center;
@@ -108,7 +108,7 @@ $faq-arrow-angle: 40deg;
   }
   &::after{
     transform-origin: right center;
-    transform: translate(-1.9rem, 75%) rotate($faq-arrow-angle);
+    transform: translate(-1.85rem, 75%) rotate($faq-arrow-angle);
   }
 }
 
@@ -127,7 +127,7 @@ $faq-arrow-angle: 40deg;
       transform: translate(-1rem, -125%) rotate($faq-arrow-angle);
     }
     &::after{
-      transform: translate(-1.9rem, -125%) rotate(-$faq-arrow-angle);
+      transform: translate(-1.85rem, -125%) rotate(-$faq-arrow-angle);
     }
   }
 }
