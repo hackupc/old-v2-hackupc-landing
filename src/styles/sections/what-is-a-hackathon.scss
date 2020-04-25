@@ -9,16 +9,32 @@
   text-align: left;
 }
 
+$card-font-variation: 2px;
+$card-font-base: 16px;
+$card-padding-variation-h: 4 * 16px;
+$card-padding-variation-v: 1 * 16px;
+$card-padding-base: 2 * 16px;
 .card--big {
-  padding: 2rem;
-  font-size: 1.25rem;
+  padding: 
+    $card-padding-base + $card-padding-variation-v 
+    $card-padding-base + $card-padding-variation-h;
+  font-size: $card-font-base + $card-font-variation;
 }
 
 @media only screen and (max-width: 1000px) {
-  .card--big { font-size: calc(0.75rem + 0.8vw); }
+  .card--big { 
+    font-size: calc(100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}); 
+    padding: 
+      calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v})
+      calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
+  }
 }
+
 @media only screen and (max-width: 500px) {
-  .card--big { font-size: 1rem; }
+  .card--big { 
+    font-size: $card-font-base;
+    padding: $card-padding-base $card-padding-base;
+  }
 }
 
 .card--outline {
