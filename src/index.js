@@ -299,16 +299,17 @@ const faqQuestionTitleElems = document.querySelectorAll('.faq__question-title');
 for (const faqQuestionTitleElem of faqQuestionTitleElems) {	
 	faqQuestionTitleElem.addEventListener('click', function(event) {
 		const faqQuestionElem = this.closest('.faq__question');
+		const faqTitleElem = faqQuestionElem.querySelector('.faq__question-title');
 		const faqAnswerElem = faqQuestionElem.querySelector('.faq__question-answer');
 
 		faqQuestionElem.classList.toggle('faq__question--expanded');
 
     if (faqQuestionElem.getAttribute('aria-expanded') === 'true') {
 			faqAnswerElem.style.maxHeight = null;
-			faqQuestionElem.setAttribute('aria-expanded', 'false');
+			faqTitleElem.setAttribute('aria-expanded', 'false');
     } else {
 			faqAnswerElem.style.maxHeight = faqAnswerElem.scrollHeight + "px";
-			faqQuestionElem.setAttribute('aria-expanded', 'true');
+			faqTitleElem.setAttribute('aria-expanded', 'true');
     }
 	});
 }
