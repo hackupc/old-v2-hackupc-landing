@@ -300,17 +300,16 @@ const faqQuestionTitleElems = document.querySelectorAll('.faq__question-title');
 for (const faqQuestionTitleElem of faqQuestionTitleElems) {	
 	faqQuestionTitleElem.addEventListener('click', function(event) {
 		const faqQuestionElem = this.closest('.faq__question');
-		const faqTitleElem = faqQuestionElem.querySelector('.faq__question-title');
 		const faqAnswerElem = faqQuestionElem.querySelector('.faq__question-answer');
 
 		faqQuestionElem.classList.toggle('faq__question--expanded');
 
-    if (faqTitleElem.getAttribute('aria-expanded') === 'true') {
+    if (faqQuestionTitleElem.getAttribute('aria-expanded') === 'true') {
 			faqAnswerElem.style.maxHeight = null;
-			faqTitleElem.setAttribute('aria-expanded', 'false');
+			faqQuestionTitleElem.setAttribute('aria-expanded', 'false');
     } else {
 			faqAnswerElem.style.maxHeight = faqAnswerElem.scrollHeight + "px";
-			faqTitleElem.setAttribute('aria-expanded', 'true');
+			faqQuestionTitleElem.setAttribute('aria-expanded', 'true');
     }
 	});
 }
