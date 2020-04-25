@@ -304,7 +304,7 @@ for (const faqQuestionTitleElem of faqQuestionTitleElems) {
 
 		faqQuestionElem.classList.toggle('faq__question--expanded');
 
-    if (faqTitleElem.getAttribute('aria-expanded') === 'true') {
+    if (faqQuestionElem.getAttribute('aria-expanded') === 'true') {
 			faqAnswerElem.style.maxHeight = null;
 			faqTitleElem.setAttribute('aria-expanded', 'false');
     } else {
