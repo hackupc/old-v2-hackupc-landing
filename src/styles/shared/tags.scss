@@ -10,3 +10,7 @@ a {
 img::selection{
   background-color: transparentize($c-primary, 0.5);
 }
+
+p {
+  line-height: 1.6667;
+}

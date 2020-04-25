@@ -14,11 +14,9 @@ body {
 }
 .section {
   background: $c-bg-dark;
-
-
-  h2 {
-    font-size: 2.5rem;
-    margin: 0 0 3rem;
-    text-transform: uppercase;
-  }
+}
+.section__title {
+  font-size: 2.5rem;
+  margin: 0 0 3rem;
+  text-transform: uppercase;
 }

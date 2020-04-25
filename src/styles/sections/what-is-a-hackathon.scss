@@ -1,3 +1,68 @@
 .section--what-is-a-hackathon {
   background-color: $c-bg-dark;
 }
+
+.card {
+  background-color: $c-bg-light;
+  border-radius: $border-radius;
+  padding: 1rem;
+  text-align: left;
+}
+
+.card--big {
+  padding: 2rem;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card--big { font-size: calc(0.75rem + 0.8vw); }
+}
+@media only screen and (max-width: 500px) {
+  .card--big { font-size: 1rem; }
+}
+
+.card--outline {
+
+}
+
+.card--mission {
+  margin-top: 2rem;
+  display: grid;
+  border: solid 0.3333rem $c-bg-light;
+  background-color: $c-bg-dark;
+  place-content: center;
+  place-items: center;
+  grid-template: auto / auto auto;
+  gap: 2rem;
+
+  & > img {
+    width: 10rem;
+    height: 10rem;
+    // margin: 0 1rem;
+  }
+
+  & > div {
+    flex: 1 1 15rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card--mission { grid-template: auto auto / auto; }
+}
+
+.card__title {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.card__text {
+  margin: 0;
+
+  strong {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+    line-height: 1;
+  }
+}
