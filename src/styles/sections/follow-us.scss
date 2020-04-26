@@ -47,7 +47,19 @@
   .follow-us__title { font-size: 2.5rem; }
   .follow-us__subtitle { font-size: 1.25rem; }
 }
-@media only screen and (max-width: 36.5rem) and (min-width: 24rem) {
-  .follow-us__list { max-width: 24rem; }
+@media only screen and (max-width: 7 * 5rem + 1rem) {
+  .follow-us__list { max-width: 4 * 5rem; }
 }
 
+@media only screen and (max-width: 29.3rem) {
+  .follow-us__title { font-size: 2rem; }
+  .follow-us__subtitle { font-size: 1rem; }
+  .follow-us__item { width: 4.5rem; }
+  .follow-us__list { max-width: 4 * 4.5rem; }
+  .section--follow-us {
+    .content__wrapper {
+      padding: 5rem 1rem;
+    }
+  }
+  
+}
