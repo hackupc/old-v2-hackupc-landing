@@ -20,6 +20,9 @@ p {
 .js-focus-visible :focus:not(.focus-visible) {  
   outline: none;  
 }
+.js-focus-visible ::-moz-focus-inner:not(.focus-visible) {
+  border:0;
+}
 .js-focus-visible .focus-visible {  
   outline: solid 0.25rem currentColor;
 }
