@@ -14,6 +14,7 @@ body {
 }
 .section {
   background: $c-bg-dark;
+  overflow: hidden;
 }
 .section__title {
   font-size: 2.5rem;

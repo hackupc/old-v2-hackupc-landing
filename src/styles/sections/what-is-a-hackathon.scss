@@ -21,22 +21,6 @@ $card-padding-base: 2 * 16px;
   font-size: $card-font-base + $card-font-variation;
 }
 
-@media only screen and (max-width: 1000px) {
-  .card--big { 
-    font-size: calc(100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}); 
-    padding: 
-      calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v})
-      calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .card--big { 
-    font-size: $card-font-base;
-    padding: $card-padding-base $card-padding-base;
-  }
-}
-
 .card--outline {
 
 }
@@ -49,22 +33,42 @@ $card-padding-base: 2 * 16px;
   place-content: center;
   place-items: center;
   grid-template: auto / auto auto;
-  gap: $card-padding-base;
+  gap: $card-padding-base + $card-padding-variation-v ;
+  padding-left: $card-padding-base + $card-padding-variation-v ;
 
-  & > img {
-    width: 10rem;
-    height: 10rem;
-    // margin: 0 1rem;
+  & > img { width: 10rem; height: 10rem; }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card--big { 
+    font-size: calc(100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}); 
+    padding: 
+      calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v})
+      calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
   }
-
-  & > div {
-    flex: 1 1 15rem;
+  .card--mission { 
+    padding-left: calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v});
+    gap: calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v});
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .card--mission { grid-template: auto auto / auto; }
+  .card--mission {
+    grid-template: auto auto / auto;
+    padding-left: calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
+  }
 }
+
+@media only screen and (max-width: 500px) {
+  .card--big { 
+    font-size: $card-font-base;
+    padding: $card-padding-base;
+  }
+  .card--mission { 
+    gap: $card-padding-base;
+  }
+}
+
 
 .card__title {
   margin: 0 0 1rem;
