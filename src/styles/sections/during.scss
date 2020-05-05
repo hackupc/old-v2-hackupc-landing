@@ -153,8 +153,8 @@
         background-color: $c-bg-lighter;
       }
       .timeline__item_label {
-        padding: 0 1rem;
-        line-height: $timeline-item-height;
+        padding: ($timeline-item-height/2 - 0.5rem) 1rem;
+        line-height: 1rem;
         white-space: nowrap;
       }
     }
