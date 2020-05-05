@@ -1,3 +1,43 @@
 .section--during-the-event {
   background-color: $c-bg-light;
 }
+.facilities__main_title{
+  text-align: left;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+.facilities__container {
+  display: grid;
+  gap: 1rem;
+  grid-template: auto / repeat(4, 1fr);
+
+
+  .facilities__item {
+    background-color: $c-during-1;
+    border-radius: $border-radius-medium;
+    padding: 1rem;
+    text-align: left;
+  
+    .facilities__title {
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+      line-height: 0.8;
+    }
+    
+    .facilities__desc {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .facilities__container {
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 26rem) {
+  .facilities__container {
+    grid-template: repeat(4, auto) / auto;
+  }
+}
