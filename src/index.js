@@ -235,11 +235,11 @@ const duckSignElem = document.getElementsByClassName('wanted__sign')[0];
 const duckListElem = document.getElementsByClassName('wanted__list')[0];
 duckElem.addEventListener('click', (event) => {
 	duckElem.classList.add('duck-cliked');
-	duckElem.classList.remove('clickable');
+	duckElem.style.pointerEvents = 'none';
 	setTimeout(() => {
 		duckSilhouetteElem.classList.remove('wanted__duck-silhouette--missing')
 		duckSilhouetteElem.classList.add('wanted__duck-silhouette--found')
-		duckListElem.classList.remove('clickable');
+		duckListElem.style.pointerEvents = 'none';
 		setTimeout(() => {
 			duckSignElem.textContent = 'FOUND';
 		}, 200);
