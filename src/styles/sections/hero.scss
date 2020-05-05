@@ -679,7 +679,7 @@ $apply-depth: 40px;
       right: 35%;
       overflow: hidden;
 
-      img {
+      & > * {
         opacity: 0.2;
         animation: smoke-up 3s infinite linear;
         will-change: translate;
