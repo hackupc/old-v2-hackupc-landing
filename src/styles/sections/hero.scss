@@ -378,6 +378,7 @@ $apply-depth: 40px;
         translate3d(calc(-0.65 * var(--screen-center-width)),0,0);
     }
     .silhouette--right {
+      pointer-events: none;
       // height: calc(var(--screen-center-width) * 0.4);
       transform:
         $silhoueteBasicTransform
