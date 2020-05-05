@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
@@ -103,6 +104,7 @@ module.exports = {
       template: "./src/index.html",
       filename: "index.html"
     }),
+    new HtmlWebpackInlineSVGPlugin(),
     // ComppresionPlugin will Prepare compressed versions of assets to serve them with Content-Encoding.
     // In this case we use gzip
     // But, you can also use the newest algorithm like brotli, and it's supperior than gzip
