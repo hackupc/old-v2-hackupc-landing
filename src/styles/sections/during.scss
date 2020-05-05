@@ -171,6 +171,8 @@
     .timeline__card_title {
       margin: 0 0 1rem;
       font-size: 2rem;
+      text-transform: uppercase;
+      text-align: center;
 
       & > i {
         color: $c-primary;
