@@ -14,13 +14,8 @@
 @import "sections/footer.scss";
 @import "sections/hackersatupc.scss";
 @import "sections/hero.scss";
-@import "sections/older-editions.scss";
 @import "sections/participate.scss";
 @import "sections/partners.scss";
 @import "sections/photos.scss";
 @import "sections/sponsors.scss";
 @import "sections/what-is-a-hackathon.scss";
-
-// Hide navbar
-.nav { display: none; }
-body{ padding-top: 0; }

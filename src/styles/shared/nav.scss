@@ -37,3 +37,7 @@ body{padding-top: $nav-height;}
     }
   }
 }
+
+// Hide navbar
+.nav { display: none; }
+body{ padding-top: 0; }
