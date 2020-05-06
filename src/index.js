@@ -35,7 +35,9 @@ document.querySelectorAll('[data-ga-apply-button]').forEach((elem) => {
 		const data = event.target.dataset;
 	
 		analytics.track('applyed', {
-			buttonLocation: data.location,
+			category: 'Apply',
+			label: 'Apply button clicked',
+			value: data.location,
 		});
 	});
 })
@@ -43,7 +45,9 @@ document.querySelectorAll('[data-ga-apply-button]').forEach((elem) => {
 document.querySelectorAll('[data-ga-nav-item]').forEach((elem) => {
 	elem.addEventListener('click', (event) => {
 		analytics.track('navbar-clicked', {
-			buttonLocation: event.target.href,
+			category: 'Navigation',
+			label: 'Navbar link clicked',
+			value: event.target.href,
 		});
 	});
 })
