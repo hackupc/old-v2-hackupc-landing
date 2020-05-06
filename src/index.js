@@ -355,6 +355,16 @@ for (const faqQuestionTitleElem of faqQuestionTitleElems) {
 			faqAnswerElem.setAttribute('aria-hidden', 'false');
 			faqQuestionTitleElem.setAttribute('aria-expanded', 'true');
 			faqAnswerElem.style.maxHeight = `${faqAnswerElem.scrollHeight}px`;
-    }
+		}
+		
+		if(!faqQuestionTitleElem.dataset.clicked) {
+			faqQuestionTitleElem.dataset.clicked = true;
+
+			analytics.track('faq-expanded', {
+				category: 'FAQ',
+				label: 'FAQ question expanded',
+				value: faqQuestionTitleElem.textContent.trim(),
+			});
+		}
 	});
 }
