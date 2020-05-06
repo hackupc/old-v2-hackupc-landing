@@ -31,7 +31,7 @@ $apply-depth: 40px;
     perspective: 1000px;
     box-sizing: border-box;
     position: relative;
-    transform-style: preserve-3d;
+    transform-style: flat;
     perspective-origin: 50% calc(var(--screen-height) / 4);
     height: 100%;
     width: 100%;
