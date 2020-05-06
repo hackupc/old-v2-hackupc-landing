@@ -34,7 +34,7 @@
   transition: transform .3s cubic-bezier(0.17, 2.55, 0.69, 0.4);;
   box-sizing: content-box;
 
-  a, img { display: block; }
+  a, img, svg { display: block; }
   a { padding: 0.5rem; }
 
   &:hover {

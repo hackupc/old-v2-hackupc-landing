@@ -78,7 +78,7 @@ $apply-depth: 40px;
       gap: var(--screen-gap);
       overflow: hidden;
 
-      & img { // TODO: remove
+      img, svg { // TODO: remove
         width: 100%;
         height: 100%;
         object-fit: contain;

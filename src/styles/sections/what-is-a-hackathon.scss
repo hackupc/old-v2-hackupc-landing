@@ -36,7 +36,8 @@ $card-padding-base: 2 * 16px;
   gap: $card-padding-base + $card-padding-variation-v ;
   padding-left: $card-padding-base + $card-padding-variation-v ;
 
-  & > img { width: 10rem; height: 10rem; }
+  & > img,
+  & > svg { width: 10rem; height: 10rem; }
 }
 
 @media only screen and (max-width: 1000px) {
