@@ -24,7 +24,8 @@ const analytics = Analytics({
   app: 'hackupc-landing',
   plugins: [
     googleAnalytics({
-      trackingId: 'UA-69542332-1'
+			trackingId: 'UA-69542332-1',
+			anonymizeIp: true,
     })
   ]
 })
