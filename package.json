@@ -40,7 +40,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^0.3.1",
     "@babel/polyfill": "^7.8.7",
+    "analytics": "^0.3.5",
     "core-js": "^3.6.5",
     "focus-visible": "^5.1.0",
     "lax.js": "^1.2.5",

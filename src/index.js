@@ -5,17 +5,54 @@
 import 'normalize.css';
 import './styles/style.scss';
 
+import webfont from 'webfontloader';
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
 import 'focus-visible';
 
 /* ---------- Webfont (asyncronously load fonts) ---------- */
-import webfont from 'webfontloader';
  
 webfont.load({
 	google: {
 		families: ['Montserrat:400,400i,600,700,800,800i&display=swap']
 	}
 });
+
+/* ---------- Google Analytics ---------- */
+
+const analytics = Analytics({
+  app: 'hackupc-landing',
+  plugins: [
+    googleAnalytics({
+      trackingId: 'UA-69542332-1'
+    })
+  ]
+})
+ 
+document.querySelectorAll('[data-ga-apply-button]').forEach((elem) => {
+	elem.addEventListener('click', (event) => {
+		const data = event.target.dataset;
 	
+		analytics.track('applyed', {
+			buttonLocation: data.location,
+		});
+	});
+})
+
+document.querySelectorAll('[data-ga-nav-item]').forEach((elem) => {
+	elem.addEventListener('click', (event) => {
+		analytics.track('navbar-clicked', {
+			buttonLocation: event.target.href,
+		});
+	});
+})
+
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){
+// 	dataLayer.push(arguments);
+// }
+// gtag('js', new Date());
+// gtag('config', 'UA-69542332-1');
 
 /* ---------- Lax.js ---------- */
 // import lax from 'lax.js'
