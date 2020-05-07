@@ -100,6 +100,8 @@ let gammaOrig = 0.5;
 let perspectiveX = window.innerWidth/2;
 let perspectiveY = window.innerHeight * 0.125;
 
+let translateZ = false;
+
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective);
 window.addEventListener('resize', updateHeroPerspective);
@@ -168,6 +170,7 @@ function updateHeroPerspective(event) {
 			+ -height/40 * magnet((mouseY - 0.6667) * 2)
 
 			heroElem.style.perspectiveOrigin = `${perspectiveX}px ${perspectiveY}px`;
+      heroElem.style.transform = `translateZ(${(translateZ = !translateZ) ? 1 : 0}px)`; // Fix firefox and safari
 			heroWaitingRefresh = false;
 		});
 	}
