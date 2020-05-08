@@ -32,7 +32,7 @@ $apply-depth: 40px;
     box-sizing: border-box;
     position: relative;
     transform-style: flat;
-    perspective-origin: 50% calc(var(--screen-height) / 4);
+    perspective-origin: 50% 25%;
     height: 100%;
     width: 100%;
     // pointer-events: none;
