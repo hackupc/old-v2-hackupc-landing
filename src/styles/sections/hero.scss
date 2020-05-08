@@ -59,6 +59,9 @@ $apply-depth: 40px;
       display: block;
       backface-visibility: hidden;
     }
+    & .subscreen *, & .subscreen *::before, & .subscreen *::after {
+      transform-style: flat;
+    }
 
     .clickable {
       pointer-events: all;
@@ -163,10 +166,6 @@ $apply-depth: 40px;
     .subscreen {
       min-width: 0;
       min-height: 0;
-      
-      & > * {
-        overflow: hidden;
-      }
     }
     .subscreen--map img {object-fit: cover;}
     .subscreen--timeline {grid-area: top;}
