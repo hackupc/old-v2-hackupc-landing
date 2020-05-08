@@ -76,7 +76,6 @@ $apply-depth: 40px;
       height: var(--screen-height);
       display: grid;
       gap: var(--screen-gap);
-      overflow: hidden;
 
       img, svg { // TODO: remove
         width: 100%;
@@ -164,6 +163,10 @@ $apply-depth: 40px;
     .subscreen {
       min-width: 0;
       min-height: 0;
+      
+      & > * {
+        overflow: hidden;
+      }
     }
     .subscreen--map img {object-fit: cover;}
     .subscreen--timeline {grid-area: top;}
