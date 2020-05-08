@@ -9,9 +9,9 @@ $apply-depth: 40px;
   --screen-center-width: calc(var(--screen-height) * 3 / 2);
   --screen-gap: calc(var(--screen-height) / 30);
 
-  --screen-depth: 900px; // 4.5 * $table-height
-  --screen-y-pos: -150px; // -0.75 * $table-height
-  --screen-angle: 22.5deg;
+  $screen-depth: 900px; // 4.5 * $table-height
+  $screen-y-pos: -150px; // -0.75 * $table-height
+  $screen-angle: 22.5deg;
 
   // perspective: 100rem;
   background-color: $c-bg-dark;
@@ -93,7 +93,7 @@ $apply-depth: 40px;
       right: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
       width: calc(var(--screen-center-width) * 0.8);
       transform-origin: right center;
-      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY($screen-angle);
       margin-right: calc(var(--screen-gap) / 2);
     }
     .screen--center {
@@ -101,7 +101,7 @@ $apply-depth: 40px;
       left: calc(50% - var(--screen-center-width) / 2);
       width: var(--screen-center-width);
       transform-origin: center center;
-      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth)));
+      transform: translate3d(0,$screen-y-pos,-$screen-depth);
     }
     .screen--right  {
       grid-template: 2fr 5fr / 1fr 1fr;
@@ -112,24 +112,24 @@ $apply-depth: 40px;
       left: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
       width: calc(var(--screen-center-width) * 0.8);
       transform-origin: left center;
-      transform: translate3d(0,var(--screen-y-pos),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));
+      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-$screen-angle);
       margin-left: calc(var(--screen-gap) / 2);
     }
 
     @media screen and (max-height: 550px) {
-      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
-      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth)));}
-      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.8),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
+      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth) rotateY($screen-angle);}
+      .screen--center {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth) rotateY(-$screen-angle);}
     }
     @media screen and (max-height: 450px) {
-      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
-      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth)));}
-      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.75),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
+      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth) rotateY($screen-angle);}
+      .screen--center {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth) rotateY(-$screen-angle);}
     }
     @media screen and (max-height: 400px) {
-      .screen--left   {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth))) rotateY(var(--screen-angle));}
-      .screen--center {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth)));}
-      .screen--right  {transform: translate3d(0,calc(var(--screen-y-pos) * 0.7),calc(-1 * var(--screen-depth))) rotateY(calc(-1 * var(--screen-angle)));}
+      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth) rotateY($screen-angle);}
+      .screen--center {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth);}
+      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth) rotateY(-$screen-angle);}
     }
 
     .subscreen::before {
@@ -359,7 +359,7 @@ $apply-depth: 40px;
       transform-origin: bottom;
       transform: translate3d(-50%, calc(-0.04 * var(--hero-height)), -$table-height * 1.5);
     }
-    $silhoueteBasicTransform: translate3d(-50%, calc(-0.5 * var(--screen-y-pos)), calc(-1 * var(--screen-depth) * 0.666));
+    $silhoueteBasicTransform: translate3d(-50%, -0.5 * $screen-y-pos, calc(-1 * #{$screen-depth} * 0.666));
     .silhouette {
       height: calc(var(--screen-center-width) * 0.46);
       left: 50%;
@@ -372,7 +372,7 @@ $apply-depth: 40px;
       transform:
         $silhoueteBasicTransform
         translate3d(calc(-0.85 * var(--screen-center-width)),0,0)
-        rotateY(var(--screen-angle));
+        rotateY($screen-angle);
     }
     .silhouette--left-right {
       transform:
