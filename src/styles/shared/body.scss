@@ -20,3 +20,31 @@ body {
   margin: 0 0 3rem;
   text-transform: uppercase;
 }
+.card {
+  background-color: $c-bg-light;
+  border-radius: $border-radius-big;
+  padding: 1rem;
+  text-align: left;
+
+  :first-child { margin-top: 0; }
+  :last-child { margin-bottom: 0; }
+}
+.classic-button {
+  display: inline-block;
+  background-color: $c-primary;
+  padding: 0.75rem 1.4rem 0.75rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  z-index: 1;
+  align-self: flex-start;
+  border-bottom: solid 0.5rem #b14f50;
+  margin-bottom: -0.75rem;
+}

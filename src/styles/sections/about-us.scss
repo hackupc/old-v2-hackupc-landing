@@ -1,0 +1,29 @@
+.section--about-us {
+  background-color: $c-during-bg;
+}
+.about-us__subtitle {
+  font-size: 1.25rem;
+  margin: 3rem 0;
+  font-weight: 600;
+}
+.about-us__layout {
+  margin-top: 2rem;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template: auto / auto auto;
+  gap: 2rem ;
+  
+  & > img,
+  & > svg { width: 15rem; }
+}
+@media only screen and (max-width: 15rem * 2 + 2rem + 4rem) {
+  .about-us__layout {
+    grid-template: auto auto / auto;
+  }
+}
+
+.card--about-us {
+  background-color: $c-during-bg-card;
+  padding: 2rem;
+}
