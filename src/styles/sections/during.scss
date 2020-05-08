@@ -1,5 +1,5 @@
 .section--during-the-event {
-  background-color: $c-bg-light;
+  background-color: $c-during-bg;
 
   .section__title {
     margin-bottom: 1rem;
@@ -22,7 +22,7 @@
   &::before {
     z-index: -1;
     content: '';
-    background-color: $c-bg-lighter;
+    background-color: $c-during-border;
     width: $timeline-line-width;
     height: 100%;
     position: absolute;
@@ -32,8 +32,8 @@
     content: '';
     height: $timeline-ball-width;
     width: $timeline-ball-width;
-    background-color: $c-bg-lighter;
-    border: solid $c-bg-light $timeline-ball-border;
+    background-color: $c-during-border;
+    border: solid $c-during-bg $timeline-ball-border;
     border-radius: 100%;
     position: absolute;
     top: - $timeline-ball-width / 2 - $timeline-ball-border;
@@ -41,13 +41,13 @@
   }
 
   .timeline__aux {
-    background-color: $c-bg-light;
+    background-color: $c-during-bg;
     width: 100%;
     height: 1px;
   }
 
   .timeline__text {
-    background-color: $c-bg-light;
+    background-color: $c-during-bg;
     padding: 0.5rem 0;
     font-size: 1.125rem;
     margin: 2rem 0 2rem;
@@ -75,9 +75,9 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 2rem 0;
-    
+
     .timeline__item {
-      background-color: $c-bg-lighter;
+      background-color: $c-during-border;
       display: flex;
       padding: $timeline-line-width;
       height: $timeline-item-height;
@@ -91,7 +91,7 @@
       &::before {
         content: '';
         height: $timeline-line-width;
-        background-color: $c-bg-lighter;
+        background-color: $c-during-border;
         width: $timeline-left-center-distance;
         position: absolute;
         right: 100%;
@@ -100,8 +100,8 @@
         content: '';
         height: $timeline-ball-width;
         width: $timeline-ball-width;
-        background-color: $c-bg-lighter;
-        border: solid $c-bg-light $timeline-ball-border;
+        background-color: $c-during-border;
+        border: solid $c-during-bg $timeline-ball-border;
         border-radius: 100%;
         position: absolute;
         right: calc(100% + #{$timeline-left-center-distance} - #{$timeline-ball-width / 2 + $timeline-ball-border});
@@ -136,7 +136,7 @@
 
       & > * {
         height: $timeline-item-height;
-        background-color: $c-bg-light;
+        background-color: $c-during-bg;
         box-sizing: border-box;
       }
       .timeline__item_icon {
@@ -150,7 +150,7 @@
       }
       .timeline__item_separator {
         width: $timeline-line-width;
-        background-color: $c-bg-lighter;
+        background-color: $c-during-border;
       }
       .timeline__item_label {
         padding: ($timeline-item-height/2 - 0.5rem) 1rem;
@@ -160,8 +160,8 @@
     }
   }
   .timeline__card {
-    background-color: $c-bg-light;
-    border: solid $timeline-line-width $c-bg-lighter;
+    background-color: $c-during-bg;
+    border: solid $timeline-line-width $c-during-border;
     padding: 1.75rem 2rem;
     max-width: 45rem;
     box-sizing: border-box;
@@ -210,16 +210,16 @@
 
 
   .facilities__item {
-    background-color: $c-during-1;
+    background-color: $c-during-bg-card;
     border-radius: $border-radius-medium;
     padding: 1rem 1.25rem;
     text-align: left;
-  
+
     .facilities__title {
       margin: 0 0 0.75rem;
       font-size: 1.5rem;
     }
-    
+
     .facilities__desc {
       margin: 0;
     }
