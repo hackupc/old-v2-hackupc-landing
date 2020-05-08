@@ -575,7 +575,7 @@ $apply-depth: 40px;
 
     @keyframes rocket-fly {
       from {transform: translateY(0);}
-      to   {transform: translateY(calc(-1 * var(--hero-height)));}
+      to   {transform: translateY(-100vh);}
     }
 
     @keyframes rocket-fire {
