@@ -278,6 +278,18 @@ const duckElem = document.getElementsByClassName('object--rubber-duck')[0];
 const duckSilhouetteElem = document.getElementsByClassName('wanted__duck-silhouette--missing')[0];
 const duckSignElem = document.getElementsByClassName('wanted__sign')[0];
 const duckListElem = document.getElementsByClassName('wanted__list')[0];
+const duckImageElem = document.getElementsByClassName('rubber-duck-img')[0];
+const cowsayImageElem = document.getElementsByClassName('cowsay__image')[0];
+
+// Only display duck if the screen infront is visible
+if(cowsayImageElem.complete){
+	duckImageElem.style.display = 'block'
+}else{
+	cowsayImageElem.addEventListener('load', () => {
+		duckImageElem.style.display = 'block'
+	})
+}
+
 duckElem.addEventListener('click', (event) => {
 	duckElem.classList.add('duck-cliked');
 	duckElem.style.pointerEvents = 'none';

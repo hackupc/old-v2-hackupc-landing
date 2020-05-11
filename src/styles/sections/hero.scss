@@ -556,11 +556,11 @@ $apply-depth: 40px;
     }
 
     .stop-animation {
-      animation: none;
-      cursor: pointer;
+      animation: none !important;
+      cursor: pointer !important;
 
       & * {
-        animation: none;
+        animation: none !important;
       }
     }
 
