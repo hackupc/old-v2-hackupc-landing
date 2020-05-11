@@ -141,7 +141,7 @@
       }
       .timeline__item_icon {
         width: $timeline-item-height;
-        padding: 0.25rem;
+        padding: $timeline-line-width * 1.5;
         object-fit: contain;
 
         & > * {
