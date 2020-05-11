@@ -402,6 +402,8 @@ $apply-depth: 40px;
       box-sizing: border-box;
       font-size: calc(0.03 * var(--screen-height));
       white-space: nowrap;
+      color: currentColor;
+      text-decoration: none;
 
       &::before {
         content: '';
