@@ -33,6 +33,8 @@
     "real-favicon-webpack-plugin": "^0.2.3",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
+    "svgo": "^1.3.2",
+    "svgo-loader": "^2.2.1",
     "terser-webpack-plugin": "^2.3.5",
     "webfontloader": "^1.6.28",
     "webpack": "^4.42.1",

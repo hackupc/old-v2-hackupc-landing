@@ -40,7 +40,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif)$/,
         use: [
           {
             loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
@@ -50,6 +50,20 @@ module.exports = {
               esModule: false
             }
           },
+        ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {loader: 'file-loader'},
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                {inlineStyles: {onlyMatchedOnce: false}},
+              ]
+            }
+          }
         ]
       },
       {
