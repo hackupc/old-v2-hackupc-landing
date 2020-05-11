@@ -487,6 +487,7 @@ $apply-depth: 40px;
         border-right: transparent;
         width: 100%;
         height: 100%;
+        position: relative;
 
         &::before{
           content: '';
