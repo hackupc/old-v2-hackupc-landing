@@ -2,7 +2,6 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
@@ -120,27 +119,6 @@ module.exports = {
       filename: "index.html"
     }),
     new HtmlWebpackInlineSVGPlugin(),
-    new HtmlCriticalWebpackPlugin({
-      base: 'dist',
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      dimensions: [{
-        // iPhone 6/7/8 (real vh, not screen height)
-        height: 565,
-        width: 375
-      },
-      {
-        // Full HD in chrome windows (real vh, not screen height)
-        height: 969,
-        width: 1920
-      }],
-      penthouse: {
-        blockJSRequests: false,
-      }
-    }),
     // ComppresionPlugin will Prepare compressed versions of assets to serve them with Content-Encoding.
     // In this case we use gzip
     // But, you can also use the newest algorithm like brotli, and it's supperior than gzip
