@@ -5,52 +5,63 @@
 import 'normalize.css';
 import './styles/style.scss';
 
-import webfont from 'webfontloader';
-import Analytics from 'analytics'
-import googleAnalytics from '@analytics/google-analytics'
 import 'focus-visible';
 
 /* ---------- Webfont (asyncronously load fonts) ---------- */
- 
-webfont.load({
-	google: {
-		families: ['Montserrat:400,400i,600,700,800,800i&display=swap']
-	}
-});
+
+if (module.hot) {
+  import('webfontloader').then(webfont => {
+		webfont.load({
+			google: {
+				families: ['Montserrat:400,400i,600,700,800,800i&display=swap']
+			}
+		});
+  });
+}
 
 /* ---------- Google Analytics ---------- */
 
-const analytics = Analytics({
-  app: 'hackupc-landing',
-  plugins: [
-    googleAnalytics({
-			trackingId: 'UA-69542332-1',
-			anonymizeIp: true,
-    })
-  ]
-})
- 
-document.querySelectorAll('[data-ga-apply-button]').forEach((elem) => {
-	elem.addEventListener('click', (event) => {
-		const data = event.target.dataset;
-	
-		analytics.track('applyed', {
-			category: 'Apply',
-			label: 'Apply button clicked',
-			value: data.location,
-		});
-	});
-})
+if (module.hot) {
+	Promise.all([
+  import('analytics'),
+	import('@analytics/google-analytics'),
+	]).then(([Analytics, googleAnalytics]) => {
 
-document.querySelectorAll('[data-ga-nav-item]').forEach((elem) => {
-	elem.addEventListener('click', (event) => {
-		analytics.track('navbar-clicked', {
-			category: 'Navigation',
-			label: 'Navbar link clicked',
-			value: event.target.href,
+		const analytics = Analytics({
+			app: 'hackupc-landing',
+			plugins: [
+				googleAnalytics({
+					trackingId: 'UA-69542332-1',
+					anonymizeIp: true,
+				})
+			]
 		});
-	});
-})
+		 
+		document.querySelectorAll('[data-ga-apply-button]').forEach((elem) => {
+			elem.addEventListener('click', (event) => {
+				const data = event.target.dataset;
+			
+				analytics.track('applyed', {
+					category: 'Apply',
+					label: 'Apply button clicked',
+					value: data.location,
+				});
+			});
+		});
+
+		document.querySelectorAll('[data-ga-nav-item]').forEach((elem) => {
+			elem.addEventListener('click', (event) => {
+				analytics.track('navbar-clicked', {
+					category: 'Navigation',
+					label: 'Navbar link clicked',
+					value: event.target.href,
+				});
+			});
+		});
+
+  });
+}
+
 
 // window.dataLayer = window.dataLayer || [];
 // function gtag(){
