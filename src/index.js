@@ -113,11 +113,12 @@ let perspectiveY = window.innerHeight * 0.125;
 
 let translateZ = false;
 
+let heroWaitingRefresh = false;
+
 window.addEventListener('scroll', updateHeroPerspective, {passive: true});
 window.addEventListener('mousemove', updateHeroPerspective);
 window.addEventListener('resize', updateHeroPerspective);
 updateHeroPerspective();
-let heroWaitingRefresh = false;
 
 // iOS 13+ device orientation requestPermission
 if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
