@@ -46,7 +46,8 @@ $logo-height: 8rem;
     backdrop-filter: blur(0.5rem);
     pointer-events: none;
 
-    transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);;
+    transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
+    // will-change: opacity;
   }
   &::after {
     content: 'Go to website';
@@ -55,18 +56,24 @@ $logo-height: 8rem;
     font-weight: bold;
     letter-spacing: 0.03em;
     transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
-    transform: translate(-50%, -50%) translateY(1em);
+    transform: translate(0, -50%) translateY(1em);
     top: 50%;
-    left: 50%;
-    width: 100%;
+    left: 0;
+    right: 0;
+    // will-change: transform, opacity;
   }
-  
-  &:hover::before {
-    opacity: 1;
-  }
-  &:hover::after {
-    transform: translate(-50%, -50%) translateY(0);
-    opacity: 1;
+
+  &:hover{
+    &::before {
+      opacity: 1;
+    }
+    @supports not (backdrop-filter: blur(0.5rem)) {
+      .logo__item_logo { filter: blur(0.5rem); }
+    }
+    &::after {
+      transform: translate(0, -50%) translateY(0);
+      opacity: 1;
+    }
   }
   &:active {
     box-shadow: 0 1rem 1rem -0.5rem transparent;
@@ -84,6 +91,7 @@ $logo-height: 8rem;
   box-sizing: border-box;
   padding: 1.5em 0.4em;
   object-fit: contain;
+  transition: filter 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
 }
 .logo__item--unrevealed {
   user-select: none;
