@@ -28,18 +28,6 @@ npm run start
 
 If you push something that doesn't build, don't worry, it won't be published.
 
-## Edit content
-
-### Add new logos
-
-1. Checking the company brand use guidelines before editing the image.
-1. Use `.svg` over `.png`.
-1. Use the right resolution: not too big neither too small.
-1. Remove the background if any.
-1. Name the file in [snake_case](https://medium.com/swlh/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841).
-1. Place the file in [/src/assets/logos/](/src/assets/logos/).
-1. If you plan to customize the logo, save the original with `_original` at the end of the file name.
-
 ## Support
 
 If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2020 edition are:
