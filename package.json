@@ -85,7 +85,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "htmlhint": "^0.11.0",
     "http-server": "^0.11.1",
-    "standard": "^12.0.1",
+    "standard": "^14.3.4",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0"
   }
