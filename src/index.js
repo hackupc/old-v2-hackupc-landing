@@ -5,8 +5,6 @@
 import 'normalize.css';
 import './styles/style.scss';
 
-import 'focus-visible';
-
 /* ---------- Webfont (asyncronously load fonts) ---------- */
 
 if (module.hot) {
