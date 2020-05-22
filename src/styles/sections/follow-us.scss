@@ -36,7 +36,7 @@
   will-change: transform;
 
   a, img, svg { display: block; }
-  a { padding: 0.5rem; }
+  a { padding: 0.5rem; color: #fff; }
 
   &:hover {
     transition: transform .15s cubic-bezier(0.18, 0.89, 0.57, 2.05);
