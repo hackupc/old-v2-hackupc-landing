@@ -18,11 +18,8 @@ dd {
   margin-left: 0;
 }
 
-:focus:not(:focus-visible) {
+:focus {
   outline: none;
-}
-::-moz-focus-inner:not(:focus-visible) {
-  border:0;
 }
 :focus-visible {
   outline: solid 0.25rem currentColor;
