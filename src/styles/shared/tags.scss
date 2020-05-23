@@ -18,7 +18,7 @@ dd {
   margin-left: 0;
 }
 
-:focus {
+:focus:not(:focus-visible) {
   outline: none;
 }
 :focus-visible {

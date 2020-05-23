@@ -109,7 +109,7 @@ $faq-arrow-angle: 40deg;
     transform: translate(-1.85rem, 75%) rotate($faq-arrow-angle);
   }
 
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
   &:focus-visible {
