@@ -112,6 +112,9 @@ $faq-arrow-angle: 40deg;
   &:focus {
     outline: none;
   }
+  &:focus-visible {
+    outline: solid 0.25rem currentColor;
+  }
 }
 
 .faq__question-answer {
