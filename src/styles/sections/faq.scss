@@ -108,6 +108,10 @@ $faq-arrow-angle: 40deg;
     transform-origin: right center;
     transform: translate(-1.85rem, 75%) rotate($faq-arrow-angle);
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .faq__question-answer {
