@@ -18,9 +18,9 @@ dd {
   margin-left: 0;
 }
 
-:focus:not(:focus-visible) {
+:focus {
   outline: none;
 }
 :focus-visible {
-  outline: solid 0.25rem currentColor;
+  outline: solid 0.25rem currentColor !important;
 }
