@@ -13,7 +13,9 @@
 
 ## List
 
-- [ ] Use browserlist based on google analytics using [browserslist-ga](https://github.com/browserslist/browserslist-ga)
+- [ ] Do navbar
+- [ ] Do through the years
+- [ ] Do out association acording to the meeting
 
 Cool cookies banner:
 - https://speckyboy.com/
