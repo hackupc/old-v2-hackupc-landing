@@ -39,6 +39,20 @@
   margin: 1rem 0;
 }
 
+.participate__bottom-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: -0.75rem;
+}
+
+.participate__message {
+  display: inline-block;
+  flex-grow: 1;
+  margin: 0 -1rem 0 1rem;
+  color: $c-primary;
+  opacity: 0.75;
+}
+
 @media only screen and (max-width: 1000px) {
   .participate__container {
     gap: 1rem;
@@ -51,9 +65,6 @@
   }
   .participate__item {
     padding: 2rem;
-  }
-  .classic-button--participate {
-    margin-bottom: 0;
   }
 }
 

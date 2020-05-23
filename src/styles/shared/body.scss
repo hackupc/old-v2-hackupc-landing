@@ -46,5 +46,10 @@ body {
   z-index: 1;
   align-self: flex-start;
   border-bottom: solid 0.5rem #b14f50;
-  margin-bottom: -0.75rem;
+
+  &--disabled {
+    filter: grayscale(.6667);
+    opacity: .6667;
+    cursor: not-allowed;
+  }
 }
