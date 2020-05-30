@@ -66,6 +66,7 @@ $apply-depth: 40px;
     .clickable {
       pointer-events: all;
       cursor: pointer;
+      user-select: none;
     }
 
     .selectable {
