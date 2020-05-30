@@ -48,8 +48,10 @@ body {
   border-bottom: solid 0.5rem #b14f50;
 
   &--disabled {
-    filter: grayscale(.6667);
     opacity: .6667;
     cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.1);
+    border: solid 0.0625rem rgba(255, 255, 255, 0.2);
+    border-bottom-width: 0.5rem;
   }
 }
