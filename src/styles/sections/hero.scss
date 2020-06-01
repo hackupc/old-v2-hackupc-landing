@@ -325,6 +325,10 @@ $apply-depth: 40px;
       height: 0.15 * $table-height;
       transform: translate(-50%, calc(50% - 1px)) rotateX(90deg);
     }
+    .object--pc-cowsay::before {
+      background-color: #251b4d;
+      opacity: 1;
+    }
 
     .object--rubber-duck:hover {
       transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
