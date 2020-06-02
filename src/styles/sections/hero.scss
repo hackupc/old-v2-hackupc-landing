@@ -387,18 +387,18 @@ $apply-depth: 40px;
 
       #{2% * 0} {transform: $silhoueteLeftLeftBasicTransform;}
       #{2% * 1} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(-0.0015/2 * var(--screen-center-width))) rotate(-0.1deg);}
-      #{2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(+0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
+      #{2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
       #{2% * 3} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(-0.0015   * var(--screen-center-width))) rotate(-0.1deg);}
-      #{2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(+0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(+0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
+      #{2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
+      #{2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
       #{2% * 5.5} {transform: $silhoueteLeftLeftBasicTransform;}
 
       #{50% + 12% * 2 + 2% * 0} {transform: $silhoueteLeftLeftBasicTransform;}
       #{50% + 12% * 2 + 2% * 1} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(-0.0015/2 * var(--screen-center-width))) rotate(+0.4deg);}
-      #{50% + 12% * 2 + 2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(+0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
+      #{50% + 12% * 2 + 2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
       #{50% + 12% * 2 + 2% * 3} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(-0.0015   * var(--screen-center-width))) rotate(+0.4deg);}
-      #{50% + 12% * 2 + 2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(+0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
-      #{50% + 12% * 2 + 2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(+0.0015/2 * var(--screen-center-width))) rotate(-0.4deg);}
+      #{50% + 12% * 2 + 2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
+      #{50% + 12% * 2 + 2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015/2 * var(--screen-center-width))) rotate(-0.4deg);}
       #{50% + 12% * 2 + 2% * 5.5} {transform: $silhoueteLeftLeftBasicTransform;}
 
       100% {transform: $silhoueteLeftLeftBasicTransform;}
@@ -408,18 +408,18 @@ $apply-depth: 40px;
       0% {transform: $silhoueteLeftRightBasicTransform;}
 
       #{12% * 2 + 2% * 0} {transform: $silhoueteLeftRightBasicTransform;}
-      #{12% * 2 + 2% * 1} {transform: $silhoueteLeftRightBasicTransform translateX(calc(+0.0002/2 * var(--screen-center-width))) rotate(-0.3deg);}
+      #{12% * 2 + 2% * 1} {transform: $silhoueteLeftRightBasicTransform translateX(calc(0.0002/2 * var(--screen-center-width))) rotate(-0.3deg);}
       #{12% * 2 + 2% * 2} {transform: $silhoueteLeftRightBasicTransform translateX(calc(-0.0002   * var(--screen-center-width))) rotate(+0.3deg);}
-      #{12% * 2 + 2% * 3} {transform: $silhoueteLeftRightBasicTransform translateX(calc(+0.0002   * var(--screen-center-width))) rotate(-0.3deg);}
+      #{12% * 2 + 2% * 3} {transform: $silhoueteLeftRightBasicTransform translateX(calc(0.0002   * var(--screen-center-width))) rotate(-0.3deg);}
       #{12% * 2 + 2% * 4} {transform: $silhoueteLeftRightBasicTransform translateX(calc(-0.0002   * var(--screen-center-width))) rotate(+0.3deg);}
       #{12% * 2 + 2% * 5} {transform: $silhoueteLeftRightBasicTransform;}
 
       #{50% + 2% * 0} {transform: $silhoueteLeftRightBasicTransform;}
       #{50% + 2% * 1} {transform: $silhoueteLeftRightBasicTransform translateY(calc(-0.0015/2 * var(--screen-center-width))) rotate(-0.1deg);}
-      #{50% + 2% * 2} {transform: $silhoueteLeftRightBasicTransform translateY(calc(+0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
+      #{50% + 2% * 2} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
       #{50% + 2% * 3} {transform: $silhoueteLeftRightBasicTransform translateY(calc(-0.0015   * var(--screen-center-width))) rotate(-0.1deg);}
-      #{50% + 2% * 4} {transform: $silhoueteLeftRightBasicTransform translateY(calc(+0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{50% + 2% * 5} {transform: $silhoueteLeftRightBasicTransform translateY(calc(+0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
+      #{50% + 2% * 4} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
+      #{50% + 2% * 5} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
       #{50% + 2% * 5.5} {transform: $silhoueteLeftRightBasicTransform;}
 
       100% {transform: $silhoueteLeftRightBasicTransform;}
