@@ -16,9 +16,3 @@
 - [ ] Do navbar
 - [ ] Do through the years
 - [ ] Do out association acording to the meeting
-
-Cool cookies banner:
-- https://speckyboy.com/
-- https://designmodo.com/
-- https://jetbrains.com/
-- https://www.thegamer.com/

@@ -219,6 +219,25 @@ function smooth(final, initial=0) {
 // function smooth(final, initial=0) {
 //   return final;
 // }
+
+/* ---------- Cookies ---------- */
+const cookieNotice = document.getElementById('gdpr');
+
+if (window.localStorage.getItem('cookies') !== '1') {
+	cookieNotice.classList.remove('gdpr--hidden');
+}
+
+const cookieNoticeClose = document.getElementById('gdpr-close');
+cookieNoticeClose.addEventListener('click', () => {
+	window.localStorage.setItem('cookies', '1');
+	cookieNotice.classList.add('gdpr--hidden');
+
+	cookieNotice.style.display = 'flex';
+	setTimeout(() => {
+		cookieNotice.style.display = null;
+	}, 400);
+})
+
 /* ---------- Animations ---------- */
 
 // Animation Lamp
