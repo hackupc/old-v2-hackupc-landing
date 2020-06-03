@@ -17,7 +17,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  transition: 
+  transition:
     transform 400ms $ease-quad,
     opacity 400ms $ease-quad;
 
@@ -50,7 +50,7 @@
       margin-right: 0.75rem;
     }
     transition: transform 250ms $ease-bounce;
-    
+
     &:hover {
       transform: rotate(90deg);
     }
@@ -75,7 +75,8 @@
     cursor: pointer;
     background-color: transparent;
     margin: -.25rem -.25rem -.25rem 0;
-    
+    color: $c-gdpr-txt;
+
     &:hover, &:focus {
       outline: none;
       background-color: transparentize($c-gdpr-txt, 0.8);
@@ -85,6 +86,6 @@
     display: block;
     height: 1.5rem;
     width: 1.5rem;
-    color: $c-gdpr-txt;
+    color: currentColor
   }
 }
