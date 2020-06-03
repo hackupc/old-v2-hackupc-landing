@@ -385,6 +385,10 @@ function generatePattern(){
 
 const faqQuestionTitleElems = document.querySelectorAll('.faq__question-title');
 
+ document.querySelectorAll('.faq__question-answer[aria-hidden="true"] a').forEach((linkElem) => {
+	linkElem.tabIndex = -1;
+});
+
 for (const faqQuestionTitleElem of faqQuestionTitleElems) {	
 	faqQuestionTitleElem.addEventListener('click', function(event) {
 		const faqQuestionElem = this.closest('.faq__question');
@@ -396,11 +400,19 @@ for (const faqQuestionTitleElem of faqQuestionTitleElems) {
 			faqQuestionTitleElem.setAttribute('aria-expanded', 'false');
 			faqAnswerElem.setAttribute('aria-hidden', 'true');
 			faqAnswerElem.style.maxHeight = null;
+			
+		 faqAnswerElem.querySelectorAll('a').forEach((linkElem) => {
+				linkElem.tabIndex = -1;
+			});
     } else {
 			faqQuestionElem.classList.add('faq__question--expanded');
 			faqAnswerElem.setAttribute('aria-hidden', 'false');
 			faqQuestionTitleElem.setAttribute('aria-expanded', 'true');
 			faqAnswerElem.style.maxHeight = `${faqAnswerElem.scrollHeight}px`;
+
+		 faqAnswerElem.querySelectorAll('a').forEach((linkElem) => {
+				linkElem.tabIndex = null;
+			});
 		}
 		
 		if(!faqQuestionTitleElem.dataset.clicked) {
