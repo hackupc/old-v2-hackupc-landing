@@ -74,7 +74,17 @@ module.exports = {
           loader: "html-loader",
           options: {
             attributes: true,
-            minimize: true
+            minimize: {
+              collapseWhitespace: true,
+              removeComments: true,
+              removeRedundantAttributes: true,
+              removeScriptTypeAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              useShortDoctype: true,
+              ignoreCustomComments: [ /^!/, /^\s*#/, /google(on|off)/i ],
+              minifyCSS: true,
+              minifyJS: true,
+            },
           }
         }
       }
