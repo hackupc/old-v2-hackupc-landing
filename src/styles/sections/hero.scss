@@ -849,7 +849,7 @@ $apply-depth: 40px;
       }
     }
 
-    // Countdown screen ----------------------
+    // Wanted screen ----------------------
 
     .subscreen--rubberduck {
       display: flex;
@@ -929,5 +929,96 @@ $apply-depth: 40px;
       from {opacity:0.05;}
       to   {opacity:0.4;}
     }
+
+    // Timeline screen ----------------------
+
+    .timeline-screen {
+      position: relative;
+      padding: 0 2rem 0 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+
+      $timeline-line-width: 0.5rem;
+      $timeline-ball-size: 3 * $timeline-line-width;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: calc(50% - #{$timeline-line-width/2}) 1rem;
+        border-radius: 0.5rem;
+        background-color: $c-bg-lighter;
+        opacity: 0.75;
+      }
+
+      .timeline-screen__item {
+        position: relative;
+        width: 0;
+        flex-grow: 2;
+        height: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        .timeline-screen__label {
+          background-color: $c-bg-lighter;
+          border-radius: 8rem;
+          padding: 0.25rem 2rem;
+          display: inline-block;
+          color: $c-bg-light;
+          font-weight: 800;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          text-align: center;
+          transition: background-color 150ms ease-out;
+          margin: 1.75rem 0;
+          text-decoration: none;
+          
+          small {
+            font-size: 0.75em;
+          }
+
+          &::after {
+            content: "";
+            height: $timeline-ball-size;
+            width: $timeline-ball-size;
+            flex-shrink: 0;
+            background-color: $c-bg-lighter;
+            border: .5rem solid $c-bg-light;
+            border-radius: 100%;
+            position: absolute;
+            bottom: -$timeline-ball-size/2 -$timeline-line-width;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: inherit;
+          }
+          
+          &:hover {
+            background-color: lighten($c-bg-lighter, 20%);
+            &::after {
+              background-color: lighten($c-bg-lighter, 20%);
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          margin-top: auto;
+          flex-direction: column-reverse;
+
+          .timeline-screen__label::after {
+            bottom: unset;
+            top: -$timeline-ball-size/2 -$timeline-line-width;
+          }
+        }
+
+        &--half {
+          flex-grow: 1;
+        }
+      }
+    }
   }
 }
+
