@@ -933,21 +933,23 @@ $apply-depth: 40px;
     // Timeline screen ----------------------
 
     .timeline-screen {
+      --timeline-unit: calc(0.0225 * var(--screen-height));
+      --timeline-line-width: calc(0.5 * var(--timeline-unit));
+      --timeline-ball-size: calc(3 * var(--timeline-line-width));
+
       position: relative;
-      padding: 0 2rem 0 0;
+      padding: 0 calc(2 * var(--timeline-unit)) 0 0;
       margin: 0;
       display: flex;
       justify-content: space-between;
       height: 100%;
 
-      $timeline-line-width: 0.5rem;
-      $timeline-ball-size: 3 * $timeline-line-width;
 
       &::before {
         content: '';
         position: absolute;
-        inset: calc(50% - #{$timeline-line-width/2}) 1rem;
-        border-radius: 0.5rem;
+        inset: calc(50% - (var(--timeline-line-width) / 2)) var(--timeline-unit);
+        border-radius: var(--timeline-unit);
         background-color: $c-bg-lighter;
         opacity: 0.75;
       }
@@ -965,16 +967,16 @@ $apply-depth: 40px;
         
         .timeline-screen__label {
           background-color: $c-bg-lighter;
-          border-radius: 8rem;
-          padding: 0.25rem 2rem;
+          border-radius: calc(8 * var(--timeline-unit));
+          padding: calc(0.25 * var(--timeline-unit)) calc(2 * var(--timeline-unit));
           display: inline-block;
           color: $c-bg-light;
           font-weight: 800;
           text-transform: uppercase;
-          font-size: 1.5rem;
+          font-size: calc(1.5 * var(--timeline-unit));
           text-align: center;
           transition: background-color 150ms ease-out;
-          margin: 1.75rem 0;
+          margin: calc(1.75 * var(--timeline-unit)) 0;
           text-decoration: none;
           
           small {
@@ -983,14 +985,14 @@ $apply-depth: 40px;
 
           &::after {
             content: "";
-            height: $timeline-ball-size;
-            width: $timeline-ball-size;
+            height: var(--timeline-ball-size);
+            width: var(--timeline-ball-size);
             flex-shrink: 0;
             background-color: $c-bg-lighter;
-            border: .5rem solid $c-bg-light;
+            border: calc(0.5 * var(--timeline-unit)) solid $c-bg-light;
             border-radius: 100%;
             position: absolute;
-            bottom: -$timeline-ball-size/2 -$timeline-line-width;
+            bottom: calc((var(--timeline-ball-size) * -0.5) - var(--timeline-line-width));
             left: 50%;
             transform: translateX(-50%);
             transition: inherit;
@@ -1010,7 +1012,7 @@ $apply-depth: 40px;
 
           .timeline-screen__label::after {
             bottom: unset;
-            top: -$timeline-ball-size/2 -$timeline-line-width;
+            top: calc((var(--timeline-ball-size) * -0.5) - var(--timeline-line-width));
           }
         }
 
