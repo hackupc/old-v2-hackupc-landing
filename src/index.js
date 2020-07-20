@@ -336,7 +336,7 @@ duckElem.addEventListener('click', (event) => {
 
 const plotLinesSteps = 5;
 const plotWidth = 200;
-const plotHandle = Math.floor(plotWidth/plotLinesSteps/3);
+const plotHeight = 100;
 
 const plotLines = [
 	document.getElementsByClassName('plot__plot-line--1')[0],
@@ -356,7 +356,7 @@ for (const i in plotLines) {
 }
 
 function animatePlotLine(i){
-	plotLines[i].style.d = `path("${generatePattern()}")`;
+	plotLines[i].setAttribute('d',makePath(randomPoints()));
 	barContents[i].style.transform = `scaleY(${Math.random()})`;
 
 	setTimeout(() => {
@@ -364,19 +364,74 @@ function animatePlotLine(i){
 	}, Math.random()*5000+5500);
 }
 
-function generatePattern(){
-	// If you want to understand whow the curve is build read this article:
-	// https://css-tricks.com/svg-path-syntax-illustrated-guide/
+function randomPoints() {
+	return Array.from(
+		{length: plotLinesSteps+1}, 
+		(value, i) => {
+			return {
+				x: i*plotWidth/plotLinesSteps,
+				y: Math.floor(Math.random() * (plotHeight + 1)),
+			}
+		}
+	);
+}
 
-	let pattern = `M${plotWidth},${Math.floor(Math.random()*100.99)}`;
+// This function is copied from this article:
+// https://advancedweb.hu/plotting-charts-with-svg/
+function catmullRom2bezier(points) {
+	var result = [];
+	for (var i = 0; i < points.length - 1; i++) {
+			var p = [];
 
-	for (let i = plotLinesSteps-1; i >= 0 ; i--) {
-		let x = Math.floor(plotWidth/plotLinesSteps*i);
-		let y = Math.floor(Math.random()*100.99);
+			p.push({
+					x: points[Math.max(i - 1, 0)].x,
+					y: points[Math.max(i - 1, 0)].y
+			});
+			p.push({
+					x: points[i].x,
+					y: points[i].y
+			});
+			p.push({
+					x: points[i + 1].x,
+					y: points[i + 1].y
+			});
+			p.push({
+					x: points[Math.min(i + 2, points.length - 1)].x,
+					y: points[Math.min(i + 2, points.length - 1)].y
+			});
 
-		pattern += ` S${x+plotHandle},${y} ${x},${y}`;
+			// Catmull-Rom to Cubic Bezier conversion matrix
+			//    0       1       0       0
+			//  -1/6      1      1/6      0
+			//    0      1/6      1     -1/6
+			//    0       0       1       0
+
+			var bp = [];
+			bp.push({
+					x: ((-p[0].x + 6 * p[1].x + p[2].x) / 6),
+					y: ((-p[0].y + 6 * p[1].y + p[2].y) / 6)
+			});
+			bp.push({
+					x: ((p[1].x + 6 * p[2].x - p[3].x) / 6),
+					y: ((p[1].y + 6 * p[2].y - p[3].y) / 6)
+			});
+			bp.push({
+					x: p[2].x,
+					y: p[2].y
+			});
+			result.push(bp);
 	}
-	return pattern;
+
+	return result;
+}
+
+function makePath(points) {
+	var result = "M" + points[0].x + "," + points[0].y + " ";
+	var catmull = catmullRom2bezier(points);
+	for (var i = 0; i < catmull.length; i++) {
+			result += "C" + catmull[i][0].x + "," + catmull[i][0].y + " " + catmull[i][1].x + "," + catmull[i][1].y + " " + catmull[i][2].x + "," + catmull[i][2].y + " ";
+	}
+	return result;
 }
 
 // FAQ
