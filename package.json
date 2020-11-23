@@ -82,7 +82,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.2.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^5.0.0",
     "htmlhint": "^0.11.0",
     "http-server": "^0.11.1",
     "standard": "^12.0.1",
