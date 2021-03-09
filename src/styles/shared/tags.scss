@@ -1,4 +1,6 @@
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth;
+}
 a {
   color: $c-primary;
 }
@@ -7,7 +9,7 @@ a {
   background-color: transparentize($c-primary, 0.01);
   color: $c-txt-light;
 }
-img::selection{
+img::selection {
   background-color: transparentize($c-primary, 0.5);
 }
 

@@ -4,6 +4,7 @@
     "davidanson.vscode-markdownlint",
     "eg2.vscode-npm-script",
     "webhint.vscode-webhint",
-    "sissel.json-script-tag"
+    "sissel.json-script-tag",
+    "esbenp.prettier-vscode"
   ]
 }

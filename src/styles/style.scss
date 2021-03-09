@@ -1,20 +1,20 @@
 /* Keep the right order, it's important for overrides */
 // @import "normalize.css";
 
-@import "shared/variables.scss";
-@import "shared/tags.scss";
-@import "shared/nav.scss";
-@import "shared/body.scss";
-@import "shared/cookies.scss";
+@import 'shared/variables.scss';
+@import 'shared/tags.scss';
+@import 'shared/nav.scss';
+@import 'shared/body.scss';
+@import 'shared/cookies.scss';
 
-@import "sections/about-us.scss";
-@import "sections/during.scss";
-@import "sections/extras.scss";
-@import "sections/faq.scss";
-@import "sections/follow-us.scss";
-@import "sections/footer.scss";
-@import "sections/hero.scss";
-@import "sections/participate.scss";
-@import "sections/photos.scss";
-@import "sections/sponsors-and-partners.scss";
-@import "sections/what-is-a-hackathon.scss";
+@import 'sections/about-us.scss';
+@import 'sections/during.scss';
+@import 'sections/extras.scss';
+@import 'sections/faq.scss';
+@import 'sections/follow-us.scss';
+@import 'sections/footer.scss';
+@import 'sections/hero.scss';
+@import 'sections/participate.scss';
+@import 'sections/photos.scss';
+@import 'sections/sponsors-and-partners.scss';
+@import 'sections/what-is-a-hackathon.scss';

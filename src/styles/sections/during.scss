@@ -28,7 +28,7 @@
     position: absolute;
     left: calc(#{$timeline-left-distance} + #{$timeline-line-width / 2});
   }
-  &::after{
+  &::after {
     content: '';
     height: $timeline-ball-width;
     width: $timeline-ball-width;
@@ -36,8 +36,11 @@
     border: solid $c-during-bg $timeline-ball-border;
     border-radius: 100%;
     position: absolute;
-    top: - $timeline-ball-width / 2 - $timeline-ball-border;
-    left: calc(#{$timeline-left-distance} + #{$timeline-line-width} - #{$timeline-ball-width / 2 + $timeline-ball-border});
+    top: -$timeline-ball-width / 2 - $timeline-ball-border;
+    left: calc(
+      #{$timeline-left-distance} + #{$timeline-line-width} - #{$timeline-ball-width /
+        2 + $timeline-ball-border}
+    );
   }
 
   .timeline__aux {
@@ -59,7 +62,7 @@
       left: calc(50% - #{$timeline-line-width / 2});
     }
 
-    &::after{
+    &::after {
       content: none;
     }
 
@@ -84,7 +87,9 @@
       align-items: center;
       flex-flow: row;
       margin: 1rem;
-      margin-left: calc(#{$timeline-left-distance + $timeline-left-center-distance} + #{$timeline-line-width});
+      margin-left: calc(
+        #{$timeline-left-distance + $timeline-left-center-distance} + #{$timeline-line-width}
+      );
       margin-right: 0;
       position: relative;
 
@@ -104,7 +109,10 @@
         border: solid $c-during-bg $timeline-ball-border;
         border-radius: 100%;
         position: absolute;
-        right: calc(100% + #{$timeline-left-center-distance} - #{$timeline-ball-width / 2 + $timeline-ball-border});
+        right: calc(
+          100% + #{$timeline-left-center-distance} - #{$timeline-ball-width / 2 +
+            $timeline-ball-border}
+        );
       }
 
       @media screen and (min-width: 40rem) {
@@ -116,7 +124,9 @@
           width: $timeline-center-distance;
         }
         &::after {
-          right: calc(100% + #{$timeline-center-distance} - #{$timeline-ball-width / 2 + $timeline-ball-border});
+          right: calc(
+            100% + #{$timeline-center-distance} - #{$timeline-ball-width / 2 + $timeline-ball-border}
+          );
         }
         &:nth-child(even) {
           flex-flow: row-reverse;
@@ -129,7 +139,10 @@
             width: $timeline-center-distance;
           }
           &::after {
-            left: calc(100% + #{$timeline-center-distance - $timeline-ball-width / 2 - $timeline-ball-border});
+            left: calc(
+              100% + #{$timeline-center-distance - $timeline-ball-width / 2 -
+                $timeline-ball-border}
+            );
           }
         }
       }
@@ -193,11 +206,9 @@
   font-size: 1.125rem;
 }
 
-
-
 // We also provide... part
 
-.facilities__main_title{
+.facilities__main_title {
   text-align: left;
   font-size: 2rem;
   margin: 4rem 0 1rem;
@@ -207,7 +218,6 @@
   display: grid;
   gap: 1rem;
   grid-template: auto / repeat(4, 1fr);
-
 
   .facilities__item {
     background-color: $c-during-bg-card;

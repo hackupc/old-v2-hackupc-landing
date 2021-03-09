@@ -17,9 +17,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  transition:
-    transform 400ms $ease-quad,
-    opacity 400ms $ease-quad;
+  transition: transform 400ms $ease-quad, opacity 400ms $ease-quad;
 
   // animation: gdpr-show 400ms $ease-bounce;
   // @keyframes gdpr-show {
@@ -77,10 +75,11 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
-    margin: -.25rem -.25rem -.25rem 0;
+    margin: -0.25rem -0.25rem -0.25rem 0;
     color: $c-gdpr-txt;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       outline: none;
       background-color: transparentize($c-gdpr-txt, 0.8);
     }
@@ -89,6 +88,6 @@
     display: block;
     height: 1.5rem;
     width: 1.5rem;
-    color: currentColor
+    color: currentColor;
   }
 }

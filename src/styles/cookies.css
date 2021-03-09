@@ -6,7 +6,9 @@
 }
 .cookies-notice {
   position: fixed;
-  right: 0; bottom: -16px; left: 0;
+  right: 0;
+  bottom: -16px;
+  left: 0;
   transition: transform 200ms ease-out, opacity 200ms ease-out;
   background-color: var(--cookie-bg);
   color: white;
@@ -37,8 +39,12 @@
 }
 
 @keyframes slide-up {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Button OK! style */

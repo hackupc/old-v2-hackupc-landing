@@ -1,10 +1,11 @@
-# HackUPC 2020 landing page
+# HackUPC landing page
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys) [![Build Status](https://travis-ci.com/hackupc/hackupc-landing.svg?branch=master)](https://travis-ci.com/hackupc/hackupc-landing)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys)
+[![Build Status](https://travis-ci.com/hackupc/hackupc-landing.svg?branch=master)](https://travis-ci.com/hackupc/hackupc-landing)
 
-![HackUPC 2020 landing preview](src/assets/ogimage.png)
+![HackUPC landing preview](src/assets/ogimage.png)
 
-Hi! This is the code of the HackUPC 2020 landing page.
+Hi! This is the code of the HackUPC landing page.
 
 ## Develop
 
@@ -21,6 +22,15 @@ Use `npm run start` to compile and serve the build directory in real-time. It re
 ```sh
 npm run start
 ```
+
+### Tips
+
+- Use `VS code`, there's the `.vscod` folder with a good workspace configuration.
+- Install `ESlint` and `Prettier` extensions.
+- Run this to format all the files automatically:
+  ```sh
+  npx prettier --write .
+  ```
 
 ## Deploy
 

@@ -1,18 +1,18 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: "./src/index.js",
+    main: './src/index.js',
   },
   output: {
-    path: path.join(__dirname, "../dist"),
-    filename: "[name].bundle.js",
+    path: path.join(__dirname, '../dist'),
+    filename: '[name].bundle.js',
   },
-  mode: "development",
+  mode: 'development',
   devServer: {
-    contentBase: path.join(__dirname, "../dist"),
+    contentBase: path.join(__dirname, '../dist'),
     compress: true,
     port: 3000,
     overlay: true,
@@ -21,34 +21,34 @@ module.exports = {
     // disableHostCheck: true,
     // http2: true,
   },
-  devtool: "eval-cheap-module-source-map",
+  devtool: 'eval-cheap-module-source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader", // transpiling our JavaScript files using Babel and webpack
+          loader: 'babel-loader', // transpiling our JavaScript files using Babel and webpack
         },
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "postcss-loader", // Loader for webpack to process CSS with PostCSS
-          "sass-loader", // compiles Sass to CSS, using Node Sass by default
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'postcss-loader', // Loader for webpack to process CSS with PostCSS
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
       },
       {
         test: /\.(gif|png|jpe?g)$/,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: {
               sources: true,
               minimize: {
@@ -64,7 +64,7 @@ module.exports = {
               },
             },
           },
-          "markup-inline-loader",
+          'markup-inline-loader',
         ],
       },
     ],
@@ -72,8 +72,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
+      template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
-};
+}

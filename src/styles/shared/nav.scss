@@ -1,6 +1,8 @@
 $nav-height: 3rem;
 
-body{padding-top: $nav-height;}
+body {
+  padding-top: $nav-height;
+}
 .nav {
   height: $nav-height;
   background-color: rgba(255, 255, 255, 0.6);
@@ -22,7 +24,6 @@ body{padding-top: $nav-height;}
     justify-content: space-between;
 
     li {
-
       a {
         display: block;
         height: 100%;
@@ -39,5 +40,9 @@ body{padding-top: $nav-height;}
 }
 
 // Hide navbar
-.nav { display: none; }
-body{ padding-top: 0; }
+.nav {
+  display: none;
+}
+body {
+  padding-top: 0;
+}

@@ -54,12 +54,16 @@ $apply-depth: 40px;
       position: absolute;
     }
 
-    & *, & *::before, & *::after {
+    & *,
+    & *::before,
+    & *::after {
       transform-style: preserve-3d;
       display: block;
       backface-visibility: hidden;
     }
-    & .subscreen *, & .subscreen *::before, & .subscreen *::after {
+    & .subscreen *,
+    & .subscreen *::before,
+    & .subscreen *::after {
       transform-style: flat;
     }
 
@@ -73,7 +77,9 @@ $apply-depth: 40px;
       pointer-events: all;
     }
 
-    .subscreen, .table, .objects {
+    .subscreen,
+    .table,
+    .objects {
       background-color: $c-bg-light;
     }
     .screen {
@@ -81,7 +87,9 @@ $apply-depth: 40px;
       display: grid;
       gap: var(--screen-gap);
 
-      img, svg { // TODO: remove
+      img,
+      svg {
+        // TODO: remove
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -94,7 +102,8 @@ $apply-depth: 40px;
       right: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
       width: calc(var(--screen-center-width) * 0.8);
       transform-origin: right center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY($screen-angle);
+      transform: translate3d(0, $screen-y-pos, -$screen-depth)
+        rotateY($screen-angle);
       margin-right: calc(var(--screen-gap) / 2);
     }
     .screen--center {
@@ -102,35 +111,60 @@ $apply-depth: 40px;
       left: calc(50% - var(--screen-center-width) / 2);
       width: var(--screen-center-width);
       transform-origin: center center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth);
+      transform: translate3d(0, $screen-y-pos, -$screen-depth);
     }
-    .screen--right  {
+    .screen--right {
       grid-template: 2fr 5fr / 1fr 1fr;
       grid-template-areas:
-      'top top'
-      'left right';
+        'top top'
+        'left right';
       bottom: 0;
       left: calc(50% + var(--screen-center-width) / 2 + var(--screen-gap) / 2);
       width: calc(var(--screen-center-width) * 0.8);
       transform-origin: left center;
-      transform: translate3d(0,$screen-y-pos,-$screen-depth) rotateY(-$screen-angle);
+      transform: translate3d(0, $screen-y-pos, -$screen-depth)
+        rotateY(-$screen-angle);
       margin-left: calc(var(--screen-gap) / 2);
     }
 
     @media screen and (max-height: 550px) {
-      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.8,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left {
+        transform: translate3d(0, $screen-y-pos * 0.8, -$screen-depth)
+          rotateY($screen-angle);
+      }
+      .screen--center {
+        transform: translate3d(0, $screen-y-pos * 0.8, -$screen-depth);
+      }
+      .screen--right {
+        transform: translate3d(0, $screen-y-pos * 0.8, -$screen-depth)
+          rotateY(-$screen-angle);
+      }
     }
     @media screen and (max-height: 450px) {
-      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.75,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left {
+        transform: translate3d(0, $screen-y-pos * 0.75, -$screen-depth)
+          rotateY($screen-angle);
+      }
+      .screen--center {
+        transform: translate3d(0, $screen-y-pos * 0.75, -$screen-depth);
+      }
+      .screen--right {
+        transform: translate3d(0, $screen-y-pos * 0.75, -$screen-depth)
+          rotateY(-$screen-angle);
+      }
     }
     @media screen and (max-height: 400px) {
-      .screen--left   {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth) rotateY($screen-angle);}
-      .screen--center {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth);}
-      .screen--right  {transform: translate3d(0,$screen-y-pos * 0.7,-$screen-depth) rotateY(-$screen-angle);}
+      .screen--left {
+        transform: translate3d(0, $screen-y-pos * 0.7, -$screen-depth)
+          rotateY($screen-angle);
+      }
+      .screen--center {
+        transform: translate3d(0, $screen-y-pos * 0.7, -$screen-depth);
+      }
+      .screen--right {
+        transform: translate3d(0, $screen-y-pos * 0.7, -$screen-depth)
+          rotateY(-$screen-angle);
+      }
     }
 
     .subscreen::before {
@@ -159,7 +193,7 @@ $apply-depth: 40px;
       transform: rotateY(-90deg);
       transform-origin: right center;
     }
-    .screen--right .subscreen::after{
+    .screen--right .subscreen::after {
       left: 100%;
       transform: rotateY(90deg);
       transform-origin: left center;
@@ -168,10 +202,18 @@ $apply-depth: 40px;
       min-width: 0;
       min-height: 0;
     }
-    .subscreen--map img {object-fit: cover;}
-    .subscreen--timeline {grid-area: top;}
-    .subscreen--rubberduck {grid-area: left;}
-    .subscreen--plots {grid-area: right;}
+    .subscreen--map img {
+      object-fit: cover;
+    }
+    .subscreen--timeline {
+      grid-area: top;
+    }
+    .subscreen--rubberduck {
+      grid-area: left;
+    }
+    .subscreen--plots {
+      grid-area: right;
+    }
     .table {
       width: $table-width;
       height: $table-height;
@@ -180,13 +222,19 @@ $apply-depth: 40px;
     }
     .table-front {
       bottom: 0;
-      transform: translate3d(0,calc(-0.1 * var(--hero-height)),0px) rotateX(90deg);
+      transform: translate3d(0, calc(-0.1 * var(--hero-height)), 0px)
+        rotateX(90deg);
     }
     .table-back {
       bottom: 0;
-      transform: translate3d(0,calc(-0.1 * var(--hero-height)),-$table-height * 2) rotateX(90deg);
+      transform: translate3d(
+          0,
+          calc(-0.1 * var(--hero-height)),
+          -$table-height * 2
+        )
+        rotateX(90deg);
     }
-    .table-backface{
+    .table-backface {
       background-color: transparent;
       pointer-events: none;
     }
@@ -226,10 +274,14 @@ $apply-depth: 40px;
       white-space: nowrap;
       position: relative;
       display: inline-block;
-      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth / 2);
+      transform: translate3d(
+        calc(#{0.5 * $table-width} - 50%),
+        0,
+        -0.4 * $table-height + $apply-depth / 2
+      );
       transform-origin: bottom center;
       transition: transform 150ms $ease-bounce;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       z-index: 1;
     }
 
@@ -252,18 +304,23 @@ $apply-depth: 40px;
       width: $apply-depth;
       background-color: #9c4749;
     }
-    .apply-button__side--left{
+    .apply-button__side--left {
       left: 100%;
       transform-origin: left center;
       transform: rotateY(90deg);
     }
-    .apply-button__side--right{
+    .apply-button__side--right {
       right: 100%;
       transform-origin: right center;
       transform: rotateY(-90deg);
     }
     .apply-button:active {
-      transform: translate3d(calc(#{0.5 * $table-width} - 50%), 0, -0.4 * $table-height + $apply-depth / 2) scale3d(1.2, 0.8, 1.2);
+      transform: translate3d(
+          calc(#{0.5 * $table-width} - 50%),
+          0,
+          -0.4 * $table-height + $apply-depth / 2
+        )
+        scale3d(1.2, 0.8, 1.2);
     }
 
     // Objects ----------------------
@@ -273,7 +330,7 @@ $apply-depth: 40px;
       background-color: transparent;
       bottom: 0;
       right: 0;
-      transform: translate3d(0, calc(-0.1 * var(--hero-height)),-80px);
+      transform: translate3d(0, calc(-0.1 * var(--hero-height)), -80px);
       transform-origin: bottom center;
       text-rendering: optimizeLegibility;
       font-smoothing: subpixel-antialiased;
@@ -284,30 +341,170 @@ $apply-depth: 40px;
         left: 0;
       }
     }
-    .objects-front { transform: translate3d(0, calc(-0.1 * var(--hero-height)), -0 * $table-height); }
-    .objects-back  { transform: translate3d(0, calc(-0.1 * var(--hero-height)), -2 * $table-height); }
+    .objects-front {
+      transform: translate3d(
+        0,
+        calc(-0.1 * var(--hero-height)),
+        -0 * $table-height
+      );
+    }
+    .objects-back {
+      transform: translate3d(
+        0,
+        calc(-0.1 * var(--hero-height)),
+        -2 * $table-height
+      );
+    }
 
-    $rocketBaseTransform: translate3d(calc(#{0.62 * $table-width} - 50%), 0%, -0.50 * $table-height);
-    $glitchBaseTransform: translate3d(calc(#{0.50 * $table-width} - 50%), 0%, -0.50 * $table-height);
-    $duckBaseTransform: translate3d(calc(#{0.196* $table-width} - 50%), 0%, -0.55 * $table-height);
+    $rocketBaseTransform: translate3d(
+      calc(#{0.62 * $table-width} - 50%),
+      0%,
+      -0.5 * $table-height
+    );
+    $glitchBaseTransform: translate3d(
+      calc(#{0.5 * $table-width} - 50%),
+      0%,
+      -0.5 * $table-height
+    );
+    $duckBaseTransform: translate3d(
+      calc(#{0.196 * $table-width} - 50%),
+      0%,
+      -0.55 * $table-height
+    );
     //                         <width>                               <x-pos>                         <z-pos>
-    .object--pc-cowsay  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height); pointer-events: none;}
-    .object--pc-design  {width: 15.00%; transform: translate3d(calc(#{0.20 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-    .object--pc-glitch  {width: 15.00%; transform: $glitchBaseTransform;}
-    .object--pc-thegame {width: 15.00%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-    .object--pc-double  {width: 29.50%; transform: translate3d(calc(#{0.80 * $table-width} - 50%), 0%, -0.50 * $table-height);}
-    .object--rubber-duck{width:  5.00%; transform: $duckBaseTransform; transform-origin: center center; transition: transform 200ms $ease-bounce;}
-    .object--mug-left   {width:  4.00%; transform: translate3d(calc(#{0.08 * $table-width} - 50%), 0%, -0.43 * $table-height);}
-    .object--lego       {width:  5.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.70 * $table-height);}
-    .object--rocket     {width:  3.00%; transform: $rocketBaseTransform;}
-    .object--cactus     {width:  6.00%; transform: translate3d(calc(#{0.65 * $table-width} - 50%), 0%, -0.75 * $table-height);}
-    .object--mug-right  {width:  4.00%; transform: translate3d(calc(#{0.93 * $table-width} - 50%), 0%, -0.73 * $table-height) scaleX(-1);}
-    .object--lamp       {width: 23.00%; transform: translate3d(calc(#{0.87 * $table-width} - 50%), 0%, -0.25 * $table-height); transition: opacity 100ms $ease-quad;}
-    .object--penholder  {width:  4.00%; transform: translate3d(calc(#{0.32 * $table-width} - 50%), 0%, -0.68 * $table-height);}
-    .object--drink      {width:  3.50%; transform: translate3d(calc(#{0.95 * $table-width} - 50%), 0%, -0.22 * $table-height);}
-    .object--pencil     {width:  6.00%; transform: translate3d(calc(#{0.27 * $table-width} - 50%), 0%, -0.35 * $table-height) rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg); transform-origin: center bottom;}
-    .object--paper-text {width:  7.00%; transform: translate3d(calc(#{0.10 * $table-width} - 50%),calc(50% - 1px), -0.40 * $table-height) rotateX(90deg) rotate(-3deg);}
-    .object--paper-biene{width:  7.00%; transform: translate3d(calc(#{0.89 * $table-width} - 50%),calc(50% - 1px), -0.32 * $table-height) rotateX(90deg) rotate(4deg);}
+    .object--pc-cowsay {
+      width: 15%;
+      transform: translate3d(
+        calc(#{0.2 * $table-width} - 50%),
+        0%,
+        -0.5 * $table-height
+      );
+      pointer-events: none;
+    }
+    .object--pc-design {
+      width: 15%;
+      transform: translate3d(
+        calc(#{0.2 * $table-width} - 50%),
+        0%,
+        -0.5 * $table-height
+      );
+    }
+    .object--pc-glitch {
+      width: 15%;
+      transform: $glitchBaseTransform;
+    }
+    .object--pc-thegame {
+      width: 15%;
+      transform: translate3d(
+        calc(#{0.8 * $table-width} - 50%),
+        0%,
+        -0.5 * $table-height
+      );
+    }
+    .object--pc-double {
+      width: 29.5%;
+      transform: translate3d(
+        calc(#{0.8 * $table-width} - 50%),
+        0%,
+        -0.5 * $table-height
+      );
+    }
+    .object--rubber-duck {
+      width: 5%;
+      transform: $duckBaseTransform;
+      transform-origin: center center;
+      transition: transform 200ms $ease-bounce;
+    }
+    .object--mug-left {
+      width: 4%;
+      transform: translate3d(
+        calc(#{0.08 * $table-width} - 50%),
+        0%,
+        -0.43 * $table-height
+      );
+    }
+    .object--lego {
+      width: 5%;
+      transform: translate3d(
+        calc(#{0.32 * $table-width} - 50%),
+        0%,
+        -0.7 * $table-height
+      );
+    }
+    .object--rocket {
+      width: 3%;
+      transform: $rocketBaseTransform;
+    }
+    .object--cactus {
+      width: 6%;
+      transform: translate3d(
+        calc(#{0.65 * $table-width} - 50%),
+        0%,
+        -0.75 * $table-height
+      );
+    }
+    .object--mug-right {
+      width: 4%;
+      transform: translate3d(
+          calc(#{0.93 * $table-width} - 50%),
+          0%,
+          -0.73 * $table-height
+        )
+        scaleX(-1);
+    }
+    .object--lamp {
+      width: 23%;
+      transform: translate3d(
+        calc(#{0.87 * $table-width} - 50%),
+        0%,
+        -0.25 * $table-height
+      );
+      transition: opacity 100ms $ease-quad;
+    }
+    .object--penholder {
+      width: 4%;
+      transform: translate3d(
+        calc(#{0.32 * $table-width} - 50%),
+        0%,
+        -0.68 * $table-height
+      );
+    }
+    .object--drink {
+      width: 3.5%;
+      transform: translate3d(
+        calc(#{0.95 * $table-width} - 50%),
+        0%,
+        -0.22 * $table-height
+      );
+    }
+    .object--pencil {
+      width: 6%;
+      transform: translate3d(
+          calc(#{0.27 * $table-width} - 50%),
+          0%,
+          -0.35 * $table-height
+        )
+        rotateX(90deg) scaleX(-1) rotateZ(40deg) rotateX(-60deg);
+      transform-origin: center bottom;
+    }
+    .object--paper-text {
+      width: 7%;
+      transform: translate3d(
+          calc(#{0.1 * $table-width} - 50%),
+          calc(50% - 1px),
+          -0.4 * $table-height
+        )
+        rotateX(90deg) rotate(-3deg);
+    }
+    .object--paper-biene {
+      width: 7%;
+      transform: translate3d(
+          calc(#{0.89 * $table-width} - 50%),
+          calc(50% - 1px),
+          -0.32 * $table-height
+        )
+        rotateX(90deg) rotate(4deg);
+    }
 
     .object--pc-cowsay::before,
     .object--pc-design::before,
@@ -331,13 +528,18 @@ $apply-depth: 40px;
     }
 
     .object--rubber-duck:hover {
-      transform: translate3d(calc(#{0.192 * $table-width} - 50%), 0%, -0.55 * $table-height) scale(1.5);
+      transform: translate3d(
+          calc(#{0.192 * $table-width} - 50%),
+          0%,
+          -0.55 * $table-height
+        )
+        scale(1.5);
     }
 
     .duck-cliked {
       opacity: 0;
       animation: duck-up 1s $ease-bounce, duck-fade 300ms 700ms ease-out;
-      transform: $duckBaseTransform translate3d(0,-$table-height,0);
+      transform: $duckBaseTransform translate3d(0, -$table-height, 0);
 
       .rubber-duck-img {
         animation: duck-spin 1300ms $ease-quad;
@@ -345,16 +547,30 @@ $apply-depth: 40px;
     }
 
     @keyframes duck-up {
-      0%   {transform: $duckBaseTransform; opacity: 1;}
-      100% {transform: $duckBaseTransform translate3d(0,-$table-height,0); opacity: 1;}
+      0% {
+        transform: $duckBaseTransform;
+        opacity: 1;
+      }
+      100% {
+        transform: $duckBaseTransform translate3d(0, -$table-height, 0);
+        opacity: 1;
+      }
     }
     @keyframes duck-spin {
-      0%   {transform: rotate(0deg) scale(1.5); }
-      100% {transform: rotate(395deg) scale(0.5);}
+      0% {
+        transform: rotate(0deg) scale(1.5);
+      }
+      100% {
+        transform: rotate(395deg) scale(0.5);
+      }
     }
     @keyframes duck-fade {
-      0%   {opacity: 1;}
-      100% {opacity: 0;}
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
     .sitting-silhouette {
@@ -362,9 +578,17 @@ $apply-depth: 40px;
       left: 50%;
       bottom: 0;
       transform-origin: bottom;
-      transform: translate3d(-50%, calc(-0.04 * var(--hero-height)), -$table-height * 1.5);
+      transform: translate3d(
+        -50%,
+        calc(-0.04 * var(--hero-height)),
+        -$table-height * 1.5
+      );
     }
-    $silhoueteBasicTransform: translate3d(-50%, -0.5 * $screen-y-pos, calc(-1 * #{$screen-depth} * 0.666));
+    $silhoueteBasicTransform: translate3d(
+      -50%,
+      -0.5 * $screen-y-pos,
+      calc(-1 * #{$screen-depth} * 0.666)
+    );
     .silhouette {
       height: calc(var(--screen-center-width) * 0.46);
       left: 50%;
@@ -373,56 +597,142 @@ $apply-depth: 40px;
       transform: $silhoueteBasicTransform;
     }
 
-    $silhoueteLeftLeftBasicTransform:
-      $silhoueteBasicTransform
-      translate3d(calc(-0.85 * var(--screen-center-width)),0,0)
+    $silhoueteLeftLeftBasicTransform: $silhoueteBasicTransform
+      translate3d(calc(-0.85 * var(--screen-center-width)), 0, 0)
       rotateY($screen-angle);
 
-    $silhoueteLeftRightBasicTransform:
-      $silhoueteBasicTransform
-      translate3d(calc(-0.65 * var(--screen-center-width)),0,0);
+    $silhoueteLeftRightBasicTransform: $silhoueteBasicTransform
+      translate3d(calc(-0.65 * var(--screen-center-width)), 0, 0);
 
     @keyframes silhoueteLeftLeftTalk {
-      0% {transform: $silhoueteLeftLeftBasicTransform;}
+      0% {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
 
-      #{2% * 0} {transform: $silhoueteLeftLeftBasicTransform;}
-      #{2% * 1} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(-0.0015/2 * var(--screen-center-width))) rotate(-0.1deg);}
-      #{2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{2% * 3} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(-0.0015   * var(--screen-center-width))) rotate(-0.1deg);}
-      #{2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateY(calc(0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
-      #{2% * 5.5} {transform: $silhoueteLeftLeftBasicTransform;}
+      #{2% * 0} {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
+      #{2% * 1} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateY(calc(-0.0015 / 2 * var(--screen-center-width)))
+          rotate(-0.1deg);
+      }
+      #{2% * 2} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateY(calc(0.0015 * var(--screen-center-width))) rotate(+0.1deg);
+      }
+      #{2% * 3} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateY(calc(-0.0015 * var(--screen-center-width))) rotate(-0.1deg);
+      }
+      #{2% * 4} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateY(calc(0.0015 * var(--screen-center-width))) rotate(+0.1deg);
+      }
+      #{2% * 5} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateY(calc(0.0015 / 2 * var(--screen-center-width)))
+          rotate(+0.1deg);
+      }
+      #{2% * 5.5} {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
 
-      #{50% + 12% * 2 + 2% * 0} {transform: $silhoueteLeftLeftBasicTransform;}
-      #{50% + 12% * 2 + 2% * 1} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(-0.0015/2 * var(--screen-center-width))) rotate(+0.4deg);}
-      #{50% + 12% * 2 + 2% * 2} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
-      #{50% + 12% * 2 + 2% * 3} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(-0.0015   * var(--screen-center-width))) rotate(+0.4deg);}
-      #{50% + 12% * 2 + 2% * 4} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015   * var(--screen-center-width))) rotate(-0.4deg);}
-      #{50% + 12% * 2 + 2% * 5} {transform: $silhoueteLeftLeftBasicTransform translateX(calc(0.0015/2 * var(--screen-center-width))) rotate(-0.4deg);}
-      #{50% + 12% * 2 + 2% * 5.5} {transform: $silhoueteLeftLeftBasicTransform;}
+      #{50% + 12% * 2 + 2% * 0} {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
+      #{50% + 12% * 2 + 2% * 1} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateX(calc(-0.0015 / 2 * var(--screen-center-width)))
+          rotate(+0.4deg);
+      }
+      #{50% + 12% * 2 + 2% * 2} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateX(calc(0.0015 * var(--screen-center-width))) rotate(-0.4deg);
+      }
+      #{50% + 12% * 2 + 2% * 3} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateX(calc(-0.0015 * var(--screen-center-width))) rotate(+0.4deg);
+      }
+      #{50% + 12% * 2 + 2% * 4} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateX(calc(0.0015 * var(--screen-center-width))) rotate(-0.4deg);
+      }
+      #{50% + 12% * 2 + 2% * 5} {
+        transform: $silhoueteLeftLeftBasicTransform
+          translateX(calc(0.0015 / 2 * var(--screen-center-width)))
+          rotate(-0.4deg);
+      }
+      #{50% + 12% * 2 + 2% * 5.5} {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
 
-      100% {transform: $silhoueteLeftLeftBasicTransform;}
+      100% {
+        transform: $silhoueteLeftLeftBasicTransform;
+      }
     }
 
     @keyframes silhoueteLeftRightTalk {
-      0% {transform: $silhoueteLeftRightBasicTransform;}
+      0% {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
 
-      #{12% * 2 + 2% * 0} {transform: $silhoueteLeftRightBasicTransform;}
-      #{12% * 2 + 2% * 1} {transform: $silhoueteLeftRightBasicTransform translateX(calc(0.0002/2 * var(--screen-center-width))) rotate(-0.3deg);}
-      #{12% * 2 + 2% * 2} {transform: $silhoueteLeftRightBasicTransform translateX(calc(-0.0002   * var(--screen-center-width))) rotate(+0.3deg);}
-      #{12% * 2 + 2% * 3} {transform: $silhoueteLeftRightBasicTransform translateX(calc(0.0002   * var(--screen-center-width))) rotate(-0.3deg);}
-      #{12% * 2 + 2% * 4} {transform: $silhoueteLeftRightBasicTransform translateX(calc(-0.0002   * var(--screen-center-width))) rotate(+0.3deg);}
-      #{12% * 2 + 2% * 5} {transform: $silhoueteLeftRightBasicTransform;}
+      #{12% * 2 + 2% * 0} {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
+      #{12% * 2 + 2% * 1} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateX(calc(0.0002 / 2 * var(--screen-center-width)))
+          rotate(-0.3deg);
+      }
+      #{12% * 2 + 2% * 2} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateX(calc(-0.0002 * var(--screen-center-width))) rotate(+0.3deg);
+      }
+      #{12% * 2 + 2% * 3} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateX(calc(0.0002 * var(--screen-center-width))) rotate(-0.3deg);
+      }
+      #{12% * 2 + 2% * 4} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateX(calc(-0.0002 * var(--screen-center-width))) rotate(+0.3deg);
+      }
+      #{12% * 2 + 2% * 5} {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
 
-      #{50% + 2% * 0} {transform: $silhoueteLeftRightBasicTransform;}
-      #{50% + 2% * 1} {transform: $silhoueteLeftRightBasicTransform translateY(calc(-0.0015/2 * var(--screen-center-width))) rotate(-0.1deg);}
-      #{50% + 2% * 2} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{50% + 2% * 3} {transform: $silhoueteLeftRightBasicTransform translateY(calc(-0.0015   * var(--screen-center-width))) rotate(-0.1deg);}
-      #{50% + 2% * 4} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015   * var(--screen-center-width))) rotate(+0.1deg);}
-      #{50% + 2% * 5} {transform: $silhoueteLeftRightBasicTransform translateY(calc(0.0015/2 * var(--screen-center-width))) rotate(+0.1deg);}
-      #{50% + 2% * 5.5} {transform: $silhoueteLeftRightBasicTransform;}
+      #{50% + 2% * 0} {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
+      #{50% + 2% * 1} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateY(calc(-0.0015 / 2 * var(--screen-center-width)))
+          rotate(-0.1deg);
+      }
+      #{50% + 2% * 2} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateY(calc(0.0015 * var(--screen-center-width))) rotate(+0.1deg);
+      }
+      #{50% + 2% * 3} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateY(calc(-0.0015 * var(--screen-center-width))) rotate(-0.1deg);
+      }
+      #{50% + 2% * 4} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateY(calc(0.0015 * var(--screen-center-width))) rotate(+0.1deg);
+      }
+      #{50% + 2% * 5} {
+        transform: $silhoueteLeftRightBasicTransform
+          translateY(calc(0.0015 / 2 * var(--screen-center-width)))
+          rotate(+0.1deg);
+      }
+      #{50% + 2% * 5.5} {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
 
-      100% {transform: $silhoueteLeftRightBasicTransform;}
+      100% {
+        transform: $silhoueteLeftRightBasicTransform;
+      }
     }
 
     .silhouette--left-left {
@@ -437,13 +747,12 @@ $apply-depth: 40px;
     .silhouette--right {
       pointer-events: none;
       // height: calc(var(--screen-center-width) * 0.4);
-      transform:
-        $silhoueteBasicTransform
-        translate3d(calc(0.81 * var(--screen-center-width)),0,0);
+      transform: $silhoueteBasicTransform
+        translate3d(calc(0.81 * var(--screen-center-width)), 0, 0);
     }
 
     // Map screen ----------------------
-    .map__pointer{
+    .map__pointer {
       $map-pointer-border-width: 2px;
 
       position: absolute;
@@ -500,7 +809,7 @@ $apply-depth: 40px;
       place-items: center;
       place-content: center;
 
-      .plot__ico{
+      .plot__ico {
         background-color: $c-bg-lighter;
         border-radius: 100%;
         padding: 10%;
@@ -516,7 +825,7 @@ $apply-depth: 40px;
         border-radius: 0.5rem;
         width: calc(0.8 * var(--plot-icon-width));
 
-        .plot__bar-content{
+        .plot__bar-content {
           height: 100%;
           width: 150%;
           margin: 0 -25%;
@@ -528,13 +837,21 @@ $apply-depth: 40px;
           transition: transform 1s cubic-bezier(0, 0, 0.3333, 1);
           will-change: transform;
         }
-        .plot__bar-content--1{color: #964ac6;}
-        .plot__bar-content--2{color: #39a5b7;}
-        .plot__bar-content--3{color: #b4426f;}
-        .plot__bar-content--4{color: #522dc8;}
+        .plot__bar-content--1 {
+          color: #964ac6;
+        }
+        .plot__bar-content--2 {
+          color: #39a5b7;
+        }
+        .plot__bar-content--3 {
+          color: #b4426f;
+        }
+        .plot__bar-content--4 {
+          color: #522dc8;
+        }
       }
 
-      .plot__plot{
+      .plot__plot {
         grid-area: plot;
         color: $c-bg-lighter;
         border: solid 2px currentColor;
@@ -544,7 +861,7 @@ $apply-depth: 40px;
         height: 100%;
         position: relative;
 
-        &::before{
+        &::before {
           content: '';
           position: absolute;
           right: 0;
@@ -559,28 +876,35 @@ $apply-depth: 40px;
           box-sizing: border-box;
         }
 
-        .plot__plot-lines{
+        .plot__plot-lines {
           height: 100%;
           width: 100%;
           overflow: visible;
 
           .plot__plot-line {
-            fill:none;
-            stroke:currentColor;
+            fill: none;
+            stroke: currentColor;
             stroke-width: 3px;
             stroke-linejoin: round;
             stroke-linecap: round;
             transition: d 1s cubic-bezier(0, 0, 0.3333, 1);
             will-change: d;
           }
-          .plot__plot-line--1 { color: #964ac6; }
-          .plot__plot-line--2 { color: #39a5b7; }
-          .plot__plot-line--3 { color: #b4426f; }
-          .plot__plot-line--4 { color: #522dc8; }
+          .plot__plot-line--1 {
+            color: #964ac6;
+          }
+          .plot__plot-line--2 {
+            color: #39a5b7;
+          }
+          .plot__plot-line--3 {
+            color: #b4426f;
+          }
+          .plot__plot-line--4 {
+            color: #522dc8;
+          }
         }
       }
     }
-
 
     // Rocket animation ----------------------
 
@@ -588,27 +912,33 @@ $apply-depth: 40px;
     $rocketFlyDuration: 3s;
     $rocketHideDuration: 1s;
     $rocketAppearDuration: 1s;
-    .object--rocket{
+    .object--rocket {
       will-change: transform, opacity;
       transform-origin: center bottom;
-      animation:
-        rocket-lunch $rocketLunchDuration $ease-quad-in,
-        rocket-shake ($rocketLunchDuration / 100 * 2) $rocketLunchDuration linear infinite,
-        rocket-hide $rocketHideDuration ($rocketFlyDuration + $rocketLunchDuration) linear,
-        rocket-appear $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) cubic-bezier(0.44, 0.24, 0.21, 1.17);
+      animation: rocket-lunch $rocketLunchDuration $ease-quad-in,
+        rocket-shake ($rocketLunchDuration / 100 * 2) $rocketLunchDuration
+          linear infinite,
+        rocket-hide $rocketHideDuration
+          ($rocketFlyDuration + $rocketLunchDuration) linear,
+        rocket-appear $rocketAppearDuration
+          ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration)
+          cubic-bezier(0.44, 0.24, 0.21, 1.17);
     }
-    .rocket-wrapper{
+    .rocket-wrapper {
       will-change: transform;
-      animation: rocket-fly $rocketFlyDuration $rocketLunchDuration cubic-bezier(0.32, 0.43, 0.86, -0.51);
+      animation: rocket-fly $rocketFlyDuration $rocketLunchDuration
+        cubic-bezier(0.32, 0.43, 0.86, -0.51);
     }
-    .fire-img{
+    .fire-img {
       position: absolute;
       top: 80%;
       transform-origin: center top;
       opacity: 0;
-      animation:
-      rocket-fire ($rocketLunchDuration / 100 * 2) $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
-      rocket-hide $rocketAppearDuration ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration) linear;
+      animation: rocket-fire ($rocketLunchDuration / 100 * 2)
+          $rocketLunchDuration $ease-quad-in infinite alternate-reverse,
+        rocket-hide $rocketAppearDuration
+          ($rocketHideDuration + $rocketFlyDuration + $rocketLunchDuration)
+          linear;
     }
 
     .stop-animation {
@@ -622,50 +952,82 @@ $apply-depth: 40px;
 
     @keyframes rocket-lunch {
       @for $i from 0 through 100 {
-        #{$i}% {transform: $rocketBaseTransform translateX($i * 0.125% * if($i % 2 == 0, 1, -1));}
+        #{$i}% {
+          transform: $rocketBaseTransform
+            translateX($i * 0.125% * if($i % 2 == 0, 1, -1));
+        }
       }
     }
 
     @keyframes rocket-shake {
-      from {transform: $rocketBaseTransform translateX(+12.5%);}
-      to   {transform: $rocketBaseTransform translateX(-12.5%);}
+      from {
+        transform: $rocketBaseTransform translateX(+12.5%);
+      }
+      to {
+        transform: $rocketBaseTransform translateX(-12.5%);
+      }
     }
 
     @keyframes rocket-fly {
-      from {transform: translateY(0);}
-      to   {transform: translateY(-100vh);}
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100vh);
+      }
     }
 
     @keyframes rocket-fire {
-      from {opacity:1; transform: scale(0.75,0.5);}
-      to   {opacity:1; transform: scale(1,1);}
+      from {
+        opacity: 1;
+        transform: scale(0.75, 0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
     }
 
     @keyframes rocket-hide {
-      from,to {opacity:0;}
+      from,
+      to {
+        opacity: 0;
+      }
     }
 
     @keyframes rocket-appear {
-      from {opacity:0.6667; transform: $rocketBaseTransform scale(0);}
-      to   {opacity:1; transform: $rocketBaseTransform scale(1);}
+      from {
+        opacity: 0.6667;
+        transform: $rocketBaseTransform scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: $rocketBaseTransform scale(1);
+      }
     }
 
     // Glitch animation -------------
 
     .object--pc-glitch-1 {
-      animation: half-blink 250ms 50ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      animation: half-blink 250ms 50ms cubic-bezier(0.45, 0.05, 0.55, 0.95)
+        infinite alternate-reverse;
       transform: $glitchBaseTransform;
       pointer-events: none;
     }
     .object--pc-glitch-2 {
-      animation: half-blink 100ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate-reverse;
+      animation: half-blink 100ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite
+        alternate-reverse;
       transform: $glitchBaseTransform scaleX(-1);
       pointer-events: none;
     }
 
     @keyframes half-blink {
-      from {opacity:0.25;}
-      to   {opacity:0.75;}
+      from {
+        opacity: 0.25;
+      }
+      to {
+        opacity: 0.75;
+      }
     }
 
     // Cowsay animation ----------------
@@ -682,25 +1044,43 @@ $apply-depth: 40px;
       $cowsay-time: 3000ms;
       $cowsay-delay: 2000ms;
 
-      animation:
-        wait-breakpoint-0 1 * $cowsay-time + $cowsay-delay,
+      animation: wait-breakpoint-0 1 * $cowsay-time + $cowsay-delay,
         wait-breakpoint-1 1 * $cowsay-time 1 * $cowsay-time + $cowsay-delay,
-        show-result-cmd-2  0.2 * $cowsay-time 2 * $cowsay-time + $cowsay-delay steps(8);
+        show-result-cmd-2 0.2 * $cowsay-time 2 * $cowsay-time + $cowsay-delay
+          steps(8);
 
       $overlay-break-point-0: 0.92;
       $overlay-break-point-1: 0.82;
-      $overlay-break-point-2: 0.0;
+      $overlay-break-point-2: 0;
 
       @keyframes show-cmd-1 {
-        0%  {transform: scaleY($overlay-break-point-0);}
-        100%{transform: scaleY($overlay-break-point-1);}
+        0% {
+          transform: scaleY($overlay-break-point-0);
+        }
+        100% {
+          transform: scaleY($overlay-break-point-1);
+        }
       }
       @keyframes show-result-cmd-2 {
-        0%  {transform: scaleY($overlay-break-point-1);}
-        100%{transform: scaleY($overlay-break-point-2);}
+        0% {
+          transform: scaleY($overlay-break-point-1);
+        }
+        100% {
+          transform: scaleY($overlay-break-point-2);
+        }
       }
-      @keyframes wait-breakpoint-0{0%,100%{transform:scaleY($overlay-break-point-0);}}
-      @keyframes wait-breakpoint-1{0%,100%{transform:scaleY($overlay-break-point-1);}}
+      @keyframes wait-breakpoint-0 {
+        0%,
+        100% {
+          transform: scaleY($overlay-break-point-0);
+        }
+      }
+      @keyframes wait-breakpoint-1 {
+        0%,
+        100% {
+          transform: scaleY($overlay-break-point-1);
+        }
+      }
 
       .cowsay__overlay--cmd {
         position: absolute;
@@ -711,18 +1091,28 @@ $apply-depth: 40px;
         transform-origin: center right;
         background-color: #33323f;
         transform: scaleX(0);
-        animation:
-          display-line $cowsay-delay step-end,
-          show-line $cowsay-time $cowsay-delay steps(16,end) 2;
+        animation: display-line $cowsay-delay step-end,
+          show-line $cowsay-time $cowsay-delay steps(16, end) 2;
 
         @keyframes display-line {
-          0%,100% {transform: scaleX(1);}
+          0%,
+          100% {
+            transform: scaleX(1);
+          }
         }
         @keyframes show-line {
-          0%  {transform: scaleX(1);}
-          50%  {transform: scaleX(1);}
-          90% {transform: scaleX(0);}
-          100%{transform: scaleX(0);}
+          0% {
+            transform: scaleX(1);
+          }
+          50% {
+            transform: scaleX(1);
+          }
+          90% {
+            transform: scaleX(0);
+          }
+          100% {
+            transform: scaleX(0);
+          }
         }
       }
     }
@@ -732,7 +1122,12 @@ $apply-depth: 40px;
     .object--mug {
     }
     .mug-smoke {
-      mask-image: linear-gradient(to top, black, cubic-bezier(.4,.8,.75,1), transparent);
+      mask-image: linear-gradient(
+        to top,
+        black,
+        cubic-bezier(0.4, 0.8, 0.75, 1),
+        transparent
+      );
       position: absolute;
       bottom: $mug-smoke-height;
       height: $mug-smoke-height;
@@ -746,8 +1141,12 @@ $apply-depth: 40px;
         will-change: translate;
 
         @keyframes smoke-up {
-          from {transform: translateY(0);}
-          to   {transform: translateY(-50%);}
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-50%);
+          }
         }
       }
     }
@@ -781,12 +1180,9 @@ $apply-depth: 40px;
         justify-content: space-between;
         width: 15.375em;
 
-
         .title__hackers {
-
         }
         .title__hours {
-
         }
       }
       .title__date {
@@ -810,7 +1206,6 @@ $apply-depth: 40px;
       padding: calc(var(--screen-height) / 30) 0;
 
       .countdown__cell {
-
         .countdown__circle {
           background-color: $c-bg-dark;
           display: block;
@@ -882,7 +1277,8 @@ $apply-depth: 40px;
           opacity: 0.4;
         }
         .wanted__duck-silhouette--missing {
-          animation: soft-fade-in 2000ms cubic-bezier(0.67, 0, 0.33, 1) infinite alternate-reverse;
+          animation: soft-fade-in 2000ms cubic-bezier(0.67, 0, 0.33, 1) infinite
+            alternate-reverse;
         }
         .wanted__tooltip {
           position: absolute;
@@ -899,7 +1295,7 @@ $apply-depth: 40px;
           text-transform: uppercase;
           display: block;
           transform: translateY(-100%) scale(1);
-          padding: 0.6667em 0 ;
+          padding: 0.6667em 0;
           opacity: 0;
           transition: transform 200ms ease-out, opacity 200ms ease-out;
         }
@@ -909,25 +1305,35 @@ $apply-depth: 40px;
         }
 
         .wanted__duck-silhouette--found {
-          animation:
-          found-duck-scale-down 200ms $ease-quad,
-          found-duck-fade-in 200ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+          animation: found-duck-scale-down 200ms $ease-quad,
+            found-duck-fade-in 200ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
           opacity: 0.4;
         }
-
       }
       @keyframes found-duck-scale-down {
-        from {transform: translateZ(250px) scale(50);}
-        to   {transform: none;}
+        from {
+          transform: translateZ(250px) scale(50);
+        }
+        to {
+          transform: none;
+        }
       }
       @keyframes found-duck-fade-in {
-        from {opacity:0;}
-        to   {opacity:0.4;}
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.4;
+        }
       }
     }
     @keyframes soft-fade-in {
-      from {opacity:0.05;}
-      to   {opacity:0.4;}
+      from {
+        opacity: 0.05;
+      }
+      to {
+        opacity: 0.4;
+      }
     }
 
     // Timeline screen ----------------------
@@ -943,7 +1349,6 @@ $apply-depth: 40px;
       display: flex;
       justify-content: space-between;
       height: 100%;
-
 
       &::before {
         content: '';
@@ -964,11 +1369,12 @@ $apply-depth: 40px;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        
+
         .timeline-screen__label {
           background-color: $c-bg-lighter;
           border-radius: calc(8 * var(--timeline-unit));
-          padding: calc(0.25 * var(--timeline-unit)) calc(2 * var(--timeline-unit));
+          padding: calc(0.25 * var(--timeline-unit))
+            calc(2 * var(--timeline-unit));
           display: inline-block;
           color: $c-bg-light;
           font-weight: 800;
@@ -978,13 +1384,13 @@ $apply-depth: 40px;
           transition: background-color 150ms ease-out;
           margin: calc(1.75 * var(--timeline-unit)) 0;
           text-decoration: none;
-          
+
           small {
             font-size: 0.75em;
           }
 
           &::after {
-            content: "";
+            content: '';
             height: var(--timeline-ball-size);
             width: var(--timeline-ball-size);
             flex-shrink: 0;
@@ -992,12 +1398,14 @@ $apply-depth: 40px;
             border: calc(0.5 * var(--timeline-unit)) solid $c-bg-light;
             border-radius: 100%;
             position: absolute;
-            bottom: calc((var(--timeline-ball-size) * -0.5) - var(--timeline-line-width));
+            bottom: calc(
+              (var(--timeline-ball-size) * -0.5) - var(--timeline-line-width)
+            );
             left: 50%;
             transform: translateX(-50%);
             transition: inherit;
           }
-          
+
           &:hover {
             background-color: lighten($c-bg-lighter, 20%);
             &::after {
@@ -1012,7 +1420,9 @@ $apply-depth: 40px;
 
           .timeline-screen__label::after {
             bottom: unset;
-            top: calc((var(--timeline-ball-size) * -0.5) - var(--timeline-line-width));
+            top: calc(
+              (var(--timeline-ball-size) * -0.5) - var(--timeline-line-width)
+            );
           }
         }
 
@@ -1023,4 +1433,3 @@ $apply-depth: 40px;
     }
   }
 }
-

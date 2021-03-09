@@ -31,16 +31,20 @@
 .follow-us__item {
   display: block;
   width: 5rem;
-  transition: transform .3s cubic-bezier(0.17, 2.55, 0.69, 0.4);;
+  transition: transform 0.3s cubic-bezier(0.17, 2.55, 0.69, 0.4);
   box-sizing: content-box;
   will-change: transform;
 
-  a, img, svg { display: block; }
-  a { 
-    padding: 0.5rem; 
+  a,
+  img,
+  svg {
+    display: block;
+  }
+  a {
+    padding: 0.5rem;
     color: #fff;
     border-radius: 50%;
-    
+
     &:focus-visible {
       outline: none;
       box-shadow: 0 0 0 0.25rem $c-primary;
@@ -48,28 +52,41 @@
   }
 
   &:hover {
-    transition: transform .15s cubic-bezier(0.18, 0.89, 0.57, 2.05);
+    transition: transform 0.15s cubic-bezier(0.18, 0.89, 0.57, 2.05);
     transform: scale(1.15);
   }
 }
 
 @media only screen and (max-width: 52rem) {
-  .follow-us__title { font-size: 2.5rem; }
-  .follow-us__subtitle { font-size: 1.25rem; }
+  .follow-us__title {
+    font-size: 2.5rem;
+  }
+  .follow-us__subtitle {
+    font-size: 1.25rem;
+  }
 }
 @media only screen and (max-width: 7 * 5rem + 1rem) {
-  .follow-us__list { max-width: 4 * 5rem; }
+  .follow-us__list {
+    max-width: 4 * 5rem;
+  }
 }
 
 @media only screen and (max-width: 29.3rem) {
-  .follow-us__title { font-size: 2rem; }
-  .follow-us__subtitle { font-size: 1rem; }
-  .follow-us__item { width: 4.5rem; }
-  .follow-us__list { max-width: 4 * 4.5rem; }
+  .follow-us__title {
+    font-size: 2rem;
+  }
+  .follow-us__subtitle {
+    font-size: 1rem;
+  }
+  .follow-us__item {
+    width: 4.5rem;
+  }
+  .follow-us__list {
+    max-width: 4 * 4.5rem;
+  }
   .section--follow-us {
     .content__wrapper {
       padding: 5rem 1rem;
     }
   }
-
 }

@@ -20,10 +20,12 @@
   place-content: center;
   place-items: center;
   grid-template: auto / auto auto;
-  gap: 2rem ;
-  
+  gap: 2rem;
+
   & > img,
-  & > svg { width: 15rem; }
+  & > svg {
+    width: 15rem;
+  }
 }
 @media only screen and (max-width: 15rem * 2 + 2rem + 4rem) {
   .about-us__layout {

@@ -8,14 +8,12 @@ $card-padding-variation-h: 4 * 16px;
 $card-padding-variation-v: 1 * 16px;
 $card-padding-base: 2 * 16px;
 .card--big {
-  padding: 
-    $card-padding-base + $card-padding-variation-v 
-    $card-padding-base + $card-padding-variation-h;
+  padding: $card-padding-base + $card-padding-variation-v $card-padding-base +
+    $card-padding-variation-h;
   font-size: $card-font-base + $card-font-variation;
 }
 
 .card--outline {
-
 }
 
 .card--mission {
@@ -26,43 +24,56 @@ $card-padding-base: 2 * 16px;
   place-content: center;
   place-items: center;
   grid-template: auto / auto auto;
-  gap: $card-padding-base + $card-padding-variation-v ;
-  padding-left: $card-padding-base + $card-padding-variation-v ;
+  gap: $card-padding-base + $card-padding-variation-v;
+  padding-left: $card-padding-base + $card-padding-variation-v;
 
   & > img,
-  & > svg { width: 10rem; height: 10rem; }
+  & > svg {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-  .card--big { 
-    font-size: calc(100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}); 
-    padding: 
-      calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v})
-      calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
+  .card--big {
+    font-size: calc(
+      100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}
+    );
+    padding: calc(
+        100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
+      )
+      calc(
+        100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h}
+      );
   }
-  .card--mission { 
-    padding-left: calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v});
-    gap: calc(100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v});
+  .card--mission {
+    padding-left: calc(
+      100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
+    );
+    gap: calc(
+      100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
+    );
   }
 }
 
 @media only screen and (max-width: 600px) {
   .card--mission {
     grid-template: auto auto / auto;
-    padding-left: calc(100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h});
+    padding-left: calc(
+      100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h}
+    );
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .card--big { 
+  .card--big {
     font-size: $card-font-base;
     padding: $card-padding-base;
   }
-  .card--mission { 
+  .card--mission {
     gap: $card-padding-base;
   }
 }
-
 
 .card__title {
   margin: 0 -0.5rem 1rem 0;

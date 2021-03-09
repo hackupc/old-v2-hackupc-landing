@@ -1,6 +1,7 @@
-import './styles/cookies.css';
+import './styles/cookies.css'
 
-const cookieText = 'This website uses cookies of its own and of third parties to improve your browsing experience and show you personalized content based on your interests. If you continue browsing, we consider that you accept its use. You can obtain more information in our <a class="cookie-notice__link" href="https://legal.hackupc.com/privacy_and_cookies" target="_blank" rel="noopener noreferrer">Privacy and Cookies Policy</a>'
+const cookieText =
+  'This website uses cookies of its own and of third parties to improve your browsing experience and show you personalized content based on your interests. If you continue browsing, we consider that you accept its use. You can obtain more information in our <a class="cookie-notice__link" href="https://legal.hackupc.com/privacy_and_cookies" target="_blank" rel="noopener noreferrer">Privacy and Cookies Policy</a>'
 // const cookieText = 'This website uses cookies to ensure you get the best experience <a class="cookie-notice__link" href="https://legal.hackupc.com/privacy_and_cookies" target="_blank" rel="noopener noreferrer">More info</a>'
 // const cookieText = 'This website uses cookies to analyze site usage. <a class="cookie-notice__link" href="https://legal.hackupc.com/privacy_and_cookies" target="_blank" rel="noopener noreferrer">Privacy and Cookies Policy</a>'
 // const cookieText = 'We uses cookies to analyze site usage. <a class="cookie-notice__link" href="https://legal.hackupc.com/privacy_and_cookies" target="_blank" rel="noopener noreferrer">More info</a>'
@@ -20,7 +21,7 @@ if (window.localStorage.getItem('cookies') !== '1') {
 }
 
 // eslint-disable-next-line no-unused-vars
-function acceptCookies () {
+function acceptCookies() {
   window.localStorage.setItem('cookies', '1')
   cookieNotice.classList.add('cookies-notice--hidden')
 }
