@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 a {
   color: $c-primary;
 }
@@ -9,6 +10,7 @@ a {
   background-color: transparentize($c-primary, 0.01);
   color: $c-txt-light;
 }
+
 img::selection {
   background-color: transparentize($c-primary, 0.5);
 }
@@ -16,6 +18,7 @@ img::selection {
 p {
   line-height: 1.6667;
 }
+
 dd {
   margin-left: 0;
 }
@@ -23,6 +26,7 @@ dd {
 :focus {
   outline: none;
 }
+
 :focus-visible {
   outline: solid 0.25rem currentColor !important;
 }

@@ -1,15 +1,17 @@
 /* Footer section */
 .section--footer {
+  overflow: hidden;
+  padding: 2rem 0.5rem 1.5rem;
   background: $c-bg-dark;
   color: #fff;
-  padding: 2rem 0.5rem 1.5rem 0.5rem;
-  overflow: hidden;
   text-align: center;
 }
+
 .footer__link {
   color: $c-primary;
   text-decoration: none;
 }
+
 .footer__link:hover {
   text-decoration: underline;
 }
@@ -17,21 +19,24 @@
 .footer__element {
   margin: 1rem auto;
 }
+
 .footer__element--first {
   margin-top: 0;
 }
+
 .footer__element--last {
   margin-bottom: 0;
 }
 
-.footer_column {
+.footer-column {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: -0.5rem auto;
 }
-.footer_column__element {
+
+.footer-column__element {
   margin: 0.5rem;
 }
 
@@ -41,6 +46,7 @@
   flex-wrap: nowrap;
   align-items: center;
 }
+
 .section__list--packed {
   max-width: 350px;
   flex-grow: 1;
@@ -50,11 +56,13 @@
     font-size: 4vw;
   }
 }
+
 .links-list {
-  text-decoration: none;
   line-height: 1;
+  text-decoration: none;
   vertical-align: middle;
 }
+
 .links-list__separator {
   opacity: 0.5;
 }
@@ -62,29 +70,33 @@
 /* Contact */
 .section__list--contact {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
   max-width: 17.5rem;
   flex-basis: 17.5rem;
+  flex-wrap: nowrap;
+  justify-content: center;
   padding: 0;
 }
+
 .contact {
   display: block;
+  flex: 1;
   margin: 0;
   transition: transform 100ms ease-out;
-  flex: 1;
 }
+
 .contact__link {
-  width: 100%;
   display: block;
-  line-height: 1;
+  width: 100%;
   color: #fff;
+  line-height: 1;
 }
+
 .contact__icon {
   width: 1.5rem;
   min-width: 20px;
   margin: auto;
 }
+
 .contact:hover {
   transform: scale(1.25);
 }

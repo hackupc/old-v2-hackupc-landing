@@ -2,66 +2,69 @@
   background-color: $c-bg-dark;
 }
 
-.participate__container {
-  display: grid;
-  grid-template: min-content min-content / 1fr 1fr;
-  gap: 2rem;
+.participate {
+  &__container {
+    display: grid;
+    gap: 2rem;
+    grid-template: min-content min-content / 1fr 1fr;
 
-  & > div {
-    display: flex;
-    flex-direction: column;
-
-    & > dd {
-      flex-grow: 1;
+    > div {
       display: flex;
       flex-direction: column;
+
+      > dd {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
     }
   }
-}
 
-.participate__item {
-  background-color: $c-bg-light;
-  border-radius: $border-radius-big;
-  padding: 2.5rem;
-  text-align: left;
-}
-
-.participate__title {
-  margin: 0;
-  font-size: 1.75rem;
-  line-height: 0.8;
-  font-weight: bold;
-}
-
-.participate__desc {
-  flex-grow: 1;
-  margin: 1rem 0;
-}
-
-.participate__bottom-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: -0.75rem;
-}
-
-.participate__message {
-  display: inline-block;
-  flex-grow: 1;
-  margin: 0 -1rem 0 1rem;
-  opacity: 0.75;
-}
-
-@media only screen and (max-width: 1000px) {
-  .participate__container {
-    gap: 1rem;
+  &__item {
+    padding: 2.5rem;
+    background-color: $c-bg-light;
+    border-radius: $border-radius-big;
+    text-align: left;
   }
-}
 
-@media only screen and (max-width: 700px) {
-  .participate__container {
-    grid-template: min-content min-content min-content min-content / auto;
+  &__title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 0.8;
   }
-  .participate__item {
-    padding: 2rem;
+
+  &__desc {
+    flex-grow: 1;
+    margin: 1rem 0;
+  }
+
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: -0.75rem;
+  }
+
+  &__message {
+    display: inline-block;
+    flex-grow: 1;
+    margin: 0 -1rem 0 1rem;
+    opacity: 0.75;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    &__container {
+      gap: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    &__container {
+      grid-template: min-content min-content min-content min-content / auto;
+    }
+
+    &__item {
+      padding: 2rem;
+    }
   }
 }

@@ -1,29 +1,32 @@
 .section--about-us {
   background-color: $c-during-bg;
 }
+
 .about-us__subtitle {
-  font-size: 1.25rem;
   margin: 3rem 0;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 @media only screen and (max-width: 27.5rem) {
   .section--about-us .section__title {
     font-size: calc(1rem + 4vw);
   }
+
   .about-us__subtitle {
     font-size: 1.125rem;
   }
 }
+
 .about-us__layout {
-  margin-top: 2rem;
   display: grid;
+  margin-top: 2rem;
+  gap: 2rem;
+  grid-template: auto / auto auto;
   place-content: center;
   place-items: center;
-  grid-template: auto / auto auto;
-  gap: 2rem;
 
-  & > img,
-  & > svg {
+  > img,
+  > svg {
     width: 15rem;
   }
 }
@@ -34,6 +37,6 @@
 }
 
 .card--about-us {
-  background-color: $c-during-bg-card;
   padding: 2rem;
+  background-color: $c-during-bg-card;
 }

@@ -478,10 +478,10 @@ function makePath(points) {
 
 // FAQ
 
-const faqQuestionTitleElems = document.querySelectorAll('.faq__question-title')
+const faqQuestionTitleElems = document.querySelectorAll('.faq__title')
 
 document
-  .querySelectorAll('.faq__question-answer[aria-hidden="true"] a')
+  .querySelectorAll('.faq__answer[aria-hidden="true"] a')
   .forEach((linkElem) => {
     linkElem.tabIndex = -1
   })
@@ -489,7 +489,7 @@ document
 for (const faqQuestionTitleElem of faqQuestionTitleElems) {
   faqQuestionTitleElem.addEventListener('click', function (event) {
     const faqQuestionElem = this.closest('.faq__question')
-    const faqAnswerElem = faqQuestionElem.querySelector('.faq__question-answer')
+    const faqAnswerElem = faqQuestionElem.querySelector('.faq__answer')
     // const faqLinksElems = faqQuestionElem.querySelectorAll('a');
 
     if (faqQuestionTitleElem.getAttribute('aria-expanded') === 'true') {

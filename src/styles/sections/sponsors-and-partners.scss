@@ -3,6 +3,7 @@
   background-color: #f1ebf9;
   color: $c-bg-dark;
 }
+
 .section--partners > .content__wrapper {
   padding-top: 0;
 }
@@ -13,54 +14,57 @@ $logo-height: 8rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 -0.5rem;
   padding-left: 0;
+  margin: 0 -0.5rem;
 }
+
 .logo__item {
-  height: $logo-height;
+  position: relative;
   display: block;
+  height: $logo-height;
   flex-basis: calc(100% / 4 - 1rem);
+  margin: 0.5rem;
   background-color: #fff;
+  border-radius: 1em;
+  box-shadow: 0 1rem 1rem -0.5rem transparentize($c-bg-lighter, 0.9);
   color: $c-bg-dark;
   font-size: $logo-height/8;
-  border-radius: 1em;
-  margin: 0.5rem;
-  position: relative;
-  box-shadow: 0 1rem 1rem -0.5rem transparentize($c-bg-lighter, 0.9);
   transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
 
   &::before,
   &::after {
-    content: '';
     position: absolute;
-    pointer-events: none;
+    content: '';
     opacity: 0;
+    pointer-events: none;
   }
+
   &::before {
     z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(0.5rem);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1em;
     pointer-events: none;
 
     transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
     // will-change: opacity;
   }
+
   &::after {
-    content: 'Go to website';
     z-index: 2;
+    top: 50%;
+    right: 0;
+    left: 0;
+    content: 'Go to website';
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 0.03em;
-    transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
     transform: translate(0, -50%) translateY(1em);
-    top: 50%;
-    left: 0;
-    right: 0;
+    transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
     // will-change: transform, opacity;
   }
 
@@ -68,182 +72,215 @@ $logo-height: 8rem;
     &::before {
       opacity: 1;
     }
+
+    &::after {
+      opacity: 1;
+      transform: translate(0, -50%) translateY(0);
+    }
     @supports not (backdrop-filter: blur(0.5rem)) {
-      .logo__item_logo {
+      .logo__image {
         filter: blur(0.5rem);
       }
     }
-    &::after {
-      transform: translate(0, -50%) translateY(0);
-      opacity: 1;
-    }
   }
+
   &:active {
     box-shadow: 0 1rem 1rem -0.5rem transparent;
     transform: scale(0.975) translateY(0.25rem);
   }
 }
-.logo__item_link {
-  display: block;
-  height: 100%;
-}
-.logo__item_logo {
-  display: block;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1.5em 0.4em;
-  object-fit: contain;
-  transition: filter 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
-}
-.logo__item--unrevealed {
-  user-select: none;
-  cursor: help;
 
-  &::after {
-    content: 'Top secret';
-    text-transform: uppercase;
-    color: $c-bg-dark;
+.logo {
+  $logo-height-tera: $logo-height;
+  $logo-height-giga: $logo-height * 0.85;
+  $logo-height-mega: $logo-height * 0.85 * 0.85;
+  $logo-height-kilo: $logo-height * 0.85 * 0.85 * 0.85;
+  $logo-height-mili: $logo-height * 0.85 * 0.85 * 0.85 * 0.85;
+
+  &__link {
+    display: block;
+    height: 100%;
   }
 
-  .logo__item_link {
-    pointer-events: none;
-  }
-  .logo__item_logo {
-    opacity: 0.5;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .logo__item {
-    margin: 0.8vw;
-  }
-}
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5em 0.4em;
+    object-fit: contain;
+    transition: filter 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
 
-$logo-height-tera: $logo-height;
-$logo-height-giga: $logo-height * 0.85;
-$logo-height-mega: $logo-height * 0.85 * 0.85;
-$logo-height-kilo: $logo-height * 0.85 * 0.85 * 0.85;
-$logo-height-mili: $logo-height * 0.85 * 0.85 * 0.85 * 0.85;
+    // Custom logo positioning
+    &--mckinsey {
+      padding: 1.6em 0.4em;
+    }
 
-.logo__list--tera .logo__item {
-  height: $logo-height-tera;
-  font-size: $logo-height-tera/8;
-  flex-basis: calc(100% / 3 - 1rem);
-}
-.logo__list--giga .logo__item {
-  height: $logo-height-giga;
-  font-size: $logo-height-giga/8;
-  flex-basis: calc(100% / 4 - 1rem);
-}
-.logo__list--mega .logo__item {
-  height: $logo-height-mega;
-  font-size: $logo-height-mega/8;
-  flex-basis: calc(100% / 5 - 1rem);
-}
-.logo__list--kilo .logo__item {
-  height: $logo-height-kilo;
-  font-size: $logo-height-kilo/8;
-  flex-basis: calc(100% / 6 - 1rem);
-}
-.logo__list--mili .logo__item {
-  height: $logo-height-mili;
-  font-size: $logo-height-mili/8;
-  flex-basis: calc(100% / 7 - 1rem);
-}
+    &--google {
+      padding: 1.7em 0.4em;
+    }
 
-@media screen and (max-width: 1000px) {
-  .logo__list {
-    margin: 0 -0.8vw;
-  }
-  .logo__list--tera .logo__item {
-    height: $logo-height-tera/1rem * 1.6vw;
-    font-size: $logo-height-tera/8 / 1rem * 1.6vw;
-    flex-basis: calc(100% / 3 - 1.6vw);
-  }
-  .logo__list--giga .logo__item {
-    height: $logo-height-giga/1rem * 1.6vw;
-    font-size: $logo-height-giga/8 / 1rem * 1.6vw;
-    flex-basis: calc(100% / 4 - 1.6vw);
-  }
-  .logo__list--mega .logo__item {
-    height: $logo-height-mega/1rem * 1.6vw;
-    font-size: $logo-height-mega/8 / 1rem * 1.6vw;
-    flex-basis: calc(100% / 5 - 1.6vw);
-  }
-  .logo__list--kilo .logo__item {
-    height: $logo-height-kilo/1rem * 1.6vw;
-    font-size: $logo-height-kilo/8 / 1rem * 1.6vw;
-    flex-basis: calc(100% / 6 - 1.6vw);
-  }
-  .logo__list--mili .logo__item {
-    height: $logo-height-mili/1rem * 1.6vw;
-    font-size: $logo-height-mili/8 / 1rem * 1.6vw;
-    flex-basis: calc(100% / 7 - 1.6vw);
-  }
-}
+    &--skyscanner {
+      padding: 1.2em 0.4em;
+    }
 
-@media screen and (max-width: 750px) {
-  .logo__list--tera .logo__item {
+    &--facebook {
+      padding: 2.7em 0.4em;
+    }
+
+    &--vueling {
+      padding: 2.1em 0.4em;
+    }
+
+    &--github {
+      padding: 2.5em 0.4em;
+    }
+
+    &--upc {
+      padding: 1.25em 0.4em;
+    }
+
+    &--fib {
+      padding: 2.5em 0.4em;
+    }
+
+    &--telecos {
+      padding: 1.5em 0.4em;
+    }
+
+    &--cfis {
+      padding: 1.5em 0.4em;
+    }
+
+    &--coeinf {
+      padding: 0.75em 0.4em;
+    }
+
+    &--ajuntament_de_barcelona {
+      padding: 2.25em 0.4em;
+    }
+  }
+
+  &__item--unrevealed {
+    cursor: help;
+    user-select: none;
+
+    &::after {
+      color: $c-bg-dark;
+      content: 'Top secret';
+      text-transform: uppercase;
+    }
+
+    &__link {
+      pointer-events: none;
+    }
+
+    &__image {
+      opacity: 0.5;
+    }
+  }
+
+  &__list--tera &__item {
     height: $logo-height-tera;
-    font-size: $logo-height-tera/8;
     flex-basis: calc(100% / 3 - 1rem);
+    font-size: $logo-height-tera/8;
   }
-  .logo__list--giga .logo__item {
-    height: $logo-height-giga;
-    font-size: $logo-height-giga/8;
-    flex-basis: calc(100% / 4 - 1rem);
-  }
-  .logo__list--mega .logo__item {
-    height: $logo-height-mega;
-    font-size: $logo-height-mega/8;
-    flex-basis: calc(100% / 5 - 1rem);
-  }
-  .logo__list--kilo .logo__item {
-    height: $logo-height-kilo;
-    font-size: $logo-height-kilo/8;
-    flex-basis: calc(100% / 6 - 1rem);
-  }
-  .logo__list--mili .logo__item {
-    height: $logo-height-mili;
-    font-size: $logo-height-mili/8;
-    flex-basis: calc(100% / 7 - 1rem);
-  }
-}
 
-// Custom logo positioning
-.logo__item_logo--mckinsey {
-  padding: 1.6em 0.4em;
-}
-.logo__item_logo--google {
-  padding: 1.7em 0.4em;
-}
-.logo__item_logo--skyscanner {
-  padding: 1.2em 0.4em;
-}
-.logo__item_logo--facebook {
-  padding: 2.7em 0.4em;
-}
-.logo__item_logo--vueling {
-  padding: 2.1em 0.4em;
-}
-.logo__item_logo--github {
-  padding: 2.5em 0.4em;
-}
-.logo__item_logo--upc {
-  padding: 1.25em 0.4em;
-}
-.logo__item_logo--fib {
-  padding: 2.5em 0.4em;
-}
-.logo__item_logo--telecos {
-  padding: 1.5em 0.4em;
-}
-.logo__item_logo--cfis {
-  padding: 1.5em 0.4em;
-}
-.logo__item_logo--coeinf {
-  padding: 0.75em 0.4em;
-}
-.logo__item_logo--ajuntament_de_barcelona {
-  padding: 2.25em 0.4em;
+  &__list--giga &__item {
+    height: $logo-height-giga;
+    flex-basis: calc(100% / 4 - 1rem);
+    font-size: $logo-height-giga/8;
+  }
+
+  &__list--mega &__item {
+    height: $logo-height-mega;
+    flex-basis: calc(100% / 5 - 1rem);
+    font-size: $logo-height-mega/8;
+  }
+
+  &__list--kilo &__item {
+    height: $logo-height-kilo;
+    flex-basis: calc(100% / 6 - 1rem);
+    font-size: $logo-height-kilo/8;
+  }
+
+  &__list--mili &__item {
+    height: $logo-height-mili;
+    flex-basis: calc(100% / 7 - 1rem);
+    font-size: $logo-height-mili/8;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__item {
+      margin: 0.8vw;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__list {
+      margin: 0 -0.8vw;
+    }
+
+    &__list--tera &__item {
+      height: $logo-height-tera/1rem * 1.6vw;
+      flex-basis: calc(100% / 3 - 1.6vw);
+      font-size: $logo-height-tera/8 / 1rem * 1.6vw;
+    }
+
+    &__list--giga &__item {
+      height: $logo-height-giga/1rem * 1.6vw;
+      flex-basis: calc(100% / 4 - 1.6vw);
+      font-size: $logo-height-giga/8 / 1rem * 1.6vw;
+    }
+
+    &__list--mega &__item {
+      height: $logo-height-mega/1rem * 1.6vw;
+      flex-basis: calc(100% / 5 - 1.6vw);
+      font-size: $logo-height-mega/8 / 1rem * 1.6vw;
+    }
+
+    &__list--kilo &__item {
+      height: $logo-height-kilo/1rem * 1.6vw;
+      flex-basis: calc(100% / 6 - 1.6vw);
+      font-size: $logo-height-kilo/8 / 1rem * 1.6vw;
+    }
+
+    &__list--mili &__item {
+      height: $logo-height-mili/1rem * 1.6vw;
+      flex-basis: calc(100% / 7 - 1.6vw);
+      font-size: $logo-height-mili/8 / 1rem * 1.6vw;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__list--tera &__item {
+      height: $logo-height-tera;
+      flex-basis: calc(100% / 3 - 1rem);
+      font-size: $logo-height-tera/8;
+    }
+
+    &__list--giga &__item {
+      height: $logo-height-giga;
+      flex-basis: calc(100% / 4 - 1rem);
+      font-size: $logo-height-giga/8;
+    }
+
+    &__list--mega &__item {
+      height: $logo-height-mega;
+      flex-basis: calc(100% / 5 - 1rem);
+      font-size: $logo-height-mega/8;
+    }
+
+    &__list--kilo &__item {
+      height: $logo-height-kilo;
+      flex-basis: calc(100% / 6 - 1rem);
+      font-size: $logo-height-kilo/8;
+    }
+
+    &__list--mili &__item {
+      height: $logo-height-mili;
+      flex-basis: calc(100% / 7 - 1rem);
+      font-size: $logo-height-mili/8;
+    }
+  }
 }

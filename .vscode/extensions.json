@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
     "davidanson.vscode-markdownlint",
     "eg2.vscode-npm-script",
     "webhint.vscode-webhint",

@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="preconnect" href="https://www.google-analytics.com" as="script" crossorigin> -->
-    <!-- <link rel="preconnect" href="fonts.googleapis.com	" as="style" crossorigin> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" as="font" crossorigin />
 
     <!-- SEO -->
@@ -142,7 +140,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="hide-navbar">
     <header class="section section--hero" id="hero">
       <div class="hero-3d-space">
         <!--googleoff: all-->
@@ -475,25 +473,25 @@
     </header>
 
     <nav class="nav">
-      <ul>
+      <ul class="nav__list">
         <!-- <li><a data-ga-nav-item href="#hero">Home</a></li> -->
         <li>
-          <a data-ga-nav-item href="#what-is-a-hackathon">What is a hackathon?</a>
+          <a class="nav__link" data-ga-nav-item href="#what-is-a-hackathon">What is a hackathon?</a>
         </li>
         <li>
-          <a data-ga-nav-item href="#during-the-event">HackUPC mission</a>
+          <a class="nav__link" data-ga-nav-item href="#during-the-event">HackUPC mission</a>
         </li>
-        <li><a data-ga-nav-item href="#photos">Photos</a></li>
-        <li><a data-ga-nav-item href="#during-HackUPC">During HackUPC</a></li>
+        <li><a class="nav__link" data-ga-nav-item href="#photos">Photos</a></li>
+        <li><a class="nav__link" data-ga-nav-item href="#during-HackUPC">During HackUPC</a></li>
         <li>
-          <a data-ga-nav-item href="#how-to-participate">How to participate</a>
+          <a class="nav__link" data-ga-nav-item href="#how-to-participate">How to participate</a>
         </li>
-        <li><a data-ga-nav-item href="#faq">FAQ</a></li>
-        <!-- <li><a data-ga-nav-item href="#follow-us">Follow us</a></li> -->
-        <li><a data-ga-nav-item href="#sponsors">Sponsors</a></li>
-        <li><a data-ga-nav-item href="#hackersatupc">Hackers@UPC</a></li>
-        <!-- <li><a data-ga-nav-item href="#older-editions">Older editions</a></li> -->
-        <!-- <li><a data-ga-nav-item href="#footer">Footer</a></li> -->
+        <li><a class="nav__link" data-ga-nav-item href="#faq">FAQ</a></li>
+        <!-- <li><a class="nav__link" data-ga-nav-item href="#follow-us">Follow us</a></li> -->
+        <li><a class="nav__link" data-ga-nav-item href="#sponsors">Sponsors</a></li>
+        <li><a class="nav__link" data-ga-nav-item href="#hackersatupc">Hackers@UPC</a></li>
+        <!-- <li><a class="nav__link" data-ga-nav-item href="#older-editions">Older editions</a></li> -->
+        <!-- <li><a class="nav__link" data-ga-nav-item href="#footer">Footer</a></li> -->
       </ul>
     </nav>
 
@@ -556,58 +554,48 @@
             <p class="timeline__text">Coding is the main part of HackUPC, but we have many more activities!</p>
             <ul class="timeline__list">
               <li class="timeline__item">
-                <img data-markup-inline src="assets/images/icons/icon-talk.svg" alt="" class="timeline__item_icon" />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Talks & Workshops</span>
+                <img data-markup-inline src="assets/images/icons/icon-talk.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Talks & Workshops</span>
               </li>
               <li class="timeline__item">
-                <img data-markup-inline src="assets/images/icons/icon-lego.svg" alt="" class="timeline__item_icon" />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Lego building</span>
+                <img data-markup-inline src="assets/images/icons/icon-lego.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Lego building</span>
               </li>
               <li class="timeline__item">
-                <img
-                  data-markup-inline
-                  src="assets/images/icons/icon-slideshare.svg"
-                  alt=""
-                  class="timeline__item_icon"
-                />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Slideshare show</span>
+                <img data-markup-inline src="assets/images/icons/icon-slideshare.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Slideshare show</span>
               </li>
               <li class="timeline__item">
-                <img data-markup-inline src="assets/images/icons/icon-rubik.svg" alt="" class="timeline__item_icon" />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Rubik tournament</span>
+                <img data-markup-inline src="assets/images/icons/icon-rubik.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Rubik tournament</span>
               </li>
               <li class="timeline__item">
-                <img
-                  data-markup-inline
-                  src="assets/images/icons/icon-cafeteria.svg"
-                  alt=""
-                  class="timeline__item_icon"
-                />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Cafeteria games</span>
+                <img data-markup-inline src="assets/images/icons/icon-cafeteria.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Cafeteria games</span>
               </li>
               <li class="timeline__item">
-                <img data-markup-inline src="assets/images/icons/icon-sticker.svg" alt="" class="timeline__item_icon" />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">StickerEchange</span>
+                <img data-markup-inline src="assets/images/icons/icon-sticker.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">StickerEchange</span>
               </li>
               <li class="timeline__item">
-                <img data-markup-inline src="assets/images/icons/icon-nerf.svg" alt="" class="timeline__item_icon" />
-                <span class="timeline__item_separator"></span>
-                <span class="timeline__item_label">Nerf gun battle</span>
+                <img data-markup-inline src="assets/images/icons/icon-nerf.svg" alt="" class="timeline__icon" />
+                <span class="timeline__separator"></span>
+                <span class="timeline__label">Nerf gun battle</span>
               </li>
             </ul>
             <div class="timeline__card">
-              <h3 class="timeline__card_title"><i>Mission:</i> Enjoy HackUPC</h3>
-              <p class="timeline__card_text">
+              <h3 class="timeline__card-title"><em>Mission:</em> Enjoy HackUPC</h3>
+              <p class="timeline__card-text">
                 Your final mission is to fully enjoy HackUPC and not miss anything, so you go home with amazing
                 memories!
               </p>
-              <p class="timeline__card_text">
+              <p class="timeline__card-text">
                 To help you, we've prepared a macro activity! By completing missions, for example attending talks or
                 participating in activities, you will earn points, unlock different tiers, and win prizes. Each tier has
                 its little prize!
@@ -615,7 +603,7 @@
             </div>
           </div>
 
-          <h3 class="facilities__main_title">We also provide...</h3>
+          <h3 class="facilities__main-title">We also provide...</h3>
           <div class="facilities__container">
             <div class="facilities__item">
               <h4 class="facilities__title">Food</h4>
@@ -734,17 +722,12 @@
                 <dl class="faq__list">
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-0"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-0">
                         What is HackUPC?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-0">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-0">
                         HackUPC is the first student hackathon in Spain. This will be our sixth edition with 700 awesome
                         hackers and lots of side activities to learn new technologies, meet interesting people and have
                         fun. Come make history with us!
@@ -753,17 +736,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-1"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-1">
                         When & Where is HackUPC?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-1">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-1">
                         The check-in is from 4 p.m. to 6:45 p.m. on Friday, October 11. The opening ceremony starts at
                         7:00 p.m., also on Friday. We expect to finish HackUPC by 5:00 p.m. on Sunday 13th.
                         <br />HackUPC will take place in
@@ -776,17 +754,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-2"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-2">
                         What does HackUPC provide?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-2">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-2">
                         HackUPC is free for all accepted hackers. We will provide you with WiFi, swag, spaces enabled to
                         work and meals including breakfast, lunch, dinner and snacks during the night. Showers are
                         opened every morning for grooming and mattresses to relax in sleep-enabled classrooms are also
@@ -796,17 +769,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-3"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-3">
                         What can I build?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-3">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-3">
                         Webpages, mobile apps, hardware projects, games, an API... Anything is on the table. We have a
                         variety of hardware components, from Arduino kits and Raspberry Pi's, to Amazon Echo dots and
                         Myo Arm. You can borrow any Hardware Lab component or bring your own!
@@ -815,17 +783,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-4"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-4">
                         What should I bring?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-4">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-4">
                         All attendees must bring a valid government ID for admission. Other common checklist items
                         include laptops, chargers, adapters, sleeping bags and toiletries. We encourage hackers to
                         shower, so bring a towel!
@@ -834,17 +797,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-5"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-5">
                         What are the judging criteria?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-5">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-5">
                         Projects will be judged based on technical difficulty, innovation and overall learning
                         experience mainly, but also on their usability and design, by a panel of industry judges and UPC
                         faculty.
@@ -853,17 +811,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-6"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-6">
                         What if I have any dietary restrictions?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-6">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-6">
                         Since beta 1.0, we support vegan, vegetarian, no pork, gluten-free and other restrictions like
                         halal.
                       </p>
@@ -871,17 +824,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-about-7"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-7">
                         Do you have a code of conduct?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-about-7">
+                      <p class="faq__answer" aria-hidden="true" id="faq-about-7">
                         Yes, here it is:
                         <a
                           href="https://legal.hackersatupc.org/hackupc/code_of_conduct"
@@ -900,17 +848,12 @@
                 <dl class="faq__list">
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-travel-0"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-0">
                         Is travel reimbursement aviable?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-travel-0">
+                      <p class="faq__answer" aria-hidden="true" id="faq-travel-0">
                         Of course! The quantity varies depending on where you come from: we are giving up to 50€ for
                         Spaniards, and up to 100€ if you come from abroad. We want to give all of you the opportunity of
                         joining us! However, you must remember that not all participants will be eligible to receive
@@ -920,17 +863,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-travel-1"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-1">
                         When and how do I request it?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-travel-1">
+                      <p class="faq__answer" aria-hidden="true" id="faq-travel-1">
                         During your application process, there is a field for TR, fill it if you want to request it. In
                         case it doesn't appear that means that we have run out of TR. This option cannot be changed once
                         you've been accepted so pay attention while you're doing your application!
@@ -939,17 +877,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-travel-2"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-2">
                         Travel reimbursement conditions
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-travel-2">
+                      <p class="faq__answer" aria-hidden="true" id="faq-travel-2">
                         To receive TR you need to upload your project to HackUPC devpost and present it on demos. Please
                         note that teams of more than 4 members as well as those breaking any other
                         <a
@@ -972,17 +905,12 @@
                 <dl class="faq__list">
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-applications-0"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-0">
                         Who can attend
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-applications-0">
+                      <p class="faq__answer" aria-hidden="true" id="faq-applications-0">
                         Students from all around the world which are at least 14 years old can apply. University,
                         vocational training, high school, etc., students are all welcome! For under 18 cases, we will
                         request a letter signed by parents or legal tutor to attend.
@@ -991,17 +919,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-applications-1"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-1">
                         How to make a good application?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-applications-1">
+                      <p class="faq__answer" aria-hidden="true" id="faq-applications-1">
                         Try to make a difference amongst other hackers, be creative! However, above all, remember to be
                         humble. In our Medium page, you can find a great
                         <a
@@ -1024,17 +947,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-applications-2"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-2">
                         What if I am not a student?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-applications-2">
+                      <p class="faq__answer" aria-hidden="true" id="faq-applications-2">
                         As long as you graduated no longer than a year ago, you can still be accepted as a hacker.
                         Nevertheless, if that isn’t your case and you don’t want to miss HackUPC, you can apply as a
                         mentor!
@@ -1048,17 +966,12 @@
                 <dl class="faq__list">
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-teams-0"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-0">
                         What if I don't have coding experience?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-teams-0">
+                      <p class="faq__answer" aria-hidden="true" id="faq-teams-0">
                         It's completely fine! In fact, you come here to learn, so you don't need any previous
                         experience. We would love to receive your application!
                       </p>
@@ -1066,17 +979,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-teams-1"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-1">
                         What if I don't have a team?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-teams-1">
+                      <p class="faq__answer" aria-hidden="true" id="faq-teams-1">
                         No need to worry! Part of the fun of a hackathon is meeting new people. We will have a team
                         building activity at the beginning of the event for everyone to meet and form teams.
                       </p>
@@ -1084,17 +992,12 @@
                   </div>
                   <div class="faq__question">
                     <dt>
-                      <button
-                        class="faq__question-title"
-                        type="button"
-                        aria-expanded="false"
-                        aria-controls="faq-teams-2"
-                      >
+                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-2">
                         What is the max team size?
                       </button>
                     </dt>
                     <dd>
-                      <p class="faq__question-answer" aria-hidden="true" id="faq-teams-2">
+                      <p class="faq__answer" aria-hidden="true" id="faq-teams-2">
                         Teams of &lt;= 4 members are welcome. Have in mind that if your team is bigger, you won’t be
                         able to participate in any HackUPC competition or challenge.
                       </p>
@@ -1172,25 +1075,20 @@
 
           <ul class="logo__list logo__list--tera">
             <li class="logo__item">
-              <a
-                class="logo__item_link"
-                href="https://mckinsey.com"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
+              <a class="logo__link" href="https://mckinsey.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/logos/mckinsey_company.svg"
                   alt="McKinsey Company"
-                  class="logo__item_logo logo__item_logo--mckinsey"
+                  class="logo__image logo__image--mckinsey"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1198,44 +1096,30 @@
 
           <ul class="logo__list logo__list--giga">
             <li class="logo__item">
-              <a
-                class="logo__item_link"
-                href="https://skyscanner.com"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                <img
-                  src="assets/logos/skyscanner.svg"
-                  alt="skyscanner"
-                  class="logo__item_logo logo__item_logo--skyscanner"
-                />
+              <a class="logo__link" href="https://skyscanner.com" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/skyscanner.svg" alt="skyscanner" class="logo__image logo__image--skyscanner" />
               </a>
             </li>
             <li class="logo__item">
-              <a
-                class="logo__item_link"
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                <img src="assets/logos/facebook.svg" alt="Facebook" class="logo__item_logo logo__item_logo--facebook" />
+              <a class="logo__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/facebook.svg" alt="Facebook" class="logo__image logo__image--facebook" />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1243,43 +1127,43 @@
 
           <ul class="logo__list logo__list--mega">
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item">
-              <a class="logo__item_link" href="https://vueling.com" target="_blank" rel="noopener noreferrer sponsored">
-                <img src="assets/logos/vueling.svg" alt="Vueling" class="logo__item_logo logo__item_logo--vueling" />
+              <a class="logo__link" href="https://vueling.com" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/vueling.svg" alt="Vueling" class="logo__image logo__image--vueling" />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1287,56 +1171,56 @@
 
           <ul class="logo__list logo__list--kilo">
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1344,61 +1228,61 @@
 
           <ul class="logo__list logo__list--mili">
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item">
-              <a class="logo__item_link" href="https://github.com" target="_blank" rel="noopener noreferrer sponsored">
-                <img src="assets/logos/github.svg" alt="GitHub" class="logo__item_logo logo__item_logo--github" />
+              <a class="logo__link" href="https://github.com" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/github.svg" alt="GitHub" class="logo__image logo__image--github" />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1411,23 +1295,18 @@
           <h2 class="section__title">Partners</h2>
           <ul class="logo__list logo__list--kilo">
             <li class="logo__item">
-              <a class="logo__item_link" href="https://upc.net/en" target="_blank" rel="noopener noreferrer sponsored">
-                <img src="assets/logos/upc.svg" alt="upc" class="logo__item_logo logo__item_logo--upc" />
+              <a class="logo__link" href="https://upc.net/en" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/upc.svg" alt="upc" class="logo__image logo__image--upc" />
+              </a>
+            </li>
+            <li class="logo__item">
+              <a class="logo__link" href="https://fib.upc.net/en" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/fib.svg" alt="fib" class="logo__image logo__image--fib" />
               </a>
             </li>
             <li class="logo__item">
               <a
-                class="logo__item_link"
-                href="https://fib.upc.net/en"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                <img src="assets/logos/fib.svg" alt="fib" class="logo__item_logo logo__item_logo--fib" />
-              </a>
-            </li>
-            <li class="logo__item">
-              <a
-                class="logo__item_link"
+                class="logo__link"
                 href="https://telecos.upc.net/en"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
@@ -1435,39 +1314,29 @@
                 <img
                   src="assets/logos/telecos-small-2x.png"
                   alt="telecos"
-                  class="logo__item_logo logo__item_logo--telecos"
+                  class="logo__image logo__image--telecos"
                   srcset="assets/logos/telecos-small.png 1x, assets/logos/telecos-small-2x.png 2x"
                 />
               </a>
             </li>
             <li class="logo__item">
-              <a
-                class="logo__item_link"
-                href="https://cfis.upc.net/en"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                <img src="assets/logos/cfis.svg" alt="cfis" class="logo__item_logo logo__item_logo--cfis" />
+              <a class="logo__link" href="https://cfis.upc.net/en" target="_blank" rel="noopener noreferrer sponsored">
+                <img src="assets/logos/cfis.svg" alt="cfis" class="logo__image logo__image--cfis" />
               </a>
             </li>
             <li class="logo__item">
-              <a
-                class="logo__item_link"
-                href="http://dones.coeinf.cat/"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
+              <a class="logo__link" href="http://dones.coeinf.cat/" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/logos/coeinf-small-2x.png"
                   alt="coeinf"
-                  class="logo__item_logo logo__item_logo--coeinf"
+                  class="logo__image logo__image--coeinf"
                   srcset="assets/logos/coeinf-small.png 1x, assets/logos/coeinf-small-2x.png 2x"
                 />
               </a>
             </li>
             <li class="logo__item">
               <a
-                class="logo__item_link"
+                class="logo__link"
                 href="https://ajuntament.barcelona.cat/en/"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
@@ -1475,115 +1344,115 @@
                 <img
                   src="assets/logos/ajuntament_de_barcelona.svg"
                   alt="Ajuntament de Barcelona"
-                  class="logo__item_logo logo__item_logo--ajuntament_de_barcelona"
+                  class="logo__image logo__image--ajuntament_de_barcelona"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <a class="logo__item_link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
+              <a class="logo__link" href="https://hackupc.com" target="_blank" rel="noopener noreferrer sponsored">
                 <img
                   src="assets/images/hackupc-logo-black.svg"
                   alt="HackUPC"
-                  class="logo__item_logo logo__item_logo--hackupc"
+                  class="logo__image logo__image--hackupc"
                 />
               </a>
             </li>
@@ -1624,8 +1493,8 @@
     </main>
 
     <footer class="section section--footer" id="footer">
-      <div class="footer_column footer__element">
-        <ul class="section__list section__list--contact footer_column__element">
+      <div class="footer-column footer__element">
+        <ul class="section__list section__list--contact footer-column__element">
           <li class="contact">
             <a class="contact__link" aria-label="Email" href="mailto:contact@hackupc.com">
               <img data-markup-inline src="assets/images/icons/icon-email-alt.svg" alt="Email" class="contact__icon" />
@@ -1719,7 +1588,7 @@
           </li>
         </ul>
 
-        <div class="section__list section__list--links-list section__list--packed footer_column__element">
+        <div class="section__list section__list--links-list section__list--packed footer-column__element">
           <a
             class="links-list footer__link"
             href="https://hacknights.dev/"
