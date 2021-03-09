@@ -33,12 +33,27 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
+        exclude: /node_modules/,
         use: [
           'style-loader', // creates style nodes from JS strings
           'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // Loader for webpack to process CSS with PostCSS
+          {
+            loader: 'postcss-loader', // Loader for webpack to process CSS with PostCSS
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('stylelint')(),
+                  require('postcss-reporter')({ clearReportedMessages: true }),
+                ],
+              },
+            },
+          },
           'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
+      },
+      {
+        test: /node_modules.*\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(gif|png|jpe?g)$/,
