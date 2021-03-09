@@ -8,7 +8,7 @@
   "repository": "github:hackupc/hackupc-landing",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --open --progress",
-    "build": "webpack --config config/webpack.prod.js"
+    "dist": "webpack --config config/webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
