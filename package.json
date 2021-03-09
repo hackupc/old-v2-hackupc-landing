@@ -63,6 +63,9 @@
     "lax.js": "^2.0.3",
     "normalize.css": "^8.0.1"
   },
+  "engines": {
+    "node": ">=0.14"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
