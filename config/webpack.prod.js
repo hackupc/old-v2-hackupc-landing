@@ -1,24 +1,22 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
-const TerserJSPlugin = require("terser-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const BrotliPlugin = require("brotli-webpack-plugin");
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const glob = require("glob");
-const RealFaviconPlugin = require('real-favicon-webpack-plugin');
+const zlib = require("zlib");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const RealFaviconPlugin = require("real-favicon-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: "./src/index.js",
   },
   output: {
     path: path.join(__dirname, "../dist"),
     filename: "[name].[chunkhash:8].bundle.js",
-    chunkFilename: "[name].[chunkhash:8].chunk.js"
+    chunkFilename: "[name].[chunkhash:8].chunk.js",
   },
   mode: "production",
   module: {
@@ -27,8 +25,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader" // transpiling our JavaScript files using Babel and webpack
-        }
+          loader: "babel-loader", // transpiling our JavaScript files using Babel and webpack
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -36,73 +34,53 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader", // translates CSS into CommonJS
           "postcss-loader", // Loader for webpack to process CSS with PostCSS
-          "sass-loader" // compiles Sass to CSS, using Node Sass by default
-        ]
+          "sass-loader", // compiles Sass to CSS, using Node Sass by default
+        ],
       },
       {
         test: /\.(png|jpe?g|gif)$/,
-        use: [
-          {
-            loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/",
-              esModule: false
-            }
-          },
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: [
-          {loader: 'file-loader'},
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                {inlineStyles: {onlyMatchedOnce: false}},
-              ]
-            }
-          }
-        ]
+        type: "asset/resource",
       },
       {
         test: /\.html$/,
-        use: {
-          loader: "html-loader",
-          options: {
-            attributes: true,
-            minimize: {
-              collapseWhitespace: true,
-              removeComments: true,
-              removeRedundantAttributes: true,
-              removeScriptTypeAttributes: true,
-              removeStyleLinkTypeAttributes: true,
-              useShortDoctype: true,
-              ignoreCustomComments: [ /^!/, /^\s*#/, /google(on|off)/i ],
-              minifyCSS: true,
-              minifyJS: true,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: true,
+              minimize: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true,
+                ignoreCustomComments: [/^!/, /^\s*#/, /google(on|off)/i],
+                minifyCSS: true,
+                minifyJS: true,
+              },
             },
-          }
-        }
-      }
-    ]
+          },
+          "markup-inline-loader",
+        ],
+      },
+    ],
   },
   optimization: {
-    minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()],
+    minimizer: ["...", new CssMinimizerPlugin()],
     splitChunks: {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
-          chunks: "all"
-        }
+          chunks: "all",
+        },
       },
-      chunks: "all"
+      chunks: "all",
     },
     runtimeChunk: {
-      name: "runtime"
-    }
+      name: "runtime",
+    },
   },
   plugins: [
     // CleanWebpackPlugin will do some clean up/remove folder before build
@@ -110,7 +88,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     // PurgecssPlugin will remove unused CSS
     new PurgecssPlugin({
-      paths: glob.sync(path.resolve(__dirname, '../src/**/*'), { nodir: true })
+      paths: glob.sync(path.resolve(__dirname, "../src/**/*"), { nodir: true }),
     }),
     // This plugin will extract all css to one file
     new MiniCssExtractPlugin({
@@ -119,22 +97,26 @@ module.exports = {
     }),
     // Generate favicon with https://realfavicongenerator.net/
     new RealFaviconPlugin({
-      faviconJson: 'src/assets/favicon/faviconDescription.json',
-      outputPath: 'dist/assets/favicon',
-      inject: true
+      faviconJson: "src/assets/favicon/faviconDescription.json",
+      outputPath: "dist/assets/favicon",
+      inject: true,
     }),
-    // The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html"
+      filename: "index.html",
     }),
-    new HtmlWebpackInlineSVGPlugin(),
-    // ComppresionPlugin will Prepare compressed versions of assets to serve them with Content-Encoding.
-    // In this case we use gzip
-    // But, you can also use the newest algorithm like brotli, and it's supperior than gzip
     new CompressionPlugin({
-      algorithm: "gzip"
+      algorithm: "gzip",
+      filename: "[path][base].gz",
     }),
-    new BrotliPlugin(),
-  ]
+    new CompressionPlugin({
+      algorithm: "brotliCompress",
+      filename: "[path][base].br",
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+        },
+      },
+    }),
+  ],
 };
