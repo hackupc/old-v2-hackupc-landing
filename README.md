@@ -16,7 +16,7 @@ cd hackupc-landing
 npm install
 ```
 
-Use `npm run start` to compile and serve the build directory in real time. It reloads everytime there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
+Use `npm run start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
 
 ```sh
 npm run start
