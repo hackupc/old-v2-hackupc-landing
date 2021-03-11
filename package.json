@@ -13,6 +13,9 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "@types/webfontloader": "^1.6.32",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^7.1.2",
@@ -49,6 +52,8 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0",
     "terser-webpack-plugin": "^5.1.1",
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
     "webfontloader": "^1.6.28",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",

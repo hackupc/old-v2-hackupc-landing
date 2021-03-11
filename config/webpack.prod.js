@@ -11,7 +11,7 @@ const RealFaviconPlugin = require('real-favicon-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: './src/index.ts',
   },
   output: {
     path: path.join(__dirname, '../dist'),
@@ -22,10 +22,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // transpiling our JavaScript files using Babel and webpack
+          loader: 'babel-loader',
         },
       },
       {
