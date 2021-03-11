@@ -70,7 +70,7 @@ $fade-height: 5rem;
   overflow: hidden;
   max-width: unset;
   height: 900px;
-  max-height: 100vh;
+  max-height: calc(100vh - 8rem);
   box-sizing: border-box;
   padding-bottom: $fade-height;
   background-color: $c-bg-dark;
