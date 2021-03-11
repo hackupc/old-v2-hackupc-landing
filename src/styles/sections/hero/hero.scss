@@ -12,6 +12,8 @@ $fade-height: 5rem;
   place-items: center;
   flex-direction: column;
 
+  transform: rotate(180deg);
+
   will-change: transform;
   filter: url(#lines);
 
