@@ -26,12 +26,7 @@ $fade-height: 5rem;
     right: 0;
     content: '';
 
-    background: linear-gradient(
-      to top,
-      $c-bg-dark,
-      cubic-bezier(0.55, 0, 1, 0.45),
-      transparent
-    );
+    background: linear-gradient(to top, $c-bg-dark, $ease-quad, transparent);
   }
 
   &__shape {

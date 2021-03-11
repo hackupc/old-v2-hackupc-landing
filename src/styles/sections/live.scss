@@ -1,0 +1,23 @@
+.live {
+  &__dot {
+    transform: scale(0.75);
+    display: inline-block;
+    margin: 0 0.1em 0 -0.3em;
+    animation: live 2.5s cubic-bezier(0.82, 0.23, 0.55, 0.95) infinite alternate;
+
+    @keyframes live {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    line-height: 2;
+    margin: 0 0 2.5rem;
+  }
+}
