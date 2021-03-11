@@ -9,7 +9,7 @@ if (circleElem && heroBgElem) {
 
   heroBgElem.addEventListener('mousemove', function (event) {
     const heroBgRect = heroBgElem.getBoundingClientRect()
-    circleElem.style.display = ''
+    circleElem.style.display = 'block'
     circleElem.style.transform = `translate(${Math.floor(
       event.clientX - heroBgRect.left - circleRadius.x
     )}px, ${Math.floor(event.clientY - heroBgRect.top - circleRadius.y)}px)`

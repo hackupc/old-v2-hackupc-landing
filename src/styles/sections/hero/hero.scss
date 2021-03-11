@@ -45,6 +45,7 @@ $fade-height: 5rem;
   }
 
   &__circle {
+    display: none;
     position: absolute;
     background: $c-bg-light;
     width: 8rem;
