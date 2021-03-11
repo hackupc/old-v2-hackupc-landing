@@ -83,7 +83,7 @@ $fade-height: 5rem;
 .title {
   color: #fff;
   margin: 0;
-  font-size: 4rem;
+  font-size: clamp(4rem, 15vw, 6rem);
   font-weight: 400;
   text-shadow: 0 0 0.75rem $c-hero-shadow;
 }
