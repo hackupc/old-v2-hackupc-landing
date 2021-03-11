@@ -1,21 +1,26 @@
-$c-bg-dark: #1f143a;
-$c-bg-light: #34256b;
-$c-bg-lighter: #9287c6;
+$c-palette-blue: #3f5182;
+$c-palette-black: #181c19;
+
+$c-bg-dark: $c-palette-black;
+$c-bg-light: $c-palette-blue;
+$c-bg-lighter: #4b62a3;
 $c-primary: #ec6162;
-// $c-primary: #c25151; // 4.5 color contrast
 $c-txt-dark: #000;
 $c-txt-light: #fff;
 
-$c-faq-0: #291b54;
-$c-faq-1: #34256b;
-$c-faq-2: #48308c;
+$c-faq-0: #1d2222;
+$c-faq-1: #2e354b;
+$c-faq-2: #3f5182;
+$c-faq-hover: linear-gradient(135deg, #2f50aa, #395ea3);
 
-$c-during-border: #8a69d4;
-$c-during-bg: #291b54;
-$c-during-bg-card: #45318f;
+$c-during-border: $c-palette-blue;
+$c-during-bg: #1d2222;
+$c-during-bg-card: $c-palette-blue;
 
-$c-gdpr-bg: #45318f;
-$c-gdpr-txt: #fff;
+$c-sponsors-bg: #f1f5ff;
+
+$c-gdpr-bg: $c-palette-blue;
+$c-gdpr-txt: $c-txt-light;
 
 $ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 $ease-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);

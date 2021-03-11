@@ -63,7 +63,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(135deg, #523696, #5a41a7);
+    background-image: $c-faq-hover;
     border-radius: $border-radius-small;
     content: '';
     opacity: 0;
