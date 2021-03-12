@@ -1,5 +1,5 @@
 .section--faq {
-  background-color: $c-faq-0;
+  background-color: $c-faq-bg;
 
   h2 > small {
     font-size: 1em;
@@ -28,7 +28,7 @@
   display: block;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: $c-faq-1;
+  background-color: $c-faq-block;
   border-radius: $border-radius-big;
 }
 
@@ -44,7 +44,7 @@
   padding: 1rem;
   padding-bottom: 0;
   margin: 1rem 0;
-  background-color: $c-faq-2;
+  background-color: $c-faq-question;
   border-radius: $border-radius-small;
   text-align: left;
   transition: padding-bottom 200ms $ease-quad, box-shadow 200ms $ease-bounce;

@@ -4,7 +4,7 @@
     width: 0.6em;
     border-radius: 100%;
     vertical-align: 0.05em;
-    background: currentColor;
+    background: $c-primary;
     display: inline-block;
     margin: 0 0.2em 0 -0.2em;
     animation: live 2.5s cubic-bezier(0.82, 0.23, 0.55, 0.95) infinite alternate;
@@ -24,4 +24,8 @@
     line-height: 2;
     margin: 0 0 2.5rem;
   }
+}
+
+.section--live {
+  background: $c-live-bg;
 }

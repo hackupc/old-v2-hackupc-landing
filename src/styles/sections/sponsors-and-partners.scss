@@ -26,7 +26,7 @@ $logo-height: 8rem;
   margin: 0.5rem;
   background-color: #fff;
   border-radius: 1em;
-  box-shadow: 0 1rem 1rem -0.5rem transparentize($c-bg-lighter, 0.9);
+  box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
   color: $c-bg-dark;
   font-size: $logo-height/8;
   transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;

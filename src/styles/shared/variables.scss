@@ -1,8 +1,9 @@
 $c-palette-blue: #3f5182;
 $c-palette-black: #181c19;
+$c-palette-black-light: #1f2424;
 
 $c-bg-dark: $c-palette-black;
-$c-bg-light: $c-palette-blue;
+$c-bg-light: #272f44;
 $c-bg-lighter: #4b62a3;
 $c-primary: #ec6162;
 $c-txt-dark: #000;
@@ -10,18 +11,20 @@ $c-txt-light: #fff;
 
 $c-hero-shadow: hsla(287, 100%, 50%, 0.66);
 
-$c-faq-0: #1d2222;
-$c-faq-1: #2e354b;
-$c-faq-2: #3f5182;
-$c-faq-hover: linear-gradient(135deg, #2f50aa, #395ea3);
+$c-faq-bg: $c-palette-black-light;
+$c-faq-block: $c-bg-light;
+$c-faq-question: #3f5182;
+$c-faq-hover: linear-gradient(135deg, #2e4992, #33699c);
 
-$c-during-border: $c-palette-blue;
-$c-during-bg: #1d2222;
-$c-during-bg-card: $c-palette-blue;
+$c-live-bg: $c-palette-black-light;
 
 $c-sponsors-bg: #f1f5ff;
+$c-sponsors-shadow: hsla(220, 100%, 50%, 0.1);
 
-$c-gdpr-bg: $c-palette-blue;
+$c-about-us-bg: $c-palette-black-light;
+$c-about-us-bg-card: $c-bg-light;
+
+$c-gdpr-bg: #0f1310;
 $c-gdpr-txt: $c-txt-light;
 
 $ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
