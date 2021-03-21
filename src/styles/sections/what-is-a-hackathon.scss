@@ -6,17 +6,43 @@
   padding-top: 0;
 }
 
-// TODO: use clamp() instead of this complicate thing
 $card-font-variation: 2px;
 $card-font-base: 16px;
 $card-padding-variation-h: 4 * 16px;
 $card-padding-variation-v: 1 * 16px;
 $card-padding-base: 2 * 16px;
 
+$breakpoint-small-screen: 500px;
+$breakpoint-mid-small-screen: 600px;
+
 .card--big {
-  padding: $card-padding-base + $card-padding-variation-v $card-padding-base +
-    $card-padding-variation-h;
-  font-size: $card-font-base + $card-font-variation;
+  padding: clamp(
+      $card-padding-base,
+      calc(
+        #{100vw * $card-padding-variation-v / $breakpoint-small-screen} + #{(
+            $card-padding-base - $card-padding-variation-v
+          )}
+      ),
+      $card-padding-base + $card-padding-variation-v
+    )
+    clamp(
+      $card-padding-base,
+      calc(
+        #{100vw * $card-padding-variation-h / $breakpoint-small-screen} + #{(
+            $card-padding-base - $card-padding-variation-h
+          )}
+      ),
+      $card-padding-base + $card-padding-variation-h
+    );
+  font-size: clamp(
+    $card-font-base,
+    calc(
+      #{$card-font-base - $card-font-variation} + #{(
+          100vw * $card-font-variation / $breakpoint-small-screen
+        )}
+    ),
+    $card-font-base + $card-font-variation
+  );
 }
 
 .card--outline {
@@ -24,62 +50,38 @@ $card-padding-base: 2 * 16px;
 
 .card--mission {
   display: grid;
-  padding-left: $card-padding-base + $card-padding-variation-v;
   border: solid 0.3333rem $c-bg-light;
   margin-top: 2rem;
   background-color: $c-bg-dark;
-  gap: $card-padding-base + $card-padding-variation-v;
-  grid-template: auto / auto auto;
   place-content: center;
   place-items: center;
+  padding-left: clamp(
+    $card-padding-base,
+    calc(
+      100vw * #{$card-padding-variation-v / $breakpoint-mid-small-screen} + #{$card-padding-base -
+        $card-padding-variation-v}
+    ),
+    $card-padding-base + $card-padding-variation-v
+  );
+  gap: clamp(
+    $card-padding-base,
+    calc(
+      100vw * #{$card-padding-variation-v / $breakpoint-mid-small-screen} + #{$card-padding-base -
+        $card-padding-variation-v}
+    ),
+    $card-padding-base + $card-padding-variation-v
+  );
+
+  grid-template: auto / auto auto;
+
+  @media only screen and (max-width: $breakpoint-mid-small-screen) {
+    grid-template: auto auto / auto;
+  }
 
   > img,
   > svg {
     width: 10rem;
     height: 10rem;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .card--big {
-    padding: calc(
-        100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
-      )
-      calc(
-        100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h}
-      );
-    font-size: calc(
-      100vw * #{$card-font-variation / 500px} + #{$card-font-base - $card-font-variation}
-    );
-  }
-
-  .card--mission {
-    padding-left: calc(
-      100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
-    );
-    gap: calc(
-      100vw * #{$card-padding-variation-v / 500px} + #{$card-padding-base - $card-padding-variation-v}
-    );
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .card--mission {
-    padding-left: calc(
-      100vw * #{$card-padding-variation-h / 500px} + #{$card-padding-base - $card-padding-variation-h}
-    );
-    grid-template: auto auto / auto;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .card--big {
-    padding: $card-padding-base;
-    font-size: $card-font-base;
-  }
-
-  .card--mission {
-    gap: $card-padding-base;
   }
 }
 
