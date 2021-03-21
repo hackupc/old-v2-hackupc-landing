@@ -2,6 +2,10 @@
   background-color: $c-bg-dark;
 }
 
+.content__wrapper--what-is-a-hackathon {
+  padding-top: 0;
+}
+
 // TODO: use clamp() instead of this complicate thing
 $card-font-variation: 2px;
 $card-font-base: 16px;

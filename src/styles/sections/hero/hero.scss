@@ -1,4 +1,4 @@
-$fade-height: 5rem;
+$fade-height: 200px;
 
 .hero-bg {
   position: absolute;
@@ -19,7 +19,12 @@ $fade-height: 5rem;
     right: 0;
     content: '';
 
-    background: linear-gradient(to top, $c-bg-dark, $ease-quad, transparent);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      cubic-bezier(0, 0, 0.7, 1),
+      $c-bg-dark
+    );
   }
 }
 
@@ -29,7 +34,7 @@ $fade-height: 5rem;
   height: 900px;
   max-height: calc(100vh - 8rem);
   box-sizing: border-box;
-  padding-bottom: $fade-height;
+  padding-bottom: $fade-height / 2;
   background-color: $c-bg-dark;
   position: relative;
   z-index: 1;
