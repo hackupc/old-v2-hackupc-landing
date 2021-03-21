@@ -3,19 +3,10 @@ $fade-height: 5rem;
 .hero-bg {
   position: absolute;
   inset: 0;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   overflow: hidden;
-  padding-top: $fade-height;
-
-  display: flex;
-  justify-content: center;
-  place-items: center;
-  flex-direction: column;
-
-  transform: rotate(180deg);
-
-  will-change: transform;
-  filter: url(#lines);
 
   &__fade {
     height: $fade-height;
@@ -29,37 +20,6 @@ $fade-height: 5rem;
     content: '';
 
     background: linear-gradient(to top, $c-bg-dark, $ease-quad, transparent);
-  }
-
-  &__shape {
-    width: 700px;
-    max-width: 100%;
-    max-height: 100%;
-    box-sizing: border-box;
-    padding: 2rem;
-    fill: $c-bg-light;
-    animation: anim 20s linear infinite;
-  }
-
-  &__circle {
-    display: none;
-    position: absolute;
-    background: $c-bg-light;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    will-change: transform;
-  }
-}
-
-@keyframes anim {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 

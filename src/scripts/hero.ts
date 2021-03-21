@@ -1,21 +1,20 @@
-const circleElem: HTMLElement | null = document.querySelector('#circle')
+const circleElem: SVGCircleElement | null = document.querySelector('#circle')
 const heroBgElem: HTMLElement | null = document.querySelector('.hero-bg')
 
 if (circleElem && heroBgElem) {
-  const circleRadius = {
-    x: circleElem.offsetWidth / 2,
-    y: circleElem.offsetHeight / 2,
-  }
-
-  heroBgElem.addEventListener('mousemove', function (event) {
+  heroBgElem.addEventListener('mousemove', (event) => {
     const heroBgRect = heroBgElem.getBoundingClientRect()
+
     circleElem.style.display = 'block'
-    circleElem.style.transform = `translate(${Math.floor(
-      event.clientX - heroBgRect.left - circleRadius.x
-    )}px, ${Math.floor(event.clientY - heroBgRect.top - circleRadius.y)}px)`
+    circleElem.transform.baseVal
+      .getItem(0)
+      .setTranslate(
+        Math.floor(event.clientX - heroBgRect.left),
+        Math.floor(event.clientY - heroBgRect.top)
+      )
   })
 
-  heroBgElem.addEventListener('mouseout', function () {
+  heroBgElem.addEventListener('mouseout', () => {
     circleElem.style.display = 'none'
   })
 }

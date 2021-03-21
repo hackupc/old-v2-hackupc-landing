@@ -16,3 +16,11 @@
 - [ ] Do navbar
 - [ ] Do through the years
 - [ ] Do out association acording to the meeting
+
+## Other
+
+- [ ] classic buton click animation
+- [ ] fix hero
+- [ ] stylelint not working
+- [ ] favicon not working
+- [ ] ogimage not working

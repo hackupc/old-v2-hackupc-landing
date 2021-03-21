@@ -143,52 +143,60 @@
   <body class="hide-navbar">
     <header class="section section--hero" id="hero">
       <!--googleoff: all-->
-      <div class="hero-bg" aria-hidden="true">
-        <svg class="hero-bg__shape" width="749" height="576" viewBox="0 0 749 576">
-          <path d="M432 0H0L221 288H96L317 576H749L528 288H653L432 0Z" />
-        </svg>
-        <!-- <div class="hero-bg__circle" id="circle"></div> -->
 
-        <svg width="0" height="0">
-          <defs>
-            <filter id="lines">
-              <feFlood flood-color="#181c19" result="flood-bg"></feFlood>
-              <feFlood flood-color="#3F5182" result="flood-line"></feFlood>
-              <feImage
-                xlink:href="data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221000%22%20height%3D%2220%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%221%22%2F%3E%3C%2Fsvg%3E%0A"
-                x="0"
-                y="0"
-                width="1000"
-                height="20"
-                result="line"
-              ></feImage>
-              <feTile in="line" result="lines"></feTile>
-              <feMorphology in="lines" operator="dilate" radius="1.5" result="lines-medium-thick"></feMorphology>
-              <feComposite in="SourceAlpha" in2="lines" operator="in" result="cropped-lines"></feComposite>
-              <feColorMatrix
-                in="cropped-lines"
-                result="sharp-cropped-lines"
-                values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 255 0"
-              ></feColorMatrix>
-              <feMorphology
-                in="sharp-cropped-lines"
-                operator="dilate"
-                radius="6"
-                result="sharp-cropped-lines-thick"
-              ></feMorphology>
-              <feMerge result="all-lines">
-                <feMergeNode in="lines-medium-thick"></feMergeNode>
-                <feMergeNode in="sharp-cropped-lines-thick"></feMergeNode>
-              </feMerge>
-              <feComposite in="flood-line" in2="all-lines" operator="in" result="colored-all-lines"></feComposite>
-              <feMerge result="result">
-                <feMergeNode in="flood-bg"></feMergeNode>
-                <feMergeNode in="colored-all-lines"></feMergeNode>
-              </feMerge>
-            </filter>
-          </defs>
+      <svg class="hero-bg" aria-hidden="true">
+        <svg filter="url(#lines)">
+          <svg class="hero-bg__shape" x="50%" y="50%" overflow="visible">
+            <path
+              d="M288.385 0H0L147.53 192.623H64.0854L211.615 385.246H500L352.47 192.623H435.915L288.385 0Z"
+              transform="translate(-250, -192.625)"
+              fill="black"
+            />
+          </svg>
+
+          <circle cx="0" cy="0" r="64" transform="translate(0, 0)" fill="black" id="circle" style="display: none" />
+
+          <rect width="100%" height="100%" fill="transparent" />
         </svg>
-      </div>
+
+        <defs>
+          <filter id="lines">
+            <feFlood flood-color="#181c19" result="flood-bg"></feFlood>
+            <feFlood flood-color="#3F5182" result="flood-line"></feFlood>
+            <feImage
+              xlink:href="data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221000%22%20height%3D%2220%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%221%22%2F%3E%3C%2Fsvg%3E%0A"
+              x="0"
+              y="0"
+              width="1000"
+              height="20"
+              result="line"
+            ></feImage>
+            <feTile in="line" result="lines"></feTile>
+            <feMorphology in="lines" operator="dilate" radius="1.5" result="lines-medium-thick"></feMorphology>
+            <feComposite in="SourceAlpha" in2="lines" operator="in" result="cropped-lines"></feComposite>
+            <feColorMatrix
+              in="cropped-lines"
+              result="sharp-cropped-lines"
+              values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 255 0"
+            ></feColorMatrix>
+            <feMorphology
+              in="sharp-cropped-lines"
+              operator="dilate"
+              radius="6"
+              result="sharp-cropped-lines-thick"
+            ></feMorphology>
+            <feMerge result="all-lines">
+              <feMergeNode in="lines-medium-thick"></feMergeNode>
+              <feMergeNode in="sharp-cropped-lines-thick"></feMergeNode>
+            </feMerge>
+            <feComposite in="flood-line" in2="all-lines" operator="in" result="colored-all-lines"></feComposite>
+            <feMerge result="result">
+              <feMergeNode in="flood-bg"></feMergeNode>
+              <feMergeNode in="colored-all-lines"></feMergeNode>
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
       <div class="hero-bg__fade"></div>
       <!--googleon: all-->
 
