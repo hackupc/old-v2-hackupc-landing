@@ -50,7 +50,7 @@ $fade-height: 200px;
   margin: 0;
   font-size: clamp(4rem, 15vw, 6rem);
   font-weight: 400;
-  text-shadow: 0 0 0.75rem $c-hero-shadow;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 
 .apply-button {
