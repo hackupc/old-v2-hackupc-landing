@@ -23,6 +23,15 @@ dd {
   margin-left: 0;
 }
 
+code {
+  background-color: transparentize($c-txt-light, 0.85);
+  border-radius: 0.25rem;
+  padding: 0 0.35rem;
+  font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
 :focus {
   outline: none;
 }
