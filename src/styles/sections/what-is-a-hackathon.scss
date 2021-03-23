@@ -50,11 +50,6 @@ $breakpoint-mid-small-screen: 600px;
 
 .card--mission {
   display: grid;
-  border: solid 0.3333rem $c-bg-light;
-  margin-top: 2rem;
-  background-color: $c-bg-dark;
-  place-content: center;
-  place-items: center;
   padding-left: clamp(
     $card-padding-base,
     calc(
@@ -63,6 +58,9 @@ $breakpoint-mid-small-screen: 600px;
     ),
     $card-padding-base + $card-padding-variation-v
   );
+  border: solid 0.3333rem $c-bg-light;
+  margin-top: 2rem;
+  background-color: $c-bg-dark;
   gap: clamp(
     $card-padding-base,
     calc(
@@ -73,6 +71,8 @@ $breakpoint-mid-small-screen: 600px;
   );
 
   grid-template: auto / auto auto;
+  place-content: center;
+  place-items: center;
 
   @media only screen and (max-width: $breakpoint-mid-small-screen) {
     grid-template: auto auto / auto;

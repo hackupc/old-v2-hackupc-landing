@@ -2,22 +2,19 @@ $fade-height: 200px;
 
 .hero-bg {
   position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
   z-index: -1;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  inset: 0;
 
   &__fade {
-    height: $fade-height;
-    z-index: 1;
-    pointer-events: none;
-
     position: absolute;
+    z-index: 1;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    content: '';
+    height: $fade-height;
 
     background: linear-gradient(
       to bottom,
@@ -25,29 +22,30 @@ $fade-height: 200px;
       cubic-bezier(0, 0, 0.7, 1),
       $c-bg-dark
     );
+    content: '';
+    pointer-events: none;
   }
 }
 
 .section--hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
   overflow: hidden;
   max-width: unset;
   height: 900px;
   max-height: calc(100vh - 8rem);
   box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
   padding-bottom: $fade-height / 2;
   background-color: $c-bg-dark;
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  justify-content: center;
   place-items: center;
-  flex-direction: column;
 }
 
 .title {
-  color: #fff;
   margin: 0;
+  color: #fff;
   font-size: clamp(4rem, 15vw, 6rem);
   font-weight: 400;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
