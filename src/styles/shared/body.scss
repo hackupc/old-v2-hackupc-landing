@@ -40,14 +40,12 @@ body {
   }
 }
 
+$btn-thickness: 0.5rem;
+
 .classic-button {
   position: relative;
-  z-index: 1;
   display: inline-block;
-  padding: 0.75rem 1.4rem 0.75rem 1.5rem;
-  border-bottom: solid 0.5rem #b14f50;
-  background-color: $c-primary;
-  color: #fff;
+  color: $c-txt-light;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -57,11 +55,48 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 
-  &--disabled {
-    border: solid 0.0625rem rgba(255, 255, 255, 0.2);
-    border-bottom-width: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    cursor: not-allowed;
-    opacity: 0.6667;
+  $btn-height: 0.75rem + 1rem + 0.75rem;
+
+  height: $btn-height + $btn-thickness;
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color: $c-primary;
+    padding: 0.75rem 1.4rem 0.75rem 1.5rem;
+    transition: transform 150ms $ease-bounce;
   }
+
+  &:active &__text {
+    transform: translateY($btn-thickness);
+  }
+
+  &::after {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    inset: ($btn-height / 2 + $btn-thickness) 0 0 0;
+    background-color: #b14f50;
+  }
+}
+
+.classic-button-disabled {
+  display: inline-block;
+  color: $c-txt-light;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  border: solid 0.0625rem rgba(255, 255, 255, 0.2);
+  border-bottom-width: $btn-thickness;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  opacity: 0.6667;
+
+  padding: 0.75rem 1.4rem 0.75rem 1.5rem;
 }
