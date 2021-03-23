@@ -19,7 +19,6 @@
 
 ## Other
 
-- [ ] classic buton click animation
 - [ ] fix hero
 - [ ] stylelint not working
 - [ ] favicon not working
