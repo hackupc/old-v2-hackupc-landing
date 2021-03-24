@@ -8,7 +8,8 @@
   "repository": "github:hackupc/hackupc-landing",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --open --progress",
-    "dist": "webpack --config config/webpack.prod.js"
+    "dist": "webpack --config config/webpack.prod.js",
+    "fix": "eslint . --fix --ext .js,.ts; stylelint 'src/**/*.*css' --fix; prettier . --write --loglevel warn; exit 0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
@@ -75,6 +76,7 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "*.js": "eslint --cache --fix"
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{scss,sass,css}": "stylelint --cache --fix"
   }
 }

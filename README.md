@@ -23,14 +23,16 @@ Use `npm run start` to compile and serve the build directory in real-time. It re
 npm run start
 ```
 
+Whenever you want, fix auto-fixable lint errors and format files:
+
+```sh
+  npm run fix
+```
+
 ### Tips
 
 - Use `VS code`, there's the `.vscod` folder with a good workspace configuration.
 - Install `ESlint` and `Prettier` extensions.
-- Run this to format all the files automatically:
-  ```sh
-  npx prettier --write .
-  ```
 
 ## Deploy
 

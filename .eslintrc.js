@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    browser: true,
   },
   parser: '@typescript-eslint/parser',
   extends: [
@@ -22,9 +22,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/*', 'src/**/*'],
+      files: ['*.js', '*.ts'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
       env: {
-        browser: true,
+        node: true,
       },
     },
   ],

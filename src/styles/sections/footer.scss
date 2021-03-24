@@ -77,18 +77,17 @@
   line-height: 1;
   text-decoration: none;
   vertical-align: middle;
+
   &__separator {
     opacity: 0.5;
   }
 }
 
 .contact {
-  & {
-    display: block;
-    flex: 1;
-    margin: 0;
-    transition: transform 100ms ease-out;
-  }
+  display: block;
+  flex: 1;
+  margin: 0;
+  transition: transform 100ms ease-out;
 
   &__link {
     display: block;
