@@ -75,8 +75,8 @@
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
     "*.{js,ts}": "eslint --cache --fix",
-    "*.{scss,sass,css}": "stylelint --cache --fix"
+    "*.{scss,sass,css}": "stylelint --cache --fix",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
