@@ -45,11 +45,11 @@ $fade-height: 200px;
 
 .title {
   display: inline-block;
-  font-size: clamp(4rem, 15vw, 6rem);
-  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   color: $c-txt-light;
-  text-transform: uppercase;
+  font-size: clamp(4rem, 15vw, 6rem);
   line-height: 0.71;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
 
   &__title {
     margin: 0 0 0.2em -0.08em;
@@ -59,9 +59,9 @@ $fade-height: 200px;
 
   &__more-info {
     display: grid;
-    grid-template: auto / 1fr 1fr 1fr;
     font-size: 0.25em;
     font-weight: 600;
+    grid-template: auto / 1fr 1fr 1fr;
   }
 
   &__online {
