@@ -61,8 +61,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(gif|png|jpe?g)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /favicon\.ico$/,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]',
+        },
       },
       {
         test: /\.html$/,

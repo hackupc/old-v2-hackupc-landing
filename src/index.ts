@@ -1,3 +1,4 @@
+import './assets/favicon/favicon.ico'
 import 'normalize.css'
 import './styles/style.scss'
 

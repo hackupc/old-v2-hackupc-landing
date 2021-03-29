@@ -42,8 +42,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /favicon\.ico$/,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]',
+        },
       },
       {
         test: /\.html$/,
