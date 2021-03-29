@@ -7,7 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const RealFaviconPlugin = require('real-favicon-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -99,12 +98,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash:8].bundle.css',
       chunkFilename: '[name].[chunkhash:8].chunk.css',
-    }),
-    // Generate favicon with https://realfavicongenerator.net/
-    new RealFaviconPlugin({
-      faviconJson: 'src/assets/favicon/faviconDescription.json',
-      outputPath: 'dist/assets/favicon',
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
