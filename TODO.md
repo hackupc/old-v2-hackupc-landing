@@ -3,12 +3,12 @@
 ## For each edition
 
 - [x] Refactor all 20XX for 20XX +1 and any outdated content
-- [ ] Update `favicon` (color)
+- [x] Update `favicon` (color)
 - [ ] Make the applcations closed page
 - [ ] Make the subscrive page
-- [ ] Update FAQ
-- [ ] Put the new logos
-- [ ] Make sure that github continous integration accepts the commits
+- [x] Update FAQ
+- [x] Put the new logos
+- [x] Make sure that github continous integration accepts the commits
 - [x] Update directors names' in the legal pages
 
 ## List
@@ -19,8 +19,5 @@
 
 ## Other
 
-- [ ] update texts
 - [ ] fix hero
 - [ ] stylelint not working
-- [ ] favicon not working
-- [ ] ogimage not working
