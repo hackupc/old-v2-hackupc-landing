@@ -46,7 +46,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /favicon\.ico$/,
+        test: /(favicon\.ico|ogimage\.png)$/,
         type: 'asset/resource',
         generator: {
           filename: '[name][ext]',

@@ -1,4 +1,6 @@
 import './assets/favicon/favicon.ico'
+import './assets/ogimage.png'
+
 import 'normalize.css'
 import './styles/style.scss'
 
