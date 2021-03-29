@@ -19,6 +19,7 @@
 
 ## Other
 
+- [ ] update texts
 - [ ] fix hero
 - [ ] stylelint not working
 - [ ] favicon not working
