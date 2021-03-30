@@ -1,0 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: $c-primary;
+}
+
+::selection {
+  background-color: transparentize($c-primary, 0.01);
+  color: $c-txt-light;
+}
+
+img::selection {
+  background-color: transparentize($c-primary, 0.5);
+}
+
+p {
+  line-height: 1.6667;
+}
+
+dd {
+  margin-left: 0;
+}
+
+code {
+  padding: 0 0.35rem;
+  background-color: transparentize($c-txt-light, 0.85);
+  border-radius: 0.25rem;
+  font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: solid 0.25rem currentColor !important;
+}

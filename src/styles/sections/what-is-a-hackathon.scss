@@ -1,0 +1,103 @@
+.section--what-is-a-hackathon {
+  background-color: $c-bg-dark;
+}
+
+.content__wrapper--what-is-a-hackathon {
+  padding-top: 0;
+}
+
+$card-font-variation: 2px;
+$card-font-base: 16px;
+$card-padding-variation-h: 4 * 16px;
+$card-padding-variation-v: 1 * 16px;
+$card-padding-base: 2 * 16px;
+
+$breakpoint-small-screen: 500px;
+$breakpoint-mid-small-screen: 600px;
+
+.card--big {
+  padding: clamp(
+      $card-padding-base,
+      calc(
+        #{100vw * $card-padding-variation-v / $breakpoint-small-screen} + #{(
+            $card-padding-base - $card-padding-variation-v
+          )}
+      ),
+      $card-padding-base + $card-padding-variation-v
+    )
+    clamp(
+      $card-padding-base,
+      calc(
+        #{100vw * $card-padding-variation-h / $breakpoint-small-screen} + #{(
+            $card-padding-base - $card-padding-variation-h
+          )}
+      ),
+      $card-padding-base + $card-padding-variation-h
+    );
+  font-size: clamp(
+    $card-font-base,
+    calc(
+      #{$card-font-base - $card-font-variation} + #{(
+          100vw * $card-font-variation / $breakpoint-small-screen
+        )}
+    ),
+    $card-font-base + $card-font-variation
+  );
+}
+
+.card--outline {
+}
+
+.card--mission {
+  display: grid;
+  padding-left: clamp(
+    $card-padding-base,
+    calc(
+      100vw * #{$card-padding-variation-v / $breakpoint-mid-small-screen} + #{$card-padding-base -
+        $card-padding-variation-v}
+    ),
+    $card-padding-base + $card-padding-variation-v
+  );
+  border: solid 0.3333rem $c-bg-light;
+  margin-top: 2rem;
+  background-color: $c-bg-dark;
+  gap: clamp(
+    $card-padding-base,
+    calc(
+      100vw * #{$card-padding-variation-v / $breakpoint-mid-small-screen} + #{$card-padding-base -
+        $card-padding-variation-v}
+    ),
+    $card-padding-base + $card-padding-variation-v
+  );
+
+  grid-template: auto / auto auto;
+  place-content: center;
+  place-items: center;
+
+  @media only screen and (max-width: $breakpoint-mid-small-screen) {
+    grid-template: auto auto / auto;
+  }
+
+  > img,
+  > svg {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.card__title {
+  margin: 0 -0.5rem 1rem 0;
+  font-size: 2rem;
+}
+
+.card__text {
+  margin: 0;
+
+  strong {
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "masterPicture": "src/assets/favicon/favicon-black.svg",
+  "iconsPath": "/assets/favicon/",
+  "design": {
+    "ios": {
+      "masterPicture": {
+        "type": "path",
+        "content": "src/assets/favicon/favicon-white.svg"
+      },
+      "pictureAspect": "backgroundAndMargin",
+      "backgroundColor": "#1f143a",
+      "margin": "14%",
+      "assets": {
+        "ios6AndPriorIcons": false,
+        "ios7AndLaterIcons": false,
+        "precomposedIcons": false,
+        "declareOnlyDefaultIcon": true
+      },
+      "appName": "HackUPC"
+    },
+    "desktopBrowser": {
+      "design": "background",
+      "backgroundColor": "#ffffff",
+      "backgroundRadius": 1,
+      "imageScale": 1
+    },
+    "windows": {
+      "masterPicture": {
+        "type": "path",
+        "content": "src/assets/favicon/favicon-white.svg"
+      },
+      "pictureAspect": "noChange",
+      "backgroundColor": "#1f143a",
+      "onConflict": "override",
+      "assets": {
+        "windows80Ie10Tile": false,
+        "windows10Ie11EdgeTiles": {
+          "small": false,
+          "medium": true,
+          "big": false,
+          "rectangle": false
+        }
+      },
+      "appName": "HackUPC"
+    },
+    "androidChrome": {
+      "pictureAspect": "noChange",
+      "themeColor": "#1f143a",
+      "manifest": {
+        "name": "HackUPC",
+        "display": "browser",
+        "orientation": "notSet",
+        "onConflict": "override",
+        "declared": true
+      },
+      "assets": {
+        "legacyIcon": false,
+        "lowResolutionIcons": false
+      }
+    },
+    "safariPinnedTab": {
+      "pictureAspect": "blackAndWhite",
+      "threshold": 90,
+      "themeColor": "#1f143a"
+    }
+  },
+  "settings": {
+    "compression": 5,
+    "scalingAlgorithm": "Mitchell",
+    "errorOnImageTooSmall": false,
+    "readmeFile": false,
+    "htmlCodeFile": true,
+    "usePathAsIs": false
+  },
+  "versioning": {
+    "paramName": "v",
+    "paramValue": "gAePv3mpjq"
+  }
+}
