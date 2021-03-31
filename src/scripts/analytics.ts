@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 gtag('js', new Date())
 gtag('config', 'G-WFBH19BZ64', { anonymize_ip: true })
-gtag('set', { edition: '2021' })
+gtag('set', { 'hackupc-edition': '2021' })
 
 const applyButtons: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
   '[data-ga-apply-button]'
