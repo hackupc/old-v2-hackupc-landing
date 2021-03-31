@@ -96,6 +96,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.ts', '.js', '.json'],
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

@@ -93,6 +93,9 @@ module.exports = {
       name: 'runtime',
     },
   },
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.ts', '.js', '.json'],
+  },
   plugins: [
     // CleanWebpackPlugin will do some clean up/remove folder before build
     // In this case, this plugin will remove 'dist' and 'build' folder before re-build again

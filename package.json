@@ -14,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
+    "@types/gtag.js": "^0.0.4",
     "@types/webfontloader": "^1.6.32",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
@@ -60,9 +61,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@analytics/google-analytics": "^0.5.2",
     "@babel/polyfill": "^7.8.7",
-    "analytics": "^0.7.5",
     "core-js": "^3.9.1",
     "focus-visible": "^5.2.0",
     "lax.js": "^2.0.3",
