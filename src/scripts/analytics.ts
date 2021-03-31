@@ -1,4 +1,11 @@
-import { gtag } from './analytics-init'
+if (process.env.NODE_ENV !== 'production') {
+  gtag = (...args: unknown[]) => {
+    console.log('Emmited event to Google Analytics:', args)
+  }
+}
+
+gtag('js', new Date())
+gtag('config', 'G-WFBH19BZ64', { anonymize_ip: true })
 
 const applyButtons: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
   '[data-ga-apply-button]'
