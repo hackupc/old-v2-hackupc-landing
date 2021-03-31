@@ -3,9 +3,10 @@ const GOOGLE_ANALYTICS_MEASUREMENT_ID = 'G-WFBH19BZ64'
 if (process.env.NODE_ENV === 'production') {
   setTimeout(() => {
     const script = document.createElement('script')
+    script.async = true
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_MEASUREMENT_ID}`
     document.body.append(script)
-  }, 2000)
+  }, 3000)
 } else {
   gtag = (...args: unknown[]) => {
     console.log('Emmited event to Google Analytics:', args)
