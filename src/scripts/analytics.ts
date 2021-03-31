@@ -1,11 +1,19 @@
-if (process.env.NODE_ENV !== 'production') {
+const GOOGLE_ANALYTICS_MEASUREMENT_ID = 'G-WFBH19BZ64'
+
+if (process.env.NODE_ENV === 'production') {
+  setTimeout(() => {
+    const script = document.createElement('script')
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_MEASUREMENT_ID}`
+    document.body.append(script)
+  }, 2000)
+} else {
   gtag = (...args: unknown[]) => {
     console.log('Emmited event to Google Analytics:', args)
   }
 }
 
 gtag('js', new Date())
-gtag('config', 'G-WFBH19BZ64', { anonymize_ip: true })
+gtag('config', GOOGLE_ANALYTICS_MEASUREMENT_ID, { anonymize_ip: true })
 gtag('set', { 'hackupc-edition': '2021' })
 
 const applyButtons: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
