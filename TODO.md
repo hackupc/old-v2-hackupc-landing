@@ -23,4 +23,3 @@
 - [ ] stylelint not working
 - [ ] Update dependencies
 - [ ] Fix google search console warnings
-- [ ] replace en_us to en_gb
