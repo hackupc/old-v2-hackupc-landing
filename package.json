@@ -15,7 +15,7 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@types/webfontloader": "^1.6.32",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.17.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
