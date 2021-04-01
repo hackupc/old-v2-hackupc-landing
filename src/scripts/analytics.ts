@@ -59,7 +59,7 @@ faqTitles.forEach((elem) => {
       if (!elem.dataset.clicked) {
         elem.dataset.clicked = 'true'
 
-        gtag('event', 'faq-expand', {
+        gtag('event', 'faq_expand', {
           category: 'FAQ',
           label: 'FAQ question expanded',
           question: elem.textContent?.trim() ?? '',
