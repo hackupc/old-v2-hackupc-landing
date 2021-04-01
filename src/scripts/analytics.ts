@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production') {
 
 gtag('js', new Date())
 gtag('config', GOOGLE_ANALYTICS_MEASUREMENT_ID, { anonymize_ip: true })
-gtag('set', { 'hackupc-edition': '2021' })
+gtag('set', { hackupc_edition: '2021' })
 
 const applyButtons: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
   '[data-ga-apply-button]'
@@ -21,10 +21,11 @@ applyButtons.forEach((elem) => {
   elem.addEventListener(
     'click',
     () => {
-      gtag('event', 'applyed', {
+      gtag('event', 'apply', {
         category: 'Apply',
         label: 'Apply button clicked',
-        value: elem.dataset.location,
+        role: elem.dataset.role,
+        location: elem.dataset.location,
       })
     },
     { passive: true }
@@ -38,10 +39,10 @@ navLinks.forEach((elem) => {
   elem.addEventListener(
     'click',
     () => {
-      gtag('event', 'navbar-clicked', {
+      gtag('event', 'navbar-click', {
         category: 'Navigation',
         label: 'Navbar link clicked',
-        value: elem.href,
+        location: elem.href,
       })
     },
     { passive: true }
@@ -58,10 +59,10 @@ faqTitles.forEach((elem) => {
       if (!elem.dataset.clicked) {
         elem.dataset.clicked = 'true'
 
-        gtag('event', 'faq-expanded', {
+        gtag('event', 'faq-expand', {
           category: 'FAQ',
           label: 'FAQ question expanded',
-          value: elem.textContent?.trim() ?? '',
+          question: elem.textContent?.trim() ?? '',
         })
       }
     },
