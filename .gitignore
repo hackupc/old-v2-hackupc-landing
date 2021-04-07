@@ -3,6 +3,15 @@
 /build
 /dist
 
+# Yarn 2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos,linux
