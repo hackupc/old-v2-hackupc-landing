@@ -30,6 +30,12 @@ Whenever you want, fix auto-fixable lint errors and format files:
   yarn fix
 ```
 
+From while to while, update the dependencies with this command:
+
+```sh
+  yarn upgrade-interactive
+```
+
 ### Tips
 
 - Use `VS code`, there's the `.vscod` folder with a good workspace configuration.
