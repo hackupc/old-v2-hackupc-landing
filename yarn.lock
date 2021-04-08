@@ -3049,10 +3049,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "core-js@npm:3.10.0"
-  checksum: d8bb20f7da9fdd944057cb41938153a7c4e471fb7d529e37958e32c7a20ab9506abbd03932750c27c8fd02de03a8e4775ba68252506a0dd42dda5404901ae9f1
+"core-js@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "core-js@npm:3.10.1"
+  checksum: 5329c1bb03a9fa36d259b26180d9c4ad377a37867d2753b08a53738d41adb3b1193708abfaec4976d422140abcfabdc272584fb9ed16b1406a5c02fd122b8702
   languageName: node
   linkType: hard
 
@@ -4848,7 +4848,7 @@ fsevents@^1.2.7:
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^3.0.0
     compression-webpack-plugin: ^7.1.2
-    core-js: ^3.10.0
+    core-js: ^3.10.1
     css-loader: ^5.2.0
     css-minimizer-webpack-plugin: ^1.3.0
     eslint: ^7.23.0
@@ -4886,7 +4886,7 @@ fsevents@^1.2.7:
     stylelint-scss: ^3.19.0
     terser-webpack-plugin: ^5.1.1
     ts-loader: ^8.1.0
-    typescript: ^4.2.3
+    typescript: ^4.2.4
     webfontloader: ^1.6.28
     webpack: ^5.31.0
     webpack-cli: ^4.6.0
@@ -10853,23 +10853,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-typescript@^4.2.3:
-  version: 4.2.3
-  resolution: "typescript@npm:4.2.3"
+typescript@^4.2.4:
+  version: 4.2.4
+  resolution: "typescript@npm:4.2.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 06e8470f317db6f5e2fce809b20eb84a67a7d8179057abff36e5427bd1b891bd08e54581ff81f0fa36aef9b6d1eb0f54eaf6e2643c6dbd4e37a0adcc41eed256
+  checksum: edaede2fa77f56b7fba80ee624a2368ab1216e75b0434d968ccb47ab0a5e2f6d94f848b3b111c1237dd71e988cd376af26370dcdad3b94355c76e759f0dd0a1e
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.2.3#builtin<compat/typescript>":
-  version: 4.2.3
-  resolution: "typescript@patch:typescript@npm%3A4.2.3#builtin<compat/typescript>::version=4.2.3&hash=a45b0e"
+"typescript@patch:typescript@^4.2.4#builtin<compat/typescript>":
+  version: 4.2.4
+  resolution: "typescript@patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: a8956044aabf730699bcc3c2475efdd3f35e509329325cf60b4989761d4c2188e2c474183e2cf92b8c201fcf976814a5a16f144508b2a832643c4f972d0ab803
+  checksum: 3be44317593182e8ce494c114e7ad9b0bb2553a22f3085cc6da4f0a36912c20850daa9be4c898af2ab6fc8b12f430c1c9e46ac715721867cd38643f2350d3ef9
   languageName: node
   linkType: hard
 
