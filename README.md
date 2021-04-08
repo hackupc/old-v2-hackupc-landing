@@ -9,12 +9,14 @@ Hi! This is the code of the HackUPC landing page.
 
 ## Develop
 
-Clone the repo, install [Yarn](https://yarnpkg.com/), and run `yarn install` the first time:
+Clone the repo, install [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/), and run `yarn install` the first time:
 
 ```sh
 git clone git@github.com:hackupc/hackupc-landing.git
 cd hackupc-landing
+
 npm install -g yarn
+
 yarn install
 ```
 
