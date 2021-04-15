@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "$schema": "https://json.schemastore.org/tsconfig",
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "$schema": "https://json.schemastore.org/tsconfig"
 }

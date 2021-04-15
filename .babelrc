@@ -9,5 +9,6 @@
       }
     ]
   ],
-  "plugins": []
+  "plugins": [],
+  "$schema": "https://json.schemastore.org/babelrc"
 }

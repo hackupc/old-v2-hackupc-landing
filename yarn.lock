@@ -1353,6 +1353,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint@npm:^7.2.10":
+  version: 7.2.10
+  resolution: "@types/eslint@npm:7.2.10"
+  dependencies:
+    "@types/estree": "*"
+    "@types/json-schema": "*"
+  checksum: d85af4ab456fcf5d243e5a39d192d01ec71e14352b9ec803394ce6ac994fca0b876405dbdc07b97449275aee8285f9570a82117bbfeb132f97e01b8ddc35477a
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:*":
   version: 0.0.47
   resolution: "@types/estree@npm:0.0.47"
@@ -1449,10 +1459,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prettier@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "@types/prettier@npm:2.2.3"
+  checksum: b7e80288f9f776caca84391a7a217b8baac6b4fce00bb9701af69299d465cb8faf17466f0af0803970c74d2c191767ca729a6d21a2f7e2ce552d1ef6cc0d653a
+  languageName: node
+  linkType: hard
+
 "@types/q@npm:^1.5.1":
   version: 1.5.4
   resolution: "@types/q@npm:1.5.4"
   checksum: 1a19cf2c41648b862bd25a4c26ba33dc7206f14fcf50c5b78031b59090d21176e703cd10aff8af409eafbefcebb288607d30af765ee3859637cf3fae6e875648
+  languageName: node
+  linkType: hard
+
+"@types/stylelint@npm:^9.10.1":
+  version: 9.10.1
+  resolution: "@types/stylelint@npm:9.10.1"
+  dependencies:
+    postcss: 7.x.x
+  checksum: 1dc113dd24e6fa958f107b9ba308efe234fa115116294c989f2691b5633b290515a5180ea2457c4ae2c493c1c8bcaf2956e4a011f6b204f76dce90048efcc5f1
   languageName: node
   linkType: hard
 
@@ -1467,6 +1493,17 @@ __metadata:
   version: 1.6.32
   resolution: "@types/webfontloader@npm:1.6.32"
   checksum: a5d38462d1737b9c1fd2c217d304dab6d7f9a158e11a760202e12182b6d8ba22979f884af3075c13e034b8b4f2915ef6f18a6a7cd207a27daadb5f44bd9c8d93
+  languageName: node
+  linkType: hard
+
+"@types/webpack@npm:^5.28.0":
+  version: 5.28.0
+  resolution: "@types/webpack@npm:5.28.0"
+  dependencies:
+    "@types/node": "*"
+    tapable: ^2.2.0
+    webpack: ^5
+  checksum: c09222b73def3ebec8a111f3382499a70370d58fb05de6a0eb81836e0b291b198b8a3cf368dd0b2849db1769c2fac1920155e138ebe058eb687c1f2849be8504
   languageName: node
   linkType: hard
 
@@ -4898,9 +4935,13 @@ fsevents@^1.2.7:
     "@babel/core": ^7.13.15
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.13.15
+    "@types/eslint": ^7.2.10
     "@types/gtag.js": ^0.0.4
     "@types/node": ^14.14.39
+    "@types/prettier": ^2.2.3
+    "@types/stylelint": ^9.10.1
     "@types/webfontloader": ^1.6.32
+    "@types/webpack": ^5.28.0
     "@typescript-eslint/eslint-plugin": ^4.22.0
     "@typescript-eslint/parser": ^4.22.0
     babel-loader: ^8.2.2
@@ -8738,7 +8779,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^7.0.14, postcss@npm:^7.0.17, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.31, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
+"postcss@npm:7.x.x, postcss@npm:^7.0.14, postcss@npm:^7.0.17, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.31, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
   version: 7.0.35
   resolution: "postcss@npm:7.0.35"
   dependencies:
@@ -11420,7 +11461,7 @@ typescript@^4.2.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.33.2":
+"webpack@npm:^5, webpack@npm:^5.33.2":
   version: 5.33.2
   resolution: "webpack@npm:5.33.2"
   dependencies:
