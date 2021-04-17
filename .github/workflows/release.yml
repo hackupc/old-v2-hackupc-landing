@@ -1,0 +1,25 @@
+name: Deploy on release through FTPS
+on: release  
+jobs:
+  deploy-release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    - name: 🎯 Set up Node.js using nvm
+      uses: dcodeIO/setup-node-nvm@v4
+    - name: 🎁 Install dependencies with caching
+      uses: bahmutov/npm-install@v1.6.0
+    - name: 👷🏽‍♂️ Build the site
+      run: yarn run dist
+    - name: 🚀 Send static files through FTPS
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftps.hackupc.com # TODO: set-up this subdomain
+        port: 990
+        local-dir: /dist/
+        server-dir: /hackupc-landings/${{ github.event.release.tag_name }}/ # TODO: use the right path
+        username: GitHubActionsFTP  # TODO: create this user in the server
+        password: ${{ secrets.ftp_password }} # TODO: set-up this password
+        protocol: ftps
+        security: strict
