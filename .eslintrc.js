@@ -1,3 +1,6 @@
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
   root: true,
   env: {
@@ -31,4 +34,5 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['/dist/', '/.yarn/'],
 }

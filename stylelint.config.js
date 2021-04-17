@@ -1,6 +1,9 @@
+/**
+ * @type {import("stylelint").Configuration}
+ */
 module.exports = {
   extends: [
-    'stylelint-config-recommended',
+    'stylelint-config-standard',
     'stylelint-config-sass-guidelines',
     'stylelint-config-idiomatic-order',
     'stylelint-config-prettier',

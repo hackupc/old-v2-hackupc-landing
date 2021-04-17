@@ -8,6 +8,9 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+/**
+ * @type {import('webpack').Configuration}
+ */
 module.exports = {
   entry: {
     main: './src/index.ts',
