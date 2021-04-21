@@ -1,5 +1,3 @@
-// @import 'sponsors/logo-alignments';
-
 .section--sponsors,
 .section--partners {
   background-color: $c-sponsors-bg;
@@ -112,56 +110,6 @@ $logo-height: 8rem;
     padding: 1.5em 0.4em;
     object-fit: contain;
     transition: filter 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
-
-    // Custom logo positioning
-    // TODO: remove from here and use @import 'sponsors/logo-alignments';
-    &--mckinsey {
-      padding: 1.6em 0.4em;
-    }
-
-    &--google {
-      padding: 1.7em 0.4em;
-    }
-
-    &--skyscanner {
-      padding: 1.2em 0.4em;
-    }
-
-    &--facebook {
-      padding: 2.7em 0.4em;
-    }
-
-    &--vueling {
-      padding: 2.1em 0.4em;
-    }
-
-    &--github {
-      padding: 2.5em 0.4em;
-    }
-
-    &--upc {
-      padding: 1.25em 0.4em;
-    }
-
-    &--fib {
-      padding: 2.5em 0.4em;
-    }
-
-    &--telecos {
-      padding: 1.5em 0.4em;
-    }
-
-    &--cfis {
-      padding: 1.5em 0.4em;
-    }
-
-    &--coeinf {
-      padding: 0.75em 0.4em;
-    }
-
-    &--ajuntament_de_barcelona {
-      padding: 2.25em 0.4em;
-    }
   }
 
   &__item--unrevealed {
@@ -286,3 +234,5 @@ $logo-height: 8rem;
     }
   }
 }
+
+@import 'sponsors/logo-alignments';
