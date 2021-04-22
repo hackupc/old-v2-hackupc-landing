@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: 🚚 Get the build
         uses: actions/download-artifact@v2
+      - name: 🎯 Set up Node.js using nvm
+        uses: dcodeIO/setup-node-nvm@v4
       - name: 🎁 Install Lighthouse
         run: npm install -g @lhci/cli
       - name: 🔎 Run Lighthouse
