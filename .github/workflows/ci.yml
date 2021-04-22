@@ -29,6 +29,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: dist
+          path: dist
       - name: 🎯 Set up Node.js using nvm
         uses: dcodeIO/setup-node-nvm@v4
       - name: 🎁 Install Lighthouse
