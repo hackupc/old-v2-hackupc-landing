@@ -15,9 +15,10 @@ jobs:
         yarn install --immutable
     - name: 👷🏽‍♂️ Build the site
       run: yarn run dist
-    - name: 💾 Store the build 
+    - name: 💾 Store the build
       uses: actions/upload-artifact@v2
       with:
+        name: dist
         path: dist
   lighthouseci:
     name: Lighthouse CI
@@ -25,6 +26,8 @@ jobs:
     steps:
       - name: 🚚 Get the build
         uses: actions/download-artifact@v2
+        with:
+          name: dist
       - name: 🎯 Set up Node.js using nvm
         uses: dcodeIO/setup-node-nvm@v4
       - name: 🎁 Install Lighthouse
