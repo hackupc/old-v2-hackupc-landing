@@ -40,8 +40,10 @@ From while to while, update the dependencies with this command:
 
 ### Tips
 
-- Use `VS code`, there's the `.vscod` folder with a good workspace configuration.
+- **Use `VS code`**, there's the `.vscode` folder with a good workspace configuration. It will be applied automatically.
 - Install `ESlint` and `Prettier` extensions.
+
+> If you're unfamiliar with modern vanilla websites, check [this video from CodelyTV](https://youtu.be/ZMBh6n3KWhY) (in Spanish) to understand the reasoning and benefits of this kind of architectures.
 
 ## Deploy
 
