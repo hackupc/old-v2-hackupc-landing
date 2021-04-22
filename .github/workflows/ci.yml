@@ -12,7 +12,7 @@ jobs:
     - name: 🎁 Install dependencies
       run: |
         npm install -g yarn
-        yarn install --immutable --immutable-cache
+        yarn install --immutable
     - name: 👷🏽‍♂️ Build the site
       run: yarn run dist
     - name: 💾 Store the build 
