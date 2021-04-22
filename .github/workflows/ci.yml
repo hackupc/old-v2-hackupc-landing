@@ -22,6 +22,7 @@ jobs:
         path: dist
   lighthouseci:
     name: Lighthouse CI
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get the build
