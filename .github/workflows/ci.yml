@@ -1,0 +1,33 @@
+name: CI
+on: push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    - name: 🎯 Set up Node.js using nvm
+      uses: dcodeIO/setup-node-nvm@v4
+    - name: 🎁 Install dependencies
+      run: |
+        npm install -g yarn
+        yarn install --immutable
+    - name: 👷🏽‍♂️ Build the site
+      run: yarn run dist
+    - name: 💾 Store the build 
+      uses: actions/upload-artifact@v2
+      with:
+        path: dist
+  lighthouseci:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get the build
+        uses: actions/download-artifact@v2
+      - name: 🎯 Set up Node.js using nvm
+        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎁 Install Lighthouse
+        run: npm install -g @lhci/cli
+      - name: 🔎 Run Lighthouse
+        run: lhci autorun
