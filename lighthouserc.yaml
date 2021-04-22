@@ -1,6 +1,6 @@
 ci:
   collect:
-    staticDistDir: /
+    staticDistDir: '.'
   assert:
     assertions:
       uses-http2: 'off'
