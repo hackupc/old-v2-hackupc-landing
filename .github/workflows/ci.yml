@@ -25,6 +25,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: 🚚 Get the build
         uses: actions/download-artifact@v2
         with:
