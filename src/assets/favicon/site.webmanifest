@@ -3,14 +3,28 @@
   "short_name": "HackUPC",
   "icons": [
     {
-      "src": "/assets/favicon/android-chrome-192x192.png?v=gAePv3mpjq",
+      "src": "/assets/favicon/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/assets/favicon/android-chrome-512x512.png?v=gAePv3mpjq",
+      "src": "/assets/favicon/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/xml+svg",
+      "purpose": "monochrome"
     }
   ],
   "theme_color": "#1f143a",
