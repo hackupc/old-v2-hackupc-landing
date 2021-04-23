@@ -1,0 +1,91 @@
+name: CI
+on:
+  push:
+    paths-ignore:
+      - .github/workflows/
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+      - name: 🎯 Set up Node.js using nvm
+        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎁 Install Yarn
+        run: npm install -g yarn
+      - name: 🗂 Configure cache 1
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: 🗂 Configure cache 2
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 🎁 Install dependencies
+        run: yarn install --immutable
+      - name: 👷🏽‍♂️ Build the site
+        run: yarn run dist
+      - name: 💾 Store the build
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
+  lighthouseci:
+    name: Lighthouse CI
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: 🚚 Get the build
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: 🎯 Set up Node.js using nvm
+        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎁 Install Lighthouse
+        run: npm install -g @lhci/cli
+      - name: 🔎 Run Lighthouse
+        run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  lintfix:
+    name: Fix lint errors
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: 🎯 Set up Node.js using nvm
+        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎁 Install Yarn
+        run: npm install -g yarn
+      - name: 🗂 Configure cache 1
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: 🗂 Configure cache 2
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 🎁 Install dependencies
+        run: yarn install --immutable
+      - name: 🧼 Run lint auto-fix
+        run: yarn run fix
+      - name: 🍾 Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          message: 'chore: Auto-fix some lint errors'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

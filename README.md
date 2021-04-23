@@ -1,7 +1,7 @@
 # HackUPC landing page
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys)
-[![Build Status](https://travis-ci.com/hackupc/hackupc-landing.svg?branch=main)](https://travis-ci.com/hackupc/hackupc-landing)
+[![CI](https://github.com/hackupc/hackupc-landing/actions/workflows/ci.yml/badge.svg)](https://github.com/hackupc/hackupc-landing/actions/workflows/ci.yml)
 
 ![HackUPC landing preview](src/assets/ogimage.png)
 
@@ -40,8 +40,10 @@ From while to while, update the dependencies with this command:
 
 ### Tips
 
-- Use `VS code`, there's the `.vscod` folder with a good workspace configuration.
+- **Use `VS code`**, there's the `.vscode` folder with a good workspace configuration. It will be applied automatically.
 - Install `ESlint` and `Prettier` extensions.
+
+> If you're unfamiliar with modern vanilla websites, check [this video from CodelyTV](https://youtu.be/ZMBh6n3KWhY) (in Spanish) to understand the reasoning and benefits of this kind of architectures.
 
 ## Deploy
 
