@@ -86,7 +86,6 @@ jobs:
       - name: 🍾 Commit & Push changes
         uses: actions-js/push@master
         with:
-          message: 'chore: 🧼 Auto-fix some lint errors'
+          message: 'chore: Auto-fix some lint errors'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-          force: true
