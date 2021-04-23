@@ -1,8 +1,5 @@
 name: CI
-on:
-  push:
-    paths-ignore:
-      - .github/workflows/
+on: push
 jobs:
   setup:
     name: Setup
