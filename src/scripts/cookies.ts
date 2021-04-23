@@ -1,4 +1,4 @@
-const cookieNotice = document.getElementById('gdpr')
+const cookieNotice = document.getElementById('gdpr');
 
 if (cookieNotice) {
   if (window.localStorage.getItem('cookies') !== '1') {
