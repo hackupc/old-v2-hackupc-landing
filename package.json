@@ -9,7 +9,10 @@
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --open --progress",
     "dist": "webpack --config config/webpack.prod.js",
-    "fix": "eslint . --fix --ext .js,.ts; stylelint 'src/**/*.*css' --fix; prettier . --write --loglevel warn; exit 0"
+    "fix": "eslint . --fix --ext .js,.ts; stylelint 'src/**/*.*css' --fix; prettier . --write --loglevel warn; exit 0",
+    "lint:eslint": "eslint . --ext .js,.ts",
+    "lint:stylelint": "stylelint 'src/**/*.*css'",
+    "lint:prettier": "prettier . --check"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
