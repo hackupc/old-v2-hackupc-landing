@@ -1,5 +1,5 @@
 name: Deploy on release through FTPS
-on: release  
+on: release
 jobs:
   build:
     name: Build
@@ -35,19 +35,19 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get the build
-      uses: actions/download-artifact@v2
-      with:
-        name: dist
-        path: dist
-    - name: 🚀 Send static files through FTPS
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftps.hackupc.com # TODO: set-up this subdomain
-        port: 990
-        local-dir: /dist/
-        server-dir: /hackupc-landings/${{ github.event.release.tag_name }}/ # TODO: use the right path
-        username: GitHubActionsFTP  # TODO: create this user in the server
-        password: ${{ secrets.ftp_password }} # TODO: set-up this password
-        protocol: ftps
-        security: strict
+      - name: 🚚 Get the build
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: 🚀 Send static files through FTPS
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftps.hackupc.com # TODO: set-up this subdomain
+          port: 990
+          local-dir: /dist/
+          server-dir: /hackupc-landings/${{ github.event.release.tag_name }}/ # TODO: use the right path
+          username: GitHubActionsFTP # TODO: create this user in the server
+          password: ${{ secrets.ftp_password }} # TODO: set-up this password
+          protocol: ftps
+          security: strict
