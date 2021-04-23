@@ -23,7 +23,7 @@
     {
       "src": "/assets/favicon.svg",
       "sizes": "any",
-      "type": "image/xml+svg",
+      "type": "image/svg+xml",
       "purpose": "monochrome"
     }
   ],
