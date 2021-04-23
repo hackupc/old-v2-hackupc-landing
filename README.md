@@ -1,6 +1,7 @@
 # HackUPC landing page
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bb959f3f-1a5f-479e-80ec-d1f0c2ace501/deploy-status)](https://app.netlify.com/sites/hackupc/deploys)
+[![CI](https://github.com/hackupc/hackupc-landing/actions/workflows/ci.yml/badge.svg)](https://github.com/hackupc/hackupc-landing/actions/workflows/ci.yml)
 
 ![HackUPC landing preview](src/assets/ogimage.png)
 
