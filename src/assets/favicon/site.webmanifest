@@ -15,5 +15,6 @@
   ],
   "theme_color": "#1f143a",
   "background_color": "#1f143a",
-  "$schema": "https://json.schemastore.org/web-manifest-combined"
+  "$schema": "https://json.schemastore.org/web-manifest-combined",
+  "start_url": "https://hackupc.com"
 }
