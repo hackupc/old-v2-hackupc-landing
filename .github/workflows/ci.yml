@@ -81,9 +81,10 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: 🎁 Install dependencies
         run: yarn install --immutable
-      - name: ✏️ Run lint auto-fix
+      - name: 🧼 Run lint auto-fix
         run: yarn run fix
-      - name: ✈️ Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🍾 Commit & Push changes
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'main'
