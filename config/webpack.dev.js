@@ -10,12 +10,13 @@ module.exports = {
     main: './src/index.ts',
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.resolve('dist'),
+    publicPath: '/',
     filename: '[name].bundle.js',
   },
   mode: 'development',
   devServer: {
-    contentBase: path.join(__dirname, '../dist'),
+    contentBase: path.resolve('dist'),
     compress: true,
     port: 3000,
     overlay: true,

@@ -7,6 +7,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 /**
  * @type {import('webpack').Configuration}
@@ -16,7 +18,8 @@ module.exports = {
     main: './src/index.ts',
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.resolve('dist'),
+    publicPath: '/',
     filename: '[name].[chunkhash:8].bundle.js',
     chunkFilename: '[name].[chunkhash:8].chunk.js',
   },
@@ -115,6 +118,31 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+    }),
+    new WebpackPwaManifest({
+      name: 'HackUPC',
+      short_name: 'HackUPC',
+      display: 'minimal-ui',
+      orientation: 'omit',
+      theme_color: '#1f143a',
+      background_color: '#1f143a',
+      icons: [
+        {
+          src: path.resolve('src/assets/favicon/android-chrome-512x512.png'),
+          sizes: [192, 256, 512],
+          purpose: 'any',
+        },
+        {
+          src: path.resolve('src/assets/favicon/maskable_icon.png'),
+          sizes: [512],
+          purpose: 'maskable',
+        },
+      ],
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      mode: 'production',
     }),
     new CompressionPlugin({
       algorithm: 'gzip',
