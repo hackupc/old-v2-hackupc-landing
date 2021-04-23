@@ -63,7 +63,6 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
       with:
-        persist-credentials: false
         fetch-depth: 0
     - name: 🎯 Set up Node.js using nvm
       uses: dcodeIO/setup-node-nvm@v4
@@ -86,5 +85,3 @@ jobs:
       run: yarn run fix
     - name: ✈️ Commit & Push changes
       uses: actions-js/push@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
