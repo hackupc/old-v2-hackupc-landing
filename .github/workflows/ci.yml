@@ -84,7 +84,9 @@ jobs:
       - name: 🧼 Run lint auto-fix
         run: yarn run fix
       - name: 🍾 Commit & Push changes
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: 'main'
+        uses: ad-m/github-push-action@master
+        with:
+          message: 'chore: 🧼 Auto-fix some lint errors'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true
