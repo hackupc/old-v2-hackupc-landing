@@ -9,7 +9,6 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin')
 
 /**
  * @type {import('webpack').Configuration}
@@ -123,16 +122,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-    }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      include: 'initial',
-      as(entry) {
-        if (/\.css$/.test(entry)) return 'style'
-        if (/\.(woff|woff2|eot|ttf|otf)$/.test(entry)) return 'font'
-        if (/\.(png|svg|jpg|jpeg|gif|ico)$/.test(entry)) return 'image'
-        return 'script'
-      },
     }),
     new WebpackPwaManifest({
       name: 'HackUPC',
