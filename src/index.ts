@@ -6,7 +6,6 @@ import './styles/style.scss'
 
 import 'focus-visible'
 
-import './scripts/fonts'
 import './scripts/sw'
 import './scripts/analytics'
 import './scripts/cookies'

@@ -69,6 +69,10 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+      },
+      {
         test: /(favicon\.ico|ogimage\.png)$/,
         type: 'asset/resource',
         generator: {

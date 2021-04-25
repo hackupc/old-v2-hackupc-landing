@@ -1360,6 +1360,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/montserrat@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "@fontsource/montserrat@npm:4.2.2"
+  checksum: c99d5a79fd6dbec4c30fcc583a7c1ddbc4bfa372a86bda2fbedacac610315d331d8e1bfcfc7627bb104552715a786115b8f5eb1231b8c5bd379febe155680fc9
+  languageName: node
+  linkType: hard
+
 "@hapi/address@npm:^2.1.2":
   version: 2.1.4
   resolution: "@hapi/address@npm:2.1.4"
@@ -2265,6 +2272,16 @@ __metadata:
     "@typescript-eslint/types": 4.22.0
     eslint-visitor-keys: ^2.0.0
   checksum: 645896d05aa757fac02d952574ecda0eecd0be120162e28533c4528bb70d2162e9df62c3547217c69f18a72ceecaf212ea585afd20f976db64b59ac6de0d1ec8
+  languageName: node
+  linkType: hard
+
+"@vue/preload-webpack-plugin@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@vue/preload-webpack-plugin@npm:2.0.0"
+  peerDependencies:
+    html-webpack-plugin: ^5.0.0 || ^4.5.1
+    webpack: ^5.20.0 || ^4.1.0
+  checksum: fe00d048d4f3685ad08b22afe00d7d888c7f4ed44428b084a972527249c8a849047d8ada9bdc6fd0ac22e81825eb8474e42fc8ccccb399ac0fab088bd8505a90
   languageName: node
   linkType: hard
 
@@ -5754,6 +5771,7 @@ fsevents@~2.3.1:
     "@babel/core": ^7.13.15
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.13.15
+    "@fontsource/montserrat": ^4.2.2
     "@types/eslint": ^7.2.10
     "@types/gtag.js": ^0.0.4
     "@types/node": ^14.14.39
@@ -5763,6 +5781,7 @@ fsevents@~2.3.1:
     "@types/webpack": ^5.28.0
     "@typescript-eslint/eslint-plugin": ^4.22.0
     "@typescript-eslint/parser": ^4.22.0
+    "@vue/preload-webpack-plugin": ^2.0.0
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^4.0.0-alpha.0
     compression-webpack-plugin: ^7.1.2
@@ -5804,7 +5823,6 @@ fsevents@~2.3.1:
     terser-webpack-plugin: ^5.1.1
     ts-loader: ^8.1.0
     typescript: ^4.2.4
-    webfontloader: ^1.6.28
     webpack: ^5.33.2
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -12462,13 +12480,6 @@ typescript@^4.2.4:
   dependencies:
     minimalistic-assert: ^1.0.0
   checksum: 5916a49cb25fc8c70e4e7eb2d01955061132687a79879292fbdee632952f368c12bc5a641d0404794dbc0e3563f8b6e74dda04467b3e96be8bcd0b919bd47a8c
-  languageName: node
-  linkType: hard
-
-"webfontloader@npm:^1.6.28":
-  version: 1.6.28
-  resolution: "webfontloader@npm:1.6.28"
-  checksum: fea984c451eecc1566a13bdcaf04d50b0f38a032ed7c4b6d81d126f0b5434ea16a5e70d38075e21a8f6d300ff84637c329244a522f40719ebfc86bbb791f6ae3
   languageName: node
   linkType: hard
 
