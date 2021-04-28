@@ -1,101 +1,101 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "09:00"
-    timezone: Europe/Madrid
-  open-pull-requests-limit: 99
-  assignees:
-  - mauriciabad
-  ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 15.0.0
-  - dependency-name: mini-css-extract-plugin
-    versions:
-    - 1.5.0
-  - dependency-name: ts-loader
-    versions:
-    - 8.2.0
-    - 9.0.0
-    - 9.1.0
-  - dependency-name: css-loader
-    versions:
-    - 5.2.1
-    - 5.2.2
-  - dependency-name: eslint-plugin-prettier
-    versions:
-    - 3.4.0
-  - dependency-name: webpack
-    versions:
-    - 5.31.2
-    - 5.32.0
-    - 5.33.2
-  - dependency-name: eslint-config-prettier
-    versions:
-    - 8.2.0
-  - dependency-name: "@typescript-eslint/parser"
-    versions:
-    - 4.20.0
-    - 4.21.0
-    - 4.22.0
-  - dependency-name: "@typescript-eslint/eslint-plugin"
-    versions:
-    - 4.20.0
-    - 4.21.0
-    - 4.22.0
-  - dependency-name: eslint
-    versions:
-    - 7.18.0
-    - 7.19.0
-    - 7.20.0
-    - 7.21.0
-    - 7.22.0
-    - 7.23.0
-    - 7.24.0
-  - dependency-name: css-minimizer-webpack-plugin
-    versions:
-    - 2.0.0
-  - dependency-name: "@babel/preset-env"
-    versions:
-    - 7.13.15
-  - dependency-name: "@babel/core"
-    versions:
-    - 7.13.15
-  - dependency-name: typescript
-    versions:
-    - 4.2.4
-  - dependency-name: husky
-    versions:
-    - 6.0.0
-  - dependency-name: postcss
-    versions:
-    - 8.2.9
-  - dependency-name: stylelint
-    versions:
-    - 13.11.0
-    - 13.12.0
-  - dependency-name: autoprefixer
-    versions:
-    - 10.2.4
-    - 10.2.5
-  - dependency-name: postcss-cli
-    versions:
-    - 8.3.1
-  - dependency-name: postcss-import
-    versions:
-    - 14.0.0
-  - dependency-name: lax.js
-    versions:
-    - 2.0.3
-  - dependency-name: eslint-plugin-standard
-    versions:
-    - 5.0.0
-  - dependency-name: standard
-    versions:
-    - 16.0.3
-  - dependency-name: htmlhint
-    versions:
-    - 0.14.2
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '09:00'
+      timezone: Europe/Madrid
+    open-pull-requests-limit: 99
+    assignees:
+      - mauriciabad
+    ignore:
+      - dependency-name: '@types/node'
+        versions:
+          - 15.0.0
+      - dependency-name: mini-css-extract-plugin
+        versions:
+          - 1.5.0
+      - dependency-name: ts-loader
+        versions:
+          - 8.2.0
+          - 9.0.0
+          - 9.1.0
+      - dependency-name: css-loader
+        versions:
+          - 5.2.1
+          - 5.2.2
+      - dependency-name: eslint-plugin-prettier
+        versions:
+          - 3.4.0
+      - dependency-name: webpack
+        versions:
+          - 5.31.2
+          - 5.32.0
+          - 5.33.2
+      - dependency-name: eslint-config-prettier
+        versions:
+          - 8.2.0
+      - dependency-name: '@typescript-eslint/parser'
+        versions:
+          - 4.20.0
+          - 4.21.0
+          - 4.22.0
+      - dependency-name: '@typescript-eslint/eslint-plugin'
+        versions:
+          - 4.20.0
+          - 4.21.0
+          - 4.22.0
+      - dependency-name: eslint
+        versions:
+          - 7.18.0
+          - 7.19.0
+          - 7.20.0
+          - 7.21.0
+          - 7.22.0
+          - 7.23.0
+          - 7.24.0
+      - dependency-name: css-minimizer-webpack-plugin
+        versions:
+          - 2.0.0
+      - dependency-name: '@babel/preset-env'
+        versions:
+          - 7.13.15
+      - dependency-name: '@babel/core'
+        versions:
+          - 7.13.15
+      - dependency-name: typescript
+        versions:
+          - 4.2.4
+      - dependency-name: husky
+        versions:
+          - 6.0.0
+      - dependency-name: postcss
+        versions:
+          - 8.2.9
+      - dependency-name: stylelint
+        versions:
+          - 13.11.0
+          - 13.12.0
+      - dependency-name: autoprefixer
+        versions:
+          - 10.2.4
+          - 10.2.5
+      - dependency-name: postcss-cli
+        versions:
+          - 8.3.1
+      - dependency-name: postcss-import
+        versions:
+          - 14.0.0
+      - dependency-name: lax.js
+        versions:
+          - 2.0.3
+      - dependency-name: eslint-plugin-standard
+        versions:
+          - 5.0.0
+      - dependency-name: standard
+        versions:
+          - 16.0.3
+      - dependency-name: htmlhint
+        versions:
+          - 0.14.2
