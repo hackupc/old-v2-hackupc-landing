@@ -147,6 +147,7 @@ module.exports = {
       mode: 'production',
       runtimeCaching: [
         {
+          urlPattern: '/',
           handler: 'NetworkFirst',
         },
       ],
