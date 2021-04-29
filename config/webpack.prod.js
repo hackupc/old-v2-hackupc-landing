@@ -144,9 +144,17 @@ module.exports = {
       ],
     }),
     new WorkboxPlugin.GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
       mode: 'production',
+      runtimeCaching: [
+        {
+          handler: 'NetworkFirst',
+          options: {
+            expiration: {
+              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+            },
+          },
+        },
+      ],
     }),
     new CompressionPlugin({
       algorithm: 'gzip',
