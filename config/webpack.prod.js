@@ -148,11 +148,6 @@ module.exports = {
       runtimeCaching: [
         {
           handler: 'NetworkFirst',
-          options: {
-            expiration: {
-              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-            },
-          },
         },
       ],
     }),
