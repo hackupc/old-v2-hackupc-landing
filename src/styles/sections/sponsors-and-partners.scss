@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .section--sponsors,
 .section--partners {
   background-color: $c-sponsors-bg;
@@ -91,11 +93,28 @@ $logo-height: 8rem;
 }
 
 .logo {
-  $logo-height-tera: $logo-height;
-  $logo-height-giga: $logo-height * 0.85;
-  $logo-height-mega: $logo-height * 0.85 * 0.85;
-  $logo-height-kilo: $logo-height * 0.85 * 0.85 * 0.85;
-  $logo-height-mili: $logo-height * 0.85 * 0.85 * 0.85 * 0.85;
+  $package-props: (
+    'tera': (
+      'height': $logo-height,
+      'width': 100% / 3,
+    ),
+    'giga': (
+      'height': $logo-height * 0.85,
+      'width': 100% / 4,
+    ),
+    'mega': (
+      'height': $logo-height * 0.85 * 0.85,
+      'width': 100% / 5,
+    ),
+    'kilo': (
+      'height': $logo-height * 0.85 * 0.85 * 0.85,
+      'width': 100% / 6,
+    ),
+    'mili': (
+      'height': $logo-height * 0.85 * 0.85 * 0.85 * 0.85,
+      'width': 100% / 7,
+    ),
+  );
 
   &__link {
     display: block;
@@ -130,34 +149,12 @@ $logo-height: 8rem;
     }
   }
 
-  &__list--tera &__item {
-    height: $logo-height-tera;
-    flex-basis: calc(100% / 3 - 1rem);
-    font-size: $logo-height-tera/8;
-  }
-
-  &__list--giga &__item {
-    height: $logo-height-giga;
-    flex-basis: calc(100% / 4 - 1rem);
-    font-size: $logo-height-giga/8;
-  }
-
-  &__list--mega &__item {
-    height: $logo-height-mega;
-    flex-basis: calc(100% / 5 - 1rem);
-    font-size: $logo-height-mega/8;
-  }
-
-  &__list--kilo &__item {
-    height: $logo-height-kilo;
-    flex-basis: calc(100% / 6 - 1rem);
-    font-size: $logo-height-kilo/8;
-  }
-
-  &__list--mili &__item {
-    height: $logo-height-mili;
-    flex-basis: calc(100% / 7 - 1rem);
-    font-size: $logo-height-mili/8;
+  @each $package, $props in $package-props {
+    &__list--#{$package} &__item {
+      height: map.get($props, 'height');
+      flex-basis: calc(#{map.get($props, 'width')} - 1rem);
+      font-size: map.get($props, 'height') / 8;
+    }
   }
 
   @media screen and (max-width: 1000px) {
@@ -171,66 +168,22 @@ $logo-height: 8rem;
       margin: 0 -0.8vw;
     }
 
-    &__list--tera &__item {
-      height: $logo-height-tera/1rem * 1.6vw;
-      flex-basis: calc(100% / 3 - 1.6vw);
-      font-size: $logo-height-tera/8 / 1rem * 1.6vw;
-    }
-
-    &__list--giga &__item {
-      height: $logo-height-giga/1rem * 1.6vw;
-      flex-basis: calc(100% / 4 - 1.6vw);
-      font-size: $logo-height-giga/8 / 1rem * 1.6vw;
-    }
-
-    &__list--mega &__item {
-      height: $logo-height-mega/1rem * 1.6vw;
-      flex-basis: calc(100% / 5 - 1.6vw);
-      font-size: $logo-height-mega/8 / 1rem * 1.6vw;
-    }
-
-    &__list--kilo &__item {
-      height: $logo-height-kilo/1rem * 1.6vw;
-      flex-basis: calc(100% / 6 - 1.6vw);
-      font-size: $logo-height-kilo/8 / 1rem * 1.6vw;
-    }
-
-    &__list--mili &__item {
-      height: $logo-height-mili/1rem * 1.6vw;
-      flex-basis: calc(100% / 7 - 1.6vw);
-      font-size: $logo-height-mili/8 / 1rem * 1.6vw;
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height') / 1rem * 1.6vw;
+        flex-basis: calc(#{map.get($props, 'width')} - 1.6vw);
+        font-size: map.get($props, 'height') / 8 / 1rem * 1.6vw;
+      }
     }
   }
 
   @media screen and (max-width: 750px) {
-    &__list--tera &__item {
-      height: $logo-height-tera;
-      flex-basis: calc(100% / 3 - 1rem);
-      font-size: $logo-height-tera/8;
-    }
-
-    &__list--giga &__item {
-      height: $logo-height-giga;
-      flex-basis: calc(100% / 4 - 1rem);
-      font-size: $logo-height-giga/8;
-    }
-
-    &__list--mega &__item {
-      height: $logo-height-mega;
-      flex-basis: calc(100% / 5 - 1rem);
-      font-size: $logo-height-mega/8;
-    }
-
-    &__list--kilo &__item {
-      height: $logo-height-kilo;
-      flex-basis: calc(100% / 6 - 1rem);
-      font-size: $logo-height-kilo/8;
-    }
-
-    &__list--mili &__item {
-      height: $logo-height-mili;
-      flex-basis: calc(100% / 7 - 1rem);
-      font-size: $logo-height-mili/8;
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height');
+        flex-basis: calc(#{map.get($props, 'width')} - 1rem);
+        font-size: map.get($props, 'height') / 8;
+      }
     }
   }
 }
