@@ -8,6 +8,7 @@
     "sissel.json-script-tag",
     "esbenp.prettier-vscode",
     "znck.grammarly",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "arcanis.vscode-zipfs"
   ]
 }
