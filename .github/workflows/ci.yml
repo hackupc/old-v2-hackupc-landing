@@ -32,7 +32,7 @@ jobs:
           name: dist
           path: dist
   lighthouseci:
-    name: Lighthouse CI
+    name: Lighthouse
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -54,7 +54,7 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
   lintfix:
-    name: Lint auto-fix errors
+    name: Lint and fix
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
