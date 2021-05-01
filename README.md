@@ -29,7 +29,9 @@ yarn start
 Whenever you want, fix auto-fixable lint errors and format files:
 
 ```sh
-  yarn fix
+  yarn run lint:eslint
+  yarn run lint:stylelint
+  yarn run lint:prettier
 ```
 
 From while to while, update the dependencies with this command:

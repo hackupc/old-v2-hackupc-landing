@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .section--sponsors,
 .section--partners {
   background-color: $c-sponsors-bg;
@@ -8,94 +10,104 @@
   padding-top: 0;
 }
 
-$logo-height: 8rem;
+.logo {
+  $package-props: (
+    'tera': (
+      'height': 8rem,
+      'width': 100% / 3,
+    ),
+    'giga': (
+      'height': 8rem * 0.85,
+      'width': 100% / 4,
+    ),
+    'mega': (
+      'height': 8rem * 0.85 * 0.85,
+      'width': 100% / 5,
+    ),
+    'kilo': (
+      'height': 8rem * 0.85 * 0.85 * 0.85,
+      'width': 100% / 6,
+    ),
+    'mili': (
+      'height': 8rem * 0.85 * 0.85 * 0.85 * 0.85,
+      'width': 100% / 7,
+    ),
+  );
 
-.logo__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 0;
-  margin: 0 -0.5rem;
-}
-
-.logo__item {
-  position: relative;
-  display: block;
-  height: $logo-height;
-  flex-basis: calc(100% / 4 - 1rem);
-  margin: 0.5rem;
-  background-color: #fff;
-  border-radius: 1em;
-  box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
-  color: $c-bg-dark;
-  font-size: $logo-height/8;
-  transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
-  user-select: none;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    opacity: 0;
-    pointer-events: none;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
   }
 
-  &::before {
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    backdrop-filter: blur(0.5rem);
-    background-color: rgba(255, 255, 255, 0.25);
+  &__item {
+    position: relative;
+    display: block;
+    background-color: #fff;
     border-radius: 1em;
-    pointer-events: none;
-    transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
-    // will-change: opacity;
-  }
+    box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
+    color: $c-bg-dark;
+    transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
+    user-select: none;
 
-  &::after {
-    z-index: 2;
-    top: 50%;
-    right: 0;
-    left: 0;
-    content: 'Go to website';
-    font-size: 1.5em;
-    font-weight: bold;
-    letter-spacing: 0.03em;
-    transform: translate(0, -50%) translateY(1em);
-    transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
-    // will-change: transform, opacity;
-  }
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      opacity: 0;
+      pointer-events: none;
+    }
 
-  &:hover {
     &::before {
-      opacity: 1;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(0.5rem);
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 1em;
+      pointer-events: none;
+      transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
+      // will-change: opacity;
     }
 
     &::after {
-      opacity: 1;
-      transform: translate(0, -50%) translateY(0);
+      z-index: 2;
+      top: 50%;
+      right: 0;
+      left: 0;
+      content: 'Go to website';
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      transform: translate(0, -50%) translateY(1em);
+      transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
+      // will-change: transform, opacity;
     }
-    @supports not (backdrop-filter: blur(0.5rem)) {
-      .logo__image {
-        filter: blur(0.5rem);
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+        transform: translate(0, -50%) translateY(0);
+      }
+      @supports not (backdrop-filter: blur(0.5rem)) {
+        .logo__image {
+          filter: blur(0.5rem);
+        }
       }
     }
-  }
 
-  &:active {
-    box-shadow: 0 1rem 1rem -0.5rem transparent;
-    transform: scale(0.975) translateY(0.25rem);
+    &:active {
+      box-shadow: 0 1rem 1rem -0.5rem transparent;
+      transform: scale(0.975) translateY(0.25rem);
+    }
   }
-}
-
-.logo {
-  $logo-height-tera: $logo-height;
-  $logo-height-giga: $logo-height * 0.85;
-  $logo-height-mega: $logo-height * 0.85 * 0.85;
-  $logo-height-kilo: $logo-height * 0.85 * 0.85 * 0.85;
-  $logo-height-mili: $logo-height * 0.85 * 0.85 * 0.85 * 0.85;
 
   &__link {
     display: block;
@@ -130,109 +142,66 @@ $logo-height: 8rem;
     }
   }
 
-  &__list--tera &__item {
-    height: $logo-height-tera;
-    flex-basis: calc(100% / 3 - 1rem);
-    font-size: $logo-height-tera/8;
-  }
+  // [1000px, ∞]
+  @media screen and (min-width: 1000px) {
+    $logo-gap: 1rem;
 
-  &__list--giga &__item {
-    height: $logo-height-giga;
-    flex-basis: calc(100% / 4 - 1rem);
-    font-size: $logo-height-giga/8;
-  }
-
-  &__list--mega &__item {
-    height: $logo-height-mega;
-    flex-basis: calc(100% / 5 - 1rem);
-    font-size: $logo-height-mega/8;
-  }
-
-  &__list--kilo &__item {
-    height: $logo-height-kilo;
-    flex-basis: calc(100% / 6 - 1rem);
-    font-size: $logo-height-kilo/8;
-  }
-
-  &__list--mili &__item {
-    height: $logo-height-mili;
-    flex-basis: calc(100% / 7 - 1rem);
-    font-size: $logo-height-mili/8;
-  }
-
-  @media screen and (max-width: 1000px) {
     &__item {
-      margin: 0.8vw;
+      margin: ($logo-gap / 2);
     }
-  }
 
-  @media screen and (max-width: 1000px) {
     &__list {
-      margin: 0 -0.8vw;
+      margin: 0 -1 * ($logo-gap / 2);
     }
 
-    &__list--tera &__item {
-      height: $logo-height-tera/1rem * 1.6vw;
-      flex-basis: calc(100% / 3 - 1.6vw);
-      font-size: $logo-height-tera/8 / 1rem * 1.6vw;
-    }
-
-    &__list--giga &__item {
-      height: $logo-height-giga/1rem * 1.6vw;
-      flex-basis: calc(100% / 4 - 1.6vw);
-      font-size: $logo-height-giga/8 / 1rem * 1.6vw;
-    }
-
-    &__list--mega &__item {
-      height: $logo-height-mega/1rem * 1.6vw;
-      flex-basis: calc(100% / 5 - 1.6vw);
-      font-size: $logo-height-mega/8 / 1rem * 1.6vw;
-    }
-
-    &__list--kilo &__item {
-      height: $logo-height-kilo/1rem * 1.6vw;
-      flex-basis: calc(100% / 6 - 1.6vw);
-      font-size: $logo-height-kilo/8 / 1rem * 1.6vw;
-    }
-
-    &__list--mili &__item {
-      height: $logo-height-mili/1rem * 1.6vw;
-      flex-basis: calc(100% / 7 - 1.6vw);
-      font-size: $logo-height-mili/8 / 1rem * 1.6vw;
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height');
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: map.get($props, 'height') / 8;
+      }
     }
   }
 
+  // [750px, 1000px]
+  @media screen and (max-width: 1000px) and (min-width: 750px) {
+    $logo-gap: 1.6vw;
+
+    &__item {
+      margin: ($logo-gap / 2);
+    }
+
+    &__list {
+      margin: 0 -1 * ($logo-gap / 2);
+    }
+
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height') / 1rem * 1.6vw;
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: map.get($props, 'height') / 8 / 1rem * 1.6vw;
+      }
+    }
+  }
+
+  // [0px, 750px]
   @media screen and (max-width: 750px) {
-    &__list--tera &__item {
-      height: $logo-height-tera;
-      flex-basis: calc(100% / 3 - 1rem);
-      font-size: $logo-height-tera/8;
+    $logo-gap: 1.6vw;
+
+    &__item {
+      margin: ($logo-gap / 2);
     }
 
-    &__list--giga &__item {
-      height: $logo-height-giga;
-      flex-basis: calc(100% / 4 - 1rem);
-      font-size: $logo-height-giga/8;
+    &__list {
+      margin: 0 -1 * ($logo-gap / 2);
     }
 
-    &__list--mega &__item {
-      height: $logo-height-mega;
-      flex-basis: calc(100% / 5 - 1rem);
-      font-size: $logo-height-mega/8;
-    }
-
-    &__list--kilo &__item {
-      height: $logo-height-kilo;
-      flex-basis: calc(100% / 6 - 1rem);
-      font-size: $logo-height-kilo/8;
-    }
-
-    &__list--mili &__item {
-      height: $logo-height-mili;
-      flex-basis: calc(100% / 7 - 1rem);
-      font-size: $logo-height-mili/8;
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height');
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: map.get($props, 'height') / 8;
+      }
     }
   }
 }
-
-@import 'sponsors/logo-alignments';

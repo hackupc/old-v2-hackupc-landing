@@ -144,9 +144,13 @@ module.exports = {
       ],
     }),
     new WorkboxPlugin.GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
       mode: 'production',
+      runtimeCaching: [
+        {
+          urlPattern: '/',
+          handler: 'NetworkFirst',
+        },
+      ],
     }),
     new CompressionPlugin({
       algorithm: 'gzip',
