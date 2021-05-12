@@ -345,7 +345,7 @@
           <dl class="participate__container">
             <div class="participate__item">
               <dt><h3 class="participate__title">Sponsor</h3></dt>
-              <dd>
+              <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="participate__desc">
                   Don't just put your brand on another wall. Take the chance to shape the tech scene of tomorrow by
                   adding real value and make it possible for hackers to build something they're proud of.
@@ -367,7 +367,7 @@
             </div>
             <div class="participate__item">
               <dt><h3 class="participate__title">Mentor</h3></dt>
-              <dd>
+              <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="participate__desc">
                   Help and motivate hackers with your knowledge. Either because you are passionate about it, or if
                   you've graduated more than a year ago and can't participate as a hacker, apply now as a mentor!
@@ -390,7 +390,7 @@
             </div>
             <div class="participate__item">
               <dt><h3 class="participate__title">Partner</h3></dt>
-              <dd>
+              <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="participate__desc">
                   Gain visibility for your brand, intoduce your products to future talents. Join us and be remembered as
                   part of this hackathon by our participants!
@@ -412,7 +412,7 @@
             </div>
             <div class="participate__item">
               <dt><h3 class="participate__title">Volunteer</h3></dt>
-              <dd>
+              <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="participate__desc">
                   We won't need volunteers this edition because it's online. But we'll appreciate your help in future
                   editions.
@@ -437,7 +437,7 @@
         </div>
       </section>
 
-      <section class="section section--faq" id="faq">
+      <section class="section section--faq" id="faq" itemscope itemtype="https://schema.org/FAQPage">
         <div class="content__wrapper">
           <h2 class="section__title">FAQ</h2>
           <!-- Use the recommended structure by W3 -->
@@ -447,42 +447,54 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">About HackUPC</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-0">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-0"
+                      >
                         What is HackUPC?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-0">
                         HackUPC is the first student hackathon in Spain. This will be our seventh edition with lots of
                         side activities to learn new technologies, meet interesting people and have fun. Come make
                         history with us!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-1"
+                      >
                         When & Where is HackUPC?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-1">
                         The opening ceremony <strong>starts at 7:00 p.m. on Friday</strong>, May 14th. We expect to
                         <strong>finish by 5:00 p.m. on Sunday</strong> 16th. <br />
                         HackUPC will take place <strong>online</strong> using Discord as the main platform.
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-2">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-2">
                         What does HackUPC provide?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-2">
                         HackUPC is free for all accepted hackers. We will provide you with WiFi, swag, spaces enabled to
                         work and meals including breakfast, lunch, dinner and snacks during the night. Showers are
                         opened every morning for grooming and mattresses to relax in sleep-enabled classrooms are also
@@ -490,14 +502,20 @@
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-3">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-3"
+                      >
                         What can I build?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-3">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-3">
                         You can build any tech-related project, we do not have restrictions over the topic. Some
                         examples are webpages, mobile apps, hardware projects, games, an API... Remember that you can
                         also use a variety of hardware components, from Arduino kits and Raspberry Pi's, to Amazon Echo
@@ -505,55 +523,67 @@
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-4">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-4">
                         What should I bring?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-4">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-4">
                         All attendees must bring a valid government ID for admission. Other common checklist items
                         include laptops, chargers, adapters, sleeping bags and toiletries. We encourage hackers to
                         shower, so bring a towel!
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-5">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-5"
+                      >
                         What are the judging criteria?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-5">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-5">
                         Projects will be judged based on technical difficulty, innovation and overall learning
                         experience mainly, but also on their usability and design, by a panel of industry judges and UPC
                         faculty.
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-6">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-6">
                         What if I have any dietary restrictions?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-6">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-6">
                         Since beta 1.0, we support vegan, vegetarian, no pork, gluten-free and other restrictions like
                         halal.
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-7">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-7"
+                      >
                         Do you have a code of conduct?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-7">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-7">
                         Yes, here it is:
                         <a
                           href="https://legal.hackersatupc.org/hackupc/code_of_conduct"
@@ -571,14 +601,14 @@
               <!-- <div class="faq__category">
                 <h3 class="faq__category-title">Travel reimbursement</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-0">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-0">
                         Is travel reimbursement aviable?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-0">
                         Of course! The quantity varies depending on where you come from: we are giving up to 50€ for
                         Spaniards, and up to 100€ if you come from abroad. We want to give all of you the opportunity of
                         joining us! However, you must remember that not all participants will be eligible to receive
@@ -586,28 +616,28 @@
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-1">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-1">
                         When and how do I request it?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-1">
                         During your application process, there is a field for TR, fill it if you want to request it. In
                         case it doesn't appear that means that we have run out of TR. This option cannot be changed once
                         you've been accepted so pay attention while you're doing your application!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-2">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-2">
                         Travel reimbursement conditions
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-2">
                         To receive TR you need to upload your project to HackUPC devpost and present it on demos. Please
                         note that teams of more than 4 members as well as those breaking any other
                         <a
@@ -628,28 +658,40 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">Applications</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-0">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-0"
+                      >
                         Who can attend?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-0">
                         Students from all around the world which are at least 14 years old can apply. University,
                         vocational training, high school, etc., students are all welcome! For under 18 cases, we will
                         request a letter signed by parents or legal tutor to attend.
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-1"
+                      >
                         How to make a good application?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-1">
                         Try to make a difference amongst other hackers, be creative! However, above all, remember to be
                         humble. In our Medium page, you can find a great
                         <a
@@ -670,28 +712,40 @@
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-2">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-2"
+                      >
                         What if I am not a student?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-2">
                         As long as you graduated no longer than a year ago, you can still be accepted as a hacker.
                         Nevertheless, if that isn't your case and you don't want to miss HackUPC, you can apply as a
                         mentor!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-3">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-3"
+                      >
                         How does applying in teams work?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-3">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-3">
                         When you apply, you can create or join a team and you're able to change that until you are
                         accepted. <br />
                         When more than 50% of the team members are accepted, the remaining ones are automatically
@@ -706,54 +760,78 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">Teams</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-0">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-0"
+                      >
                         What if I don't have coding experience?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-0">
                         It's completely fine! In fact, you come here to learn, so you don't need any previous
                         experience. We would love to receive your application!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-1"
+                      >
                         What if I don't have a team?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-1">
                         No need to worry! Part of the fun of a hackathon is meeting new people. We will have a team
                         building activity at the beginning of the event for everyone to meet and form teams.
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-2">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-2"
+                      >
                         What is the max team size?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-2">
                         If <code>myTeam.length &lt;= 4</code>, you're good to go. <br />
                         Teams up to 4 members are welcome. Have in mind that if your team is bigger, you won't be able
                         to participate in any HackUPC competition or challenge.
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-3">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-3"
+                      >
                         Can I change my team during the hackathon? How?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-3">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-3">
                         Yes, in fact, we encourage you to team up with hackers you meet there. You'll meet awesome
                         people! <br />
                         To change your team you don’t have to notify us, just put your team members in the final project
