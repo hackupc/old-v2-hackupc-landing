@@ -63,6 +63,13 @@ module.exports = {
         },
       },
       {
+        test: /(hackupc-logo-black\.svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'hackupc-logo[ext]',
+        },
+      },
+      {
         test: /\.html$/,
         use: [
           {

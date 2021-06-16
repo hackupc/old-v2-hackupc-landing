@@ -1,5 +1,6 @@
 import './assets/favicon/favicon.ico'
 import './assets/ogimage.png'
+import './assets/images/hackupc-logo-black.svg'
 
 import 'normalize.css'
 import './styles/style.scss'
