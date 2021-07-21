@@ -45,8 +45,13 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: 🎯 Set up Node.js using nvm
-        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎯 Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+      - name: 🎯 Use Node.js (.nvmrc)
+        uses: actions/setup-node@v1
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
       - name: 🎁 Install Lighthouse
         run: npm install -g @lhci/cli
       - name: 🔎 Run Lighthouse
