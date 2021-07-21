@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" as="font" crossorigin />
 
     <!-- SEO -->
     <title>HackUPC 2021 | May 14&ndash;16 | Online hackathon Barcelona</title>
@@ -20,8 +19,6 @@
     <meta name="MobileOptimized" content="320" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="canonical" href="https://hackupc.com/" hreflang="en" />
-    <link rel="alternate" href="https://www.hackupc.com/" hreflang="en" />
     <meta name="city" content="Barclona" />
     <meta name="country" content="ES" />
     <meta name="distribution" content="global" />
@@ -52,7 +49,7 @@
 
     <!-- Event Microdata -->
     <!-- Generated with: https://webcode.tools/ -->
-    <!-- Test here: https://www.google.com/webmasters/tools/richsnippets -->
+    <!-- Test here: https://search.google.com/test/rich-results -->
     <!-- When applications close write: ****"availability": "https://schema.org/SoldOut",**** inside offer  -->
     <script type="application/ld+json">
       {
@@ -134,6 +131,44 @@
       }
     </script>
 
+    <!-- Organization Microdata -->
+    <!-- Test here: https://search.google.com/test/rich-results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HackUPC",
+        "alternateName": "Hack UPC",
+        "description": "HackUPC is the first student hackathon in Spain. Once a year, we aim to provide a space for students of all experience levels from all around the world where they can improve and learn new skills, meet awesome people and overall, have a great experience! This year's edition the hackathon will be held online.",
+        "url": "https://hackupc.com",
+        "logo": "http://hackupc.com/hackupc-logo.svg",
+        "image": "https://hackupc.com/ogimage.png",
+        "email": "contact@hackupc.com",
+        "slogan": "Dream it, hack it, ship it!",
+        "potentialAction": {
+          "@type": "RegisterAction",
+          "target": "https://my.hackupc.com/"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "url": "https://hackersatupc.org/",
+          "name": "Hackers@UPC",
+          "email": "contact@hackupc.com"
+        },
+        "mainEntityOfPage": "https://hackupc.com/",
+        "location": {
+          "@type": "Place",
+          "name": "UPC's North Campus FIB",
+          "address": {
+            "streetAddress": "Edifici B6 del Campus Nord, C/Jordi Girona, 1-3",
+            "addressLocality": "Barcelona",
+            "postalCode": "08034",
+            "addressRegion": "Barcelona"
+          }
+        }
+      }
+    </script>
+
     <!-- This is a custom favicon that changes from black to white depending on your device's dark theme -->
     <!-- Don't include the favicon.ico or the svg one won't be loaded -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
@@ -145,13 +180,15 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="HackUPC" />
     <meta name="application-name" content="HackUPC" />
     <meta name="msapplication-TileColor" content="#1f143a" />
     <meta name="msapplication-TileImage" content="./assets/favicon/mstile-144x144.png" />
     <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#1f143a" />
+
+    <!-- Google search console verification -->
+    <meta name="google-site-verification" content="bU-1q58nDoyqlT0XWCbHem79TNCWiG4_wHE3Fm6Qm-U" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
@@ -230,7 +267,7 @@
         </span>
       </div>
 
-      <a
+      <!-- <a
         href="https://my.hackupc.com"
         class="classic-button apply-button"
         role="button"
@@ -241,7 +278,19 @@
         rel="noopener noreferrer"
       >
         <span class="classic-button__text">Apply now</span>
-      </a>
+      </a> -->
+
+      <!-- <a
+        href="https://live.hackupc.com"
+        class="classic-button apply-button"
+        role="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="classic-button__text"><span class="live__dot live__dot--button"></span>Live</span>
+      </a> -->
+
+      <span class="classic-button-disabled apply-button">Finished</span>
     </header>
 
     <nav class="nav">
@@ -374,7 +423,7 @@
                   you've graduated more than a year ago and can't participate as a hacker, apply now as a mentor!
                 </p>
                 <div class="participate__bottom-row">
-                  <a
+                  <!-- <a
                     class="classic-button"
                     href="https://my.hackupc.com/user/signup/mentor/"
                     role="button"
@@ -383,8 +432,8 @@
                     data-role="mentor"
                   >
                     <span class="classic-button__text">Apply</span>
-                  </a>
-                  <!-- <span class="classic-button-disabled">Not open yet</span> -->
+                  </a> -->
+                  <span class="classic-button-disabled">Closed</span>
                   <span class="participate__message"></span>
                 </div>
               </dd>
@@ -438,7 +487,7 @@
         </div>
       </section>
 
-      <section class="section section--faq" id="faq">
+      <section class="section section--faq" id="faq" itemscope itemtype="https://schema.org/FAQPage">
         <div class="content__wrapper">
           <h2 class="section__title">FAQ</h2>
           <!-- Use the recommended structure by W3 -->
@@ -448,43 +497,54 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">About HackUPC</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-0">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-0"
+                      >
                         What is HackUPC?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-0">
                         HackUPC is the first student hackathon in Spain. This will be our seventh edition with lots of
                         side activities to learn new technologies, meet interesting people and have fun. Come make
                         history with us!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-1"
+                      >
                         When & Where is HackUPC?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-1">
                         The opening ceremony <strong>starts at 7:00 p.m. on Friday</strong>, May 14th. We expect to
-                        <strong>finish by 5:00 p.m. on Sunday</strong> 16th.
-                        <br />
+                        <strong>finish by 5:00 p.m. on Sunday</strong> 16th. <br />
                         HackUPC will take place <strong>online</strong> using Discord as the main platform.
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-2">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-2">
                         What does HackUPC provide?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-2">
                         HackUPC is free for all accepted hackers. We will provide you with WiFi, swag, spaces enabled to
                         work and meals including breakfast, lunch, dinner and snacks during the night. Showers are
                         opened every morning for grooming and mattresses to relax in sleep-enabled classrooms are also
@@ -492,14 +552,20 @@
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-3">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-3"
+                      >
                         What can I build?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-3">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-3">
                         You can build any tech-related project, we do not have restrictions over the topic. Some
                         examples are webpages, mobile apps, hardware projects, games, an API... Remember that you can
                         also use a variety of hardware components, from Arduino kits and Raspberry Pi's, to Amazon Echo
@@ -507,55 +573,67 @@
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-4">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-4">
                         What should I bring?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-4">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-4">
                         All attendees must bring a valid government ID for admission. Other common checklist items
                         include laptops, chargers, adapters, sleeping bags and toiletries. We encourage hackers to
                         shower, so bring a towel!
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-5">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-5"
+                      >
                         What are the judging criteria?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-5">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-5">
                         Projects will be judged based on technical difficulty, innovation and overall learning
                         experience mainly, but also on their usability and design, by a panel of industry judges and UPC
                         faculty.
                       </p>
                     </dd>
                   </div>
-                  <!-- <div class="faq__question">
+                  <!-- <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-6">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-about-6">
                         What if I have any dietary restrictions?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-6">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-about-6">
                         Since beta 1.0, we support vegan, vegetarian, no pork, gluten-free and other restrictions like
                         halal.
                       </p>
                     </dd>
                   </div> -->
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-about-7">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-about-7"
+                      >
                         Do you have a code of conduct?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-about-7">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-about-7">
                         Yes, here it is:
                         <a
                           href="https://legal.hackersatupc.org/hackupc/code_of_conduct"
@@ -563,7 +641,8 @@
                           rel="noopener noreferrer"
                           hreflang="en"
                           >Code of conduct</a
-                        >. <br />TL;DR: Be respectful, harassment and abuse are never tolerated.
+                        >. <br />
+                        TL;DR: Be respectful, harassment and abuse are never tolerated.
                       </p>
                     </dd>
                   </div>
@@ -572,14 +651,14 @@
               <!-- <div class="faq__category">
                 <h3 class="faq__category-title">Travel reimbursement</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-0">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-0">
                         Is travel reimbursement aviable?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-0">
                         Of course! The quantity varies depending on where you come from: we are giving up to 50€ for
                         Spaniards, and up to 100€ if you come from abroad. We want to give all of you the opportunity of
                         joining us! However, you must remember that not all participants will be eligible to receive
@@ -587,28 +666,28 @@
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-1">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-1">
                         When and how do I request it?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-1">
                         During your application process, there is a field for TR, fill it if you want to request it. In
                         case it doesn't appear that means that we have run out of TR. This option cannot be changed once
                         you've been accepted so pay attention while you're doing your application!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-travel-2">
+                      <button class="faq__title" itemprop="name" type="button" aria-expanded="false" aria-controls="faq-travel-2">
                         Travel reimbursement conditions
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-travel-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer"  itemprop="text" aria-hidden="true" id="faq-travel-2">
                         To receive TR you need to upload your project to HackUPC devpost and present it on demos. Please
                         note that teams of more than 4 members as well as those breaking any other
                         <a
@@ -629,28 +708,40 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">Applications</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-0">
-                        Who can attend
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-0"
+                      >
+                        Who can attend?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-0">
                         Students from all around the world which are at least 14 years old can apply. University,
                         vocational training, high school, etc., students are all welcome! For under 18 cases, we will
                         request a letter signed by parents or legal tutor to attend.
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-1"
+                      >
                         How to make a good application?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-1">
                         Try to make a difference amongst other hackers, be creative! However, above all, remember to be
                         humble. In our Medium page, you can find a great
                         <a
@@ -671,17 +762,46 @@
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-applications-2">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-2"
+                      >
                         What if I am not a student?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-applications-2">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-2">
                         As long as you graduated no longer than a year ago, you can still be accepted as a hacker.
                         Nevertheless, if that isn't your case and you don't want to miss HackUPC, you can apply as a
                         mentor!
+                      </p>
+                    </dd>
+                  </div>
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <dt>
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-applications-3"
+                      >
+                        How does applying in teams work?
+                      </button>
+                    </dt>
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-applications-3">
+                        When you apply, you can create or join a team and you're able to change that until you are
+                        accepted. <br />
+                        When more than 50% of the team members are accepted, the remaining ones are automatically
+                        accepted. <br />
+                        Note that teams created in the registration are not definitive, so you change your team during
+                        the hackathon.
                       </p>
                     </dd>
                   </div>
@@ -690,44 +810,82 @@
               <div class="faq__category">
                 <h3 class="faq__category-title">Teams</h3>
                 <dl class="faq__list">
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-0">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-0"
+                      >
                         What if I don't have coding experience?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-0">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-0">
                         It's completely fine! In fact, you come here to learn, so you don't need any previous
                         experience. We would love to receive your application!
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-1">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-1"
+                      >
                         What if I don't have a team?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-1">
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-1">
                         No need to worry! Part of the fun of a hackathon is meeting new people. We will have a team
                         building activity at the beginning of the event for everyone to meet and form teams.
                       </p>
                     </dd>
                   </div>
-                  <div class="faq__question">
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <dt>
-                      <button class="faq__title" type="button" aria-expanded="false" aria-controls="faq-teams-2">
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-2"
+                      >
                         What is the max team size?
                       </button>
                     </dt>
-                    <dd>
-                      <p class="faq__answer" aria-hidden="true" id="faq-teams-2">
-                        If <code>myTeam.length &lt;= 4</code>, you're good to go.
-                        <br />
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-2">
+                        If <code>myTeam.length &lt;= 4</code>, you're good to go. <br />
                         Teams up to 4 members are welcome. Have in mind that if your team is bigger, you won't be able
                         to participate in any HackUPC competition or challenge.
+                      </p>
+                    </dd>
+                  </div>
+                  <div class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <dt>
+                      <button
+                        class="faq__title"
+                        itemprop="name"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="faq-teams-3"
+                      >
+                        Can I change my team during the hackathon? How?
+                      </button>
+                    </dt>
+                    <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <p class="faq__answer" itemprop="text" aria-hidden="true" id="faq-teams-3">
+                        Yes, in fact, we encourage you to team up with hackers you meet there. You'll meet awesome
+                        people! <br />
+                        To change your team you don’t have to notify us, just put your team members in the final project
+                        submission.
                       </p>
                     </dd>
                   </div>
@@ -801,142 +959,204 @@
         <div class="content__wrapper">
           <h2 class="section__title">Sponsors</h2>
 
-          <ul class="logo__list logo__list--tera">
-            <!-- <li class="logo__item">
-              <a class="logo__link" href="https://mckinsey.com" target="_blank" rel="noopener noreferrer sponsored">
+          <!-- <ul class="logo__list logo__list--tera">
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://mckinsey.com"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="en"
+              >
                 <img
                   src="assets/logos/mckinsey_company.svg"
                   alt="McKinsey Company"
                   class="logo__image logo__image--mckinsey"
+                  loading="lazy"
                 />
               </a>
-            </li> -->
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
             </li>
             <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+              <img
+                src="assets/logos/hackupc_unrevealed.svg"
+
+                alt="HackUPC"
+                class="logo__image logo__image--hackupc"
+                loading="lazy"
+              />
             </li>
-          </ul>
+          </ul> -->
 
           <ul class="logo__list logo__list--giga">
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://infojobs.net/"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="en"
+              >
+                <img
+                  src="assets/logos/infojobs.svg"
+                  alt="infojobs"
+                  class="logo__image logo__image--infojobs"
+                  loading="lazy"
+                />
+              </a>
             </li>
           </ul>
 
           <ul class="logo__list logo__list--mega">
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-          </ul>
-
-          <ul class="logo__list logo__list--kilo">
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-          </ul>
-
-          <ul class="logo__list logo__list--mili">
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section section--partners" id="partners">
-        <div class="content__wrapper">
-          <h2 class="section__title">Partners</h2>
-          <ul class="logo__list logo__list--kilo">
             <li class="logo__item">
-              <a class="logo__link" href="https://www.upc.edu/en" target="_blank" rel="noopener noreferrer sponsored">
+              <a
+                class="logo__link"
+                href="https://happyscribe.com/"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="en"
+              >
                 <img
-                  src="assets/logos/upc_50_anys.png"
-                  alt="Universitat Politècnica de Catalunya"
-                  class="logo__image logo__image--upc-50"
+                  src="assets/logos/happyscribe.svg"
+                  alt="HappyScribe"
+                  class="logo__image logo__image--happyscribe"
+                  loading="lazy"
                 />
               </a>
             </li>
             <li class="logo__item">
               <a
                 class="logo__link"
-                href="https://www.fib.upc.edu/en"
+                href="https://typeform.com/"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
+                hreflang="en"
               >
                 <img
-                  src="assets/logos/fib.svg"
-                  alt="Facultat d'Ingormàtica de Barcelona"
-                  class="logo__image logo__image--fib"
+                  src="assets/logos/typeform.svg"
+                  alt="Typeform"
+                  class="logo__image logo__image--typeform"
+                  loading="lazy"
                 />
               </a>
             </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+          </ul>
+
+          <ul class="logo__list logo__list--kilo">
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://floorfy.com/"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="es-ES"
+              >
+                <img
+                  src="assets/logos/floorfy.svg"
+                  alt="floorfy"
+                  class="logo__image logo__image--floorfy"
+                  loading="lazy"
+                />
+              </a>
             </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://ithinkupc.com/"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="es-ES"
+              >
+                <img
+                  src="assets/logos/ithinkupc.svg"
+                  alt="iThinkUPC"
+                  class="logo__image logo__image--ithinkupc"
+                  loading="lazy"
+                />
+              </a>
             </li>
-            <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://thoughtworks.com/"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="es-ES"
+              >
+                <img
+                  src="assets/logos/thoughtworks_pink.svg"
+                  alt="ThoughtWorks"
+                  class="logo__image logo__image--thoughtworks"
+                  loading="lazy"
+                />
+              </a>
             </li>
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://50.upc.edu/ca"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="ca-ES"
+              >
+                <img
+                  src="assets/logos/upc_50_anys.png"
+                  alt="Universitat Politècnica de Catalunya"
+                  class="logo__image logo__image--upc-50"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <!-- <ul class="logo__list logo__list--mili">
             <li class="logo__item logo__item--unrevealed">
-              <img src="assets/images/hackupc-logo-black.svg" alt="HackUPC" class="logo__image logo__image--hackupc" />
+              <img
+                src="assets/logos/hackupc_unrevealed.svg"
+
+                alt="HackUPC"
+                class="logo__image logo__image--hackupc"
+                loading="lazy"
+              />
+            </li>
+          </ul> -->
+        </div>
+      </section>
+
+      <section class="section section--partners" id="partners">
+        <div class="content__wrapper">
+          <h2 class="section__title">Partners</h2>
+          <ul class="logo__list logo__list--mili">
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://www.fib.upc.edu/en"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="en"
+              >
+                <img
+                  src="assets/logos/fib.svg"
+                  alt="Facultat d'Informàtica de Barcelona"
+                  class="logo__image logo__image--fib"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="logo__item">
+              <a
+                class="logo__link"
+                href="https://enginyeriainformatica.cat/?page_id=25696"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                hreflang="en"
+              >
+                <img
+                  src="assets/logos/coeinf.png"
+                  alt="Col·legi Oficial d’Enginyeria en Informàtica de Catalunya comissió de genère (donesCOEINF)"
+                  class="logo__image logo__image--coeinf"
+                  loading="lazy"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -966,6 +1186,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 role="button"
+                hreflang="en"
               >
                 <span class="classic-button__text">Go to website</span></a
               >
@@ -1003,6 +1224,7 @@
               href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g"
               target="_blank"
               rel="noopener noreferrer"
+              hreflang="en"
             >
               <img data-markup-inline src="assets/images/icons/icon-youtube.svg" alt="Youtube" class="contact__icon" />
             </a>

@@ -11,7 +11,7 @@ $fade-height: 200px;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: $fade-height / 2;
+  padding-bottom: $fade-height * 0.5;
   background-color: $c-bg-dark;
   place-items: center;
 }
@@ -79,4 +79,9 @@ $fade-height: 200px;
 
 .apply-button {
   margin-top: 2rem;
+
+  &.classic-button-disabled {
+    border-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
 }

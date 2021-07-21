@@ -76,7 +76,7 @@ $btn-thickness: 0.5rem;
     z-index: 0;
     background-color: #b14f50;
     content: '';
-    inset: ($btn-height / 2 + $btn-thickness) 0 0 0;
+    inset: ($btn-height * 0.5 + $btn-thickness) 0 0 0;
   }
 }
 

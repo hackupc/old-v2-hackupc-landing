@@ -17,6 +17,14 @@
         opacity: 0.25;
       }
     }
+
+    &--button {
+      width: 12px;
+      height: 12px;
+      margin-right: 1ch;
+      background: currentColor;
+      vertical-align: 0;
+    }
   }
 
   &__description {

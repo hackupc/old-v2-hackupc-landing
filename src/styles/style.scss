@@ -1,6 +1,8 @@
 /* Keep the right order, it's important for overrides */
 // @import "normalize.css";
 
+@import 'shared/fonts';
+
 @import 'variables';
 @import 'shared/tags';
 @import 'shared/nav';
@@ -17,3 +19,5 @@
 @import 'sections/photos';
 @import 'sections/sponsors-and-partners';
 @import 'sections/what-is-a-hackathon';
+
+@import 'sections/sponsors/logo-alignments';

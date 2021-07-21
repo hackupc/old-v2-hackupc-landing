@@ -1,8 +1,5 @@
 name: CI
-on:
-  push:
-    paths-ignore:
-      - .github/workflows/
+on: push
 jobs:
   build:
     name: Build
@@ -35,7 +32,7 @@ jobs:
           name: dist
           path: dist
   lighthouseci:
-    name: Lighthouse CI
+    name: Lighthouse
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -57,8 +54,11 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
   lintfix:
-    name: Fix lint errors
+    name: Lint and fix
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        command: ['lint:eslint', 'lint:stylelint', 'lint:prettier']
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
@@ -81,8 +81,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: 🎁 Install dependencies
         run: yarn install --immutable
-      - name: 🧼 Run lint auto-fix
-        run: yarn run fix
+      - name: 🔦 Run ${{ matrix.command }}
+        run: yarn run ${{ matrix.command }}
       - name: 🍾 Commit & Push changes
         uses: actions-js/push@master
         with:
