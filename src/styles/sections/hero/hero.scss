@@ -79,4 +79,9 @@ $fade-height: 200px;
 
 .apply-button {
   margin-top: 2rem;
+
+  &.classic-button-disabled {
+    border-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
 }
