@@ -51,7 +51,7 @@ jobs:
       - name: 🎯 Use Node.js (.nvmrc)
         uses: actions/setup-node@v1
         with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - name: 🎁 Install Lighthouse
         run: npm install -g @lhci/cli
       - name: 🔎 Run Lighthouse
