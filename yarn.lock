@@ -5038,10 +5038,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.11.1":
-  version: 3.11.1
-  resolution: "core-js@npm:3.11.1"
-  checksum: c48324bea978e08f09efd38d75232cb2f0ac091f701b5df75789beabaa7fe401e11617c1abf9b1ff3aa6354154656580a0235af2527af5277af584613e9217cc
+"core-js@npm:^3.15.2":
+  version: 3.15.2
+  resolution: "core-js@npm:3.15.2"
+  checksum: 983706260ab8d1fb07adceda18b76165b625bb5807fa0974090c2167ec3744fc148c0827f3a53dc6f7783b334830b181162aa92a259d90cd3d9c8ae5284e0d9f
   languageName: node
   linkType: hard
 
@@ -6956,7 +6956,7 @@ fsevents@~2.3.1:
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^4.0.0-alpha.0
     compression-webpack-plugin: ^8.0.1
-    core-js: ^3.11.1
+    core-js: ^3.15.2
     css-loader: ^6.2.0
     css-minimizer-webpack-plugin: ^3.0.2
     eslint: ^7.31.0
@@ -6972,7 +6972,7 @@ fsevents@~2.3.1:
     markup-inline-loader: ^4.0.0
     mini-css-extract-plugin: ^2.1.0
     normalize.css: ^8.0.1
-    postcss: ^8.2.13
+    postcss: ^8.3.6
     postcss-easing-gradients: ^3.0.1
     postcss-focus-visible: ^5.0.0
     postcss-loader: ^6.1.1
@@ -6981,7 +6981,7 @@ fsevents@~2.3.1:
     prettier: 2.3.2
     prettier-config-standard: ^4.0.0
     purgecss-webpack-plugin: ^4.0.3
-    sass: ^1.32.12
+    sass: ^1.35.2
     sass-loader: ^12.1.0
     style-loader: ^3.2.1
     stylelint: ^13.13.1
@@ -6993,7 +6993,7 @@ fsevents@~2.3.1:
     stylelint-scss: ^3.20.1
     terser-webpack-plugin: ^5.1.4
     ts-loader: ^9.2.3
-    typescript: ^4.2.4
+    typescript: ^4.3.5
     webpack: ^5.45.1
     webpack-cli: ^4.7.2
     webpack-dev-server: ^3.11.2
@@ -10793,18 +10793,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.13":
-  version: 8.2.13
-  resolution: "postcss@npm:8.2.13"
-  dependencies:
-    colorette: ^1.2.2
-    nanoid: ^3.1.22
-    source-map: ^0.6.1
-  checksum: df64697cbd6d8e501eac2eaed501dc9a9c848538b4b51c53bfe7ed62a91736e97135d1fe22384b69af11bb2387a6cb483f5eecd14b19ca192ab5497ed5522124
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.15, postcss@npm:^8.3.5":
+"postcss@npm:^8.2.15, postcss@npm:^8.3.5, postcss@npm:^8.3.6":
   version: 8.3.6
   resolution: "postcss@npm:8.3.6"
   dependencies:
@@ -11548,14 +11537,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.32.12":
-  version: 1.32.12
-  resolution: "sass@npm:1.32.12"
+"sass@npm:^1.35.2":
+  version: 1.35.2
+  resolution: "sass@npm:1.35.2"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: 8ff7460bfe2836b14836d22e9bfb3218870c606e1da1edc780ca6fd9a01aa08ec86b6e631d288a764d9d1959980f8feb9ba376eebcef0316db860c1c7a3d8cb3
+  checksum: d102e3fd6e6aa1a61f9c765fb31ff701d78ef05cf256ebb9ed80994c86638dcc8cc71832df1a1f71edce427cf823449c2fc43618b29ad51a8ca5bf93349ccaf4
   languageName: node
   linkType: hard
 
@@ -12975,23 +12964,23 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-typescript@^4.2.4:
-  version: 4.2.4
-  resolution: "typescript@npm:4.2.4"
+typescript@^4.3.5:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: edaede2fa77f56b7fba80ee624a2368ab1216e75b0434d968ccb47ab0a5e2f6d94f848b3b111c1237dd71e988cd376af26370dcdad3b94355c76e759f0dd0a1e
+  checksum: d9a8e78d72dd19896e6bfa73ab2a0fcea6eca2700d1d6e7c33f67a970af54a3e0fed8f715a8c4e6a0ff7fc0995067b394b2003518ab0aa84cd396377e54b760c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.2.4#builtin<compat/typescript>":
-  version: 4.2.4
-  resolution: "typescript@patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=ddfc1b"
+"typescript@patch:typescript@^4.3.5#builtin<compat/typescript>":
+  version: 4.3.5
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 64658fdf27872904641dcaacf925e6b5a52fb4aa4881a5a726fc78a11b76748423ce9e996dac42313729321061c4dd38a06108014f8d07b222dcff2687037186
+  checksum: 7f0b8343f71ecac18095be1476b398aca420ab60dc207cc1efe078f381eef5527b80a518297720257114cdbda65612f8839e4b63e85dc95e67ac5cbbade8bdf0
   languageName: node
   linkType: hard
 
