@@ -32,9 +32,8 @@ applyButtons.forEach((elem) => {
   )
 })
 
-const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
-  '[data-ga-nav-item]'
-)
+const navLinks: NodeListOf<HTMLAnchorElement> =
+  document.querySelectorAll('[data-ga-nav-item]')
 navLinks.forEach((elem) => {
   elem.addEventListener(
     'click',
@@ -49,9 +48,8 @@ navLinks.forEach((elem) => {
   )
 })
 
-const faqTitles: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
-  '.faq__title'
-)
+const faqTitles: NodeListOf<HTMLAnchorElement> =
+  document.querySelectorAll('.faq__title')
 faqTitles.forEach((elem) => {
   elem.addEventListener(
     'click',

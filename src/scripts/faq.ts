@@ -5,9 +5,8 @@ for (const linkElem of faqLinkElems) {
   linkElem.tabIndex = -1
 }
 
-const faqQuestionTitleElems: NodeListOf<HTMLElement> = document.querySelectorAll(
-  '.faq__title'
-)
+const faqQuestionTitleElems: NodeListOf<HTMLElement> =
+  document.querySelectorAll('.faq__title')
 for (const faqQuestionTitleElem of faqQuestionTitleElems) {
   faqQuestionTitleElem.addEventListener('click', () => {
     const faqQuestionElem = faqQuestionTitleElem.closest('.faq__question')
