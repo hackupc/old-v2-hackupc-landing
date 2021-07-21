@@ -21,27 +21,26 @@ $breakpoint-mid-small-screen: 600px;
   padding: clamp(
       #{$card-padding-base},
       calc(
-        #{math.div(100vw * $card-padding-variation-v, $breakpoint-small-screen)} + #{(
-            $card-padding-base - $card-padding-variation-v
-          )}
+        #{math.div(100vw * $card-padding-variation-v, $breakpoint-small-screen)} +
+          #{($card-padding-base - $card-padding-variation-v)}
       ),
       #{$card-padding-base + $card-padding-variation-v}
     )
     clamp(
       #{$card-padding-base},
       calc(
-        #{math.div(100vw * $card-padding-variation-h, $breakpoint-small-screen)} + #{(
-            $card-padding-base - $card-padding-variation-h
-          )}
+        #{math.div(100vw * $card-padding-variation-h, $breakpoint-small-screen)} +
+          #{($card-padding-base - $card-padding-variation-h)}
       ),
       #{$card-padding-base + $card-padding-variation-h}
     );
   font-size: clamp(
     #{$card-font-base},
     calc(
-      #{$card-font-base - $card-font-variation} + #{
-          math.div(100vw * $card-font-variation, $breakpoint-small-screen)
-        }
+      #{$card-font-base - $card-font-variation} + #{math.div(
+          100vw * $card-font-variation,
+          $breakpoint-small-screen
+        )}
     ),
     #{$card-font-base + $card-font-variation}
   );
@@ -55,8 +54,10 @@ $breakpoint-mid-small-screen: 600px;
   padding-left: clamp(
     #{$card-padding-base},
     calc(
-      100vw * #{math.div($card-padding-variation-v, $breakpoint-mid-small-screen)} + #{$card-padding-base -
-        $card-padding-variation-v}
+      100vw * #{math.div(
+          $card-padding-variation-v,
+          $breakpoint-mid-small-screen
+        )} + #{$card-padding-base - $card-padding-variation-v}
     ),
     #{$card-padding-base + $card-padding-variation-v}
   );
@@ -66,8 +67,10 @@ $breakpoint-mid-small-screen: 600px;
   gap: clamp(
     #{$card-padding-base},
     calc(
-      100vw * #{math.div($card-padding-variation-v, $breakpoint-mid-small-screen)} + #{$card-padding-base -
-        $card-padding-variation-v}
+      100vw * #{math.div(
+          $card-padding-variation-v,
+          $breakpoint-mid-small-screen
+        )} + #{$card-padding-base - $card-padding-variation-v}
     ),
     #{$card-padding-base + $card-padding-variation-v}
   );
