@@ -7,8 +7,13 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
-      - name: 🎯 Set up Node.js using nvm
-        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎯 Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+      - name: 🎯 Use Node.js (.nvmrc)
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - name: 🎁 Install Yarn
         run: npm install -g yarn
       - name: 🗂 Configure cache 1
@@ -69,8 +74,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: 🎯 Set up Node.js using nvm
-        uses: dcodeIO/setup-node-nvm@v4
+      - name: 🎯 Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+      - name: 🎯 Use Node.js (.nvmrc)
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - name: 🎁 Install Yarn
         run: npm install -g yarn
       - name: 🗂 Configure cache 1
