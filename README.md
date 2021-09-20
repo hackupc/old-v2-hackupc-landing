@@ -20,7 +20,7 @@ npm install -g yarn
 yarn install
 ```
 
-Use `yarn start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
+Use `yarn start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:8080](https://localhost:8080)
 
 ```sh
 yarn start

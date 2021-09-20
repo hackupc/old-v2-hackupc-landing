@@ -16,14 +16,18 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    contentBase: path.resolve('dist'),
+    static:{
+      directory: path.resolve('dist'),
+    },
     compress: true,
-    port: 3000,
-    overlay: true,
+    client: {
+      overlay: true,
+      progress: true,
+    },
+    hot: true,
     // Uncomment the two lines below to enable hot reload on mobile
-    // host: '172.17.197.80', // Your ip, update it. This is mine.
-    // disableHostCheck: true,
-    // http2: true,
+    // host: 'local-ip',
+    // allowedHosts: 'all'
   },
   devtool: 'eval-cheap-module-source-map',
   module: {
