@@ -1,6 +1,6 @@
 const rocketElem = document.querySelector('.object--rocket')
 if (rocketElem) {
-  rocketElem.addEventListener('click', (event) => {
+  rocketElem.addEventListener('click', () => {
     if (rocketElem.classList.contains('stop-animation')) {
       rocketElem.classList.remove('stop-animation')
       setTimeout(() => {
