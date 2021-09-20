@@ -22,14 +22,10 @@ module.exports = {
     compress: true,
     client: {
       overlay: true,
-      progress: true,
     },
     hot: true,
-    // Uncomment the two lines below to enable hot reload on mobile
-    // host: 'local-ip',
-    // allowedHosts: 'all'
   },
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
