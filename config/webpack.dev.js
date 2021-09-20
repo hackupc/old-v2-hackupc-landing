@@ -16,7 +16,7 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    static:{
+    static: {
       directory: path.resolve('dist'),
     },
     compress: true,
