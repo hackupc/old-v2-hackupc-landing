@@ -20,7 +20,7 @@ npm install -g yarn
 yarn install
 ```
 
-Use `yarn start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:8080](https://localhost:8080)
+Use `yarn start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
 
 ```sh
 yarn start
@@ -34,11 +34,10 @@ Whenever you want, fix auto-fixable lint errors and format files:
   yarn run lint:prettier
 ```
 
-From while to while, update the dependencies with this commands:
+From while to while, update the dependencies with this command:
 
 ```sh
-  yarn set version latest
-  yarn yarn-upgrade-all
+  yarn upgrade-interactive
 ```
 
 ### Tips
@@ -50,7 +49,7 @@ From while to while, update the dependencies with this commands:
 
 ## Deploy
 
-**Push to main**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
+**Push to master**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
 
 If you push something that doesn't build, don't worry, it won't be published.
 

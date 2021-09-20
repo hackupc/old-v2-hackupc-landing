@@ -23,7 +23,6 @@ module.exports = {
     filename: '[name].[chunkhash:8].bundle.js',
     chunkFilename: '[name].[chunkhash:8].chunk.js',
   },
-  devtool: 'source-map',
   mode: 'production',
   module: {
     rules: [
