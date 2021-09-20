@@ -5388,7 +5388,7 @@ fsevents@~2.3.2:
     normalize.css: ^8.0.1
     postcss: ^8.3.6
     postcss-easing-gradients: ^3.0.1
-    postcss-focus-visible: ^6.0.0
+    postcss-focus-visible: ^5.0.0
     postcss-loader: ^6.1.1
     postcss-preset-env: ^6.7.0
     postcss-reporter: ^7.0.2
@@ -8174,12 +8174,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss-focus-visible@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "postcss-focus-visible@npm:6.0.0"
-  peerDependencies:
-    postcss: ^8.3
-  checksum: 8451b77f3de9a7e198cbba2e7d9254e12e70186b166c2d019470a504c4679b78d6806a56d24cc4b03d887d3f5c5ffa36dd52e22978d2b51c96248297254e6111
+"postcss-focus-visible@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "postcss-focus-visible@npm:5.0.0"
+  dependencies:
+    postcss: ^7.0.27
+  checksum: cacaa0f1a9556587f888216ea148e7fe0131cb19d8777d298ae1d0c1d315e18d93ea32c5f04ebbcf76cb721e0af77582fc675199035d2f8827fe901ce03e0032
   languageName: node
   linkType: hard
 
@@ -8836,7 +8836,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:7.x.x, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.35, postcss@npm:^7.0.5":
+"postcss@npm:7.x.x, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.35, postcss@npm:^7.0.5":
   version: 7.0.36
   resolution: "postcss@npm:7.0.36"
   dependencies:
