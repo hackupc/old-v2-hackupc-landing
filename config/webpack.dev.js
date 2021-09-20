@@ -16,16 +16,16 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    contentBase: path.resolve('dist'),
+    static: {
+      directory: path.resolve('dist'),
+    },
     compress: true,
-    port: 3000,
-    overlay: true,
-    // Uncomment the two lines below to enable hot reload on mobile
-    // host: '172.17.197.80', // Your ip, update it. This is mine.
-    // disableHostCheck: true,
-    // http2: true,
+    client: {
+      overlay: true,
+    },
+    hot: true,
   },
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
