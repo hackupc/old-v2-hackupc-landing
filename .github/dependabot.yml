@@ -6,6 +6,6 @@ updates:
       interval: daily
       time: '09:00'
       timezone: Europe/Madrid
-    open-pull-requests-limit: 99
+    open-pull-requests-limit: 5
     assignees:
       - mauriciabad
