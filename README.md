@@ -34,10 +34,11 @@ Whenever you want, fix auto-fixable lint errors and format files:
   yarn run lint:prettier
 ```
 
-From while to while, update the dependencies with this command:
+From while to while, update the dependencies with this commands:
 
 ```sh
-  yarn upgrade-interactive
+  yarn set version latest
+  yarn yarn-upgrade-all
 ```
 
 ### Tips
@@ -49,7 +50,7 @@ From while to while, update the dependencies with this command:
 
 ## Deploy
 
-**Push to master**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
+**Push to main**. [Netlify](https://app.netlify.com/sites/hackupc) will build and deploy automatically.
 
 If you push something that doesn't build, don't worry, it won't be published.
 
