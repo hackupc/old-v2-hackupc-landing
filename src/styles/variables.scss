@@ -1,11 +1,11 @@
 $c-palette-blue: #3f5182;
-$c-palette-black: #181c19;
-$c-palette-black-light: #1f2424;
+$c-palette-black: #1f143a;
+$c-palette-black-light: #291b54;
 
 $c-bg-darker: #181917;
 $c-bg-dark: $c-palette-black;
-$c-bg-light: #272f44;
-$c-bg-lighter: #4b62a3;
+$c-bg-light: #34256b;
+$c-bg-lighter: #9287c6;
 
 $c-primary: #ec6162;
 $c-txt-dark: #000;
@@ -15,8 +15,12 @@ $c-hero-shadow: hsla(287, 100%, 50%, 0.66);
 
 $c-faq-bg: $c-palette-black-light;
 $c-faq-block: $c-bg-light;
-$c-faq-question: #3f5182;
+$c-faq-question: #48308c;
 $c-faq-hover: linear-gradient(135deg, #2e4992, #33699c);
+
+$c-during-border: #8a69d4;
+$c-during-bg: #291b54;
+$c-during-bg-card: #45318f;
 
 $c-live-bg: $c-palette-black-light;
 
@@ -26,7 +30,7 @@ $c-sponsors-shadow: hsla(220, 100%, 50%, 0.1);
 $c-about-us-bg: $c-palette-black-light;
 $c-about-us-bg-card: $c-bg-light;
 
-$c-gdpr-bg: #0f1310;
+$c-gdpr-bg: #45318f;
 $c-gdpr-txt: $c-txt-light;
 
 $ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
