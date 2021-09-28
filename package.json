@@ -19,7 +19,7 @@
     "@types/eslint": "^7.28.0",
     "@types/gtag.js": "^0.0.7",
     "@types/node": "^16.4.0",
-    "@types/prettier": "^2.3.2",
+    "@types/prettier": "^2.4.1",
     "@types/stylelint": "^13.13.1",
     "@types/webfontloader": "^1.6.33",
     "@types/webpack": "^5.28.0",
