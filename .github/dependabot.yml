@@ -8,4 +8,4 @@ updates:
       timezone: Europe/Madrid
     open-pull-requests-limit: 5
     assignees:
-      - mauriciabad
+      - @hackupc/webdev
