@@ -85,3 +85,25 @@ $fade-height: 200px;
     opacity: 1;
   }
 }
+
+.new-edition {
+  margin-top: 2em;
+  font-size: 1.25em;
+  font-weight: 600;
+  text-align: center;
+
+  &__title {
+    font-size: 1.5em;
+    font-style: italic;
+    color: $c-primary;
+  }
+}
+
+input[type=email] {
+  width: 70%;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
