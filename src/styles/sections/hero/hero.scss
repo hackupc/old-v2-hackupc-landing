@@ -107,3 +107,46 @@ input[type='email'] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.submit-button {
+  $btn-height: 0.75rem + 1rem + 0.75rem;
+
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: $c-txt-light;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: none;
+  border: none;
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0.75rem 1.4rem 0.75rem 1.5rem;
+    background-color: $c-primary;
+    transition: transform 150ms $ease-bounce;
+  }
+
+  &:active &__text {
+    transform: translateY($btn-thickness);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 0;
+    background-color: #b14f50;
+    content: '';
+    top: 1.75em;
+    right: 6px;
+    bottom: -6px;
+    left: 6px;
+  }
+}
