@@ -261,10 +261,9 @@
       <div class="title">
         <h1 class="title__title">Hack<strong>UPC</strong></h1>
         <span class="title__more-info">
-          <span class="title__online">Dates TBD</span>
           <!--<span class="title__date"><time datetime="2020-05-21/2020-05-23">May 14&ndash;16</time></span>-->
-          <span class="title__date"></span>
-          <span class="title__duration">36 Hours</span>
+          <!-- <span class="title__date"></span> -->
+          <!-- <span class="title__duration">36 Hours</span> -->
         </span>
       </div>
 
@@ -293,27 +292,34 @@
 
       <!--<span class="classic-button-disabled apply-button">Finished</span>-->
 
-      <div class="new-edition">
-        <span class="new-edition__title">We are preparing HackUPC 2022</span><br /><br />
-        <span>Be the first to know when applications are live!</span>
+      <form class="subscribe" name="subscribe" method="POST" data-netlify="true">
+        <p class="subscribe__title">HackUPC 2022 is on the way</p>
+        <p class="subscribe__subtitle">Be the first to know when applications open</p>
 
-        <form name="subscribe" method="POST" data-netlify="true">
-          <div class="modal-body">
-            <p><input type="email" name="email" placeholder="Email" required /></p>
-            <p class="terms-text">
-              <input type="checkbox" name="checkbox-privacy" required /> I have read and I accept the
-              <a href="https://legal.hackersatupc.org/hackupc/terms_and_conditions">terms and conditions</a>
-            </p>
-          </div>
-          <div>
-            <p>
-              <button type="submit" class="submit-button classic-button">
-                <span class="classic-button__text">Send</span>
-              </button>
-            </p>
-          </div>
-        </form>
-      </div>
+        <div class="subscribe__email">
+          <label class="subscribe__email-label" for="subscribe-email">Email</label>
+          <input
+            class="subscribe__email-input"
+            type="email"
+            name="email"
+            placeholder="biene@gmail.com"
+            required
+            id="subscribe-email"
+          />
+        </div>
+
+        <div class="subscribe__terms">
+          <input class="subscribe__terms-input" type="checkbox" name="checkbox-privacy" required id="subscribe-terms" />
+          <label class="subscribe__terms-label" for="subscribe-terms">
+            I've read and I accept the
+            <a href="https://legal.hackersatupc.org/hackupc/terms_and_conditions">terms and conditions</a>
+          </label>
+        </div>
+
+        <button type="submit" class="classic-button subscribe__submit">
+          <span class="classic-button__text">Send</span>
+        </button>
+      </form>
     </header>
 
     <nav class="nav">
