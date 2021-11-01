@@ -57,6 +57,11 @@ $btn-thickness: 0.5rem;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  padding: 0;
+  border: 0;
+  background: none;
+  appearance: none;
+  cursor: pointer;
 
   &__text {
     position: relative;
