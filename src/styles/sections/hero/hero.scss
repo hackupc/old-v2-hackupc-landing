@@ -87,16 +87,16 @@ $fade-height: 200px;
 }
 
 .subscribe {
+  width: 100%;
   margin-top: 2rem;
   font-size: 1.125rem;
-  text-align: center;
   font-weight: 600;
-  width: 100%;
+  text-align: center;
 
   &__title {
-    font-size: 2rem;
-    color: $c-primary;
     margin: 0;
+    color: $c-primary;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
   }
@@ -107,25 +107,25 @@ $fade-height: 200px;
   &__email {
     width: 100%;
     max-width: 24rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
     margin: 0 auto;
     text-align: left;
-    padding: 0 1rem;
-    box-sizing: border-box;
 
     &-label {
       display: block;
-      padding-left: 8px;
       padding-bottom: 4px;
+      padding-left: 8px;
     }
     &-input {
-      color: #000;
       display: block;
       width: 100%;
+      box-sizing: border-box;
       padding: 10px 20px;
       border: 3px solid #3f5081;
-      background-color: rgb(255 255 255 / 67%);
       backdrop-filter: blur(2px);
-      box-sizing: border-box;
+      background-color: rgb(255 255 255 / 67%);
+      color: #000;
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.4);
@@ -134,20 +134,20 @@ $fade-height: 200px;
   }
 
   &__terms {
+    display: flex;
     width: 100%;
     max-width: 24rem;
-    margin: 1rem auto 0;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 0.5rem;
-    cursor: pointer;
-    padding: 0 1rem;
     box-sizing: border-box;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 1rem auto 0;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-align: left;
 
     &-label {
-      font-size: 0.85rem;
       flex-grow: 1;
+      font-size: 0.85rem;
     }
     &-input {
     }
