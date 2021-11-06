@@ -123,12 +123,11 @@ $fade-height: 200px;
       box-sizing: border-box;
       padding: 10px 20px;
       border: 3px solid #3f5081;
-      backdrop-filter: blur(2px);
-      background-color: rgb(255 255 255 / 67%);
+      background-color: #fff;
       color: #000;
 
       &::placeholder {
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba(0, 0, 0, 0.6);
       }
     }
   }
@@ -150,6 +149,7 @@ $fade-height: 200px;
       font-size: 0.85rem;
     }
     &-input {
+      color: #fff;
     }
   }
 
