@@ -96,12 +96,13 @@ $fade-height: 200px;
   &__title {
     margin: 0;
     color: $c-primary;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 5.5vw, 2rem);
     font-weight: 800;
     text-transform: uppercase;
   }
   &__subtitle {
     margin: 0 0 2rem;
+    font-size: clamp(1rem, 3vw, 1.125rem);
   }
 
   &__email {
