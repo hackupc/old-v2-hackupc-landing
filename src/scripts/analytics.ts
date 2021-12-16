@@ -14,6 +14,22 @@ gtag('js', new Date())
 gtag('config', GOOGLE_ANALYTICS_MEASUREMENT_ID, { anonymize_ip: true })
 gtag('set', { hackupc_edition: '2021' })
 
+const subscribeForms: NodeListOf<HTMLFormElement> = document.querySelectorAll(
+  '[data-ga-subscribe-form]'
+)
+subscribeForms.forEach((elem) => {
+  elem.addEventListener(
+    'submit',
+    () => {
+      gtag('event', 'subscribe', {
+        category: 'Subscribe',
+        label: 'Subscribe form submitted',
+      })
+    },
+    { passive: true }
+  )
+})
+
 const applyButtons: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
   '[data-ga-apply-button]'
 )

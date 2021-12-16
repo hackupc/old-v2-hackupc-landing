@@ -1525,3 +1525,77 @@ $apply-depth: 40px;
     --screen-height: calc(115vw);
   }
 }
+
+.subscribe {
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    color: $c-primary;
+    font-size: clamp(1.25rem, 5.5vw, 2rem);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    margin: 0 0 2rem;
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+
+  &__email {
+    width: 100%;
+    max-width: 24rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    margin: 0 auto;
+    text-align: left;
+
+    &-label {
+      display: block;
+      padding-bottom: 4px;
+      padding-left: 8px;
+    }
+    &-input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      border: 3px solid #3f5081;
+      background-color: #fff;
+      color: #000;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  &__terms {
+    display: flex;
+    width: 100%;
+    max-width: 24rem;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 1rem auto 0;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-align: left;
+
+    &-label {
+      flex-grow: 1;
+      font-size: 0.85rem;
+    }
+    &-input {
+      color: #fff;
+    }
+  }
+
+  &__submit {
+    display: inline-flex;
+    margin-top: 1rem;
+  }
+}
