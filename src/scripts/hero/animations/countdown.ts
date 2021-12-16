@@ -27,7 +27,7 @@ const countdownPluralElem = {
   ),
 }
 
-const countdownDate = new Date(2020, 9, 11, 19, 0, 0) // Notice: January is 0 and December 11
+const countdownDate = new Date(2022, 3, 29, 19, 0, 0) // Notice: January is 0 and December 11
 let secondsLeft = Math.floor(
   (countdownDate.getTime() - new Date().getTime()) / 1000
 )
