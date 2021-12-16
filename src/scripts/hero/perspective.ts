@@ -23,6 +23,7 @@ window.addEventListener('mousemove', updateHeroPerspective)
 window.addEventListener('resize', updateHeroPerspective)
 updateHeroPerspective()
 
+/*
 // iOS 13+ device orientation requestPermission
 if (
   window.DeviceOrientationEvent &&
@@ -46,6 +47,7 @@ if (
 } else {
   window.addEventListener('deviceorientation', updateHeroPerspective, false)
 }
+*/
 
 document.addEventListener('visibilitychange', () => {
   alphaOrig = 0.5
