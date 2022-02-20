@@ -530,39 +530,42 @@
         padding-right: 10%;
         margin-top: -2%;
         margin-bottom: 3.5%;
-        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .centered a {
-        flex: auto;
-      }
-      .centered a:nth-child(1) {
-        margin-right: 5%;
-      }
-      .centered a:nth-child(2) {
-        margin-left: 5%;
+      .centered div {
+        align-items: center;
+        justify-content: center;
+        margin: 0px 7.5% 0px 7.5%;
       }
     </style>
     <div class="centered">
-      <a
-        class="classic-button"
-        href="https://my.hackupc.com/user/signup/mentor/"
-        role="button"
-        data-ga-apply-button
-        data-location="participate"
-        data-role="mentor"
-      >
-        <span class="classic-button__text">Be a Mentor</span>
-      </a>
-      <a
-        class="classic-button"
-        href="https://my.hackupc.com/user/signup/volunteer/"
-        role="button"
-        data-ga-apply-button
-        data-location="participate"
-        data-role="volunteer"
-      >
-        <span class="classic-button__text">Be a Volunteer</span>
-      </a>
+      <div>
+        <a
+          class="classic-button"
+          href="https://my.hackupc.com/user/signup/mentor/"
+          role="button"
+          data-ga-apply-button
+          data-location="participate"
+          data-role="mentor"
+        >
+          <span class="classic-button__text">Be a Mentor</span>
+        </a>
+      </div>
+      <div>
+        <a
+          class="classic-button"
+          href="https://my.hackupc.com/user/signup/volunteer/"
+          role="button"
+          data-ga-apply-button
+          data-location="participate"
+          data-role="volunteer"
+        >
+          <span class="classic-button__text">Be a Volunteer</span>
+        </a>
+      </div>
     </div>
     <nav class="nav">
       <ul class="nav__list">
