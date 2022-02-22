@@ -102,3 +102,30 @@ $btn-thickness: 0.5rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+.buttons-mentor-volunteer {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  &--button-space {
+    margin-left: 3rem;
+    margin-top: 0;
+
+    @media screen and (max-width: 600px) {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.centered div {
+  align-items: center;
+  justify-content: center;
+  margin: 0px 7.5% 0px 7.5%;
+}
