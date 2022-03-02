@@ -277,25 +277,33 @@
           <div class="subscreen subscreen--timeline">
             <ul class="timeline-screen">
               <li class="timeline-screen__item">
-                <a href="https://2021.hackupc.com/" class="timeline-screen__label">2021</a>
+                <a tabindex="-1" href="https://2021.hackupc.com/" class="timeline-screen__label">2021</a>
               </li>
               <li class="timeline-screen__item">
-                <a href="https://2019.hackupc.com/" class="timeline-screen__label"> 2019 </a>
+                <a tabindex="-1" href="https://2019.hackupc.com/" class="timeline-screen__label"> 2019 </a>
               </li>
               <li class="timeline-screen__item">
-                <a href="https://2018.hackupc.com/" class="timeline-screen__label"> 2018 </a>
+                <a tabindex="-1" href="https://2018.hackupc.com/" class="timeline-screen__label"> 2018 </a>
               </li>
               <li class="timeline-screen__item timeline-screen__item--half">
-                <a href="https://f2017.hackupc.com/" class="timeline-screen__label"> 2017 <small>Fall</small> </a>
+                <a tabindex="-1" href="https://f2017.hackupc.com/" class="timeline-screen__label">
+                  2017 <small>Fall</small>
+                </a>
               </li>
               <li class="timeline-screen__item timeline-screen__item--half">
-                <a href="https://w2017.hackupc.com/" class="timeline-screen__label"> 2017 <small>Winter</small> </a>
+                <a tabindex="-1" href="https://w2017.hackupc.com/" class="timeline-screen__label">
+                  2017 <small>Winter</small>
+                </a>
               </li>
               <li class="timeline-screen__item timeline-screen__item--half">
-                <a href="https://f2016.hackupc.com/" class="timeline-screen__label"> 2016 <small>Fall</small> </a>
+                <a tabindex="-1" href="https://f2016.hackupc.com/" class="timeline-screen__label">
+                  2016 <small>Fall</small>
+                </a>
               </li>
               <li class="timeline-screen__item timeline-screen__item--half">
-                <a href="https://s2016.hackupc.com/" class="timeline-screen__label"> 2016 <small>Spring</small> </a>
+                <a tabindex="-1" href="https://s2016.hackupc.com/" class="timeline-screen__label">
+                  2016 <small>Spring</small>
+                </a>
               </li>
             </ul>
             <!-- <img src="assets/images/screen-timeline.svg" loading="lazy" alt="Gigant screen with hackupc timeline" intrinsicsize="864 x 185" width="864" height="185"> -->
@@ -412,6 +420,8 @@
           </div>
           <div class="object object--pc-cowsay">
             <img
+              height="133.33"
+              width="150"
               src="assets/images/pc-cowsay.svg"
               alt="Computer screen with a terminal open showing the output from cowsay"
               class="cowsay__image"
@@ -424,13 +434,28 @@
             <img data-markup-inline src="assets/images/pc.svg" alt="Computer screen with glitched screen" />
           </div>
           <div class="object object--pc-glitch object--pc-glitch-1">
-            <img src="assets/images/pc-glitch-only.svg" alt="Computer screen with glitched screen" />
+            <img
+              height="133.33"
+              width="150"
+              src="assets/images/pc-glitch-only.svg"
+              alt="Computer screen with glitched screen"
+            />
           </div>
           <div class="object object--pc-glitch object--pc-glitch-2">
-            <img src="assets/images/pc-glitch-only.svg" alt="Computer screen with glitched screen" />
+            <img
+              height="133.33"
+              width="150"
+              src="assets/images/pc-glitch-only.svg"
+              alt="Computer screen with glitched screen"
+            />
           </div>
           <div class="object object--pc-thegame">
-            <img src="assets/images/pc-thegame.svg" alt="Computer screen with the 'The Game' open" />
+            <img
+              height="133.33"
+              width="150"
+              src="assets/images/pc-thegame.svg"
+              alt="Computer screen with the 'The Game' open"
+            />
           </div>
           <div class="object object--mug object--mug-left">
             <div class="mug-smoke">
@@ -485,10 +510,20 @@
         <div class="table table-front" aria-hidden="true"></div>
         <div class="objects objects-front" aria-hidden="true">
           <div class="object object--pc-design">
-            <img data-markup-inline src="assets/images/pc-design.svg" alt="Computer screen with a design app" />
+            <img
+              height="133.33"
+              width="150"
+              src="assets/images/pc-design.svg"
+              alt="Computer screen with a design app"
+            />
           </div>
           <div class="object object--pc-double">
-            <img src="assets/images/pc-doublescreen.svg" alt="Computer screen with 2 screens" />
+            <img
+              width="295"
+              height="134"
+              src="assets/images/pc-doublescreen.svg"
+              alt="Computer screen with 2 screens"
+            />
           </div>
           <img
             data-markup-inline
@@ -503,7 +538,13 @@
             alt="Paper with a drawing of a biene"
             class="object object--paper-biene"
           />
-          <img data-markup-inline src="assets/images/penholder.svg" alt="Penholder" class="object object--penholder" />
+          <img
+            height="81.5"
+            width="40"
+            src="assets/images/penholder.svg"
+            alt="Penholder"
+            class="object object--penholder"
+          />
           <img data-markup-inline src="assets/images/drink.svg" alt="Drink" class="object object--drink" />
         </div>
         <!--googleon: all-->
@@ -621,7 +662,11 @@
                 Due to the current situation regarding COVID-19, we will apply sanitary and safety measures in order to
                 ensure the safest possible environment for every hacker at HackUPC. We will adhere to the regulations
                 imposed by the Generalitat de Catalunya and continuously update the information provided on this
-                <a href="https://web.gencat.cat/en/activem/restriccions-territorials/catalunya/" target="_blank"
+                <a
+                  rel="noopener noreferrer"
+                  href="https://web.gencat.cat/en/activem/restriccions-territorials/catalunya/"
+                  hreflang="en"
+                  target="_blank"
                   >web page</a
                 >. Everything so you can be well prepared and have the best experience at HackUPC! <br />
                 We will update the information if the restrictions change at any moment. Also, we will send you an email
