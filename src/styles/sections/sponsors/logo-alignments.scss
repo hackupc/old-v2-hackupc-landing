@@ -63,6 +63,10 @@
     padding: 2.1em 0.4em;
   }
 
+  &--bunge {
+    padding: 1rem;
+  }
+
   &--github {
     padding: 2.5em 0.4em;
   }
@@ -98,8 +102,21 @@
   &--digital_ocean {
     padding: 2.7em 0.6em;
   }
-
+  
   &--twilio {
     padding: 1.1rem;
   }
+  
+  &--moncafe {
+    padding: 0 1em;
+  }
+
+  &--pura-fruta {
+    padding: 0;
+  }
+
+  &--haribo {
+    padding: 0 0.5rem;
+  }
+  
 }
