@@ -1,3 +1,72 @@
-.section--photos {
-  background-color: $c-bg-dark;
+.card--photos {
+  margin-top: 2rem;
+}
+
+.photos__title {
+  text-align: center;
+}
+
+.photo-grid {
+  position: relative;
+  display: grid;
+  gap: 1em;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.photo-grid__overlay {
+  position: absolute;
+  top: -1em; right: -1em; bottom: -1em; left: -1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.photo-grid__overlay-img {
+  width: 25%;
+}
+
+.photo-grid:hover > .photo-grid__overlay {
+  opacity: 1;
+}
+
+.photo-grid__photo {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.photo-grid-wrapper {
+  display: block;
+  max-width: 700px;
+  margin: auto;
+  text-decoration: none;
+}
+
+.photo-grid__more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 3px;
+  color: var(--text-light);
+  font-size: 5vw;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.photo-grid__more-text--small {
+  font-size: 0.85em;
+}
+
+@media only screen and (min-width: 40rem) {
+  .photo-grid__more {
+    font-size: 2rem;
+  }
 }
