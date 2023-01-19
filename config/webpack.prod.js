@@ -89,7 +89,6 @@ module.exports = {
               },
             },
           },
-          'markup-inline-loader',
         ],
       },
     ],
