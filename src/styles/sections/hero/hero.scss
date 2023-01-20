@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use 'sass:math';
+@use 'sass:list';
 @use 'src/styles/variables' as *;
 
 $table-width: 1000px;
@@ -638,7 +638,7 @@ $apply-depth: 40px;
       padding: 1rem;
       gap: 1rem;
       grid-area: right;
-      grid-template: min-content 1fr math.div(1fr, repeat(4, 1fr));
+      grid-template: min-content 1fr list.slash(1fr, repeat(4, 1fr));
       grid-template-areas:
         'ico1 ico2 ico3 ico4'
         'bar1 bar2 bar3 bar4'

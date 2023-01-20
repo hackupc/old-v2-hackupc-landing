@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use 'sass:list';
 @use 'src/styles/variables' as *;
 
 .section--during-the-event {
@@ -250,7 +250,7 @@
 
 @media screen and (max-width: 50rem) {
   .facilities__container {
-    grid-template: math.div(repeat(2, auto), repeat(2, 1fr));
+    grid-template: list.slash(repeat(2, auto), repeat(2, 1fr));
   }
 
   .timeline__card-text {
