@@ -1,3 +1,4 @@
+@use "sass:color";
 .gdpr {
   position: fixed;
   z-index: 100;
@@ -80,7 +81,7 @@
 
     &:hover,
     &:focus {
-      background-color: transparentize($c-gdpr-txt, 0.8);
+      background-color: color.adjust($c-gdpr-txt, $alpha: -0.8);
       outline: none;
     }
   }

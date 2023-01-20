@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .section--during-the-event {
   background-color: $c-during-bg;
 
@@ -22,7 +24,7 @@
   &::before {
     position: absolute;
     z-index: -1;
-    left: calc(#{$timeline-left-distance} + #{$timeline-line-width / 2});
+    left: calc(#{$timeline-left-distance} + #{$timeline-line-width * 0.5});
     width: $timeline-line-width;
     height: 100%;
     background-color: $c-during-border;
@@ -31,10 +33,10 @@
 
   &::after {
     position: absolute;
-    top: -$timeline-ball-width / 2 - $timeline-ball-border;
+    top: -$timeline-ball-width * 0.5 - $timeline-ball-border;
     left: calc(
-      #{$timeline-left-distance} + #{$timeline-line-width} - #{$timeline-ball-width /
-        2 + $timeline-ball-border}
+      #{$timeline-left-distance} + #{$timeline-line-width} - #{$timeline-ball-width *
+        0.5 + $timeline-ball-border}
     );
     width: $timeline-ball-width;
     height: $timeline-ball-width;
@@ -60,7 +62,7 @@
 
   @media screen and (min-width: 40rem) {
     &::before {
-      left: calc(50% - #{$timeline-line-width / 2});
+      left: calc(50% - #{$timeline-line-width * 0.5});
     }
 
     &::after {
@@ -105,7 +107,7 @@
       &::after {
         position: absolute;
         right: calc(
-          100% + #{$timeline-left-center-distance} - #{$timeline-ball-width / 2 +
+          100% + #{$timeline-left-center-distance} - #{$timeline-ball-width * 0.5 +
             $timeline-ball-border}
         );
         width: $timeline-ball-width;
@@ -126,7 +128,7 @@
 
         &::after {
           right: calc(
-            100% + #{$timeline-center-distance} - #{$timeline-ball-width / 2 + $timeline-ball-border}
+            100% + #{$timeline-center-distance} - #{$timeline-ball-width * 0.5 + $timeline-ball-border}
           );
         }
 
@@ -143,7 +145,7 @@
 
           &::after {
             left: calc(
-              100% + #{$timeline-center-distance - $timeline-ball-width / 2 -
+              100% + #{$timeline-center-distance - $timeline-ball-width * 0.5 -
                 $timeline-ball-border}
             );
           }
@@ -172,7 +174,7 @@
       }
 
       .timeline__label {
-        padding: ($timeline-item-height/2 - 0.5rem) 1rem;
+        padding: ($timeline-item-height*0.5 - 0.5rem) 1rem;
         line-height: 1rem;
         white-space: nowrap;
       }
@@ -246,7 +248,7 @@
 
 @media screen and (max-width: 50rem) {
   .facilities__container {
-    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    grid-template: math.div(repeat(2, auto), repeat(2, 1fr));
   }
 
   .timeline__card-text {

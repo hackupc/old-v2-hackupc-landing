@@ -1,24 +1,24 @@
 /* Keep the right order, it's important for overrides */
 // @import "normalize.css";
 
-@import 'shared/fonts';
+@use 'shared/fonts';
 
-@import 'variables';
-@import 'shared/tags';
-@import 'shared/nav';
-@import 'shared/body';
-@import 'shared/cookies';
+@use 'variables';
+@use 'shared/tags';
+@use 'shared/nav';
+@use 'shared/body';
+@use 'shared/cookies';
 
-@import 'sections/about-us';
-@import 'sections/during';
-@import 'sections/live';
-@import 'sections/faq';
-@import 'sections/follow-us';
-@import 'sections/footer';
-@import 'sections/hero';
-@import 'sections/participate';
-@import 'sections/photos';
-@import 'sections/sponsors-and-partners';
-@import 'sections/what-is-a-hackathon';
+@use 'sections/about-us';
+@use 'sections/during';
+@use 'sections/live';
+@use 'sections/faq';
+@use 'sections/follow-us';
+@use 'sections/footer';
+@use 'sections/hero';
+@use 'sections/participate';
+@use 'sections/photos';
+@use 'sections/sponsors-and-partners';
+@use 'sections/what-is-a-hackathon';
 
-@import 'sections/sponsors/logo-alignments';
+@use 'sections/sponsors/logo-alignments';
