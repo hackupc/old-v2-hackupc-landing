@@ -1,4 +1,5 @@
-@use "sass:math";
+@use 'sass:math';
+@use 'src/styles/variables' as *;
 
 .section--what-is-a-hackathon {
   background-color: $c-bg-dark;

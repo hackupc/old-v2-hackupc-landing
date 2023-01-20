@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as *;
+
 /* Footer section */
 .section--footer {
   overflow: hidden;
@@ -63,6 +65,7 @@
       font-size: 4vw;
     }
   }
+
   &--contact {
     display: flex;
     max-width: 17.5rem;

@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as *;
+
 $nav-height: 3rem;
 
 body {
@@ -13,8 +15,8 @@ body {
   overflow: hidden;
   height: $nav-height;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  background-color: rgb(255 255 255 / 60%);
+  box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
 
   &__list {
     display: flex;
@@ -40,6 +42,7 @@ body {
 // TODO: show navbar when it's ready (remember to remove the class in the html)
 .hide-navbar {
   padding-top: 0;
+
   .nav {
     display: none;
   }

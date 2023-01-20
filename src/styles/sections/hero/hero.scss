@@ -1,5 +1,6 @@
-@use "sass:color";
-@use "sass:math";
+@use 'sass:color';
+@use 'sass:math';
+@use 'src/styles/variables' as *;
 
 $table-width: 1000px;
 $table-height: $table-width * 0.2;
@@ -273,7 +274,7 @@ $apply-depth: 40px;
       font-weight: bold;
       letter-spacing: 0.1em;
       line-height: 1;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
       text-decoration: none;
       text-transform: uppercase;
       transform: translate3d(
@@ -335,7 +336,7 @@ $apply-depth: 40px;
       left: calc(50% - #{$table-width * 0.5});
       width: $table-width;
       background-color: transparent;
-      text-rendering: optimizeLegibility;
+      text-rendering: optimizelegibility;
       transform: translate3d(0, calc(-0.1 * var(--hero-height)), -80px);
       transform-origin: bottom center;
 
@@ -517,8 +518,8 @@ $apply-depth: 40px;
       left: 50%;
       width: 100%;
       height: 0.15 * $table-height;
-      background-color: #000;
       border-radius: 100%;
+      background-color: #000;
       content: '';
       opacity: 0.25;
       transform: translate(-50%, calc(50% - 1px)) rotateX(90deg);
@@ -595,10 +596,10 @@ $apply-depth: 40px;
       left: 25.5%;
       box-sizing: border-box;
       padding: 0.5em 0.75em;
-      border: solid currentColor $map-pointer-border-width;
-      background-color: color.adjust($color: $c-bg-dark, $alpha: -0.15);
+      border: solid currentcolor $map-pointer-border-width;
       border-radius: 0.25em;
-      color: currentColor;
+      background-color: color.adjust($color: $c-bg-dark, $alpha: -0.15);
+      color: currentcolor;
       font-size: calc(0.03 * var(--screen-height));
       line-height: 1;
       text-decoration: none;
@@ -610,7 +611,7 @@ $apply-depth: 40px;
         right: calc(100% - 2px);
         width: calc(0.1 * var(--screen-height));
         height: $map-pointer-border-width;
-        background-color: currentColor;
+        background-color: currentcolor;
         content: '';
         transform: rotate(-45deg);
         transform-origin: bottom right;
@@ -623,7 +624,7 @@ $apply-depth: 40px;
         width: calc(0.02 * var(--screen-height));
         height: calc(0.02 * var(--screen-height));
         box-sizing: border-box;
-        border: solid currentColor $map-pointer-border-width;
+        border: solid currentcolor $map-pointer-border-width;
         content: '';
       }
     }
@@ -650,23 +651,23 @@ $apply-depth: 40px;
         height: var(--plot-icon-width);
         box-sizing: border-box;
         padding: 10%;
-        background-color: $c-bg-lighter;
         border-radius: 100%;
+        background-color: $c-bg-lighter;
       }
 
       .plot__bar {
         width: calc(0.8 * var(--plot-icon-width));
         height: 100%;
-        background-color: $c-bg-lighter;
         border-radius: 0.5rem;
+        background-color: $c-bg-lighter;
         opacity: 0.6667;
 
         .plot__bar-content {
           width: 150%;
           height: 100%;
-          margin: 0 -25%;
-          background-color: currentColor;
           border-radius: inherit;
+          margin: 0 -25%;
+          background-color: currentcolor;
           opacity: 0.75;
           transform: scaleY(0.5);
           transform-origin: bottom center;
@@ -695,7 +696,7 @@ $apply-depth: 40px;
         position: relative;
         width: 100%;
         height: 100%;
-        border: solid 2px currentColor;
+        border: solid 2px currentcolor;
         border-top: transparent;
         border-right: transparent;
         color: $c-bg-lighter;
@@ -708,7 +709,7 @@ $apply-depth: 40px;
           width: calc(0.15 * var(--plot-icon-width));
           height: calc(0.15 * var(--plot-icon-width));
           box-sizing: border-box;
-          border: solid 2px currentColor;
+          border: solid 2px currentcolor;
           border-bottom: 0;
           border-left: 0;
           content: '';
@@ -723,7 +724,7 @@ $apply-depth: 40px;
 
           .plot__plot-line {
             fill: none;
-            stroke: currentColor;
+            stroke: currentcolor;
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-width: 3px;
@@ -1008,9 +1009,9 @@ $apply-depth: 40px;
           display: block;
           width: var(--countdown-width);
           height: var(--countdown-width);
+          border-radius: 100%;
           margin: auto;
           background-color: $c-bg-dark;
-          border-radius: 100%;
         }
 
         .countdown__number {
@@ -1068,8 +1069,8 @@ $apply-depth: 40px;
         position: relative;
         display: flex;
         padding: calc(var(--screen-height) / 90) calc(var(--screen-height) / 45);
-        background-color: #483a7b;
         border-radius: calc(var(--screen-height) / 25);
+        background-color: #483a7b;
 
         .wanted__duck-silhouette {
           width: auto;
@@ -1154,8 +1155,8 @@ $apply-depth: 40px;
 
       &::before {
         position: absolute;
-        background-color: $c-bg-lighter;
         border-radius: var(--timeline-unit);
+        background-color: $c-bg-lighter;
         content: '';
         inset: calc(50% - (var(--timeline-line-width) / 2)) var(--timeline-unit);
         opacity: 0.75;
@@ -1175,9 +1176,9 @@ $apply-depth: 40px;
           display: inline-block;
           padding: calc(0.25 * var(--timeline-unit))
             calc(2 * var(--timeline-unit));
+          border-radius: calc(8 * var(--timeline-unit));
           margin: calc(1.75 * var(--timeline-unit)) 0;
           background-color: $c-bg-lighter;
-          border-radius: calc(8 * var(--timeline-unit));
           color: $c-bg-light;
           font-size: calc(1.5 * var(--timeline-unit));
           font-weight: 800;
@@ -1200,8 +1201,8 @@ $apply-depth: 40px;
             height: var(--timeline-ball-size);
             flex-shrink: 0;
             border: calc(0.5 * var(--timeline-unit)) solid $c-bg-light;
-            background-color: $c-bg-lighter;
             border-radius: 100%;
+            background-color: $c-bg-lighter;
             content: '';
             transform: translateX(-50%);
             transition: inherit;
@@ -1543,6 +1544,7 @@ $apply-depth: 40px;
     font-weight: 800;
     text-transform: uppercase;
   }
+
   &__subtitle {
     margin: 0 0 2rem;
     font-size: clamp(1rem, 3vw, 1.125rem);
@@ -1561,6 +1563,7 @@ $apply-depth: 40px;
       padding-bottom: 4px;
       padding-left: 8px;
     }
+
     &-input {
       display: block;
       width: 100%;
@@ -1571,7 +1574,7 @@ $apply-depth: 40px;
       color: #000;
 
       &::placeholder {
-        color: rgba(0, 0, 0, 0.6);
+        color: rgb(0 0 0 / 60%);
       }
     }
   }
@@ -1592,6 +1595,7 @@ $apply-depth: 40px;
       flex-grow: 1;
       font-size: 0.85rem;
     }
+
     &-input {
       color: #fff;
     }

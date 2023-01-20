@@ -1,4 +1,5 @@
-@use "sass:math";
+@use 'sass:math';
+@use 'src/styles/variables' as *;
 
 .section--during-the-event {
   background-color: $c-during-bg;
@@ -41,8 +42,8 @@
     width: $timeline-ball-width;
     height: $timeline-ball-width;
     border: solid $c-during-bg $timeline-ball-border;
-    background-color: $c-during-border;
     border-radius: 100%;
+    background-color: $c-during-border;
     content: '';
   }
 
@@ -113,8 +114,8 @@
         width: $timeline-ball-width;
         height: $timeline-ball-width;
         border: solid $c-during-bg $timeline-ball-border;
-        background-color: $c-during-border;
         border-radius: 100%;
+        background-color: $c-during-border;
         content: '';
       }
 
@@ -128,7 +129,8 @@
 
         &::after {
           right: calc(
-            100% + #{$timeline-center-distance} - #{$timeline-ball-width * 0.5 + $timeline-ball-border}
+            100% + #{$timeline-center-distance} - #{$timeline-ball-width * 0.5 +
+              $timeline-ball-border}
           );
         }
 
@@ -174,7 +176,7 @@
       }
 
       .timeline__label {
-        padding: ($timeline-item-height*0.5 - 0.5rem) 1rem;
+        padding: ($timeline-item-height * 0.5 - 0.5rem) 1rem;
         line-height: 1rem;
         white-space: nowrap;
       }
@@ -229,8 +231,8 @@
 
   .facilities__item {
     padding: 1rem 1.25rem;
-    background-color: $c-during-bg-card;
     border-radius: $border-radius-medium;
+    background-color: $c-during-bg-card;
     text-align: left;
 
     .facilities__title {

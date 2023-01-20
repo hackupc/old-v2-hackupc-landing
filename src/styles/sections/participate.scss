@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as *;
+
 .section--participate {
   background-color: $c-bg-dark;
 }
@@ -22,8 +24,8 @@
 
   &__item {
     padding: 2.5rem;
-    background-color: $c-bg-light;
     border-radius: $border-radius-big;
+    background-color: $c-bg-light;
     text-align: left;
   }
 

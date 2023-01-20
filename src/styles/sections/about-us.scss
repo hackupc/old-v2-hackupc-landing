@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as *;
+
 .section--about-us {
   background-color: $c-about-us-bg;
 }
