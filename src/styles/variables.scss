@@ -12,7 +12,7 @@ $c-primary-accessible: #ff8f90;
 $c-txt-dark: #000;
 $c-txt-light: #fff;
 
-$c-hero-shadow: hsla(287, 100%, 50%, 0.66);
+$c-hero-shadow: hsl(287deg 100% 50% / 66%);
 
 $c-faq-bg: $c-palette-black-light;
 $c-faq-block: $c-bg-light;
@@ -26,7 +26,7 @@ $c-during-bg-card: #45318f;
 $c-live-bg: $c-palette-black-light;
 
 $c-sponsors-bg: #f1f5ff;
-$c-sponsors-shadow: hsla(220, 100%, 50%, 0.1);
+$c-sponsors-shadow: hsl(220deg 100% 50% / 10%);
 
 $c-about-us-bg: $c-palette-black-light;
 $c-about-us-bg-card: $c-bg-light;

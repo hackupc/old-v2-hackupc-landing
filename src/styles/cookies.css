@@ -1,5 +1,5 @@
 :root {
-  --cookie-bg: rgba(49, 49, 49, 0.9);
+  --cookie-bg: rgb(49 49 49 / 90%);
   --button-color: #b4c959;
   --button-color-dark: #5f723f;
   --url-color: #69a9e9;
