@@ -9,9 +9,9 @@
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --open --progress",
     "dist": "webpack --config config/webpack.prod.js",
-    "lint:eslint": "eslint . --ext .js,.ts --fix",
-    "lint:stylelint": "stylelint 'src/**/*.{scss,sass,css}' --fix",
-    "lint:prettier": "prettier . --write"
+    "lint:eslint": "npx eslint . --ext .js,.ts --fix",
+    "lint:stylelint": "npx stylelint 'src/**/*.{scss,sass,css}' --fix",
+    "lint:prettier": "npx prettier . --write"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
