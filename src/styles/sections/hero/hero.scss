@@ -362,7 +362,7 @@ $apply-depth: 40px;
         -2 * $table-height
       );
     }
-    //                         <width>                               <x-pos>                         <z-pos>
+    // <width> <x-pos> <z-pos>
     .object--pc-cowsay {
       width: 15%;
       pointer-events: none;
