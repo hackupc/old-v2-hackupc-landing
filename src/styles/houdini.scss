@@ -1,0 +1,40 @@
+@property --voronoi-number-of-cells {
+  inherits: false;
+  initial-value: 25;
+  syntax: '<integer> | auto';
+}
+@property --voronoi-margin {
+  inherits: false;
+  initial-value: 0%;
+  syntax: '<percentage>';
+}
+@property --voronoi-line-color {
+  inherits: false;
+  initial-value: #000;
+  syntax: '<color>';
+}
+@property --voronoi-line-width {
+  inherits: false;
+  initial-value: 1;
+  syntax: '<integer>';
+}
+@property --voronoi-dot-color {
+  inherits: false;
+  initial-value: transparent;
+  syntax: '<color>';
+}
+@property --voronoi-dot-size {
+  inherits: false;
+  initial-value: 2;
+  syntax: '<integer>';
+}
+@property --voronoi-cell-colors {
+  inherits: false;
+  initial-value: #6cf, #9fc, #0fc, #3cf, #9f9, #6f9, #0ff;
+  syntax: '<color>#';
+}
+@property --voronoi-seed {
+  inherits: true;
+  initial-value: 123456;
+  syntax: '<number>';
+}

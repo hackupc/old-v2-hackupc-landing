@@ -2,7 +2,7 @@
 @use 'src/styles/variables' as *;
 
 .section--what-is-a-hackathon {
-  background-color: $c-bg-dark;
+  @include trencadis-green(600);
 }
 
 .content__wrapper--what-is-a-hackathon {
@@ -17,6 +17,12 @@ $card-padding-base: 2 * 16px;
 
 $breakpoint-small-screen: 500px;
 $breakpoint-mid-small-screen: 600px;
+
+.card {
+  @include trencadis-white(300, true);
+
+  color: $c-txt-dark;
+}
 
 .card--big {
   padding: clamp(
@@ -62,9 +68,7 @@ $breakpoint-mid-small-screen: 600px;
     ),
     #{$card-padding-base + $card-padding-variation-v}
   );
-  border: solid 0.3333rem $c-bg-light;
   margin-top: 2rem;
-  background-color: $c-bg-dark;
   gap: clamp(
     #{$card-padding-base},
     calc(
@@ -79,14 +83,14 @@ $breakpoint-mid-small-screen: 600px;
   place-content: center;
   place-items: center;
 
-  @media only screen and (max-width: $breakpoint-mid-small-screen) {
-    grid-template: auto auto / auto;
-  }
-
   > img,
   > svg {
     width: 10rem;
     height: 10rem;
+  }
+
+  @media only screen and (max-width: $breakpoint-mid-small-screen) {
+    grid-template: auto auto / auto;
   }
 }
 
@@ -104,45 +108,5 @@ $breakpoint-mid-small-screen: 600px;
     line-height: 1;
     text-transform: uppercase;
     vertical-align: text-bottom;
-  }
-}
-
-.card--covid {
-  display: grid;
-  padding-left: clamp(
-    #{$card-padding-base},
-    calc(
-      100vw * #{math.div(
-          $card-padding-variation-v,
-          $breakpoint-mid-small-screen
-        )} + #{$card-padding-base - $card-padding-variation-v}
-    ),
-    #{$card-padding-base + $card-padding-variation-v}
-  );
-  border: solid 0.3333rem $c-bg-light;
-  margin-top: 2rem;
-  background-color: $c-bg-light;
-  gap: clamp(
-    #{$card-padding-base},
-    calc(
-      100vw * #{math.div(
-          $card-padding-variation-v,
-          $breakpoint-mid-small-screen
-        )} + #{$card-padding-base - $card-padding-variation-v}
-    ),
-    #{$card-padding-base + $card-padding-variation-v}
-  );
-  grid-template: auto / auto auto;
-  place-content: center;
-  place-items: center;
-
-  @media only screen and (max-width: $breakpoint-mid-small-screen) {
-    grid-template: auto auto / auto;
-  }
-
-  > img,
-  > svg {
-    width: 12rem;
-    height: 12rem;
   }
 }

@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $c-palette-blue: #3f5182;
 $c-palette-black: #1f143a;
 $c-palette-black-light: #291b54;
@@ -42,3 +44,65 @@ $ease-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
 $border-radius-big: 1rem;
 $border-radius-medium: 0.75rem;
 $border-radius-small: 0.5rem;
+
+$trencadis-line-width: 8px;
+
+@mixin trencadis(
+  $number-of-cells: 300,
+  $with-border: false,
+  $cell-colors: [ #e4e4e4,
+  #eee,
+  #dcdcdc,
+  #e8e8e8,
+  #d8d8d8,
+  #f8f8f8,
+  #f1f1f1,
+  #f2f2f2,
+  #f3f3f3,
+  #f4f4f4,
+  #fafafa],
+  $background-color: list.nth($cell-colors, 1)
+) {
+  --voronoi-line-color: #fff;
+  --voronoi-line-width: #{$trencadis-line-width};
+  --voronoi-dot-size: 0;
+  --voronoi-cell-colors: #{$cell-colors};
+  --voronoi-number-of-cells: #{$number-of-cells};
+
+  background-color: $background-color;
+  background-image: paint(voronoi);
+  @if ($with-border) {
+    border: solid $trencadis-line-width #fff;
+  }
+
+  @content;
+}
+
+@mixin trencadis-white($number-of-cells: 300, $with-border: false) {
+  @include trencadis($number-of-cells, $with-border);
+}
+
+@mixin trencadis-green($number-of-cells: 300, $with-border: false) {
+  @include trencadis(
+    $number-of-cells,
+    $with-border,
+    [#59c74a,
+    #4bb33e,
+    #80d076,
+    #4b8f43,
+    #4ac776]
+  );
+}
+
+@mixin trencadis-black($number-of-cells: 300, $with-border: false) {
+  @include trencadis(
+    $number-of-cells,
+    $with-border,
+    [#333,
+    #222,
+    #111,
+    #444,
+    #282828,
+    #383838]
+  );
+}
