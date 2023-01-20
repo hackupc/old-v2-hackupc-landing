@@ -13,4 +13,5 @@
     "source.fixAll.stylelint": true
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.exclude": {}
 }
