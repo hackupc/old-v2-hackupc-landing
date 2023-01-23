@@ -6931,7 +6931,7 @@ fsevents@~2.3.1:
     glob: ^7.1.7
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    husky: ^7.0.1
+    husky: ^8.0.3
     lax.js: ^2.0.3
     lint-staged: ^11.0.1
     markup-inline-loader: ^4.0.0
@@ -7325,12 +7325,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "husky@npm:7.0.1"
+"husky@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
   bin:
     husky: lib/bin.js
-  checksum: 1f6d87cab4339551615080664347b60168d81f3c3b84b9dc1f888068d3fe946d8b5513db5ea53bc086f235e6cc617b0aba903552e959596a49f2153ffac33cb4
+  checksum: 66fcd9e1807e769f8e20f85d30e796650bcb74545554eab91802dec3f1c56d38142f65b7b11bf97bdd77eb551d39b4f09e692915176c3e5affa84de93936defd
   languageName: node
   linkType: hard
 
