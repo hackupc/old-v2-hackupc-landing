@@ -1,18 +1,83 @@
 @use 'src/styles/variables' as *;
 
+$hero-max-height: 900px;
+
 .section--hero {
   position: relative;
   z-index: 1;
   display: flex;
   overflow: hidden;
   max-width: unset;
-  height: 900px;
+  height: $hero-max-height;
   max-height: calc(100vh - 8rem);
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-  background: url('/src/assets/images/trencadis/gray.svg') #fff center repeat;
   place-items: center;
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+      640px repeat;
+    inset: 0;
+
+    &__center {
+      $width: 6em;
+
+      position: absolute;
+      width: $width;
+      font-size: clamp(4rem, 15vw, 6rem);
+      inset: calc(50% - 12.5rem) calc(50% - $width * 0.5) unset
+        calc(50% - $width * 0.5);
+    }
+
+    &__edge {
+      position: absolute;
+      top: calc(50% - $hero-max-height / 2);
+      height: $hero-max-height;
+
+      &--right {
+        right: calc(-7rem + 15vw);
+      }
+
+      &--left {
+        left: calc(-7rem + 15vw);
+      }
+
+      &-bg {
+        position: absolute;
+        top: calc(50% - $hero-max-height / 2);
+        width: 20rem;
+        height: $hero-max-height;
+        background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+          640px repeat;
+        clip-path: polygon(
+          100% 0%,
+          5px 0%,
+          80px 20%,
+          125px 50%,
+          80px 80%,
+          5px 100%,
+          100% 100%
+        );
+
+        &--left {
+          right: calc(-7rem + 15vw - 11rem);
+          background-image: url('/src/assets/images/trencadis/green.svg');
+        }
+
+        &--right {
+          left: calc(-7rem + 15vw - 11rem);
+          background-image: url('/src/assets/images/trencadis/blue.svg');
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
 
   .title {
     position: relative;
@@ -21,16 +86,6 @@
     font-size: clamp(4rem, 15vw, 6rem);
     line-height: 0.71;
     text-transform: uppercase;
-
-    &__bg {
-      position: absolute;
-      z-index: -1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      inset: 0;
-      transform: scaleX(1.2);
-    }
 
     &__title {
       margin: 0 0 0.2em -0.08em;
