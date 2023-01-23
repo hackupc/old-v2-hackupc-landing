@@ -31,9 +31,9 @@ $hero-max-height: 900px;
       position: absolute;
       width: $width;
       font-size: clamp(4rem, 15vw, 6rem);
-      inset: calc(50% - 8rem) calc(50% - $width * 0.5) unset
+      inset: calc(50% - 7.5rem) calc(50% - $width * 0.5) unset
         calc(50% - $width * 0.5);
-      transform: scale(1.1, 0.9);
+      transform: scale(1, 0.8);
     }
 
     &__edge {
@@ -42,17 +42,17 @@ $hero-max-height: 900px;
       height: $hero-max-height;
 
       &--right {
-        right: calc(-75px + 15vw);
+        right: calc(-90px + 15vw);
       }
 
       &--left {
-        left: calc(-75px + 15vw);
+        left: calc(-90px + 15vw);
       }
 
       &-bg {
         position: absolute;
         top: calc(50% - $hero-max-height / 2);
-        width: calc(-75px + 15vw + 200px);
+        width: calc(-90px + 15vw + 200px);
         height: $hero-max-height;
         background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
           640px repeat;
