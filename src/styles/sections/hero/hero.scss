@@ -31,7 +31,7 @@ $hero-max-height: 900px;
       position: absolute;
       width: $width;
       font-size: clamp(4rem, 15vw, 6rem);
-      inset: calc(50% - 7.5rem) calc(50% - $width * 0.5) unset
+      inset: calc(50% - 8.5rem) calc(50% - $width * 0.5) unset
         calc(50% - $width * 0.5);
       transform: scale(1, 0.8);
     }
