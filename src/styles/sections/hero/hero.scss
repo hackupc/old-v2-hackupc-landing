@@ -117,23 +117,26 @@ $hero-max-height: 900px;
     }
 
     &__more-info {
-      display: grid;
+      display: flex;
       font-size: 0.25em;
       font-weight: 600;
-      grid-template: auto / 1fr 1fr 1fr;
+
+      > * {
+        flex: 1 1 0;
+        white-space: nowrap;
+      }
     }
 
-    &__online {
-      color: $c-primary;
-      justify-self: start;
+    &__hackers {
+      text-align: left;
     }
 
     &__date {
-      justify-self: center;
+      text-align: center;
     }
 
     &__duration {
-      justify-self: end;
+      text-align: right;
     }
   }
 
