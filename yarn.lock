@@ -5982,18 +5982,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "eslint-plugin-prettier@npm:3.4.0"
+"eslint-plugin-prettier@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "eslint-plugin-prettier@npm:4.2.1"
   dependencies:
     prettier-linter-helpers: ^1.0.0
   peerDependencies:
-    eslint: ">=5.0.0"
-    prettier: ">=1.13.0"
+    eslint: ">=7.28.0"
+    prettier: ">=2.0.0"
   peerDependenciesMeta:
     eslint-config-prettier:
       optional: true
-  checksum: 322be1af8c7a6b7f1c718d912090722b65da072fda05bbc0a9d94523e6c3dfda49a7f62fd411126f1909c12bbc63e827ee6459163b2ce3458adb292541decf66
+  checksum: ff1b4155f247f09e1560ec13981ea6f512e858af13b9378f9d80fb1fe9fa89d0ffbc031c1f8390492e4579e79c278a34f361f2a7d4ffd80e677b4b80afb96056
   languageName: node
   linkType: hard
 
@@ -6926,7 +6926,7 @@ fsevents@~2.3.1:
     css-minimizer-webpack-plugin: ^3.0.2
     eslint: ^7.31.0
     eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-prettier: ^4.2.1
     focus-visible: ^5.2.0
     glob: ^7.1.7
     html-loader: ^2.1.2
