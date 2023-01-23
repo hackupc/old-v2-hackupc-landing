@@ -302,7 +302,17 @@
       </div>
       <div class="title">
         <img class="title__biene" src="/src/assets/images/biene_trencadis.svg" alt="" />
-        <h1 class="title__title">Hack<strong>UPC</strong></h1>
+        <h1 class="title__title" id="title">
+          <span>Hack<strong>UPC</strong></span>
+          <img
+            class="title__title-img"
+            loading="lazy"
+            src="/src/assets/images/hackupc-name-trencadis.svg"
+            onerror="document.getElementById('title').style.color = '#000'; this.style.display = 'none'"
+            alt=""
+            aria-hidden="true"
+          />
+        </h1>
         <span class="title__more-info">
           <span class="title__online">Online</span>
           <span class="title__date"><time datetime="2020-05-21/2020-05-23">May 14&ndash;16</time></span>

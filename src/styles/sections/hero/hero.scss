@@ -98,12 +98,23 @@ $hero-max-height: 900px;
       display: block;
       width: $width;
       margin: calc(-1 * (10vh - 1rem)) auto calc(10vh - 1rem);
+      user-select: none;
     }
 
     &__title {
+      position: relative;
       margin: 0 0 0.2em -0.08em;
+      color: #fff;
       font-size: 1em;
       font-weight: 400;
+
+      &-img {
+        position: absolute;
+        width: 5.11em;
+        inset: 0 0.1em;
+        pointer-events: none;
+        user-select: none;
+      }
     }
 
     &__more-info {
