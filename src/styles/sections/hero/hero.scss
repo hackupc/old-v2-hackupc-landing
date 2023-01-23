@@ -31,8 +31,9 @@ $hero-max-height: 900px;
       position: absolute;
       width: $width;
       font-size: clamp(4rem, 15vw, 6rem);
-      inset: calc(50% - 12.5rem) calc(50% - $width * 0.5) unset
+      inset: calc(50% - 8rem) calc(50% - $width * 0.5) unset
         calc(50% - $width * 0.5);
+      transform: scale(1.1, 0.9);
     }
 
     &__edge {
@@ -51,29 +52,31 @@ $hero-max-height: 900px;
       &-bg {
         position: absolute;
         top: calc(50% - $hero-max-height / 2);
-        width: 20rem;
+        width: calc(-75px + 15vw + 200px);
         height: $hero-max-height;
         background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
           640px repeat;
         clip-path: polygon(
           100% 0%,
-          5px 0%,
-          80px 20%,
-          120px 35%,
-          135px 50%,
-          120px 65%,
-          80px 80%,
-          5px 100%,
+          20px 0%,
+          85px 10%,
+          135px 20%,
+          175px 35%,
+          190px 50%,
+          175px 65%,
+          135px 80%,
+          85px 90%,
+          20px 100%,
           100% 100%
         );
 
         &--left {
-          right: calc(-75px + 15vw - 11rem);
+          right: 0;
           background-image: url('/src/assets/images/trencadis/green.svg');
         }
 
         &--right {
-          left: calc(-75px + 15vw - 11rem);
+          left: 0;
           background-image: url('/src/assets/images/trencadis/blue.svg');
           transform: scaleX(-1);
         }
@@ -88,6 +91,14 @@ $hero-max-height: 900px;
     font-size: clamp(4rem, 15vw, 6rem);
     line-height: 0.71;
     text-transform: uppercase;
+
+    &__biene {
+      $width: 130px;
+
+      display: block;
+      width: $width;
+      margin: calc(-1 * (10vh - 1rem)) auto calc(10vh - 1rem);
+    }
 
     &__title {
       margin: 0 0 0.2em -0.08em;
@@ -117,6 +128,6 @@ $hero-max-height: 900px;
   }
 
   .apply-button {
-    margin-top: 5rem;
+    margin-top: calc(15vh - 1rem);
   }
 }
