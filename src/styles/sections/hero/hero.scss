@@ -18,12 +18,43 @@ $hero-max-height: 900px;
   .bg {
     position: absolute;
     z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
-      640px repeat;
     inset: 0;
+
+    &__layer-bottom {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+        640px repeat;
+      clip-path: polygon(
+        calc(((100% - 2350px) / 2) + 0px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 150px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 250px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 350px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 450px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 550px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 700px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 800px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 900px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 1000px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1100px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1250px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1350px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1450px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 1550px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1650px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1800px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1900px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 2000px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 2100px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 2200px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 2350px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 2350px) 0,
+        0 0
+      );
+      inset: 0;
+    }
 
     &__edge {
       position: absolute;
@@ -70,6 +101,17 @@ $hero-max-height: 900px;
           transform: scaleX(-1);
         }
       }
+    }
+
+    &__bottom {
+      $width: 2350px;
+      $heigth: 100px;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: calc((100% - $width) / 2);
+      width: $width;
     }
   }
 
