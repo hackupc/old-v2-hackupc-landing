@@ -25,17 +25,6 @@ $hero-max-height: 900px;
       640px repeat;
     inset: 0;
 
-    &__center {
-      $width: 6em;
-
-      position: absolute;
-      width: $width;
-      font-size: clamp(4rem, 15vw, 6rem);
-      inset: calc(50% - 8.5rem) calc(50% - $width * 0.5) unset
-        calc(50% - $width * 0.5);
-      transform: scale(1, 0.8);
-    }
-
     &__edge {
       position: absolute;
       top: calc(50% - $hero-max-height / 2);
@@ -84,6 +73,15 @@ $hero-max-height: 900px;
     }
   }
 
+  .biene {
+    $width: 130px;
+
+    display: block;
+    width: $width;
+    margin: calc(-1 * (10vh - 1rem)) auto calc(10vh - 1rem);
+    user-select: none;
+  }
+
   .title {
     position: relative;
     display: inline-block;
@@ -91,15 +89,6 @@ $hero-max-height: 900px;
     font-size: clamp(4rem, 15vw, 6rem);
     line-height: 0.71;
     text-transform: uppercase;
-
-    &__biene {
-      $width: 130px;
-
-      display: block;
-      width: $width;
-      margin: calc(-1 * (10vh - 1rem)) auto calc(10vh - 1rem);
-      user-select: none;
-    }
 
     &__title {
       position: relative;
@@ -113,6 +102,21 @@ $hero-max-height: 900px;
         inset: 0 0.1em;
         pointer-events: none;
         user-select: none;
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      z-index: -1;
+      display: flex;
+      overflow: visible;
+      align-items: center;
+      justify-content: center;
+      inset: -1em;
+
+      > svg {
+        width: 6em;
+        transform: scale(1, 0.8) translate(0, 0.1em);
       }
     }
 
