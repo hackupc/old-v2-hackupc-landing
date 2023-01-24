@@ -2,11 +2,14 @@
 @use 'src/styles/variables' as *;
 
 .section--what-is-a-hackathon {
-  background-color: $c-bg-dark;
+  overflow: visible;
+  background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+    640px repeat;
 }
 
 .content__wrapper--what-is-a-hackathon {
-  padding-top: 2rem;
+  padding-top: calc(2rem + 100px);
+  margin-top: -100px;
 }
 
 $card-font-variation: 2px;
