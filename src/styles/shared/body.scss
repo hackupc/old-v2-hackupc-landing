@@ -29,8 +29,12 @@ body {
 
 .card {
   padding: 1rem;
-  border-radius: $border-radius-big;
-  background-color: $c-bg-light;
+  border: solid 20px #eae2d6;
+  border-radius: 20px;
+  background: url('/src/assets/images/trencadis/white.svg') #fbf8f4 center /
+    640px repeat;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
+  color: $c-txt-dark;
   text-align: left;
 
   :first-child {
