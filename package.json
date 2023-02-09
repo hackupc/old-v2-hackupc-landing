@@ -10,7 +10,7 @@
     "start": "webpack serve --config config/webpack.dev.js --open --progress",
     "dist": "webpack --config config/webpack.prod.js",
     "lint:eslint": "eslint . --ext .js,.ts --fix",
-    "lint:stylelint": "stylelint 'src/**/*.{scss,sass,css}' --fix",
+    "lint:stylelint": "stylelint --fix 'src/**/*.{scss,sass,css}'",
     "lint:prettier": "prettier . --write"
   },
   "devDependencies": {
