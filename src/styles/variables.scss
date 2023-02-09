@@ -1,11 +1,11 @@
-$c-palette-blue: #3f5182;
-$c-palette-black: #1f143a;
-$c-palette-black-light: #291b54;
+$c-palette-blue: #494136;
+$c-palette-black: #241e16;
+$c-palette-black-light: #494136;
 
-$c-bg-darker: #181917;
-$c-bg-dark: $c-palette-black;
-$c-bg-light: #34256b;
-$c-bg-lighter: #9287c6;
+$c-bg-darker: #241e16;
+$c-bg-dark: #494136;
+$c-bg-light: #eae2d6;
+$c-bg-lighter: #fff;
 
 $c-primary: #ec6162;
 $c-primary-accessible: #c25051;
@@ -25,7 +25,7 @@ $c-during-bg-card: #45318f;
 
 $c-live-bg: $c-palette-black-light;
 
-$c-sponsors-bg: #f1f5ff;
+// $c-sponsors-bg: #f1f5ff;
 $c-sponsors-shadow: hsl(220deg 100% 50% / 10%);
 
 $c-about-us-bg: $c-palette-black-light;

@@ -4,8 +4,17 @@
 
 .section--sponsors,
 .section--partners {
-  background-color: $c-sponsors-bg;
+  background: url('/src/assets/images/trencadis/white.svg') #f2ede6 center /
+    640px repeat;
   color: $c-bg-dark;
+}
+
+.section--sponsors {
+  background-position: center bottom;
+}
+
+.section--partners {
+  background-position: center top;
 }
 
 .section--partners > .content__wrapper {
@@ -46,9 +55,11 @@
   &__item {
     position: relative;
     display: block;
+    border: solid 4px #eae2d6;
     border-radius: 1em;
     background-color: #fff;
-    box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
+
+    // box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
     color: $c-bg-dark;
     transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
     user-select: none;
