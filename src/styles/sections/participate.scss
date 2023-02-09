@@ -27,6 +27,22 @@
     border-radius: $border-radius-big;
     background-color: $c-bg-light;
     text-align: left;
+
+    &--mentor {
+      order: 1;
+    }
+
+    &--volunteer {
+      order: 2;
+    }
+
+    &--partner {
+      order: 3;
+    }
+
+    &--sponsor {
+      order: 4;
+    }
   }
 
   &__title {
@@ -67,6 +83,22 @@
 
     &__item {
       padding: 2rem;
+
+      &--volunteer {
+        order: 1;
+      }
+
+      &--mentor {
+        order: 2;
+      }
+
+      &--sponsor {
+        order: 3;
+      }
+
+      &--partner {
+        order: 4;
+      }
     }
   }
 }
