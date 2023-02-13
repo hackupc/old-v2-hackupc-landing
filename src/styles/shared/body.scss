@@ -20,8 +20,10 @@ body {
 
 .section {
   overflow: hidden;
+  border-bottom: solid 20px #eae2d6;
   background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
     640px repeat;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
 }
 
 .section__title {

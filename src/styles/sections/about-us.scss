@@ -1,6 +1,7 @@
 @use 'src/styles/variables' as *;
 
 .section--about-us {
+  border-bottom: 0;
   background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
     640px repeat;
 }
