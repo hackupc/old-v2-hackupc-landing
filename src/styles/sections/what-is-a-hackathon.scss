@@ -3,8 +3,8 @@
 
 .section--what-is-a-hackathon {
   overflow: visible;
-  background: url('/src/assets/images/trencadis/orange-light.svg') #f2ede6
-    center / 640px repeat;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
 }
 
 .content__wrapper--what-is-a-hackathon {
@@ -66,9 +66,8 @@ $breakpoint-mid-small-screen: 600px;
     ),
     #{$card-padding-base + $card-padding-variation-v}
   );
-  border: none;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  // margin-top: 6rem;
+  // margin-bottom: 6rem;
   gap: clamp(
     #{$card-padding-base},
     calc(
@@ -93,15 +92,15 @@ $breakpoint-mid-small-screen: 600px;
     height: 10rem;
   }
 
-  &::before {
-    position: absolute;
-    border-width: 100px;
-    border-style: solid;
-    border-image: url('/src/assets/images/borders/crown.svg') 100 repeat;
-    border-image-outset: 80px;
-    content: '';
-    inset: 0;
-  }
+  // &::before {
+  //   position: absolute;
+  //   border-width: 100px;
+  //   border-style: solid;
+  //   border-image: url('/src/assets/images/borders/crown.svg') 100 repeat;
+  //   border-image-outset: 80px;
+  //   content: '';
+  //   inset: 0;
+  // }
 }
 
 .card__title {
