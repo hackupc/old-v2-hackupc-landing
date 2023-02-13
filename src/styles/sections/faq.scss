@@ -8,6 +8,15 @@
     font-size: 1em;
     text-transform: lowercase;
   }
+
+  .section__title {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: solid 7px #fff;
+    border-radius: $border-radius-big;
+    background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
+      640px repeat;
+  }
 }
 
 .faq {
