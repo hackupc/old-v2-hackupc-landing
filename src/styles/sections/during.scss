@@ -2,6 +2,7 @@
 @use 'src/styles/variables' as *;
 
 .section--during-the-event {
+  border-bottom: 0;
   background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
     640px repeat;
 
@@ -55,6 +56,7 @@
   }
 
   .timeline__text {
+    display: inline-block;
     padding: 0.5rem 0;
     margin: 2rem 0;
     background-color: $c-during-bg;
@@ -227,13 +229,17 @@
 
 .facilities__container {
   display: grid;
-  gap: 1rem;
+  gap: 0;
   grid-template: auto / repeat(4, 1fr);
 
   .facilities__item {
     padding: 1rem 1.25rem;
-    border-radius: $border-radius-medium;
+    border: solid 20px #eae2d6;
+    border-radius: 20px;
+    background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4
+      center / 640px repeat;
     background-color: $c-during-bg-card;
+    border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
     text-align: left;
 
     .facilities__title {
@@ -249,18 +255,74 @@
 
 // media queries (mixed)
 
+@media screen and (min-width: 50rem) {
+  .facilities__item {
+    &:nth-child(1) {
+      border-width: 20px 0 20px 20px;
+    }
+
+    &:nth-child(2) {
+      border-width: 20px 0 20px 20px;
+    }
+
+    &:nth-child(3) {
+      border-width: 20px 0 20px 20px;
+    }
+
+    &:nth-child(4) {
+      border-width: 20px;
+    }
+  }
+}
 @media screen and (max-width: 50rem) {
   .facilities__container {
     grid-template: list.slash(repeat(2, auto), repeat(2, 1fr));
+  }
+
+  .facilities__item {
+    &:nth-child(1) {
+      border-width: 20px 0 0 20px;
+    }
+
+    &:nth-child(2) {
+      border-width: 20px 20px 0;
+    }
+
+    &:nth-child(3) {
+      border-width: 20px 0 20px 20px;
+    }
+
+    &:nth-child(4) {
+      border-width: 20px;
+    }
   }
 
   .timeline__card-text {
     font-size: 1.0625rem;
   }
 }
-@media screen and (max-width: 26rem) {
+
+@media screen and (max-width: 34rem) {
   .facilities__container {
     grid-template: repeat(4, auto) / auto;
+  }
+
+  .facilities__item {
+    &:nth-child(1) {
+      border-width: 20px 20px 0;
+    }
+
+    &:nth-child(2) {
+      border-width: 20px 20px 0;
+    }
+
+    &:nth-child(3) {
+      border-width: 20px 20px 0;
+    }
+
+    &:nth-child(4) {
+      border-width: 20px;
+    }
   }
 
   .timeline__card-text {
