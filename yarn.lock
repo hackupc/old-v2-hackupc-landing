@@ -6944,7 +6944,7 @@ fsevents@~2.3.1:
     postcss-preset-env: ^6.7.0
     postcss-reporter: ^7.0.2
     prettier: 2.3.2
-    prettier-config-standard: ^4.0.0
+    prettier-config-standard: ^4.1.0
     purgecss-webpack-plugin: ^4.0.3
     sass: ^1.35.2
     sass-loader: ^12.1.0
@@ -10767,10 +10767,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier-config-standard@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "prettier-config-standard@npm:4.0.0"
-  checksum: 8e9df256bf873253565e82bb127b06bcb55cab3a36709e67801fd986089c95764d90fbe1f9ea3825becba7a921e291c1e368fcebf0e95725677dc6b361209d54
+"prettier-config-standard@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "prettier-config-standard@npm:4.1.0"
+  peerDependencies:
+    prettier: ">= 2.0.0 < 2.4.0"
+  checksum: ebbee64dc1b5a21e1bfa1ce26c8482a0031715c6c264e98336bd1eb58461fafa7f3dafc8b12598cbd992f0e003a8a47e85657c8d07c3b900c6e6e8f4f828d78e
   languageName: node
   linkType: hard
 
