@@ -87,7 +87,7 @@ $btn-thickness: 0.5rem;
   &::after {
     position: absolute;
     z-index: 0;
-    background-color: #b14f50;
+    background-color: #178C54;
     content: '';
     inset: ($btn-height * 0.5 + $btn-thickness) 0 0 0;
   }
