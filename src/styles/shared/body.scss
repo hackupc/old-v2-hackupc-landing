@@ -10,6 +10,7 @@ body {
 }
 
 .content__wrapper {
+  position: relative;
   max-width: 1000px;
   box-sizing: border-box;
   padding: 5rem 1rem;
@@ -87,7 +88,7 @@ $btn-thickness: 0.5rem;
   &::after {
     position: absolute;
     z-index: 0;
-    background-color: #178C54;
+    background-color: #178c54;
     content: '';
     inset: ($btn-height * 0.5 + $btn-thickness) 0 0 0;
   }

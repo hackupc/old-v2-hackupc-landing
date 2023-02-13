@@ -1,8 +1,17 @@
 @use 'src/styles/variables' as *;
 
 .section--participate {
-  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
-    640px repeat;
+  position: relative;
+  background: url('/src/assets/images/trencadis/brown.svg') #f2ede6
+    calc(50% - 640px / 2) calc(50% - 320px) / 640px repeat;
+
+  &::before {
+    position: absolute;
+    background: url('/src/assets/images/star-window.svg') center / 1280px
+      no-repeat;
+    content: '';
+    inset: 0;
+  }
 }
 
 .participate {
@@ -25,9 +34,10 @@
 
   &__item {
     padding: 2.5rem;
+    border: solid #fff 7px;
     border-radius: $border-radius-big;
-    // background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6
-    //   center / 640px repeat;
+    background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
+      640px repeat;
     background-color: $c-bg-light;
     text-align: left;
 
