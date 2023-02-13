@@ -121,7 +121,8 @@ $hero-max-height: 900px;
 
     display: block;
     width: $width;
-    margin: calc(-1 * (10vh - 1rem)) auto calc(10vh - 1rem);
+    margin: calc(-1 * (min(10vh, (900px - 8rem) * 0.1) - 1rem)) auto
+      calc(min(10vh, (900px - 8rem) * 0.1) - 1rem);
     user-select: none;
   }
 
@@ -188,6 +189,6 @@ $hero-max-height: 900px;
   }
 
   .apply-button {
-    margin-top: calc(15vh - 1rem);
+    margin-top: calc(min(15vh, (900px - 8rem) * 0.15) - 1rem);
   }
 }
