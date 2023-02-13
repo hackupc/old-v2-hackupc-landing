@@ -16,17 +16,17 @@ $c-hero-shadow: hsl(287deg 100% 50% / 66%);
 
 $c-faq-bg: $c-palette-black-light;
 $c-faq-block: $c-bg-light;
-$c-faq-question: #48308c;
-$c-faq-hover: linear-gradient(135deg, #523696, #5a41a7);
+$c-faq-question: #dabc98;
+$c-faq-hover: linear-gradient(135deg, #e6c287, #deb588);
 
-$c-during-border: #8a69d4;
-$c-during-bg: #291b54;
-$c-during-bg-card: #45318f;
+$c-during-border: $c-bg-dark;
+$c-during-bg: $c-bg-lighter;
+$c-during-bg-card: $c-bg-light;
 
 $c-live-bg: $c-palette-black-light;
 
 // $c-sponsors-bg: #f1f5ff;
-$c-sponsors-shadow: hsl(220deg 100% 50% / 10%);
+$c-sponsors-shadow: hsl(23deg 100% 50% / 10%);
 
 $c-about-us-bg: $c-palette-black-light;
 $c-about-us-bg-card: $c-bg-light;

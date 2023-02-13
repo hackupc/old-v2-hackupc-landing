@@ -26,8 +26,9 @@
   &__item {
     padding: 2.5rem;
     border-radius: $border-radius-big;
-    background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6
-      center / 640px repeat;
+    // background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6
+    //   center / 640px repeat;
+    background-color: $c-bg-light;
     text-align: left;
 
     &--mentor {
