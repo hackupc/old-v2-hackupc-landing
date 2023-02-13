@@ -15,7 +15,7 @@ Clone the repo, install [nvm](https://github.com/nvm-sh/nvm#installing-and-updat
 git clone git@github.com:hackupc/hackupc-landing.git
 cd hackupc-landing
 
-# Install nvm 
+# Install nvm
 # Copy the command from here: https://github.com/nvm-sh/nvm#installing-and-updating
 
 nvm install
