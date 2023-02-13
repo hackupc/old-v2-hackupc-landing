@@ -9,11 +9,17 @@ Hi! This is the code of the HackUPC landing page.
 
 ## Develop
 
-Clone the repo, install [Node](https://nodejs.org/en/download/), and run `npm install` the first time:
+Clone the repo, install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating), install [Node.js](https://nodejs.org/en/download/) with nvm, and install the dependencies with npm the **first time**:
 
 ```sh
 git clone git@github.com:hackupc/hackupc-landing.git
 cd hackupc-landing
+
+# Install nvm 
+# Copy the command from here: https://github.com/nvm-sh/nvm#installing-and-updating
+
+nvm install
+nvm use
 
 npm install
 ```
