@@ -1,7 +1,8 @@
 @use 'src/styles/variables' as *;
 
 .section--follow-us {
-  background-color: $c-bg-dark;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
 
   .content__wrapper {
     padding: 8rem 1rem;

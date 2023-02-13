@@ -2,7 +2,8 @@
 @use 'src/styles/variables' as *;
 
 .section--during-the-event {
-  background-color: $c-during-bg;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
 
   .section__title {
     margin-bottom: 1rem;

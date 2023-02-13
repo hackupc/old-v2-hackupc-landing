@@ -1,7 +1,8 @@
 @use 'src/styles/variables' as *;
 
 .section--participate {
-  background-color: $c-bg-dark;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
 }
 
 .participate {
@@ -25,7 +26,8 @@
   &__item {
     padding: 2.5rem;
     border-radius: $border-radius-big;
-    background-color: $c-bg-light;
+    background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6
+      center / 640px repeat;
     text-align: left;
 
     &--mentor {

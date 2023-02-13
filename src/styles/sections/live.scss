@@ -1,5 +1,10 @@
 @use 'src/styles/variables' as *;
 
+.section--live {
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
+}
+
 .live {
   &__dot {
     display: inline-block;
@@ -35,8 +40,4 @@
     font-size: 1.125rem;
     line-height: 2;
   }
-}
-
-.section--live {
-  background: $c-live-bg;
 }
