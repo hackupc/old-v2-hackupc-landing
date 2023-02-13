@@ -29,7 +29,8 @@ $hero-max-height: 900px;
       background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
         640px repeat;
       clip-path: polygon(
-        calc(((100% - 2350px) / 2) + 0px) calc(100% - 10px),
+        0 0,
+        0 calc(100% - 10px),
         calc(((100% - 2350px) / 2) + 150px) calc(100% - 10px),
         calc(((100% - 2350px) / 2) + 250px) calc(100% + 42px - 100px),
         calc(((100% - 2350px) / 2) + 350px) calc(100% + 10px - 100px),
@@ -50,9 +51,8 @@ $hero-max-height: 900px;
         calc(((100% - 2350px) / 2) + 2000px) calc(100% + 10px - 100px),
         calc(((100% - 2350px) / 2) + 2100px) calc(100% + 42px - 100px),
         calc(((100% - 2350px) / 2) + 2200px) calc(100% - 10px),
-        calc(((100% - 2350px) / 2) + 2350px) calc(100% - 10px),
-        calc(((100% - 2350px) / 2) + 2350px) 0,
-        0 0
+        100% calc(100% - 10px),
+        100% 0
       );
       inset: 0;
     }
