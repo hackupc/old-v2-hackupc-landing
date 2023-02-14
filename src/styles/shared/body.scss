@@ -100,8 +100,6 @@ $btn-thickness: 0.5rem;
   display: inline-block;
   padding: 0.75rem 1.4rem 0.75rem 1.5rem;
   border: solid 0.0625rem rgb(255 255 255 / 20%);
-  border-bottom-width: $btn-thickness;
-  background: rgb(255 255 255 / 10%);
   color: $c-txt-light;
   cursor: not-allowed;
   font-size: 1rem;
@@ -112,6 +110,9 @@ $btn-thickness: 0.5rem;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   text-transform: uppercase;
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  background-color: $c-primary;
 }
 
 .buttons-mentor-volunteer {

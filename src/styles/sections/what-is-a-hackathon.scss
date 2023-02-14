@@ -56,16 +56,6 @@ $breakpoint-mid-small-screen: 600px;
 .card--mission {
   position: relative;
   display: grid;
-  padding-left: clamp(
-    #{$card-padding-base},
-    calc(
-      100vw * #{math.div(
-          $card-padding-variation-v,
-          $breakpoint-mid-small-screen
-        )} + #{$card-padding-base - $card-padding-variation-v}
-    ),
-    #{$card-padding-base + $card-padding-variation-v}
-  );
   // margin-top: 6rem;
   // margin-bottom: 6rem;
   gap: clamp(

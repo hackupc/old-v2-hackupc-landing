@@ -5,6 +5,7 @@
   background: url('/src/assets/images/trencadis/brown.svg') #f2ede6
     calc(50% - 640px / 2) calc(50% - 320px) / 640px repeat;
 
+
   .section__title {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -12,14 +13,6 @@
     border-radius: $border-radius-big;
     background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
       640px repeat;
-  }
-
-  &::before {
-    position: absolute;
-    background: url('/src/assets/images/star-window.svg') center / 1280px
-      no-repeat;
-    content: '';
-    inset: 0;
   }
 }
 

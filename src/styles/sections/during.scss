@@ -11,6 +11,31 @@
   }
 }
 
+.section--we-also-provide {
+  border-bottom: 0;
+  background: url('/src/assets/images/trencadis/beige.svg') #f2ede6 center /
+    640px repeat;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
+
+
+  .section__title {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: solid 7px #fff;
+    border-radius: $border-radius-big;
+    background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
+      640px repeat;
+  }
+
+  &::before {
+    position: absolute;
+    background: url('/src/assets/images/star-window.svg') center / 1280px
+    no-repeat;
+    content: '';
+    inset: 0;
+  }
+}
+
 // Timeline
 .timeline {
   $timeline-line-width: 0.25rem;

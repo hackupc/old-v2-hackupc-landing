@@ -94,12 +94,12 @@ $hero-max-height: 900px;
 
         &--left {
           right: 0;
-          background-image: url('/src/assets/images/trencadis/green.svg');
+          background-image: url('/src/assets/images/trencadis/lime.svg');
         }
 
         &--right {
           left: 0;
-          background-image: url('/src/assets/images/trencadis/blue.svg');
+          background-image: url('/src/assets/images/trencadis/cyan.svg');
           transform: scaleX(-1);
         }
       }
