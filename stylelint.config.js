@@ -13,6 +13,7 @@ module.exports = {
 
   rules: {
     'block-no-empty': null,
+    'function-no-unknown': null,
     'max-nesting-depth': null,
     'selector-max-compound-selectors': null, // TODO: set to 3
     'order/properties-alphabetical-order': null,

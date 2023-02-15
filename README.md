@@ -9,35 +9,33 @@ Hi! This is the code of the HackUPC landing page.
 
 ## Develop
 
-Clone the repo, install [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/), and run `yarn install` the first time:
+Clone the repo, install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating), install [Node.js](https://nodejs.org/en/download/) with nvm, and install the dependencies with npm the **first time**:
 
 ```sh
 git clone git@github.com:hackupc/hackupc-landing.git
 cd hackupc-landing
 
-npm install -g yarn
+# Install nvm
+# Copy the command from here: https://github.com/nvm-sh/nvm#installing-and-updating
 
-yarn install
+nvm install
+nvm use
+
+npm install
 ```
 
-Use `yarn start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
+Use `npm run start` to compile and serve the build directory in real-time. It reloads every time there's a change. Then view the website at [https://localhost:3000](https://localhost:3000)
 
 ```sh
-yarn start
+npm run start
 ```
 
 Whenever you want, fix auto-fixable lint errors and format files:
 
 ```sh
-  yarn run lint:eslint
-  yarn run lint:stylelint
-  yarn run lint:prettier
-```
-
-From while to while, update the dependencies with this command:
-
-```sh
-  yarn upgrade-interactive
+  npm run lint:eslint
+  npm run lint:stylelint
+  npm run lint:prettier
 ```
 
 ### Tips
@@ -55,7 +53,7 @@ If you push something that doesn't build, don't worry, it won't be published.
 
 ## Support
 
-If you need help understanding something of this repo you can ask the previous developers. The ones that made the 2021 edition are:
+If you need help understanding something about this repo you can ask the previous developers. The ones that made the 2021 edition are:
 
 - Maurici Abad Gutierrez: Slack `@mauri` [mauriciabad.com](https://mauriciabad.com/)
 

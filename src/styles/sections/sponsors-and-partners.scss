@@ -1,11 +1,21 @@
-@use "sass:math";
-
-@use "sass:map";
+@use 'sass:math';
+@use 'sass:map';
+@use 'src/styles/variables' as *;
 
 .section--sponsors,
 .section--partners {
-  background-color: $c-sponsors-bg;
+  background: url('/src/assets/images/trencadis/light.svg') #f2ede6 center /
+    640px repeat;
   color: $c-bg-dark;
+}
+
+.section--sponsors {
+  background-position: center bottom;
+  border-bottom: 0;
+}
+
+.section--partners {
+  background-position: center top;
 }
 
 .section--partners > .content__wrapper {
@@ -46,9 +56,11 @@
   &__item {
     position: relative;
     display: block;
-    background-color: #fff;
+    border: solid 4px #eae2d6;
     border-radius: 1em;
-    box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
+    background-color: #fff;
+
+    // box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
     color: $c-bg-dark;
     transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
     user-select: none;
@@ -67,9 +79,9 @@
       right: 0;
       bottom: 0;
       left: 0;
-      backdrop-filter: blur(0.5rem);
-      background-color: rgba(255, 255, 255, 0.25);
       border-radius: 1em;
+      backdrop-filter: blur(0.5rem);
+      background-color: rgb(255 255 255 / 25%);
       pointer-events: none;
       transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
       // will-change: opacity;

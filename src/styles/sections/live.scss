@@ -1,18 +1,26 @@
+@use 'src/styles/variables' as *;
+
+.section--live {
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
+}
+
 .live {
   &__dot {
     display: inline-block;
     width: 0.6em;
     height: 0.6em;
+    border-radius: 100%;
     margin: 0 0.2em 0 -0.2em;
     animation: live 2.5s cubic-bezier(0.82, 0.23, 0.55, 0.95) infinite alternate;
     background: $c-primary;
-    border-radius: 100%;
     vertical-align: 0.05em;
 
     @keyframes live {
       from {
         opacity: 1;
       }
+
       to {
         opacity: 0.25;
       }
@@ -22,7 +30,7 @@
       width: 12px;
       height: 12px;
       margin-right: 1ch;
-      background: currentColor;
+      background: currentcolor;
       vertical-align: 0;
     }
   }
@@ -32,8 +40,4 @@
     font-size: 1.125rem;
     line-height: 2;
   }
-}
-
-.section--live {
-  background: $c-live-bg;
 }

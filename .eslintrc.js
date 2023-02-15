@@ -34,5 +34,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['/dist/', '/.yarn/'],
+  ignorePatterns: ['/dist/'],
 }

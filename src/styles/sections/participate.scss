@@ -1,5 +1,18 @@
+@use 'src/styles/variables' as *;
+
 .section--participate {
-  background-color: $c-bg-dark;
+  position: relative;
+  background: url('/src/assets/images/trencadis/brown.svg') #f2ede6
+    calc(50% - 640px / 2) calc(50% - 320px) / 640px repeat;
+
+  .section__title {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: solid 7px #fff;
+    border-radius: $border-radius-big;
+    background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
+      640px repeat;
+  }
 }
 
 .participate {
@@ -22,9 +35,28 @@
 
   &__item {
     padding: 2.5rem;
-    background-color: $c-bg-light;
+    border: solid #fff 7px;
     border-radius: $border-radius-big;
+    background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
+      640px repeat;
+    background-color: $c-bg-light;
     text-align: left;
+
+    &--mentor {
+      order: 1;
+    }
+
+    &--volunteer {
+      order: 2;
+    }
+
+    &--partner {
+      order: 3;
+    }
+
+    &--sponsor {
+      order: 4;
+    }
   }
 
   &__title {
@@ -65,6 +97,22 @@
 
     &__item {
       padding: 2rem;
+
+      &--volunteer {
+        order: 1;
+      }
+
+      &--mentor {
+        order: 2;
+      }
+
+      &--sponsor {
+        order: 3;
+      }
+
+      &--partner {
+        order: 4;
+      }
     }
   }
 }

@@ -1,18 +1,29 @@
-@use "sass:math";
+@use 'sass:math';
+@use 'src/styles/variables' as *;
 
 .section--what-is-a-hackathon {
-  background-color: $c-bg-dark;
+  overflow: visible;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
+  margin-top: 15px;
 }
 
 .content__wrapper--what-is-a-hackathon {
-  padding-top: 0;
+  padding-top: calc(2rem + 100px);
+  margin-top: -100px;
+
+  > img,
+  > svg {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 $card-font-variation: 2px;
 $card-font-base: 16px;
 $card-padding-variation-h: 4 * 16px;
 $card-padding-variation-v: 1 * 16px;
-$card-padding-base: 2 * 16px;
+$card-padding-base: 15px;
 
 $breakpoint-small-screen: 500px;
 $breakpoint-mid-small-screen: 600px;
@@ -44,26 +55,17 @@ $breakpoint-mid-small-screen: 600px;
     ),
     #{$card-font-base + $card-font-variation}
   );
+  margin: 10px;
 }
 
 .card--outline {
 }
 
 .card--mission {
+  position: relative;
   display: grid;
-  padding-left: clamp(
-    #{$card-padding-base},
-    calc(
-      100vw * #{math.div(
-          $card-padding-variation-v,
-          $breakpoint-mid-small-screen
-        )} + #{$card-padding-base - $card-padding-variation-v}
-    ),
-    #{$card-padding-base + $card-padding-variation-v}
-  );
-  border: solid 0.3333rem $c-bg-light;
-  margin-top: 2rem;
-  background-color: $c-bg-dark;
+  // margin-top: 6rem;
+  // margin-bottom: 6rem;
   gap: clamp(
     #{$card-padding-base},
     calc(
@@ -87,6 +89,16 @@ $breakpoint-mid-small-screen: 600px;
     width: 10rem;
     height: 10rem;
   }
+
+  // &::before {
+  //   position: absolute;
+  //   border-width: 100px;
+  //   border-style: solid;
+  //   border-image: url('/src/assets/images/borders/crown.svg') 100 repeat;
+  //   border-image-outset: 80px;
+  //   content: '';
+  //   inset: 0;
+  // }
 }
 
 .card__title {

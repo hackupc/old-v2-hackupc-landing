@@ -1,12 +1,16 @@
+@use 'src/styles/variables' as *;
+
 body {
-  background: $c-bg-dark;
-  color: $c-txt-light;
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont,
+  background-color: #f2ede6;
+  color: $c-txt-dark;
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.25);
+  font-weight: 500;
+  -webkit-tap-highlight-color: rgb(255 255 255 / 25%);
 }
 
 .content__wrapper {
+  position: relative;
   max-width: 1000px;
   box-sizing: border-box;
   padding: 5rem 1rem;
@@ -16,7 +20,10 @@ body {
 
 .section {
   overflow: hidden;
-  background: $c-bg-dark;
+  border-bottom: solid 20px #eae2d6;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
 }
 
 .section__title {
@@ -27,9 +34,18 @@ body {
 
 .card {
   padding: 1rem;
-  background-color: $c-bg-light;
-  border-radius: $border-radius-big;
+  // border-radius: 20px;
+  // background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4 center / 640px repeat;
+  // border: solid 20px #eae2d6;
+  // border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
+  color: $c-txt-dark;
   text-align: left;
+  border: solid 20px #eae2d6;
+  border-radius: 20px;
+  background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4 center /
+    640px repeat;
+  background-color: $c-during-bg-card;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
 
   :first-child {
     margin-top: 0;
@@ -58,7 +74,7 @@ $btn-thickness: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.1em;
   line-height: 1;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -79,7 +95,7 @@ $btn-thickness: 0.5rem;
   &::after {
     position: absolute;
     z-index: 0;
-    background-color: #b14f50;
+    background-color: #178c54;
     content: '';
     inset: ($btn-height * 0.5 + $btn-thickness) 0 0 0;
   }
@@ -88,9 +104,7 @@ $btn-thickness: 0.5rem;
 .classic-button-disabled {
   display: inline-block;
   padding: 0.75rem 1.4rem 0.75rem 1.5rem;
-  border: solid 0.0625rem rgba(255, 255, 255, 0.2);
-  border-bottom-width: $btn-thickness;
-  background: rgba(255, 255, 255, 0.1);
+  border: solid 0.0625rem rgb(255 255 255 / 20%);
   color: $c-txt-light;
   cursor: not-allowed;
   font-size: 1rem;
@@ -98,9 +112,12 @@ $btn-thickness: 0.5rem;
   letter-spacing: 0.1em;
   line-height: 1;
   opacity: 0.6667;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   text-transform: uppercase;
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  background-color: $c-primary;
 }
 
 .buttons-mentor-volunteer {

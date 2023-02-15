@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'src/styles/variables' as *;
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,12 +10,12 @@ a {
 }
 
 ::selection {
-  background-color: transparentize($c-primary, 0.01);
+  background-color: color.adjust($c-primary, $alpha: -0.01);
   color: $c-txt-light;
 }
 
 img::selection {
-  background-color: transparentize($c-primary, 0.5);
+  background-color: color.adjust($c-primary, $alpha: -0.5);
 }
 
 p {
@@ -25,8 +28,8 @@ dd {
 
 code {
   padding: 0 0.35rem;
-  background-color: transparentize($c-txt-light, 0.85);
   border-radius: 0.25rem;
+  background-color: color.adjust($c-txt-light, $alpha: -0.85);
   font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -37,5 +40,5 @@ code {
 }
 
 :focus-visible {
-  outline: solid 0.25rem currentColor !important;
+  outline: solid 0.25rem currentcolor !important;
 }

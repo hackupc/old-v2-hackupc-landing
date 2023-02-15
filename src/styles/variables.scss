@@ -1,38 +1,38 @@
-$c-palette-blue: #3f5182;
-$c-palette-black: #1f143a;
-$c-palette-black-light: #291b54;
+$c-palette-blue: #494136;
+$c-palette-black: #241e16;
+$c-palette-black-light: #494136;
 
-$c-bg-darker: #181917;
-$c-bg-dark: $c-palette-black;
-$c-bg-light: #34256b;
-$c-bg-lighter: #9287c6;
+$c-bg-darker: #241e16;
+$c-bg-dark: #494136;
+$c-bg-light: #eae2d6;
+$c-bg-lighter: #fff;
 
-$c-primary: #ec6162;
-$c-primary-accessible: #ff8f90;
+$c-primary: #1cae86;
+$c-primary-accessible: #158566;
 $c-txt-dark: #000;
 $c-txt-light: #fff;
 
-$c-hero-shadow: hsla(287, 100%, 50%, 0.66);
+$c-hero-shadow: hsl(287deg 100% 50% / 66%);
 
 $c-faq-bg: $c-palette-black-light;
 $c-faq-block: $c-bg-light;
-$c-faq-question: #48308c;
-$c-faq-hover: linear-gradient(135deg, #523696, #5a41a7);
+$c-faq-question: #dabc98;
+$c-faq-hover: linear-gradient(135deg, #e6c287, #deb588);
 
-$c-during-border: #8a69d4;
-$c-during-bg: #291b54;
-$c-during-bg-card: #45318f;
+$c-during-border: $c-bg-dark;
+$c-during-bg: $c-bg-lighter;
+$c-during-bg-card: $c-bg-light;
 
 $c-live-bg: $c-palette-black-light;
 
-$c-sponsors-bg: #f1f5ff;
-$c-sponsors-shadow: hsla(220, 100%, 50%, 0.1);
+// $c-sponsors-bg: #f1f5ff;
+$c-sponsors-shadow: hsl(23deg 100% 50% / 10%);
 
 $c-about-us-bg: $c-palette-black-light;
 $c-about-us-bg-card: $c-bg-light;
 
-$c-gdpr-bg: #45318f;
-$c-gdpr-txt: $c-txt-light;
+$c-gdpr-bg: #fff;
+$c-gdpr-txt: $c-txt-dark;
 
 $ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 $ease-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);

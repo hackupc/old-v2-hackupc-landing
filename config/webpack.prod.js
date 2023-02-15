@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
@@ -89,7 +89,6 @@ module.exports = {
               },
             },
           },
-          'markup-inline-loader',
         ],
       },
     ],
@@ -117,8 +116,8 @@ module.exports = {
     // CleanWebpackPlugin will do some clean up/remove folder before build
     // In this case, this plugin will remove 'dist' and 'build' folder before re-build again
     new CleanWebpackPlugin(),
-    // PurgecssPlugin will remove unused CSS
-    new PurgecssPlugin({
+    // PurgeCSSPlugin will remove unused CSS
+    new PurgeCSSPlugin({
       paths: glob.sync(path.resolve(__dirname, '../src/**/*'), { nodir: true }),
     }),
     // This plugin will extract all css to one file

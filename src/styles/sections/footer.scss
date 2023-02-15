@@ -1,15 +1,19 @@
+@use 'src/styles/variables' as *;
+
 /* Footer section */
 .section--footer {
   overflow: hidden;
   padding: 2rem 0.5rem 1.5rem;
-  background: $c-bg-dark;
+  border-bottom: 0;
+  background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
+    640px repeat;
   color: #fff;
   text-align: center;
 }
 
 .footer {
   &__link {
-    color: $c-primary;
+    color: $c-primary-accessible;
     text-decoration: none;
   }
 
@@ -63,6 +67,7 @@
       font-size: 4vw;
     }
   }
+
   &--contact {
     display: flex;
     max-width: 17.5rem;

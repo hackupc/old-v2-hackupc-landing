@@ -22,8 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 1em;
+  background: rgb(0 0 0 / 50%);
   opacity: 0;
   transition: opacity 400ms ease-out;
 }
@@ -53,8 +53,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.33);
   border-radius: 3px;
+  background: rgb(0 0 0 / 33%);
   color: var(--text-light);
   font-size: 5vw;
   font-weight: 900;
