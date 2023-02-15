@@ -26,14 +26,6 @@
     background: url('/src/assets/images/trencadis/light.svg') #f2eee7 center /
       640px repeat;
   }
-
-  &::before {
-    position: absolute;
-    background: url('/src/assets/images/star-window.svg') center / 1280px
-    no-repeat;
-    content: '';
-    inset: 0;
-  }
 }
 
 // Timeline
