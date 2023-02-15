@@ -34,13 +34,19 @@ body {
 
 .card {
   padding: 1rem;
-  border-radius: $border-radius-big;
   // border-radius: 20px;
   // background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4 center / 640px repeat;
   // border: solid 20px #eae2d6;
   // border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
   color: $c-txt-dark;
   text-align: left;
+  border: solid 20px #eae2d6;
+  border-radius: 20px;
+  background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4
+  center / 640px repeat;
+  background-color: $c-during-bg-card;
+  border-image: url('/src/assets/images/borders/basic.svg') 20 repeat;
+
 
   :first-child {
     margin-top: 0;
