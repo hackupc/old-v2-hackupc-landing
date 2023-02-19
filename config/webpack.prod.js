@@ -134,8 +134,8 @@ module.exports = {
       short_name: 'HackUPC',
       display: 'minimal-ui',
       orientation: 'omit',
-      theme_color: '#1f143a',
-      background_color: '#1f143a',
+      theme_color: '#BEB771',
+      background_color: '#BEB771',
       icons: [
         {
           src: path.resolve('src/assets/favicon/android-chrome-512x512.png'),
