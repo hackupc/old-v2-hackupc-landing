@@ -3,9 +3,9 @@
 
 .section--what-is-a-hackathon {
   overflow: visible;
+  margin-top: 15px;
   background: url('/src/assets/images/trencadis/very-light.svg') #f2ede6 center /
     640px repeat;
-  margin-top: 15px;
 }
 
 .content__wrapper--what-is-a-hackathon {
@@ -45,6 +45,7 @@ $breakpoint-mid-small-screen: 600px;
       ),
       #{$card-padding-base + $card-padding-variation-h}
     );
+  margin: 10px;
   font-size: clamp(
     #{$card-font-base},
     calc(
@@ -55,7 +56,6 @@ $breakpoint-mid-small-screen: 600px;
     ),
     #{$card-font-base + $card-font-variation}
   );
-  margin: 10px;
 }
 
 .card--outline {
