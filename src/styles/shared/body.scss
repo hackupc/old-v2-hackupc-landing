@@ -69,7 +69,8 @@ body {
   padding: 1rem;
   border: solid 100px #eae2d6;
   border-radius: 20px;
-  background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4 center / 640px repeat;
+  background: url('/src/assets/images/trencadis/very-light.svg') #fbf8f4 center /
+    640px repeat;
   background-color: $c-during-bg-card;
   border-image: url('/src/assets/images/borders/crown.svg') 100 repeat;
 
@@ -84,7 +85,6 @@ body {
   width: 745px;
   height: 480px;
   border-radius: 5px;
-
 
   @media screen and (max-width: 600px) {
     width: auto;
