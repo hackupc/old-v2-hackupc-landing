@@ -162,7 +162,7 @@ $btn-thickness: 0.5rem;
   justify-content: center;
   margin-bottom: 3rem;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     flex-direction: column;
   }
 
@@ -170,7 +170,7 @@ $btn-thickness: 0.5rem;
     margin-top: 0;
     margin-left: 3rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       margin-top: 1rem;
       margin-left: 0;
     }
