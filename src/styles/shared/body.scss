@@ -77,10 +77,10 @@ body {
 }
 
 .section__video {
-  width: 745px;
-  max-width: calc(100vw - 32px);
+  width: 730px;
   height: 480px;
-  max-height: calc(calc(100vw - 32px) * 0.5625);
+  max-width: calc(100vw - 32px);
+  aspect-ratio: 16/9;
   border-radius: 5px;
 
   @media screen and (max-width: 1000px) {
