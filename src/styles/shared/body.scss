@@ -78,10 +78,10 @@ body {
 
 .section__video {
   width: 730px;
-  height: 480px;
   max-width: calc(100vw - 32px);
-  aspect-ratio: 16/9;
+  height: 480px;
   border-radius: 5px;
+  aspect-ratio: 16/9;
 
   @media screen and (max-width: 1000px) {
     width: 100%;
