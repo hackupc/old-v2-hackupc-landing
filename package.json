@@ -23,7 +23,7 @@
     "@types/stylelint": "14.0.0",
     "@types/webfontloader": "1.6.35",
     "@types/webpack": "5.28.0",
-    "@typescript-eslint/eslint-plugin": "5.48.2",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.48.2",
     "babel-loader": "9.1.2",
     "clean-webpack-plugin": "4.0.0",
