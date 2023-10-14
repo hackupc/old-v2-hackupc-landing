@@ -165,7 +165,11 @@ $hero-max-height: 900px;
       }
     }
 
-    &__more-info {
+    &__extra-info {
+      margin-top: 10px;
+    }
+
+    &__more-info, &__extra-info  {
       display: flex;
       font-size: 0.25em;
       font-weight: 600;
@@ -186,9 +190,12 @@ $hero-max-height: 900px;
     }
     
     &__year {
-      margin-top: 25px;
-      margin-left: -20px;
-      font-size: 80%;
+      font-size: 90%;
+      position: absolute;
+      background-color: #fafafa;
+      text-align: left;
+      left: 50%; 
+      transform: translateX(-10%);
     }
 
     &__duration {
