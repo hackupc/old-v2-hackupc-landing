@@ -181,7 +181,14 @@ $hero-max-height: 900px;
     }
 
     &__date {
+      margin-left: 20px;
       text-align: center;
+    }
+    
+    &__year {
+      margin-top: 25px;
+      margin-left: -20px;
+      font-size: 80%;
     }
 
     &__duration {
@@ -191,5 +198,9 @@ $hero-max-height: 900px;
 
   .apply-button {
     margin-top: calc(min(15vh, (900px - 8rem) * 0.15) - 1rem);
+  }
+
+  .mt-2{
+    margin-top: 20px;
   }
 }
