@@ -121,6 +121,10 @@ $btn-thickness: 0.5rem;
     transition: transform 150ms $ease-bounce;
   }
 
+  &__fs-bigger{
+    font-size: 110%;
+  }
+
   &:active &__text {
     transform: translateY($btn-thickness);
   }
