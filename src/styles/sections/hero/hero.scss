@@ -169,7 +169,8 @@ $hero-max-height: 900px;
       margin-top: 10px;
     }
 
-    &__more-info, &__extra-info  {
+    &__more-info,
+    &__extra-info {
       display: flex;
       font-size: 0.25em;
       font-weight: 600;
@@ -188,13 +189,13 @@ $hero-max-height: 900px;
       margin-left: 20px;
       text-align: center;
     }
-    
+
     &__year {
       font-size: 90%;
       position: absolute;
       background-color: #fafafa;
       text-align: left;
-      left: 50%; 
+      left: 50%;
       transform: translateX(-10%);
     }
 
@@ -207,7 +208,7 @@ $hero-max-height: 900px;
     margin-top: calc(min(15vh, (900px - 8rem) * 0.15) - 1rem);
   }
 
-  .mt-2{
+  .mt-2 {
     margin-top: 20px;
   }
 }
