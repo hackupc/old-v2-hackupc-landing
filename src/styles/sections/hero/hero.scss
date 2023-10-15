@@ -177,19 +177,26 @@ $hero-max-height: 900px;
     }
 
     &__hackers {
+      padding: 0 10px;
       text-align: left;
     }
 
     &__date {
+      padding: 0 10px;
       text-align: center;
     }
 
     &__duration {
+      padding: 0 10px;
       text-align: right;
     }
   }
 
   .apply-button {
     margin-top: calc(min(15vh, (900px - 8rem) * 0.15) - 1rem);
+  }
+
+  .mt-2 {
+    margin-top: 20px;
   }
 }

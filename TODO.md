@@ -4,8 +4,8 @@
 
 - [x] Refactor all 20XX for 20XX +1 and any outdated content
 - [x] Update `favicon` (color)
-- [ ] Make the applcations closed page
-- [ ] Make the subscrive page
+- [x] Make the applcations closed page
+- [x] Make the subscrive page
 - [x] Update FAQ
 - [x] Put the new logos
 - [x] Make sure that github continous integration accepts the commits
