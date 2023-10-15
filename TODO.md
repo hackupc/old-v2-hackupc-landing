@@ -4,7 +4,7 @@
 
 - [x] Refactor all 20XX for 20XX +1 and any outdated content
 - [x] Update `favicon` (color)
-- [X] Make the applcations closed page
+- [x] Make the applcations closed page
 - [x] Make the subscrive page
 - [x] Update FAQ
 - [x] Put the new logos
