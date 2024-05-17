@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "7.20.12",
     "@babel/preset-env": "7.20.2",
-    "@types/eslint": "8.4.10",
+    "@types/eslint": "8.21.1",
     "@types/gtag.js": "0.0.12",
     "@types/node": "18.11.18",
     "@types/prettier": "2.7.2",
@@ -30,7 +30,7 @@
     "compression-webpack-plugin": "10.0.0",
     "css-loader": "6.7.3",
     "css-minimizer-webpack-plugin": "4.2.2",
-    "eslint": "8.32.0",
+    "eslint": "8.34.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-prettier": "4.2.1",
     "glob": "8.1.0",
