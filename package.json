@@ -38,7 +38,7 @@
     "html-webpack-plugin": "5.5.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
-    "mini-css-extract-plugin": "2.7.2",
+    "mini-css-extract-plugin": "2.9.2",
     "postcss": "8.4.21",
     "postcss-easing-gradients": "3.0.1",
     "postcss-focus-visible": "7.1.0",
