@@ -18,7 +18,7 @@
     "@babel/preset-env": "7.20.2",
     "@types/eslint": "8.4.10",
     "@types/gtag.js": "0.0.12",
-    "@types/node": "18.11.18",
+    "@types/node": "22.10.10",
     "@types/prettier": "2.7.2",
     "@types/stylelint": "14.0.0",
     "@types/webfontloader": "1.6.35",
