@@ -71,7 +71,7 @@
     "@babel/polyfill": "7.12.1",
     "@fontsource/montserrat": "4.5.14",
     "core-js": "3.27.2",
-    "focus-visible": "5.2.0",
+    "focus-visible": "5.2.1",
     "lax.js": "2.0.3",
     "normalize.css": "8.0.1"
   },
