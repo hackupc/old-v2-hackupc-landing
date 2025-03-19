@@ -10,9 +10,11 @@ const gulp = require("gulp"),
   concat = require("gulp-concat"),
   cache = require("gulp-cache"),
   livereload = require("gulp-livereload"),
-  del = require("del");
+  del = require("del"),
+  flatten = require("gulp-flatten"),
+  combiner = require("stream-combiner2");
 
-// Compile SCSS to CSS
+// Tarea para compilar estilos SCSS a CSS
 function styles() {
   return gulp
     .src("src/styles/main.scss")
@@ -24,7 +26,7 @@ function styles() {
     .pipe(gulp.dest("dist/assets/css"));
 }
 
-// Minify JS
+// Tarea para minificar scripts
 function scripts() {
   return gulp
     .src("src/scripts/**/*.js")
@@ -36,40 +38,43 @@ function scripts() {
     .pipe(gulp.dest("dist/assets/js"));
 }
 
-// Optimize Images
-function images() {
-  return gulp.src("src/images/**/*").pipe(imagemin()).pipe(gulp.dest("dist/assets/img"));
-}
-
-// Copy Fonts
+// Copiar fuentes
 function fonts() {
   return gulp.src("src/fonts/**/*").pipe(gulp.dest("dist/assets/fonts"));
 }
 
-// Copy Templates
+// Copiar dependencias desde bower_components
+function dependencies() {
+  return gulp
+    .src(["bower_components/**/*.min.js", "!bower_components/**/src/**/*.min.js"])
+    .pipe(flatten({ includeParents: 0 }))
+    .pipe(gulp.dest("dist/assets/js"));
+}
+
+// Optimizar imágenes
+function images() {
+  return gulp.src("src/images/**/*").pipe(imagemin()).pipe(gulp.dest("dist/assets/img"));
+}
+
+// Copiar plantillas
 function templates() {
   return gulp.src("src/templates/**/*").pipe(gulp.dest("dist/assets/templates"));
 }
 
-// Copy Data
+// Copiar datos
 function data() {
   return gulp.src("src/data/**/*").pipe(gulp.dest("dist/assets/data"));
 }
 
-// ✅ **New: Copy HTML files**
-function html() {
-  return gulp.src("src/**/*.html").pipe(gulp.dest("dist"));
-}
-
-// Clean `dist/`
+// Limpiar archivos generados
 function clean() {
-  return del(["dist"]);
+  return del(["dist/assets/css", "dist/assets/js", "dist/assets/img"]);
 }
 
-// Default Task
-exports.default = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, templates, data, html));
+// Tarea default
+exports.default = gulp.series(clean, gulp.parallel(dependencies, styles, scripts, images, fonts, templates, data));
 
-// Watch for changes
+// Watch para cambios en archivos
 function watchFiles() {
   gulp.watch("src/styles/**/*.scss", styles);
   gulp.watch("src/scripts/**/*.js", scripts);
@@ -77,8 +82,8 @@ function watchFiles() {
   gulp.watch("src/images/**/*", images);
   gulp.watch("src/data/**/*", data);
   gulp.watch("src/templates/**/*", templates);
-  gulp.watch("src/**/*.html", html);
+  gulp.watch("bower_components/**/*.min.js", dependencies);
 }
 
 exports.watch = watchFiles;
-exports.build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, templates, data, html));
+exports.build = gulp.series(clean, gulp.parallel(dependencies, styles, scripts, images, fonts, templates, data));
