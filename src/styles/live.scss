@@ -4,7 +4,7 @@ $menuHeight: 40px;
 
 @font-face {
     font-family: 'AndaleMono';
-    src: url('/assets/fonts/AndaleMono.ttf');
+    src: url(assets/fonts/AndaleMono.ttf);
 }
 
 body, h1, h2, p, strong, small {
@@ -225,7 +225,7 @@ p.highlight {
     padding-bottom: 10px;
   }
 
-  h1, h2, p { 
+  h1, h2, p {
     padding-left: 10px;
     display: none;
   }
@@ -273,10 +273,10 @@ p.highlight {
       box-shadow: none;
       padding-bottom: 15px;
     }
-  } 
+  }
 
-  .navbar-default .navbar-toggle, 
-  .navbar-default .navbar-toggle:hover, 
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
       height: 40px;
       border: none;

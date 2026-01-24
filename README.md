@@ -18,10 +18,7 @@ npm install
 
 # Develop
 
-Use `npm run watch` to compile the dist directory in real time.
-
-Use `npm start` to serve `/dist` at `http://localhost:8080`.
-
+Use `npm run dev` to compile and serve.
 
 ## Live
 
